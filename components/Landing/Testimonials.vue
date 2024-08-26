@@ -1,7 +1,7 @@
 <template>
     <section id="testimonials" class="max-w-screen h-full overflow-hidden z-10 bg-blackOpacity">
         <div class="container mx-auto px-2 py-16 md:px-28">
-            <h2 class="text-4xl font-bold text-center text-light">Testimonials</h2>
+            <h2 class="text-4xl font-bold text-center text-light">What our clients say?</h2>
             <div class="max-w-screen-xl px-4 py-8 mx-auto text-center bg-light lg:py-16 lg:px-6 mt-2 md:mt-6">
                 <figure class="max-w-screen-md mx-auto">
                     <svg class="h-12 mx-auto mb-3 text-gray-400 dark:text-gray-600" viewBox="0 0 24 27" fill="none" xmlns="http://www.w3.org/2000/svg">

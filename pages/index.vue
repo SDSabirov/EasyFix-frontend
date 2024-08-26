@@ -4,7 +4,10 @@
         <LandingHero />
         <LandingServices />
         <LandingTestimonials />
+        <LandingFaq />
+        <LandingContacts />
         <FormsContact />
+        <Footer />
     </div>
     
 </template>
@@ -19,17 +22,21 @@ onMounted(() => {
     useFlowbite(() => {
         initFlowbite();
     })
-    window.addEventListener('scroll', onScroll);
+    window.addEventListener('scroll', changeBackground);
     
 })
 
-function printScroll() {
-    console.log(window.scrollY);
-}
 
 function changeBackground(){
-    document.querySelector('nav').classList.toggle('bg-transparent');
-    document.querySelector('nav').classList.toggle('bg-primary');
+    if (window.scrollY > 1) {
+        document.querySelector('nav').classList.remove('bg-transparent');
+        document.querySelector('nav').classList.add('bg-primary');
+        
+    } else {
+        document.querySelector('nav').classList.remove('bg-primary');
+        document.querySelector('nav').classList.add('bg-transparent');
+    }
+    
 }
 
 function onScroll() {
@@ -38,5 +45,9 @@ function onScroll() {
     } else {
         changeBackground();
     }
+}
+
+function printScroll() {
+    console.log(window.scrollY);
 }
 </script>
