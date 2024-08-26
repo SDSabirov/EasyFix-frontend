@@ -10,8 +10,16 @@ export default {
     "./node_modules/flowbite/**/*.{js,ts}"
   ],
   theme: {
+    colors: {
+      primary: '#164863',
+      secondary: '#427D9D',
+      tertiary: '#E4003A',
+      light:'#F8EDE3',
+      primaryOpacity: 'rgba(22, 72, 99, 0.1)',
+    },
     extend: {},
   },
+  
   plugins: [
     require('flowbite/plugin')
   ],

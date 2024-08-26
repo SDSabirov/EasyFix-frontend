@@ -1,50 +1,53 @@
 <template>
     
-
-<nav class="bg-white dark:bg-gray-900 fixed w-full z-20 top-0 start-0 border-b border-gray-200 dark:border-gray-600">
-  <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
-  <a href="https://flowbite.com/" class="flex items-center space-x-3 rtl:space-x-reverse">
-      <img src="https://flowbite.com/docs/images/logo.svg" class="h-8" alt="Flowbite Logo">
-      <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">Flowbite</span>
-  </a>
-  <div class="flex md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">
-      <button type="button" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Get started</button>
-      <button data-collapse-toggle="navbar-sticky" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-sticky" aria-expanded="false">
-        <span class="sr-only">Open main menu</span>
-        <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
-            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15"/>
-        </svg>
-    </button>
-  </div>
-  <div class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1" id="navbar-sticky">
-    <ul class="flex flex-col p-4 md:p-0 mt-4 font-medium border border-gray-100 rounded-lg bg-gray-50 md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
-      <li>
-        <a href="#" class="block py-2 px-3 text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 md:dark:text-blue-500" aria-current="page">Home</a>
-      </li>
-      <li>
-        <a href="#" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">About</a>
-      </li>
-      <li>
-        <a href="#" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">Services</a>
-      </li>
-      <li>
-        <a href="#" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">Contact</a>
-      </li>
-    </ul>
-  </div>
-  </div>
-</nav>
+  <nav class="bg-transparent dark:bg-gray-900 fixed w-full z-40 top-0 start-0 border-b border-light dark:border-gray-600">
+    <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
+    <a href="#" class="flex items-center space-x-3 rtl:space-x-reverse">
+        <svg fill="#f3f2f2" height="50px" width="50px" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 512 512" xml:space="preserve" stroke="#f3f2f2"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <g> <g> <path d="M509.658,369.507l-69.386-69.386c-1.679-1.679-4.017-2.525-6.38-2.31l-66.37,6.034c-1.863,0.17-3.608,0.987-4.932,2.31 l-6.411,6.41l-74.185-74.185l75.952-75.952l12.444,12.445c1.561,1.561,3.609,2.343,5.656,2.343s4.095-0.781,5.656-2.343 l51.285-51.285c0.678-0.678,1.229-1.473,1.625-2.346l30.167-66.37c1.38-3.036,0.733-6.609-1.625-8.967L439.02,21.771 c-2.358-2.358-5.93-3.007-8.967-1.625l-66.37,30.169c-0.874,0.397-1.668,0.947-2.346,1.625l-51.281,51.286 c-3.124,3.124-3.124,8.189,0,11.312l12.445,12.444l-75.952,75.952l-44.978-44.978l6.41-6.41c1.324-1.324,2.141-3.069,2.31-4.932 l6.034-66.37c0.215-2.365-0.631-4.703-2.31-6.38L144.628,4.477c-3.124-3.124-8.189-3.124-11.313,0l-30.166,30.167 c-3.124,3.124-3.124,8.189,0,11.312l51.662,51.662l-55.056,55.056l-51.662-51.661c-3.124-3.124-8.189-3.124-11.312,0 L6.611,131.182c-3.124,3.124-3.124,8.189,0,11.312l69.386,69.386c1.507,1.507,3.544,2.343,5.656,2.343 c0.241,0,0.483-0.011,0.725-0.033l66.37-6.034c1.863-0.17,3.608-0.987,4.932-2.31l6.41-6.41l44.978,44.978l-31.144,31.144 l-9.428-9.428c-2.312-2.311-5.8-2.984-8.808-1.696l-42.089,18.038c-0.005,0.002-0.011,0.004-0.016,0.006l-0.13,0.055 c-0.062,0.027-0.119,0.061-0.18,0.089c-0.164,0.075-0.326,0.151-0.486,0.238c-0.1,0.054-0.195,0.114-0.291,0.172 c-0.125,0.075-0.25,0.149-0.372,0.232c-0.127,0.085-0.246,0.177-0.367,0.27c-0.085,0.065-0.172,0.127-0.255,0.196 c-0.145,0.121-0.283,0.248-0.418,0.378c-0.045,0.043-0.093,0.079-0.137,0.124l-0.091,0.091c-0.009,0.009-0.017,0.017-0.026,0.026 l-93.268,93.268c-0.002,0.001-0.003,0.003-0.005,0.005l-0.129,0.129c-0.049,0.049-0.091,0.103-0.139,0.154 c-0.118,0.125-0.237,0.251-0.348,0.384c-0.083,0.099-0.159,0.204-0.237,0.306c-0.078,0.103-0.157,0.205-0.229,0.313 c-0.098,0.144-0.186,0.291-0.274,0.439c-0.035,0.06-0.076,0.115-0.11,0.176l-0.09,0.161c-0.001,0.002-0.002,0.003-0.003,0.005 L1.007,406.674c-1.734,3.122-1.189,7.016,1.336,9.541l66.37,66.369c1.539,1.539,3.587,2.343,5.659,2.343 c1.327,0,2.663-0.33,3.882-1.007l27.15-15.084c0.066-0.036,0.125-0.08,0.19-0.118c0.142-0.084,0.285-0.17,0.422-0.263 c0.111-0.076,0.215-0.157,0.321-0.237c0.1-0.076,0.202-0.15,0.299-0.231c0.134-0.111,0.26-0.229,0.385-0.348 c0.05-0.048,0.105-0.09,0.154-0.139l0.131-0.131c0.001-0.001,0.002-0.002,0.003-0.003l93.385-93.385 c0.104-0.103,0.194-0.213,0.29-0.321c0.065-0.073,0.133-0.142,0.196-0.216c0.02-0.023,0.044-0.046,0.063-0.07 c0.199-0.244,0.377-0.5,0.543-0.76c0.035-0.057,0.067-0.115,0.101-0.172c0.174-0.289,0.329-0.585,0.463-0.888 c0.012-0.027,0.028-0.049,0.039-0.076l0.051-0.121c0.004-0.01,0.009-0.02,0.013-0.03l18.036-42.084 c1.288-3.007,0.617-6.494-1.696-8.808l-9.428-9.428l31.144-31.144l74.185,74.185l-6.41,6.41c-1.324,1.324-2.141,3.069-2.31,4.932 l-6.034,66.37c-0.215,2.365,0.631,4.703,2.31,6.38l69.386,69.386c1.561,1.561,3.609,2.343,5.656,2.343s4.095-0.781,5.656-2.343 l30.167-30.167c3.124-3.124,3.124-8.189,0-11.312l-51.662-51.662l55.056-55.056l51.662,51.662c3.124,3.124,8.189,3.124,11.312,0 l30.167-30.167C512.782,377.695,512.782,372.63,509.658,369.507z M371.628,64.279l60.002-27.274l16.294,16.294l-27.274,60.002 l-44.603,44.603l-12.444-12.444l-24.134-24.134l-12.444-12.444L371.628,64.279z M333.812,138.295l12.821,12.822l-75.952,75.952 l-12.822-12.821L333.812,138.295z M154.432,182.468l-10.018,10.018l-59.754,5.432l-61.081-61.08l18.855-18.855l51.662,51.662 c3.124,3.124,8.189,3.124,11.312,0l66.37-66.37c3.124-3.124,3.124-8.189,0-11.312l-51.662-51.662l18.855-18.855l61.08,61.081 l-5.432,59.754l-10.02,10.02L154.432,182.468z M116.604,301.201l6.788,6.788l-82.208,82.208l-6.788-6.788L116.604,301.201z M62.303,411.313l-9.804-9.804l82.208-82.208l9.804,9.804L62.303,411.313z M155.822,340.418l9.805,9.805L83.42,432.431 l-9.805-9.805L155.822,340.418z M75.76,467.004l-57.836-57.836l7.003-12.606l31.719,31.719l31.719,31.719L75.76,467.004z M101.52,450.531l-6.788-6.788l82.208-82.207l6.788,6.788L101.52,450.531z M192.343,354.313l-9.745-9.745l-21.064-21.063 c-0.017-0.018-0.033-0.038-0.05-0.055c-0.018-0.017-0.037-0.033-0.055-0.05l-21.066-21.066l-9.747-9.746l26.397-11.313 l11.255,11.254L192.4,316.66l11.254,11.255L192.343,354.313z M198.057,299.692l-12.822-12.821l31.144-31.144l12.821,12.821 L198.057,299.692z M246.171,262.892l-24.135-24.135l-50.635-50.634l18.855-18.855l50.634,50.635l24.134,24.134h0.001 l79.841,79.841l-18.855,18.855L246.171,262.892z M473.834,394.019l-51.662-51.662c-3.124-3.124-8.189-3.124-11.312,0l-66.37,66.37 c-3.124,3.124-3.124,8.189,0,11.312l51.662,51.662l-18.855,18.855l-61.081-61.08l5.432-59.754l10.02-10.02l30.169-30.169 c0.002-0.002,0.003-0.003,0.005-0.005l10.014-10.013l59.754-5.432l61.08,61.081L473.834,394.019z"></path> </g> </g> </g></svg>
+        <div class="flex flex-col">
+          <p>
+            <span class="self-center text-xl font-semibold whitespace-nowrap text-light dark:text-white">Easy</span>
+            <span class="self-center text-xl font-semibold whitespace-nowrap text-tertiary dark:text-white">Fix</span>
+          </p>
+          
+          <p class="self-center text-light text-xl font-semibold whitespace-nowrap dark:text-white">
+            Appliance
+          </p>
+        </div> 
+    </a>
+    <div class="flex md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">
+        <button type="button" class="text-primary bg-light border hover:border hover:border-tertiary focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 text-center  "
+           data-drawer-target="drawer-contact" data-drawer-show="drawer-contact" data-drawer-placement="right" aria-controls="drawer-right-example">
+            Let's connect
+        </button>
+        <button data-collapse-toggle="navbar-sticky" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-light rounded-lg md:hidden hover:bg-light focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-sticky" aria-expanded="false">
+          <span class="sr-only">Open main menu</span>
+          <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
+              <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15"/>
+          </svg>
+      </button>
+    </div>
+    <div class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1" id="navbar-sticky">
+      <ul class="flex flex-col p-4 md:p-0 mt-4 font-medium border border-gray-100 rounded-lg bg-transparent md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-transparent dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
+        <li>
+          <a href="#" class="block py-2 px-3 text-light bg-blue-700 rounded md:bg-transparent md:text- md:p-0 md:dark:text-blue-500" aria-current="page">Home</a>
+        </li>
+        <li>
+          <a href="#" class="block py-2 px-3 text-light rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-tertiary md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">About</a>
+        </li>
+        <li>
+          <a href="#" class="block py-2 px-3 text-light rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-tertiary md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">Services</a>
+        </li>
+        <li>
+          <a href="#" class="block py-2 px-3 text-light rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-tertiary md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">Contact</a>
+        </li>
+      </ul>
+    </div>
+    </div>
+  </nav>
 </template>
 
 <script setup>
 
-import { onMounted } from 'vue'
-import { useFlowbite } from '~/composables/useFlowbite';
 
-// initialize components based on data attribute selectors
-onMounted(() => {
-    useFlowbite(() => {
-        initFlowbite();
-    })
-})
 </script>
