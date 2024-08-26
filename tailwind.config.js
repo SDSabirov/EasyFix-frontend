@@ -16,6 +16,7 @@ export default {
       tertiary: '#E4003A',
       light:'#F8EDE3',
       primaryOpacity: 'rgba(22, 72, 99, 0.1)',
+      blackOpacity: 'rgba(0, 0, 0, 0.5)',
     },
     extend: {},
   },

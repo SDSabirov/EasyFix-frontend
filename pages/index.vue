@@ -3,7 +3,7 @@
         <Navbar />
         <LandingHero />
         <LandingServices />
-        
+        <LandingTestimonials />
         <FormsContact />
     </div>
     
