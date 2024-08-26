@@ -3,7 +3,7 @@
         <Navbar />
         <LandingHero />
         <LandingServices />
-        <LandingTestimonials />
+        
         <FormsContact />
     </div>
     
@@ -33,7 +33,7 @@ function changeBackground(){
 }
 
 function onScroll() {
-    if (window.scrollY > 1) {
+    if (window.scrollY == 0) {
         changeBackground();
     } else {
         changeBackground();

@@ -1,5 +1,5 @@
 <template>
-    <section id="services" class="max-w-screen h-screen bg-light overflow-hidden ">
+    <section id="services" class="max-w-screen h-screen bg-light overflow-hidden z-10">
         <div class="container mx-auto px-8 py-16">
             <h2 class="text-4xl font-bold text-center text-primary">Our Services</h2>
             <p class="text-center text-gray-500 dark:text-gray-400 mt-2 px-12">
