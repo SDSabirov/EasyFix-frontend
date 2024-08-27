@@ -18,7 +18,11 @@ export default {
       primaryOpacity: 'rgba(22, 72, 99, 0.1)',
       blackOpacity: 'rgba(0, 0, 0, 0.5)',
     },
-    extend: {},
+    extend: {
+      backgroundImage: {
+        'contact': "url('/assets/img/oven.png)",
+      },
+    },
   },
   
   plugins: [

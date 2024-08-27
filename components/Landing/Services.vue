@@ -8,7 +8,7 @@
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-8 " >
                 <div class="bg-primary dark:bg-gray-800 rounded-lg shadow-lg relative group">
                     <img src="assets/img/oven.png" alt="oven" class="z-10 w-full h-full object-cover rounded-lg">
-                    <div class="flex flex-col p-8 z-20 absolute bottom-0 bg-black/70 w-full rounded-lg">
+                    <div class="flex flex-col p-8 z-20 absolute bottom-0 bg-black/30 w-full rounded-lg">
                         <!-- Header is always visible -->
                         <h3 class="text-xl font-semibold text-light">Oven Repair</h3>
                         <!-- Paragraph is hidden initially and expands on hover -->
@@ -20,7 +20,7 @@
                 </div>
                 <div class="bg-primary dark:bg-gray-800 rounded-lg shadow-lg relative group">
                     <img src="assets/img/subfridge.png" alt="oven" class="z-10 w-full h-full object-cover rounded-lg">
-                    <div class="flex flex-col p-8 z-20 absolute bottom-0 bg-black/70 w-full rounded-lg">
+                    <div class="flex flex-col p-8 z-20 absolute bottom-0 bg-black/30 w-full rounded-lg">
                         <!-- Header is always visible -->
                         <h3 class="text-xl font-semibold text-light">Refrigerators</h3>
                         <!-- Paragraph is hidden initially and expands on hover -->
@@ -32,7 +32,7 @@
                 </div>
                 <div class="bg-primary dark:bg-gray-800 rounded-lg shadow-lg relative group">
                     <img src="assets/img/gas.png" alt="oven" class="z-10 w-full h-full object-cover rounded-lg">
-                    <div class="flex flex-col p-8 z-20 absolute bottom-0 bg-black/70 w-full rounded-lg">
+                    <div class="flex flex-col p-8 z-20 absolute bottom-0 bg-black/30 w-full rounded-lg">
                         <!-- Header is always visible -->
                         <h3 class="text-xl font-semibold text-light">Stoves</h3>
                         <!-- Paragraph is hidden initially and expands on hover -->
@@ -47,7 +47,7 @@
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-8 " >
                 <div class="bg-primary dark:bg-gray-800 rounded-lg shadow-lg relative group">
                     <img src="assets/img/oven.png" alt="oven" class="z-10 w-full h-full object-cover rounded-lg">
-                    <div class="flex flex-col p-8 z-20 absolute bottom-0 bg-black/70 w-full rounded-lg">
+                    <div class="flex flex-col p-8 z-20 absolute bottom-0 bg-black/30 w-full rounded-lg">
                         <!-- Header is always visible -->
                         <h3 class="text-xl font-semibold text-light">Washers</h3>
                         <!-- Paragraph is hidden initially and expands on hover -->
@@ -59,7 +59,7 @@
                 </div>
                 <div class="bg-primary dark:bg-gray-800 rounded-lg shadow-lg relative group">
                     <img src="assets/img/subfridge.png" alt="oven" class="z-10 w-full h-full object-cover rounded-lg">
-                    <div class="flex flex-col p-8 z-20 absolute bottom-0 bg-black/70 w-full rounded-lg">
+                    <div class="flex flex-col p-8 z-20 absolute bottom-0 bg-black/30 w-full rounded-lg">
                         <!-- Header is always visible -->
                         <h3 class="text-xl font-semibold text-light">Washing Machines</h3>
                         <!-- Paragraph is hidden initially and expands on hover -->
@@ -71,7 +71,7 @@
                 </div>
                 <div class="bg-primary dark:bg-gray-800 rounded-lg shadow-lg relative group">
                     <img src="assets/img/gas.png" alt="oven" class="z-10 w-full h-full object-cover rounded-lg">
-                    <div class="flex flex-col p-8 z-20 absolute bottom-0 bg-black/70 w-full rounded-lg">
+                    <div class="flex flex-col p-8 z-20 absolute bottom-0 bg-black/30 w-full rounded-lg">
                         <!-- Header is always visible -->
                         <h3 class="text-xl font-semibold text-light">Stoves</h3>
                         <!-- Paragraph is hidden initially and expands on hover -->
