@@ -1,6 +1,6 @@
 <template>
     <div class="w-full">
-        <div class="flex flex-col items-center justify-center w-full border-t-2 border-light mt-4 py-4 pt-8 shadow-2xl bg-primaryOpacity">
+        <div class="flex flex-col items-center justify-center w-full  mt-4 py-4 pt-2 shadow-2xl bg-primaryOpacity">
             <div class="grid gap-2 md:grid-cols-3 md:gap-4 ">
                 <div class="flex flex-col border-b border-ligt py-4 items-start space-y-4 mx-2 md:border-none">
                     <div class="flex items-center max-w-1/3">
