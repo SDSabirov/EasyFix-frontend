@@ -6,7 +6,7 @@
                 At Easy Fix Appliance, we pride ourselves on providing top-tier service for discerning clients. Our highly skilled technicians are certified to repair all luxury appliance brands, including Sub-Zero, Viking, Thermador, Dacor, KitchenAid, Bertazzoni, GE Monogram, and many more. We specialize in even the most complex repairs, utilizing original manufacturer parts and state-of-the-art equipment to ensure lasting quality. To cater to our clients’ busy lifestyles, Easy Fix offers flexible and convenient scheduling options, ensuring a seamless and stress-free service experience.
             </p>
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-8 " >
-                <div class="bg-primary dark:bg-gray-800 rounded-lg shadow-lg relative group">
+                <div class="bg-primary dark:bg-gray-800 shadow-lg relative group">
                     <img src="assets/img/oven.png" alt="oven" class="z-10 w-full h-full object-cover rounded-lg">
                     <div class="flex flex-col p-8 z-20 absolute bottom-0 bg-black/30 w-full rounded-lg">
                         <!-- Header is always visible -->
@@ -18,7 +18,7 @@
                         </p>
                     </div>
                 </div>
-                <div class="bg-primary dark:bg-gray-800 rounded-lg shadow-lg relative group">
+                <div class="bg-primary dark:bg-gray-800 shadow-lg relative group">
                     <img src="assets/img/subfridge.png" alt="oven" class="z-10 w-full h-full object-cover rounded-lg">
                     <div class="flex flex-col p-8 z-20 absolute bottom-0 bg-black/30 w-full rounded-lg">
                         <!-- Header is always visible -->
@@ -30,7 +30,7 @@
                         </p>
                     </div>
                 </div>
-                <div class="bg-primary dark:bg-gray-800 rounded-lg shadow-lg relative group">
+                <div class="bg-primary dark:bg-gray-800 shadow-lg relative group">
                     <img src="assets/img/gas.png" alt="oven" class="z-10 w-full h-full object-cover rounded-lg">
                     <div class="flex flex-col p-8 z-20 absolute bottom-0 bg-black/30 w-full rounded-lg">
                         <!-- Header is always visible -->
@@ -45,7 +45,7 @@
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-8 " >
-                <div class="bg-primary dark:bg-gray-800 rounded-lg shadow-lg relative group">
+                <div class="bg-primary dark:bg-gray-800 shadow-lg relative group">
                     <img src="assets/img/oven.png" alt="oven" class="z-10 w-full h-full object-cover rounded-lg">
                     <div class="flex flex-col p-8 z-20 absolute bottom-0 bg-black/30 w-full rounded-lg">
                         <!-- Header is always visible -->
@@ -57,7 +57,7 @@
                         </p>
                     </div>
                 </div>
-                <div class="bg-primary dark:bg-gray-800 rounded-lg shadow-lg relative group">
+                <div class="bg-primary dark:bg-gray-800 shadow-lg relative group">
                     <img src="assets/img/subfridge.png" alt="oven" class="z-10 w-full h-full object-cover rounded-lg">
                     <div class="flex flex-col p-8 z-20 absolute bottom-0 bg-black/30 w-full rounded-lg">
                         <!-- Header is always visible -->
@@ -69,7 +69,7 @@
                         </p>
                     </div>
                 </div>
-                <div class="bg-primary dark:bg-gray-800 rounded-lg shadow-lg relative group">
+                <div class="bg-primary dark:bg-gray-800 shadow-lg relative group">
                     <img src="assets/img/gas.png" alt="oven" class="z-10 w-full h-full object-cover rounded-lg">
                     <div class="flex flex-col p-8 z-20 absolute bottom-0 bg-black/30 w-full rounded-lg">
                         <!-- Header is always visible -->
