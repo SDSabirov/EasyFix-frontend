@@ -9,8 +9,8 @@
                 <p class="md:text-[24px] text-light text-center font-semibold  text-[20px]">
                     We provide exceptional service for all your luxury appliance near Bay Area
                 </p>
-                <button class="mt-2 bg-light border-2 border-light px-8 py-3 rounded-lg mt-8 font-semibold hover:border-2 hover:border-tertiary">
-                    <a href="#services" class="text-primary ">Book now</a>
+                <button class="mt-2 bg-light border-2 border-light px-8 py-3 mt-8 font-semibold hover:border-tertiary hover:text-white hover:bg-secondary transition-all duration-800 ease-out group">
+                    <a href="#services" class="text-primary group-hover:text-white">Book now</a>
                 </button>
             </div>
         </div>
