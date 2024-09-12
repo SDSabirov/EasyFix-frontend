@@ -5,9 +5,11 @@
         <LandingServices />
         <LandingTestimonials />
         <LandingFaq />
+
         <LandingContacts />
         <FormsContact />
         <Footer />
+        <ModalsPrivacy />
     </div>
     
 </template>

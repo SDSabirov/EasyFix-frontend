@@ -15,8 +15,9 @@
           <a href="#" class="hover:underline me-4 md:me-6">About</a>
         </li>
         <li>
-          <a href="#" class="hover:underline me-4 md:me-6">Privacy Policy</a>
+          <button data-modal-toggle="static-modal" class="hover:underline me-4 md:me-6" type="button">Privacy Policy</button>
         </li>
+        
         <li>
           <a href="#" class="hover:underline me-4 md:me-6">Site map</a>
         </li>

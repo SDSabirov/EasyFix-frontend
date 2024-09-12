@@ -23,7 +23,13 @@ export default {
         'contact': "url('/assets/img/oven.png)",
       },
       animation: {
-        'bounce-slow': 'bounce 2s infinite',
+        bounceSlow: 'bounce 2s infinite',
+        flashShadow: 'flashShadow 2s ease-in-out infinite',
+        pulseSlow: 'pulseSlow 5s ease-in-out infinite',
+        fadeUp: 'fadeUp 1s ease-in-out',  
+        fadeDown: 'fadeDown 1s ease-in-out', 
+        fadeRight: 'fadeRight 1s ease-in-out', 
+        fadeInLeft: 'fadeInLeft 1s ease-in-out', 
       },
       keyframes: {
         bounce: {
@@ -35,6 +41,31 @@ export default {
             transform: 'none',
             animationTimingFunction: 'cubic-bezier(0, 0, 0.2, 1)',
           },
+          
+        },
+        flashShadow: {
+          '0%, 100%': { boxShadow: '0 0 0px rgba(0, 0, 0, 0)' },  // No shadow
+          '50%': { boxShadow: '0 0 30px rgba(228, 0, 58, 0.8)' },     // Flashing shadow
+        },
+        pulseSlow: {
+          '0%, 100%': { transform: 'scale(1)' },
+          '50%': { transform: 'scale(1.1)' },
+        },
+        fadeUp: {
+          '0%': { opacity: '0', transform: 'translateY(20px)' }, // Start lower, invisible
+          '100%': { opacity: '1', transform: 'translateY(0)' },  // End at normal position, visible
+        },
+        fadeDown: {
+          '0%': { opacity: '0', transform: 'translateY(-20px)' }, // Start higher, invisible
+          '100%': { opacity: '1', transform: 'translateY(0)' },   // End at normal position, visible
+        },
+        fadeRight: {
+          '0%': { opacity: '1', transform: 'translateX(0)' }, // Start fully visible, no horizontal movement
+          '100%': { opacity: '0', transform: 'translateX(100px)' }, // Move to the right, fade out
+        },
+        fadeInLeft: {
+          '0%': { opacity: '0', transform: 'translateX(-100px)' }, // Start off-screen to the left, invisible
+          '100%': { opacity: '1', transform: 'translateX(0)' },    // Move to original position, fade in
         },
         
       },

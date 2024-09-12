@@ -1,7 +1,7 @@
 <template>
   <div class="max-w-screen md:h-screen flex flex-col relative overflow-x-hidden">
     <img
-      class="fixed top-0 w-full h-full -z-50 object-cover md:object-none"
+      class="fixed top-0 w-full h-[100%] -z-50 object-cover md:object-none"
       src="assets/img/main_background.jpg"
       alt="kitchen aplliances"
     />

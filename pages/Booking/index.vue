@@ -1,8 +1,24 @@
 <template>
-    <div>
+    <div class=" w-full h-fit">
+        
         <Navbar />
-        <BookingBackground />
-        <Footer />
+        <div class="relative w-full h-fit">
+            
+            <div class="relative top-0 h-[120vh]">
+                <BookingBackground />
+            <div class="absolute container top-[16vh] mx-auto w-full items-center md:px-32 h-fit">
+                <FormsBookingForm />
+            </div>
+            </div>
+            
+            
+            
+            
+        </div>
+        <div class="relative top-0">
+            <Footer />
+        </div>
+        
     </div>
     
 </template>
