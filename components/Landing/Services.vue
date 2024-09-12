@@ -36,7 +36,7 @@
              <div class="mb-2 flex justify-between items-center">
               <div class="flex flex-col space-y-2">
                 <img src="/assets/img/wolf.png" class="h-[40px] " alt="">
-                <img src="/assets/img/subzeroLogoSilver.png" class="h-[40px] " alt="">
+                <img :src="require('@/assets/img/subzeroLogoSilver.png')" class="h-[40px] " alt="">
               </div>
               
               <div class="max-h-[40px] flex">
