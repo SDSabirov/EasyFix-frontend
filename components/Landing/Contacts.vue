@@ -34,7 +34,7 @@
 
             <h2 class="mt-4 text-lg font-medium text-light">Email</h2>
             <p class="mt-2 text-light/90">Our friendly team is here to help.</p>
-            <a class="mt-2 text-light/80"> care@easyfixappliance.com </a>
+            <a href="mailto:care@easyfixappliance.com" class="mt-2 text-light/80 text-lg"> care@easyfixappliance.com </a>
           </div>
 
           <div class="flex flex-col items-start justify-center text-left">
@@ -56,9 +56,10 @@
             </span>
 
             <h2 class="mt-4 text-lg font-medium text-light">Phone</h2>
-            <p class="mt-2 text-light/90">Mon-Fri from 8am to 5pm.</p>
+            <p class="mt-2 text-light/90 text-lg">Mon-Fri from 8am to 8pm.</p>
+            <p class="mt-2 text-light/90 text-lg">Weekends <strong>Emergency Services only</strong> </p>
             <a
-              class="mt-2 text-light/80 flex items-center"
+              class="mt-2 text-light/80 flex items-center text-lg"
               href="tel:+16505139163 "
               >(650) 513-9163
               <span class="mx-4">
@@ -77,7 +78,7 @@
               </span>
             </a>
             <a
-              class="mt-2 text-light/80 flex items-center"
+              class="mt-2 text-light/80 flex items-center text-lg"
               href="sms:+16505139163 "
               >(650) 513-9163
               <span class="mx-4">
@@ -122,20 +123,36 @@
             <h2 class="mt-4 text-lg font-medium text-light">Payment Methods</h2>
 
             <p class="mt-2 text-light/90">We do accept following methods</p>
-            <div class="mt-2 text-light/90 flex space-x-3">
-              <img src="/assets/icons/visa.svg" alt="visa payment" />
+            <div class="mt-2 text-light/90 flex space-x-3 max-h-12">
+              <img src="/assets/icons/visa.svg" 
+                alt="visa payment" 
+                class="h-full"/>
               <img
                 src="/assets/icons/mastercard.svg"
                 alt="mastercard payment"
+                class="h-full"
               />
               <img
                 src="/assets/icons/amex.svg"
                 alt="american experess payment"
+                class="h-full"
               />
-              <img src="/assets/icons/applepay.svg" alt="apple pay " />
-              <img src="/assets/icons/googlepay.svg" alt="google pay" />
-              <img src="/assets/icons/discover.svg" alt="discover payment" />
-              <img src="/assets/icons/venmo.svg" alt="venmo payment" />
+              <img src="/assets/icons/applepay.svg" 
+                    alt="apple pay " 
+                    class="h-full"
+                    />
+              <img src="/assets/icons/googlepay.svg" 
+                    alt="google pay" 
+                    class="h-full"
+                    />
+              <img src="/assets/icons/discover.svg" 
+                    alt="discover payment" 
+                    class="h-full"
+                    />
+              <img src="/assets/icons/venmo.svg" 
+                    alt="venmo payment"
+                    class="h-full"
+                    />
             </div>
           </div>
         </div>
