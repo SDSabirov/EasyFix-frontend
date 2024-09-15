@@ -3,6 +3,7 @@
         <Navbar />
         <LandingHero />
         <LandingServices />
+        <LandingPrices />
         <LandingTestimonials />
         <LandingFaq />
 

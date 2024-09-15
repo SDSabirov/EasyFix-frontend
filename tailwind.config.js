@@ -45,7 +45,7 @@ export default {
         },
         flashShadow: {
           '0%, 100%': { boxShadow: '0 0 0px rgba(0, 0, 0, 0)' },  // No shadow
-          '50%': { boxShadow: '0 0 30px rgba(228, 0, 58, 0.8)' },     // Flashing shadow
+          '50%': { boxShadow: '0 0 40px rgba(228, 0, 58, 0.8)' },     // Flashing shadow
         },
         pulseSlow: {
           '0%, 100%': { transform: 'scale(1)' },
@@ -60,11 +60,11 @@ export default {
           '100%': { opacity: '1', transform: 'translateY(0)' },   // End at normal position, visible
         },
         fadeRight: {
-          '0%': { opacity: '1', transform: 'translateX(0)' }, // Start fully visible, no horizontal movement
-          '100%': { opacity: '0', transform: 'translateX(100px)' }, // Move to the right, fade out
+          '0%': { opacity: '0', transform: 'translateX(100)' }, // Start fully visible, no horizontal movement
+          '100%': { opacity: '1', transform: 'translateX(0)' }, // Move to the right, fade out
         },
         fadeInLeft: {
-          '0%': { opacity: '0', transform: 'translateX(-100px)' }, // Start off-screen to the left, invisible
+          '0%': { opacity: '0', transform: 'translateX(-150px)' }, // Start off-screen to the left, invisible
           '100%': { opacity: '1', transform: 'translateX(0)' },    // Move to original position, fade in
         },
         

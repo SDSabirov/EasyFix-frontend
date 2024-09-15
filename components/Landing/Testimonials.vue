@@ -11,7 +11,7 @@
         class="max-w-screen-xl px-4 py-8 mx-auto text-center bg-light lg:py-16 lg:px-6 mt-2 md:mt-6"
       >
         <figure
-          class="max-w-screen-md mx-auto"
+          class="max-w-screen-md mx-auto animate-fadeInLeft"
           :key="currentIndex"
           v-bind:class="{ 'animate-fadeInRight': animate }"
         >
@@ -44,9 +44,13 @@
                 {{ currentReview.author }}
               </div>
               <div
-                class="pl-3 text-sm font-light text-gray-500 dark:text-gray-400"
-              >
-                {{ currentReview.date }}
+                class="pl-3 text-sm font-light text-gray-500 dark:text-gray-400 flex items-center space-x-2"
+              ><p>
+                {{ currentReview.date }} <span> on </span> 
+              </p>
+                
+                <img v-if="currentReview.platform=='Yelp'" src="/assets/img/yelp.svg" class="max-h-[30px]" alt="yelp logo">
+                <img v-if="currentReview.platform=='Google'" src="/assets/img/google.svg" class="max-h-[30px]" alt="yelp logo">
               </div>
             </div>
           </figcaption>
@@ -65,12 +69,16 @@ const Reviews = ref([
       "Had Tom come repair our Subzero fridge last week. He was an amazing technician, ontime, and very professional. When the fridge stopped cooling, we were so worried ... with a new baby, it would have been a nightmare. Tom had the parts he needed and proceeded to do the repair. He was thorough and informative the entire time. I've definitely found my goto company and texh. Thanks EasyFix!",
     author: "Den Baron",
     date: "3 years ago",
+    platform:"Google"
   },
   {
-    review: "Review 2: Highly recommended!",
-    author: "Jane Doe",
-    date: "28.08.2024",
+    review:
+      "Had Tom come repair our Subzero fridge last week. He was an amazing technician, ontime, and very professional. When the fridge stopped cooling, we were so worried ... with a new baby, it would have been a nightmare. Tom had the parts he needed and proceeded to do the repair. He was thorough and informative the entire time. I've definitely found my goto company and texh. Thanks EasyFix!",
+    author: "Den Baron",
+    date: "3 years ago",
+    platform:"Yelp"
   },
+  
 ]);
 
 let currentIndex = ref(0);
