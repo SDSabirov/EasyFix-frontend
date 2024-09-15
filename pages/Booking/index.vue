@@ -8,7 +8,9 @@
                 <BookingBackground />
             <div class="absolute container top-[16vh] mx-auto w-full items-center md:px-32 h-fit">
                 <FormsBookingForm />
+                
             </div>
+                
             </div>
             
             

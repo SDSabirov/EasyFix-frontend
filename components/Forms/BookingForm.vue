@@ -1,13 +1,13 @@
 <template>
-  <section class="bg-light max-h-[90vh]">
+  <section class="bg-light max-h-fit">
     <div class="py-8 px-4 mx-auto max-w-2xl lg:py-16">
       <h2 class="mb-4 text-xl font-bold text-primary text-center">
         Request a booking
       </h2>
 
       <form action="#">
-        <div class="w-full px-[22%]">
-          <BookingSteps />
+        <div class="w-full items-center justify-center">
+          <BookingSteps :currentStep="step" />
         </div>
 
         <div v-if="step == 1">
@@ -165,6 +165,26 @@
           <div class="grid gap-4 sm:grid-cols-2 sm:gap-6">
             <div>
               <label
+                for="Appliance type"
+                class="block mb-2 text-sm font-medium text-primary"
+                >Appliance Type</label
+              >
+              <select
+                id="applianceType"
+                class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"
+              >
+                <option selected="">Refridgerator</option>
+                <option>Wine Cooler</option>
+                <option>Stove</option>
+                <option>Built In refrigerator</option>
+                <option>Range</option>
+                <option>Cooktop</option>
+                <option>Oven</option>
+                <option>Freezer</option>
+              </select>
+            </div>
+            <div>
+              <label
                 for="Appliance Brand"
                 class="block mb-2 text-sm font-medium text-primary"
                 >Appliance brand</label
@@ -202,48 +222,17 @@
                 <option>15+</option>
               </select>
             </div>
-            <div class="relative max-w-sm">
+            <div class="relative max-w-sm ">
               <label
                 for="Preffered Date"
                 class="block mb-2 text-sm font-medium text-primary"
-                >Preffered Date</label
+                >Preffered Date & Time</label
               >
-              <div
-                class="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none"
-              >
-                <svg
-                  class="w-4 h-4 text-gray-500 relative top-1/4"
-                  aria-hidden="true"
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="currentColor"
-                  viewBox="0 0 20 20"
-                >
-                  <path
-                    d="M20 4a2 2 0 0 0-2-2h-2V1a1 1 0 0 0-2 0v1h-3V1a1 1 0 0 0-2 0v1H6V1a1 1 0 0 0-2 0v1H2a2 2 0 0 0-2 2v2h20V4ZM0 18a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V8H0v10Zm5-8h10a1 1 0 0 1 0 2H5a1 1 0 0 1 0-2Z"
-                  />
-                </svg>
+              <div class="flex space-x-1">
+                <BookingDatepicker />
+                <BookingTimepicker />
               </div>
-              <input
-                id="datepicker-autohide"
-                datepicker
-                datepicker-autohide
-                type="text"
-                class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full ps-10 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                placeholder="Select date"
-              />
-            </div>
-            <div class="sm:col-span-2">
-              <label
-                for="description"
-                class="block mb-2 text-sm font-medium text-primary"
-                >Description</label
-              >
-              <textarea
-                id="description"
-                rows="8"
-                class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-primary-500 focus:border-primary-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"
-                placeholder="Please provide a brief description of the issue"
-              ></textarea>
+              
             </div>
           </div>
           <div class="flex items-center w-full justify-between">
@@ -274,13 +263,133 @@
               type="button"
               class="flex mx-auto items-center px-8 py-2.5 mt-4 sm:mt-6 text-sm font-medium text-center text-white bg-primary focus:ring-4 focus:ring-primary-200 dark:focus:ring-primary-900 hover:bg-secondary"
             >
-              Request Booking
+              Next
             </button>
           </div>
         </div>
+        <div v-if="step == 3">
+          <div class="flex flex-col space-y-4 sm:gap-6">
+            <div class="sm:col-span-2">
+              <label
+                for="description"
+                class="block mb-2 text-lg font-medium text-primary"
+                >What is the problem with your appliances?</label
+              >
+              <label for="common issues" class="block mb-2 text-sm text-gray"
+                >Here are some common issues
+              </label>
+              <div
+                class="grid grid-cols-1 lg:grid-cols-2 gap-1 space-y-2 py-2 w-full flex-wrap"
+              >
+                <button
+                  class="rounded-full md:col-span-2 w-fit bg-secondary px-4 py-2 text-light text-sm text-left hover:bg-primary selected"
+                  @click="
+                    fillSuggestion(
+                      'The Refridgirator isn’t maintaining the proper temperature'
+                    )
+                  "
+                  type="button"
+                >
+                  <p class="whitespace-nowrap overflow-hidden text-ellipsis">
+                    The Refridgirator isn’t maintaining the proper temperature
+                  </p>
+                </button>
+                <button
+                  class="rounded-full w-fit bg-secondary px-4 py-2 text-light text-sm text-left hover:bg-primary selected"
+                  @click="
+                    fillSuggestion('Refridgerator Temperature is too cold')
+                  "
+                  type="button"
+                >
+                  <p class="whitespace-nowrap overflow-hidden text-ellipsis">
+                    Refridgerator Temperature is too cold
+                  </p>
+                </button>
+                <button
+                  class="rounded-full w-fit bg-secondary px-4 py-2 text-light text-sm text-left hover:bg-primary selected"
+                  @click="
+                    fillSuggestion('Refridgirator Leaking water underneath')
+                  "
+                  type="button"
+                >
+                  <p class="whitespace-nowrap overflow-hidden text-ellipsis">
+                    Refridgirator Leaking water underneath
+                  </p>
+                </button>
+                <button
+                  class="rounded-full w-fit bg-secondary px-4 py-2 text-light text-sm text-left hover:bg-primary selected"
+                  @click="fillSuggestion('Refridgerato Temperature is too hot')"
+                  type="button"
+                >
+                  <p class="whitespace-nowrap overflow-hidden text-ellipsis">
+                    Refridgerator Temperature is too hot
+                  </p>
+                </button>
+                <button
+                  class="rounded-full w-fit bg-secondary px-4 py-2 text-light text-sm text-left hover:bg-primary selected"
+                  @click="fillSuggestion('Refridgerato Showing error code')"
+                  type="button"
+                >
+                  <p class="whitespace-nowrap overflow-hidden text-ellipsis">
+                    Refridgerator Showing error code
+                  </p>
+                </button>
+                <button
+                  class="rounded-full w-fit bg-secondary px-4 py-2 text-light text-sm text-left hover:bg-primary selected"
+                  @click="fillSuggestion('Refridgerato Making beeping noise')"
+                  type="button"
+                >
+                  <p class="whitespace-nowrap overflow-hidden text-ellipsis">
+                    Refridgerator Making beeping noise
+                  </p>
+                </button>
+              </div>
+              <textarea
+                id="description"
+                rows="8"
+                class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-primary-500 focus:border-primary-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"
+                placeholder="Please provide a brief description of the issue"
+                v-model="userMessage"
+              ></textarea>
+              <div class="flex items-center w-full justify-between">
+                <button
+                  @click="subtractStep"
+                  type="button"
+                  class="flex mx-auto items-center px-8 py-2.5 mt-4 sm:mt-6 text-sm font-medium text-center text-white bg-primary focus:ring-4 focus:ring-primary-200 dark:focus:ring-primary-900 hover:bg-secondary"
+                >
+                  <span>
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="16"
+                      height="16"
+                      fill="currentColor"
+                      class="bi bi-arrow-left"
+                      viewBox="0 0 16 16"
+                    >
+                      <path
+                        fill-rule="evenodd"
+                        d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8"
+                      />
+                    </svg>
+                  </span>
+                  Go back
+                </button>
+                <button
+                  @click="addStep"
+                  type="button"
+                  class="flex mx-auto items-center px-8 py-2.5 mt-4 sm:mt-6 text-sm font-medium text-center text-white bg-primary focus:ring-4 focus:ring-primary-200 dark:focus:ring-primary-900 hover:bg-secondary"
+                >
+                  Next
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
       </form>
-      <div v-if="step == 3">
-        <div class="flex flex-col justify-center text-primary items-center space-y-4">
+      <div v-if="step == 4">
+        <div
+          class="flex flex-col justify-center text-primary items-center space-y-4"
+        >
           <div>
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -306,6 +415,12 @@
           >
             Our team will contact you as soon as possible
           </p>
+
+          <NuxtLink href="/">
+            <button class="bg-primary px-8 py-4 text-light hover:bg-secondary">
+              Go to Home page
+            </button>
+          </NuxtLink>
         </div>
       </div>
     </div>
@@ -317,14 +432,23 @@ import { onMounted } from "vue";
 import { useFlowbite } from "~/composables/useFlowbite";
 
 let step = ref(1);
-
+let userMessage = ref("");
 function addStep() {
   step.value = step.value + 1;
 }
 function subtractStep() {
   step.value = step.value - 1;
 }
+const fillSuggestion = (suggestion) => {
+  if (userMessage.value.length == 0) {
+    userMessage.value = userMessage.value + suggestion;
+  } else {
+    userMessage.value = userMessage.value + "\n" + suggestion;
+  }
+};
 onMounted(() => {
-  
+  useFlowbite(() => {
+    initFlowbite();
+  });
 });
 </script>

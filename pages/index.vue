@@ -5,7 +5,7 @@
         <LandingServices />
         <LandingPrices />
         <LandingTestimonials />
-        <LandingFaq />
+        
 
         <LandingContacts />
         <FormsContact />

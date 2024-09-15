@@ -14,7 +14,7 @@
         <div
           class="grid grid-cols-1 gap-12 px-4 mt-10 md:grid-cols-2 lg:grid-cols-3"
         >
-          <div class="flex flex-col items-start justify-center text-left">
+          <div class="flex flex-col items-start justify-start text-left">
             <span class="p-3 text-primary rounded-full bg-light">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -101,7 +101,7 @@
             </a>
           </div>
 
-          <div class="flex flex-col items-start justify-center text-left">
+          <div class="flex flex-col items-start justify-start text-left">
             <span class="p-3 text-primary rounded-full bg-light">
               <svg
                 xmlns="http://www.w3.org/2000/svg"

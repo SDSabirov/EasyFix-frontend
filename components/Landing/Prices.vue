@@ -116,10 +116,10 @@
               ></span>
             </li>
           </ul>
-          <a
-            href="#"
+          <NuxtLink
+            href="/booking"
             class="text-primary bg-light hover:bg-secondary hover:text-light focus:ring-4 focus:ring-primary-200 font-medium rounded-lg text-sm px-5 py-2.5 text-center"
-            >Book now</a
+            >Book now</NuxtLink
           >
         </div>
         <div
@@ -218,10 +218,10 @@
               ></span>
             </li>
           </ul>
-          <a
-            href="#"
+          <NuxtLink
+            href="/booking"
             class="text-primary bg-light hover:bg-secondary hover:text-light focus:ring-4 focus:ring-primary-200 font-medium rounded-lg text-sm px-5 py-2.5 text-center"
-            >Book now</a
+            >Book now</NuxtLink
           >
         </div>
         <div
@@ -322,10 +322,10 @@
               ></span>
             </li>
           </ul>
-          <a
-            href="#"
+          <NuxtLink
+            href="/booking"
             class="text-primary bg-light hover:bg-secondary hover:text-light focus:ring-4 focus:ring-primary-200 font-medium rounded-lg text-sm px-5 py-2.5 text-center"
-            >Book now</a
+            >Book now</NuxtLink
           >
         </div>
         <div
@@ -424,10 +424,10 @@
               ></span>
             </li>
           </ul>
-          <a
-            href="#"
+          <NuxtLink
+            href="/booking"
             class="text-primary bg-light hover:bg-secondary hover:text-light focus:ring-4 focus:ring-primary-200 font-medium rounded-lg text-sm px-5 py-2.5 text-center"
-            >Book now</a
+            >Book now</NuxtLink
           >
         </div>
       </div>
