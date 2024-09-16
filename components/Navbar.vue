@@ -3,7 +3,7 @@
     class="bg-transparent transition-all duration-500 dark:bg-gray-900 fixed w-full z-40 top-0 start-0 dark:border-gray-600 animate-fadeDown"
   >
     <div
-      class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-2 md:p-4"
+      class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-1 md:p-4"
     >
       <a
         href="/"
@@ -11,12 +11,12 @@
 
       >
         <svg
-          width="42"
-          height="42"
+          width="52"
+          height="52"
           viewBox="0 0 52 52"
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
-          class="animate-flashShadowTwoSides rounded-full"
+          class="animate-flashShadowTwoSides rounded-full max-h-[38px] md:max-h-[52px]"
           
         >
           <path
@@ -63,7 +63,7 @@
         <div class="space-x-1 md:space-x-4">
           <button
             type="button"
-            class="text-primary bg-light border hover:border hover:border-tertiary hover:text-white hover:bg-secondary transition-all duration-800 ease-out focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium text-sm px-4 py-2 text-center animate-flashShadowRed md:animate-flashShadow"
+            class="text-primary bg-light border hover:border hover:border-tertiary hover:text-white hover:bg-secondary transition-all duration-800 ease-out focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium text-sm px-2 md:px-4 py-2 text-center animate-flashShadowRed md:animate-flashShadow"
             data-drawer-target="drawer-contact"
             data-drawer-show="drawer-contact"
             data-drawer-placement="right"
@@ -74,10 +74,10 @@
           <!--call now buuron-->
           <a
             type="button"
-            class="text-primary bg-light border hover:border hover:border-tertiary hover:text-white hover:bg-secondary transition-all duration-800 ease-out focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium text-sm px-4 py-2 text-center md:hidden animate-flashShadow"
+            class="text-primary bg-light border hover:border hover:border-tertiary hover:text-white hover:bg-secondary transition-all duration-800 ease-out focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium text-[15px] px-2 md:px-4 py-2 text-center animate-flashShadowRed md:animate-flashShadow"
             href="tel:+16505139163 "
           >
-          +16505139163 
+          Call Now
           </a>
         </div>
 

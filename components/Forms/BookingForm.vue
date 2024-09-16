@@ -200,6 +200,11 @@
                 <option>GE Monogram</option>
                 <option>Thermador</option>
                 <option>Dacor</option>
+                <option>DSC</option>
+                <option>Miele</option>
+                <option>Bertazzoni</option>
+                <option>U-Line</option>
+                
               </select>
             </div>
             <div>

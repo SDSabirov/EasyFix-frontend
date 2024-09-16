@@ -22,11 +22,11 @@
                   :class="{'animate-fadeDown':animate}">
                     {{currentSlogan.paragraph}}
                 </p>
-                <div class="flex space-x-2">
+                <div class="flex flex-col md:flex-row space-x-2">
                   <NuxtLink 
                   href="/booking"
                   class="mt-2 z-20 bg-light border-2 border-light px-8 py-3 mt-8 font-semibold hover:border-tertiary hover:text-white hover:bg-secondary transition-all duration-800 ease-out group animate-flashShadow">
-                    <p  class="text-primary group-hover:text-white">Book now</p>
+                    <p  class="text-primary group-hover:text-white w-full text-center">Book now</p>
                 </NuxtLink>
                 <a 
                   href="tel:+16505139163"
@@ -46,10 +46,11 @@
 
 <script setup>
 import { ref, onMounted } from "vue";
-import mainBackground from "@/assets/img/main_background.jpg";
-import secondBackground from "@/assets/img/redAppliance.jpeg";
+import mainBackground from "@/assets/img/main_backgroundv2.jpeg";
+import secondBackground from "@/assets/img/main_backgroundv3.jpeg";
 import thirdBackground from "@/assets/img/kitchenBackground1.jpeg";
 import forthBackground from "@/assets/img/kitchenBright.jpg";
+import fifthBackground from "@/assets/img/main_background.jpg"
 
 let currentIndex = ref(0);
 let currentSlogan = ref({});
@@ -82,7 +83,7 @@ const sloganData = ref([
   {
     header: "Quick and Reliable Repairs on",
     paragraph: 'GE Monogram, Kitchen-Aid, DCS, U-Line, Miele and more!',
-    background: forthBackground,
+    background: fifthBackground,
   },
 ]);
 
