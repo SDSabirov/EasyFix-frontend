@@ -31,7 +31,7 @@
                             <h4 class="text-xl font-bold text-light">Genuine manufacturer parts </h4>
                             <p class="text-lg font-semibold text-gray-300 mt-2">
                                 We specialize in even the most complex repairs, utilizing original manufacturer parts 
-                                and state-of-the-art equipment to ensure lasting quality.
+                                and state-of-the-art equipment to ensure lasting quality. <strong class="text-sm">(Manifacturer warranties availble)</strong>
                             </p>
                     </div>    
                 </div>

@@ -25,6 +25,7 @@ export default {
       animation: {
         bounceSlow: 'bounce 2s infinite',
         flashShadow: 'flashShadow 2s ease-in-out infinite',
+        flashShadowBlue: 'flashShadow 2s ease-in-out infinite',
         pulseSlow: 'pulseSlow 5s ease-in-out infinite',
         fadeUp: 'fadeUp 1s ease-in-out',  
         fadeDown: 'fadeDown 1s ease-in-out', 
@@ -45,7 +46,11 @@ export default {
         },
         flashShadow: {
           '0%, 100%': { boxShadow: '0 0 0px rgba(0, 0, 0, 0)' },  // No shadow
-          '50%': { boxShadow: '0 0 40px rgba(228, 0, 58, 0.8)' },     // Flashing shadow
+          '50%': { boxShadow: '0 0 40px rgba(255, 0, 0, 0.8)' },     // Flashing shadow
+        },
+        flashShadowBlue: {
+          '0%, 100%': { boxShadow: '0 0 0px rgba(0, 0, 0, 0)' },  // No shadow
+          '50%': { boxShadow: '0 0 40px rgba(0, 0, 0, 0.8)' },     // Flashing shadow
         },
         pulseSlow: {
           '0%, 100%': { transform: 'scale(1)' },

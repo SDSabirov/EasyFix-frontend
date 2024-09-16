@@ -41,27 +41,17 @@
             class="flex flex-col p-2 z-20 absolute bottom-0 p-4 bg-light/80 w-full"
           >
             <!-- Header is always visible -->
-            <div class="mb-2 flex justify-between items-center">
-              <div class="flex flex-col space-y-2">
+            <div class="mb-2 flex justify-between items-center w-full">
+              <div class="flex flex-col space-y-2 ">
                 <img
                   src="/assets/img/subzeroLogosilver.png"
                   class="h-[40px]"
-                  alt=""
+                  alt="Subzero Logo"
                 />
-                <img src="/assets/img/wolf.png" class="h-[40px]" alt="" />
+                <img src="/assets/img/wolf.png" class="h-[40px]" alt="Wolf Logo" />
               </div>
 
-              <div class="max-h-[40px] flex">
-                <img
-                  src="/assets/icons/cookingTop.svg"
-                  alt="freezer icon"
-                  class="max-h-[40px]"
-                />
-                <img
-                  src="/assets/icons/cookingTopv2.svg"
-                  alt="freezer icon"
-                  class="max-h-[40px]"
-                />
+              <div class="max-h-[40px] flex space-x-1">
                 <img
                   src="/assets/icons/freezer.svg"
                   alt="freezer icon"
@@ -69,7 +59,35 @@
                 />
                 <img
                   src="/assets/icons/fridge.svg"
-                  alt="freezer icon"
+                  alt="refrigirator icon"
+                  class="max-h-[40px]"
+                />
+                <img
+                  src="/assets/icons/cooktopv3.svg"
+                  alt="cooktop icon"
+                  class="max-h-[40px]"
+                />
+                <img
+                  src="/assets/icons/oven.svg"
+                  alt="oven icon"
+                  class="max-h-[40px]"
+                />
+                
+                <div class="max-h-[40px]">
+                  <img
+                    src="/assets/icons/ovenv2.svg"
+                    alt="oven icon"
+                    class="max-h-[22px]"
+                  />
+                  <img
+                    src="/assets/icons/ovenv2.svg"
+                    alt="oven icon"
+                    class="max-h-[22px] relative -top-[6px]"
+                  />
+                </div>
+                <img
+                  src="/assets/icons/cookingTopv2.svg"
+                  alt="cooktop icon"
                   class="max-h-[40px]"
                 />
               </div>
@@ -78,20 +96,24 @@
             <div
               class="text-primary text-justify opacity-0 max-h-0 overflow-hidden transition-all duration-1000 group-hover:max-h-80 group-hover:opacity-100"
             >
-              <p class="font-bold">
-                We service & repair following Wolf products:
-              </p>
-              <div class="flex items-center justify-between px-12">
+            <p class="font-bold w-1/2 text-center text-lg w-full" >We service & repair following </p> 
+             
+              <div class="flex items-center justify-between px-8 mt-2">
                 <ul class="list-disc text-sm">
-                  <li>Cooktop and Rangetop</li>
-                  <li>Outdoor Grills</li>
-                  <li>Built-In Ovens</li>
+                  <li class="font-bold text-lg">Sub-zero products</li>
+                  <li>Refridgerators / Built-In Fridges</li>
+                  <li>Freezers</li>
+                  <li>Ice Makers</li>
+                  <li>Under Counter Fridges </li>
+                  <li>Wine Coolers </li>
                 </ul>
                 <ul class="list-disc text-sm">
-                  <li>Range Hoods & Ventilation</li>
-                  <li>Microwaves</li>
-                  <li>Speciality Modules</li>
-                  <li>Warming Drawers</li>
+                  <li class="font-bold text-lg">Wolf products</li>
+                  <li>Ranges</li>
+                  <li>Stoves</li>
+                  <li>Ovens</li>
+                  <li>Double Ovens</li>
+                  <li>Cooktops</li>
                 </ul>
               </div>
               <div class="w-full flex items-center justify-center">
@@ -119,18 +141,8 @@
           >
             <!-- Header is always visible -->
             <div class="mb-2 flex justify-between items-center">
-              <img src="/assets/img/viking.png" class="h-[40px]" alt="" />
-              <div class="max-h-[40px] flex">
-                <img
-                  src="/assets/icons/cookingTop.svg"
-                  alt="freezer icon"
-                  class="max-h-[40px]"
-                />
-                <img
-                  src="/assets/icons/cookingTopv2.svg"
-                  alt="freezer icon"
-                  class="max-h-[40px]"
-                />
+              <img src="/assets/img/viking.png" class="h-[40px]" alt="viking logo" />
+              <div class="max-h-[40px] flex space-x-1">
                 <img
                   src="/assets/icons/freezer.svg"
                   alt="freezer icon"
@@ -138,12 +150,35 @@
                 />
                 <img
                   src="/assets/icons/fridge.svg"
-                  alt="freezer icon"
+                  alt="refrigirator icon"
                   class="max-h-[40px]"
                 />
                 <img
-                  src="/assets/icons/ventilation.svg"
-                  alt="freezer icon"
+                  src="/assets/icons/cooktopv3.svg"
+                  alt="cooktop icon"
+                  class="max-h-[40px]"
+                />
+                <img
+                  src="/assets/icons/oven.svg"
+                  alt="oven icon"
+                  class="max-h-[40px]"
+                />
+                
+                <div class="max-h-[40px]">
+                  <img
+                    src="/assets/icons/ovenv2.svg"
+                    alt="oven icon"
+                    class="max-h-[22px]"
+                  />
+                  <img
+                    src="/assets/icons/ovenv2.svg"
+                    alt="oven icon"
+                    class="max-h-[22px] relative -top-[6px]"
+                  />
+                </div>
+                <img
+                  src="/assets/icons/cookingTopv2.svg"
+                  alt="cooktop icon"
                   class="max-h-[40px]"
                 />
               </div>
@@ -152,20 +187,25 @@
             <div
               class="text-primary text-justify opacity-0 max-h-0 overflow-hidden transition-all duration-1000 group-hover:max-h-80 group-hover:opacity-100"
             >
-              <p class="font-bold">
+              <p class="font-bold w-full text-center text-lg mt-2">
                 We service & repair following Viking products:
               </p>
-              <div class="flex items-center justify-between px-12">
+              <div class="flex items-center justify-between px-8 mt-2">
                 <ul class="list-disc text-sm">
-                  <li>Cooktop and Rangetop</li>
-                  <li>Outdoor Grills</li>
-                  <li>Built-In Ovens</li>
+                  <li class="font-bold text-lg">Cooling</li>
+                  <li>Refridgerators / Built-In Fridges</li>
+                  <li>Freezers</li>
+                  <li>Ice Makers</li>
+                  <li>Under Counter Fridges </li>
+                  <li>Wine Coolers </li>
                 </ul>
                 <ul class="list-disc text-sm">
-                  <li>Range Hoods & Ventilation</li>
-                  <li>Microwaves</li>
-                  <li>Speciality Modules</li>
-                  <li>Warming Drawers</li>
+                  <li class="font-bold text-lg">Cooking</li>
+                  <li>Ranges</li>
+                  <li>Stoves</li>
+                  <li>Ovens</li>
+                  <li>Double Ovens</li>
+                  <li>Cooktops</li>
                 </ul>
               </div>
               <div class="w-full flex items-center justify-center">
@@ -196,17 +236,45 @@
               <img
                 src="/assets/img/kitchenaid.png"
                 class="max-h-[40px] w-1/2"
-                alt=""
+                alt="kitchenaind logo"
               />
-              <div class="max-h-[40px] flex">
+              <div class="max-h-[40px] flex space-x-1">
                 <img
-                  src="/assets/icons/cookingTop.svg"
+                  src="/assets/icons/freezer.svg"
                   alt="freezer icon"
                   class="max-h-[40px]"
                 />
                 <img
+                  src="/assets/icons/fridge.svg"
+                  alt="refrigirator icon"
+                  class="max-h-[40px]"
+                />
+                <img
+                  src="/assets/icons/cooktopv3.svg"
+                  alt="cooktop icon"
+                  class="max-h-[40px]"
+                />
+                <img
+                  src="/assets/icons/oven.svg"
+                  alt="oven icon"
+                  class="max-h-[40px]"
+                />
+                
+                <div class="max-h-[40px]">
+                  <img
+                    src="/assets/icons/ovenv2.svg"
+                    alt="oven icon"
+                    class="max-h-[22px]"
+                  />
+                  <img
+                    src="/assets/icons/ovenv2.svg"
+                    alt="oven icon"
+                    class="max-h-[22px] relative -top-[6px]"
+                  />
+                </div>
+                <img
                   src="/assets/icons/cookingTopv2.svg"
-                  alt="freezer icon"
+                  alt="cooktop icon"
                   class="max-h-[40px]"
                 />
               </div>
@@ -215,20 +283,25 @@
             <div
               class="text-primary text-justify opacity-0 max-h-0 overflow-hidden transition-all duration-1000 group-hover:max-h-80 group-hover:opacity-100"
             >
-              <p class="font-bold">
-                We service & repair following Wolf products:
+              <p class="font-bold w-full text-center text-lg mt-2">
+                We service & repair following KitchenAid products:
               </p>
-              <div class="flex items-center justify-between px-12">
+              <div class="flex items-center justify-between px-8 mt-2">
                 <ul class="list-disc text-sm">
-                  <li>Cooktop and Rangetop</li>
-                  <li>Outdoor Grills</li>
-                  <li>Built-In Ovens</li>
+                  <li class="font-bold text-lg">Cooling</li>
+                  <li>Refridgerators / Built-In Fridges</li>
+                  <li>Freezers</li>
+                  <li>Ice Makers</li>
+                  <li>Under Counter Fridges </li>
+                  <li>Wine Coolers </li>
                 </ul>
                 <ul class="list-disc text-sm">
-                  <li>Range Hoods & Ventilation</li>
-                  <li>Microwaves</li>
-                  <li>Speciality Modules</li>
-                  <li>Warming Drawers</li>
+                  <li class="font-bold text-lg">Cooking</li>
+                  <li>Ranges</li>
+                  <li>Stoves</li>
+                  <li>Ovens</li>
+                  <li>Double Ovens</li>
+                  <li>Cooktops</li>
                 </ul>
               </div>
               <div class="w-full flex items-center justify-center">
@@ -259,17 +332,45 @@
               <img
                 src="/assets/img/GEmonogram.png"
                 class="max-h-[40px] w-[40%]"
-                alt=""
+                alt="GE Monogram Logo"
               />
-              <div class="max-h-[40px] flex">
+              <div class="max-h-[40px] flex space-x-1">
                 <img
-                  src="/assets/icons/cookingTop.svg"
+                  src="/assets/icons/freezer.svg"
                   alt="freezer icon"
                   class="max-h-[40px]"
                 />
                 <img
+                  src="/assets/icons/fridge.svg"
+                  alt="refrigirator icon"
+                  class="max-h-[40px]"
+                />
+                <img
+                  src="/assets/icons/cooktopv3.svg"
+                  alt="cooktop icon"
+                  class="max-h-[40px]"
+                />
+                <img
+                  src="/assets/icons/oven.svg"
+                  alt="oven icon"
+                  class="max-h-[40px]"
+                />
+                
+                <div class="max-h-[40px]">
+                  <img
+                    src="/assets/icons/ovenv2.svg"
+                    alt="oven icon"
+                    class="max-h-[22px]"
+                  />
+                  <img
+                    src="/assets/icons/ovenv2.svg"
+                    alt="oven icon"
+                    class="max-h-[22px] relative -top-[6px]"
+                  />
+                </div>
+                <img
                   src="/assets/icons/cookingTopv2.svg"
-                  alt="freezer icon"
+                  alt="cooktop icon"
                   class="max-h-[40px]"
                 />
               </div>
@@ -278,20 +379,25 @@
             <div
               class="text-primary text-justify opacity-0 max-h-0 overflow-hidden transition-all duration-1000 group-hover:max-h-80 group-hover:opacity-100"
             >
-              <p class="font-bold">
-                We service & repair following Wolf products:
+              <p class="font-bold w-full text-center text-lg mt-2">
+                We service & repair following Viking products:
               </p>
-              <div class="flex items-center justify-between px-12">
+              <div class="flex items-center justify-between px-8 mt-2">
                 <ul class="list-disc text-sm">
-                  <li>Cooktop and Rangetop</li>
-                  <li>Outdoor Grills</li>
-                  <li>Built-In Ovens</li>
+                  <li class="font-bold text-lg">Cooling</li>
+                  <li>Refridgerators / Built-In Fridges</li>
+                  <li>Freezers</li>
+                  <li>Ice Makers</li>
+                  <li>Under Counter Fridges </li>
+                  <li>Wine Coolers </li>
                 </ul>
                 <ul class="list-disc text-sm">
-                  <li>Range Hoods & Ventilation</li>
-                  <li>Microwaves</li>
-                  <li>Speciality Modules</li>
-                  <li>Warming Drawers</li>
+                  <li class="font-bold text-lg">Cooking</li>
+                  <li>Ranges</li>
+                  <li>Stoves</li>
+                  <li>Ovens</li>
+                  <li>Double Ovens</li>
+                  <li>Cooktops</li>
                 </ul>
               </div>
               <div class="w-full flex items-center justify-center">
@@ -324,15 +430,43 @@
                 class="max-h-[40px] w-1/2"
                 alt=""
               />
-              <div class="max-h-[40px] flex">
+              <div class="max-h-[40px] flex space-x-1">
                 <img
-                  src="/assets/icons/cookingTop.svg"
+                  src="/assets/icons/freezer.svg"
                   alt="freezer icon"
                   class="max-h-[40px]"
                 />
                 <img
+                  src="/assets/icons/fridge.svg"
+                  alt="refrigirator icon"
+                  class="max-h-[40px]"
+                />
+                <img
+                  src="/assets/icons/cooktopv3.svg"
+                  alt="cooktop icon"
+                  class="max-h-[40px]"
+                />
+                <img
+                  src="/assets/icons/oven.svg"
+                  alt="oven icon"
+                  class="max-h-[40px]"
+                />
+                
+                <div class="max-h-[40px]">
+                  <img
+                    src="/assets/icons/ovenv2.svg"
+                    alt="oven icon"
+                    class="max-h-[22px]"
+                  />
+                  <img
+                    src="/assets/icons/ovenv2.svg"
+                    alt="oven icon"
+                    class="max-h-[22px] relative -top-[6px]"
+                  />
+                </div>
+                <img
                   src="/assets/icons/cookingTopv2.svg"
-                  alt="freezer icon"
+                  alt="cooktop icon"
                   class="max-h-[40px]"
                 />
               </div>
@@ -341,20 +475,25 @@
             <div
               class="text-primary text-justify opacity-0 max-h-0 overflow-hidden transition-all duration-1000 group-hover:max-h-80 group-hover:opacity-100"
             >
-              <p class="font-bold text-left">
-                We service & repair following Wolf products:
+              <p class="font-bold w-full text-center text-lg mt-2">
+                We service & repair following Viking products:
               </p>
-              <div class="flex items-center justify-between px-12">
+              <div class="flex items-center justify-between px-8 mt-2">
                 <ul class="list-disc text-sm">
-                  <li>Cooktop and Rangetop</li>
-                  <li>Outdoor Grills</li>
-                  <li>Built-In Ovens</li>
+                  <li class="font-bold text-lg">Cooling</li>
+                  <li>Refridgerators / Built-In Fridges</li>
+                  <li>Freezers</li>
+                  <li>Ice Makers</li>
+                  <li>Under Counter Fridges </li>
+                  <li>Wine Coolers </li>
                 </ul>
                 <ul class="list-disc text-sm">
-                  <li>Range Hoods & Ventilation</li>
-                  <li>Microwaves</li>
-                  <li>Speciality Modules</li>
-                  <li>Warming Drawers</li>
+                  <li class="font-bold text-lg">Cooking</li>
+                  <li>Ranges</li>
+                  <li>Stoves</li>
+                  <li>Ovens</li>
+                  <li>Double Ovens</li>
+                  <li>Cooktops</li>
                 </ul>
               </div>
               <div class="w-full flex items-center justify-center">
@@ -387,37 +526,70 @@
                 class="max-h-[250px] overflow-x-visible"
                 alt=""
               />
-              <div class="max-h-[40px] flex">
+              <div class="max-h-[40px] flex space-x-1">
                 <img
-                  src="/assets/icons/cookingTop.svg"
+                  src="/assets/icons/freezer.svg"
                   alt="freezer icon"
                   class="max-h-[40px]"
                 />
                 <img
+                  src="/assets/icons/fridge.svg"
+                  alt="refrigirator icon"
+                  class="max-h-[40px]"
+                />
+                <img
+                  src="/assets/icons/cooktopv3.svg"
+                  alt="cooktop icon"
+                  class="max-h-[40px]"
+                />
+                <img
+                  src="/assets/icons/oven.svg"
+                  alt="oven icon"
+                  class="max-h-[40px]"
+                />
+                
+                <div class="max-h-[40px]">
+                  <img
+                    src="/assets/icons/ovenv2.svg"
+                    alt="oven icon"
+                    class="max-h-[22px]"
+                  />
+                  <img
+                    src="/assets/icons/ovenv2.svg"
+                    alt="oven icon"
+                    class="max-h-[22px] relative -top-[6px]"
+                  />
+                </div>
+                <img
                   src="/assets/icons/cookingTopv2.svg"
-                  alt="freezer icon"
+                  alt="cooktop icon"
                   class="max-h-[40px]"
                 />
               </div>
             </div>
             <!-- Paragraph is hidden initially and expands on hover -->
             <div
-              class="text-primary text-justify opacity-0 max-h-0 overflow-hidden transition-all duration-1000 group-hover:max-h-[220px] group-hover:opacity-100"
+              class="text-primary text-justify opacity-0 max-h-0 overflow-hidden transition-all duration-1000 group-hover:max-h-80 group-hover:opacity-100"
             >
-              <p class="font-bold">
-                We service & repair following Wolf products:
+              <p class="font-bold w-full text-center text-lg mt-2">
+                We service & repair following Viking products:
               </p>
-              <div class="flex items-center justify-between px-12">
+              <div class="flex items-center justify-between px-8 mt-2">
                 <ul class="list-disc text-sm">
-                  <li>Cooktop and Rangetop</li>
-                  <li>Outdoor Grills</li>
-                  <li>Built-In Ovens</li>
+                  <li class="font-bold text-lg">Cooling</li>
+                  <li>Refridgerators / Built-In Fridges</li>
+                  <li>Freezers</li>
+                  <li>Ice Makers</li>
+                  <li>Under Counter Fridges </li>
+                  <li>Wine Coolers </li>
                 </ul>
                 <ul class="list-disc text-sm">
-                  <li>Range Hoods & Ventilation</li>
-                  <li>Microwaves</li>
-                  <li>Speciality Modules</li>
-                  <li>Warming Drawers</li>
+                  <li class="font-bold text-lg">Cooking</li>
+                  <li>Ranges</li>
+                  <li>Stoves</li>
+                  <li>Ovens</li>
+                  <li>Double Ovens</li>
+                  <li>Cooktops</li>
                 </ul>
               </div>
               <div class="w-full flex items-center justify-center">

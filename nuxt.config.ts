@@ -25,6 +25,12 @@ export default defineNuxtConfig({
   },
 
   modules: ['@nuxtjs/seo'],
+  site: {
+    url: 'https://example.com',
+    name: 'Easy Fix Appliance',
+    description: 'Appliance service and repair near Bay area',
+    defaultLocale: 'en', // not needed if you have @nuxtjs/i18n installed
+  },
   robots: {
     UserAgent: '*', // Applies to all user agents
     Disallow: '/admin', // Disallow access to admin pages
