@@ -14,7 +14,7 @@
         <div class="absolute top-0 w-full h-full bg-gradient-to-b from-black to-black opacity-70"></div>
         <div class="md:absolute md:top-0 flex flex-col justify-center items-center md:h-[80vh] w-full relative h-[100vh]">
             <div class="flex flex-col justify-center items-center md:space-y-2 ">
-                <h1 class="md:text-[50px] text-light text-center font-bold text-[32px] animate-fadeInLeft"
+                <h1 class="md:text-[50px] text-light text-center  font-bold text-[32px] animate-fadeInLeft px-28"
                 :key="currentSlogan.header"
                 :class="{'animate-fadeInLeft': animate }">{{currentSlogan.header}}</h1>
                 <p class="md:text-[24px] text-light text-center font-semibold  text-[20px] animate-fadeDown"
@@ -25,12 +25,12 @@
                 <div class="flex space-x-2">
                   <NuxtLink 
                   href="/booking"
-                  class="mt-2 bg-light border-2 border-light px-8 py-3 mt-8 font-semibold hover:border-tertiary hover:text-white hover:bg-secondary transition-all duration-800 ease-out group animate-flashShadow">
+                  class="mt-2 z-20 bg-light border-2 border-light px-8 py-3 mt-8 font-semibold hover:border-tertiary hover:text-white hover:bg-secondary transition-all duration-800 ease-out group animate-flashShadow">
                     <p  class="text-primary group-hover:text-white">Book now</p>
                 </NuxtLink>
                 <a 
                   href="tel:+16505139163"
-                  class="mt-2 bg-light border-2 border-light px-8 py-3 mt-8 font-semibold hover:border-tertiary hover:text-white hover:bg-secondary transition-all duration-800 ease-out group animate-flashShadow">
+                  class="mt-2 z-20 bg-light border-2 border-light px-8 py-3 mt-8 font-semibold hover:border-tertiary hover:text-white hover:bg-secondary transition-all duration-800 ease-out group animate-flashShadow">
                     <p  class="text-primary group-hover:text-white">or Call us on +16505139163 </p>
                 </a>
                 </div>

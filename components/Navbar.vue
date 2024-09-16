@@ -11,12 +11,12 @@
 
       >
         <svg
-          width="52"
-          height="52"
+          width="42"
+          height="42"
           viewBox="0 0 52 52"
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
-          class="animate-flashShdowBlue rounded-full"
+          class="animate-flashShadowTwoSides rounded-full"
           
         >
           <path
