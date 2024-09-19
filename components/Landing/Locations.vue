@@ -40,40 +40,52 @@
 import { computed } from "vue";
 
 const zipCodes = [
-  94002, 94010, 94011, 94018, 94019, 94022, 94023, 94024, 94025, 94026, 94027,
-  94028, 94030, 94035, 94039, 94040, 94041, 94042, 94043, 94061, 94062, 94063,
-  94064, 94065, 94066, 94070, 94085, 94086, 94087, 94088, 94089, 94128, 94301,
-  94302, 94303, 94304, 94305, 94306, 94309, 94401, 94402, 94403, 94404, 94497,
-  94536, 94537, 94538, 94540, 94541, 94542, 94543, 94544, 94545, 94555, 94557,
-  94560, 94577, 94578, 94579, 94580, 94587, 95002,
+  "94020", "94022", "94028", "94301", "94302", "94303", "94304", "94306", "95033", // Palo Alto
+  "94010", // Hillsborough
+  "94401", "94402", "94403", "94404", "94497", // San Mateo
+  "94025", "94026", // Menlo Park
+  "94027", "94061", "94062", // Woodside
+  "94062", // Emerald Hills
+  "94027", // Atherton
+  "94023", "94024", // Los Altos
+  "95030", "95032", // Los Gatos
+  "944011", // Burlingame
+  "95030", // Monte Sereno
+  "94019", // Half Moon Bay
+  "94063", "94064", "94065", // Redwood City
+  "94039", "94040", "94041", "94042", "94043", "94085", // Mountain View
+  "94086", "94087", "94089", // Sunnyvale
+  "95070", "95071", // Saratoga
+  "94002", // Belmont
+  "94070", // San Carlos
+  "94121", "94122", "94123", "94118", "94115", "94158", "94114", "94117", "94110", "941131", "94127" // San Francisco
 ];
 
 const cities = [
-  "Alviso",
   "Atherton",
   "Belmont",
   "Burlingame",
-  "El Granada",
-  "Fremont",
+  "Emerald Hills",
+  "Foster City",
   "Half Moon Bay",
-  "Hayward",
+  "Hillsborough",
   "Los Altos",
+  "Los Altos Hills",
+  "Los Gatos",
   "Menlo Park",
   "Millbrae",
+  "Monte Sereno",
   "Mountain View",
-  "Newark",
+  "Pacifica",
   "Palo Alto",
   "Portola Valley",
   "Redwood City",
-  "San Bruno",
   "San Carlos",
   "San Francisco",
-  "San Leandro",
-  "San Lorenzo",
   "San Mateo",
-  "Stanford",
+  "Saratoga",
   "Sunnyvale",
-  "Union City",
+  "Woodside"
 ];
 
 // Compute columns for cities
