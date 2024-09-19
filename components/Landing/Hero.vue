@@ -31,7 +31,7 @@
                 <a 
                   href="tel:+16505139163"
                   class="mt-2 z-20 bg-light border-2 border-light px-8 py-3 mt-8 font-semibold hover:border-tertiary hover:text-white hover:bg-secondary transition-all duration-800 ease-out group animate-flashShadow">
-                    <p  class="text-primary group-hover:text-white">or Call us on +16505139163 </p>
+                    <p  class="text-primary group-hover:text-white">or Call us +16505139163 </p>
                 </a>
                 </div>
                 
@@ -58,19 +58,19 @@ let animate = ref(true);  // Animation state
 
 const sloganData = ref([
 {
-    header: 'Sub-Zero Refridgerator not cooling?',
-    paragraph: '– Call now for a certified technician near you',
+    header: 'Sub-Zero Refrigerator not cooling?',
+    paragraph: 'Call now for a Certified Technician Near You',
     background: mainBackground,
   },
   {
     header: 'Wolf Oven Temperature Issue or Wolf Stove Not Working Well?',
     paragraph:
-      '– Call now for your local appliance technician',
+      'Call Now for your Local Appliance Technician',
     background: thirdBackground,
   },
   {
     header: 'Viking Range Not Heating or Viking Fridge Leaking?',
-    paragraph: '– Book same day service today',
+    paragraph: 'Book same day service today',
     background: secondBackground,
   },
   

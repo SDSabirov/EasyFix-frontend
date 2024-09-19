@@ -1,6 +1,6 @@
 <template>
   <nav
-    class="bg-transparent transition-all duration-500 dark:bg-gray-900 fixed w-full z-40 top-0 start-0 dark:border-gray-600 animate-fadeDown"
+    class="bg-primary  transition-all duration-500 dark:bg-gray-900 fixed w-full z-40 top-0 start-0 dark:border-gray-600 animate-fadeDown"
   >
     <div
       class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-1 md:p-4"

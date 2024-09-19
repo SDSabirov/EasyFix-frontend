@@ -4,8 +4,8 @@
     class="max-w-screen h-full overflow-hidden z-10 bg-blackOpacity"
   >
     <div class="container mx-auto px-2 py-16 md:px-28">
-      <h2 class="text-4xl font-bold text-center text-light">
-        What our clients say?
+      <h2 class="text-4xl font-bold text-center text-light capitalize">
+        What Our Clients Say
       </h2>
       <div
         class="max-w-screen-xl px-4 py-8 mx-auto text-center bg-light lg:py-16 lg:px-6 mt-2 md:mt-6"

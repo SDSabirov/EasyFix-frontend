@@ -4,7 +4,7 @@
     class="max-w-screen h-full overflow-hidden z-10 bg-secondary"
   >
     <div class="container mx-auto px-2 py-16 md:px-28">
-      <h2 class="text-4xl font-bold text-center text-light">Get in touch</h2>
+      <h2 class="text-4xl font-bold text-center text-light capitalize">Get in touch</h2>
       <p class="text-justify text-light mt-4 px-2">
         We’re here to assist with any questions or concerns you may have. Feel free to contact us by phone, email, or by filling out the form. We will respond as soon as possible.
       </p>
@@ -120,7 +120,7 @@
 
             <h2 class="mt-4 text-lg font-medium text-light">Payment Methods</h2>
 
-            <p class="mt-2 text-light/90">We do accept following methods</p>
+            <p class="mt-2 text-light/90">We accept the following methods</p>
             <div class="mt-2 text-light/90 flex space-x-3 max-h-12">
               <img src="/assets/icons/visa.svg" 
                 alt="visa payment" 

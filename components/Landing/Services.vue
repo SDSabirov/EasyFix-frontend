@@ -46,50 +46,50 @@
               <div class="flex flex-col space-y-2 ">
                 <img
                   src="/assets/img/subzeroLogosilver.png"
-                  class="h-[40px]"
+                  class="max-h-[30px] md:max-h-[40px]"
                   alt="Subzero Logo"
                 />
-                <img src="/assets/img/wolf.png" class="h-[40px]" alt="Wolf Logo" />
+                <img src="/assets/img/wolf.png" class="max-h-[30px] md:max-h-[40px]" alt="Wolf Logo" />
               </div>
 
-              <div class="max-h-[40px] flex space-x-1">
+              <div class="max-h-[40px] flex space-x-1 items-center">
                 <img
                   src="/assets/icons/freezer.svg"
                   alt="freezer icon"
-                  class="max-h-[40px]"
+                  class="max-h-[30px] md:max-h-[40px]"
                 />
                 <img
                   src="/assets/icons/fridge.svg"
                   alt="refrigirator icon"
-                  class="max-h-[40px]"
+                  class="max-h-[30px] md:max-h-[40px]"
                 />
                 <img
                   src="/assets/icons/cooktopv3.svg"
                   alt="cooktop icon"
-                  class="max-h-[40px]"
+                  class="max-h-[20px] md:max-h-[40px]"
                 />
                 <img
                   src="/assets/icons/oven.svg"
                   alt="oven icon"
-                  class="max-h-[40px]"
+                  class="max-h-[30px] md:max-h-[40px]"
                 />
                 
-                <div class="max-h-[40px]">
+                <div class="max-h-[30px] md:max-h-[40px]">
                   <img
                     src="/assets/icons/ovenv2.svg"
                     alt="oven icon"
-                    class="max-h-[22px]"
+                    class="max-h-[15px] md:max-h-[20px]"
                   />
                   <img
                     src="/assets/icons/ovenv2.svg"
                     alt="oven icon"
-                    class="max-h-[22px] relative -top-[6px]"
+                    class="max-h-[15px] md:max-h-[20px] relative -top-[6px]"
                   />
                 </div>
                 <img
                   src="/assets/icons/cookingTopv2.svg"
                   alt="cooktop icon"
-                  class="max-h-[40px]"
+                  class="max-h-[30px] md:max-h-[40px]"
                 />
               </div>
             </div>
@@ -97,25 +97,32 @@
             <div
               class="text-primary text-justify opacity-0 max-h-0 overflow-hidden transition-all duration-1000 group-hover:max-h-80 group-hover:opacity-100"
             >
-            <p class="font-bold w-1/2 text-center text-lg w-full" >We service & repair following </p> 
+            <p class="font-bold w-1/2 text-center text-lg w-full capitalize" >We service & repair </p> 
              
-              <div class="flex items-center justify-between px-8 mt-2">
-                <ul class="list-disc text-sm">
-                  <li class="font-bold text-lg">Sub-zero products</li>
-                  <li>Refridgerators / Built-In Fridges</li>
-                  <li>Freezers</li>
-                  <li>Ice Makers</li>
-                  <li>Under Counter Fridges </li>
-                  <li>Wine Coolers </li>
-                </ul>
-                <ul class="list-disc text-sm">
-                  <li class="font-bold text-lg">Wolf products</li>
-                  <li>Ranges</li>
-                  <li>Stoves</li>
-                  <li>Ovens</li>
-                  <li>Double Ovens</li>
-                  <li>Cooktops</li>
-                </ul>
+              <div class="flex items-center justify-between mt-2">
+                <div class="flex flex-col space-y-1">
+                  <p class="font-bold text-lg ">Sub-zero products</p>
+                  <ul class="list-disc text-sm px-4">
+                  
+                    <li>Refrigerator/Built-In Fridges</li>
+                    <li>Freezers</li>
+                    <li>Ice Makers</li>
+                    <li>Under Counter Fridges </li>
+                    <li>Wine Coolers </li>
+                  </ul>
+                </div>
+                <div class="flex flex-col space-y-1">
+                  <p class="font-bold text-lg">Wolf products</p>
+                    <ul class="list-disc text-sm px-4">
+                    
+                    <li>Ranges</li>
+                    <li>Stoves</li>
+                    <li>Ovens</li>
+                    <li>Double Ovens</li>
+                    <li>Cooktops</li>
+                  </ul>
+                </div>
+                
               </div>
               <div class="w-full flex items-center justify-center">
                 <NuxtLink href="/booking">
@@ -189,26 +196,33 @@
             <div
               class="text-primary text-justify opacity-0 max-h-0 overflow-hidden transition-all duration-1000 group-hover:max-h-80 group-hover:opacity-100"
             >
-              <p class="font-bold w-full text-center text-lg mt-2">
-                We service & repair following Viking products:
+            <p class="font-bold w-full text-center text-lg mt-2 capitalize">
+                We service & repair:
               </p>
-              <div class="flex items-center justify-between px-8 mt-2">
-                <ul class="list-disc text-sm">
-                  <li class="font-bold text-lg">Cooling</li>
-                  <li>Refridgerators / Built-In Fridges</li>
-                  <li>Freezers</li>
-                  <li>Ice Makers</li>
-                  <li>Under Counter Fridges </li>
-                  <li>Wine Coolers </li>
-                </ul>
-                <ul class="list-disc text-sm">
-                  <li class="font-bold text-lg">Cooking</li>
-                  <li>Ranges</li>
-                  <li>Stoves</li>
-                  <li>Ovens</li>
-                  <li>Double Ovens</li>
-                  <li>Cooktops</li>
-                </ul>
+              <div class="flex items-center justify-between mt-2">
+                <div class="flex flex-col space-y-1">
+                  <p class="font-bold text-lg ">Cooling</p>
+                  <ul class="list-disc text-sm px-4">
+                  
+                    <li>Refrigerator/Built-In Fridges</li>
+                    <li>Freezers</li>
+                    <li>Ice Makers</li>
+                    <li>Under Counter Fridges </li>
+                    <li>Wine Coolers </li>
+                  </ul>
+                </div>
+                <div class="flex flex-col space-y-1">
+                  <p class="font-bold text-lg">Cooking</p>
+                    <ul class="list-disc text-sm px-4">
+                    
+                    <li>Ranges</li>
+                    <li>Stoves</li>
+                    <li>Ovens</li>
+                    <li>Double Ovens</li>
+                    <li>Cooktops</li>
+                  </ul>
+                </div>
+                
               </div>
               <div class="w-full flex items-center justify-center">
                 <NuxtLink href="/booking">
@@ -286,26 +300,33 @@
             <div
               class="text-primary text-justify opacity-0 max-h-0 overflow-hidden transition-all duration-1000 group-hover:max-h-80 group-hover:opacity-100"
             >
-              <p class="font-bold w-full text-center text-lg mt-2">
-                We service & repair following KitchenAid products:
+            <p class="font-bold w-full text-center text-lg mt-2 capitalize">
+                We service & repair:
               </p>
-              <div class="flex items-center justify-between px-8 mt-2">
-                <ul class="list-disc text-sm">
-                  <li class="font-bold text-lg">Cooling</li>
-                  <li>Refridgerators / Built-In Fridges</li>
-                  <li>Freezers</li>
-                  <li>Ice Makers</li>
-                  <li>Under Counter Fridges </li>
-                  <li>Wine Coolers </li>
-                </ul>
-                <ul class="list-disc text-sm">
-                  <li class="font-bold text-lg">Cooking</li>
-                  <li>Ranges</li>
-                  <li>Stoves</li>
-                  <li>Ovens</li>
-                  <li>Double Ovens</li>
-                  <li>Cooktops</li>
-                </ul>
+              <div class="flex items-center justify-between mt-2">
+                <div class="flex flex-col space-y-1">
+                  <p class="font-bold text-lg ">Cooling</p>
+                  <ul class="list-disc text-sm px-4">
+                  
+                    <li>Refrigerator/Built-In Fridges</li>
+                    <li>Freezers</li>
+                    <li>Ice Makers</li>
+                    <li>Under Counter Fridges </li>
+                    <li>Wine Coolers </li>
+                  </ul>
+                </div>
+                <div class="flex flex-col space-y-1">
+                  <p class="font-bold text-lg">Cooking</p>
+                    <ul class="list-disc text-sm px-4">
+                    
+                    <li>Ranges</li>
+                    <li>Stoves</li>
+                    <li>Ovens</li>
+                    <li>Double Ovens</li>
+                    <li>Cooktops</li>
+                  </ul>
+                </div>
+                
               </div>
               <div class="w-full flex items-center justify-center">
                 <NuxtLink href="/booking">
@@ -383,26 +404,33 @@
             <div
               class="text-primary text-justify opacity-0 max-h-0 overflow-hidden transition-all duration-1000 group-hover:max-h-80 group-hover:opacity-100"
             >
-              <p class="font-bold w-full text-center text-lg mt-2">
-                We service & repair following GE Monogram products:
+            <p class="font-bold w-full text-center text-lg mt-2 capitalize">
+                We service & repair:
               </p>
-              <div class="flex items-center justify-between px-8 mt-2">
-                <ul class="list-disc text-sm">
-                  <li class="font-bold text-lg">Cooling</li>
-                  <li>Refridgerators / Built-In Fridges</li>
-                  <li>Freezers</li>
-                  <li>Ice Makers</li>
-                  <li>Under Counter Fridges </li>
-                  <li>Wine Coolers </li>
-                </ul>
-                <ul class="list-disc text-sm">
-                  <li class="font-bold text-lg">Cooking</li>
-                  <li>Ranges</li>
-                  <li>Stoves</li>
-                  <li>Ovens</li>
-                  <li>Double Ovens</li>
-                  <li>Cooktops</li>
-                </ul>
+              <div class="flex items-center justify-between mt-2">
+                <div class="flex flex-col space-y-1">
+                  <p class="font-bold text-lg ">Cooling</p>
+                  <ul class="list-disc text-sm px-4">
+                  
+                    <li>Refrigerator/Built-In Fridges</li>
+                    <li>Freezers</li>
+                    <li>Ice Makers</li>
+                    <li>Under Counter Fridges </li>
+                    <li>Wine Coolers </li>
+                  </ul>
+                </div>
+                <div class="flex flex-col space-y-1">
+                  <p class="font-bold text-lg">Cooking</p>
+                    <ul class="list-disc text-sm px-4">
+                    
+                    <li>Ranges</li>
+                    <li>Stoves</li>
+                    <li>Ovens</li>
+                    <li>Double Ovens</li>
+                    <li>Cooktops</li>
+                  </ul>
+                </div>
+                
               </div>
               <div class="w-full flex items-center justify-center">
                 <NuxtLink href="/booking">
@@ -480,26 +508,33 @@
             <div
               class="text-primary text-justify opacity-0 max-h-0 overflow-hidden transition-all duration-1000 group-hover:max-h-80 group-hover:opacity-100"
             >
-              <p class="font-bold w-full text-center text-lg mt-2">
-                We service & repair following Dacor products:
+              <p class="font-bold w-full text-center text-lg mt-2 capitalize">
+                We service & repair:
               </p>
-              <div class="flex items-center justify-between px-8 mt-2">
-                <ul class="list-disc text-sm">
-                  <li class="font-bold text-lg">Cooling</li>
-                  <li>Refridgerators / Built-In Fridges</li>
-                  <li>Freezers</li>
-                  <li>Ice Makers</li>
-                  <li>Under Counter Fridges </li>
-                  <li>Wine Coolers </li>
-                </ul>
-                <ul class="list-disc text-sm">
-                  <li class="font-bold text-lg">Cooking</li>
-                  <li>Ranges</li>
-                  <li>Stoves</li>
-                  <li>Ovens</li>
-                  <li>Double Ovens</li>
-                  <li>Cooktops</li>
-                </ul>
+              <div class="flex items-center justify-between mt-2">
+                <div class="flex flex-col space-y-1">
+                  <p class="font-bold text-lg ">Cooling</p>
+                  <ul class="list-disc text-sm px-4">
+                  
+                    <li>Refrigerator/Built-In Fridges</li>
+                    <li>Freezers</li>
+                    <li>Ice Makers</li>
+                    <li>Under Counter Fridges </li>
+                    <li>Wine Coolers </li>
+                  </ul>
+                </div>
+                <div class="flex flex-col space-y-1">
+                  <p class="font-bold text-lg">Cooking</p>
+                    <ul class="list-disc text-sm px-4">
+                    
+                    <li>Ranges</li>
+                    <li>Stoves</li>
+                    <li>Ovens</li>
+                    <li>Double Ovens</li>
+                    <li>Cooktops</li>
+                  </ul>
+                </div>
+                
               </div>
               <div class="w-full flex items-center justify-center">
                 <NuxtLink href="/booking">
@@ -577,26 +612,33 @@
             <div
               class="text-primary text-justify opacity-0 max-h-0 overflow-hidden transition-all duration-1000 group-hover:max-h-80 group-hover:opacity-100"
             >
-              <p class="font-bold w-full text-center text-lg mt-2">
-                We service & repair following Thermador products:
+              <p class="font-bold w-full text-center text-lg mt-2 capitalize">
+                We service & repair:
               </p>
-              <div class="flex items-center justify-between px-8 mt-2">
-                <ul class="list-disc text-sm">
-                  <li class="font-bold text-lg">Cooling</li>
-                  <li>Refridgerators / Built-In Fridges</li>
-                  <li>Freezers</li>
-                  <li>Ice Makers</li>
-                  <li>Under Counter Fridges </li>
-                  <li>Wine Coolers </li>
-                </ul>
-                <ul class="list-disc text-sm">
-                  <li class="font-bold text-lg">Cooking</li>
-                  <li>Ranges</li>
-                  <li>Stoves</li>
-                  <li>Ovens</li>
-                  <li>Double Ovens</li>
-                  <li>Cooktops</li>
-                </ul>
+              <div class="flex items-center justify-between mt-2">
+                <div class="flex flex-col space-y-1">
+                  <p class="font-bold text-lg ">Cooling</p>
+                  <ul class="list-disc text-sm px-4">
+                  
+                    <li>Refrigerator/Built-In Fridges</li>
+                    <li>Freezers</li>
+                    <li>Ice Makers</li>
+                    <li>Under Counter Fridges </li>
+                    <li>Wine Coolers </li>
+                  </ul>
+                </div>
+                <div class="flex flex-col space-y-1">
+                  <p class="font-bold text-lg">Cooking</p>
+                    <ul class="list-disc text-sm px-4">
+                    
+                    <li>Ranges</li>
+                    <li>Stoves</li>
+                    <li>Ovens</li>
+                    <li>Double Ovens</li>
+                    <li>Cooktops</li>
+                  </ul>
+                </div>
+                
               </div>
               <div class="w-full flex items-center justify-center">
                 <NuxtLink href="/booking">
