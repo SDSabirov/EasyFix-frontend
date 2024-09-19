@@ -3,7 +3,7 @@
     id="services"
     class="max-w-screen h-full bg-light overflow-hidden z-10"
   >
-    <div class="container mx-auto px-2 py-16 md:px-28">
+    <div class="container mx-auto px-2 py-16  lg:px-28">
       <h2 class="text-4xl font-bold text-center text-primary">Appliances</h2>
       <p class="text-justify text-gray-500 mt-2 px-2 md:mt-6">
         <strong>At Easy Fix Appliance</strong>, we deliver premium appliance

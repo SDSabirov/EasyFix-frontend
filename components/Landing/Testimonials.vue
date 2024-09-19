@@ -3,7 +3,7 @@
     id="testimonials"
     class="max-w-screen h-full overflow-hidden z-10 bg-blackOpacity"
   >
-    <div class="container mx-auto px-2 py-16 md:px-28">
+    <div class="container mx-auto px-2 py-16 lg:px-28">
       <h2 class="text-4xl font-bold text-center text-light capitalize">
         What Our Clients Say
       </h2>

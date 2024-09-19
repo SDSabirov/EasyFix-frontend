@@ -12,11 +12,11 @@
         ></p>
       </div>
       <div
-        class="space-y-8 lg:grid lg:grid-cols-4 sm:gap-6 xl:gap-10 lg:space-y-0"
+        class="space-y-8 md:grid md:grid-cols-2 lg:grid-cols-4 md:space-y-0 sm:gap-6 xl:gap-10 lg:space-y-0 px-2"
       >
         <!-- Pricing Card -->
         <div
-          class="flex flex-col p-6 mx-auto max-w-lg text-center text-gray-900 bg-primary rounded-lg border border-gray-100 shadow dark:border-gray-600 xl:p-8 dark:bg-gray-800 dark:text-white"
+          class="flex flex-col p-6 mx-auto max-w-lg text-center md:w-full md:h-full text-gray-900 bg-primary min-h-[340px] border border-gray-100 shadow dark:border-gray-600 xl:p-8 dark:bg-gray-800 dark:text-white"
         >
           <h3 class="mb-4 text-light font-semibold">
             Second Appliance Service
@@ -42,7 +42,7 @@
                   clip-rule="evenodd"
                 ></path>
               </svg>
-              <span>Additional Appliance Repair </span>
+              <span>Additional Appliance Repair</span>
             </li>
           </ul>
           <NuxtLink
@@ -53,7 +53,7 @@
         </div>
         <!-- Pricing Card -->
         <div
-          class="flex flex-col p-6 mx-auto max-w-lg text-center text-gray-900 bg-primary rounded-lg border border-gray-100 shadow dark:border-gray-600 xl:p-8 dark:bg-gray-800 dark:text-white"
+          class="flex flex-col p-6 mx-auto max-w-lg text-center text-gray-900 bg-primary md:w-full md:h-full border border-gray-100 shadow dark:border-gray-600 xl:p-8 dark:bg-gray-800 dark:text-white"
         >
           <h3 class="mb-4 text-light font-semibold">Standard Service</h3>
           <p class="font-light text-light0 sm:text-lg dark:text-gray-400"></p>
@@ -90,7 +90,7 @@
         </div>
         <!-- Pricing Card -->
         <div
-          class="flex flex-col p-6 mx-auto max-w-lg text-center text-gray-900 bg-primary rounded-lg border border-gray-100 shadow dark:border-gray-600 xl:p-8 dark:bg-gray-800 dark:text-white"
+          class="flex flex-col p-6 mx-auto max-w-lg text-center md:w-full md:h-full text-gray-900 bg-primary border border-gray-100 shadow dark:border-gray-600 xl:p-8 dark:bg-gray-800 dark:text-white"
         >
           <h3 class="mb-4 text-light font-semibold">Emergency Service</h3>
           <p class="font-light text-light0 sm:text-lg dark:text-gray-400"></p>
@@ -127,7 +127,7 @@
         
         <!-- Pricing Card -->
         <div
-          class="flex flex-col p-6 mx-auto max-w-lg text-center text-gray-900 bg-primary rounded-lg border border-gray-100 shadow dark:border-gray-600 xl:p-8 dark:bg-gray-800 dark:text-white"
+          class="flex flex-col p-6 mx-auto max-w-lg md:w-full md:h-full text-center text-gray-900 bg-primary border border-gray-100 shadow dark:border-gray-600 xl:p-8 dark:bg-gray-800 dark:text-white"
         >
           <h3 class="mb-4 text-light font-semibold">Maintenance Service</h3>
           <p class="font-light text-light0 sm:text-lg dark:text-gray-400"></p>
