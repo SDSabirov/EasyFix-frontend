@@ -77,7 +77,7 @@
                   clip-rule="evenodd"
                 ></path>
               </svg>
-              <span>Expert diagnosis and repair  </span>
+              <span>Expert diagnostics and repair </span>
             </li>
             
             

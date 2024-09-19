@@ -8,7 +8,7 @@
                     </div>
                     <div class="flex flex-col items-start w-full ">
                             <h4 class="text-xl font-bold text-light">Emergency Service</h4>
-                            <p class="text-lg font-semibold text-gray-300 mt-2">Emergency/Same day service available. Costs depends on area</p>
+                            <p class="text-lg font-semibold text-gray-300 mt-2">Emergency/Same day service available. Costs depend on the area.</p>
                     </div>    
                 </div>
                 <div class="flex flex-col border-b border-ligt py-4 items-start  space-y-4 mx-2 text-light md:border-none">
@@ -42,7 +42,7 @@
                     <div class="flex flex-col items-start w-full ">
                             <h4 class="text-xl font-bold text-light">Certified and Authorized Technicians </h4>
                             <p class="text-lg font-semibold text-gray-300 mt-2">
-                                Our experts are rigorously trained across all the brands we service.
+                                Our experts undergo rigorous training across all the brands we service.
                             </p>
                     </div>    
                 </div>

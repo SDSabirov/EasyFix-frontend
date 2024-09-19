@@ -69,7 +69,7 @@
             data-drawer-placement="right"
             aria-controls="drawer-right-example"
           >
-            Email us
+            Send Email
           </button>
           <!--call now buuron-->
           <a
@@ -132,14 +132,14 @@
             <a
               href="#faq"
               class="block py-2 px-3 text-light rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-tertiary md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"
-              >FAQ</a
+              >Services</a
             >
           </li>
           <li>
             <a
-              href="#contact"
+              href="#contacts"
               class="block py-2 px-3 text-light rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-tertiary md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"
-              >Contact</a
+              >Contacts</a
             >
           </li>
         </ul>

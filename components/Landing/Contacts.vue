@@ -6,9 +6,7 @@
     <div class="container mx-auto px-2 py-16 md:px-28">
       <h2 class="text-4xl font-bold text-center text-light">Get in touch</h2>
       <p class="text-justify text-light mt-4 px-2">
-        We are here to help you with any questions or concerns you may have.
-        Please feel free to contact us by phone, email, or by filling out the
-        form. We will get back to you as soon as possible.
+        We’re here to assist with any questions or concerns you may have. Feel free to contact us by phone, email, or by filling out the form. We will respond as soon as possible.
       </p>
       <div class="container mx-auto">
         <div
@@ -57,7 +55,7 @@
 
             <h2 class="mt-4 text-lg font-medium text-light">Phone</h2>
             <p class="mt-2 text-light/90 text-lg">Mon-Fri from 8am to 8pm.</p>
-            <p class="mt-2 text-light/90 text-lg">Weekends <strong>Emergency Services only</strong> </p>
+            <p class="mt-2 text-light/90 text-lg">Weekend <strong>Emergency Services only</strong> </p>
             <a
               class="mt-2 text-light/80 flex items-center text-lg"
               href="tel:+16505139163 "
