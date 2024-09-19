@@ -3,29 +3,29 @@
     <h2 class="text-xl font-bold text-center text-primary">
       Cities and Zip Codes
     </h2>
-    <div class="md:flex mt-8 px-4">
-      <div class="flex w-full  md:flex-row md:w-1/2 space-x-2 justify-center">
+    <div class="md:flex mt-8 px-2">
+      <div class="flex w-full  md:flex-row md:w-1/2 space-x-6 justify-center">
         <!-- Cities Column -->
         <div
           v-for="(column, index) in cityColumns"
           :key="'city-' + index"
-          class="w-1/5 px-2"
+          class="w-1/5 "
         >
-          <ul class="list-disc text-primary">
+          <ul class="list-disc text-primary text-[14px] font-semibold">
             <li v-for="(city, cityIndex) in column" :key="cityIndex">
               {{ city }}
             </li>
           </ul>
         </div>
       </div>
-      <div class="flex w-full md:flex-row md:w-1/2 mt-8 md:mt-0 justify-center px-2">
+      <div class="flex w-full md:flex-row md:w-1/2 mt-8 md:mt-0 space-x-3 justify-center px-2">
         <!-- Zip Codes Column -->
         <div
           v-for="(column, index) in zipCodeColumns"
           :key="'zip-' + index"
-          class="w-1/6 px-2"
+          class="w-1/6"
         >
-          <ul class="text-sm text-primary">
+          <ul class="text-[12px] text-primary">
             <li v-for="(zipCode, zipIndex) in column" :key="zipIndex">
               {{ zipCode }}
             </li>

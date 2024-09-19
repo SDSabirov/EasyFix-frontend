@@ -41,17 +41,17 @@
         <div class="flex flex-col">
           <p>
             <span
-              class="self-center text-sm font-semibold whitespace-nowrap text-light dark:text-white"
+              class="self-center text-sm md:text-2xl font-semibold whitespace-nowrap text-light dark:text-white"
               >Easy</span
             >
             <span
-              class="self-center text-sm font-semibold whitespace-nowrap text-tertiary dark:text-white"
+              class="self-center text-sm md:text-2xl font-semibold whitespace-nowrap text-tertiary dark:text-white"
               >Fix</span
             >
           </p>
 
           <p
-            class="self-center text-light text-sm font-semibold whitespace-nowrap dark:text-white"
+            class="self-center text-light text-sm md:text-2xl font-semibold whitespace-nowrap dark:text-white"
           >
             Appliance
           </p>

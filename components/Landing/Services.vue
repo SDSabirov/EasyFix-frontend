@@ -28,8 +28,9 @@
       <div
         class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-6 px-2 mt-4 justify-center"
       >
+        <!--Subzero wolf-->
         <div
-          class="bg-primary dark:bg-gray-800 shadow-lg relative overflow-hidden group hover:shadow-4xl hover:shadow-primary min-h-[220px]"
+          class="bg-primary dark:bg-gray-800 shadow-lg relative overflow-hidden group hover:shadow-4xl hover:shadow-primary min-h-[340px]"
         >
           <img
             src="assets/img/wolfCooking.jpg"
@@ -128,8 +129,9 @@
             </div>
           </div>
         </div>
+        <!--Viking-->
         <div
-          class="bg-primary dark:bg-gray-800 shadow-lg relative overflow-hidden group hover:shadow-4xl hover:shadow-primary min-h-[220px]"
+          class="bg-primary dark:bg-gray-800 shadow-lg relative overflow-hidden group hover:shadow-4xl hover:shadow-primary min-h-[340px]"
         >
           <img
             src="assets/img/vikingAppliance.jpeg"
@@ -220,8 +222,9 @@
             </div>
           </div>
         </div>
+        <!--Kitchenaid-->
         <div
-          class="bg-primary dark:bg-gray-800 shadow-lg relative overflow-hidden group hover:shadow-4xl hover:shadow-primary min-h-[220px]"
+          class="bg-primary dark:bg-gray-800 shadow-lg relative overflow-hidden group hover:shadow-4xl hover:shadow-primary min-h-[340px]"
         >
           <img
             src="assets/img/kitchenBlue.jpg"
@@ -316,8 +319,9 @@
             </div>
           </div>
         </div>
+        <!--Ge monogram-->
         <div
-          class="bg-primary dark:bg-gray-800 shadow-lg relative overflow-hidden group hover:shadow-4xl hover:shadow-primary min-h-[220px]"
+          class="bg-primary dark:bg-gray-800 shadow-lg relative overflow-hidden group hover:shadow-4xl hover:shadow-primary min-h-[340px]"
         >
           <img
             src="assets/img/redAppliance.jpeg"
@@ -380,7 +384,7 @@
               class="text-primary text-justify opacity-0 max-h-0 overflow-hidden transition-all duration-1000 group-hover:max-h-80 group-hover:opacity-100"
             >
               <p class="font-bold w-full text-center text-lg mt-2">
-                We service & repair following Viking products:
+                We service & repair following GE Monogram products:
               </p>
               <div class="flex items-center justify-between px-8 mt-2">
                 <ul class="list-disc text-sm">
@@ -412,8 +416,9 @@
             </div>
           </div>
         </div>
+        <!--dacor-->
         <div
-          class="bg-primary dark:bg-gray-800 shadow-lg relative overflow-hidden group hover:shadow-4xl hover:shadow-primary"
+          class="bg-primary dark:bg-gray-800 shadow-lg relative overflow-hidden group hover:shadow-4xl hover:shadow-primary min-h-[340px]"
         >
           <img
             src="assets/img/dacor-cover.jpg"
@@ -476,7 +481,7 @@
               class="text-primary text-justify opacity-0 max-h-0 overflow-hidden transition-all duration-1000 group-hover:max-h-80 group-hover:opacity-100"
             >
               <p class="font-bold w-full text-center text-lg mt-2">
-                We service & repair following Viking products:
+                We service & repair following Dacor products:
               </p>
               <div class="flex items-center justify-between px-8 mt-2">
                 <ul class="list-disc text-sm">
@@ -508,8 +513,9 @@
             </div>
           </div>
         </div>
+        <!--thermador-->
         <div
-          class="bg-primary dark:bg-gray-800 shadow-lg relative overflow-hidden group hover:shadow-4xl hover:shadow-primary"
+          class="bg-primary dark:bg-gray-800 shadow-lg relative overflow-hidden group hover:shadow-4xl hover:shadow-primary min-h-[340px]"
         >
           <img
             src="assets/img/thermador-cover.jpg"
@@ -572,7 +578,7 @@
               class="text-primary text-justify opacity-0 max-h-0 overflow-hidden transition-all duration-1000 group-hover:max-h-80 group-hover:opacity-100"
             >
               <p class="font-bold w-full text-center text-lg mt-2">
-                We service & repair following Viking products:
+                We service & repair following Thermador products:
               </p>
               <div class="flex items-center justify-between px-8 mt-2">
                 <ul class="list-disc text-sm">

@@ -14,7 +14,7 @@
         <div class="absolute top-0 w-full h-full bg-gradient-to-b from-black to-black opacity-70"></div>
         <div class="md:absolute md:top-0 flex flex-col justify-center items-center md:h-[80vh] w-full relative h-[100vh]">
             <div class="flex flex-col justify-center items-center md:space-y-2 ">
-                <h1 class="md:text-[50px] text-light text-center  font-bold text-[32px] animate-fadeInLeft px-28"
+                <h1 class="md:text-[50px] text-light text-center  font-bold text-[32px] animate-fadeInLeft md:px-28"
                 :key="currentSlogan.header"
                 :class="{'animate-fadeInLeft': animate }">{{currentSlogan.header}}</h1>
                 <p class="md:text-[24px] text-light text-center font-semibold  text-[20px] animate-fadeDown"
@@ -58,7 +58,7 @@ let animate = ref(true);  // Animation state
 
 const sloganData = ref([
 {
-    header: 'Sub-Zero Refrigerator not cooling?',
+    header: 'Sub-Zero Refridgerator not cooling?',
     paragraph: '– Call now for a certified technician near you',
     background: mainBackground,
   },
