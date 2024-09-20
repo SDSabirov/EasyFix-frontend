@@ -3,8 +3,8 @@
     <h2 class="text-xl font-bold text-center text-primary">
       Cities and Zip Codes
     </h2>
-    <div class="flex flex-col lg:flex mt-8 px-2 items-center justify-center">
-      <div class="flex w-full  lg:flex-row lg:w-1/2 space-x-6 justify-center">
+    <div class="grid grid-cols-1 gap-2 lg:grid-cols-2 mt-8 items-center justify-center">
+      <div class="flex w-full  space-x-6 justify-center">
         <!-- Cities Column -->
         <div
           v-for="(column, index) in cityColumns"
@@ -18,7 +18,7 @@
           </ul>
         </div>
       </div>
-      <div class="flex w-full lg:flex-row lg:w-1/2 mt-8 lg:mt-0 space-x-3 justify-center px-2">
+      <div class="flex w-full mt-8 md:mt-0 space-x-3 justify-center px-2">
         <!-- Zip Codes Column -->
         <div
           v-for="(column, index) in zipCodeColumns"

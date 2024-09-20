@@ -5,7 +5,7 @@
         Request a booking
       </h2>
 
-      <form action="#">
+      <form action="#" >
         <div class="w-full items-center justify-center">
           <BookingSteps :currentStep="step" />
         </div>
@@ -128,13 +128,13 @@
           <h3
             class="md:text-[24px] text-primary text-center font-semibold text-[20px] animate-fadeDown"
           >
-            Thank you ! We successfully recieved your request
+            Thank you ! 
           </h3>
 
           <p
             class="md:text-[22px] text-primary text-center font-semibold text-[18px] animate-fadeDown"
           >
-            Our team will contact you as soon as possible
+          We’ll be in touch shortly to confirm your appointment and provide any additional details. If you have any questions, feel free to contact us.
           </p>
 
           <NuxtLink href="/">

@@ -1,6 +1,6 @@
 <template>
   <section
-    id="testimonials"
+    id="contacts"
     class="max-w-screen h-full overflow-hidden z-10 bg-secondary"
   >
     <div class="container mx-auto px-2 py-16 md:px-28">

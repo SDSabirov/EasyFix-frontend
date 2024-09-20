@@ -55,23 +55,26 @@ function subtractStep() {
 let userMessage = ref("");
 let currentSuggestions = ref([])
 const suggestions = {
-  cooling:['Is not maintaining the proper temperature',
+  cooling: [
+  'Not maintaining the proper temperature',
   'Temperature is too cold',
   'Temperature is too hot',
   'Leaking water underneath',
   'Showing error code',
-  'Making beeping noise',
-  'Ice Maker Not Working',
-  'Ice Build-up'],
-  cooking:['Incorrect Temperature',
-    'Not Heating Well Enough',
-    'Gas Smell',
-    'Keeps Sparking',
-    'Door Problems',
-    'Not Working',
-    'Error Codes',
-    'Oven Not Turning On'
-  ]
+  'Making a beeping noise',
+  'Ice maker not working',
+  'Ice build-up'
+],
+cooking: [
+  'Incorrect temperature',
+  'Not heating well enough',
+  'Smell of gas',
+  'Keeps sparking',
+  'Door problems',
+  'Not working',
+  'Showing error codes',
+  'Oven not turning on'
+]
 }
 
 const fillSuggestion = (suggestion) => {
