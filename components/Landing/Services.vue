@@ -151,44 +151,44 @@
             <!-- Header is always visible -->
             <div class="mb-2 flex justify-between items-center">
               <img src="/assets/img/viking.png" class="h-[40px]" alt="viking logo" />
-              <div class="max-h-[40px] flex space-x-1">
+              <div class="max-h-[40px] flex space-x-1 items-center">
                 <img
                   src="/assets/icons/freezer.svg"
                   alt="freezer icon"
-                  class="max-h-[40px]"
+                  class="max-h-[30px] md:max-h-[40px]"
                 />
                 <img
                   src="/assets/icons/fridge.svg"
                   alt="refrigirator icon"
-                  class="max-h-[40px]"
+                  class="max-h-[30px] md:max-h-[40px]"
                 />
                 <img
                   src="/assets/icons/cooktopv3.svg"
                   alt="cooktop icon"
-                  class="max-h-[40px]"
+                  class="max-h-[20px] md:max-h-[40px]"
                 />
                 <img
                   src="/assets/icons/oven.svg"
                   alt="oven icon"
-                  class="max-h-[40px]"
+                  class="max-h-[30px] md:max-h-[40px]"
                 />
                 
-                <div class="max-h-[40px]">
+                <div class="max-h-[30px] md:max-h-[40px]">
                   <img
                     src="/assets/icons/ovenv2.svg"
                     alt="oven icon"
-                    class="max-h-[22px]"
+                    class="max-h-[15px] md:max-h-[20px]"
                   />
                   <img
                     src="/assets/icons/ovenv2.svg"
                     alt="oven icon"
-                    class="max-h-[22px] relative -top-[6px]"
+                    class="max-h-[15px] md:max-h-[20px] relative -top-[6px]"
                   />
                 </div>
                 <img
                   src="/assets/icons/cookingTopv2.svg"
                   alt="cooktop icon"
-                  class="max-h-[40px]"
+                  class="max-h-[30px] md:max-h-[40px]"
                 />
               </div>
             </div>
@@ -255,44 +255,44 @@
                 class="max-h-[40px] w-1/2"
                 alt="kitchenaind logo"
               />
-              <div class="max-h-[40px] flex space-x-1">
+              <div class="max-h-[40px] flex space-x-1 items-center">
                 <img
                   src="/assets/icons/freezer.svg"
                   alt="freezer icon"
-                  class="max-h-[40px]"
+                  class="max-h-[30px] md:max-h-[40px]"
                 />
                 <img
                   src="/assets/icons/fridge.svg"
                   alt="refrigirator icon"
-                  class="max-h-[40px]"
+                  class="max-h-[30px] md:max-h-[40px]"
                 />
                 <img
                   src="/assets/icons/cooktopv3.svg"
                   alt="cooktop icon"
-                  class="max-h-[40px]"
+                  class="max-h-[20px] md:max-h-[40px]"
                 />
                 <img
                   src="/assets/icons/oven.svg"
                   alt="oven icon"
-                  class="max-h-[40px]"
+                  class="max-h-[30px] md:max-h-[40px]"
                 />
                 
-                <div class="max-h-[40px]">
+                <div class="max-h-[30px] md:max-h-[40px]">
                   <img
                     src="/assets/icons/ovenv2.svg"
                     alt="oven icon"
-                    class="max-h-[22px]"
+                    class="max-h-[15px] md:max-h-[20px]"
                   />
                   <img
                     src="/assets/icons/ovenv2.svg"
                     alt="oven icon"
-                    class="max-h-[22px] relative -top-[6px]"
+                    class="max-h-[15px] md:max-h-[20px] relative -top-[6px]"
                   />
                 </div>
                 <img
                   src="/assets/icons/cookingTopv2.svg"
                   alt="cooktop icon"
-                  class="max-h-[40px]"
+                  class="max-h-[30px] md:max-h-[40px]"
                 />
               </div>
             </div>
@@ -359,44 +359,44 @@
                 class="max-h-[40px] w-[40%]"
                 alt="GE Monogram Logo"
               />
-              <div class="max-h-[40px] flex space-x-1">
+              <div class="max-h-[40px] flex space-x-1 items-center">
                 <img
                   src="/assets/icons/freezer.svg"
                   alt="freezer icon"
-                  class="max-h-[40px]"
+                  class="max-h-[30px] md:max-h-[40px]"
                 />
                 <img
                   src="/assets/icons/fridge.svg"
                   alt="refrigirator icon"
-                  class="max-h-[40px]"
+                  class="max-h-[30px] md:max-h-[40px]"
                 />
                 <img
                   src="/assets/icons/cooktopv3.svg"
                   alt="cooktop icon"
-                  class="max-h-[40px]"
+                  class="max-h-[20px] md:max-h-[40px]"
                 />
                 <img
                   src="/assets/icons/oven.svg"
                   alt="oven icon"
-                  class="max-h-[40px]"
+                  class="max-h-[30px] md:max-h-[40px]"
                 />
                 
-                <div class="max-h-[40px]">
+                <div class="max-h-[30px] md:max-h-[40px]">
                   <img
                     src="/assets/icons/ovenv2.svg"
                     alt="oven icon"
-                    class="max-h-[22px]"
+                    class="max-h-[15px] md:max-h-[20px]"
                   />
                   <img
                     src="/assets/icons/ovenv2.svg"
                     alt="oven icon"
-                    class="max-h-[22px] relative -top-[6px]"
+                    class="max-h-[15px] md:max-h-[20px] relative -top-[6px]"
                   />
                 </div>
                 <img
                   src="/assets/icons/cookingTopv2.svg"
                   alt="cooktop icon"
-                  class="max-h-[40px]"
+                  class="max-h-[30px] md:max-h-[40px]"
                 />
               </div>
             </div>
@@ -463,44 +463,44 @@
                 class="max-h-[40px] w-1/2"
                 alt=""
               />
-              <div class="max-h-[40px] flex space-x-1">
+              <div class="max-h-[40px] flex space-x-1 items-center">
                 <img
                   src="/assets/icons/freezer.svg"
                   alt="freezer icon"
-                  class="max-h-[40px]"
+                  class="max-h-[30px] md:max-h-[40px]"
                 />
                 <img
                   src="/assets/icons/fridge.svg"
                   alt="refrigirator icon"
-                  class="max-h-[40px]"
+                  class="max-h-[30px] md:max-h-[40px]"
                 />
                 <img
                   src="/assets/icons/cooktopv3.svg"
                   alt="cooktop icon"
-                  class="max-h-[40px]"
+                  class="max-h-[20px] md:max-h-[40px]"
                 />
                 <img
                   src="/assets/icons/oven.svg"
                   alt="oven icon"
-                  class="max-h-[40px]"
+                  class="max-h-[30px] md:max-h-[40px]"
                 />
                 
-                <div class="max-h-[40px]">
+                <div class="max-h-[30px] md:max-h-[40px]">
                   <img
                     src="/assets/icons/ovenv2.svg"
                     alt="oven icon"
-                    class="max-h-[22px]"
+                    class="max-h-[15px] md:max-h-[20px]"
                   />
                   <img
                     src="/assets/icons/ovenv2.svg"
                     alt="oven icon"
-                    class="max-h-[22px] relative -top-[6px]"
+                    class="max-h-[15px] md:max-h-[20px] relative -top-[6px]"
                   />
                 </div>
                 <img
                   src="/assets/icons/cookingTopv2.svg"
                   alt="cooktop icon"
-                  class="max-h-[40px]"
+                  class="max-h-[30px] md:max-h-[40px]"
                 />
               </div>
             </div>
@@ -564,47 +564,47 @@
             <div class="mb-2 flex justify-between items-center max-h-[40px]">
               <img
                 src="/assets/img/thermador-vector-logo.svg"
-                class="max-h-[250px] overflow-x-visible"
-                alt=""
+                class="max-h-[120px] lg:max-h-[250px] overflow-x-visible"
+                alt="Thermador logo"
               />
-              <div class="max-h-[40px] flex space-x-1">
+              <div class="max-h-[40px] flex space-x-1 items-center">
                 <img
                   src="/assets/icons/freezer.svg"
                   alt="freezer icon"
-                  class="max-h-[40px]"
+                  class="max-h-[30px] md:max-h-[40px]"
                 />
                 <img
                   src="/assets/icons/fridge.svg"
                   alt="refrigirator icon"
-                  class="max-h-[40px]"
+                  class="max-h-[30px] md:max-h-[40px]"
                 />
                 <img
                   src="/assets/icons/cooktopv3.svg"
                   alt="cooktop icon"
-                  class="max-h-[40px]"
+                  class="max-h-[20px] md:max-h-[40px]"
                 />
                 <img
                   src="/assets/icons/oven.svg"
                   alt="oven icon"
-                  class="max-h-[40px]"
+                  class="max-h-[30px] md:max-h-[40px]"
                 />
                 
-                <div class="max-h-[40px]">
+                <div class="max-h-[30px] md:max-h-[40px]">
                   <img
                     src="/assets/icons/ovenv2.svg"
                     alt="oven icon"
-                    class="max-h-[22px]"
+                    class="max-h-[15px] md:max-h-[20px]"
                   />
                   <img
                     src="/assets/icons/ovenv2.svg"
                     alt="oven icon"
-                    class="max-h-[22px] relative -top-[6px]"
+                    class="max-h-[15px] md:max-h-[20px] relative -top-[6px]"
                   />
                 </div>
                 <img
                   src="/assets/icons/cookingTopv2.svg"
                   alt="cooktop icon"
-                  class="max-h-[40px]"
+                  class="max-h-[30px] md:max-h-[40px]"
                 />
               </div>
             </div>
