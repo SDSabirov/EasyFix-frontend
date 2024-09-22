@@ -121,7 +121,7 @@
             <h2 class="mt-4 text-lg font-medium text-light">Payment Methods</h2>
 
             <p class="mt-2 text-light/90">We accept the following methods</p>
-            <div class="mt-2 text-light/90 flex space-x-3 max-h-12">
+            <div class="mt-2 text-light/90 flex space-x-3 max-h-12 flex-wrap">
               <img src="/assets/icons/visa.svg" 
                 alt="visa payment" 
                 class="h-full"/>
