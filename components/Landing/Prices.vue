@@ -14,33 +14,6 @@
       <div
         class="space-y-8 md:grid md:grid-cols-4 md:space-y-0 sm:gap-6 xl:gap-10 lg:space-y-0 px-2"
       >
-        <!-- Pricing Card  Additional Service-->
-        <div
-          class="flex flex-col p-4 lg:p-6 mx-auto max-w-lg text-center md:w-full md:h-full bg-primary min-h-[170px] border border-gray-100 shadow-2xl"
-        >
-          <h4 class="mb-4 text-light text-sm font-semibold lg:text-lg">
-            Additional Appliance Service
-          </h4>
-          <div class="flex justify-center items-baseline my-3">
-            <span class="mr-2 text-2xl lg:text-4xl font-extrabold text-light">$49</span>
-          </div>
-          <!-- List -->
-          <ul role="list" class="mb-6  text-left text-light">
-            <li class="flex items-center">
-              
-            
-              <p class="text-sm text-center">Diagnostic and Troubleshooting for each Additional Appliance</p>
-            </li>
-          </ul>
-          <div class="flex h-full w-full items-end justify-center">
-            <NuxtLink
-            href="/booking"
-            class="text-primary rounded-xl bg-light hover:bg-secondary hover:text-light focus:ring-4 focus:ring-primary-200 font-medium text-sm px-6 py-2.5 text-center "
-            >Book now</NuxtLink
-          >
-          </div>
-        </div>
-
         <!-- Pricing Card Standard-->
         <div
           class="flex flex-col p-4 lg:p-6 mx-auto max-w-lg text-center md:w-full md:h-full bg-primary min-h-[170px] border border-gray-100 shadow-2xl"
@@ -68,6 +41,34 @@
           </div>
           
         </div>
+        <!-- Pricing Card  Additional Service-->
+        <div
+          class="flex flex-col p-4 lg:p-6 mx-auto max-w-lg text-center md:w-full md:h-full bg-primary min-h-[170px] border border-gray-100 shadow-2xl"
+        >
+          <h4 class="mb-4 text-light text-sm font-semibold lg:text-lg">
+            Additional Appliance Service
+          </h4>
+          <div class="flex justify-center items-baseline my-3">
+            <span class="mr-2 text-2xl lg:text-4xl font-extrabold text-light">$49</span>
+          </div>
+          <!-- List -->
+          <ul role="list" class="mb-6  text-left text-light">
+            <li class="flex items-center">
+              
+            
+              <p class="text-sm text-center">Diagnostic and Troubleshooting for each Additional Appliance</p>
+            </li>
+          </ul>
+          <div class="flex h-full w-full items-end justify-center">
+            <NuxtLink
+            href="/booking"
+            class="text-primary rounded-xl bg-light hover:bg-secondary hover:text-light focus:ring-4 focus:ring-primary-200 font-medium text-sm px-6 py-2.5 text-center "
+            >Book now</NuxtLink
+          >
+          </div>
+        </div>
+
+        
 
         <!-- Pricing Card Emergency-->
         <div
