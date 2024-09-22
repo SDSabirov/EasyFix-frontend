@@ -29,7 +29,7 @@
             <li class="flex items-center">
               
             
-              <p class="text-sm text-center">Expert Diagnostic and Troubleshooting</p>
+              <p class="text-sm text-center w-full">Expert Diagnostic and Troubleshooting</p>
             </li>
           </ul>
           <div class="flex h-full w-full items-end justify-center">
