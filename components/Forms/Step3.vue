@@ -15,7 +15,7 @@
                 
                 <button
                   v-for="suggestion, index in suggestions.cooling" :key="index"
-                  class="rounded-sm w-fit bg-secondary px-4 py-2 text-light text-sm text-left hover:bg-primary selected"
+                  class="rounded-xl w-fit bg-secondary px-4 py-2 text-light text-sm text-left hover:bg-primary selected"
                   @click="fillSuggestion(suggestion)"
                   type="button"
                 >

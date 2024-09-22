@@ -2,7 +2,7 @@
   <section class="bg-light max-h-fit">
     <div class="py-8 px-4 mx-auto max-w-2xl lg:py-16">
       <h2 class="mb-4 text-xl font-bold text-primary text-center">
-        Request a booking
+        Request a Booking
       </h2>
 
       <form action="#" >
@@ -16,7 +16,7 @@
             <button
               @click="addStep"
               type="button"
-              class="flex mx-auto items-center px-8 py-2.5 mt-4 sm:mt-6 text-sm font-medium text-center text-white bg-primary focus:ring-4 focus:ring-primary-200 dark:focus:ring-primary-900 hover:bg-secondary"
+              class="flex mx-auto items-center rounded-xl px-8 py-2.5 mt-4 sm:mt-6 text-sm font-medium text-center text-white bg-primary focus:ring-4 focus:ring-primary-200 dark:focus:ring-primary-900 hover:bg-secondary"
             >
               Next
               <span>
@@ -44,7 +44,7 @@
             <button
               @click="subtractStep"
               type="button"
-              class="flex mx-auto items-center px-8 py-2.5 mt-4 sm:mt-6 text-sm font-medium text-center text-white bg-primary focus:ring-4 focus:ring-primary-200 dark:focus:ring-primary-900 hover:bg-secondary"
+              class="flex mx-auto rounded-xl items-center px-8 py-2.5 mt-4 sm:mt-6 text-sm font-medium text-center text-white bg-primary focus:ring-4 focus:ring-primary-200 dark:focus:ring-primary-900 hover:bg-secondary"
             >
               <span>
                 <svg
@@ -66,7 +66,7 @@
             <button
               @click="addStep"
               type="button"
-              class="flex mx-auto items-center px-8 py-2.5 mt-4 sm:mt-6 text-sm font-medium text-center text-white bg-primary focus:ring-4 focus:ring-primary-200 dark:focus:ring-primary-900 hover:bg-secondary"
+              class="flex mx-auto rounded-xl items-center px-8 py-2.5 mt-4 sm:mt-6 text-sm font-medium text-center text-white bg-primary focus:ring-4 focus:ring-primary-200 dark:focus:ring-primary-900 hover:bg-secondary"
             >
               Next
             </button>
@@ -78,7 +78,7 @@
                 <button
                   @click="subtractStep"
                   type="button"
-                  class="flex mx-auto items-center px-8 py-2.5 mt-4 sm:mt-6 text-sm font-medium text-center text-white bg-primary focus:ring-4 focus:ring-primary-200 dark:focus:ring-primary-900 hover:bg-secondary"
+                  class="flex mx-auto  rounded-xl items-center px-8 py-2.5 mt-4 sm:mt-6 text-sm font-medium text-center text-white bg-primary focus:ring-4 focus:ring-primary-200 dark:focus:ring-primary-900 hover:bg-secondary"
                 >
                   <span>
                     <svg
@@ -100,7 +100,7 @@
                 <button
                   @click="addStep"
                   type="button"
-                  class="flex mx-auto items-center px-8 py-2.5 mt-4 sm:mt-6 text-sm font-medium text-center text-white bg-primary focus:ring-4 focus:ring-primary-200 dark:focus:ring-primary-900 hover:bg-secondary"
+                  class="flex mx-auto rounded-xl items-center px-8 py-2.5 mt-4 sm:mt-6 text-sm font-medium text-center text-white bg-primary focus:ring-4 focus:ring-primary-200 dark:focus:ring-primary-900 hover:bg-secondary"
                 >
                   Next
                 </button>
@@ -109,7 +109,7 @@
       </form>
       <div v-if="step == 4">
         <div
-          class="flex flex-col justify-center text-primary items-center space-y-4"
+          class="flex flex-col justify-center text-primary items-center space-y-3"
         >
           <div>
             <svg
@@ -128,17 +128,21 @@
           <h3
             class="md:text-[24px] text-primary text-center font-semibold text-[20px] animate-fadeDown"
           >
-            Thank you ! 
+            Thank you! 
           </h3>
 
           <p
-            class="md:text-[22px] text-primary text-center font-semibold text-[18px] animate-fadeDown"
+            class="md:text-[22px] text-primary text-center text-[18px] animate-fadeDown"
           >
           We’ll be in touch shortly to confirm your appointment and provide any additional details. If you have any questions, feel free to contact us.
           </p>
+          <p
+            class="md:text-[22px] text-primary text-center text-[18px] animate-fadeDown "
+          ><strong>Please note</strong>, This form does not confirm your appointment
+        </p>
 
           <NuxtLink href="/">
-            <button class="bg-primary px-8 py-4 text-light hover:bg-secondary">
+            <button class="bg-primary rounded-xl px-8 py-4 text-light hover:bg-secondary mt-4">
               Go to Home page
             </button>
           </NuxtLink>

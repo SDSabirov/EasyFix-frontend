@@ -8,7 +8,7 @@
                     </div>
                     <div class="flex flex-col items-start w-full ">
                             <h4 class="text-xl font-bold text-light capitalize">Emergency Service</h4>
-                            <p class="text-lg font-semibold text-gray-300 mt-2">Emergency and Same day service available. Prices vary by area.</p>
+                            <p class="text-lg font-semibold text-gray-300 mt-2">Emergency and Same-day service available. Prices vary by area.</p>
                     </div>    
                 </div>
                 <div class="flex flex-col border-b border-ligt py-4 items-start  space-y-4 mx-2 text-light md:border-none">
@@ -18,7 +18,7 @@
                     <div class="flex flex-col items-start  w-full ">
                             <h4 class="text-xl font-bold text-light capitalize">Flexible scheduling</h4>
                             <p class="text-lg font-semibold text-gray-300 mt-2">
-                                Easy Fix offers flexible and convenient scheduling options, ensuring a seamless 
+                                Easy Fix Appliance offers flexible and convenient scheduling options, ensuring a seamless 
                                 and stress-free service experience.
                             </p>
                     </div>    
@@ -31,7 +31,7 @@
                             <h4 class="text-xl font-bold text-light capitalize">Genuine manufacturer parts </h4>
                             <p class="text-lg font-semibold text-gray-300 mt-2">
                                 We specialize in even the most complex repairs, utilizing original manufacturer parts 
-                                and state-of-the-art equipment to ensure lasting quality. <strong class="text-sm">(Manufacturer warranties availble)</strong>
+                                and state-of-the-art equipment to ensure lasting quality. <strong class="text-sm">(Manufacturer warranties available)</strong>
                             </p>
                     </div>    
                 </div>

@@ -110,7 +110,7 @@
         </div>
       </div>
       <div class="mt-3">
-        <h3 class="font-medium text-gray-900 text-sm text-nowrap dark:text-white">Completed</h3>
+        <h3 class="font-medium text-gray-900 text-sm text-nowrap dark:text-white">Submit</h3>
       </div>
     </li>
   </ol>

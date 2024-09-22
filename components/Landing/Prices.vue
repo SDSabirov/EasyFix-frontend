@@ -12,156 +12,117 @@
         ></p>
       </div>
       <div
-        class="space-y-8 md:grid md:grid-cols-2 lg:grid-cols-4 md:space-y-0 sm:gap-6 xl:gap-10 lg:space-y-0 px-2"
+        class="space-y-8 md:grid md:grid-cols-4 md:space-y-0 sm:gap-6 xl:gap-10 lg:space-y-0 px-2"
       >
-        <!-- Pricing Card -->
+        <!-- Pricing Card  Additional Service-->
         <div
-          class="flex flex-col p-6 mx-auto max-w-lg text-center md:w-full md:h-full text-gray-900 bg-primary min-h-[340px] border border-gray-100 shadow dark:border-gray-600 xl:p-8 dark:bg-gray-800 dark:text-white"
+          class="flex flex-col p-4 lg:p-6 mx-auto max-w-lg text-center md:w-full md:h-full bg-primary min-h-[170px] border border-gray-100 shadow-2xl"
         >
-          <h3 class="mb-4 text-light font-semibold">
-            Second Appliance Service
-          </h3>
-          <p class="font-light text-light0 sm:text-lg dark:text-gray-400"></p>
-          <div class="flex justify-center items-baseline my-8">
-            <span class="mr-2 text-5xl font-extrabold text-light">$49</span>
-            <span class="text-gray-500 dark:text-gray-400"></span>
+          <h4 class="mb-4 text-light text-sm font-semibold lg:text-lg">
+            Additional Appliance Service
+          </h4>
+          <div class="flex justify-center items-baseline my-3">
+            <span class="mr-2 text-2xl lg:text-4xl font-extrabold text-light">$49</span>
           </div>
           <!-- List -->
-          <ul role="list" class="mb-8 space-y-4 text-left text-white">
-            <li class="flex items-center space-x-3">
-              <!-- Icon -->
-              <svg
-                class="flex-shrink-0 w-5 h-5 text-green-500 dark:text-green-400"
-                fill="currentColor"
-                viewBox="0 0 20 20"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  fill-rule="evenodd"
-                  d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                  clip-rule="evenodd"
-                ></path>
-              </svg>
-              <span>Additional Appliance Repair</span>
+          <ul role="list" class="mb-6  text-left text-light">
+            <li class="flex items-center">
+              
+            
+              <p class="text-sm text-center">Diagnostic and Troubleshooting for each Additional Appliance</p>
             </li>
           </ul>
-          <NuxtLink
+          <div class="flex h-full w-full items-end justify-center">
+            <NuxtLink
             href="/booking"
-            class="text-primary bg-light hover:bg-secondary hover:text-light focus:ring-4 focus:ring-primary-200 font-medium rounded-lg text-sm px-5 py-2.5 text-center"
+            class="text-primary rounded-xl bg-light hover:bg-secondary hover:text-light focus:ring-4 focus:ring-primary-200 font-medium text-sm px-6 py-2.5 text-center "
             >Book now</NuxtLink
           >
+          </div>
         </div>
-        <!-- Pricing Card -->
+
+        <!-- Pricing Card Standard-->
         <div
-          class="flex flex-col p-6 mx-auto max-w-lg text-center text-gray-900 bg-primary md:w-full md:h-full border border-gray-100 shadow dark:border-gray-600 xl:p-8 dark:bg-gray-800 dark:text-white"
+          class="flex flex-col p-4 lg:p-6 mx-auto max-w-lg text-center md:w-full md:h-full bg-primary min-h-[170px] border border-gray-100 shadow-2xl"
         >
-          <h3 class="mb-4 text-light font-semibold">Standard Service</h3>
-          <p class="font-light text-light0 sm:text-lg dark:text-gray-400"></p>
-          <div class="flex justify-center items-baseline my-8">
-            <span class="mr-2 text-5xl font-extrabold text-light">$99</span>
-            <span class="text-gray-500 dark:text-gray-400"></span>
+          <h4 class="mb-4 text-light text-sm font-semibold lg:text-lg">
+            Standard Service Visit
+          </h4>
+          <div class="flex justify-center items-baseline my-3">
+            <span class="mr-2 text-2xl lg:text-4xl font-extrabold text-light">$99</span>
           </div>
           <!-- List -->
-          <ul role="list" class="mb-8 space-y-4 text-left text-white">
-            <li class="flex items-center space-x-3">
-              <!-- Icon -->
-              <svg
-                class="flex-shrink-0 w-5 h-5 text-green-500 dark:text-green-400"
-                fill="currentColor"
-                viewBox="0 0 20 20"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  fill-rule="evenodd"
-                  d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                  clip-rule="evenodd"
-                ></path>
-              </svg>
-              <span>Expert diagnostics and repair </span>
+          <ul role="list" class="mb-6  text-left text-light">
+            <li class="flex items-center">
+              
+            
+              <p class="text-sm text-center">Expert Diagnostic and Troubleshooting</p>
             </li>
-            
-            
           </ul>
-          <NuxtLink
+          <div class="flex h-full w-full items-end justify-center">
+            <NuxtLink
             href="/booking"
-            class="text-primary bg-light hover:bg-secondary hover:text-light focus:ring-4 focus:ring-primary-200 font-medium rounded-lg text-sm px-5 py-2.5 text-center"
+            class="text-primary rounded-xl bg-light hover:bg-secondary hover:text-light focus:ring-4 focus:ring-primary-200 font-medium text-sm px-6 py-2.5 text-center "
             >Book now</NuxtLink
           >
+          </div>
+          
         </div>
-        <!-- Pricing Card -->
+
+        <!-- Pricing Card Emergency-->
         <div
-          class="flex flex-col p-6 mx-auto max-w-lg text-center md:w-full md:h-full text-gray-900 bg-primary border border-gray-100 shadow dark:border-gray-600 xl:p-8 dark:bg-gray-800 dark:text-white"
+          class="flex flex-col p-4 lg:p-6 mx-auto max-w-lg text-center md:w-full md:h-full bg-primary min-h-[170px] border border-gray-100 shadow-2xl"
         >
-          <h3 class="mb-4 text-light font-semibold">Emergency Service</h3>
-          <p class="font-light text-light0 sm:text-lg dark:text-gray-400"></p>
-          <div class="flex justify-center items-baseline my-8">
-            <span class="mr-2 text-5xl font-extrabold text-light">$149</span>
-            <span class="text-gray-500 dark:text-gray-400"></span>
+          <h4 class="mb-4 text-light text-sm font-semibold mt-2 lg:text-lg">
+            Emergency Service
+          </h4>
+          <div class="flex justify-center items-baseline my-3">
+            <span class="mr-2 text-2xl lg:text-4xl font-extrabold text-light">$149</span>
           </div>
           <!-- List -->
-          <ul role="list" class="mb-8 space-y-4 text-left text-white">
-            <li class="flex items-center space-x-3">
-              <!-- Icon -->
-              <svg
-                class="flex-shrink-0 w-5 h-5 text-green-500 dark:text-green-400"
-                fill="currentColor"
-                viewBox="0 0 20 20"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  fill-rule="evenodd"
-                  d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                  clip-rule="evenodd"
-                ></path>
-              </svg>
-              <span>Urgent repair and service, Including Weekends </span>
+          <ul role="list" class="mb-6  text-left text-light w-full">
+            <li class="flex items-center w-full">
+              <p class="text-sm text-center w-full">After Hours service visit</p>
             </li>
-            
           </ul>
-          <NuxtLink
+          <div class="flex h-full w-full items-end justify-center">
+            <NuxtLink
             href="/booking"
-            class="text-primary bg-light hover:bg-secondary hover:text-light focus:ring-4 focus:ring-primary-200 font-medium rounded-lg text-sm px-5 py-2.5 text-center"
+            class="text-primary rounded-xl bg-light hover:bg-secondary hover:text-light focus:ring-4 focus:ring-primary-200 font-medium text-sm px-6 py-2.5 text-center "
             >Book now</NuxtLink
           >
+          </div>
+          
         </div>
-        
-        <!-- Pricing Card -->
+
+        <!-- Pricing Card Maintenance-->
         <div
-          class="flex flex-col p-6 mx-auto max-w-lg md:w-full md:h-full text-center text-gray-900 bg-primary border border-gray-100 shadow dark:border-gray-600 xl:p-8 dark:bg-gray-800 dark:text-white"
+          class="flex flex-col p-4 lg:p-6 mx-auto max-w-lg text-center md:w-full md:h-full bg-primary min-h-[170px] border border-gray-100 shadow-2xl"
         >
-          <h3 class="mb-4 text-light font-semibold">Maintenance Service</h3>
-          <p class="font-light text-light0 sm:text-lg dark:text-gray-400"></p>
-          <div class="flex justify-center items-baseline my-8">
-            <span class="mr-2 text-5xl font-extrabold text-light">$249</span>
-            <span class="text-gray-500 dark:text-gray-400"></span>
+          <h4 class="mb-4 mt-2 text-light text-sm font-semibold lg:text-lg">
+            Maintenace Service
+          </h4>
+          <div class="flex justify-center items-baseline my-3">
+            <span class="mr-2 text-2xl lg:text-4xl font-extrabold text-light">$249</span>
           </div>
           <!-- List -->
-          <ul role="list" class="mb-8 space-y-4 text-left text-white">
-            <li class="flex items-center space-x-3">
-              <!-- Icon -->
-              <svg
-                class="flex-shrink-0 w-5 h-5 text-green-500 dark:text-green-400"
-                fill="currentColor"
-                viewBox="0 0 20 20"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  fill-rule="evenodd"
-                  d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                  clip-rule="evenodd"
-                ></path>
-              </svg>
-              <span>Comprehensive appliance tune-up and inspection</span>
+          <ul role="list" class="mb-6  text-left text-light">
+            <li class="flex items-center">
+              
+            
+              <p class="text-sm text-center">Comprehensive appliance tune-up, inspection, and cleaning</p>
             </li>
-            
-            
           </ul>
-          <NuxtLink
+          <div class="flex h-full w-full items-end justify-center">
+            <NuxtLink
             href="/booking"
-            class="text-primary bg-light hover:bg-secondary hover:text-light focus:ring-4 focus:ring-primary-200 font-medium rounded-lg text-sm px-5 py-2.5 text-center"
+            class="text-primary rounded-xl bg-light hover:bg-secondary hover:text-light focus:ring-4 focus:ring-primary-200 font-medium text-sm px-6 py-2.5 text-center "
             >Book now</NuxtLink
           >
+          </div>
+          
         </div>
+
       </div>
     </div>
     <LandingLocations />

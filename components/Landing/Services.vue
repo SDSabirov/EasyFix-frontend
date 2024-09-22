@@ -42,54 +42,46 @@
             class="flex flex-col p-2 z-20 absolute bottom-0 p-4 bg-light/80 w-full"
           >
             <!-- Header is always visible -->
-            <div class="mb-2 flex justify-between items-center w-full">
-              <div class="flex flex-col space-y-2 ">
+            <div class="mb-2 flex justify-between items-center w-full grid grid-cols-2">
+              <div class="flex flex-col space-y-2 mr-4">
                 <img
                   src="/assets/img/subzeroLogosilver.png"
-                  class="max-h-[30px] md:max-h-[40px]"
+                  class="max-h-[30px] lg:max-h-[40px]"
                   alt="Subzero Logo"
                 />
-                <img src="/assets/img/wolf.png" class="max-h-[30px] md:max-h-[40px]" alt="Wolf Logo" />
+                <img src="/assets/img/wolf.png" class="max-h-[30px]  lg:max-h-[40px]" alt="Wolf Logo" />
               </div>
 
-              <div class="max-h-[40px] flex space-x-1 items-center">
+              <div class="max-h-[30px] lg:max-h-[40px] flex space-x-1  align-center grid grid-cols-6 gap-1">
                 <img
                   src="/assets/icons/freezer.svg"
                   alt="freezer icon"
-                  class="max-h-[30px] md:max-h-[40px]"
+                  class=" object-contain"
                 />
                 <img
                   src="/assets/icons/fridge.svg"
                   alt="refrigirator icon"
-                  class="max-h-[30px] md:max-h-[40px]"
+                  class="object-contain "
                 />
                 <img
                   src="/assets/icons/cooktopv3.svg"
                   alt="cooktop icon"
-                  class="max-h-[20px] md:max-h-[40px]"
+                  class="object-contain"
                 />
                 <img
                   src="/assets/icons/oven.svg"
                   alt="oven icon"
-                  class="max-h-[30px] md:max-h-[40px]"
+                  class="object-contain"
                 />
-                
-                <div class="max-h-[30px] md:max-h-[40px]">
-                  <img
-                    src="/assets/icons/ovenv2.svg"
-                    alt="oven icon"
-                    class="max-h-[15px] md:max-h-[20px]"
-                  />
-                  <img
-                    src="/assets/icons/ovenv2.svg"
-                    alt="oven icon"
-                    class="max-h-[15px] md:max-h-[20px] relative -top-[6px]"
-                  />
-                </div>
                 <img
                   src="/assets/icons/cookingTopv2.svg"
-                  alt="cooktop icon"
-                  class="max-h-[30px] md:max-h-[40px]"
+                  alt="oven icon"
+                  class="object-contain"
+                />
+                <img
+                  src="/assets/icons/ovenv2.svg"
+                  alt="oven icon"
+                  class="object-contain "
                 />
               </div>
             </div>
@@ -127,7 +119,7 @@
               <div class="w-full flex items-center justify-center">
                 <NuxtLink href="/booking">
                   <button
-                    class="bg-primary px-4 py-2 mt-2 border-2 border-primary font-semibold hover:border-primary hover:text-white hover:bg-secondary transition-all duration-800 ease-out group"
+                    class="bg-primary px-4 py-2 mt-2 rounded-xl border-2 border-primary font-semibold hover:border-primary hover:text-white hover:bg-secondary transition-all duration-800 ease-out group"
                   >
                     <p class="text-light group-hover:text-white">Book now</p>
                   </button>
@@ -149,46 +141,38 @@
             class="flex flex-col p-2 z-20 absolute bottom-0 p-4 bg-light/80 w-full"
           >
             <!-- Header is always visible -->
-            <div class="mb-2 flex justify-between items-center">
+            <div class="mb-2 grid grid-cols-2 justify-between items-center ">
               <img src="/assets/img/viking.png" class="h-[40px]" alt="viking logo" />
-              <div class="max-h-[40px] flex space-x-1 items-center">
+              <div class="max-h-[30px] lg:max-h-[40px] flex space-x-1  align-center grid grid-cols-6 gap-1">
                 <img
                   src="/assets/icons/freezer.svg"
                   alt="freezer icon"
-                  class="max-h-[30px] md:max-h-[40px]"
+                  class=" object-contain"
                 />
                 <img
                   src="/assets/icons/fridge.svg"
                   alt="refrigirator icon"
-                  class="max-h-[30px] md:max-h-[40px]"
+                  class="object-contain "
                 />
                 <img
                   src="/assets/icons/cooktopv3.svg"
                   alt="cooktop icon"
-                  class="max-h-[20px] md:max-h-[40px]"
+                  class="object-contain"
                 />
                 <img
                   src="/assets/icons/oven.svg"
                   alt="oven icon"
-                  class="max-h-[30px] md:max-h-[40px]"
+                  class="object-contain"
                 />
-                
-                <div class="max-h-[30px] md:max-h-[40px]">
-                  <img
-                    src="/assets/icons/ovenv2.svg"
-                    alt="oven icon"
-                    class="max-h-[15px] md:max-h-[20px]"
-                  />
-                  <img
-                    src="/assets/icons/ovenv2.svg"
-                    alt="oven icon"
-                    class="max-h-[15px] md:max-h-[20px] relative -top-[6px]"
-                  />
-                </div>
                 <img
                   src="/assets/icons/cookingTopv2.svg"
-                  alt="cooktop icon"
-                  class="max-h-[30px] md:max-h-[40px]"
+                  alt="oven icon"
+                  class="object-contain"
+                />
+                <img
+                  src="/assets/icons/ovenv2.svg"
+                  alt="oven icon"
+                  class="object-contain "
                 />
               </div>
             </div>
@@ -201,7 +185,7 @@
               </p>
               <div class="flex items-center justify-between mt-2">
                 <div class="flex flex-col space-y-1">
-                  <p class="font-bold text-lg ">Cooling</p>
+                  
                   <ul class="list-disc text-sm px-4">
                   
                     <li>Refrigerator/Built-In Fridges</li>
@@ -212,7 +196,6 @@
                   </ul>
                 </div>
                 <div class="flex flex-col space-y-1">
-                  <p class="font-bold text-lg">Cooking</p>
                     <ul class="list-disc text-sm px-4">
                     
                     <li>Ranges</li>
@@ -227,7 +210,7 @@
               <div class="w-full flex items-center justify-center">
                 <NuxtLink href="/booking">
                   <button
-                    class="bg-primary px-4 py-2 mt-2 border-2 border-primary font-semibold hover:border-primary hover:text-white hover:bg-secondary transition-all duration-800 ease-out group"
+                    class="bg-primary px-4 py-2 rounded-xl  mt-2 border-2 border-primary font-semibold hover:border-primary hover:text-white hover:bg-secondary transition-all duration-800 ease-out group"
                   >
                     <p class="text-light group-hover:text-white">Book now</p>
                   </button>
@@ -249,50 +232,42 @@
             class="flex flex-col p-2 z-20 absolute bottom-0 p-4 bg-light/80 w-full"
           >
             <!-- Header is always visible -->
-            <div class="mb-2 flex justify-between items-center max-h-[40px]">
+            <div class="mb-2 grid grid-cols-2 gap-2 justify-between items-center max-h-[40px]">
               <img
                 src="/assets/img/kitchenaid.png"
-                class="max-h-[40px] w-1/2"
+                class="max-h-[40px]"
                 alt="kitchenaind logo"
               />
-              <div class="max-h-[40px] flex space-x-1 items-center">
+              <div class="max-h-[30px] lg:max-h-[40px] flex space-x-1  align-center grid grid-cols-6 gap-1">
                 <img
                   src="/assets/icons/freezer.svg"
                   alt="freezer icon"
-                  class="max-h-[30px] md:max-h-[40px]"
+                  class=" object-contain"
                 />
                 <img
                   src="/assets/icons/fridge.svg"
                   alt="refrigirator icon"
-                  class="max-h-[30px] md:max-h-[40px]"
+                  class="object-contain "
                 />
                 <img
                   src="/assets/icons/cooktopv3.svg"
                   alt="cooktop icon"
-                  class="max-h-[20px] md:max-h-[40px]"
+                  class="object-contain"
                 />
                 <img
                   src="/assets/icons/oven.svg"
                   alt="oven icon"
-                  class="max-h-[30px] md:max-h-[40px]"
+                  class="object-contain"
                 />
-                
-                <div class="max-h-[30px] md:max-h-[40px]">
-                  <img
-                    src="/assets/icons/ovenv2.svg"
-                    alt="oven icon"
-                    class="max-h-[15px] md:max-h-[20px]"
-                  />
-                  <img
-                    src="/assets/icons/ovenv2.svg"
-                    alt="oven icon"
-                    class="max-h-[15px] md:max-h-[20px] relative -top-[6px]"
-                  />
-                </div>
                 <img
                   src="/assets/icons/cookingTopv2.svg"
-                  alt="cooktop icon"
-                  class="max-h-[30px] md:max-h-[40px]"
+                  alt="oven icon"
+                  class="object-contain"
+                />
+                <img
+                  src="/assets/icons/ovenv2.svg"
+                  alt="oven icon"
+                  class="object-contain "
                 />
               </div>
             </div>
@@ -305,9 +280,8 @@
               </p>
               <div class="flex items-center justify-between mt-2">
                 <div class="flex flex-col space-y-1">
-                  <p class="font-bold text-lg ">Cooling</p>
                   <ul class="list-disc text-sm px-4">
-                  
+                
                     <li>Refrigerator/Built-In Fridges</li>
                     <li>Freezers</li>
                     <li>Ice Makers</li>
@@ -316,7 +290,7 @@
                   </ul>
                 </div>
                 <div class="flex flex-col space-y-1">
-                  <p class="font-bold text-lg">Cooking</p>
+              
                     <ul class="list-disc text-sm px-4">
                     
                     <li>Ranges</li>
@@ -331,7 +305,7 @@
               <div class="w-full flex items-center justify-center">
                 <NuxtLink href="/booking">
                   <button
-                    class="bg-primary px-4 py-2 mt-2 border-2 border-primary font-semibold hover:border-primary hover:text-white hover:bg-secondary transition-all duration-800 ease-out group"
+                    class="bg-primary px-4 rounded-xl py-2 mt-2 border-2 border-primary font-semibold hover:border-primary hover:text-white hover:bg-secondary transition-all duration-800 ease-out group"
                   >
                     <p class="text-light group-hover:text-white">Book now</p>
                   </button>
@@ -353,50 +327,42 @@
             class="flex flex-col p-2 z-20 absolute bottom-0 p-4 bg-light/80 w-full"
           >
             <!-- Header is always visible -->
-            <div class="mb-2 flex justify-between items-center max-h-[40px]">
+            <div class="mb-2 grid grid-cols-2 gap-2 justify-between items-center max-h-[40px]">
               <img
                 src="/assets/img/GEmonogram.png"
-                class="max-h-[40px] w-[40%]"
+                class="max-h-[40px]"
                 alt="GE Monogram Logo"
               />
-              <div class="max-h-[40px] flex space-x-1 items-center">
+              <div class="max-h-[30px] lg:max-h-[40px] flex space-x-1  align-center grid grid-cols-6 gap-1">
                 <img
                   src="/assets/icons/freezer.svg"
                   alt="freezer icon"
-                  class="max-h-[30px] md:max-h-[40px]"
+                  class=" object-contain"
                 />
                 <img
                   src="/assets/icons/fridge.svg"
                   alt="refrigirator icon"
-                  class="max-h-[30px] md:max-h-[40px]"
+                  class="object-contain "
                 />
                 <img
                   src="/assets/icons/cooktopv3.svg"
                   alt="cooktop icon"
-                  class="max-h-[20px] md:max-h-[40px]"
+                  class="object-contain"
                 />
                 <img
                   src="/assets/icons/oven.svg"
                   alt="oven icon"
-                  class="max-h-[30px] md:max-h-[40px]"
+                  class="object-contain"
                 />
-                
-                <div class="max-h-[30px] md:max-h-[40px]">
-                  <img
-                    src="/assets/icons/ovenv2.svg"
-                    alt="oven icon"
-                    class="max-h-[15px] md:max-h-[20px]"
-                  />
-                  <img
-                    src="/assets/icons/ovenv2.svg"
-                    alt="oven icon"
-                    class="max-h-[15px] md:max-h-[20px] relative -top-[6px]"
-                  />
-                </div>
                 <img
                   src="/assets/icons/cookingTopv2.svg"
-                  alt="cooktop icon"
-                  class="max-h-[30px] md:max-h-[40px]"
+                  alt="oven icon"
+                  class="object-contain"
+                />
+                <img
+                  src="/assets/icons/ovenv2.svg"
+                  alt="oven icon"
+                  class="object-contain "
                 />
               </div>
             </div>
@@ -409,7 +375,7 @@
               </p>
               <div class="flex items-center justify-between mt-2">
                 <div class="flex flex-col space-y-1">
-                  <p class="font-bold text-lg ">Cooling</p>
+          
                   <ul class="list-disc text-sm px-4">
                   
                     <li>Refrigerator/Built-In Fridges</li>
@@ -420,7 +386,7 @@
                   </ul>
                 </div>
                 <div class="flex flex-col space-y-1">
-                  <p class="font-bold text-lg">Cooking</p>
+                  
                     <ul class="list-disc text-sm px-4">
                     
                     <li>Ranges</li>
@@ -435,7 +401,7 @@
               <div class="w-full flex items-center justify-center">
                 <NuxtLink href="/booking">
                   <button
-                    class="bg-primary px-4 py-2 mt-2 border-2 border-primary font-semibold hover:border-primary hover:text-white hover:bg-secondary transition-all duration-800 ease-out group"
+                    class="bg-primary px-4 rounded-xl py-2 mt-2 border-2 border-primary font-semibold hover:border-primary hover:text-white hover:bg-secondary transition-all duration-800 ease-out group"
                   >
                     <p class="text-light group-hover:text-white">Book now</p>
                   </button>
@@ -457,50 +423,42 @@
             class="flex flex-col p-2 z-20 absolute bottom-0 p-4 bg-light/80 w-full"
           >
             <!-- Header is always visible -->
-            <div class="mb-2 flex justify-between items-center max-h-[40px]">
+            <div class="mb-2 grid grid-cols-2 gap-2 justify-between items-center max-h-[40px]">
               <img
                 src="/assets/img/dacor-logo.png"
-                class="max-h-[40px] w-1/2"
+                class="max-h-[40px] "
                 alt=""
               />
-              <div class="max-h-[40px] flex space-x-1 items-center">
+              <div class="max-h-[30px] lg:max-h-[40px] flex space-x-1  align-center grid grid-cols-6 gap-1">
                 <img
                   src="/assets/icons/freezer.svg"
                   alt="freezer icon"
-                  class="max-h-[30px] md:max-h-[40px]"
+                  class=" object-contain"
                 />
                 <img
                   src="/assets/icons/fridge.svg"
                   alt="refrigirator icon"
-                  class="max-h-[30px] md:max-h-[40px]"
+                  class="object-contain "
                 />
                 <img
                   src="/assets/icons/cooktopv3.svg"
                   alt="cooktop icon"
-                  class="max-h-[20px] md:max-h-[40px]"
+                  class="object-contain"
                 />
                 <img
                   src="/assets/icons/oven.svg"
                   alt="oven icon"
-                  class="max-h-[30px] md:max-h-[40px]"
+                  class="object-contain"
                 />
-                
-                <div class="max-h-[30px] md:max-h-[40px]">
-                  <img
-                    src="/assets/icons/ovenv2.svg"
-                    alt="oven icon"
-                    class="max-h-[15px] md:max-h-[20px]"
-                  />
-                  <img
-                    src="/assets/icons/ovenv2.svg"
-                    alt="oven icon"
-                    class="max-h-[15px] md:max-h-[20px] relative -top-[6px]"
-                  />
-                </div>
                 <img
                   src="/assets/icons/cookingTopv2.svg"
-                  alt="cooktop icon"
-                  class="max-h-[30px] md:max-h-[40px]"
+                  alt="oven icon"
+                  class="object-contain"
+                />
+                <img
+                  src="/assets/icons/ovenv2.svg"
+                  alt="oven icon"
+                  class="object-contain "
                 />
               </div>
             </div>
@@ -513,7 +471,7 @@
               </p>
               <div class="flex items-center justify-between mt-2">
                 <div class="flex flex-col space-y-1">
-                  <p class="font-bold text-lg ">Cooling</p>
+                  
                   <ul class="list-disc text-sm px-4">
                   
                     <li>Refrigerator/Built-In Fridges</li>
@@ -524,7 +482,7 @@
                   </ul>
                 </div>
                 <div class="flex flex-col space-y-1">
-                  <p class="font-bold text-lg">Cooking</p>
+                  
                     <ul class="list-disc text-sm px-4">
                     
                     <li>Ranges</li>
@@ -539,7 +497,7 @@
               <div class="w-full flex items-center justify-center">
                 <NuxtLink href="/booking">
                   <button
-                    class="bg-primary px-4 py-2 mt-2 border-2 border-primary font-semibold hover:border-primary hover:text-white hover:bg-secondary transition-all duration-800 ease-out group"
+                    class="bg-primary px-4 rounded-xl py-2 mt-2 border-2 border-primary font-semibold hover:border-primary hover:text-white hover:bg-secondary transition-all duration-800 ease-out group"
                   >
                     <p class="text-light group-hover:text-white">Book now</p>
                   </button>
@@ -561,50 +519,42 @@
             class="flex flex-col p-2 z-20 absolute bottom-0 p-4 bg-light/80 w-full"
           >
             <!-- Header is always visible -->
-            <div class="mb-2 flex justify-between items-center max-h-[40px]">
+            <div class="mb-2 grid grid-cols-2 gap-2 justify-between items-center max-h-[40px] relative -top-14">
               <img
-                src="/assets/img/thermador-vector-logo.svg"
-                class="max-h-[120px] lg:max-h-[250px] overflow-x-visible"
-                alt="Thermador logo"
+                src="/assets/img/thermador.png"
+                class="max-h-[160px]  "
+                alt=""
               />
-              <div class="max-h-[40px] flex space-x-1 items-center">
+              <div class="max-h-[30px] lg:max-h-[40px] flex space-x-1  align-center grid grid-cols-6 gap-1">
                 <img
                   src="/assets/icons/freezer.svg"
                   alt="freezer icon"
-                  class="max-h-[30px] md:max-h-[40px]"
+                  class=" object-contain"
                 />
                 <img
                   src="/assets/icons/fridge.svg"
                   alt="refrigirator icon"
-                  class="max-h-[30px] md:max-h-[40px]"
+                  class="object-contain "
                 />
                 <img
                   src="/assets/icons/cooktopv3.svg"
                   alt="cooktop icon"
-                  class="max-h-[20px] md:max-h-[40px]"
+                  class="object-contain"
                 />
                 <img
                   src="/assets/icons/oven.svg"
                   alt="oven icon"
-                  class="max-h-[30px] md:max-h-[40px]"
+                  class="object-contain"
                 />
-                
-                <div class="max-h-[30px] md:max-h-[40px]">
-                  <img
-                    src="/assets/icons/ovenv2.svg"
-                    alt="oven icon"
-                    class="max-h-[15px] md:max-h-[20px]"
-                  />
-                  <img
-                    src="/assets/icons/ovenv2.svg"
-                    alt="oven icon"
-                    class="max-h-[15px] md:max-h-[20px] relative -top-[6px]"
-                  />
-                </div>
                 <img
                   src="/assets/icons/cookingTopv2.svg"
-                  alt="cooktop icon"
-                  class="max-h-[30px] md:max-h-[40px]"
+                  alt="oven icon"
+                  class="object-contain"
+                />
+                <img
+                  src="/assets/icons/ovenv2.svg"
+                  alt="oven icon"
+                  class="object-contain "
                 />
               </div>
             </div>
@@ -617,7 +567,7 @@
               </p>
               <div class="flex items-center justify-between mt-2">
                 <div class="flex flex-col space-y-1">
-                  <p class="font-bold text-lg ">Cooling</p>
+                  
                   <ul class="list-disc text-sm px-4">
                   
                     <li>Refrigerator/Built-In Fridges</li>
@@ -628,7 +578,7 @@
                   </ul>
                 </div>
                 <div class="flex flex-col space-y-1">
-                  <p class="font-bold text-lg">Cooking</p>
+                  
                     <ul class="list-disc text-sm px-4">
                     
                     <li>Ranges</li>
@@ -643,7 +593,7 @@
               <div class="w-full flex items-center justify-center">
                 <NuxtLink href="/booking">
                   <button
-                    class="bg-primary px-4 py-2 mt-2 border-2 border-primary font-semibold hover:border-primary hover:text-white hover:bg-secondary transition-all duration-800 ease-out group"
+                    class="bg-primary rounded-xl px-4 py-2 mt-2 border-2 border-primary font-semibold hover:border-primary hover:text-white hover:bg-secondary transition-all duration-800 ease-out group"
                   >
                     <p class="text-light group-hover:text-white">Book now</p>
                   </button>
@@ -656,7 +606,7 @@
       <div class="flex w-full items-center justify-center mt-6">
         <NuxtLink href="/booking">
           <button
-            class="bg-primary px-8 py-4 mt-2 border-2 border-primary font-semibold hover:border-primary hover:text-white hover:bg-secondary transition-all duration-800 ease-out group"
+            class="bg-primary px-8 py-4 mt-2 rounded-xl border-2 border-primary font-semibold hover:border-primary hover:text-white hover:bg-secondary transition-all duration-800 ease-out group"
           >
             <p class="text-light group-hover:text-white">Book now</p>
           </button>

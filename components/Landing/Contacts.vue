@@ -151,6 +151,10 @@
                     alt="venmo payment"
                     class="h-full"
                     />
+              <img src="/assets/icons/zelle.svg" 
+                    alt="venmo payment"
+                    class="h-full py-2"
+                    />
             </div>
           </div>
         </div>
