@@ -34,7 +34,7 @@
           <figcaption class="flex items-center justify-center mt-6 space-x-3">
             <img
               class="w-6 h-6 rounded-full"
-              src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/avatars/michael-gouch.png"
+              src="/assets/icons/userReview.svg"
               alt="profile picture"
             />
             <div
@@ -73,10 +73,10 @@ const Reviews = ref([
   },
   {
     review:
-      "Had Tom come repair our Subzero fridge last week. He was an amazing technician, ontime, and very professional. When the fridge stopped cooling, we were so worried ... with a new baby, it would have been a nightmare. Tom had the parts he needed and proceeded to do the repair. He was thorough and informative the entire time. I've definitely found my goto company and texh. Thanks EasyFix!",
-    author: "Den Baron",
-    date: "3 years ago",
-    platform:"Yelp"
+      "I had an amazing experience with Easy Fix. My Viking oven wasn’t heating properly, and they sent a technician who was not only punctual but also incredibly professional. He diagnosed and fixed the issue in just one trip, which was a huge relief. The technician went above and beyond by checking out my other appliances, offering valuable insights along the way. You can tell he was very knowledgeable and passionate about his work. Overall, the service was perfect, and I learned a lot. I highly recommend them for any appliance repairs—top-notch from start to finish!",
+    author: "Uzak Almasbek",
+    date: "1 week ago",
+    platform:"Google"
   },
   
 ]);
