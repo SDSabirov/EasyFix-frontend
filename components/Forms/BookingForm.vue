@@ -5,7 +5,7 @@
         Request a Booking
       </h2>
 
-      <form action="#" >
+      <form @submit.prevent="submitForm">
         <div class="w-full items-center justify-center">
           <BookingSteps :currentStep="step" />
         </div>
@@ -54,7 +54,7 @@
                 </button>
                 <button
                   v-if="step==3"
-                  @click="addStep"
+                  @click="submitBooking"
                   type="button"
                   class="flex mx-auto rounded-xl items-center px-8 py-2.5 mt-4 sm:mt-6 text-sm font-medium text-center text-white bg-primary focus:ring-4 focus:ring-primary-200 dark:focus:ring-primary-900 hover:bg-secondary"
                 >
@@ -111,7 +111,7 @@
 <script setup>
 import { onMounted } from "vue";
 import { useFlowbite } from "~/composables/useFlowbite";
-
+import axios from '~/api/drf.js'
 let step = ref(1);
 
 const PersonalData = ref({
@@ -154,6 +154,7 @@ const IssueData = ref({
   error:null
 })
 
+let data = ref({})
 function subtractStep() {
   step.value = step.value - 1;
 }
@@ -190,6 +191,24 @@ function validateStep() {
 function addStep() {
   if (validateStep()) {
     step.value = step.value + 1;
+  }
+}
+async function submitBooking() {
+  const dataToSubmit = {
+    personal: PersonalData.value,
+    appliance: ApplianceData.value,
+    issue: IssueData.value.description,
+  };
+
+  try {
+    axios.defaults.xsrfCookieName = "csrftoken";
+    axios.defaults.xsrfHeaderName = "X-CSRFTOKEN";
+    const response = await axios.post('/booking-request', dataToSubmit);
+    console.log("Data submitted", response.data);
+    step.value = 4; // Move to confirmation step
+  } catch (error) {
+    console.error("Error submitting data:", error);
+    // Optionally, handle error state or show a user message
   }
 }
 
