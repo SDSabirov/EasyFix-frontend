@@ -23,6 +23,11 @@ export default defineNuxtConfig({
       autoprefixer: {},
     },
   },
+  build: {
+    rollupOptions: {
+      external: ['axios'], // Add axios here
+    },
+  },
 
   modules: ['@nuxtjs/seo'],
   
