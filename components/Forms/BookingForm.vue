@@ -111,7 +111,7 @@
 <script setup>
 import { onMounted } from "vue";
 import { useFlowbite } from "~/composables/useFlowbite";
-import axios from '~/api/drf.js'
+
 let step = ref(1);
 
 const PersonalData = ref({
@@ -203,7 +203,7 @@ async function submitBooking() {
   try {
     axios.defaults.xsrfCookieName = "csrftoken";
     axios.defaults.xsrfHeaderName = "X-CSRFTOKEN";
-    const response = await axios.post('/booking-request', dataToSubmit);
+    const response = await axios.post('http://127.0.0.1:8000/api/booking-request', dataToSubmit);
     console.log("Data submitted", response.data);
     step.value = 4; // Move to confirmation step
   } catch (error) {
