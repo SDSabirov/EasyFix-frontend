@@ -1,5 +1,5 @@
 <template>
-    <div class="flex flex-col space-y-4 sm:gap-6">
+    <div class="flex flex-col space-y-4 sm:gap-6 animate-fadeInLeft">
             <div class="sm:col-span-2">
               <label
                 for="description"
@@ -14,8 +14,8 @@
               >
                 
                 <button
-                  v-for="suggestion, index in suggestions.cooling" :key="index"
-                  class="rounded-xl w-fit bg-secondary px-4 py-2 text-light text-sm text-left hover:bg-primary selected"
+                  v-for="suggestion, index in currentSuggestions" :key="index"
+                  class="rounded-xl w-fit bg-secondary px-4 py-2 text-light text-sm text-left hover:bg-primary selected animate-fadeDown"
                   @click="fillSuggestion(suggestion)"
                   type="button"
                 >
@@ -24,13 +24,15 @@
                   </p>
                 </button>
               </div>
-              <small class="text-gray-600 font-semibold">Please choose some of the above suggestions or type </small>
+              <small class="text-gray-600 font-semibold"
+              :class="{'text-red-500': localData.error}">Please choose some of the above suggestions or type </small>
               <textarea
                 id="description"
                 rows="8"
                 class="block p-2.5 rounded-xl w-full text-sm text-gray-900 bg-gray-50  border border-gray-300 focus:ring-primary-500 focus:border-primary-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"
                 placeholder="Please provide a brief description of the issue"
-                v-model="userMessage"
+                v-model="localData.description"
+                :class="{'border-red-500': localData.error}"
               ></textarea>
               
             </div>
@@ -39,18 +41,14 @@
 
 
 <script setup>
+
 const props = defineProps({
-  step: {
-    type: Number,
-    required: true
-  }
-});
-function addStep() {
-  step.value = step.value + 1;
-}
-function subtractStep() {
-  step.value = step.value - 1;
-}
+  modelValue: Object, // The data will be passed as modelValue
+  type:String
+})
+
+// Create reactive local state for the data
+const localData = defineModel()
 
 let userMessage = ref("");
 let currentSuggestions = ref([])
@@ -76,7 +74,7 @@ cooking: [
   'Oven not turning on'
 ]
 }
-
+let type = ref(props.type)
 const fillSuggestion = (suggestion) => {
   if (userMessage.value.length == 0) {
     userMessage.value = userMessage.value + suggestion;
@@ -84,5 +82,17 @@ const fillSuggestion = (suggestion) => {
     userMessage.value = userMessage.value + "\n" + suggestion;
   }
 };
+function updateSuggestions(){
+  if (type.value == 'Refrigerator'|| type.value == 'Built-In Refrigerator' ||type.value == 'Freezer'|| type.value == 'Wine Cooler'){
+    currentSuggestions = suggestions.cooling
+  }
+  else{
+    currentSuggestions =suggestions.cooking
+  }
+}
 
+onMounted(()=>{
+  updateSuggestions()
+  console.log(type)
+})
 </script>

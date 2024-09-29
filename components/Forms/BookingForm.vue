@@ -1,6 +1,6 @@
 <template>
-  <section class="bg-light max-h-fit">
-    <div class="py-8 px-4 mx-auto max-w-2xl lg:py-16">
+  <section class="bg-light max-h-fit w-full md:px-32 ">
+    <div class="py-8 px-4 mx-auto max-w-2xl lg:py-16 ">
       <h2 class="mb-4 text-xl font-bold text-primary text-center">
         Request a Booking
       </h2>
@@ -11,71 +11,18 @@
         </div>
 
         <div v-if="step == 1">
-          <FormsStep1 />
-          <div class="flex items-center w-full">
-            <button
-              @click="addStep"
-              type="button"
-              class="flex mx-auto items-center rounded-xl px-8 py-2.5 mt-4 sm:mt-6 text-sm font-medium text-center text-white bg-primary focus:ring-4 focus:ring-primary-200 dark:focus:ring-primary-900 hover:bg-secondary"
-            >
-              Next
-              <span>
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="16"
-                  height="16"
-                  fill="currentColor"
-                  class="bi bi-arrow-right"
-                  viewBox="0 0 16 16"
-                >
-                  <path
-                    fill-rule="evenodd"
-                    d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8"
-                  />
-                </svg>
-              </span>
-            </button>
-          </div>
+          <FormsStep1 v-model="PersonalData" :Errors="PersonalErrors" />
         </div>
 
         <div v-if="step == 2">
-          <FormsStep2 />
-          <div class="flex items-center w-full justify-between">
-            <button
-              @click="subtractStep"
-              type="button"
-              class="flex mx-auto rounded-xl items-center px-8 py-2.5 mt-4 sm:mt-6 text-sm font-medium text-center text-white bg-primary focus:ring-4 focus:ring-primary-200 dark:focus:ring-primary-900 hover:bg-secondary"
-            >
-              <span>
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="16"
-                  height="16"
-                  fill="currentColor"
-                  class="bi bi-arrow-left"
-                  viewBox="0 0 16 16"
-                >
-                  <path
-                    fill-rule="evenodd"
-                    d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8"
-                  />
-                </svg>
-              </span>
-              Go back
-            </button>
-            <button
-              @click="addStep"
-              type="button"
-              class="flex mx-auto rounded-xl items-center px-8 py-2.5 mt-4 sm:mt-6 text-sm font-medium text-center text-white bg-primary focus:ring-4 focus:ring-primary-200 dark:focus:ring-primary-900 hover:bg-secondary"
-            >
-              Next
-            </button>
-          </div>
+          <FormsStep2 v-model="ApplianceData" :Errors="ApplianceErrors"/>
         </div>
         <div v-if="step == 3">
-          <FormsStep3 />
-          <div class="flex items-center w-full justify-between">
+          <FormsStep3 v-model="IssueData" :type="ApplianceData.type"/>
+        </div>
+        <div class="flex items-center w-full justify-between">
                 <button
+                  v-if ="step>1 && step<4"
                   @click="subtractStep"
                   type="button"
                   class="flex mx-auto  rounded-xl items-center px-8 py-2.5 mt-4 sm:mt-6 text-sm font-medium text-center text-white bg-primary focus:ring-4 focus:ring-primary-200 dark:focus:ring-primary-900 hover:bg-secondary"
@@ -98,13 +45,21 @@
                   Go back
                 </button>
                 <button
+                  v-if="step<3"
                   @click="addStep"
                   type="button"
                   class="flex mx-auto rounded-xl items-center px-8 py-2.5 mt-4 sm:mt-6 text-sm font-medium text-center text-white bg-primary focus:ring-4 focus:ring-primary-200 dark:focus:ring-primary-900 hover:bg-secondary"
                 >
                   Next
                 </button>
-        </div>
+                <button
+                  v-if="step==3"
+                  @click="addStep"
+                  type="button"
+                  class="flex mx-auto rounded-xl items-center px-8 py-2.5 mt-4 sm:mt-6 text-sm font-medium text-center text-white bg-primary focus:ring-4 focus:ring-primary-200 dark:focus:ring-primary-900 hover:bg-secondary"
+                >
+                  Submit
+                </button>
         </div>
       </form>
       <div v-if="step == 4">
@@ -158,42 +113,85 @@ import { onMounted } from "vue";
 import { useFlowbite } from "~/composables/useFlowbite";
 
 let step = ref(1);
-let userMessage = ref("");
-let currentSuggestions = ref([])
-const suggestions = {
-  cooling:['Is not maintaining the proper temperature',
-  'Temperature is too cold',
-  'Temperature is too hot',
-  'Leaking water underneath',
-  'Showing error code',
-  'Making beeping noise',
-  'Ice Maker Not Working',
-  'Ice Build-up'],
-  cooking:['Incorrect Temperature',
-    'Not Heating Well Enough',
-    'Gas Smell',
-    'Keeps Sparking',
-    'Door Problems',
-    'Not Working',
-    'Error Codes',
-    'Oven Not Turning On'
-  ]
-}
 
-function addStep() {
-  step.value = step.value + 1;
-}
+const PersonalData = ref({
+  firstName: '',
+  lastName: '',
+  email: '',
+  phone: '',
+  address: '',
+  zip: '',
+
+})
+const PersonalErrors = ref({
+  firstName: null,
+  lastName: null,
+  email: null,
+  phone: null,
+  address: null,
+  zip: null,
+
+})
+
+const ApplianceData =ref({
+  type:'',
+  brand:'',
+  age:'',
+  date:'',
+  time:''
+})
+
+const ApplianceErrors =ref({
+  type:null,
+  brand:null,
+  age:null,
+  date:null,
+  time:null
+})
+
+const IssueData = ref({
+  description:'',
+  error:null
+})
+
 function subtractStep() {
   step.value = step.value - 1;
 }
-const fillSuggestion = (suggestion) => {
-  if (userMessage.value.length == 0) {
-    userMessage.value = userMessage.value + suggestion;
-  } else {
-    userMessage.value = userMessage.value + "\n" + suggestion;
+function validateStep() {
+  if (step.value === 1) {
+    PersonalErrors.value.firstName = PersonalData.value.firstName ? null : 'First Name is required';
+    PersonalErrors.value.lastName = PersonalData.value.email ? null : 'Last Name is required';
+    PersonalErrors.value.email = PersonalData.value.email ? null : 'Email is required';
+    PersonalErrors.value.phone = PersonalData.value.email ? null : 'Phone number is required';
+    PersonalErrors.value.address = PersonalData.value.email ? null : 'Address is required';
+    PersonalErrors.value.zip = PersonalData.value.email ? null : 'Zip code is required';
+    // Add more validation checks as needed
   }
-};
 
+  if (step.value === 2) {
+    ApplianceErrors.value.type = ApplianceData.value.type ? null : 'Appliance type is required';
+    ApplianceErrors.value.brand = ApplianceData.value.brand ? null : 'Appliance brand is required';
+    ApplianceErrors.value.age = ApplianceData.value.age ? null : 'Appliance age is required';
+    ApplianceErrors.value.date = ApplianceData.value.date ? null : 'Date field is required';
+    ApplianceErrors.value.time = ApplianceData.value.time ? null : 'Time field is required';
+    // Add more validation checks as needed
+  }
+
+  if (step.value === 3) {
+    IssueData.value.error = IssueData.value.description ? null : 'Please describe the issue';
+  }
+
+  // Return true if no errors, otherwise false
+  return !Object.values(PersonalErrors.value).some(error => error) &&
+         !Object.values(ApplianceErrors.value).some(error => error) &&
+         !IssueData.value.error;
+}
+
+function addStep() {
+  if (validateStep()) {
+    step.value = step.value + 1;
+  }
+}
 
 onMounted(() => {
   useFlowbite(() => {

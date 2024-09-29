@@ -25,7 +25,7 @@
                 <div>
 
                 </div>
-                <div class="flex flex-col lg:flex-row lg:space-x-2 items-center">
+                <div class="flex space-x-4 items-center">
                   <NuxtLink 
                   href="/booking"
                   class="mt-2 z-20 bg-light rounded-xl border-2 border-light px-8 py-3 mt-8 font-semibold hover:border-tertiary hover:text-white hover:bg-secondary transition-all duration-800 ease-out group animate-flashShadow">
@@ -35,11 +35,6 @@
                     href="tel:+16505139163"
                     class="mt-2 z-20 bg-light rounded-xl border-2 border-light px-8 py-3 mt-8 font-semibold hover:border-tertiary hover:text-white hover:bg-secondary transition-all duration-800 ease-out group animate-flashShadow">
                       <p  class="text-primary group-hover:text-white">Call</p>
-                  </a>
-                  <a 
-                    href="sms:+16505139163"
-                    class="mt-2 z-20 bg-light rounded-xl border-2 border-light px-8 py-3 mt-8 font-semibold hover:border-tertiary hover:text-white hover:bg-secondary transition-all duration-800 ease-out group animate-flashShadow">
-                      <p  class="text-primary group-hover:text-white">Text</p>
                   </a>
                 </div>
                 

@@ -47,7 +47,7 @@
       <a href="mailto:care@easyfixappliance.com" class="hover:underline">care@easyfixappliance.com</a>
    </p>
    <p class="text-sm text-light dark:text-gray-400">
-      <a href="tel:+16505139163 " class="hover:underline">(650) 513-9163 </a>
+      <a href="tel:+14159414144 " class="hover:underline">+1 (415) 941-4144 </a>
    </p>
 </div>
  </template>

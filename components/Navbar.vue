@@ -77,7 +77,7 @@
             class="text-primary bg-light rounded-xl border hover:border hover:border-tertiary hover:text-white hover:bg-secondary transition-all duration-800 ease-out focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium text-sm px-2 md:px-4 py-2 text-center animate-flashShadowRed md:animate-flashShadow"
             
           >
-          <a href="tel:+16505139163 ">Call Now</a>
+          <a href="tel:+14159414144 ">Call Now</a>
           
           </button>
         </div>

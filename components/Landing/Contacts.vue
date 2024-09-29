@@ -58,8 +58,8 @@
             <p class="mt-2 text-light/90 text-lg">Weekend <strong>Emergency Services only</strong> </p>
             <a
               class="mt-2 text-light/80 flex items-center text-lg"
-              href="tel:+16505139163 "
-              >(650) 513-9163
+              href="tel:+14159414144 "
+              >+1 (415) 941-4144
               <span class="mx-4">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -77,8 +77,8 @@
             </a>
             <a
               class="mt-2 text-light/80 flex items-center text-lg"
-              href="sms:+16505139163 "
-              >(650) 513-9163
+              href="sms:+14159414144 "
+              >+1 (415) 941-4144
               <span class="mx-4">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"

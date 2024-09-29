@@ -4,11 +4,10 @@
         <Navbar class="bg-primary"/>
         <div class="relative w-full h-fit">
             
-            <div class="relative top-0 h-[160vh] md:h-[105vh] lg:h-[160vh] bg-black/60">
+            <div class="relative top-0 h-[160vh] md:h-[105vh]  lg:h-[160vh] bg-black/40">
                 <BookingBackground />
                 <div class="absolute container top-[16vh] mx-auto w-full items-center md:px-32 h-fit">
                     <FormsBookingForm />
-                    
                 </div>
             </div>
             
