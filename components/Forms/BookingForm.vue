@@ -1,5 +1,5 @@
 <template>
-  <section class="bg-light max-h-fit w-full md:px-32 ">
+  <section class="bg-light max-h-fit md:px-32 ">
     <div class="py-8 px-4 mx-auto max-w-2xl lg:py-16 ">
       <h2 class="mb-4 text-xl font-bold text-primary text-center">
         Request a Booking

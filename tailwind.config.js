@@ -46,7 +46,7 @@ export default {
         },
         flashShadow: {
           '0%, 100%': { boxShadow: '0 0 0px rgba(0, 0, 0, 0)' },  // No shadow
-          '50%': { boxShadow: '0 0 40px rgba(255, 0, 0, 0.8)' },     // Flashing shadow
+          '50%': { boxShadow: '0 0 40px rgba(255, 255, 255, 0.8)' },     // Flashing shadow
         },
         flashShadowTwoSides: {
           '0%, 100%': { boxShadow: '0 0 0px rgba(0, 0, 0, 0)' },  // No shadow
