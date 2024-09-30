@@ -4,11 +4,20 @@
         <Navbar class="bg-primary"/>
         <div class="relative w-full h-fit">
             
-            <div class="relative top-0 h-[160vh] md:h-[105vh]  lg:h-[160vh] bg-black/40">
-                <BookingBackground />
-                <div class="absolute container top-[16vh] mx-auto w-full items-center md:px-32 h-fit">
-                    <FormsBookingForm />
+            <div class="relative top-0 h-screen ">
+                <div class="max-w-screen h-full flex flex-col relative overflow-x-hidden">
+                    <img
+                    class="fixed top-0 w-full h-[100%] -z-50 object-cover "
+                    src="assets/img/main_background.jpg"
+                    alt="kitchen aplliances"
+                    />
+                    <!--Overlay-->
+                    <div
+                    class="absolute top-0 w-full h-full bg-gradient-to-b from-black to-black opacity-70"
+                    ></div>
+                    <FormsBookingForm class="z-10 relative top-[16vh] mx-2 md:mx-14 lg:mx-32 "/>
                 </div>
+                
             </div>
             
             
