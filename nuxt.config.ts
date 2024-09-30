@@ -31,10 +31,6 @@ export default defineNuxtConfig({
 
   modules: ['@nuxtjs/seo'],
   
-  // gtm: {
-  //   id: '',
-  //   pageTracking: true // Enables automatic page tracking
-  // },
   site: {
     url: 'https://example.com',
     name: 'Easy Fix Appliance | Trusted Sub-Zero, Wolf, & Viking Repair in San Mateo, Palo Alto, and Surrounding Areas',
@@ -45,5 +41,7 @@ export default defineNuxtConfig({
     UserAgent: '*', // Applies to all user agents
     Disallow: '/admin', // Disallow access to admin pages
     Allow: '/' // Allow access to all other pages
-  }
+  },
+
+  
 })

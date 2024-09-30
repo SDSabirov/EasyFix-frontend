@@ -201,14 +201,20 @@ async function submitBooking() {
   };
 
   try {
-    axios.defaults.xsrfCookieName = "csrftoken";
-    axios.defaults.xsrfHeaderName = "X-CSRFTOKEN";
-    const response = await axios.post('http://127.0.0.1:8000/api/booking-request', dataToSubmit);
-    console.log("Data submitted", response.data);
-    step.value = 4; // Move to confirmation step
+    const response = await fetch('http://127.0.0.1:8000/api/booking-request', {
+      method: 'POST',
+      headers: {
+         'Content-Type': 'application/json',
+         'X-CSRFToken': 'csrftoken'
+      },
+      body: JSON.stringify(dataToSubmit)
+   })
+   if(response.status == 200){
+    step.value = step.value + 1;
+   }
   } catch (error) {
     console.error("Error submitting data:", error);
-    // Optionally, handle error state or show a user message
+    
   }
 }
 
