@@ -45,6 +45,13 @@ onMounted(() => {
     
 })
 
+useSeoMeta({
+  title: 'Booking | Schedule Your Appliance Repair Appointment',
+  ogTitle: 'Booking | Easy Fix Appliance',
+  description: 'Looking for reliable appliance repair? Schedule your appointment with Easy Fix Appliance. We proudly serve San Mateo, Palo Alto, and surrounding areas, specializing in Sub-Zero, Wolf, and Viking appliances. Book your service today!',
+  ogDescription: 'Looking for reliable appliance repair? Schedule your appointment with Easy Fix Appliance. We proudly serve San Mateo, Palo Alto, and surrounding areas, specializing in Sub-Zero, Wolf, and Viking appliances. Book your service today!',
+  twitterCard: 'summary_large_image',
+})
 
 function changeBackground(){
     if (window.scrollY > 1) {
