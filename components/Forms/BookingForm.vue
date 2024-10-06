@@ -236,7 +236,7 @@ async function submitBooking() {
   loading.value = true;  // Start loading
 
   try {
-    const response = await fetch('https:/api.easyfixappliance.com/api/booking-request', {
+    const response = await fetch('https://api.easyfixappliance.com/api/booking-request', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
