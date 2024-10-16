@@ -86,7 +86,9 @@
                     </p>
                     <p class="text-base leading-relaxed text-gray-500 dark:text-gray-400">
                         Easy Fix Appliance<br>
-                        [Your Address]<br>
+                        303 Twin Dolphin Drive<br>
+                        Suite 600, #6175<br>
+                        Redwood City, CA 94065<br>
                         care@easyfixappliance.com<br>
                         +1 (415) 941-4144
                     </p>
