@@ -27,7 +27,7 @@
         <div class="relative b-0">
             <Footer />
         </div>
-        
+        <ModalsPrivacy />
     </div>
     
 </template>

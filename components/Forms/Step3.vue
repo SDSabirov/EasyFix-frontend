@@ -1,42 +1,54 @@
 <template>
   <div class="flex flex-col space-y-4 sm:gap-6 animate-fadeInLeft">
-    <div class="sm:col-span-2">
-      <label
-        for="description"
-        class="block mb-2 text-lg font-medium text-primary"
-        >What is the problem with your appliances?</label
+  <div class="sm:col-span-2">
+    <label
+      for="description"
+      class="block mb-2 text-lg font-medium text-primary"
+      >What is the problem with your appliances?</label
+    >
+    <label for="common issues" class="block mb-2 text-sm text-gray"
+      >Here are some common issues
+    </label>
+    <div
+      class="grid grid-cols-1 lg:grid-cols-2 gap-1 space-y-2 py-2 w-full flex-wrap"
+    >
+      <button
+        v-for="(suggestion, index) in currentSuggestions"
+        :key="index"
+        class="rounded-xl w-fit bg-secondary px-4 py-2 text-light text-sm text-left hover:bg-primary selected animate-fadeDown"
+        @click="fillSuggestion(suggestion)"
+        type="button"
       >
-      <label for="common issues" class="block mb-2 text-sm text-gray"
-        >Here are some common issues
-      </label>
-      <div
-        class="grid grid-cols-1 lg:grid-cols-2 gap-1 space-y-2 py-2 w-full flex-wrap"
-      >
-        <button
-          v-for="(suggestion, index) in currentSuggestions"
-          :key="index"
-          class="rounded-xl w-fit bg-secondary px-4 py-2 text-light text-sm text-left hover:bg-primary selected animate-fadeDown"
-          @click="fillSuggestion(suggestion)"
-          type="button"
-        >
-          <p class="whitespace-nowrap overflow-hidden text-ellipsis">
-            {{ suggestion }}
-          </p>
-        </button>
-      </div>
-      <small class="text-gray-600 font-semibold"
-      :class="{'text-red-500': localData.error}">Please choose some of the above suggestions or type</small>
-      <textarea
-        id="description"
-        rows="8"
-        class="block p-2.5 rounded-xl w-full text-sm text-gray-900 bg-gray-50 border border-gray-300 focus:ring-primary-500 focus:border-primary-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"
-        placeholder="Please provide a brief description of the issue"
-        v-model="userMessage"
-        :class="{'border-red-500': localData.error}"
-        @input="updateLocalDescription"
-      ></textarea>
+        <p class="whitespace-nowrap overflow-hidden text-ellipsis">
+          {{ suggestion }}
+        </p>
+      </button>
     </div>
+    <small class="text-gray-600 font-semibold"
+    :class="{'text-red-500': localData.error}">Please choose some of the above suggestions or type</small>
+    <textarea
+      id="description"
+      rows="8"
+      class="block p-2.5 rounded-xl w-full text-sm text-gray-900 bg-gray-50 border border-gray-300 focus:ring-primary-500 focus:border-primary-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"
+      placeholder="Please provide a brief description of the issue"
+      v-model="userMessage"
+      :class="{'border-red-500': localData.error}"
+      @input="updateLocalDescription"
+    ></textarea>
   </div>
+ 
+  <div class="flex items-start mt-2">
+    <input
+      id="sms-email-consent"
+      type="checkbox"
+      v-model="localData.agreedToSmsEmail"
+      class="w-5 h-5 text-primary border-gray-300 rounded focus:ring-primary-500 mt-1"
+    >
+    <label for="sms-email-consent" class="ml-3 text-sm text-gray-700"
+      >I agree to receive SMS confirmations and emails related to my service request. (<button data-modal-target="privacy-modal" data-modal-toggle="privacy-modal" class="hover:underline" type="button">Privacy Policy</button>)
+    </label>
+  </div>
+</div>
 </template>
 
 <script setup>
@@ -121,5 +133,8 @@ watch(() => props.type, updateSuggestions);
 // On component mount, set initial suggestions
 onMounted(() => {
   updateSuggestions();
+  useFlowbite(() => {
+    initModals();
+    })
 });
 </script>

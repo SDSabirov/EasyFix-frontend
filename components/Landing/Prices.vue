@@ -29,7 +29,7 @@
             <li class="flex items-center">
               
             
-              <p class="text-sm text-center w-full">Expert Diagnostic and Troubleshooting</p>
+              <p class="text-sm text-center w-full capitalize">Expert Diagnostic and Troubleshooting</p>
             </li>
           </ul>
           <div class="flex h-full w-full items-end justify-center">
@@ -56,7 +56,7 @@
             <li class="flex items-center">
               
             
-              <p class="text-sm text-center">Diagnostic and Troubleshooting for each Additional Appliance</p>
+              <p class="text-sm text-center capitalize">Diagnostic and Troubleshooting for each Additional Appliance</p>
             </li>
           </ul>
           <div class="flex h-full w-full items-end justify-center">
@@ -83,7 +83,7 @@
           <!-- List -->
           <ul role="list" class="mb-6  text-left text-light w-full">
             <li class="flex items-center w-full">
-              <p class="text-sm text-center w-full">After Hours service visit</p>
+              <p class="text-sm text-center w-full capitalize">After Hours service visit</p>
             </li>
           </ul>
           <div class="flex h-full w-full items-end justify-center">
@@ -111,7 +111,7 @@
             <li class="flex items-center">
               
             
-              <p class="text-sm text-center">Comprehensive appliance tune-up, inspection, and cleaning</p>
+              <p class="text-sm text-center capitalize">Comprehensive appliance tune-up, inspection, and cleaning</p>
             </li>
           </ul>
           <div class="flex h-full w-full items-end justify-center">

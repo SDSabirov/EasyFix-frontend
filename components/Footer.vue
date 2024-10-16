@@ -15,7 +15,7 @@
           <a href="#" class="hover:underline me-4 md:me-6">About</a>
         </li>
         <li>
-          <button data-modal-toggle="static-modal" class="hover:underline me-4 md:me-6" type="button">Privacy Policy</button>
+          <button data-modal-target="privacy-modal" data-modal-toggle="privacy-modal" class="hover:underline me-4 md:me-6" type="button">Privacy Policy</button>
         </li>
         
         <NuxtLink>
