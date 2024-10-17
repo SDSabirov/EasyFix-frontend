@@ -56,13 +56,25 @@
                         You can opt out of receiving these communications by following the unsubscribe instructions included in any marketing communications or by contacting us directly. However, please note that important service-related messages, such as booking confirmations and updates, cannot be opted out of.
                     </p>
                     <p class="text-base leading-relaxed text-gray-500 dark:text-gray-400">
-                        <strong>4. Data Sharing and Security</strong>
+                        <strong>4. Consent Through Contact Form Modal</strong>
+                    </p>
+                    <p class="text-base leading-relaxed text-gray-500 dark:text-gray-400">
+                        Consent is also obtained through our contact form modal, which is accessible on all pages of our website. By submitting the form, you agree to be contacted via phone or email for updates related to your inquiries and services. For more information, please see our Privacy Policy.
+                    </p>
+                    <p class="text-base leading-relaxed text-gray-500 dark:text-gray-400">
+                        <strong>5. Additional Consent During Booking</strong>
+                    </p>
+                    <p class="text-base leading-relaxed text-gray-500 dark:text-gray-400">
+                        During the booking process, additional consent is obtained at step 3 of the form available at <a href="https://easyfixappliance.com/booking" class="text-blue-600 dark:text-blue-400 hover:underline">https://easyfixappliance.com/booking</a>. This consent allows us to provide you with updates regarding your booking and related service information.
+                    </p>
+                    <p class="text-base leading-relaxed text-gray-500 dark:text-gray-400">
+                        <strong>6. Data Sharing and Security</strong>
                     </p>
                     <p class="text-base leading-relaxed text-gray-500 dark:text-gray-400">
                         We do not sell, trade, or otherwise transfer your personal information to outside parties without your consent, except as required by law or necessary to provide the services you have requested. We implement various security measures to ensure the safety of your personal information.
                     </p>
                     <p class="text-base leading-relaxed text-gray-500 dark:text-gray-400">
-                        <strong>5. Your Rights</strong>
+                        <strong>7. Your Rights</strong>
                     </p>
                     <ul class="text-base leading-relaxed text-gray-500 dark:text-gray-400 list-disc pl-5">
                         <li>Access, update, or delete your personal information.</li>
@@ -73,13 +85,29 @@
                         To exercise any of these rights, please contact us at [Your Contact Information].
                     </p>
                     <p class="text-base leading-relaxed text-gray-500 dark:text-gray-400">
-                        <strong>6. Changes to this Privacy Policy</strong>
+                        <strong>8. California Residents' Rights</strong>
+                    </p>
+                    <p class="text-base leading-relaxed text-gray-500 dark:text-gray-400">
+                        If you are a California resident, you have the following rights under the California Consumer Privacy Act (CCPA) and the California Privacy Rights Act (CPRA):
+                    </p>
+                    <ul class="text-base leading-relaxed text-gray-500 dark:text-gray-400 list-disc pl-5">
+                        <li><strong>Right to Know:</strong> You have the right to request details about the personal information we collect, use, and disclose, including the categories of information collected and the purposes for which it is used.</li>
+                        <li><strong>Right to Access:</strong> You may request access to the specific pieces of information we have collected about you.</li>
+                        <li><strong>Right to Delete:</strong> You may request that we delete any personal information we have collected, subject to certain exceptions as required by law.</li>
+                        <li><strong>Right to Opt-Out of Sale:</strong> We do not sell your personal information. However, if our policy changes, we will update this Privacy Policy and provide a mechanism for you to opt out of such sale.</li>
+                        <li><strong>Right to Non-Discrimination:</strong> We will not discriminate against you for exercising any of your privacy rights, meaning we will not deny you services or provide different quality based on your privacy choices.</li>
+                    </ul>
+                    <p class="text-base leading-relaxed text-gray-500 dark:text-gray-400">
+                        To exercise any of these rights, please contact us using the details provided in the "Contact Us" section of this Privacy Policy. We may ask you to verify your identity before responding to your request.
+                    </p>
+                    <p class="text-base leading-relaxed text-gray-500 dark:text-gray-400">
+                        <strong>9. Changes to this Privacy Policy</strong>
                     </p>
                     <p class="text-base leading-relaxed text-gray-500 dark:text-gray-400">
                         We reserve the right to update or modify this Privacy Policy at any time. Any changes will be posted on this page, and we encourage you to review it periodically.
                     </p>
                     <p class="text-base leading-relaxed text-gray-500 dark:text-gray-400">
-                        <strong>7. Contact Us</strong>
+                        <strong>10. Contact Us</strong>
                     </p>
                     <p class="text-base leading-relaxed text-gray-500 dark:text-gray-400">
                         If you have any questions or concerns about this Privacy Policy, please contact us at:
@@ -101,5 +129,6 @@
         </div>
     </div>
   </template>
-  
+
+
   

@@ -154,10 +154,27 @@
           class="w-5 h-5 text-primary border-gray-300 rounded focus:ring-primary-500 mt-1"
         />
         <label for="sms-email-consent" class="ml-3 text-sm text-white"
-          >I agree to receive SMS confirmations and emails related to my service
-          request.
+          >I agree to receive communication from Easy Fix Appliance regarding my service request and related offers. I understand that I may receive calls or text messages, and I can opt-out at any time.
         </label>
       </div>
+      <!-- Privacy policy acknowledgment -->
+    <div class="mb-6">
+      <label
+        for="privacy-policy-consent"
+        class="ml-3 text-sm text-white"
+      >
+        By submitting this form, you agree to our
+        <button
+          data-modal-target="privacy-modal"
+          data-modal-toggle="privacy-modal"
+          class="hover:underline"
+          type="button"
+          aria-label="View Privacy Policy"
+        >
+          Privacy Policy
+        </button>
+      </label>
+    </div>
       <button
         type="submit"
         :disabled="!isFormValid || isSubmitting"
