@@ -138,6 +138,13 @@
           </li>
           <li>
             <NuxtLink
+              href="/#blogs"
+              class="block py-2 px-3 text-light rounded hover:bg-secondary md:hover:bg-transparent md:hover:text-tertiary md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"
+              >Blogs</NuxtLink
+            >
+          </li>
+          <li>
+            <NuxtLink
               href="/#contacts"
               class="block py-2 px-3 text-light rounded hover:bg-secondary md:hover:bg-transparent md:hover:text-tertiary md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"
               >Contact Us</NuxtLink

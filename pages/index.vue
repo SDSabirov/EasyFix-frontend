@@ -4,10 +4,8 @@
         <LandingHero />
         <LandingServices />
         <LandingPrices />
-        
+        <LandingBlogs />
         <LandingTestimonials />
-        
-
         <LandingContacts />
         <FormsContact />
         <Footer />
