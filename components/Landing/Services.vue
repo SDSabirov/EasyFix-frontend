@@ -29,11 +29,12 @@
         class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-6 px-2 mt-4 justify-center"
       >
         <!--Subzero wolf-->
-        <div
+        <NuxtLink to="/subzero">
+          <div
           class="bg-primary dark:bg-gray-800 shadow-lg relative overflow-hidden group hover:shadow-4xl hover:shadow-primary min-h-[340px]"
         >
           <img
-            src="assets/img/wolfCooking.jpg"
+            src="assets/img/subzerowolfappliance.webp"
             alt="oven"
             class="z-10 w-full h-full object-cover"
           />
@@ -128,6 +129,8 @@
             </div>
           </div>
         </div>
+        </NuxtLink>
+        
         <!--Viking-->
         <div
           class="bg-primary dark:bg-gray-800 shadow-lg relative overflow-hidden group hover:shadow-4xl hover:shadow-primary min-h-[340px]"
@@ -616,4 +619,6 @@
   </section>
 </template>
 
-<script setup></script>
+<script setup>
+
+</script>
