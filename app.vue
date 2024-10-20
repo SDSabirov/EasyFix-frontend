@@ -7,6 +7,9 @@
 </template>
 
 <script setup>
+import { useHead } from 'nuxt/app'
+
+// Inject Google Tag Manager script and noscript
 useHead({
   script: [
     {
@@ -25,4 +28,17 @@ useHead({
     }
   ]
 })
+
+// Append the housecall-pro-chat-bubble script to the head only on the client side
+if (process.client) {
+  const script = document.createElement('script')
+  script.id = 'housecall-pro-chat-bubble'
+  script.src = 'https://chat.housecallpro.com/proChat.js'
+  script.type = 'text/javascript'
+  script.defer = true
+  script.setAttribute('data-color', '#0E6FBE')
+  script.setAttribute('data-organization', 'c473d1ee-641c-46a0-9caf-2b6a9168cc50')
+
+  document.head.appendChild(script)
+}
 </script>
