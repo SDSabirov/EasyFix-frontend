@@ -30,7 +30,7 @@ onMounted(() => {
 
 definePageMeta({
   title: 'Trusted Sub-Zero, Wolf & Viking Appliance Repair - San Mateo',
-  description:'Certified Sub-Zero, Wolf & Viking appliance repair in San Mateo, Palo Alto & Bay Area. Fast, reliable service using original parts. Book your repair today!'
+  
 })
 function changeBackground(){
     if (window.scrollY > 1) {

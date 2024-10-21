@@ -34,6 +34,7 @@ export default defineNuxtConfig({
   site: {
     url: "https://easyfixappliance.com",
     name:'Easy Fix Appliance Bay Area, CA',
+    description:'Certified Sub-Zero, Wolf & Viking appliance repair in San Mateo, Palo Alto & Bay Area. Fast, reliable service using original parts. Book your repair today!',
     defaultLocale: "en", // not needed if you have @nuxtjs/i18n installed
   },
   robots: {

@@ -118,7 +118,12 @@ const route = useRoute();
 // Find the blog based on the slug
 blog.value = blogs.find((b) => b.slug === route.params.slug);
 
-
+useHead({
+  title: blog.value.title,
+  meta: [
+    { name: 'description', content: blog.value.content.slice(0, 170) }
+  ],
+})
 
 // State for the Book Now button
 const showButton = ref(false);
