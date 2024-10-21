@@ -16,7 +16,7 @@
           >
             <img
               :src="blog.image"
-              :alt="`Blog ${index + 1} Image`"
+              :alt="`${blog.title} Image`"
               class="w-full h-48 object-cover"
             />
             <div class="p-6">
