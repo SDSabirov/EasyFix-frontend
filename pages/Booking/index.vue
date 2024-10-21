@@ -66,7 +66,5 @@ function onScroll() {
     }
 }
 
-function printScroll() {
-    console.log(window.scrollY);
-}
+
 </script>
