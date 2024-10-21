@@ -7,7 +7,7 @@
 </template>
 
 <script setup>
-import { useHead } from 'nuxt/app'
+
 
 // Inject Google Tag Manager script and noscript
 useHead({

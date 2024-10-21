@@ -45,7 +45,7 @@ const blogs = [
     title: "How to Maximize the Lifespan of Your High-End Appliances",
     description: "Luxury appliances like Sub-Zero, Viking, Wolf, and Thermador are designed for performance, longevity, and aesthetics...",
     image: appliance1,
-    link: "/blogs/maximize-appliance-lifespan",
+    link: "/blogs/how-to-maximize-appliance-lifespan",
   },
   {
     title: "Why You Should Only Use OEM Parts for Your Luxury Appliances",
@@ -54,4 +54,5 @@ const blogs = [
     link: "/blogs/why-use-only-oem-parts",
   },
 ];
+
 </script>

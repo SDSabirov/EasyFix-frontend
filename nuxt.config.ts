@@ -33,9 +33,7 @@ export default defineNuxtConfig({
 
   site: {
     url: "https://easyfixappliance.com",
-    name: "Certified High-End Appliance Repair and Service, Bay Area, CA | Trusted Sub Zero, Wolf, & Viking Appliance Repair in San Mateo, Palo Alto, and Surroundings in Bay area",
-    description:
-      "Sub-Zero, Wolf, & Viking Appliance Repair and Service near Atherton, Belmont, Burlingame, Emerald, San Francisco, and nearby areas. From Sub-zero Refrigerators and Freezers to Viking Cooking Appliances, our skilled technicians provide fast, reliable repairs using original parts. Serving homes in Mountain View, Palo Alto, San Mateo, and more. Schedule your service today!",
+    name:'Easy Fix Appliance Bay Area, CA',
     defaultLocale: "en", // not needed if you have @nuxtjs/i18n installed
   },
   robots: {
