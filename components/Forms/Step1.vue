@@ -63,6 +63,16 @@
           placeholder="123-456-7890"
           :class="{'border-red-500': Errors.phone}"
         />
+        <div class="flex items-center mt-2">
+       <!-- Consent section for SMS and Email communication -->
+      <input type="checkbox" name="" id="" class="rounded" v-model="localData.smsConsent">
+      <label
+        for="privacy-policy-consent"
+        class="ml-3 text-sm text-gray-700"
+      >
+      By clicking this box, you agree to receive SMS communications from Easy Fix Appliance you can reply STOP to opt-out at any time.
+      </label>
+    </div>
       </div>
 
       <!-- Address -->

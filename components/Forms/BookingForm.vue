@@ -83,6 +83,7 @@ const PersonalData = ref({
   phone: "",
   address: "",
   zip: "",
+  smsConsent:false,
 });
 const PersonalErrors = ref({
   firstName: null,
@@ -111,7 +112,7 @@ const ApplianceErrors = ref({
 
 const IssueData = ref({
   description: "",
-  smsConsent:false,
+  
   error: null,
 });
 

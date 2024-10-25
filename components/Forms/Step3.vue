@@ -43,16 +43,7 @@
       ></textarea>
     </div>
     <!-- Privacy policy acknowledgment -->
-    <div class="flex items-center mt-2">
-       <!-- Consent section for SMS and Email communication -->
-      <input type="checkbox" name="" id="" class="rounded" v-model="localData.smsConsent">
-      <label
-        for="privacy-policy-consent"
-        class="ml-3 text-sm text-gray-700"
-      >
-      By clicking this box, you agree to receive SMS communications from Easy Fix Appliance you can reply STOP to opt-out at any time.
-      </label>
-    </div>
+    
     <div class="flex items-start mt-2">
       <label
         for="privacy-policy-consent"
