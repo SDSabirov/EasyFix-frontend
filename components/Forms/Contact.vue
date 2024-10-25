@@ -150,11 +150,11 @@
         <input
           id="sms-email-consent"
           type="checkbox"
-          v-model="formData.agreedToSmsEmail"
+          v-model="formData.agreedToSms"
           class="w-5 h-5 text-primary border-gray-300 rounded focus:ring-primary-500 mt-1"
         />
         <label for="sms-email-consent" class="ml-3 text-sm text-white"
-          >I agree to receive communication from Easy Fix Appliance regarding my service request and related offers. I understand that I may receive calls or text messages, and I can opt-out at any time.
+          >By clicking this box, you agree to receive SMS communications from Easy Fix Appliance you can reply STOP to opt-out at any time.
         </label>
       </div>
       <!-- Privacy policy acknowledgment -->
@@ -221,6 +221,7 @@ const errors = reactive({
   phone: "",
   subject: "",
   message: "",
+  agreedToSms:false
 });
 
 const isSubmitting = ref(false);

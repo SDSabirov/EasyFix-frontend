@@ -111,6 +111,7 @@ const ApplianceErrors = ref({
 
 const IssueData = ref({
   description: "",
+  smsConsent:false,
   error: null,
 });
 

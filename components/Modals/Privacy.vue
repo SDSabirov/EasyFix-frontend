@@ -50,10 +50,11 @@
                     </p>
                     <ul class="text-base leading-relaxed text-gray-500 dark:text-gray-400 list-disc pl-5">
                         <li><strong>Text Messages:</strong> These will be used to confirm your bookings, provide reminders, or update you on any changes related to your services.</li>
+                        <li><strong>SMS Consent:</strong> SMS Consent or phone numbers are not shared for the purpose of SMS with third parties or affiliates.</li>
                         <li><strong>Emails:</strong> We may also send you email confirmations for your bookings, service reminders, and any necessary follow-up communications.</li>
                     </ul>
                     <p class="text-base leading-relaxed text-gray-500 dark:text-gray-400">
-                        You can opt out of receiving these communications by following the unsubscribe instructions included in any marketing communications or by contacting us directly. However, please note that important service-related messages, such as booking confirmations and updates, cannot be opted out of.
+                        You can opt out of receiving these communications by following the unsubscribe instructions included in any marketing communications or by contacting us directly. However, please note that important service-related emails, such as booking confirmations and updates, cannot be opted out of.
                     </p>
                     <p class="text-base leading-relaxed text-gray-500 dark:text-gray-400">
                         <strong>4. Consent Through Contact Form Modal</strong>

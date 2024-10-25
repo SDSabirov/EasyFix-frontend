@@ -43,12 +43,22 @@
       ></textarea>
     </div>
     <!-- Privacy policy acknowledgment -->
+    <div class="flex items-center mt-2">
+       <!-- Consent section for SMS and Email communication -->
+      <input type="checkbox" name="" id="" class="rounded" v-model="localData.smsConsent">
+      <label
+        for="privacy-policy-consent"
+        class="ml-3 text-sm text-gray-700"
+      >
+      By clicking this box, you agree to receive SMS communications from Easy Fix Appliance you can reply STOP to opt-out at any time.
+      </label>
+    </div>
     <div class="flex items-start mt-2">
       <label
         for="privacy-policy-consent"
         class="ml-3 text-sm text-gray-700"
       >
-        By submitting this form, you agree:
+        By submitting this form, you agree to our
         <button
           data-modal-target="privacy-modal"
           data-modal-toggle="privacy-modal"
@@ -56,49 +66,14 @@
           type="button"
           aria-label="View Privacy Policy"
         >
-          Privacy Policy
+          <span class="text-primary font-semibold">Privacy Policy</span>
         </button>
-        :
-      </label>
-    </div>
-    <div class="flex items-start mt-2">
-      <label
-        for="privacy-policy-consent"
-        class="ml-3 text-sm text-gray-700"
-      > To Our
-        <button
-          data-modal-target="privacy-modal"
-          data-modal-toggle="privacy-modal"
-          class="hover:underline"
-          type="button"
-          aria-label="View Privacy Policy"
-        >
-          Privacy Policy
-        </button>
-        :
-      </label>
-    </div>
-    <!-- Consent section for SMS and Email communication -->
-    <div class="flex items-start">
-      <label
-        for="sms-email-consent"
-        class="ml-3 text-sm text-gray-700"
-      >
-        Agree to receive communication from Easy Fix Appliance regarding your service request at phone number you provided. You may receive calls or text messages, and you can opt-out at any time, by replying STOP (
-        <button
-          data-modal-target="privacy-modal"
-          data-modal-toggle="privacy-modal"
-          class="hover:underline"
-          type="button"
-          aria-label="Open Privacy Policy"
-        >
-          Privacy Policy
-        </button>
-        )
+        
       </label>
     </div>
 
-    
+   
+ 
   </div>
 </template>
 
