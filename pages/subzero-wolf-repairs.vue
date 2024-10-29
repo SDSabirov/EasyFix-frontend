@@ -2,194 +2,151 @@
   <div class="bg-primary/80">
     <Navbar />
     <div class="pt-[14%] lg:pt-[12%]">
-        <div class="w-screen h-full ">
-            <div class="max-w-7xl mx-auto p-6 bg-gray-100">
-        <!-- Page Title -->
-        <h1 class="text-4xl font-bold text-center text-primary mb-10">
-          Common Problems and Maintenance for Sub-Zero Refrigeration
-        </h1>
+      <div class="w-screen h-full">
+        <div class="max-w-7xl mx-auto p-6 bg-gray-100">
+          <!-- Page Title -->
+          <h1 class="text-4xl font-bold text-center text-primary mb-10">
+            Sub-Zero & Wolf: Leading Brands in Luxury Kitchen Appliances
+          </h1>
 
-        <!-- Section 1: Common Problems -->
-        <section class="mb-12 ">
-          
-          <div class="grid grid-cols-1 gap-8 md:grid-cols-2">
-            
-          <ul class="list-disc pl-6 text-gray-700 leading-relaxed">
-            
-            <li>
-              <strong>1. Temperature Fluctuations</strong> <br />
-              Symptoms: Food spoiling quickly or freezer burn. <br />
-              Causes: Faulty thermostat, condenser coil issues, or door gasket
-              wear.
-            </li>
-            <li>
-              <strong>2. Water Leakage</strong> <br />
-              Symptoms: Puddles forming under the fridge. <br />
-              Causes: Clogged defrost drain or malfunctioning water filter.
-            </li>
-            <li>
-              <strong>3. Frost Build-Up in Freezer</strong> <br />
-              Symptoms: Ice buildup on shelves or walls. <br />
-              Causes: Defrost heater malfunction or improper door sealing.
-            </li>
-            <li>
-              <strong>4. Loud or Unusual Noises</strong> <br />
-              Symptoms: Humming, buzzing, or rattling sounds. <br />
-              Causes: Noisy compressors, failing evaporator fans, or condenser
-              fan motors.
-            </li>
-            <li>
-              <strong>5. Ice Maker Issues</strong> <br />
-              Symptoms: Ice maker not producing ice or producing small amounts.
-              <br />
-              Causes: Water line blockages or faulty water inlet valves.
-            </li>
-            <li>
-              <strong>6. Condenser Coil Failure</strong> <br />
-              Symptoms: Overheating, ineffective cooling. <br />
-              Causes: Dust accumulation or coil malfunction, requiring cleaning
-              or replacement.
-            </li>
-          </ul>
-          <img
-            src="/assets/img/subzerowolfappliance.webp"
-            alt="Sub-Zero Refrigerator"
-            class="w-full h-full object-cover mb-6"
-          />
-          </div>
-          
-        </section>
+          <!-- Section 1: Intro -->
+          <section class="mb-12">
+            <div class="grid grid-cols-1 gap-8 md:grid-cols-2">
+              <div class="flex flex-col space-y-4">
+                <p>
+                  Sub-Zero and Wolf are two of the most trusted names in the
+                  world of high-end kitchen appliances. Sub-Zero, known for its
+                  state-of-the-art refrigeration systems, has set the standard
+                  for food preservation with its advanced cooling technologies,
+                  offering precision temperature control and dual refrigeration
+                  systems that keep your food fresher for longer. Wolf, on the
+                  other hand, is synonymous with professional-grade cooking
+                  appliances, delivering powerful ranges, ovens, and cooktops
+                  designed for home chefs who demand top-tier performance and
+                  precision.
+                </p>
+                <p>
+                  Both brands combine sleek design with cutting-edge
+                  functionality, making them the go-to choice for homeowners
+                  looking to elevate their kitchen experience. Sub-Zero and Wolf
+                  appliances aren’t just about luxury—they are built to last,
+                  with many units performing flawlessly for decades when
+                  properly maintained.
+                </p>
+              </div>
 
-        <!-- Section 2: Why Repair Your Sub-Zero Refrigerator -->
-        <section class="mb-12">
-          
-          <div class="grid grid-cols-1 gap-8 md:grid-cols-2">
-            <img
-            src="/assets/img/wolfCooking.jpg"
-            alt="Sub-Zero Refrigerator"
-            class="w-full h-full object-cover mb-6"
-          />
-          <ul class="list-disc pl-6 text-gray-700 leading-relaxed">
+              <img
+                src="/assets/img/subzerowolfappliance.webp"
+                alt="Sub-Zero Refrigerator"
+                class="w-full h-full object-cover mb-6"
+              />
+            </div>
+          </section>
+
+          <!-- Section 2: Our Expertise-->
+          <section class="mb-12">
+            <div class="grid grid-cols-1 gap-8 md:grid-cols-2">
+              <img
+                src="/assets/img/wolfCooking.jpg"
+                alt="Sub-Zero Refrigerator"
+                class="w-full h-full object-cover mb-6"
+              />
+              <div>
+                <h2 class="text-3xl font-bold text-gray-800 mb-6">
+                  Our Expertise in Sub-Zero & Wolf Appliance Repairs
+                </h2>
+                <p>
+                  At Easy Fix Appliance, we have specialized in repairing
+                  Sub-Zero and Wolf appliances for over 10 years, serving the
+                  Bay Area, including San Mateo, Palo Alto, Foster City, San
+                  Francisco, and surrounding areas. Our team of highly trained
+                  technicians understands the intricacies of these luxury
+                  appliances, from Sub-Zero’s dual refrigeration systems to
+                  Wolf’s precision temperature controls, ensuring that your
+                  appliance gets the care it needs to keep running smoothly.
+                </p>
+                <p>
+                  We know that when a high-end appliance like Sub-Zero or Wolf
+                  needs repairs, you want expert service with minimal disruption
+                  to your home. That’s why we prioritize fast, reliable repairs
+                  using genuine manufacturer parts to ensure long-term
+                  performance and reliability. Our commitment is to extend the
+                  lifespan of your premium appliances and protect your
+                  investment.
+                </p>
+              </div>
+            </div>
+          </section>
+
+          <!-- Section 3: Why choose us -->
+          <section class="mb-12">
             <h2 class="text-3xl font-bold text-gray-800 mb-6">
-            Why Repair Your Sub-Zero Refrigerator?
-          </h2>
-            <li>
-              <strong>High Initial Investment</strong>: Sub-Zero refrigerators
-              often cost more than $10,000. Repairing protects this investment.
-            </li>
-            <li>
-              <strong>Built to Last</strong>: Sub-Zero is designed for
-              durability, and repairs can extend the life of the unit at a
-              fraction of the cost of replacement.
-            </li>
-            <li>
-              <strong>Environmentally Friendly</strong>: Repairing reduces
-              landfill waste. Sub-Zero's design allows for easy part
-              replacements.
-            </li>
-          </ul>
-          </div>
-          
-        </section>
+              Why Choose Us for Sub-Zero & Wolf Repairs?
+            </h2>
+            <div class="text-gray-700 leading-relaxed">
+              <p>
+                <strong>Decades of Experience:</strong>
+                With over 10 years of experience in servicing Sub-Zero and Wolf
+                appliances, we have seen and fixed it all.
+              </p>
 
-        <!-- Section 3: Common FAQs -->
-        <section class="mb-12">
-          <h2 class="text-3xl font-bold text-gray-800 mb-6">
-            Common FAQs About Sub-Zero Refrigerators
-          </h2>
-          <div class="text-gray-700 leading-relaxed">
-            <p>
-              <strong>Q: How long does a Sub-Zero refrigerator last?</strong>
-              <br />
-              A: With proper care, it can last 20 years or more, far exceeding
-              standard refrigerator lifespans.
+              <p>
+                <strong>Certified Technicians:</strong>
+                Our team is fully trained and certified to handle any issue,
+                from minor adjustments to major repairs..
+              </p>
+
+              <p>
+                <strong>Original Parts:</strong>
+                We only use authentic Sub-Zero and Wolf parts, ensuring your
+                appliance performs just as it did when it was brand new.
+              </p>
+
+              <p>
+                <strong>Service You Can Trust:</strong>
+                We pride ourselves on providing top-notch service, ensuring our
+                customers get their luxury appliances back in working order as
+                quickly as possible.
+              </p>
+            </div>
+          </section>
+          <!-- Section 5: Conclusion -->
+          <section>
+            <h2 class="text-3xl font-bold text-gray-800 mb-6">
+              Why It's Worth Repairing Your Sub-Zero & Wolf Appliances
+            </h2>
+            <p class="text-gray-700 leading-relaxed">
+              Sub-Zero and Wolf appliances are significant investments, known
+              for their premium build, advanced technology, and long lifespan.
+              With proper care and occasional repairs, Sub-Zero refrigerators
+              and Wolf cooking appliances can last over 20 years—far exceeding
+              the typical lifespan of conventional models. Repairing, rather
+              than replacing, is often more cost-effective and environmentally
+              friendly, allowing you to protect your investment and enjoy these
+              high-performance appliances for decades.
             </p>
-
-            <p>
-              <strong>Q: What is covered under Sub-Zero’s warranty?</strong>
-              <br />
-              A: Sub-Zero offers two years full warranty on parts and labor, and
-              up to 12 years on sealed systems like the compressor.
+            <p class="text-gray-700 leading-relaxed mt-4">
+              Choosing repairs also helps reduce waste, making it an
+              eco-friendly option. With genuine parts and expert servicing, most
+              issues like temperature control or faulty components can be
+              resolved efficiently, giving your appliances a renewed life.
+              Whether it's a Sub-Zero refrigerator or a Wolf range, repairing
+              your luxury appliances is a smart, sustainable choice that ensures
+              longevity and top performance.
             </p>
-
-            <p>
-              <strong
-                >Q: What should I do if my Sub-Zero refrigerator is
-                leaking?</strong
-              >
-              <br />
-              A: Check for clogged defrost drains or damaged water filters. If
-              unresolved, contact a certified repair technician.
-            </p>
-
-            <p>
-              <strong
-                >Q: Why is my Sub-Zero fridge running all the time?</strong
-              >
-              <br />
-              A: Dirty condenser coils or a malfunctioning thermostat may be
-              causing it to overwork. Regular maintenance is crucial.
-            </p>
-          </div>
-        </section>
-
-        <!-- Section 4: Care and Maintenance Tips -->
-        <section class="mb-12">
-          <h2 class="text-3xl font-bold text-gray-800 mb-6">
-            Care and Maintenance Tips for Sub-Zero Refrigerators
-          </h2>
-          <ul class="list-disc pl-6 text-gray-700 leading-relaxed">
-            <li>
-              <strong>Clean the Condenser Coils Every 6 Months</strong>: Dust
-              and debris can cause overheating. Clean them regularly.
-            </li>
-            <li>
-              <strong>Replace Water Filters Every 6 Months</strong>: Ensures
-              proper ice maker and water dispenser functionality and improves
-              water quality.
-            </li>
-            <li>
-              <strong>Check Door Gaskets for Wear</strong>: Damaged gaskets can
-              cause air leaks. Replace if necessary.
-            </li>
-            <li>
-              <strong>Avoid Overloading Shelves</strong>: Overloading can block
-              airflow and cause uneven cooling.
-            </li>
-            <li>
-              <strong>Keep the Unit Level</strong>: Ensures efficient cooling
-              and prevents door seal issues.
-            </li>
-            <li>
-              <strong>Schedule Professional Maintenance Annually</strong>: A
-              professional check-up can catch potential problems early and save
-              on costly repairs.
-            </li>
-          </ul>
-        </section>
-
-        <!-- Section 5: Conclusion -->
-        <section>
-          <h2 class="text-3xl font-bold text-gray-800 mb-6">
-            Sub-Zero Refrigeration: Why Repairing is Worth It
-          </h2>
-          <p class="text-gray-700 leading-relaxed">
-            Sub-Zero refrigerators are known for their premium build, advanced
-            technology, and longevity. With proper care and occasional repairs,
-            a Sub-Zero unit can last over 20 years, much longer than
-            conventional refrigerators. Repairing, rather than replacing, is
-            often more cost-effective and environmentally friendly.
-          </p>
-        </section>
-      </div>
+          </section>
         </div>
-      
+      </div>
+
       <!-- Book Now Button -->
       <NuxtLink
         to="/booking"
         v-if="showButton"
         class="fixed right-0 top-1/2 transform -translate-y-1/2 bg-primary text-white px-6 py-3 rounded-l-lg shadow-lg transition-transform duration-800 ease-in"
-        :class="{ 'translate-x-0': showButton, 'translate-x-full': !showButton }"
+        :class="{
+          'translate-x-0': showButton,
+          'translate-x-full': !showButton,
+        }"
       >
         Book Now
       </NuxtLink>
@@ -202,8 +159,19 @@
 
 <script setup>
 // State for the Book Now button
+const description = `At Easy Fix Appliance, we have specialized in repairing
+                  Sub-Zero and Wolf appliances for over 10 years, serving the
+                  Bay Area, including San Mateo, Palo Alto, Foster City, San
+                  Francisco, and surrounding areas. Our team of highly trained
+                  technicians understands the intricacies of these luxury
+                  appliances, from Sub-Zero’s dual refrigeration systems to
+                  Wolf’s precision temperature controls, ensuring that your
+                  appliance gets the care it needs to keep running smoothly.`;
 const showButton = ref(false);
-
+useHead({
+  title: "Sub-zero Wolf Appliance Repairs",
+  meta: [{ name: "description", content: description.slice(0, 170) }],
+});
 // Function to slide the button after 2 seconds
 onMounted(() => {
   setTimeout(() => {

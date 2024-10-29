@@ -16,7 +16,7 @@
           viewBox="0 0 52 52"
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
-          class="animate-flashShadowTwoSides rounded-full max-h-[38px] md:max-h-[52px]"
+          class="rounded-full max-h-[38px] md:max-h-[52px]"
           
         >
           <path
