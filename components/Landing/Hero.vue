@@ -49,11 +49,11 @@
 
 <script setup>
 import { ref, onMounted } from "vue";
-import mainBackground from "@/assets/img/main_backgroundv2.jpeg";
-import secondBackground from "@/assets/img/main_backgroundv3.jpeg";
-import thirdBackground from "@/assets/img/kitchenBackground1.jpeg";
-import forthBackground from "@/assets/img/kitchenBright.jpg";
-import fifthBackground from "@/assets/img/main_background.jpg"
+import mainBackground from "@/assets/img/main_backgroundv2.webp";
+import secondBackground from "@/assets/img/main_backgroundv3.webp";
+import thirdBackground from "@/assets/img/kitchenBackground1.webp";
+import forthBackground from "@/assets/img/kitchenBright.webp";
+import fifthBackground from "@/assets/img/main_background.webp"
 
 let currentIndex = ref(0);
 let currentSlogan = ref({});

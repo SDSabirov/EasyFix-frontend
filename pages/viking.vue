@@ -174,6 +174,7 @@
 </template>
 
 <script setup>
+import { useFlowbite } from '~/composables/useFlowbite';
 // State for the Book Now button
 const description = `At Easy Fix Appliance, we have specialized in repairing
                     Sub-Zero and Wolf appliances for over 10 years, serving the
@@ -185,11 +186,14 @@ const description = `At Easy Fix Appliance, we have specialized in repairing
                     appliance gets the care it needs to keep running smoothly.`;
 const showButton = ref(false);
 useHead({
-  title: "Sub-zero Wolf Appliance Repairs",
+  title: "Viking Appliance Repairs",
   meta: [{ name: "description", content: description.slice(0, 170) }],
 });
 // Function to slide the button after 2 seconds
 onMounted(() => {
+  useFlowbite(() => {
+        initFlowbite();
+    })
   setTimeout(() => {
     showButton.value = true;
   }, 2000); // Show the button after 2 seconds

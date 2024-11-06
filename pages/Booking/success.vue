@@ -8,7 +8,7 @@
         >
           <img
             class="fixed top-0 w-full h-[100%] -z-50 object-cover"
-            src="assets/img/main_background.jpg"
+            src="assets/img/main_background.webp"
             alt="kitchen aplliances"
           />
           <!--Overlay-->

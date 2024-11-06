@@ -46,61 +46,58 @@
             <!-- Header is always visible -->
             <NuxtLink to="/subzero-wolf-repairs">
               <div
-              class="mb-2 flex justify-between items-center w-full grid grid-cols-2"
-            >
-              
-                <div class="flex flex-col space-y-2 mr-4">
-                <img
-                  src="/assets/img/subzeroLogosilver.png"
-                  class="max-h-[30px] lg:max-h-[40px]"
-                  alt="Subzero Logo"
-                />
-                <img
-                  src="/assets/img/wolf.png"
-                  class="max-h-[30px] lg:max-h-[40px]"
-                  alt="Wolf Logo"
-                />
-              </div>
-              
-              
-              
-              <div
-                class="max-h-[30px] lg:max-h-[40px] flex space-x-1 align-center grid grid-cols-6 gap-1"
+                class="mb-2 flex justify-between items-center w-full grid grid-cols-2"
               >
-                <img
-                  src="/assets/icons/freezer.svg"
-                  alt="freezer icon"
-                  class="object-contain"
-                />
-                <img
-                  src="/assets/icons/fridge.svg"
-                  alt="refrigerator icon"
-                  class="object-contain"
-                />
-                <img
-                  src="/assets/icons/cooktopv3.svg"
-                  alt="cooktop icon"
-                  class="object-contain"
-                />
-                <img
-                  src="/assets/icons/oven.svg"
-                  alt="oven icon"
-                  class="object-contain"
-                />
-                <img
-                  src="/assets/icons/cookingTopv2.svg"
-                  alt="oven icon"
-                  class="object-contain"
-                />
-                <img
-                  src="/assets/icons/ovenv2.svg"
-                  alt="oven icon"
-                  class="object-contain"
-                />
+                <div class="flex flex-col space-y-2 mr-4">
+                  <img
+                    src="/assets/img/subzeroLogosilver.png"
+                    class="max-h-[30px] lg:max-h-[40px]"
+                    alt="Subzero Logo"
+                  />
+                  <img
+                    src="/assets/img/wolf.png"
+                    class="max-h-[30px] lg:max-h-[40px]"
+                    alt="Wolf Logo"
+                  />
+                </div>
+
+                <div
+                  class="max-h-[30px] lg:max-h-[40px] flex space-x-1 align-center grid grid-cols-6 gap-1"
+                >
+                  <img
+                    src="/assets/icons/freezer.svg"
+                    alt="freezer icon"
+                    class="object-contain"
+                  />
+                  <img
+                    src="/assets/icons/fridge.svg"
+                    alt="refrigerator icon"
+                    class="object-contain"
+                  />
+                  <img
+                    src="/assets/icons/cooktopv3.svg"
+                    alt="cooktop icon"
+                    class="object-contain"
+                  />
+                  <img
+                    src="/assets/icons/oven.svg"
+                    alt="oven icon"
+                    class="object-contain"
+                  />
+                  <img
+                    src="/assets/icons/cookingTopv2.svg"
+                    alt="oven icon"
+                    class="object-contain"
+                  />
+                  <img
+                    src="/assets/icons/ovenv2.svg"
+                    alt="oven icon"
+                    class="object-contain"
+                  />
+                </div>
               </div>
-            </div>
             </NuxtLink>
-            
+
             <!-- Paragraph is hidden initially and expands on hover -->
             <div
               class="text-primary text-justify opacity-0 max-h-0 overflow-hidden transition-all duration-1000 group-hover:max-h-80 group-hover:opacity-100"
@@ -151,56 +148,60 @@
         <div
           class="bg-primary dark:bg-gray-800 shadow-lg relative overflow-hidden group hover:shadow-4xl hover:shadow-primary min-h-[340px]"
         >
-          <img
-            src="assets/img/vikingAppliance.jpeg"
-            alt="oven"
-            class="z-10 w-full h-full object-cover"
-          />
+          <NuxtLink to="/viking">
+            <img
+              src="assets/img/vikingAppliance.webp"
+              alt="oven"
+              class="z-10 w-full h-full object-cover"
+            />
+          </NuxtLink>
           <div
             class="flex flex-col p-2 z-20 absolute bottom-0 p-4 bg-light/80 w-full"
           >
             <!-- Header is always visible -->
-            <div class="mb-2 grid grid-cols-2 justify-between items-center">
-              <img
-                src="/assets/img/viking.png"
-                class="h-[40px]"
-                alt="viking logo"
-              />
-              <div
-                class="max-h-[30px] lg:max-h-[40px] flex space-x-1 align-center grid grid-cols-6 gap-1"
-              >
+            <NuxtLink to="/viking">
+              <div class="mb-2 grid grid-cols-2 justify-between items-center">
                 <img
-                  src="/assets/icons/freezer.svg"
-                  alt="freezer icon"
-                  class="object-contain"
+                  src="/assets/img/viking.png"
+                  class="h-[40px]"
+                  alt="viking logo"
                 />
-                <img
-                  src="/assets/icons/fridge.svg"
-                  alt="refrigirator icon"
-                  class="object-contain"
-                />
-                <img
-                  src="/assets/icons/cooktopv3.svg"
-                  alt="cooktop icon"
-                  class="object-contain"
-                />
-                <img
-                  src="/assets/icons/oven.svg"
-                  alt="oven icon"
-                  class="object-contain"
-                />
-                <img
-                  src="/assets/icons/cookingTopv2.svg"
-                  alt="oven icon"
-                  class="object-contain"
-                />
-                <img
-                  src="/assets/icons/ovenv2.svg"
-                  alt="oven icon"
-                  class="object-contain"
-                />
+                <div
+                  class="max-h-[30px] lg:max-h-[40px] flex space-x-1 align-center grid grid-cols-6 gap-1"
+                >
+                  <img
+                    src="/assets/icons/freezer.svg"
+                    alt="freezer icon"
+                    class="object-contain"
+                  />
+                  <img
+                    src="/assets/icons/fridge.svg"
+                    alt="refrigirator icon"
+                    class="object-contain"
+                  />
+                  <img
+                    src="/assets/icons/cooktopv3.svg"
+                    alt="cooktop icon"
+                    class="object-contain"
+                  />
+                  <img
+                    src="/assets/icons/oven.svg"
+                    alt="oven icon"
+                    class="object-contain"
+                  />
+                  <img
+                    src="/assets/icons/cookingTopv2.svg"
+                    alt="oven icon"
+                    class="object-contain"
+                  />
+                  <img
+                    src="/assets/icons/ovenv2.svg"
+                    alt="oven icon"
+                    class="object-contain"
+                  />
+                </div>
               </div>
-            </div>
+            </NuxtLink>
             <!-- Paragraph is hidden initially and expands on hover -->
             <div
               class="text-primary text-justify opacity-0 max-h-0 overflow-hidden transition-all duration-1000 group-hover:max-h-80 group-hover:opacity-100"
@@ -244,58 +245,62 @@
         <div
           class="bg-primary dark:bg-gray-800 shadow-lg relative overflow-hidden group hover:shadow-4xl hover:shadow-primary min-h-[340px]"
         >
-          <img
-            src="assets/img/kitchenBlue.jpg"
-            alt="oven"
-            class="z-10 w-full h-full object-cover bg-gray-400"
-          />
+          <NuxtLink to="/kitchenAid">
+            <img
+              src="assets/img/kitchenBlue.jpg"
+              alt="oven"
+              class="z-10 w-full h-full object-cover bg-gray-400"
+            />
+          </NuxtLink>
           <div
             class="flex flex-col p-2 z-20 absolute bottom-0 p-4 bg-light/80 w-full"
           >
             <!-- Header is always visible -->
-            <div
-              class="mb-2 grid grid-cols-2 gap-2 justify-between items-center max-h-[40px]"
-            >
-              <img
-                src="/assets/img/kitchenaid.png"
-                class="max-h-[40px]"
-                alt="kitchenaind logo"
-              />
+            <NuxtLink to="/kitchenAid">
               <div
-                class="max-h-[30px] lg:max-h-[40px] flex space-x-1 align-center grid grid-cols-6 gap-1"
+                class="mb-2 grid grid-cols-2 gap-2 justify-between items-center max-h-[40px]"
               >
                 <img
-                  src="/assets/icons/freezer.svg"
-                  alt="freezer icon"
-                  class="object-contain"
+                  src="/assets/img/kitchenaid.png"
+                  class="max-h-[40px]"
+                  alt="kitchenaind logo"
                 />
-                <img
-                  src="/assets/icons/fridge.svg"
-                  alt="refrigirator icon"
-                  class="object-contain"
-                />
-                <img
-                  src="/assets/icons/cooktopv3.svg"
-                  alt="cooktop icon"
-                  class="object-contain"
-                />
-                <img
-                  src="/assets/icons/oven.svg"
-                  alt="oven icon"
-                  class="object-contain"
-                />
-                <img
-                  src="/assets/icons/cookingTopv2.svg"
-                  alt="oven icon"
-                  class="object-contain"
-                />
-                <img
-                  src="/assets/icons/ovenv2.svg"
-                  alt="oven icon"
-                  class="object-contain"
-                />
+                <div
+                  class="max-h-[30px] lg:max-h-[40px] flex space-x-1 align-center grid grid-cols-6 gap-1"
+                >
+                  <img
+                    src="/assets/icons/freezer.svg"
+                    alt="freezer icon"
+                    class="object-contain"
+                  />
+                  <img
+                    src="/assets/icons/fridge.svg"
+                    alt="refrigirator icon"
+                    class="object-contain"
+                  />
+                  <img
+                    src="/assets/icons/cooktopv3.svg"
+                    alt="cooktop icon"
+                    class="object-contain"
+                  />
+                  <img
+                    src="/assets/icons/oven.svg"
+                    alt="oven icon"
+                    class="object-contain"
+                  />
+                  <img
+                    src="/assets/icons/cookingTopv2.svg"
+                    alt="oven icon"
+                    class="object-contain"
+                  />
+                  <img
+                    src="/assets/icons/ovenv2.svg"
+                    alt="oven icon"
+                    class="object-contain"
+                  />
+                </div>
               </div>
-            </div>
+            </NuxtLink>
             <!-- Paragraph is hidden initially and expands on hover -->
             <div
               class="text-primary text-justify opacity-0 max-h-0 overflow-hidden transition-all duration-1000 group-hover:max-h-80 group-hover:opacity-100"
@@ -339,58 +344,62 @@
         <div
           class="bg-primary dark:bg-gray-800 shadow-lg relative overflow-hidden group hover:shadow-4xl hover:shadow-primary min-h-[340px]"
         >
-          <img
-            src="assets/img/redAppliance.jpeg"
-            alt="oven"
-            class="z-10 w-full h-full object-cover bg-gray-400"
-          />
+          <NuxtLink to="/gemonogram">
+            <img
+              src="assets/img/redAppliance.jpeg"
+              alt="oven"
+              class="z-10 w-full h-full object-cover bg-gray-400"
+            />
+          </NuxtLink>
           <div
             class="flex flex-col p-2 z-20 absolute bottom-0 p-4 bg-light/80 w-full"
           >
             <!-- Header is always visible -->
-            <div
-              class="mb-2 grid grid-cols-2 gap-2 justify-between items-center max-h-[40px]"
-            >
-              <img
-                src="/assets/img/GEmonogram.png"
-                class="max-h-[40px]"
-                alt="GE Monogram Logo"
-              />
+            <NuxtLink to="/gemonogram">
               <div
-                class="max-h-[30px] lg:max-h-[40px] flex space-x-1 align-center grid grid-cols-6 gap-1"
+                class="mb-2 grid grid-cols-2 gap-2 justify-between items-center max-h-[40px]"
               >
                 <img
-                  src="/assets/icons/freezer.svg"
-                  alt="freezer icon"
-                  class="object-contain"
+                  src="/assets/img/GEmonogram.png"
+                  class="max-h-[40px]"
+                  alt="GE Monogram Logo"
                 />
-                <img
-                  src="/assets/icons/fridge.svg"
-                  alt="refrigirator icon"
-                  class="object-contain"
-                />
-                <img
-                  src="/assets/icons/cooktopv3.svg"
-                  alt="cooktop icon"
-                  class="object-contain"
-                />
-                <img
-                  src="/assets/icons/oven.svg"
-                  alt="oven icon"
-                  class="object-contain"
-                />
-                <img
-                  src="/assets/icons/cookingTopv2.svg"
-                  alt="oven icon"
-                  class="object-contain"
-                />
-                <img
-                  src="/assets/icons/ovenv2.svg"
-                  alt="oven icon"
-                  class="object-contain"
-                />
+                <div
+                  class="max-h-[30px] lg:max-h-[40px] flex space-x-1 align-center grid grid-cols-6 gap-1"
+                >
+                  <img
+                    src="/assets/icons/freezer.svg"
+                    alt="freezer icon"
+                    class="object-contain"
+                  />
+                  <img
+                    src="/assets/icons/fridge.svg"
+                    alt="refrigirator icon"
+                    class="object-contain"
+                  />
+                  <img
+                    src="/assets/icons/cooktopv3.svg"
+                    alt="cooktop icon"
+                    class="object-contain"
+                  />
+                  <img
+                    src="/assets/icons/oven.svg"
+                    alt="oven icon"
+                    class="object-contain"
+                  />
+                  <img
+                    src="/assets/icons/cookingTopv2.svg"
+                    alt="oven icon"
+                    class="object-contain"
+                  />
+                  <img
+                    src="/assets/icons/ovenv2.svg"
+                    alt="oven icon"
+                    class="object-contain"
+                  />
+                </div>
               </div>
-            </div>
+            </NuxtLink>
             <!-- Paragraph is hidden initially and expands on hover -->
             <div
               class="text-primary text-justify opacity-0 max-h-0 overflow-hidden transition-all duration-1000 group-hover:max-h-80 group-hover:opacity-100"
@@ -434,58 +443,62 @@
         <div
           class="bg-primary dark:bg-gray-800 shadow-lg relative overflow-hidden group hover:shadow-4xl hover:shadow-primary min-h-[340px]"
         >
-          <img
-            src="assets/img/dacor-cover.jpg"
-            alt="oven"
-            class="z-10 w-full h-full object-cover bg-gray-400"
-          />
+          <NuxtLink to="/dacor-appliance">
+            <img
+              src="assets/img/dacor-cover.jpg"
+              alt="oven"
+              class="z-10 w-full h-full object-cover bg-gray-400"
+            />
+          </NuxtLink>
           <div
             class="flex flex-col p-2 z-20 absolute bottom-0 p-4 bg-light/80 w-full"
           >
             <!-- Header is always visible -->
-            <div
-              class="mb-2 grid grid-cols-2 gap-2 justify-between items-center max-h-[40px]"
-            >
-              <img
-                src="/assets/img/dacor-logo.png"
-                class="max-h-[40px]"
-                alt=""
-              />
+            <NuxtLink to="/dacor-appliance">
               <div
-                class="max-h-[30px] lg:max-h-[40px] flex space-x-1 align-center grid grid-cols-6 gap-1"
+                class="mb-2 grid grid-cols-2 gap-2 justify-between items-center max-h-[40px]"
               >
                 <img
-                  src="/assets/icons/freezer.svg"
-                  alt="freezer icon"
-                  class="object-contain"
+                  src="/assets/img/dacor-logo.png"
+                  class="max-h-[40px]"
+                  alt=""
                 />
-                <img
-                  src="/assets/icons/fridge.svg"
-                  alt="refrigirator icon"
-                  class="object-contain"
-                />
-                <img
-                  src="/assets/icons/cooktopv3.svg"
-                  alt="cooktop icon"
-                  class="object-contain"
-                />
-                <img
-                  src="/assets/icons/oven.svg"
-                  alt="oven icon"
-                  class="object-contain"
-                />
-                <img
-                  src="/assets/icons/cookingTopv2.svg"
-                  alt="oven icon"
-                  class="object-contain"
-                />
-                <img
-                  src="/assets/icons/ovenv2.svg"
-                  alt="oven icon"
-                  class="object-contain"
-                />
+                <div
+                  class="max-h-[30px] lg:max-h-[40px] flex space-x-1 align-center grid grid-cols-6 gap-1"
+                >
+                  <img
+                    src="/assets/icons/freezer.svg"
+                    alt="freezer icon"
+                    class="object-contain"
+                  />
+                  <img
+                    src="/assets/icons/fridge.svg"
+                    alt="refrigirator icon"
+                    class="object-contain"
+                  />
+                  <img
+                    src="/assets/icons/cooktopv3.svg"
+                    alt="cooktop icon"
+                    class="object-contain"
+                  />
+                  <img
+                    src="/assets/icons/oven.svg"
+                    alt="oven icon"
+                    class="object-contain"
+                  />
+                  <img
+                    src="/assets/icons/cookingTopv2.svg"
+                    alt="oven icon"
+                    class="object-contain"
+                  />
+                  <img
+                    src="/assets/icons/ovenv2.svg"
+                    alt="oven icon"
+                    class="object-contain"
+                  />
+                </div>
               </div>
-            </div>
+            </NuxtLink>
             <!-- Paragraph is hidden initially and expands on hover -->
             <div
               class="text-primary text-justify opacity-0 max-h-0 overflow-hidden transition-all duration-1000 group-hover:max-h-80 group-hover:opacity-100"
@@ -529,15 +542,18 @@
         <div
           class="bg-primary dark:bg-gray-800 shadow-lg relative overflow-hidden group hover:shadow-4xl hover:shadow-primary min-h-[340px]"
         >
-          <img
-            src="assets/img/thermador-cover.jpg"
-            alt="oven"
-            class="z-10 w-full h-full object-cover bg-gray-400"
-          />
+          <NuxtLink to="/thermador">
+            <img
+              src="assets/img/thermador-cover.jpg"
+              alt="oven"
+              class="z-10 w-full h-full object-cover bg-gray-400"
+            />
+          </NuxtLink>
           <div
             class="flex flex-col p-2 z-20 absolute bottom-0 p-4 bg-light/80 w-full"
           >
             <!-- Header is always visible -->
+            <NuxtLink to="/thermador">
             <div
               class="mb-2 grid grid-cols-2 gap-2 justify-between items-center max-h-[40px] relative -top-14"
             >
@@ -581,6 +597,7 @@
                 />
               </div>
             </div>
+            </NuxtLink>
             <!-- Paragraph is hidden initially and expands on hover -->
             <div
               class="text-primary text-justify opacity-0 max-h-0 overflow-hidden transition-all duration-1000 group-hover:max-h-80 group-hover:opacity-100"
@@ -635,4 +652,5 @@
 </template>
 
 <script setup>
+
 </script>
