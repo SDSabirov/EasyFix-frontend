@@ -22,7 +22,7 @@
                 </div>
   
                 <img
-                  src=""
+                  src="/assets/img/brandpage.jpg"
                   alt="Dacor Appliance"
                   class="w-full h-full object-cover mb-6"
                 />
@@ -33,7 +33,7 @@
             <section class="mb-12">
               <div class="grid grid-cols-1 gap-8 md:grid-cols-2">
                 <img
-                  src=""
+                  src="/assets/img/dacor-cover.jpg"
                   alt="Dacor Cooking Appliance"
                   class="w-full h-full object-cover mb-6"
                 />

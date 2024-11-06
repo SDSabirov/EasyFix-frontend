@@ -23,7 +23,7 @@
                 </div>
   
                 <img
-                  src=""
+                  src="/assets/img/kitchenBlue.jpg"
                   alt="KitchenAid Appliance"
                   class="w-full h-full object-cover mb-6"
                 />
@@ -34,7 +34,7 @@
             <section class="mb-12">
               <div class="grid grid-cols-1 gap-8 md:grid-cols-2">
                 <img
-                  src=""
+                  src="/assets/img/brandpage.jpg"
                   alt="KitchenAid Cooking Appliance"
                   class="w-full h-full object-cover mb-6"
                 />

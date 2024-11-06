@@ -28,7 +28,7 @@ export default {
         flashShadowTwoSides: 'flashShadowTwoSides 5s ease-in-out infinite',
         pulseSlow: 'pulseSlow 5s ease-in-out infinite',
         fadeUp: 'fadeUp 1s ease-in-out',  
-        fadeDown: 'fadeDown 1s ease-in-out', 
+        fadeDown: 'fadeDown 0.4s ease-in-out', 
         fadeRight: 'fadeRight 1s ease-in-out', 
         fadeInLeft: 'fadeInLeft 1s ease-in-out', 
       },
