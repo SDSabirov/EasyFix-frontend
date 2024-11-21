@@ -5,6 +5,7 @@
       class="fixed top-0 w-full h-full -z-50 object-cover"
       src="/assets/img/kitchenBackground1.webp"
       alt="kitchen appliances"
+      loading="lazy"
     />
     <!--Overlay-->
     <div

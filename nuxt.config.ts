@@ -40,7 +40,7 @@ export default defineNuxtConfig({
   ],
 
 
-  modules: ["@nuxtjs/seo",'@nuxtjs/google-fonts'],
+  modules: ["@nuxtjs/seo",'@nuxtjs/google-fonts','nuxt-lazy-load'],
   googleFonts: {
     families: {
       Montserrat: [100, 300, 400, 500, 700, 900],
