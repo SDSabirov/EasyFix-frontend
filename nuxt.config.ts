@@ -27,7 +27,18 @@ export default defineNuxtConfig({
     rollupOptions: {
       external: ["axios"], // Add axios here
     },
+    postcss: {
+      plugins: {
+        'tailwindcss': {},
+        'autoprefixer': {},
+        'cssnano': { preset: 'default' }, // This minifies your CSS
+      }
+    }
   },
+  buildModules: [
+    '@nuxt/postcss8'
+  ],
+
 
   modules: ["@nuxtjs/seo",'@nuxtjs/google-fonts'],
   googleFonts: {

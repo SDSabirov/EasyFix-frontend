@@ -18,10 +18,10 @@
       >
         <h1
           class="lg:text-[50px] text-white text-center font-bold text-[32px] animate-fadeInLeft md:px-14 lg:px-28"
-        >Sub-Zero Refrigerator Not Cooling?</h1>
+        >Professional Appliance Repair, Right Around the Corner</h1>
         <p
           class="lg:text-[24px] text-light text-center font-semibold text-[20px] animate-fadeDown"
-        >Call Now for your Local Appliance Technician</p>
+        >Get your home appliances running like new with our trusted repair services across the Bay Area—schedule a visit now for expert service near you.</p>
         <div></div>
         <div class="flex space-x-4 items-center">
           <NuxtLink

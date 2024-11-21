@@ -122,7 +122,7 @@
                     to="/subzero-wolf-repairs"
                     class="text-light group-hover:text-white"
                   >
-                    Learn More
+                   Explore Sub-Zero & Wolf Services
                   </NuxtLink>
                 </button>
               </div>
@@ -206,7 +206,7 @@
                   <button
                     class="bg-primary px-4 py-2 rounded-xl mt-2 border-2 border-primary font-semibold hover:border-primary hover:text-white hover:bg-secondary transition-all duration-800 ease-out group"
                   >
-                    <p class="text-light group-hover:text-white">Learn More</p>
+                    <p class="text-light group-hover:text-white">Explore Viking Appliance Repairs </p>
                   </button>
                 </NuxtLink>
               </div>
@@ -290,7 +290,7 @@
                   <button
                     class="bg-primary px-4 rounded-xl py-2 mt-2 border-2 border-primary font-semibold hover:border-primary hover:text-white hover:bg-secondary transition-all duration-800 ease-out group"
                   >
-                    <p class="text-light group-hover:text-white">Learn more</p>
+                    <p class="text-light group-hover:text-white">KitchenAid Repairs</p>
                   </button>
                 </NuxtLink>
               </div>
@@ -374,7 +374,7 @@
                   <button
                     class="bg-primary px-4 rounded-xl py-2 mt-2 border-2 border-primary font-semibold hover:border-primary hover:text-white hover:bg-secondary transition-all duration-800 ease-out group"
                   >
-                    <p class="text-light group-hover:text-white">Learn more</p>
+                    <p class="text-light group-hover:text-white">GE Monogram Expert Repairs</p>
                   </button>
                 </NuxtLink>
               </div>
@@ -403,7 +403,7 @@
                 <img
                   src="/assets/img/dacor-logo.png"
                   class="max-h-[40px]"
-                  alt=""
+                  alt="Dacor Logo"
                 />
                 <!-- <div
                   class="max-h-[30px] lg:max-h-[40px] flex space-x-1 align-center grid grid-cols-6 gap-1"
@@ -456,7 +456,7 @@
                   <button
                     class="bg-primary px-4 rounded-xl py-2 mt-2 border-2 border-primary font-semibold hover:border-primary hover:text-white hover:bg-secondary transition-all duration-800 ease-out group"
                   >
-                    <p class="text-light group-hover:text-white">Learn more</p>
+                    <p class="text-light group-hover:text-white">Dacor Repair Services </p>
                   </button>
                 </NuxtLink>
               </div>
@@ -538,7 +538,7 @@
                   <button
                     class="bg-primary rounded-xl px-4 py-2 mt-2 border-2 border-primary font-semibold hover:border-primary hover:text-white hover:bg-secondary transition-all duration-800 ease-out group"
                   >
-                    <p class="text-light group-hover:text-white">Learn more</p>
+                    <p class="text-light group-hover:text-white">Thermador Repair Experts</p>
                   </button>
                 </NuxtLink>
               </div>
@@ -546,7 +546,7 @@
           </div>
         </div>
       </div>
-      <div class="flex w-full items-center justify-center mt-6">
+      <div class="flex w-full items-center justify-center mt-10">
         <NuxtLink to="/booking">
           <button
             class="bg-primary px-8 py-4 mt-2 rounded-lg border-2 border-primary font-semibold hover:border-primary hover:text-white hover:bg-secondary transition-all duration-800 ease-out group"
