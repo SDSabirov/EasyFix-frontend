@@ -11,14 +11,19 @@ export default {
   ],
   theme: {
     colors: {
-      primary: '#164863',
-      secondary: '#427D9D',
+      primary: '#0c2a3b',
+      secondary: '#1C6E8C',
       tertiary: '#E4003A',
+      darkblue:'#1C3D56',
       light:'#F8EDE3',
       primaryOpacity: 'rgba(22, 72, 99, 0.1)',
       blackOpacity: 'rgba(0, 0, 0, 0.5)',
     },
     extend: {
+      fontFamily: {
+        montserrat: ['Montserrat', 'sans-serif'],
+        roboto: ['Roboto', 'sans-serif'],
+      },
       backgroundImage: {
         'contact': "url('/assets/img/oven.png)",
       },

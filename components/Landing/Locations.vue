@@ -1,8 +1,9 @@
 <template>
   <div class="container mx-auto px-2 py-16 lg:px-28 overflow-x-hidden">
-    <h2 class="text-xl font-bold text-center text-primary">
-      Cities and Zip Codes
+    <h2 class="text-2xl font-bold text-center text-primary mb-6">
+      Trusted Appliance Repairs in Your Area
     </h2>
+    <p class="mb-5 font-light text-center text-gray-500 sm:text-xl dark:text-gray-400 mb-10">Get top-quality appliance repair services nearby in cities like San Francisco, Burlingame, Palo Alto, Hayward, Millbrae, and South San Francisco.</p>
     <div class="grid grid-cols-1 gap-2 lg:grid-cols-2 mt-8 items-center justify-center">
       <div class="flex w-full  space-x-6 justify-center">
         <!-- Cities Column -->

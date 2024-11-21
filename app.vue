@@ -1,8 +1,9 @@
 <template>
-  <div>
+  <div class="font-montserrat">
     <NuxtLayout>
        <NuxtPage />
-    </NuxtLayout>  
+    </NuxtLayout>
+    <ContactButton/>  
   </div>
 </template>
 

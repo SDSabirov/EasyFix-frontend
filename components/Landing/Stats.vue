@@ -1,7 +1,8 @@
 <template>
-    <div class="w-full">
-        <div class="flex flex-col items-center justify-center w-full  mt-4 py-4 pt-2 shadow-2xl bg-primaryOpacity">
-            <div class="grid gap-2 lg:grid-cols-4 md:gap-4 ">
+    <div class="w-full bg-secondary flex items-center justify-center">
+        <div class="flex flex-col max-w-screen-xl items-center justify-center w-full py-4 pt-2 md:py-10 space-y-10">
+            <h2 class="text-4xl font-bold text-center text-white">Why Trust Us?</h2>
+            <div class="grid gap-2 lg:grid-cols-4 md:gap-8 ">
                 <div class="flex flex-col border-b border-ligt py-4 items-start space-y-4 mx-2 md:border-none">
                     <div class="flex items-center max-w-1/3">
                         <img src="assets/icons/24hr.svg" alt="verified" class="w-12 h-12">
@@ -48,6 +49,14 @@
                 </div>
                 
             </div>
+            <NuxtLink
+            href="/booking"
+            class="mt-2 z-20 bg-light rounded-lg border-2 border-light px-8 py-3 mt-8 font-semibold hover:border-tertiary hover:text-white hover:bg-secondary transition-all duration-800 ease-out group "
+          >
+            <p class="text-primary group-hover:text-white w-full text-center">
+              Schedule Your Appointment 
+            </p>
+          </NuxtLink>
         </div>
     </div>
 </template>

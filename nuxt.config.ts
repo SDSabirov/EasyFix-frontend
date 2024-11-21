@@ -15,7 +15,7 @@ export default defineNuxtConfig({
       viewport: "width=device-width, initial-scale=1",
     },
   },
-  css: ["~/assets/css/main.css"],
+  css: ["~/assets/css/main.css",'~/assets/css/global.css'],
 
   postcss: {
     plugins: {
@@ -29,8 +29,15 @@ export default defineNuxtConfig({
     },
   },
 
-  modules: ["@nuxtjs/seo"],
-
+  modules: ["@nuxtjs/seo",'@nuxtjs/google-fonts'],
+  googleFonts: {
+    families: {
+      Montserrat: [100, 300, 400, 500, 700, 900],
+      Roboto: [100, 300, 400, 500, 700, 900],
+    },
+    display: 'swap',
+    preconnect: true, // Optimize by preconnecting to Google Fonts
+  },
   site: {
     url: "https://easyfixappliance.com",
     name:'Easy Fix Appliance Bay Area, CA',
@@ -42,16 +49,5 @@ export default defineNuxtConfig({
     Disallow: "/admin", // Disallow access to admin pages
     Allow: "/", // Allow access to all other pages
   },
-  head: {
-    script: [
-      {
-        id: 'housecall-pro-chat-bubble',
-        src: 'https://chat.housecallpro.com/proChat.js',
-        type: 'text/javascript',
-        defer: true, // Ensures script is executed after page load
-        'data-color': '#0E6FBE', // Custom data attributes
-        'data-organization': 'c473d1ee-641c-46a0-9caf-2b6a9168cc50', // Custom data attributes
-      },
-    ],
-  },
+  
 });

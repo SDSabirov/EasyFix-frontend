@@ -1,22 +1,22 @@
 <template>
   <section id="prices" class="bg-light dark:bg-gray-900">
-    <div class="py-8 px-4 mx-auto max-w-screen-xl lg:py-6 lg:px-6">
-      <div class="mx-auto max-w-screen-md text-center mb-4 lg:mb-6">
+    <div class="py-8 px-4 mx-auto max-w-screen-xl lg:py-12 lg:px-6">
+      <div class="mx-auto max-w-screen-md text-center mb-4 lg:mb-10">
         <h2
           class="mb-4 text-4xl tracking-tight font-extrabold text-primary dark:text-white"
         >
-          Our Services
+          Fair Prices, Exceptional Service
         </h2>
         <p
           class="mb-5 font-light text-gray-500 sm:text-xl dark:text-gray-400"
-        ></p>
+        >Our pricing is designed to provide the best value</p>
       </div>
       <div
         class="space-y-8 md:grid md:grid-cols-4 md:space-y-0 sm:gap-6 xl:gap-10 lg:space-y-0 px-2"
       >
         <!-- Pricing Card Standard-->
         <div
-          class="flex flex-col p-4 lg:p-6 mx-auto max-w-lg text-center md:w-full md:h-full bg-primary min-h-[170px] border border-gray-100 shadow-2xl"
+          class="flex flex-col p-4 lg:p-6 mx-auto max-w-lg text-center md:w-full md:h-full bg-darkblue min-h-[170px] border border-gray-100 shadow-2xl"
         >
           <h4 class="mb-4 text-light text-sm font-semibold lg:text-lg">
             Standard Service Visit
@@ -32,18 +32,12 @@
               <p class="text-sm text-center w-full capitalize">Expert Diagnostic and Troubleshooting</p>
             </li>
           </ul>
-          <div class="flex h-full w-full items-end justify-center">
-            <NuxtLink
-            href="/booking"
-            class="text-primary rounded-xl bg-light hover:bg-secondary hover:text-light focus:ring-4 focus:ring-primary-200 font-medium text-sm px-6 py-2.5 text-center "
-            >Book now</NuxtLink
-          >
-          </div>
+          
           
         </div>
         <!-- Pricing Card  Additional Service-->
         <div
-          class="flex flex-col p-4 lg:p-6 mx-auto max-w-lg text-center md:w-full md:h-full bg-primary min-h-[170px] border border-gray-100 shadow-2xl"
+          class="flex flex-col p-4 lg:p-6 mx-auto max-w-lg text-center md:w-full md:h-full bg-darkblue min-h-[170px] border border-gray-100 shadow-2xl"
         >
           <h4 class="mb-4 text-light text-sm font-semibold lg:text-lg">
             Additional Appliance Service
@@ -59,20 +53,14 @@
               <p class="text-sm text-center capitalize">Diagnostic and Troubleshooting for each Additional Appliance</p>
             </li>
           </ul>
-          <div class="flex h-full w-full items-end justify-center">
-            <NuxtLink
-            href="/booking"
-            class="text-primary rounded-xl bg-light hover:bg-secondary hover:text-light focus:ring-4 focus:ring-primary-200 font-medium text-sm px-6 py-2.5 text-center "
-            >Book now</NuxtLink
-          >
-          </div>
+          
         </div>
 
         
 
         <!-- Pricing Card Emergency-->
         <div
-          class="flex flex-col p-4 lg:p-6 mx-auto max-w-lg text-center md:w-full md:h-full bg-primary min-h-[170px] border border-gray-100 shadow-2xl"
+          class="flex flex-col p-4 lg:p-6 mx-auto max-w-lg text-center md:w-full md:h-full bg-darkblue min-h-[170px] border border-gray-100 shadow-2xl"
         >
           <h4 class="mb-4 text-light text-sm font-semibold mt-2 lg:text-lg">
             Emergency Service
@@ -86,19 +74,13 @@
               <p class="text-sm text-center w-full capitalize">After Hours service visit</p>
             </li>
           </ul>
-          <div class="flex h-full w-full items-end justify-center">
-            <NuxtLink
-            href="/booking"
-            class="text-primary rounded-xl bg-light hover:bg-secondary hover:text-light focus:ring-4 focus:ring-primary-200 font-medium text-sm px-6 py-2.5 text-center "
-            >Book now</NuxtLink
-          >
-          </div>
+          
           
         </div>
 
         <!-- Pricing Card Maintenance-->
         <div
-          class="flex flex-col p-4 lg:p-6 mx-auto max-w-lg text-center md:w-full md:h-full bg-primary min-h-[170px] border border-gray-100 shadow-2xl"
+          class="flex flex-col p-4 lg:p-6 mx-auto max-w-lg text-center md:w-full md:h-full bg-darkblue min-h-[170px] border border-gray-100 shadow-2xl"
         >
           <h4 class="mb-4 mt-2 text-light text-sm font-semibold lg:text-lg">
             Maintenace Service
@@ -114,18 +96,21 @@
               <p class="text-sm text-center capitalize">Comprehensive appliance tune-up, inspection, and cleaning</p>
             </li>
           </ul>
-          <div class="flex h-full w-full items-end justify-center">
-            <NuxtLink
-            href="/booking"
-            class="text-primary rounded-xl bg-light hover:bg-secondary hover:text-light focus:ring-4 focus:ring-primary-200 font-medium text-sm px-6 py-2.5 text-center "
-            >Book now</NuxtLink
-          >
-          </div>
+          
           
         </div>
 
       </div>
     </div>
+    <div class="flex w-full items-center justify-center mt-6">
+        <NuxtLink to="/booking">
+          <button
+            class="bg-primary px-8 py-4 mt-2 rounded-lg border-2 border-primary font-semibold hover:border-primary hover:text-white hover:bg-secondary transition-all duration-800 ease-out group"
+          >
+            <p class="text-white group-hover:text-white">Fix My Appliance Now</p>
+          </button>
+        </NuxtLink>
+      </div>
     <LandingLocations />
   </section>
 </template>

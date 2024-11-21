@@ -123,7 +123,7 @@
         </div>
   
         <!-- Book Now Button -->
-        <NuxtLink
+        <!-- <NuxtLink
           to="/booking"
           v-if="showButton"
           class="fixed right-0 top-1/2 transform -translate-y-1/2 bg-primary text-white px-6 py-3 rounded-l-lg shadow-lg transition-transform duration-800 ease-in"
@@ -133,7 +133,7 @@
           }"
         >
           Book Now
-        </NuxtLink>
+        </NuxtLink> -->
       </div>
       <FormsContact />
       <Footer />

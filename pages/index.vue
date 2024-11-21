@@ -2,12 +2,13 @@
     <div>
         <Navbar />
         <LandingHero />
+        
         <LandingServices />
+        <LandingStats />
         <LandingPrices />
         <LandingBlogs />
         <LandingTestimonials />
         <LandingContacts />
-        <FormsContact />
         <Footer />
         <ModalsPrivacy />
     </div>
