@@ -16,9 +16,9 @@
       <!-- Appliance Types Grid -->
       <div class="grid gap-6 grid-cols-1 md:grid-cols-3 py-8">
         <!-- Card: Refrigerators / Built-In Fridges -->
-        <div class="bg-secondary shadow-md p-6 flex flex-col items-center">
+        <div class="p-6 flex flex-col items-center justify-center">
           <div
-            class="text-white mb-4 shadow-xl hover:shadow-4xl hover:shadow-primary"
+            class="text-primary mb-4 "
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -35,19 +35,19 @@
               />
             </svg>
           </div>
-          <h3 class="text-xl font-semibold text-white mb-2">
+          <h3 class="text-xl font-semibold text-primary mb-2 text-center">
             Refrigerators / Built-In Fridges Repair
           </h3>
-          <p class="text-white text-center">
+          <p class="text-primary text-center">
             Professional repairs for all types of refrigerators and built-in
             fridges.
           </p>
         </div>
 
         <!-- Card: Freezers -->
-        <div class="bg-secondary shadow-md p-6 flex flex-col items-center">
+        <div class="  p-6 flex flex-col items-center">
           <div
-            class="text-white mb-4 shadow-xl hover:shadow-4xl hover:shadow-primary"
+            class="text-primary mb-4 "
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -64,17 +64,17 @@
               />
             </svg>
           </div>
-          <h3 class="text-xl font-semibold text-white mb-2">Freezer Repair</h3>
-          <p class="text-white text-center">
+          <h3 class="text-xl font-semibold text-primary mb-2">Freezer Repair</h3>
+          <p class="text-primary text-center">
             Keep your frozen goods fresh with our reliable freezer repair
             services.
           </p>
         </div>
 
         <!-- Card: Ice Makers -->
-        <div class="bg-secondary shadow-md p-6 flex flex-col items-center">
+        <div class="  p-6 flex flex-col items-center">
           <div
-            class="text-white mb-4 shadow-xl hover:shadow-4xl hover:shadow-primary"
+            class="text-primary mb-4 "
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -91,18 +91,18 @@
               />
             </svg>
           </div>
-          <h3 class="text-xl font-semibold text-white mb-2">
+          <h3 class="text-xl font-semibold text-primary mb-2">
             Ice Maker Repair
           </h3>
-          <p class="text-white text-center">
+          <p class="text-primary text-center">
             Get your ice maker back in action with our expert repair services.
           </p>
         </div>
 
         <!-- Card: Under Counter Fridges -->
-        <div class="bg-secondary shadow-md p-6 flex flex-col items-center">
+        <div class="  p-6 flex flex-col items-center">
           <div
-            class="text-white mb-4 shadow-xl hover:shadow-4xl hover:shadow-primary"
+            class="text-primary mb-4 "
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -119,18 +119,18 @@
               />
             </svg>
           </div>
-          <h3 class="text-xl font-semibold text-white mb-2">
+          <h3 class="text-xl font-semibold text-primary mb-2">
             Under-Counter Fridge Repair
           </h3>
-          <p class="text-white text-center">
+          <p class="text-primary text-center">
             Convenient solutions for your compact fridge needs.
           </p>
         </div>
 
         <!-- Card: Wine Coolers -->
-        <div class="bg-secondary shadow-md p-6 flex flex-col items-center">
+        <div class="  p-6 flex flex-col items-center">
           <div
-            class="text-white mb-4 shadow-xl hover:shadow-4xl hover:shadow-primary"
+            class="text-primary mb-4 "
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -147,19 +147,19 @@
               />
             </svg>
           </div>
-          <h3 class="text-xl font-semibold text-white mb-2">
+          <h3 class="text-xl font-semibold text-primary mb-2">
             Wine Cooler Repair
           </h3>
-          <p class="text-white text-center">
+          <p class="text-primary text-center">
             Keep your wine at the perfect temperature with our expert repair
             services.
           </p>
         </div>
 
         <!-- Card: Ranges -->
-        <div class="bg-secondary shadow-md p-6 flex flex-col items-center">
+        <div class="  p-6 flex flex-col items-center">
           <div
-            class="text-white mb-4 shadow-xl hover:shadow-4xl hover:shadow-primary"
+            class="text-primary mb-4 "
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -176,16 +176,19 @@
               />
             </svg>
           </div>
-          <h3 class="text-xl font-semibold text-white mb-2">Range Repair</h3>
-          <p class="text-white text-center">
+          <h3 class="text-xl font-semibold text-primary mb-2">Range Repair</h3>
+          <p class="text-primary text-center">
             Ensuring perfect functionality for all your cooking needs.
           </p>
         </div>
       </div>
       <div class="flex w-full items-center justify-center mt-10">
+        <NuxtLink to="/services" class="text-justify underline capitalize text-gray-500 mt-2 px-2 md:mt-6">Find Out More about our services</NuxtLink>
+      </div>
+      <div class="flex w-full items-center justify-center mt-10">
         <NuxtLink to="/booking">
           <button
-            class="bg-primary px-8 py-4 mt-2 rounded-lg border-2 border-primary font-semibold hover:border-primary hover:text-white hover:bg-secondary transition-all duration-800 ease-out group"
+            class="bg-primary px-8 py-4 mt-2 rounded-lg border-2 border-primary font-semibold hover:border-primary hover:text-primary hover:bg-secondary  transition-all duration-800 ease-out group"
           >
             <p class="text-white group-hover:text-white">
               Request Your Local Appliance Technician
@@ -197,4 +200,6 @@
   </section>
 </template>
 
-<script setup></script>
+<script setup>
+
+</script>

@@ -21,13 +21,13 @@
           class="lg:text-[50px] text-white text-center font-bold text-[32px] animate-fadeInLeft md:px-14 lg:px-28"
         >Professional Appliance Repair, Right Around the Corner</h1>
         <p
-          class="lg:text-[24px] text-light text-center font-semibold text-[20px] animate-fadeDown"
+          class="lg:text-[24px] text-white text-center font-semibold text-[20px] animate-fadeDown"
         >Get your home appliances running like new with our trusted repair services across the Bay Area—schedule a visit now for expert service near you.</p>
         <div></div>
         <div class="flex space-x-4 items-center">
           <NuxtLink
             href="/booking"
-            class="mt-2 z-20 bg-light rounded-lg border-2 border-light px-8 py-3 mt-8 font-semibold hover:border-tertiary hover:text-white hover:bg-secondary transition-all duration-800 ease-out group "
+            class="mt-2 z-20 bg-white rounded-lg border-2 border-white px-8 py-3 mt-8 font-semibold hover:border-primary hover:text-white hover:bg-secondary transition-all duration-800 ease-out group "
           >
             <p class="text-primary group-hover:text-white w-full text-center">
               Schedule Your Service Today

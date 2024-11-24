@@ -113,16 +113,16 @@
           </li>
           <li>
             <NuxtLink
-              href="/#services"
+              href="/services"
               class="block py-2 px-3 text-light rounded hover:bg-secondary md:hover:bg-transparent md:hover:text-tertiary md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"
-              >Appliances</NuxtLink
+              >Services</NuxtLink
             >
           </li>
           <li>
             <NuxtLink
-              href="/#prices"
+              href="/#services"
               class="block py-2 px-3 text-light rounded hover:bg-secondary md:hover:bg-transparent md:hover:text-tertiary md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"
-              >Services</NuxtLink
+              >Brands</NuxtLink
             >
           </li>
           <li>
