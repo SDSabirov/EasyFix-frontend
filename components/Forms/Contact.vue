@@ -177,6 +177,7 @@
     </div>
       <button
         type="submit"
+        id="submit-contact-form"
         :disabled="!isFormValid || isSubmitting"
         :class="[
           isSubmitted ? 'bg-green-500' : 'bg-primary',
@@ -198,7 +199,7 @@
       >
     </p>
     <p class="text-sm text-light dark:text-gray-400">
-      <a href="tel:4159414144" class="hover:underline">415 941-4144</a>
+      <a href="tel:4159414144" class="hover:underline">(415) 941-4144</a>
     </p>
   </div>
 </template>

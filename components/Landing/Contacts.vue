@@ -59,7 +59,7 @@
             <a
               class="mt-2 text-light/80 flex items-center text-lg"
               href="tel:4159414144 "
-              > 415 941-4144
+              >(415) 941-4144
               <span class="mx-4">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -78,7 +78,7 @@
             <a
               class="mt-2 text-light/80 flex items-center text-lg"
               href="sms:14159414144 "
-              > 415 941-4144
+              >(415) 941-4144
               <span class="mx-4">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"

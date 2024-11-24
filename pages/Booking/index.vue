@@ -13,7 +13,7 @@
                     />
                     <!--Overlay-->
                     <div
-                    class="absolute top-0 w-full h-full bg-gradient-to-b from-black to-black opacity-70"
+                    class="absolute top-0 w-full h-full bg-gradient-to-b from-black to-transparent opacity-70"
                     ></div>
                     <FormsBookingForm class="z-10 relative top-[16vh] mx-2 md:mx-14 lg:mx-32 "/>
                 </div>
