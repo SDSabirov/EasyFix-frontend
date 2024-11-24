@@ -28,7 +28,7 @@
       </div>
       <div class="w-full flex items-center justify-center p-6">
       <NuxtLink to="/blogs" class="p-4 px-6 bg-primary flex items-center text-md text-white rounded-lg hover:bg-secondary">
-        Sea All
+        All Our Blogs
       </NuxtLink>
     </div>
     </div>

@@ -2,8 +2,8 @@
     <div>
         <Navbar />
         <LandingHero />
-        
         <LandingServices />
+        <LandingApplianceTypes/>
         <LandingStats />
         <LandingPrices />
         <LandingBlogs />
