@@ -1,5 +1,6 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 import { resolve } from "path";
+import { applianceData } from "./data/appliance_data";
 
 export default defineNuxtConfig({
   compatibilityDate: "2024-04-03",
@@ -15,7 +16,7 @@ export default defineNuxtConfig({
       viewport: "width=device-width, initial-scale=1",
     },
   },
-  css: ["~/assets/css/main.css",'~/assets/css/global.css'],
+  css: ["~/assets/css/main.css", "~/assets/css/global.css"],
 
   postcss: {
     plugins: {
@@ -29,30 +30,33 @@ export default defineNuxtConfig({
     },
     postcss: {
       plugins: {
-        'tailwindcss': {},
-        'autoprefixer': {},
-        'cssnano': { preset: 'default' }, // This minifies your CSS
-      }
-    }
+        tailwindcss: {},
+        autoprefixer: {},
+        cssnano: { preset: "default" }, // This minifies your CSS
+      },
+    },
   },
-  buildModules: [
-    '@nuxt/postcss8'
+  buildModules: ["@nuxt/postcss8"],
+
+  modules: [
+    "@nuxtjs/seo",
+    "@nuxtjs/google-fonts",
+    "nuxt-lazy-load",
+    "@nuxt/content",
   ],
-
-
-  modules: ["@nuxtjs/seo",'@nuxtjs/google-fonts','nuxt-lazy-load'],
   googleFonts: {
     families: {
       Montserrat: [100, 300, 400, 500, 700, 900],
       Roboto: [100, 300, 400, 500, 700, 900],
     },
-    display: 'swap',
+    display: "swap",
     preconnect: true, // Optimize by preconnecting to Google Fonts
   },
   site: {
     url: "https://easyfixappliance.com",
-    name:'Easy Fix Appliance Bay Area, California',
-    description:'Certified Sub-Zero, Wolf & Viking appliance repair in San Mateo, Palo Alto & Bay Area. Fast, reliable service using original parts. Book your repair today!',
+    name: "Easy Fix Appliance Bay Area, California",
+    description:
+      "Certified Sub-Zero, Wolf & Viking appliance repair in San Mateo, Palo Alto & Bay Area. Fast, reliable service using original parts. Book your repair today!",
     defaultLocale: "en", // not needed if you have @nuxtjs/i18n installed
   },
   robots: {
@@ -60,5 +64,5 @@ export default defineNuxtConfig({
     Disallow: "/admin", // Disallow access to admin pages
     Allow: "/", // Allow access to all other pages
   },
-  
+
 });
