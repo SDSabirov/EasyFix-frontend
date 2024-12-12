@@ -1,6 +1,6 @@
 <template>
   <nav
-    class="bg-primary  transition-all duration-500 dark:bg-gray-900 fixed w-full z-40 top-0 start-0 dark:border-gray-600 animate-fadeDown"
+    class="bg-primary  transition-all duration-500 dark:bg-gray-900 fixed w-full z-40 top-0 start-0 dark:border-gray-600 animate-fadeDown font-montserrat"
   >
     <div
       class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-1 md:p-4"
@@ -41,7 +41,7 @@
         <div class="flex flex-col">
           <p>
             <span
-              class="self-center text-sm md:text-2xl font-semibold whitespace-nowrap text-light dark:text-white"
+              class="self-center text-sm md:text-2xl font-semibold whitespace-nowrap text-white dark:text-white"
               >Easy</span
             >
             <span
@@ -51,7 +51,7 @@
           </p>
 
           <p
-            class="self-center text-light text-sm md:text-2xl font-semibold whitespace-nowrap dark:text-white"
+            class="self-center text-white text-sm md:text-2xl font-semibold whitespace-nowrap dark:text-white"
           >
             Appliance
           </p>
@@ -63,7 +63,7 @@
         <div class="space-x-1 md:space-x-4">
           <!--call now buuron-->
           <a href="tel:4159414144 "
-          class="flex space-x-2 items-center text-primary bg-light rounded-lg hover:text-white hover:bg-secondary hover:animate-flashShadow transition-all duration-800 ease-out focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium text-sm px-2 md:px-4 py-2 text-center" 
+          class="flex space-x-2 items-center text-primary bg-white rounded-lg hover:text-white hover:bg-secondary hover:animate-flashShadow transition-all duration-800 ease-out focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium text-sm px-2 md:px-4 py-2 text-center" 
           ><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-telephone" viewBox="0 0 16 16">
   <path d="M3.654 1.328a.678.678 0 0 0-1.015-.063L1.605 2.3c-.483.484-.661 1.169-.45 1.77a17.6 17.6 0 0 0 4.168 6.608 17.6 17.6 0 0 0 6.608 4.168c.601.211 1.286.033 1.77-.45l1.034-1.034a.678.678 0 0 0-.063-1.015l-2.307-1.794a.68.68 0 0 0-.58-.122l-2.19.547a1.75 1.75 0 0 1-1.657-.459L5.482 8.062a1.75 1.75 0 0 1-.46-1.657l.548-2.19a.68.68 0 0 0-.122-.58zM1.884.511a1.745 1.745 0 0 1 2.612.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.68.68 0 0 0 .178.643l2.457 2.457a.68.68 0 0 0 .644.178l2.189-.547a1.75 1.75 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.6 18.6 0 0 1-7.01-4.42 18.6 18.6 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877z"/>
 </svg>
@@ -74,7 +74,7 @@
         <button
           data-collapse-toggle="navbar-sticky"
           type="button"
-          class="inline-flex items-center p-1 w-10 h-10 justify-center text-sm text-light md:hidden hover:bg-primary focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400"
+          class="inline-flex items-center p-1 w-10 h-10 justify-center text-sm text-white md:hidden hover:bg-primary focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400"
           aria-controls="navbar-sticky"
           aria-expanded="false"
         >
@@ -106,7 +106,7 @@
           <li>
             <NuxtLink
               href="/"
-              class="block py-2 px-3 text-light hover:bg-secondary rounded md:bg-transparent md:text- md:p-0 md:dark:text-blue-500"
+              class="block py-2 px-3 text-white hover:bg-secondary rounded md:bg-transparent md:text-lg md:p-0 md:dark:text-blue-500"
               aria-current="page"
               >Home</NuxtLink
             >
@@ -114,28 +114,28 @@
           <li>
             <NuxtLink
               href="/services"
-              class="block py-2 px-3 text-light rounded hover:bg-secondary md:hover:bg-transparent md:hover:text-tertiary md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"
+              class="block py-2 px-3 text-white rounded hover:bg-secondary md:hover:bg-transparent md:hover:text-tertiary md:p-0 md:text-lg"
               >Services</NuxtLink
             >
           </li>
           <li>
             <NuxtLink
               href="/#services"
-              class="block py-2 px-3 text-light rounded hover:bg-secondary md:hover:bg-transparent md:hover:text-tertiary md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"
+              class="block py-2 px-3 text-white rounded hover:bg-secondary md:hover:bg-transparent md:hover:text-tertiary md:p-0 md:text-lg"
               >Brands</NuxtLink
             >
           </li>
           <li>
             <NuxtLink
               href="/#blogs"
-              class="block py-2 px-3 text-light rounded hover:bg-secondary md:hover:bg-transparent md:hover:text-tertiary md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"
+              class="block py-2 px-3 text-white rounded hover:bg-secondary md:hover:bg-transparent md:hover:text-tertiary md:p-0 md:text-lg"
               >Blogs</NuxtLink
             >
           </li>
           <li>
             <NuxtLink
               href="/#contacts"
-              class="block py-2 px-3 text-light rounded hover:bg-secondary md:hover:bg-transparent md:hover:text-tertiary md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"
+              class="block py-2 px-3 text-white rounded hover:bg-secondary md:hover:bg-transparent md:hover:text-tertiary md:p-0 md:text-lg"
               >Contact Us</NuxtLink
             >
           </li>

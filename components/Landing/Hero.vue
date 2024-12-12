@@ -9,19 +9,19 @@
     />
     <!--Overlay-->
     <div
-      class="absolute top-0 w-full h-full bg-gradient-to-b from-black to-black opacity-50"
+      class="absolute top-0 w-full h-full bg-gradient-to-b from-black to-black opacity-70"
     ></div>
     <div
       class="lg:absolute lg:top-0 flex flex-col justify-center items-center lg:h-full w-full relative h-[100vh]"
     >
       <div
-        class="flex max-w-screen-xl flex-col justify-center items-center lg:space-y-2"
+        class="flex max-w-screen-xl flex-col justify-center items-center lg:space-y-10 font-roboto"
       >
         <h1
-          class="lg:text-[50px] text-white text-center font-bold text-[32px] animate-fadeInLeft md:px-14 lg:px-28"
-        >Professional Appliance Repair, Right Around the Corner</h1>
+          class="lg:text-7xl text-white text-center font-semibold text-3xl animate-fadeInLeft md:px-14 leading-loose font-roboto"
+        >Fast and Professional Appliance Service in Your Area</h1>
         <p
-          class="lg:text-[24px] text-white text-center font-semibold text-[20px] animate-fadeDown"
+          class="lg:text-2xl text-white text-center font-normal text-xl animate-fadeDown leading-loose"
         >Get your home appliances running like new with our trusted repair services across the Bay Area—schedule a visit now for expert service near you.</p>
         <div></div>
         <div class="flex space-x-4 items-center">
