@@ -1,3 +1,4 @@
+
 export const applianceData = {
     refrigerator: {
       title: "Refrigerator Repair Services",
@@ -9,7 +10,7 @@ export const applianceData = {
         "Our technicians are highly experienced in handling all major refrigerator brands and models, ensuring precise and reliable repairs.",
       additionalExpertise:
         "We use only genuine parts to restore your refrigerator to peak functionality, extending its lifespan.",
-      image: "/assets/img/refrigerator.jpg",
+      image: "/assets/img/services/freezer.webp",
       models: ["French Door Refrigerators", "Side-by-Side Refrigerators", "Bottom Freezer Models", "Compact Refrigerators"],
       conclusion:
         "Contact us today for fast and efficient refrigerator repairs. Your satisfaction is our priority!",

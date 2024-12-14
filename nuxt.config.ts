@@ -64,5 +64,7 @@ export default defineNuxtConfig({
     Disallow: "/admin", // Disallow access to admin pages
     Allow: "/", // Allow access to all other pages
   },
-
+  sitemap: {
+   
+  }
 });
