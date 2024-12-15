@@ -56,7 +56,7 @@ export default defineNuxtConfig({
     url: "https://easyfixappliance.com",
     name: "Easy Fix Appliance Bay Area, California",
     description:
-      "Certified Sub-Zero, Wolf & Viking appliance repair in San Mateo, Palo Alto & Bay Area. Fast, reliable service using original parts. Book your repair today!",
+      "Certified Sub-Zero, Wolf, and Viking appliance repair specialists serving San Mateo, Palo Alto, and the Bay Area. Expert appliance repair services including refrigerator repair for brands like Thermador, KitchenAid, and more. Fast, reliable service using original parts. Book your repair today!",
     defaultLocale: "en", // not needed if you have @nuxtjs/i18n installed
   },
   robots: {
@@ -64,7 +64,9 @@ export default defineNuxtConfig({
     Disallow: "/admin", // Disallow access to admin pages
     Allow: "/", // Allow access to all other pages
   },
-  sitemap: {
-   
-  }
+  vite: {
+    optimizeDeps: {
+      include: ['fast-deep-equal'],
+    },
+  },
 });
