@@ -69,4 +69,9 @@ export default defineNuxtConfig({
       include: ['fast-deep-equal'],
     },
   },
+  runtimeConfig: {
+    public: {
+      mapsApiKey: process.env.MAPS_API, // Define your public environment variable
+    },
+  },
 });

@@ -111,43 +111,43 @@
           <li>
             <NuxtLink
               href="/"
-              class="block py-2 px-3 text-white hover:bg-secondary rounded md:bg-transparent md:text-lg md:p-0 md:dark:text-blue-500"
-              aria-current="page"
+              class="block py-2 px-3 text-white hover:bg-secondary rounded md:bg-transparent md:text-lg md:p-0  md:hover:text-blue-500"
+              
               >Home</NuxtLink
             >
           </li>
           <li>
             <NuxtLink
               href="/services"
-              class="block py-2 px-3 text-white rounded hover:bg-secondary md:hover:bg-transparent md:hover:text-tertiary md:p-0 md:text-lg"
+              class="block py-2 px-3 text-white rounded hover:bg-secondary md:hover:bg-transparent  md:p-0 md:text-lg  md:hover:text-blue-500"
               >Services</NuxtLink
             >
           </li>
           <li>
             <NuxtLink
               href="/areas"
-              class="block py-2 px-3 text-white rounded hover:bg-secondary md:hover:bg-transparent md:hover:text-tertiary md:p-0 md:text-lg"
+              class="block py-2 px-3 text-white rounded hover:bg-secondary md:hover:bg-transparent  md:p-0 md:text-lg md:hover:text-blue-500"
               >Areas</NuxtLink
             >
           </li>
           <li>
             <NuxtLink
               href="/#services"
-              class="block py-2 px-3 text-white rounded hover:bg-secondary md:hover:bg-transparent md:hover:text-tertiary md:p-0 md:text-lg"
+              class="block py-2 px-3 text-white rounded hover:bg-secondary md:hover:bg-transparent  md:p-0 md:text-lg md:hover:text-blue-500"
               >Brands</NuxtLink
             >
           </li>
           <li>
             <NuxtLink
               href="/#blogs"
-              class="block py-2 px-3 text-white rounded hover:bg-secondary md:hover:bg-transparent md:hover:text-tertiary md:p-0 md:text-lg"
+              class="block py-2 px-3 text-white rounded hover:bg-secondary md:hover:bg-transparent  md:p-0 md:text-lg md:hover:text-blue-500"
               >Blogs</NuxtLink
             >
           </li>
           <li>
             <NuxtLink
               href="/#contacts"
-              class="block py-2 px-3 text-white rounded hover:bg-secondary md:hover:bg-transparent md:hover:text-tertiary md:p-0 md:text-lg"
+              class="block py-2 px-3 text-white rounded hover:bg-secondary md:hover:bg-transparent  md:p-0 md:text-lg md:hover:text-blue-500"
               >Contact Us</NuxtLink
             >
           </li>
