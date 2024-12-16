@@ -118,6 +118,13 @@
           </li>
           <li>
             <NuxtLink
+              href="/#services"
+              class="block py-2 px-3 text-white rounded hover:bg-secondary md:hover:bg-transparent  md:p-0 md:text-lg md:hover:text-blue-500"
+              >Appliances</NuxtLink
+            >
+          </li>
+          <li>
+            <NuxtLink
               href="/services"
               class="block py-2 px-3 text-white rounded hover:bg-secondary md:hover:bg-transparent  md:p-0 md:text-lg  md:hover:text-blue-500"
               >Services</NuxtLink
@@ -130,23 +137,17 @@
               >Areas</NuxtLink
             >
           </li>
+          
           <li>
             <NuxtLink
-              href="/#services"
-              class="block py-2 px-3 text-white rounded hover:bg-secondary md:hover:bg-transparent  md:p-0 md:text-lg md:hover:text-blue-500"
-              >Brands</NuxtLink
-            >
-          </li>
-          <li>
-            <NuxtLink
-              href="/#blogs"
+              href="/blogs"
               class="block py-2 px-3 text-white rounded hover:bg-secondary md:hover:bg-transparent  md:p-0 md:text-lg md:hover:text-blue-500"
               >Blogs</NuxtLink
             >
           </li>
           <li>
             <NuxtLink
-              href="/#contacts"
+              href="/contact-us"
               class="block py-2 px-3 text-white rounded hover:bg-secondary md:hover:bg-transparent  md:p-0 md:text-lg md:hover:text-blue-500"
               >Contact Us</NuxtLink
             >

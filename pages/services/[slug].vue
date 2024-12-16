@@ -12,7 +12,7 @@
             class="bg-white/20 px-8 py-4 mt-2 rounded-lg border-2 border-white font-semibold hover:border-primary hover:text-primary hover:bg-secondary transition-all duration-800 ease-out group"
           >
             <p class="text-white text-xl group-hover:text-white">
-              Request Service 
+              Book Your {{ pageTitle }}
             </p>
           </button>
         </NuxtLink>

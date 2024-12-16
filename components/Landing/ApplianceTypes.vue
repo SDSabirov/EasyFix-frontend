@@ -16,179 +16,145 @@
       <!-- Appliance Types Grid -->
       <div class="grid gap-6 grid-cols-1 md:grid-cols-3 py-8">
         <!-- Card: Refrigerators / Built-In Fridges -->
-        <div class="p-6 flex flex-col items-center justify-center">
-          <div
-            class="text-primary mb-4 "
-          >
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              class="h-10 w-10"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
-              stroke-width="2"
-            >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                d="M3 10h18M9 21h6M9 3h6a2 2 0 012 2v14a2 2 0 01-2 2H9a2 2 0 01-2-2V5a2 2 0 012-2z"
+        <!-- Card: Refrigerators / Built-In Fridges -->
+        <NuxtLink to="/services/refrigerator">
+          <div class="p-6 flex flex-col items-center justify-center group">
+            <div class="text-primary mb-4">
+              <img
+                src="/assets/img/services/fridge.webp"
+                alt="refrigerator repair"
+                class="w-[100px] h-[100px] group-hover:scale-105 transition-all duration-300"
               />
-            </svg>
+            </div>
+            <h3
+              class="text-xl font-semibold text-primary mb-2 text-center group-hover:text-secondary transtion-color duration-300"
+            >
+              Refrigerators Repair
+            </h3>
+            <p class="text-primary text-center">
+              Professional repairs for all types of refrigerators and built-in
+              fridges.
+            </p>
           </div>
-          <h3 class="text-xl font-semibold text-primary mb-2 text-center">
-            Refrigerators / Built-In Fridges Repair
-          </h3>
-          <p class="text-primary text-center">
-            Professional repairs for all types of refrigerators and built-in
-            fridges.
-          </p>
-        </div>
+        </NuxtLink>
+        <NuxtLink to="/services/freezer">
+          <!-- Card: Freezers -->
+          <div class="p-6 flex flex-col items-center group">
+            <div class="text-primary mb-4">
+              <img
+                src="/assets/img/services/freezer.webp"
+                alt="rfreezer repair"
+                class="w-[100px] h-[100px] group-hover:scale-105 transition-all duration-300"
+              />
+            </div>
+            <h3
+              class="text-xl font-semibold text-primary mb-2 group-hover:text-secondary transtion-color duration-300"
+            >
+              Freezer Repair
+            </h3>
+            <p class="text-primary text-center">
+              Keep your frozen goods fresh with our reliable freezer repair
+              services.
+            </p>
+          </div>
+        </NuxtLink>
+        <NuxtLink to="/services/ice-maker-repair">
+          <!-- Card: Ice Makers -->
+          <div class="p-6 flex flex-col items-center group">
+            <div class="text-primary mb-4">
+              <img
+                src="/assets/img/services/icemaker.webp"
+                alt="icemaker repair"
+                class="w-[100px] h-[100px] group-hover:scale-105 transition-all duration-300"
+              />
+            </div>
+            <h3
+              class="text-xl font-semibold text-primary mb-2 group-hover:text-secondary transtion-color duration-300"
+            >
+              Ice Maker Repair
+            </h3>
+            <p class="text-primary text-center">
+              Get your ice maker back in action with our expert repair services.
+            </p>
+          </div>
+        </NuxtLink>
 
-        <!-- Card: Freezers -->
-        <div class="  p-6 flex flex-col items-center">
-          <div
-            class="text-primary mb-4 "
-          >
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              class="h-10 w-10"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
-              stroke-width="2"
-            >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                d="M5 10h14M5 14h14M5 6h14m-6 4v8m-4-8v8m4-8h-4"
+        <NuxtLink to="/services/range-repair">
+          <!-- Card: Ranges -->
+          <div class="p-6 flex flex-col items-center justify-center group">
+            <div class="text-primary mb-4">
+              <img
+                src="/assets/img/services/range.webp"
+                alt="Range repair"
+                class="w-[100px] h-[100px] group-hover:scale-105 transition-all duration-300"
               />
-            </svg>
+            </div>
+            <h3
+              class="text-xl font-semibold text-primary mb-2 text-center group-hover:text-secondary transtion-color duration-300"
+            >
+              Range Repair
+            </h3>
+            <p class="text-primary text-center">
+              Comprehensive repair solutions for all types of ranges.
+            </p>
           </div>
-          <h3 class="text-xl font-semibold text-primary mb-2">Freezer Repair</h3>
-          <p class="text-primary text-center">
-            Keep your frozen goods fresh with our reliable freezer repair
-            services.
-          </p>
-        </div>
+        </NuxtLink>
 
-        <!-- Card: Ice Makers -->
-        <div class="  p-6 flex flex-col items-center">
-          <div
-            class="text-primary mb-4 "
-          >
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              class="h-10 w-10"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
-              stroke-width="2"
-            >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                d="M12 4v16M4 12h16M9.9 16.9l-2.1 2.1a3 3 0 104.2 0l-2.1-2.1zM14.1 7.1l2.1-2.1a3 3 0 10-4.2 0l2.1 2.1z"
+        <NuxtLink to="/services/stove-repair">
+          <!-- Card: Stoves -->
+          <div class="p-6 flex flex-col items-center group">
+            <div class="text-primary mb-4">
+              <img
+                src="/assets/img/services/stove.webp"
+                alt="Stove repair"
+                class="w-[100px] h-[100px] group-hover:scale-105 transition-all duration-300"
               />
-            </svg>
+            </div>
+            <h3
+              class="text-xl font-semibold text-primary mb-2 group-hover:text-secondary transtion-color duration-300"
+            >
+              Stove Repair
+            </h3>
+            <p class="text-primary text-center">
+              Professional repairs for stoves to ensure safe and efficient
+              cooking.
+            </p>
           </div>
-          <h3 class="text-xl font-semibold text-primary mb-2">
-            Ice Maker Repair
-          </h3>
-          <p class="text-primary text-center">
-            Get your ice maker back in action with our expert repair services.
-          </p>
-        </div>
+        </NuxtLink>
 
-        <!-- Card: Under Counter Fridges -->
-        <div class="  p-6 flex flex-col items-center">
-          <div
-            class="text-primary mb-4 "
-          >
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              class="h-10 w-10"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
-              stroke-width="2"
-            >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                d="M12 2a9 9 0 100 18 9 9 0 000-18zm3 10H9m3 3H9m3-6H9"
-              />
-            </svg>
-          </div>
-          <h3 class="text-xl font-semibold text-primary mb-2">
-            Under-Counter Fridge Repair
-          </h3>
-          <p class="text-primary text-center">
-            Convenient solutions for your compact fridge needs.
-          </p>
-        </div>
+        <NuxtLink to="/services/oven-repair">
+          <!-- Card: Ovens -->
 
-        <!-- Card: Wine Coolers -->
-        <div class="  p-6 flex flex-col items-center">
-          <div
-            class="text-primary mb-4 "
-          >
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              class="h-10 w-10"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
-              stroke-width="2"
-            >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                d="M12 3v18M3 12h18M9 9l6 6m0-6l-6 6"
+          <div class="p-6 flex flex-col items-center group">
+            <div class="text-primary mb-4">
+              <img
+                src="/assets/img/services/oven.webp"
+                alt="oven repair"
+                class="w-[100px] h-[100px] group-hover:scale-105 transition-all duration-300"
               />
-            </svg>
-          </div>
-          <h3 class="text-xl font-semibold text-primary mb-2">
-            Wine Cooler Repair
-          </h3>
-          <p class="text-primary text-center">
-            Keep your wine at the perfect temperature with our expert repair
-            services.
-          </p>
-        </div>
-
-        <!-- Card: Ranges -->
-        <div class="  p-6 flex flex-col items-center">
-          <div
-            class="text-primary mb-4 "
-          >
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              class="h-10 w-10"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
-              stroke-width="2"
+            </div>
+            <h3
+              class="text-xl font-semibold text-primary mb-2 group-hover:text-secondary transtion-color duration-300"
             >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                d="M7 12h10M12 7v10"
-              />
-            </svg>
+              Oven Repair
+            </h3>
+            <p class="text-primary text-center">
+              Expert oven repairs to keep your cooking hassle-free.
+            </p>
           </div>
-          <h3 class="text-xl font-semibold text-primary mb-2">Range Repair</h3>
-          <p class="text-primary text-center">
-            Ensuring perfect functionality for all your cooking needs.
-          </p>
-        </div>
+        </NuxtLink>
       </div>
       <div class="flex w-full items-center justify-center mt-10">
-        <NuxtLink to="/services" class="text-justify underline capitalize text-gray-500 mt-2 px-2 md:mt-6">Find Out More about our services</NuxtLink>
+        <NuxtLink
+          to="/services"
+          class="text-justify underline capitalize text-gray-500 mt-2 px-2 md:mt-6"
+          >Find Out More about our services</NuxtLink
+        >
       </div>
       <div class="flex w-full items-center justify-center mt-10">
         <NuxtLink to="/booking">
           <button
-            class="bg-primary px-8 py-4 mt-2 rounded-lg border-2 border-primary font-semibold hover:border-primary hover:text-primary hover:bg-secondary  transition-all duration-800 ease-out group"
+            class="bg-primary px-8 py-4 mt-2 rounded-lg border-2 border-primary font-semibold hover:border-primary hover:text-primary hover:bg-secondary transition-all duration-800 ease-out group"
           >
             <p class="text-white group-hover:text-white">
               Request Your Local Appliance Technician
@@ -200,6 +166,4 @@
   </section>
 </template>
 
-<script setup>
-
-</script>
+<script setup></script>

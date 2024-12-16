@@ -19,7 +19,7 @@
       </div>
     </NuxtLink>
 
-    <NuxtLink to="/services/stove-repair ">
+    <NuxtLink to="/services/stove-repair">
       <!-- Card: Stoves -->
       <div class="p-6 flex flex-col items-center group">
         <div class="text-primary mb-4">

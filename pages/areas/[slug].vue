@@ -55,7 +55,10 @@
 <script setup>
 import { ref, watch } from "vue";
 import { useRoute } from "vue-router";
-
+const capitalize = (str) => {
+  if (!str) return ''; // Handle empty strings
+  return str.charAt(0).toUpperCase() + str.slice(1).toLowerCase();
+};
 const replaceUnderscoreWithSpaces = (str) => str.replace(/_/g, " ");
 const serviceAreas = {
   atherton: { lat: 37.4613, lng: -122.1977 },
@@ -85,7 +88,7 @@ const serviceAreas = {
 };
 
 const route = useRoute();
-const pageTitle = replaceUnderscoreWithSpaces(route.params.slug).toUpperCase();
+const pageTitle = capitalize(replaceUnderscoreWithSpaces(route.params.slug));
 const location = ref(serviceAreas[route.params.slug] || serviceAreas.atherton);
 
 useHead(() => ({
