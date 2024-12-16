@@ -35,12 +35,12 @@ definePageMeta({
 })
 function changeBackground(){
     if (window.scrollY > 1) {
-        document.querySelector('nav').classList.remove('bg-transparent');
+        document.querySelector('nav').classList.remove('bg-black/30');
         document.querySelector('nav').classList.add('bg-primary');
         
     } else {
         document.querySelector('nav').classList.remove('bg-primary');
-        document.querySelector('nav').classList.add('bg-transparent');
+        document.querySelector('nav').classList.add('bg-black/30');
     }
     
 }

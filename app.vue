@@ -97,5 +97,11 @@ useHead({
     }
   ]
 });
+onMounted(() => {
+    useFlowbite(() => {
+        initFlowbite();
+    })
+    
+})
 </script>
 

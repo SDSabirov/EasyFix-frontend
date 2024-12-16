@@ -157,33 +157,37 @@ const cities = [
   "Woodside",
 ];
 
-// Compute columns for cities
+const screenWidth = ref(window.innerWidth);
+
+const updateScreenWidth = () => {
+  screenWidth.value = window.innerWidth;
+};
+
+onMounted(() => {
+  window.addEventListener("resize", updateScreenWidth);
+});
+
 const cityColumns = computed(() => {
-  const numColumns = 4;
+  const numColumns = screenWidth.value < 640 ? 1 : screenWidth.value < 768 ? 2 : screenWidth.value < 1024 ? 3 : 4;
   const numCities = cities.length;
   const citiesPerColumn = Math.ceil(numCities / numColumns);
   const columnsArray = [];
 
   for (let i = 0; i < numColumns; i++) {
-    columnsArray.push(
-      cities.slice(i * citiesPerColumn, (i + 1) * citiesPerColumn)
-    );
+    columnsArray.push(cities.slice(i * citiesPerColumn, (i + 1) * citiesPerColumn));
   }
 
   return columnsArray;
 });
 
-// Compute columns for zip codes
 const zipCodeColumns = computed(() => {
-  const numColumns = 8;
+  const numColumns = screenWidth.value < 640 ? 3: screenWidth.value < 768 ? 4 : screenWidth.value < 1024 ? 5 : 8;
   const numZipCodes = zipCodes.length;
   const zipCodesPerColumn = Math.ceil(numZipCodes / numColumns);
   const columnsArray = [];
 
   for (let i = 0; i < numColumns; i++) {
-    columnsArray.push(
-      zipCodes.slice(i * zipCodesPerColumn, (i + 1) * zipCodesPerColumn)
-    );
+    columnsArray.push(zipCodes.slice(i * zipCodesPerColumn, (i + 1) * zipCodesPerColumn));
   }
 
   return columnsArray;
