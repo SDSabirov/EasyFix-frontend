@@ -14,7 +14,7 @@
       </p>
       
       <div class="flex w-full items-center justify-center mt-10">
-        <NuxtLink to="/booking">
+        <NuxtLink href="tel:4159414144">
           <button
             class="bg-primary px-8 py-4 mt-2 rounded-lg border-2 border-primary font-semibold hover:border-primary hover:text-primary hover:bg-secondary transition-all duration-800 ease-out group"
           >
@@ -34,7 +34,7 @@
       </h2>
       <ServicesCookingAppliance />
       <div class="flex w-full items-center justify-center mt-10">
-        <NuxtLink to="/booking">
+        <a href="tel:4159414144">
           <button
             class="bg-primary px-8 py-4 mt-2 rounded-lg border-2 border-primary font-semibold hover:border-primary hover:text-primary hover:bg-secondary transition-all duration-800 ease-out group"
           >
@@ -42,7 +42,7 @@
               Request Your Local Appliance Technician
             </p>
           </button>
-        </NuxtLink>
+        </a>
       </div>
     </div>
   </section>

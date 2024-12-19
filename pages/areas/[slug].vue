@@ -13,7 +13,7 @@
         >
           Appliance Repair in {{ pageTitle }}
         </h1>
-        <NuxtLink to="/booking">
+        <a to="tel:4159414144">
           <button
             class="bg-black/20 px-8 py-4 mt-2 rounded-lg border-2 border-primary font-semibold hover:border-primary hover:text-primary hover:bg-secondary transition-all duration-800 ease-out group"
           >
@@ -22,7 +22,7 @@
             </p>
 
           </button>
-        </NuxtLink>
+        </a>
       </header>
       <section class="px-6 lg:px-12 py-8 text-lg text-gray-700 max-w-screen-xl">
         <p class="mb-6">

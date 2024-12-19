@@ -7,15 +7,15 @@
             <h1 class="text-4xl lg:text-6xl font-bold text-center text-white mb-10 max-w-screen-xl">
                 Covering the Bay Area: Fast, Reliable Appliance Repairs Near You
           </h1>
-          <NuxtLink to="/booking">
+          <a href="tel:(415) 941-4144">
           <button
             class="bg-black/40 px-8 py-4 mt-2 rounded-lg border-2 border-white font-semibold hover:border-primary hover:text-primary hover:bg-secondary transition-all duration-800 ease-out group"
           >
             <p class="text-white text-xl group-hover:text-white">
-              Request Your Local Technician
+              Call Us Now (415) 941-4144
             </p>
           </button>
-        </NuxtLink>
+        </a>
         </div>
 
     </header>

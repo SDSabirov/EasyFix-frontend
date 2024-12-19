@@ -25,14 +25,14 @@
         >Get your home appliances running like new with our trusted repair services across the Bay Area—schedule a visit now for expert service near you.</p>
         <div></div>
         <div class="flex space-x-4 items-center">
-          <NuxtLink
-            href="/booking"
+          <a
+            href="tel:4159414144"
             class="mt-2 z-20 bg-white rounded-lg border-2 border-white px-8 py-3 mt-8 font-semibold hover:border-primary hover:text-white hover:bg-secondary transition-all duration-800 ease-out group "
           >
             <p class="text-primary group-hover:text-white w-full text-center">
-              Schedule Your Service Today
+              Get Expert Appliance Repairs – Call Us Now!
             </p>
-          </NuxtLink>
+          </a>
           
         </div>
       </div>

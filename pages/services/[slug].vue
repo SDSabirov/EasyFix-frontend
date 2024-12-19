@@ -7,7 +7,7 @@
             <h1 class="text-4xl lg:text-7xl font-bold text-center text-white mb-10">
             {{ pageTitle }}
           </h1>
-          <NuxtLink to="/booking">
+          <a href="tel:4159414144">
           <button
             class="bg-white/20 px-8 py-4 mt-2 rounded-lg border-2 border-white font-semibold hover:border-primary hover:text-primary hover:bg-secondary transition-all duration-800 ease-out group"
           >
@@ -15,7 +15,7 @@
               Book Your {{ pageTitle }}
             </p>
           </button>
-        </NuxtLink>
+        </a>
         </div>
 
     </header>

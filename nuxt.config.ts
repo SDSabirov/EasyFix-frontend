@@ -75,61 +75,6 @@ export default defineNuxtConfig({
     },
   },
 
-  sitemap: {
-    hostname: 'https://easyfixappliance.com', 
-    gzip: true, // Enable compression for sitemap
-    routes: async () => {
-    
-      const applianceTypes = [
-        'refrigerator',
-        'freezer',
-        'ice-maker-repair',
-        'under-counter-fridge-repair',
-        'wine-cooler-repair',
-        'built-in-fridges',
-        'range-repair',
-        'stove-repair',
-        'oven-repair',
-        'double-oven-repair',
-        'cooktop-repair',
-      ].map((type) => ({
-        loc: `/services/${type}`,
-        _sitemap: 'services', 
-      }));
-  
-      // Service areas
-      const areas = [
-        'atherton',
-        'belmont',
-        'burlingame',
-        'emerald_hills',
-        'foster_city',
-        'half_moon_bay',
-        'hillsborough',
-        'los_altos',
-        'los_altos_hills',
-        'los_gatos',
-        'menlo_park',
-        'millbrae',
-        'monte_sereno',
-        'mountain_view',
-        'pacifica',
-        'palo_alto',
-        'portola_valley',
-        'redwood_city',
-        'san_carlos',
-        'san_francisco',
-        'san_mateo',
-        'saratoga',
-        'sunnyvale',
-        'woodside',
-      ].map((area) => ({
-        loc: `/areas/${area}`, 
-        _sitemap: 'areas', 
-      }));
-  
-      return [...applianceTypes, ...areas];
-    },
-  },
+
   
 });

@@ -58,7 +58,7 @@
         <div class="space-x-1 md:space-x-4">
           <!--call now buuron-->
           <a
-            href="tel:4159414144 "
+            href="tel:4159414144"
             class="flex space-x-2 items-center text-primary bg-white rounded-lg hover:text-white hover:bg-secondary hover:animate-flashShadow transition-all duration-800 ease-out focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium text-sm px-2 md:px-4 py-2 text-center"
             ><svg
               xmlns="http://www.w3.org/2000/svg"

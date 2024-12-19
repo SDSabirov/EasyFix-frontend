@@ -42,8 +42,8 @@
       <Footer />
 
       <!-- Book Now Button -->
-      <NuxtLink
-        to="/booking"
+      <a
+        href="tel:4159414144"
         v-if="showButton"
         class="fixed right-0 top-1/2 transform -translate-y-1/2 bg-primary text-white px-6 py-3 rounded-l-lg shadow-lg transition-transform duration-800 ease-in"
         :class="{
@@ -52,7 +52,7 @@
         }"
       >
         Book Now
-      </NuxtLink>
+      </a>
     </div>
   </div>
 </template>

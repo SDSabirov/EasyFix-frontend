@@ -102,15 +102,6 @@
 
       </div>
     </div>
-    <div class="flex w-full items-center justify-center mt-6">
-        <NuxtLink to="/booking">
-          <button
-            class="bg-primary px-8 py-4 mt-2 rounded-lg border-2 border-primary font-semibold hover:border-primary hover:text-white hover:bg-secondary transition-all duration-800 ease-out group"
-          >
-            <p class="text-white group-hover:text-white">Fix My Appliance Now</p>
-          </button>
-        </NuxtLink>
-      </div>
     <LandingLocations />
   </section>
 </template>
