@@ -69,8 +69,10 @@
 </template>
 
 <script setup>
-import { computed } from "vue";
-const replaceSpacesWithUnderscore = (str) => str.replace(/\s+/g, '_');
+import { ref, computed, onMounted, onUnmounted } from "vue";
+
+const replaceSpacesWithUnderscore = (str) => str.replace(/\s+/g, "_");
+
 const zipCodes = [
   "94020",
   "94022",
@@ -157,18 +159,31 @@ const cities = [
   "Woodside",
 ];
 
-const screenWidth = ref(window.innerWidth);
+const screenWidth = ref(0); // Initialize with 0 to avoid SSR issues
 
 const updateScreenWidth = () => {
   screenWidth.value = window.innerWidth;
 };
 
 onMounted(() => {
+  // Ensure the code runs only on the client side
+  screenWidth.value = window.innerWidth;
   window.addEventListener("resize", updateScreenWidth);
 });
 
+onUnmounted(() => {
+  window.removeEventListener("resize", updateScreenWidth);
+});
+
 const cityColumns = computed(() => {
-  const numColumns = screenWidth.value < 640 ? 1 : screenWidth.value < 768 ? 2 : screenWidth.value < 1024 ? 3 : 4;
+  const numColumns =
+    screenWidth.value < 640
+      ? 1
+      : screenWidth.value < 768
+      ? 2
+      : screenWidth.value < 1024
+      ? 3
+      : 4;
   const numCities = cities.length;
   const citiesPerColumn = Math.ceil(numCities / numColumns);
   const columnsArray = [];
@@ -181,7 +196,14 @@ const cityColumns = computed(() => {
 });
 
 const zipCodeColumns = computed(() => {
-  const numColumns = screenWidth.value < 640 ? 3: screenWidth.value < 768 ? 4 : screenWidth.value < 1024 ? 5 : 8;
+  const numColumns =
+    screenWidth.value < 640
+      ? 3
+      : screenWidth.value < 768
+      ? 4
+      : screenWidth.value < 1024
+      ? 5
+      : 8;
   const numZipCodes = zipCodes.length;
   const zipCodesPerColumn = Math.ceil(numZipCodes / numColumns);
   const columnsArray = [];
@@ -192,4 +214,68 @@ const zipCodeColumns = computed(() => {
 
   return columnsArray;
 });
+
+useHead({
+  title: "Appliance Repairs Service | San Francisco | San Mateo | Palo Alto",
+  meta: [
+    {
+      name: "description",
+      content:
+        "Get top-quality appliance repair services nearby in cities like San Francisco, Burlingame, Palo Alto, Hayward, Millbrae, and South San Francisco.",
+    },
+  ],
+  script: [
+    {
+      type: "application/ld+json",
+      children: JSON.stringify({
+        "@context": "https://schema.org",
+        "@type": "Service",
+        "name": "Easy Fix Appliance",
+        "description":
+          "Fast, reliable appliance repairs in San Francisco, Palo Alto, and the Bay Area.",
+        "areaServed": [
+          { "@type": "Place", "name": "Atherton", "postalCode": "94027" },
+          { "@type": "Place", "name": "Belmont", "postalCode": "94002" },
+          { "@type": "Place", "name": "Burlingame", "postalCode": "94401" },
+          { "@type": "Place", "name": "Emerald Hills", "postalCode": "94062" },
+          { "@type": "Place", "name": "Foster City", "postalCode": "94404" },
+          { "@type": "Place", "name": "Half Moon Bay", "postalCode": "94019" },
+          { "@type": "Place", "name": "Hillsborough", "postalCode": "94010" },
+          { "@type": "Place", "name": "Los Altos", "postalCode": "94022" },
+          { "@type": "Place", "name": "Los Altos Hills", "postalCode": "94024" },
+          { "@type": "Place", "name": "Los Gatos", "postalCode": "95032" },
+          { "@type": "Place", "name": "Menlo Park", "postalCode": "94025" },
+          { "@type": "Place", "name": "Millbrae", "postalCode": "94030" },
+          { "@type": "Place", "name": "Monte Sereno", "postalCode": "95030" },
+          { "@type": "Place", "name": "Mountain View", "postalCode": "94040" },
+          { "@type": "Place", "name": "Pacifica", "postalCode": "94044" },
+          { "@type": "Place", "name": "Palo Alto", "postalCode": "94301" },
+          { "@type": "Place", "name": "Portola Valley", "postalCode": "94028" },
+          { "@type": "Place", "name": "Redwood City", "postalCode": "94063" },
+          { "@type": "Place", "name": "San Carlos", "postalCode": "94070" },
+          { "@type": "Place", "name": "San Francisco", "postalCode": "94115" },
+          { "@type": "Place", "name": "San Mateo", "postalCode": "94401" },
+          { "@type": "Place", "name": "Saratoga", "postalCode": "95070" },
+          { "@type": "Place", "name": "Sunnyvale", "postalCode": "94087" },
+          { "@type": "Place", "name": "Woodside", "postalCode": "94062" },
+        ],
+        "provider": {
+          "@type": "LocalBusiness",
+          "name": "EZ Fix Service",
+          "telephone": "+1 (415) 941-4144",
+          "url": "https://easyfixappliance.com",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "303 Twin Dolphin Drive",
+            "addressLocality": "Redwood City",
+            "addressRegion": "CA",
+            "postalCode": "94065",
+            "addressCountry": "US",
+          },
+        },
+      }),
+    },
+  ],
+});
+
 </script>

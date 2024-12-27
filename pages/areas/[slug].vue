@@ -1,9 +1,13 @@
 <template>
   <div class="relative">
     <Navbar />
-    
-    <div class="flex flex-col items-center justify-center relative top-[72px] md:top-[98px]">
-      <header class="bg-white py-4 mx-auto flex flex-col space-y-6 items-center justify-center">
+
+    <div
+      class="flex flex-col items-center justify-center relative top-[72px] md:top-[98px]"
+    >
+      <header
+        class="bg-white py-4 mx-auto flex flex-col space-y-6 items-center justify-center"
+      >
         <h1
           class="text-2xl md:text-4xl lg:text-6xl font-bold text-center text-primary mb-10 max-w-screen-xl capitalize"
         >
@@ -16,35 +20,34 @@
             <p class="text-primary text-xl group-hover:text-white capitalize">
               Book Your Service in {{ pageTitle }}
             </p>
-
           </button>
         </a>
       </header>
-      <section class="px-6 lg:px-12 py-10 text-lg text-gray-700 max-w-screen-xl">
+      <section
+        class="px-6 lg:px-12 py-10 text-lg text-gray-700 max-w-screen-xl"
+      >
         <p class="mb-6">
           At Easy Fix Appliance, we pride ourselves on delivering top-tier
           appliance repair services in
-          {{ pageTitle }}. Whether it’s a
-          refrigerator that’s not cooling, a stove that’s not heating, or a
-          washer that’s leaking, our team of expert technicians is equipped to
-          handle it all. We understand how important your appliances are to your
-          daily life, and we’re here to restore them to peak performance quickly
-          and efficiently.
+          {{ pageTitle }}. Whether it’s a refrigerator that’s not cooling, a
+          stove that’s not heating, or a washer that’s leaking, our team of
+          expert technicians is equipped to handle it all. We understand how
+          important your appliances are to your daily life, and we’re here to
+          restore them to peak performance quickly and efficiently.
         </p>
         <p>
           With years of experience serving the
-          {{ pageTitle }} area, we’ve built a
-          reputation for reliability, professionalism, and exceptional customer
-          service. Our team uses genuine parts and advanced diagnostic tools to
-          ensure lasting repairs for all major appliance brands. Whether you’re
-          in need of emergency repairs or routine maintenance, Easy Fix
-          Appliance is your trusted partner for keeping your home running
-          smoothly.
+          {{ pageTitle }} area, we’ve built a reputation for reliability,
+          professionalism, and exceptional customer service. Our team uses
+          genuine parts and advanced diagnostic tools to ensure lasting repairs
+          for all major appliance brands. Whether you’re in need of emergency
+          repairs or routine maintenance, Easy Fix Appliance is your trusted
+          partner for keeping your home running smoothly.
         </p>
       </section>
     </div>
     <div
-      class="w-screen max-h-[600px] overflow-hidden relative mt-16 flex flex-col justify-center "
+      class="w-screen max-h-[600px] overflow-hidden relative mt-16 flex flex-col justify-center"
     >
       <LocationsGoogleMap v-model="location" />
     </div>
@@ -57,7 +60,7 @@
 import { ref, watch } from "vue";
 import { useRoute } from "vue-router";
 const capitalize = (str) => {
-  if (!str) return ''; // Handle empty strings
+  if (!str) return ""; // Handle empty strings
   return str.charAt(0).toUpperCase() + str.slice(1).toLowerCase();
 };
 const replaceUnderscoreWithSpaces = (str) => str.replace(/_/g, " ");
@@ -97,62 +100,7 @@ useHead(() => ({
   meta: [
     {
       name: "description",
-      content: `Your Appliance Repair Services in ${
-        pageTitle || "Atherton"
-      }.`,
-    },
-  ],
-  script: [
-    {
-      type: "application/ld+json",
-      children: JSON.stringify({
-        "@context": "https://schema.org",
-        "@type": "Service",
-        "name": "EZ Fix Service",
-        "description": `Fast, reliable appliance repairs in ${
-          pageTitle || "Atherton"
-        }.`,
-        "areaServed": [
-          { "@type": "Place", "name": "Atherton", "postalCode": "94027" },
-          { "@type": "Place", "name": "Belmont", "postalCode": "94002" },
-          { "@type": "Place", "name": "Burlingame", "postalCode": "94401" },
-          { "@type": "Place", "name": "Emerald Hills", "postalCode": "94062" },
-          { "@type": "Place", "name": "Foster City", "postalCode": "94404" },
-          { "@type": "Place", "name": "Half Moon Bay", "postalCode": "94019" },
-          { "@type": "Place", "name": "Hillsborough", "postalCode": "94010" },
-          { "@type": "Place", "name": "Los Altos", "postalCode": "94022" },
-          { "@type": "Place", "name": "Los Altos Hills", "postalCode": "94024" },
-          { "@type": "Place", "name": "Los Gatos", "postalCode": "95032" },
-          { "@type": "Place", "name": "Menlo Park", "postalCode": "94025" },
-          { "@type": "Place", "name": "Millbrae", "postalCode": "94030" },
-          { "@type": "Place", "name": "Monte Sereno", "postalCode": "95030" },
-          { "@type": "Place", "name": "Mountain View", "postalCode": "94040" },
-          { "@type": "Place", "name": "Pacifica", "postalCode": "94044" },
-          { "@type": "Place", "name": "Palo Alto", "postalCode": "94301" },
-          { "@type": "Place", "name": "Portola Valley", "postalCode": "94028" },
-          { "@type": "Place", "name": "Redwood City", "postalCode": "94063" },
-          { "@type": "Place", "name": "San Carlos", "postalCode": "94070" },
-          { "@type": "Place", "name": "San Francisco", "postalCode": "94115" },
-          { "@type": "Place", "name": "San Mateo", "postalCode": "94401" },
-          { "@type": "Place", "name": "Saratoga", "postalCode": "95070" },
-          { "@type": "Place", "name": "Sunnyvale", "postalCode": "94087" },
-          { "@type": "Place", "name": "Woodside", "postalCode": "94062" }
-        ],
-        "provider": {
-          "@type": "LocalBusiness",
-          "name": "Easy Fix Appliance",
-          "telephone": "+1 (415) 941-4144",
-          "url": "https://easyfixappliance.com",
-          "address": {
-            "@type": "PostalAddress",
-            "streetAddress": "303 Twin Dolphin Drive",
-            "addressLocality": "Redwood City",
-            "addressRegion": "CA",
-            "postalCode": "94065",
-            "addressCountry": "US"
-          }
-        }
-      }),
+      content: `Your Appliance Repair Services in ${pageTitle || "Atherton"}.`,
     },
   ],
 }));
