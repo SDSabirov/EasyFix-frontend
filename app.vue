@@ -10,19 +10,16 @@
 <script setup>
 import { useRoute } from "vue-router";
 
-useHead(() => {
-  const route = useRoute();
-  const canonicalURL = `https://easyfixappliance.com${route.fullPath}`;
-  
-  return {
-    meta: [
-      {
-        rel: "canonical",
-        href: canonicalURL,
-      },
-    ],
-  };
-});
+const route = useRoute();
+
+useHead(() => ({
+  meta: [
+    {
+      rel: "canonical",
+      href: `https://easyfixappliance.com${route.fullPath}`,
+    },
+  ],
+}));
 // Inject Google Tag Manager script and noscript
 useHead({
   script: [
