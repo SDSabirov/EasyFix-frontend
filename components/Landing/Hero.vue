@@ -18,10 +18,10 @@
         class="flex max-w-screen-xl flex-col justify-center items-center lg:space-y-10 font-roboto"
       >
         <h1
-          class="lg:text-7xl text-white text-center font-semibold text-3xl animate-fadeInLeft md:px-14 leading-loose font-roboto"
+          class="lg:text-7xl text-white text-center font-semibold text-2xl  md:px-14 leading-loose font-roboto p-2 md:p-0"
         >Fast and Professional Appliance Service in Your Area</h1>
         <p
-          class="lg:text-2xl text-white text-center font-normal text-xl animate-fadeDown leading-loose"
+          class="lg:text-2xl text-white text-center font-normal text-lg leading-loose p-2 md:p-0"
         >Get your home appliances running like new with our trusted repair services across the Bay Area—schedule a visit now for expert service near you.</p>
         <div></div>
         <div class="flex space-x-4 items-center">

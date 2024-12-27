@@ -2,14 +2,14 @@
   <div class="bg-white h-full w-full">
     <Navbar />
     <header class="w-screen h-[70vh] md:max-h-[70vh] relative overflow-hidden">
-        <img src="/assets/img/services/detailhero.webp" alt="background" class="object-cover object-bottom w-full h-full">
+        <img src="/assets/img/services/detailhero.webp" alt="background" class="object-cover object-bottom w-full h-full" loading="lazy">
         <div class="h-full w-full bg-black/40 absolute top-0 flex flex-col space-y-4 items-center justify-center">
-            <h1 class="text-4xl lg:text-7xl font-bold text-center text-white mb-10">
+            <h1 class="text-2xl md:text-4xl lg:text-6xl font-bold text-center text-white mb-10">
             {{ pageTitle }}
           </h1>
           <a href="tel:4159414144">
           <button
-            class="bg-white/20 px-8 py-4 mt-2 rounded-lg border-2 border-white font-semibold hover:border-primary hover:text-primary hover:bg-secondary transition-all duration-800 ease-out group"
+            class="bg-black/20 px-8  py-2 md:py-4 mt-2 rounded-lg border border-white font-semibold hover:border-primary hover:text-primary hover:bg-secondary transition-all duration-800 ease-out group mx=2"
           >
             <p class="text-white text-lg md:text-xl group-hover:text-white">
               Book Your {{ pageTitle }}

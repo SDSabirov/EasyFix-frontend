@@ -5,7 +5,7 @@
     <div class="flex flex-col items-center justify-center relative top-[72px] md:top-[98px]">
       <header class="bg-white py-4 mx-auto flex flex-col space-y-6 items-center justify-center">
         <h1
-          class="text-4xl lg:text-6xl font-bold text-center text-primary mb-10 max-w-screen-xl capitalize"
+          class="text-2xl md:text-4xl lg:text-6xl font-bold text-center text-primary mb-10 max-w-screen-xl capitalize"
         >
           Appliance Repair in {{ pageTitle }}
         </h1>
@@ -93,17 +93,69 @@ const pageTitle = capitalize(replaceUnderscoreWithSpaces(route.params.slug));
 const location = ref(serviceAreas[route.params.slug] || serviceAreas.atherton);
 
 useHead(() => ({
-  title: `Appliance Repair in ${pageTitle || "Atherton"} `,
+  title: `Appliance Repair in ${pageTitle || "Atherton"}`,
   meta: [
     {
       name: "description",
-      content: `Your Appliance Repair Services in  ${
+      content: `Your Appliance Repair Services in ${
         pageTitle || "Atherton"
       }.`,
     },
   ],
+  script: [
+    {
+      type: "application/ld+json",
+      children: JSON.stringify({
+        "@context": "https://schema.org",
+        "@type": "Service",
+        "name": "EZ Fix Service",
+        "description": `Fast, reliable appliance repairs in ${
+          pageTitle || "Atherton"
+        }.`,
+        "areaServed": [
+          { "@type": "Place", "name": "Atherton", "postalCode": "94027" },
+          { "@type": "Place", "name": "Belmont", "postalCode": "94002" },
+          { "@type": "Place", "name": "Burlingame", "postalCode": "94401" },
+          { "@type": "Place", "name": "Emerald Hills", "postalCode": "94062" },
+          { "@type": "Place", "name": "Foster City", "postalCode": "94404" },
+          { "@type": "Place", "name": "Half Moon Bay", "postalCode": "94019" },
+          { "@type": "Place", "name": "Hillsborough", "postalCode": "94010" },
+          { "@type": "Place", "name": "Los Altos", "postalCode": "94022" },
+          { "@type": "Place", "name": "Los Altos Hills", "postalCode": "94024" },
+          { "@type": "Place", "name": "Los Gatos", "postalCode": "95032" },
+          { "@type": "Place", "name": "Menlo Park", "postalCode": "94025" },
+          { "@type": "Place", "name": "Millbrae", "postalCode": "94030" },
+          { "@type": "Place", "name": "Monte Sereno", "postalCode": "95030" },
+          { "@type": "Place", "name": "Mountain View", "postalCode": "94040" },
+          { "@type": "Place", "name": "Pacifica", "postalCode": "94044" },
+          { "@type": "Place", "name": "Palo Alto", "postalCode": "94301" },
+          { "@type": "Place", "name": "Portola Valley", "postalCode": "94028" },
+          { "@type": "Place", "name": "Redwood City", "postalCode": "94063" },
+          { "@type": "Place", "name": "San Carlos", "postalCode": "94070" },
+          { "@type": "Place", "name": "San Francisco", "postalCode": "94115" },
+          { "@type": "Place", "name": "San Mateo", "postalCode": "94401" },
+          { "@type": "Place", "name": "Saratoga", "postalCode": "95070" },
+          { "@type": "Place", "name": "Sunnyvale", "postalCode": "94087" },
+          { "@type": "Place", "name": "Woodside", "postalCode": "94062" }
+        ],
+        "provider": {
+          "@type": "LocalBusiness",
+          "name": "Easy Fix Appliance",
+          "telephone": "+1 (415) 941-4144",
+          "url": "https://easyfixappliance.com",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "303 Twin Dolphin Drive",
+            "addressLocality": "Redwood City",
+            "addressRegion": "CA",
+            "postalCode": "94065",
+            "addressCountry": "US"
+          }
+        }
+      }),
+    },
+  ],
 }));
-
 watch(
   () => route.params.slug,
   (newSlug) => {

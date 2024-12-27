@@ -55,6 +55,7 @@ export default defineNuxtConfig({
   site: {
     url: "https://easyfixappliance.com",
     name: "Easy Fix Appliance Bay Area, California",
+    
     description:
       "Certified Sub-Zero, Wolf, and Viking appliance repair specialists serving San Mateo, Palo Alto, and the Bay Area. Expert appliance repair services including refrigerator repair for brands like Thermador, KitchenAid, and more. Fast, reliable service using original parts. Book your repair today!",
     defaultLocale: "en", // not needed if you have @nuxtjs/i18n installed
@@ -75,6 +76,6 @@ export default defineNuxtConfig({
     },
   },
 
-
+  
   
 });
