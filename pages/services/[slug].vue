@@ -1,7 +1,7 @@
 <template>
   <div class="bg-white h-full w-full">
     <Navbar />
-    <header class="w-screen max-h-[70vh] relative overflow-hidden">
+    <header class="w-screen h-[70vh] md:max-h-[70vh] relative overflow-hidden">
         <img src="/assets/img/services/detailhero.webp" alt="background" class="object-cover object-bottom w-full h-full">
         <div class="h-full w-full bg-black/40 absolute top-0 flex flex-col space-y-4 items-center justify-center">
             <h1 class="text-4xl lg:text-7xl font-bold text-center text-white mb-10">
@@ -11,7 +11,7 @@
           <button
             class="bg-white/20 px-8 py-4 mt-2 rounded-lg border-2 border-white font-semibold hover:border-primary hover:text-primary hover:bg-secondary transition-all duration-800 ease-out group"
           >
-            <p class="text-white text-xl group-hover:text-white">
+            <p class="text-white text-lg md:text-xl group-hover:text-white">
               Book Your {{ pageTitle }}
             </p>
           </button>

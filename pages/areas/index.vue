@@ -1,8 +1,8 @@
 <template>
   <div>
     <Navbar />
-    <header class="w-screen max-h-[70vh] relative overflow-hidden justify-end flex">
-        <img src="/assets/img/baymap.webp" alt="background" class="object-scale-down w-2/3">
+    <header class="w-screen h-[70vh] relative overflow-hidden justify-end flex">
+        <img src="/assets/img/baymap.webp" alt="background" class="object-cover md:object-scale-down w-2/3 ">
         <div class="h-full w-full bg-black/40 absolute top-0 flex flex-col space-y-4 items-center justify-center">
             <h1 class="text-4xl lg:text-6xl font-bold text-center text-white mb-10 max-w-screen-xl">
                 Covering the Bay Area: Fast, Reliable Appliance Repairs Near You

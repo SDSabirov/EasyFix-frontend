@@ -1,12 +1,8 @@
 <template>
-  <div>
+  <div class="relative">
     <Navbar />
-    <div
-      class="w-screen max-h-[500px] overflow-hidden relative flex flex-col justify-center"
-    >
-      <LocationsGoogleMap v-model="location" />
-    </div>
-    <div class="flex flex-col items-center justify-center">
+    
+    <div class="flex flex-col items-center justify-center relative top-[72px] md:top-[98px]">
       <header class="bg-white py-4 mx-auto flex flex-col space-y-6 items-center justify-center">
         <h1
           class="text-4xl lg:text-6xl font-bold text-center text-primary mb-10 max-w-screen-xl capitalize"
@@ -24,7 +20,7 @@
           </button>
         </a>
       </header>
-      <section class="px-6 lg:px-12 py-8 text-lg text-gray-700 max-w-screen-xl">
+      <section class="px-6 lg:px-12 py-10 text-lg text-gray-700 max-w-screen-xl">
         <p class="mb-6">
           At Easy Fix Appliance, we pride ourselves on delivering top-tier
           appliance repair services in
@@ -46,6 +42,11 @@
           smoothly.
         </p>
       </section>
+    </div>
+    <div
+      class="w-screen max-h-[600px] overflow-hidden relative mt-16 flex flex-col justify-center "
+    >
+      <LocationsGoogleMap v-model="location" />
     </div>
     <Footer />
     <ModalsPrivacy />
