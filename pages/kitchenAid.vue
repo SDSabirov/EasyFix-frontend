@@ -61,10 +61,10 @@
                 We Service the Following KitchenAid Appliances:
               </h2>
               <div class="text-gray-700 leading-relaxed">
-                <div class="grid grid-cols-2 p-4 w-1/2">
+                <div class="grid grid-cols-1 md:grid-cols-2 p-4 w-full md:w-1/2 ">
                   <div>
-                    <p><strong>Refrigeration Appliances:</strong></p>
-                    <ul class="list-disc list-inside ml-6 mb-4">
+                    <p><strong class="whitespace-nowrap">Refrigeration Appliances:</strong></p>
+                    <ul class="list-disc  ml-6 mb-4">
                       <li>Refrigerators / Built-In Fridges</li>
                       <li>Freezers</li>
                       <li>Ice Makers</li>
@@ -75,7 +75,7 @@
   
                   <div>
                     <p><strong>Cooking Appliances:</strong></p>
-                    <ul class="list-disc list-inside ml-6">
+                    <ul class="list-disc ml-6">
                       <li>Ranges</li>
                       <li>Stoves</li>
                       <li>Ovens</li>
