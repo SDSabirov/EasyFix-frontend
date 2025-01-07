@@ -11,7 +11,6 @@
 import { useRoute } from "vue-router";
 
 const route = useRoute();
-
 useHead(() => ({
   meta: [
     {
@@ -42,7 +41,11 @@ useHead({
         });
       `,
       type: 'text/javascript'
-    }
+    },
+    {
+      src: '//534024.tctm.co/t.js',
+      async: true,
+    },
   ],
   noscript: [
     {
