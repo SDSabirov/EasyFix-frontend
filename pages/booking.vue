@@ -27,3 +27,40 @@
     </div>
   </div>
 </template>
+<script setup>
+
+import { onMounted } from 'vue'
+import { useFlowbite } from '~/composables/useFlowbite';
+
+// initialize components based on data attribute selectors
+onMounted(() => {
+    useFlowbite(() => {
+        initFlowbite();
+    })
+    window.addEventListener('scroll', changeBackground);
+    
+})
+
+
+function changeBackground(){
+    if (window.scrollY > 1) {
+        document.querySelector('nav').classList.remove('bg-black/30');
+        document.querySelector('nav').classList.add('bg-primary');
+        
+    } else {
+        document.querySelector('nav').classList.remove('bg-primary');
+        document.querySelector('nav').classList.add('bg-black/30');
+    }
+    
+}
+
+function onScroll() {
+    if (window.scrollY == 0) {
+        changeBackground();
+    } else {
+        changeBackground();
+    }
+}
+
+
+</script>
