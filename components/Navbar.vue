@@ -130,26 +130,21 @@
               >Services</NuxtLink
             >
           </li>
-          <li>
-            <NuxtLink
-              href="/areas"
-              class="block py-2 px-3 text-white rounded hover:bg-secondary md:hover:bg-transparent  md:p-0 md:text-lg md:hover:text-blue-500"
-              >Areas</NuxtLink
-            >
-          </li>
           
-          <li>
-            <NuxtLink
-              href="/blogs"
-              class="block py-2 px-3 text-white rounded hover:bg-secondary md:hover:bg-transparent  md:p-0 md:text-lg md:hover:text-blue-500"
-              >Blogs</NuxtLink
-            >
-          </li>
+          
+         
           <li>
             <NuxtLink
               href="/contact-us"
               class="block py-2 px-3 text-white rounded hover:bg-secondary md:hover:bg-transparent  md:p-0 md:text-lg md:hover:text-blue-500"
               >Contact Us</NuxtLink
+            >
+          </li>
+          <li>
+            <NuxtLink
+              href="/booking"
+              class="block py-2 px-3 text-white rounded hover:bg-secondary md:hover:bg-transparent  md:p-0 md:text-lg md:hover:text-blue-500"
+              >Online Booking</NuxtLink
             >
           </li>
         </ul>
