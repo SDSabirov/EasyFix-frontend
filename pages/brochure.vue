@@ -146,10 +146,10 @@
             >
               $25 OFF
             </h2>
-            <p class="text-4xl md:text-8xl w-full text-center text-primary">
+            <p class="text-4xl md:text-5xl w-full text-center text-primary">
               Any Repair
             </p>
-            <p class="text-2xl md:text-8xl w-full text-center text-primary">
+            <p class="text-2xl w-full text-center text-primary">
               When you call before 5pm
             </p>
             <div class="w-full flex px-6 justify-center">
@@ -209,13 +209,13 @@
             <h2
               class="text-4xl md:text-8xl font-bold w-full text-center text-primary"
             >
-              $25 OFF
+              FREE
             </h2>
-            <p class="text-4xl md:text-8xl w-full text-center text-primary">
-              Any Repair
+            <p class="text-4xl md:text-5xl w-full text-center text-primary">
+              Diagnostic
             </p>
-            <p class="text-2xl md:text-8xl w-full text-center text-primary">
-              When you call before 5pm
+            <p class="text-2xl md:text-4xl w-full text-center font-bold text-primary">
+              With Repair
             </p>
             <div class="w-full flex px-6 justify-center">
               <a href="" class="text-4xl bg-primary text-white rounded-xl p-4"
