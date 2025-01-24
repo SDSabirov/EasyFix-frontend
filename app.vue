@@ -3,7 +3,6 @@
     <NuxtLayout>
        <NuxtPage />
     </NuxtLayout>
-    <ContactButton/>  
   </div>
 </template>
 
