@@ -48,61 +48,51 @@
             </div>
           </div>
 
-          <div class="rounded-xl w-full h-full overflow-hidden">
+          <div class="rounded-xl w-full h-full overflow-hidden hidden md:grid">
             <img
               src="/assets/img/kitchenBright.webp"
               alt="kitchen image"
-              class="object-cover"
+              class="object-cover invisible md:visible"
             />
           </div>
         </div>
-        <div class="flex justify-center mb-6">
+        <div
+          class="flex justify-center mb-6 px-4 max-w-screen-xl w-full mx-auto"
+        >
           <div
-            class="w-full flex space-x-6 space-y-4 md:space-y-0 flex-wrap flex-grow items-center justify-center"
+            class="w-full grid grid-cols-3 gap-8 md:grid-cols-6 items-center justify-center"
           >
-            <div class="max-h-[40px]">
-              <img
-                src="/assets/img/kitchenaid.png"
-                class="h-[40px] object-contain max-w-[80px]"
-                alt="kitchenaid logo"
-              />
-            </div>
+            <img
+              src="/assets/img/dacor-logo.png"
+              class="h-[30px] max-w-[110px]"
+              alt="Dacor Logo"
+            />
+            <img
+              src="/assets/img/subzeroLogosilver.png"
+              class="h-[30px] max-w-[110px]"
+              alt="Subzero Logo"
+            />
+            <img
+              src="/assets/img/wolf.png"
+              class="h-[30px] max-w-[110px]"
+              alt="Wolf Logo"
+            />
+            <img
+              src="/assets/img/GEmonogram.png"
+              class="h-[30px] max-w-[110px]"
+              alt="GE Monogram Logo"
+            />
+            <img
+              src="/assets/img/viking.png"
+              class="h-[30px] max-w-[110px]"
+              alt="viking logo"
+            />
 
-            <div class="max-h-[40px]">
-              <img
-                src="/assets/img/subzeroLogosilver.png"
-                class="h-[40px] object-contain max-w-[100px]"
-                alt="Subzero Logo"
-              />
-            </div>
-            <div class="max-h-[40px]">
-              <img
-                src="/assets/img/wolf.png"
-                class="h-[40px] object-contain max-w-[100px]"
-                alt="Wolf Logo"
-              />
-            </div>
-            <div class="max-h-[40px]">
-              <img
-                src="/assets/img/GEmonogram.png"
-                class="h-[40px] object-contain max-w-[100px]"
-                alt="GE Monogram Logo"
-              />
-            </div>
-            <div class="max-h-[40px]">
-              <img
-                src="/assets/img/viking.png"
-                class="h-[40px] object-contain max-w-[100px]"
-                alt="viking logo"
-              />
-            </div>
-            <div class="max-h-[40px]">
-              <img
-                src="/assets/img/dacor-logo.png"
-                class="h-[40px] object-contain max-w-[100px]"
-                alt="Dacor Logo"
-              />
-            </div>
+            <img
+              src="/assets/img/kitchenaid.png"
+              class="h-[30px] max-w-[110px]"
+              alt="kitchenaid logo"
+            />
           </div>
         </div>
       </div>
@@ -116,20 +106,20 @@
       >
         <div class="flex flex-col w-full space-y-4">
           <h2
-            class="text-4xl md:text-6xl text-primary w-full font-bold leading-loose text-justify"
+            class="text-4xl md:text-6xl text-primary w-full font-bold leading-loose text-center md:text-left"
           >
             Free Diagnostic with Repair Hurry, Call Now!
           </h2>
           <a
             href="tel:4159414144"
-            class="text-4xl text-primary underline font-semibold mt-2"
+            class="text-4xl text-primary underline font-semibold mt-2 text-center md:text-left"
             >(415) 941-4144
           </a>
-          <p class="text-xl text-gray-900">
+          <p class="text-xl text-gray-900 text-center md:text-left">
             Nothing’s worse than a broken appliance—except waiting forever for
             the repair
           </p>
-          <p class="text-xl text-gray-900">
+          <p class="text-xl text-gray-900 text-center md:text-left">
             At Easyfix, we understand how frustrating it is when your daily
             routine grinds to a halt because of a faulty appliance. The last
             thing you need is more delays waiting on a repair. That’s why we
@@ -137,7 +127,9 @@
             your normal routine without the long wait.
           </p>
         </div>
-        <div class="rounded-xl border border-gray-100 shadow-2xl p-4 bg-light">
+        <div
+          class="rounded-xl border border-gray-100 shadow-2xl p-4 bg-light order-last md:order-none"
+        >
           <div
             class="border-2 border-primary flex flex-col space-y-4 rounded-xl w-full h-full p-4 py-8 uppercase"
           >
@@ -153,7 +145,9 @@
               When you call before 5pm
             </p>
             <div class="w-full flex px-6 justify-center">
-              <a href="" class="text-4xl bg-primary text-white rounded-xl p-4"
+              <a
+                href=""
+                class="text-xl md:text-4xl bg-primary text-white rounded-xl p-4"
                 >Call Now (415) 941-4144</a
               >
             </div>
@@ -165,10 +159,6 @@
             </p>
           </div>
         </div>
-      </div>
-      <div
-        class="grid grid-cols-1 md:grid-cols-2 max-w-screen-xl w-full px-4 gap-6"
-      >
         <div class="flex flex-col w-full space-y-4">
           <h2
             class="text-4xl md:text-6xl text-primary w-full font-bold leading-loose text-justify"
@@ -214,11 +204,15 @@
             <p class="text-4xl md:text-5xl w-full text-center text-primary">
               Diagnostic
             </p>
-            <p class="text-2xl md:text-4xl w-full text-center font-bold text-primary">
+            <p
+              class="text-2xl md:text-4xl w-full text-center font-bold text-primary"
+            >
               With Repair
             </p>
             <div class="w-full flex px-6 justify-center">
-              <a href="" class="text-4xl bg-primary text-white rounded-xl p-4"
+              <a
+                href="tel:4159414144"
+                class="text-4xl bg-primary text-white rounded-xl p-4 text-xl md:text-4xl"
                 >Call Now (415) 941-4144</a
               >
             </div>
@@ -231,8 +225,220 @@
           </div>
         </div>
       </div>
+
+      
+    </section>
+
+    <section class="w-full flex flex-col space-y-6 items-center justify-center py-8 bg-light">
+        <h2 class="text-2xl md:text-4xl text-primary text-center font-semibold">Services We Provide</h2>
+      <div class="grid gap-6 grid-cols-2 md:grid-cols-4 py-8 items-center">
+        <NuxtLink to="/services/range-repair">
+          <!-- Card: Ranges -->
+          <div class="p-6 flex flex-col items-center justify-center group">
+            <div class="text-primary mb-4">
+              <img
+                src="/assets/img/services/range.webp"
+                alt="Range repair"
+                class="w-[100px] h-[100px] group-hover:scale-105 transition-all duration-300"
+              />
+            </div>
+            <h3
+              class="text-xl font-semibold text-primary mb-2 text-center group-hover:text-secondary transtion-color duration-300"
+            >
+              Range Repair
+            </h3>
+            
+          </div>
+        </NuxtLink>
+
+        <NuxtLink to="/services/stove-repair">
+          <!-- Card: Stoves -->
+          <div class="p-6 flex flex-col items-center group">
+            <div class="text-primary mb-4">
+              <img
+                src="/assets/img/services/stove.webp"
+                alt="Stove repair"
+                class="w-[100px] h-[100px] group-hover:scale-105 transition-all duration-300"
+              />
+            </div>
+            <h3
+              class="text-xl font-semibold text-primary mb-2 group-hover:text-secondary transtion-color duration-300"
+            >
+              Stove Repair
+            </h3>
+           
+          </div>
+        </NuxtLink>
+
+        <NuxtLink to="/services/oven-repair">
+          <!-- Card: Ovens -->
+
+          <div class="p-6 flex flex-col items-center group">
+            <div class="text-primary mb-4">
+              <img
+                src="/assets/img/services/oven.webp"
+                alt="oven repair"
+                class="w-[100px] h-[100px] group-hover:scale-105 transition-all duration-300"
+              />
+            </div>
+            <h3
+              class="text-xl font-semibold text-primary mb-2 group-hover:text-secondary transtion-color duration-300"
+            >
+              Oven Repair
+            </h3>
+           
+          </div>
+        </NuxtLink>
+
+        <NuxtLink to="/services/double-oven-repair">
+          <!-- Card: Double Ovens -->
+          <div class="p-6 flex flex-col items-center group">
+            <div class="text-primary mb-4">
+              <img
+                src="/assets/img/services/doubleoven.webp"
+                alt="Double oven repair"
+                class="w-[100px] h-[100px] group-hover:scale-105 transition-all duration-300"
+              />
+            </div>
+            <h3
+              class="text-xl font-semibold text-primary mb-2 group-hover:text-secondary transtion-color duration-300"
+            >
+              Double Oven Repair
+            </h3>
+           
+          </div>
+        </NuxtLink>
+
+        <NuxtLink to="/services/cooktop-repair">
+          <!-- Card: Cooktops -->
+          <div class="p-6 flex flex-col items-center group">
+            <div class="text-primary mb-4">
+              <img
+                src="/assets/img/services/cooktop.webp"
+                alt="cooktop repair"
+                class="w-[100px] h-[100px] group-hover:scale-105 transition-all duration-300"
+              />
+            </div>
+            <h3
+              class="text-xl font-semibold text-primary mb-2 group-hover:text-secondary transtion-color duration-300"
+            >
+              Cooktop Repair
+            </h3>
+           
+          </div>
+        </NuxtLink>
+        <!-- Card: Refrigerators / Built-In Fridges -->
+        <NuxtLink to="/services/refrigerator">
+          <div class="p-6 flex flex-col items-center justify-center group">
+            <div class="text-primary mb-4">
+              <img
+                src="/assets/img/services/fridge.webp"
+                alt="refrigerator repair"
+                class="w-[100px] h-[100px] group-hover:scale-105 transition-all duration-300"
+              />
+            </div>
+            <h3
+              class="text-xl font-semibold text-primary mb-2 text-center group-hover:text-secondary transtion-color duration-300"
+            >
+              Refrigerators Repair
+            </h3>
+           
+          </div>
+        </NuxtLink>
+        <NuxtLink to="/services/freezer">
+          <!-- Card: Freezers -->
+          <div class="p-6 flex flex-col items-center group">
+            <div class="text-primary mb-4">
+              <img
+                src="/assets/img/services/freezer.webp"
+                alt="rfreezer repair"
+                class="w-[100px] h-[100px] group-hover:scale-105 transition-all duration-300"
+              />
+            </div>
+            <h3
+              class="text-xl font-semibold text-primary mb-2 group-hover:text-secondary transtion-color duration-300"
+            >
+              Freezer Repair
+            </h3>
+            
+          </div>
+        </NuxtLink>
+        <NuxtLink to="/services/ice-maker-repair">
+          <!-- Card: Ice Makers -->
+          <div class="p-6 flex flex-col items-center group">
+            <div class="text-primary mb-4">
+              <img
+                src="/assets/img/services/icemaker.webp"
+                alt="icemaker repair"
+                class="w-[100px] h-[100px] group-hover:scale-105 transition-all duration-300"
+              />
+            </div>
+            <h3
+              class="text-xl font-semibold text-primary mb-2 group-hover:text-secondary transtion-color duration-300"
+            >
+              Ice Maker Repair
+            </h3>
+            
+          </div>
+        </NuxtLink>
+        <NuxtLink to="/services/under-counter-fridge-repair">
+          <!-- Card: Under Counter Fridges -->
+          <div class="p-6 flex flex-col items-center group">
+            <div class="text-primary mb-4">
+              <img
+                src="/assets/img/services/undercounter.webp"
+                alt="undercounter fridge repair"
+                class="w-[100px] h-[100px] group-hover:scale-105 transition-all duration-300"
+              />
+            </div>
+            <h3
+              class="text-xl font-semibold text-primary mb-2 group-hover:text-secondary transtion-color duration-300"
+            >
+              Under-Counter Fridge Repair
+            </h3>
+           
+          </div>
+        </NuxtLink>
+
+        <NuxtLink to="/services/wine-cooler-repair">
+          <!-- Card: Wine Coolers -->
+          <div class="p-6 flex flex-col items-center group">
+            <div class="text-primary mb-4">
+              <img
+                src="/assets/img/services/winecooler.webp"
+                alt="undercounter fridge repair"
+                class="w-[100px] h-[100px] group-hover:scale-105 transition-all duration-300"
+              />
+            </div>
+            <h3
+              class="text-xl font-semibold text-primary mb-2 group-hover:text-secondary transtion-color duration-300"
+            >
+              Wine Cooler Repair
+            </h3>
+            
+          </div>
+        </NuxtLink>
+
+        <NuxtLink to="/services/built-in-fridges">
+          <div class="p-6 flex flex-col items-center group">
+            <div class="text-primary mb-4">
+              <img
+                src="/assets/img/services/builtin.webp"
+                alt="undercounter fridge repair"
+                class="w-[100px] h-[100px] group-hover:scale-105 transition-all duration-300"
+              />
+            </div>
+            <h3
+              class="text-xl font-semibold text-primary mb-2 group-hover:text-secondary transtion-color duration-300"
+            >
+              Built-In Fridges
+            </h3>
+            
+          </div>
+        </NuxtLink>
+      </div>
       <div
-        class="max-w-screen-xl rounded-xl bg-primary w-full flex flex-col  items-ceneter justify-center md:flex-row space-x-6 p-4 mt-6 mb-6 space-y-6 md:space-y-0"
+        class="max-w-screen-xl rounded-xl bg-primary w-full flex flex-col items-ceneter justify-center md:flex-row space-x-6 p-4 mt-6 mb-6 space-y-6 md:space-y-0"
       >
         <div class="w-full md:w-1/5 flex items-center justify-center p-2">
           <svg
@@ -250,17 +456,65 @@
             ></path>
           </svg>
         </div>
-        <div class="w-full md:w-3/5 flex items-center justify-center flex-col text-balance gap-4">
-            <h3 class="text-white text-4xl uppercase font-semibold text-center">Local Service Guarantee</h3>
-            <p class="text-white text-xl uppercase font-normal text-center">No matter where you are located, our neighborhood technicians are only minutes away</p>
+        <div
+          class="w-full md:w-3/5 flex items-center justify-center flex-col text-balance space-y-4 md:space-y-0"
+        >
+          <h3
+            class="text-white text-2xl md:text-4xl uppercase font-semibold text-center"
+          >
+            Local Service Guarantee
+          </h3>
+          <p
+            class="text-white text-lg md:text-xl uppercase font-normal text-center"
+          >
+            No matter where you are located, our neighborhood technicians are
+            only minutes away
+          </p>
         </div>
-        <div class="w-full md:w-2/5 flex items-center justify-center flex-col text-balance">
-            <a href="tel:4159414144" class="text-primary text-xl p-4 rounded-xl bg-white">Call Now (415) 941-4144</a>
+        <div
+          class="w-full md:w-2/5 flex items-center justify-center flex-col text-balance"
+        >
+          <a
+            href="tel:4159414144"
+            class="text-primary text-lg md:text-xl p-4 rounded-xl bg-white"
+            >Call Now (415) 941-4144</a
+          >
         </div>
       </div>
     </section>
-    <Footer/>
+    <div class="fixed bottom-0 w-full bg-darkblue/60 flex items-center justify-center p-4 hidden animate-fadeUp" id="CTA">
+        <a href="tel:4159414144" class="p-2 px-6 text-primary bg-white rounded-xl animate-flashShadow transition-all duration-800 ease-out">Call Now</a>
+    </div>
+    <Footer />
   </div>
 </template>
 
-<script setup></script>
+<script setup>
+onMounted(() => {
+    useFlowbite(() => {
+        initFlowbite();
+    })
+    window.addEventListener('scroll', showCTA);
+    
+})
+function showCTA(){
+    const cta = document.querySelector('#CTA')
+    const footer = document.querySelector('#footer');
+    if (!cta || !footer) return;
+
+    // 1. Basic threshold check: show/hide CTA after some scroll depth
+    if (window.scrollY > 1) {
+    cta.classList.remove('hidden');
+    } else {
+    cta.classList.add('hidden');
+    }
+
+    // 2. Hide CTA if user’s viewport overlaps the footer
+    const footerTop = footer.offsetTop;
+    const viewportBottom = window.scrollY + window.innerHeight;
+
+    if (viewportBottom >= footerTop) {
+    cta.classList.add('hidden');
+    }
+}
+</script>
