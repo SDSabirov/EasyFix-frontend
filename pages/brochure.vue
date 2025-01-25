@@ -426,23 +426,7 @@
           </div>
         </NuxtLink>
 
-        <NuxtLink to="/services/built-in-fridges">
-          <div class="p-6 flex flex-col items-center group">
-            <div class="text-primary mb-4">
-              <img
-                src="/assets/img/services/builtin.webp"
-                alt="undercounter fridge repair"
-                class="w-[100px] h-[100px] group-hover:scale-105 transition-all duration-300"
-              />
-            </div>
-            <h3
-              class="text-md font-semibold text-center text-primary mb-2 group-hover:text-secondary transtion-color duration-300"
-            >
-              Built-In Fridges
-            </h3>
-            
-          </div>
-        </NuxtLink>
+        
       </div>
       <div
         class="rounded-xl bg-primary w-[98%] flex flex-col items-ceneter justify-center md:flex-row md:space-x-6 space-x-0 p-4 mt-6 mb-6 space-y-6 md:space-y-0 py-6"
