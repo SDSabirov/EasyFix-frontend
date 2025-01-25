@@ -19,30 +19,37 @@
 
     <div class="w-full flexm flex-col items-center justify-center mt-10">
       <div class="max-w-screen-xl w-full mx-auto">
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-12 px-2 md:px-0 py-12">
-          <div class="flex flex-col space-y-8">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-12 px-2 md:px-0 py-12 mb-6">
+          <div class="flex flex-col space-y-12">
             <h2 class="text-gray-600 text-lg capitalize font-semibold">
-              #1 appliance repair in Bay Area
+            Your #1 Choice for Appliance Repair in the Bay Area
             </h2>
-            <p class="text-primary text-4xl uppercase font-semibold">
+            <p class="text-primary text-3xl md:text-4xl uppercase font-semibold">
               GET $25 OFF ALL APPLIANCE REPAIRS WHEN YOU CALL BEFORE 5PM.
             </p>
-            <p class="text-gray-600 text-lg capitalize font-semibold">
+            <ul class="list-disc list-inside space-y-4 text-primary text-lg">
+                <li>Free Diagnostic With Repair ($99 value)</li>
+                <li>Affordable, Budget-Friendly Prices</li>
+                <li>Licensed & Insured For Your Protection</li>
+                <li>Fully Stocked Vans For Faster Repairs</li>
+                <li>Friendly (Smiling) Technicians</li>
+            </ul>
+            <p class="text-gray-600 text-md md:text-lg capitalize font-semibold">
               No matter where you’re located in the Bay area, our neighborhood
               technicians are only minutes away.
             </p>
             <a
               href="tel:4159414144"
-              class="p-4 text-white bg-primary rounded-xl text-2xl text-center hover:text-xl transition-all duration-300 ease-in-out"
+              class="p-4 text-white bg-primary rounded-xl text-xl md:text-2xl text-center hover:text-xl transition-all duration-300 ease-in-out"
               >Call Now (415) 941-4144</a
             >
-            <div class="flex space-x-4 items-center">
+            <div class="flex space-x-4 items-center mt-6">
               <img
                 src="/assets/icons/googleReviews.png"
                 alt="Google reviews"
                 class="w-[100px]"
               />
-              <p class="text-gray-600 text-lg capitalize font-semibold">
+              <p class="text-gray-600 text-md capitalize font-semibold">
                 5 Star service based on our customers
               </p>
             </div>
@@ -102,24 +109,24 @@
       class="w-full flex flex-col space-y-6 items-center justify-center py-8 mt-8 px-4 md:px-0"
     >
       <div
-        class="grid grid-cols-1 md:grid-cols-2 max-w-screen-xl w-full px-4 gap-6"
+        class="grid grid-cols-1 md:grid-cols-2 max-w-screen-xl w-full px-4 gap-6 leading-loose"
       >
-        <div class="flex flex-col w-full space-y-4">
+        <div class="flex flex-col w-full space-y-12">
           <h2
-            class="text-4xl md:text-6xl text-primary w-full font-bold leading-loose text-center md:text-left"
+            class="text-2xl md:text-6xl text-primary w-full font-bold leading-7 text-center md:text-left"
           >
             Free Diagnostic with Repair Hurry, Call Now!
           </h2>
           <a
             href="tel:4159414144"
-            class="text-4xl text-primary underline font-semibold mt-2 text-center md:text-left"
+            class="text-2xl text-primary underline font-semibold mt-2 text-center md:text-left"
             >(415) 941-4144
           </a>
-          <p class="text-xl text-gray-900 text-center md:text-left">
+          <p class="text-lg md:text-xl text-gray-900 text-center md:text-left">
             Nothing’s worse than a broken appliance—except waiting forever for
             the repair
           </p>
-          <p class="text-xl text-gray-900 text-center md:text-left">
+          <p class="text-lg md:text-xl text-gray-900 text-center md:text-left">
             At Easyfix, we understand how frustrating it is when your daily
             routine grinds to a halt because of a faulty appliance. The last
             thing you need is more delays waiting on a repair. That’s why we
@@ -144,10 +151,10 @@
             <p class="text-2xl w-full text-center text-primary">
               When you call before 5pm
             </p>
-            <div class="w-full flex px-6 justify-center">
+            <div class="w-full flex px-2 justify-center">
               <a
-                href=""
-                class="text-xl md:text-4xl bg-primary text-white rounded-xl p-4"
+                href="tel:4159414144"
+                class="text-sm md:text-2xl bg-primary text-white rounded-xl p-4"
                 >Call Now (415) 941-4144</a
               >
             </div>
@@ -159,14 +166,14 @@
             </p>
           </div>
         </div>
-        <div class="flex flex-col w-full space-y-4">
+        <div class="flex flex-col w-full space-y-8 mt-6">
           <h2
             class="text-4xl md:text-6xl text-primary w-full font-bold leading-loose text-justify"
           >
             Why Choose Us?
           </h2>
 
-          <ul class="text-xl text-primary list-disc">
+          <ul class="text-xl text-primary list-disc space-y-6">
             <li>
               <strong>You Get A LOCAL Appliance Repair Expert</strong> (No
               matter where you are at in the Bay Area, our techs are only
@@ -209,10 +216,10 @@
             >
               With Repair
             </p>
-            <div class="w-full flex px-6 justify-center">
+            <div class="w-full flex px-2 justify-center">
               <a
                 href="tel:4159414144"
-                class="text-4xl bg-primary text-white rounded-xl p-4 text-xl md:text-4xl"
+                class="text-sm md:text-2xl bg-primary text-white rounded-xl p-4 "
                 >Call Now (415) 941-4144</a
               >
             </div>
@@ -438,7 +445,7 @@
         </NuxtLink>
       </div>
       <div
-        class="max-w-screen-xl rounded-xl bg-primary w-full flex flex-col items-ceneter justify-center md:flex-row space-x-6 p-4 mt-6 mb-6 space-y-6 md:space-y-0"
+        class="rounded-xl bg-primary w-[98%] flex flex-col items-ceneter justify-center md:flex-row md:space-x-6 space-x-0 p-4 mt-6 mb-6 space-y-6 md:space-y-0 py-6"
       >
         <div class="w-full md:w-1/5 flex items-center justify-center p-2">
           <svg
@@ -476,7 +483,7 @@
         >
           <a
             href="tel:4159414144"
-            class="text-primary text-lg md:text-xl p-4 rounded-xl bg-white"
+            class="text-primary text-md md:text-xl p-4 rounded-xl bg-white"
             >Call Now (415) 941-4144</a
           >
         </div>
