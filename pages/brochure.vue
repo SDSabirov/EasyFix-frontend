@@ -243,7 +243,7 @@
               />
             </div>
             <h3
-              class="text-xl font-semibold text-primary mb-2 text-center group-hover:text-secondary transtion-color duration-300"
+              class="text-md font-semibold text-primary mb-2 text-center group-hover:text-secondary transtion-color duration-300"
             >
               Range Repair
             </h3>
@@ -262,7 +262,7 @@
               />
             </div>
             <h3
-              class="text-xl font-semibold text-primary mb-2 group-hover:text-secondary transtion-color duration-300"
+              class="text-md font-semibold text-primary mb-2 group-hover:text-secondary transtion-color duration-300"
             >
               Stove Repair
             </h3>
@@ -282,7 +282,7 @@
               />
             </div>
             <h3
-              class="text-xl font-semibold text-primary mb-2 group-hover:text-secondary transtion-color duration-300"
+              class="text-md font-semibold text-primary mb-2 group-hover:text-secondary transtion-color duration-300"
             >
               Oven Repair
             </h3>
@@ -301,7 +301,7 @@
               />
             </div>
             <h3
-              class="text-xl font-semibold text-primary mb-2 group-hover:text-secondary transtion-color duration-300"
+              class="text-md font-semibold text-center text-primary mb-2 group-hover:text-secondary transtion-color duration-300"
             >
               Double Oven Repair
             </h3>
@@ -320,7 +320,7 @@
               />
             </div>
             <h3
-              class="text-xl font-semibold text-primary mb-2 group-hover:text-secondary transtion-color duration-300"
+              class="text-md font-semibold text-center text-primary mb-2 group-hover:text-secondary transtion-color duration-300"
             >
               Cooktop Repair
             </h3>
@@ -338,7 +338,7 @@
               />
             </div>
             <h3
-              class="text-xl font-semibold text-primary mb-2 text-center group-hover:text-secondary transtion-color duration-300"
+              class="text-md font-semibold text-primary mb-2 text-center group-hover:text-secondary transtion-color duration-300"
             >
               Refrigerators Repair
             </h3>
@@ -356,7 +356,7 @@
               />
             </div>
             <h3
-              class="text-xl font-semibold text-primary mb-2 group-hover:text-secondary transtion-color duration-300"
+              class="text-md text-center font-semibold text-primary mb-2 group-hover:text-secondary transtion-color duration-300"
             >
               Freezer Repair
             </h3>
@@ -374,7 +374,7 @@
               />
             </div>
             <h3
-              class="text-xl font-semibold text-primary mb-2 group-hover:text-secondary transtion-color duration-300"
+              class="text-md text-center font-semibold text-primary mb-2 group-hover:text-secondary transtion-color duration-300"
             >
               Ice Maker Repair
             </h3>
@@ -392,7 +392,7 @@
               />
             </div>
             <h3
-              class="text-xl font-semibold text-primary mb-2 group-hover:text-secondary transtion-color duration-300"
+              class="text-md font-semibold text-center text-primary mb-2 group-hover:text-secondary transtion-color duration-300"
             >
               Under-Counter Fridge Repair
             </h3>
@@ -411,7 +411,7 @@
               />
             </div>
             <h3
-              class="text-xl font-semibold text-primary mb-2 group-hover:text-secondary transtion-color duration-300"
+              class="text-md font-semibold text-center text-primary mb-2 group-hover:text-secondary transtion-color duration-300"
             >
               Wine Cooler Repair
             </h3>
@@ -429,7 +429,7 @@
               />
             </div>
             <h3
-              class="text-xl font-semibold text-primary mb-2 group-hover:text-secondary transtion-color duration-300"
+              class="text-md font-semibold text-center text-primary mb-2 group-hover:text-secondary transtion-color duration-300"
             >
               Built-In Fridges
             </h3>
