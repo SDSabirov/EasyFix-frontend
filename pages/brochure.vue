@@ -347,7 +347,7 @@
             <h3
               class="text-md font-semibold text-primary mb-2 text-center group-hover:text-secondary transtion-color duration-300"
             >
-              Refrigerators Repair
+              Refrigerator Repair
             </h3>
            
           </div>
