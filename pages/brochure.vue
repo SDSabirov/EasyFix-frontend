@@ -132,15 +132,16 @@
             >(415) 941-4144
           </a>
           <p class="text-lg md:text-xl text-gray-900 text-center md:text-left">
-            Nothing’s worse than a broken appliance—except waiting forever for
-            the repair
+            There's nothing worse than a busted appliance...
+            <br>
+            ...except the busted repair guy
           </p>
           <p class="text-lg md:text-xl text-gray-900 text-center md:text-left">
-            At Easyfix, we understand how frustrating it is when your daily
-            routine grinds to a halt because of a faulty appliance. The last
-            thing you need is more delays waiting on a repair. That’s why we
-            pride ourselves on fast, reliable service—so you can get back to
-            your normal routine without the long wait.
+            They show up late, dirty uniform, dirty truck, and they leave a mess. Not only
+            are you dealing with a broken appliance but now you have to deal with a shady repair guy.
+          </p>
+          <p class="text-lg font-semibold md:text-xl text-gray-900 text-center md:text-left">
+            At Easyfix , not only are you getting top-notch service, but you're getting top-notch support
           </p>
         </div>
         <div
