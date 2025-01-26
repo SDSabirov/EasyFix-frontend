@@ -6,7 +6,7 @@
           class="container mx-auto px-4 py-3 flex justify-center items-center max-w-screen-xl"
         >
           <div
-            class="text-xl lg:text-base font-medium flex space-x-4 items-center"
+            class="text-xl lg:text-base font-medium flex space-x-4 items-center text-center"
           >
             <p>
               Get Same Day or Next Day Service to Bay Area.
@@ -17,24 +17,32 @@
       </a>
     </div>
 
-    <div class="w-full flexm flex-col items-center justify-center mt-10">
-      <div class="max-w-screen-xl w-full mx-auto">
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-12 px-2 md:px-0 py-12 mb-6">
-          <div class="flex flex-col space-y-12">
+    <div
+      class="w-full flexm flex-col items-center justify-center mt-10 bg-gray-100"
+    >
+      <div class="max-w-screen-xl w-full mx-auto px-4">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-12 px-2 md:px-0 py-12">
+          <div class="flex flex-col space-y-6">
             <h2 class="text-gray-600 text-lg capitalize font-semibold">
-            Your #1 Choice for Appliance Repair in the Bay Area
+              Your #1 Choice for Appliance Repair in the Bay Area
             </h2>
-            <p class="text-primary text-3xl md:text-4xl uppercase font-semibold">
+            <p
+              class="text-primary text-3xl md:text-4xl uppercase font-semibold"
+            >
               GET $25 OFF ALL APPLIANCE REPAIRS WHEN YOU CALL BEFORE 5PM.
             </p>
-            <ul class="list-disc list-inside space-y-4 text-primary text-lg">
-                <li>Free Diagnostic With Repair ($99 value)</li>
-                <li>Affordable, Budget-Friendly Prices</li>
-                <li>Licensed & Insured For Your Protection</li>
-                <li>Fully Stocked Vans For Faster Repairs</li>
-                <li>Friendly (Smiling) Technicians</li>
+            <ul
+              class="list-disc list-inside space-y-4 text-primary text-lg list-image-[url(/assets/icons/check.svg)]"
+            >
+              <li>Free Diagnostic With Repair ($99 value)</li>
+              <li>Affordable, Budget-Friendly Prices</li>
+              <li>Licensed & Insured For Your Protection</li>
+              <li>Fully Stocked Vans For Faster Repairs</li>
+              <li>Friendly (Smiling) Technicians</li>
             </ul>
-            <p class="text-gray-600 text-md md:text-lg capitalize font-semibold">
+            <p
+              class="text-gray-600 text-md md:text-lg capitalize font-semibold"
+            >
               No matter where you’re located in the Bay area, our neighborhood
               technicians are only minutes away.
             </p>
@@ -63,8 +71,9 @@
             />
           </div>
         </div>
+        <div class="w-full h-[2px] bg-primary/50"></div>
         <div
-          class="flex justify-center mb-6 px-4 max-w-screen-xl w-full mx-auto"
+          class="flex justify-center mb-6 px-4 max-w-screen-xl w-full mx-auto py-6"
         >
           <div
             class="w-full grid grid-cols-3 gap-8 md:grid-cols-6 items-center justify-center"
@@ -106,12 +115,12 @@
     </div>
 
     <section
-      class="w-full flex flex-col space-y-6 items-center justify-center py-8 mt-8 px-4 md:px-0"
+      class="w-full flex flex-col space-y-6 items-center justify-center py-6 mt-8 px-4 md:px-0"
     >
       <div
         class="grid grid-cols-1 md:grid-cols-2 max-w-screen-xl w-full px-4 gap-6 leading-loose"
       >
-        <div class="flex flex-col w-full space-y-12">
+        <div class="flex flex-col w-full space-y-3">
           <h2
             class="text-2xl md:text-6xl text-primary w-full font-bold leading-7 text-center md:text-left"
           >
@@ -135,26 +144,28 @@
           </p>
         </div>
         <div
-          class="rounded-xl border border-gray-100 shadow-2xl p-4 bg-light order-last md:order-none"
+          class="rounded-xl border border-gray-100 shadow-2xl p-4 bg-light order-1 md:order-none"
         >
           <div
-            class="border-2 border-primary flex flex-col space-y-4 rounded-xl w-full h-full p-4 py-8 uppercase"
+            class="border-2 border-primary flex flex-col space-y-4 rounded-xl w-full h-full p-4 py-8"
           >
             <h2
-              class="text-4xl md:text-8xl font-bold w-full text-center text-primary"
+              class="text-4xl md:text-8xl font-bold w-full text-center text-primary uppercase"
             >
               $25 OFF
             </h2>
-            <p class="text-4xl md:text-5xl w-full text-center text-primary">
+            <p
+              class="text-4xl md:text-5xl w-full text-center text-primary uppercase"
+            >
               Any Repair
             </p>
-            <p class="text-2xl w-full text-center text-primary">
+            <p class="text-2xl w-full text-center text-primary uppercase">
               When you call before 5pm
             </p>
             <div class="w-full flex px-2 justify-center">
               <a
                 href="tel:4159414144"
-                class="text-sm md:text-2xl bg-primary text-white rounded-xl p-4"
+                class="text-md md:text-2xl bg-primary text-white rounded-xl p-4"
                 >Call Now (415) 941-4144</a
               >
             </div>
@@ -166,14 +177,16 @@
             </p>
           </div>
         </div>
-        <div class="flex flex-col w-full space-y-8 mt-6">
+        <div class="flex flex-col w-full space-y-4 mt-6">
           <h2
-            class="text-4xl md:text-6xl text-primary w-full font-bold leading-loose text-justify"
+            class="text-4xl md:text-6xl text-primary w-full font-bold text-justify"
           >
             Why Choose Us?
           </h2>
-
-          <ul class="text-xl text-primary list-disc space-y-6">
+          <div class="h-[2px] bg-primary w-1/4"></div>
+          <ul
+            class="text-xl text-primary list-disc space-y-4 list-image-[url(/assets/icons/check.svg)] px-4 text-justify"
+          >
             <li>
               <strong>You Get A LOCAL Appliance Repair Expert</strong> (No
               matter where you are at in the Bay Area, our techs are only
@@ -199,27 +212,68 @@
             </li>
           </ul>
         </div>
-        <div class="rounded-xl border border-gray-100 shadow-2xl p-4 bg-light">
+        <div class="rounded-xl border border-gray-100 shadow-2xl p-4 bg-light order-2 md:order-none">
           <div
-            class="border-2 border-primary flex flex-col space-y-4 rounded-xl w-full h-full p-4 py-8 uppercase"
+            class="border-2 border-primary flex flex-col space-y-4 rounded-xl w-full h-full p-4 py-8"
           >
             <h2
-              class="text-4xl md:text-8xl font-bold w-full text-center text-primary"
+              class="text-4xl md:text-8xl font-bold w-full text-center text-primary uppercase"
             >
               FREE
             </h2>
-            <p class="text-4xl md:text-5xl w-full text-center text-primary">
+            <p
+              class="text-4xl md:text-5xl w-full text-center text-primary uppercase"
+            >
               Diagnostic
             </p>
             <p
-              class="text-2xl md:text-4xl w-full text-center font-bold text-primary"
+              class="text-2xl md:text-4xl w-full text-center font-bold text-primary uppercase"
             >
               With Repair
             </p>
             <div class="w-full flex px-2 justify-center">
               <a
                 href="tel:4159414144"
-                class="text-sm md:text-2xl bg-primary text-white rounded-xl p-4 "
+                class="text-md md:text-2xl bg-primary text-white rounded-xl p-4"
+                >Call Now (415) 941-4144</a
+              >
+            </div>
+            <p class="text-lg w-full text-center text-gray-600">
+              Offer good for completed repair only
+            </p>
+            <p class="text-lg w-full text-center text-gray-600">
+              Doesn't apply for diagnostic fee
+            </p>
+          </div>
+        </div>
+        <div class="rounded-xl border border-gray-100 shadow-2xl p-4 bg-light order-3 md:order-none md:hidden">
+          <div
+            class="border-2 border-primary flex flex-col space-y-4 rounded-xl w-full h-full p-4 py-8"
+          >
+            <h2
+              class="text-xl md:text-8xl font-bold w-full text-center text-primary uppercase"
+            >
+              Hurry! Call now for
+            </h2>
+            <h2
+              class="text-4xl md:text-8xl font-bold w-full text-center text-primary uppercase"
+            >
+              Same Day
+            </h2>
+            <p
+              class="text-3xl md:text-5xl w-full text-center text-primary uppercase"
+            >
+              Or Next Day
+            </p>
+            <p
+              class="text-4xl md:text-4xl w-full text-center font-bold text-primary uppercase"
+            >
+              Service
+            </p>
+            <div class="w-full flex px-2 justify-center">
+              <a
+                href="tel:4159414144"
+                class="text-md md:text-2xl bg-primary text-white rounded-xl p-4"
                 >Call Now (415) 941-4144</a
               >
             </div>
@@ -232,12 +286,16 @@
           </div>
         </div>
       </div>
-
-      
     </section>
 
-    <section class="w-full flex flex-col space-y-6 items-center justify-center py-8 bg-light">
-        <h2 class="text-2xl md:text-4xl text-primary text-center font-semibold">Services We Provide</h2>
+    <section
+      class="w-full flex flex-col space-y-6 items-center justify-center py-8 bg-light"
+    >
+      <h2
+        class="text-2xl md:text-4xl text-primary text-center font-semibold max-w-screen-xl px-4"
+      >
+        Your Trusted Partner for Appliance Repairs
+      </h2>
       <div class="grid gap-6 grid-cols-2 md:grid-cols-4 py-8 items-center">
         <NuxtLink to="/services/range-repair">
           <!-- Card: Ranges -->
@@ -254,7 +312,6 @@
             >
               Range Repair
             </h3>
-            
           </div>
         </NuxtLink>
 
@@ -273,7 +330,6 @@
             >
               Stove Repair
             </h3>
-           
           </div>
         </NuxtLink>
 
@@ -293,7 +349,6 @@
             >
               Oven Repair
             </h3>
-           
           </div>
         </NuxtLink>
 
@@ -312,7 +367,6 @@
             >
               Double Oven Repair
             </h3>
-           
           </div>
         </NuxtLink>
 
@@ -331,7 +385,6 @@
             >
               Cooktop Repair
             </h3>
-           
           </div>
         </NuxtLink>
         <!-- Card: Refrigerators / Built-In Fridges -->
@@ -349,7 +402,6 @@
             >
               Refrigerator Repair
             </h3>
-           
           </div>
         </NuxtLink>
         <NuxtLink to="/services/freezer">
@@ -367,7 +419,6 @@
             >
               Freezer Repair
             </h3>
-            
           </div>
         </NuxtLink>
         <NuxtLink to="/services/ice-maker-repair">
@@ -385,7 +436,6 @@
             >
               Ice Maker Repair
             </h3>
-            
           </div>
         </NuxtLink>
         <NuxtLink to="/services/under-counter-fridge-repair">
@@ -403,7 +453,6 @@
             >
               Under-Counter Fridge Repair
             </h3>
-           
           </div>
         </NuxtLink>
 
@@ -422,14 +471,16 @@
             >
               Wine Cooler Repair
             </h3>
-            
           </div>
         </NuxtLink>
-
-        
       </div>
+
+      <div class="px-4 bg-gray-200">
+        <PromotionsTestimonials/>
+      </div>
+      
       <div
-        class="rounded-xl bg-primary w-[98%] flex flex-col items-ceneter justify-center md:flex-row md:space-x-6 space-x-0 p-4 mt-6 mb-6 space-y-6 md:space-y-0 py-6"
+        class="rounded-xl bg-primary w-[96%] flex flex-col items-ceneter justify-center md:flex-row md:space-x-6 space-x-0 p-4 mt-6 mb-6 space-y-6 md:space-y-0 py-6 md:max-w-screen-xl"
       >
         <div class="w-full md:w-1/5 flex items-center justify-center p-2">
           <svg
@@ -448,7 +499,7 @@
           </svg>
         </div>
         <div
-          class="w-full md:w-3/5 flex items-center justify-center flex-col text-balance space-y-4 md:space-y-0"
+          class="w-full md:w-3/5 flex items-center justify-center flex-col text-balance space-y-4 md:space-y-0 "
         >
           <h3
             class="text-white text-2xl md:text-4xl uppercase font-semibold text-center"
@@ -473,39 +524,47 @@
         </div>
       </div>
     </section>
-    <div class="fixed bottom-0 w-full bg-darkblue/60 flex items-center justify-center p-4 hidden animate-fadeUp" id="CTA">
-        <a href="tel:4159414144" class="p-2 px-6 text-primary bg-white rounded-xl animate-flashShadow transition-all duration-800 ease-out">Call Now</a>
+    <div
+      class="fixed bottom-0 w-full bg-darkblue/60 flex items-center justify-center p-4 hidden animate-fadeUp"
+      id="CTA"
+    >
+      <a
+        href="tel:4159414144"
+        class="p-2 px-6 text-primary bg-white rounded-xl animate-flashShadow transition-all duration-800 ease-out"
+        >Call Now</a
+      >
     </div>
     <Footer />
   </div>
 </template>
 
 <script setup>
+
+
 onMounted(() => {
-    useFlowbite(() => {
-        initFlowbite();
-    })
-    window.addEventListener('scroll', showCTA);
-    
-})
-function showCTA(){
-    const cta = document.querySelector('#CTA')
-    const footer = document.querySelector('#footer');
-    if (!cta || !footer) return;
+  useFlowbite(() => {
+    initFlowbite();
+  });
+  window.addEventListener("scroll", showCTA);
+});
+function showCTA() {
+  const cta = document.querySelector("#CTA");
+  const footer = document.querySelector("#footer");
+  if (!cta || !footer) return;
 
-    // 1. Basic threshold check: show/hide CTA after some scroll depth
-    if (window.scrollY > 1) {
-    cta.classList.remove('hidden');
-    } else {
-    cta.classList.add('hidden');
-    }
+  // 1. Basic threshold check: show/hide CTA after some scroll depth
+  if (window.scrollY > 1) {
+    cta.classList.remove("hidden");
+  } else {
+    cta.classList.add("hidden");
+  }
 
-    // 2. Hide CTA if user’s viewport overlaps the footer
-    const footerTop = footer.offsetTop;
-    const viewportBottom = window.scrollY + window.innerHeight;
+  // 2. Hide CTA if user’s viewport overlaps the footer
+  const footerTop = footer.offsetTop;
+  const viewportBottom = window.scrollY + window.innerHeight;
 
-    if (viewportBottom >= footerTop) {
-    cta.classList.add('hidden');
-    }
+  if (viewportBottom >= footerTop) {
+    cta.classList.add("hidden");
+  }
 }
 </script>
