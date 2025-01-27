@@ -156,11 +156,11 @@
               $25 OFF
             </h2>
             <p
-              class="text-4xl md:text-5xl w-full text-center text-primary uppercase"
+              class="text-2xl md:text-5xl w-full text-center text-primary uppercase"
             >
               Any Repair
             </p>
-            <p class="text-2xl w-full text-center text-primary uppercase">
+            <p class="text-lg w-full text-center text-primary uppercase px-10">
               When you call before 5pm
             </p>
             <div class="w-full flex px-2 justify-center">
@@ -170,10 +170,10 @@
                 >Call Now (415) 941-4144</a
               >
             </div>
-            <p class="text-lg w-full text-center text-gray-600">
+            <p class="text-sm w-full text-center text-gray-600">
               Offer good for completed repair only
             </p>
-            <p class="text-lg w-full text-center text-gray-600">
+            <p class="text-sm w-full text-center text-gray-600">
               Doesn't apply for diagnostic fee
             </p>
           </div>
@@ -186,7 +186,7 @@
           </h2>
           <div class="h-[2px] bg-primary w-1/4"></div>
           <ul
-            class="text-xl text-primary list-disc space-y-4 list-image-[url(/assets/icons/check.svg)] px-4 text-justify"
+            class="text-xl text-primary list-disc space-y-4 list-image-[url(/assets/icons/check.svg)] px-4"
           >
             <li>
               <strong>You Get A LOCAL Appliance Repair Expert</strong> (No
@@ -223,12 +223,12 @@
               FREE
             </h2>
             <p
-              class="text-4xl md:text-5xl w-full text-center text-primary uppercase"
+              class="text-xl md:text-5xl w-full text-center text-primary uppercase"
             >
               Diagnostic
             </p>
             <p
-              class="text-2xl md:text-4xl w-full text-center font-bold text-primary uppercase"
+              class="text-xl md:text-4xl w-full text-center font-bold text-primary uppercase"
             >
               With Repair
             </p>
@@ -239,10 +239,10 @@
                 >Call Now (415) 941-4144</a
               >
             </div>
-            <p class="text-lg w-full text-center text-gray-600">
+            <p class="text-sm w-full text-center text-gray-600">
               Offer good for completed repair only
             </p>
-            <p class="text-lg w-full text-center text-gray-600">
+            <p class="text-sm w-full text-center text-gray-600">
               Doesn't apply for diagnostic fee
             </p>
           </div>
@@ -262,7 +262,7 @@
               Same Day
             </h2>
             <p
-              class="text-3xl md:text-5xl w-full text-center text-primary uppercase"
+              class="text-2xl md:text-5xl w-full text-center text-primary uppercase"
             >
               Or Next Day
             </p>
@@ -278,10 +278,10 @@
                 >Call Now (415) 941-4144</a
               >
             </div>
-            <p class="text-lg w-full text-center text-gray-600">
+            <p class="text-sm w-full text-center text-gray-600">
               Offer good for completed repair only
             </p>
-            <p class="text-lg w-full text-center text-gray-600">
+            <p class="text-sm w-full text-center text-gray-600">
               Doesn't apply for diagnostic fee
             </p>
           </div>
@@ -508,7 +508,7 @@
             Local Service Guarantee
           </h3>
           <p
-            class="text-white text-lg md:text-xl uppercase font-normal text-center"
+            class="text-white text-sm md:text-xl font-normal text-center"
           >
             No matter where you are located, our neighborhood technicians are
             only minutes away
