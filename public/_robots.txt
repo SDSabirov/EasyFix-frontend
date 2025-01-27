@@ -1,5 +1,4 @@
 User-agent: *
 Sitemap: https://easyfixappliance.com/sitemap.xml
-Disallow: /admin/
-Disallow: /brochure/
+Disallow: /bay-area-appliance-repair
 Allow: /
