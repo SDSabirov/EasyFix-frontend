@@ -46,11 +46,18 @@
               No matter where you’re located in the Bay area, our neighborhood
               technicians are only minutes away.
             </p>
-            <a
-              href="tel:4159414144"
-              class="p-4 text-white bg-primary rounded-xl text-xl hidden md:flex md:text-2xl text-center hover:text-xl transition-all duration-300 ease-in-out"
-              >Call Now (415) 941-4144</a
-            >
+            <div class="w-full flex px-2 justify-center">
+              <a
+                href="tel:4159414144"
+                class="text-lg md:text-2xl bg-primary text-white rounded-full py-2 px-6 flex items-center w-full justify-center"
+                ><span
+                  ><img
+                    src="/assets/icons/phone-white.svg"
+                    alt="phone icon"
+                    class="mr-2" /></span
+                >Call Now
+              </a>
+            </div>
             <div class="flex space-x-4 items-center mt-6">
               <img
                 src="/assets/icons/googleReviews.png"
@@ -65,9 +72,9 @@
 
           <div class="rounded-xl w-full h-full overflow-hidden hidden md:grid">
             <img
-              src="/assets/img/kitchenBright.webp"
+              src="/assets/img/satisfied-customer.jpg"
               alt="kitchen image"
-              class="object-cover invisible md:visible"
+              class="object-cover w-full h-full"
             />
           </div>
         </div>
@@ -76,7 +83,7 @@
           class="flex justify-center mb-6 px-4 max-w-screen-xl w-full mx-auto py-6"
         >
           <div
-            class="w-full grid grid-cols-3 gap-8 md:grid-cols-6 items-center justify-center"
+            class="w-full grid grid-cols-3 gap-8 md:grid-cols-5 items-center justify-center"
           >
             <img
               src="/assets/img/subzeroLogosilver.png"
@@ -144,204 +151,214 @@
       class="w-full flex flex-col space-y-6 items-center justify-center py-6 mt-8 px-4 md:px-0"
     >
       <div
-        class="grid grid-cols-1 md:grid-cols-2 max-w-screen-xl w-full px-4 gap-2 md:gap-6 leading-loose"
+        class="grid grid-cols-1 md:grid-cols-2 max-w-screen-xl w-full px-4 gap-12 leading-loose"
       >
-        <div class="flex flex-col w-full space-y-3">
-          <h2
-            class="text-2xl md:text-6xl text-primary w-full font-bold leading-7 text-center md:text-left"
-          >
-            Free Diagnostic with Repair Hurry, Call Now!
-          </h2>
-          <a
-            href="tel:4159414144"
-            class="text-2xl text-primary font-semibold mt-2 text-center md:text-left"
-            >(415) 941-4144
-          </a>
-          <p class="text-lg md:text-xl text-gray-900 text-center md:text-left">
-            There's nothing worse than a busted appliance...
-            <br />
-            ...except the busted repair guy.
-          </p>
-          <p class="text-lg md:text-xl text-gray-900 text-center md:text-left">
-            They show up late, dirty uniform, dirty truck, and they leave a
-            mess. Not only are you dealing with a broken appliance but now you
-            have to deal with a shady repair guy.
-          </p>
-          <p
-            class="text-lg font-semibold md:text-xl text-gray-900 text-center md:text-left"
-          >
-            At Easyfix , not only are you getting top-notch service, but you're
-            getting top-notch support
-          </p>
-        </div>
-        <div
-          class="rounded-xl border border-gray-100 shadow-2xl p-4 bg-light order-1 md:order-none"
-        >
-          <div
-            class="border-2 border-primary flex flex-col space-y-2 rounded-xl w-full h-full p-4 py-8 font-quicksand"
-          >
+        <div class="flex flex-col items-center justify-evenly space-y-8 md:space-y-0">
+          <div class="flex flex-col w-full space-y-3 md:space-y-6">
             <h2
-              class="text-5xl md:text-8xl font-extrabold w-full text-center text-primary uppercase"
+              class="text-2xl md:text-6xl text-primary w-full font-bold leading-7 text-center md:text-left"
             >
-              $25 OFF
+              Free Diagnostic with Repair Hurry, Call Now!
             </h2>
+            <a
+              href="tel:4159414144"
+              class="text-2xl text-primary font-semibold mt-2 text-center md:text-left"
+              >(415) 941-4144
+            </a>
             <p
-              class="text-3xl md:text-5xl w-full text-center text-primary uppercase font-extrabold"
+              class="text-lg md:text-xl text-gray-900 text-center md:text-left"
             >
-              Any Repair
-            </p>
-            <p
-              class="text-sm w-full text-center text-primary uppercase px-2 whitespace-nowrap"
-            >
-              When you call before 5pm
-            </p>
-            <div class="w-full flex px-2 justify-center">
-              <a
-                href="tel:4159414144"
-                class="text-lg md:text-2xl bg-primary text-white rounded-full py-2 px-6 flex items-center"
-                ><span
-                  ><img
-                    src="/assets/icons/phone-white.svg"
-                    alt="phone icon"
-                    class="mr-2" /></span
-                >Call Now</a
-              >
-            </div>
-            <p class="text-sm w-full text-center text-gray-600">
-              Doesn't apply towards diagnostic fee
-            </p>
-          </div>
-        </div>
-        <div class="flex flex-col w-full space-y-4 mt-6">
-          <h2
-            class="text-4xl md:text-6xl text-primary w-full font-bold text-justify"
-          >
-            Why Choose Us?
-          </h2>
-          <div class="h-[2px] bg-primary w-1/4"></div>
-          <ul class="text-xl text-primary space-y-2 list-none">
-            <li class="flex gap-4 items-center">
-              <img src="/assets/icons/check-square.svg" alt="check" />
-              <span>
-                <strong>You Get A LOCAL Appliance Repair Expert</strong> (No
-                matter where you are in the Bay Area, our techs are only minutes
-                away)
-              </span>
-            </li>
-            <li class="flex gap-2 items-center">
-              <img src="/assets/icons/check-square.svg" alt="check" />
-              <span>
-                <strong>You Get Friendly, Same Day Service Before 5pm</strong>
-                (Availibity is limited so CALL NOW)
-              </span>
-            </li>
-            <li class="flex gap-2 items-center">
-              <img src="/assets/icons/check-square.svg" alt="check" />
-              <span
-                ><strong>Your Diagnostic Is FREE With Repair</strong> (If your
-                appliance gets fixed, you don't pay the diagnostic fee)</span
-              >
-            </li>
-            <li class="flex gap-2 items-center">
-              <img src="/assets/icons/check-square.svg" alt="check" />
-              <span>
-                <strong>You Always Get 5-Star Service</strong> (if we don't
-                deserve 5 STARS, let us know and we'll do everything we can to
-                make it right)
-              </span>
-            </li>
-            <li class="flex gap-2 items-center">
-              <img src="/assets/icons/check-square.svg" alt="check" />
-              <span>
-                <strong>You Can Relax</strong> (We're licensed, bonded, and
-                insured, plus we perform drug and background checks on all
-                employees)
-              </span>
-            </li>
-          </ul>
-        </div>
-        <div
-          class="rounded-xl border border-gray-100 shadow-2xl p-4 bg-light order-2 md:order-none"
-        >
-          <div
-            class="border-2 border-primary flex flex-col space-y-2 rounded-xl w-full h-full p-4 py-8 font-quicksand"
-          >
-            <h2
-              class="text-5xl md:text-8xl font-extrabold w-full text-center text-primary uppercase"
-            >
-              FREE
-            </h2>
-            <p
-              class="text-xl md:text-5xl w-full text-center text-primary uppercase"
-            >
-              Diagnostic
-            </p>
-            <p
-              class="text-xl md:text-4xl w-full text-center font-bold text-primary uppercase"
-            >
-              With Repair
-            </p>
-            <div class="w-full flex px-2 justify-center">
-              <a
-                href="tel:4159414144"
-                class="text-lg md:text-2xl bg-primary text-white rounded-full py-2 px-6 flex items-center"
-                ><span
-                  ><img
-                    src="/assets/icons/phone-white.svg"
-                    alt="phone icon"
-                    class="mr-2" /></span
-                >Call Now</a
-              >
-            </div>
-            <p class="text-sm w-full text-center text-gray-600">
-              Only one per customer
+              There's nothing worse than a busted appliance...
               <br />
-              First time customers only.
+              ...except the busted repair guy.
+            </p>
+            <p
+              class="text-lg md:text-xl text-gray-900 text-center md:text-left"
+            >
+              They show up late, dirty uniform, dirty truck, and they leave a
+              mess. Not only are you dealing with a broken appliance but now you
+              have to deal with a shady repair guy.
+            </p>
+            <p
+              class="text-lg font-semibold md:text-xl text-gray-900 text-center md:text-left"
+            >
+              At Easyfix , not only are you getting top-notch service, but
+              you're getting top-notch support
             </p>
           </div>
+
+          <div class="flex flex-col w-full space-y-4 mt-6 ">
+            <h2
+              class="text-4xl md:text-6xl text-primary w-full font-bold text-justify"
+            >
+              Why Choose Us?
+            </h2>
+            <div class="h-[2px] bg-primary w-1/4"></div>
+            <ul class="text-xl text-primary space-y-2 list-none md:space-y-6">
+              <li class="flex gap-4 items-center">
+                <img src="/assets/icons/check-square.svg" alt="check" />
+                <span>
+                  <strong>You Get A LOCAL Appliance Repair Expert</strong> (No
+                  matter where you are in the Bay Area, our techs are only
+                  minutes away)
+                </span>
+              </li>
+              <li class="flex gap-2 items-center">
+                <img src="/assets/icons/check-square.svg" alt="check" />
+                <span>
+                  <strong>You Get Friendly, Same Day Service Before 5pm</strong>
+                  (Availibity is limited so CALL NOW)
+                </span>
+              </li>
+              <li class="flex gap-2 items-center">
+                <img src="/assets/icons/check-square.svg" alt="check" />
+                <span
+                  ><strong>Your Diagnostic Is FREE With Repair</strong> (If your
+                  appliance gets fixed, you don't pay the diagnostic fee)</span
+                >
+              </li>
+              <li class="flex gap-2 items-center">
+                <img src="/assets/icons/check-square.svg" alt="check" />
+                <span>
+                  <strong>You Always Get 5-Star Service</strong> (if we don't
+                  deserve 5 STARS, let us know and we'll do everything we can to
+                  make it right)
+                </span>
+              </li>
+              <li class="flex gap-2 items-center">
+                <img src="/assets/icons/check-square.svg" alt="check" />
+                <span>
+                  <strong>You Can Relax</strong> (We're licensed, bonded, and
+                  insured, plus we perform drug and background checks on all
+                  employees)
+                </span>
+              </li>
+            </ul>
+          </div>
         </div>
-        <div
-          class="rounded-xl border border-gray-100 shadow-2xl p-4 bg-light order-3 md:order-none md:hidden"
-        >
+
+        <div class="space-y-2">
           <div
-            class="border-2 border-primary flex flex-col space-y-2 rounded-xl w-full h-full p-4 py-8 font-quicksand"
+            class="rounded-xl border border-gray-100 shadow-2xl p-4 bg-light order-1 md:order-none"
           >
-            <h2
-              class="text-lg md:text-8xl font-bold w-full text-center text-primary uppercase"
+            <div
+              class="border-2 border-primary flex flex-col space-y-2 md:space-y-6 md:justify-between rounded-xl w-full h-full p-4 py-8 font-quicksand"
             >
-              Hurry! Call now for
-            </h2>
-            <h2
-              class="text-4xl md:text-8xl font-extrabold w-full text-center text-primary uppercase"
-            >
-              Same Day
-            </h2>
-            <p
-              class="text-2xl md:text-5xl w-full text-center text-primary uppercase"
-            >
-              Or Next Day
-            </p>
-            <p
-              class="text-4xl md:text-4xl w-full text-center font-extrabold text-primary uppercase"
-            >
-              Service
-            </p>
-            <div class="w-full flex px-2 justify-center">
-              <a
-                href="tel:4159414144"
-                class="text-lg md:text-2xl bg-primary text-white rounded-full py-2 px-6 flex items-center"
-                ><span
-                  ><img
-                    src="/assets/icons/phone-white.svg"
-                    alt="phone icon"
-                    class="mr-2" /></span
-                >Call Now</a
+              <h2
+                class="text-5xl md:text-7xl font-extrabold w-full text-center text-primary uppercase"
               >
+                $25 OFF
+              </h2>
+              <p
+                class="text-3xl md:text-5xl w-full text-center text-primary uppercase font-extrabold"
+              >
+                Any Repair
+              </p>
+              <p
+                class="text-sm md:text-xl w-full text-center text-primary uppercase px-2 whitespace-nowrap"
+              >
+                When you call before 5pm
+              </p>
+              <div class="w-full flex px-2 justify-center">
+                <a
+                  href="tel:4159414144"
+                  class="text-lg md:text-2xl bg-primary text-white rounded-full py-2 px-6 flex items-center"
+                  ><span
+                    ><img
+                      src="/assets/icons/phone-white.svg"
+                      alt="phone icon"
+                      class="mr-2" /></span
+                  >Call Now</a
+                >
+              </div>
+              <p class="text-sm w-full text-center text-gray-600">
+                Doesn't apply towards diagnostic fee
+              </p>
             </div>
-            <p class="text-sm w-full text-center text-gray-600">
-              Same day service is based on availabilty. Limited spots are
-              available, so call now.
-            </p>
+          </div>
+          <div
+            class="rounded-xl border border-gray-100 shadow-2xl p-4 bg-light order-2 md:order-none"
+          >
+            <div
+              class="border-2 border-primary flex flex-col space-y-2 rounded-xl w-full h-full p-4 py-8 font-quicksand md:justify-between"
+            >
+              <h2
+                class="text-5xl md:text-8xl font-extrabold w-full text-center text-primary uppercase"
+              >
+                FREE
+              </h2>
+              <p
+                class="text-xl md:text-4xl w-full text-center text-primary uppercase"
+              >
+                Diagnostic
+              </p>
+              <p
+                class="text-xl md:text-3xl w-full text-center font-bold text-primary uppercase"
+              >
+                With Repair
+              </p>
+              <div class="w-full flex px-2 justify-center">
+                <a
+                  href="tel:4159414144"
+                  class="text-lg md:text-2xl bg-primary text-white rounded-full py-2 px-6 flex items-center"
+                  ><span
+                    ><img
+                      src="/assets/icons/phone-white.svg"
+                      alt="phone icon"
+                      class="mr-2" /></span
+                  >Call Now</a
+                >
+              </div>
+              <p class="text-sm w-full text-center text-gray-600">
+                Only one per customer
+                <br />
+                First time customers only.
+              </p>
+            </div>
+          </div>
+          <div
+            class="rounded-xl border border-gray-100 shadow-2xl p-4 bg-light order-3 md:order-none"
+          >
+            <div
+              class="border-2 border-primary flex flex-col space-y-2 rounded-xl w-full h-full p-4 py-8 font-quicksand md:justify-between"
+            >
+              <h2
+                class="text-lg md:text-2xl font-bold w-full text-center text-primary uppercase"
+              >
+                Hurry! Call now for
+              </h2>
+              <h2
+                class="text-4xl md:text-7xl font-extrabold w-full text-center text-primary uppercase"
+              >
+                Same Day
+              </h2>
+              <p
+                class="text-2xl md:text-4xl w-full text-center text-primary uppercase"
+              >
+                Or Next Day
+              </p>
+              <p
+                class="text-4xl md:text-5xl w-full text-center font-extrabold text-primary uppercase"
+              >
+                Service
+              </p>
+              <div class="w-full flex px-2 justify-center">
+                <a
+                  href="tel:4159414144"
+                  class="text-lg md:text-2xl bg-primary text-white rounded-full py-2 px-6 flex items-center"
+                  ><span
+                    ><img
+                      src="/assets/icons/phone-white.svg"
+                      alt="phone icon"
+                      class="mr-2" /></span
+                  >Call Now</a
+                >
+              </div>
+              <p class="text-sm w-full text-center text-gray-600">
+                Same day service is based on availabilty. Limited spots are
+                available, so call now.
+              </p>
+            </div>
           </div>
         </div>
       </div>
@@ -376,7 +393,7 @@
           class="rounded-2xl w-full p-2 flex flex-col items-center justify-start bg-primary text-white shadow-xl"
         >
           <div
-            class="rounded-xl w-full p-6 flex flex-col space-y-6 items-start justify-start border-2 border-white"
+            class="rounded-xl w-full p-6 flex flex-col space-y-6 items-start justify-start border-2 border-white h-full"
           >
             <img
               src="/assets/icons/technical-support.png"
@@ -402,10 +419,14 @@
       >
         Your Trusted Partner for Appliance Repairs
       </h2>
-      <div class="grid gap-6 grid-cols-2 md:grid-cols-4 py-8 items-center px-2">
+      <div
+        class="grid gap-6 grid-cols-2 md:grid-cols-4 w-full max-w-screen-xl py-8 items-center px-2"
+      >
         <NuxtLink to="/services/range-repair">
           <!-- Card: Ranges -->
-          <div class="p-6 flex flex-col items-center justify-center group bg-light rounded-xl shadow-xl">
+          <div
+            class="p-6 flex flex-col items-center justify-center group bg-light rounded-xl shadow-xl"
+          >
             <div class="text-primary mb-4">
               <img
                 src="/assets/icons/range-icon11.png"
@@ -416,14 +437,16 @@
             <h3
               class="text-md font-semibold text-primary mb-2 text-center group-hover:text-secondary transtion-color duration-300"
             >
-              Range 
+              Range
             </h3>
           </div>
         </NuxtLink>
 
         <NuxtLink to="/services/stove-repair">
           <!-- Card: Stoves -->
-          <div class="p-6 flex flex-col items-center group bg-light rounded-xl shadow-xl">
+          <div
+            class="p-6 flex flex-col items-center group bg-light rounded-xl shadow-xl"
+          >
             <div class="text-primary mb-4">
               <img
                 src="/assets/icons/stove-icon22.png"
@@ -442,7 +465,9 @@
         <NuxtLink to="/services/oven-repair">
           <!-- Card: Ovens -->
 
-          <div class="p-6 flex flex-col items-center group bg-light rounded-xl shadow-xl">
+          <div
+            class="p-6 flex flex-col items-center group bg-light rounded-xl shadow-xl"
+          >
             <div class="text-primary mb-4">
               <img
                 src="/assets/icons/oven-icon.png"
@@ -453,17 +478,19 @@
             <h3
               class="text-md font-semibold text-primary mb-2 group-hover:text-secondary transtion-color duration-300"
             >
-              Oven 
+              Oven
             </h3>
           </div>
         </NuxtLink>
 
         <!-- Card: Refrigerators / Built-In Fridges -->
         <NuxtLink to="/services/refrigerator">
-          <div class="p-6 flex flex-col items-center justify-center group bg-light rounded-xl shadow-xl">
+          <div
+            class="p-6 flex flex-col items-center justify-center group bg-light rounded-xl shadow-xl"
+          >
             <div class="text-primary mb-4">
               <img
-                src="/assets/icons/1.png"
+                src="/assets/icons/7.png"
                 alt="refrigerator repair"
                 class="w-[100px] h-[100px] group-hover:scale-105 transition-all duration-300"
               />
@@ -471,16 +498,18 @@
             <h3
               class="text-md font-semibold text-primary mb-2 text-center group-hover:text-secondary transtion-color duration-300"
             >
-              Refrigerator 
+              Refrigerator
             </h3>
           </div>
         </NuxtLink>
         <NuxtLink to="/services/freezer">
           <!-- Card: Freezers -->
-          <div class="p-6 flex flex-col items-center group bg-light rounded-xl shadow-xl">
+          <div
+            class="p-6 flex flex-col items-center group bg-light rounded-xl shadow-xl"
+          >
             <div class="text-primary mb-4">
               <img
-                src="/assets/icons/2.png"
+                src="/assets/icons/3.png"
                 alt="rfreezer repair"
                 class="w-[100px] h-[100px] group-hover:scale-105 transition-all duration-300"
               />
@@ -494,10 +523,12 @@
         </NuxtLink>
         <NuxtLink to="/services/ice-maker-repair">
           <!-- Card: Ice Makers -->
-          <div class="p-6 flex flex-col items-center group bg-light rounded-xl shadow-xl">
+          <div
+            class="p-6 flex flex-col items-center group bg-light rounded-xl shadow-xl"
+          >
             <div class="text-primary mb-4">
               <img
-                src="/assets/icons/3.png"
+                src="/assets/icons/8.png"
                 alt="icemaker repair"
                 class="w-[100px] h-[100px] group-hover:scale-105 transition-all duration-300"
               />
@@ -511,10 +542,12 @@
         </NuxtLink>
         <NuxtLink to="/services/under-counter-fridge-repair">
           <!-- Card: Under Counter Fridges -->
-          <div class="p-6 flex flex-col items-center group bg-light rounded-xl shadow-xl">
+          <div
+            class="p-6 flex flex-col items-center group bg-light rounded-xl shadow-xl"
+          >
             <div class="text-primary mb-4">
               <img
-                src="/assets/icons/5.png"
+                src="/assets/icons/4.png"
                 alt="undercounter fridge repair"
                 class="w-[100px] h-[100px] group-hover:scale-105 transition-all duration-300"
               />
@@ -529,10 +562,12 @@
 
         <NuxtLink to="/services/wine-cooler-repair">
           <!-- Card: Wine Coolers -->
-          <div class="p-6 flex flex-col items-center group bg-light rounded-xl shadow-xl">
-            <div class="text-primary mb-4 ">
+          <div
+            class="p-6 flex flex-col items-center group bg-light rounded-xl shadow-xl"
+          >
+            <div class="text-primary mb-4">
               <img
-                src="/assets/icons/4.png"
+                src="/assets/icons/1.png"
                 alt="undercounter fridge repair"
                 class="w-[100px] h-[100px] group-hover:scale-105 transition-all duration-300"
               />
@@ -540,13 +575,13 @@
             <h3
               class="text-md font-semibold text-center text-primary mb-2 group-hover:text-secondary transtion-color duration-300"
             >
-              Wine Cooler 
+              Wine Cooler
             </h3>
           </div>
         </NuxtLink>
       </div>
 
-      <div class="px-4 bg-gray-200">
+      <div class="px-4 bg-gray-200 w-full py-6">
         <PromotionsTestimonials />
       </div>
 
