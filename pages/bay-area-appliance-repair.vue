@@ -453,7 +453,7 @@
             <h3
               class="text-md font-semibold text-primary mb-2 group-hover:text-secondary transtion-color duration-300"
             >
-              Oven Repair
+              Oven 
             </h3>
           </div>
         </NuxtLink>
