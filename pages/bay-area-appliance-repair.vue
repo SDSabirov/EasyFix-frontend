@@ -416,7 +416,7 @@
             <h3
               class="text-md font-semibold text-primary mb-2 text-center group-hover:text-secondary transtion-color duration-300"
             >
-              Range Repair
+              Range 
             </h3>
           </div>
         </NuxtLink>
@@ -434,7 +434,7 @@
             <h3
               class="text-md font-semibold text-primary mb-2 group-hover:text-secondary transtion-color duration-300 whitespace-nowrap"
             >
-              Cook Top/Stove Repair
+              Cook Top/Stove
             </h3>
           </div>
         </NuxtLink>
@@ -471,7 +471,7 @@
             <h3
               class="text-md font-semibold text-primary mb-2 text-center group-hover:text-secondary transtion-color duration-300"
             >
-              Refrigerator Repair
+              Refrigerator 
             </h3>
           </div>
         </NuxtLink>
@@ -488,7 +488,7 @@
             <h3
               class="text-md text-center font-semibold text-primary mb-2 group-hover:text-secondary transtion-color duration-300"
             >
-              Freezer Repair
+              Freezer
             </h3>
           </div>
         </NuxtLink>
@@ -505,7 +505,7 @@
             <h3
               class="text-md text-center font-semibold text-primary mb-2 group-hover:text-secondary transtion-color duration-300"
             >
-              Ice Maker Repair
+              Ice Maker
             </h3>
           </div>
         </NuxtLink>
@@ -520,9 +520,9 @@
               />
             </div>
             <h3
-              class="text-md font-semibold text-center text-primary mb-2 group-hover:text-secondary transtion-color duration-300"
+              class="text-md font-semibold text-center text-primary mb-2 group-hover:text-secondary transtion-color duration-300 whitespace-nowrap"
             >
-              Under-Counter Fridge Repair
+              Under-Counter Fridge
             </h3>
           </div>
         </NuxtLink>
@@ -534,13 +534,13 @@
               <img
                 src="/assets/icons/4.png"
                 alt="undercounter fridge repair"
-                class="w-[100px] h-[120px] group-hover:scale-105 transition-all duration-300"
+                class="w-[100px] h-[100px] group-hover:scale-105 transition-all duration-300"
               />
             </div>
             <h3
               class="text-md font-semibold text-center text-primary mb-2 group-hover:text-secondary transtion-color duration-300"
             >
-              Wine Cooler Repair
+              Wine Cooler 
             </h3>
           </div>
         </NuxtLink>
