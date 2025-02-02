@@ -4,9 +4,12 @@
       class="max-w-screen h-full overflow-hidden z-10 "
     >
       <div class="container mx-auto px-2 py-6 lg:px-28">
-        <h2 class="text-4xl font-bold text-center text-primary capitalize">
-          What Our Clients Say
+        <h2 class="text-2xl font-bold text-left text-primary text-center">
+          What our customers are saying
         </h2>
+        <p class="text-primary text-sm font-semibold py-2 text-center">
+          We deeply care about our clients. So every 5 star review means world to us.
+        </p>
         <div
           class="max-w-screen-xl px-4 py-4 mx-auto text-center bg-light mt-2 md:mt-6"
         >
@@ -33,7 +36,7 @@
             </div>
             <blockquote>
               <p class="text-md font-normal text-gray-900 dark:text-white">
-                {{ currentReview.review }}
+                {{ currentReview.review.slice(0, 360) }}...
               </p>
             </blockquote>
             <figcaption class="flex items-center justify-center mt-6 space-x-3">
