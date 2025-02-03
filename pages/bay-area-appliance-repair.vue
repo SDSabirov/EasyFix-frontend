@@ -72,7 +72,7 @@
 
           <div class="rounded-xl w-full h-full overflow-hidden hidden md:grid">
             <img
-              src="/assets/img/satisfied-customer.jpg"
+              src="/assets/img/satisfied-customer1.jpg"
               alt="kitchen image"
               class="object-cover w-full h-full"
             />
