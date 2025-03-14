@@ -1,11 +1,14 @@
 <template>
   <nav
-    class="bg-transparent transition-all duration-500 dark:bg-gray-900 fixed w-full z-40 top-0 start-0 dark:border-gray-600 animate-fadeDown font-montserrat"
+    :class="[
+      'transition-all duration-500 fixed w-full z-40 top-0 start-0 font-montserrat',
+      isScrolled ? 'bg-black/50 backdrop-blur-md shadow-md' : 'bg-transparent',
+    ]"
   >
     <div
       class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-1"
     >
-      <a
+        <a
         href="/"
         class="flex items-center space-x-1 md:space-x-3 rtl:space-x-reverse"
       >
@@ -52,43 +55,45 @@
           </p>
         </div>
       </a>
-      <div
-        class="flex md:order-2 space-x-1 md:space-x-3 md:space-x-0 rtl:space-x-reverse"
-      >
+      <div class="flex md:order-2 space-x-1 md:space-x-3 md:space-x-0">
         <div class="space-x-1 md:space-x-4">
-          <!--call now buuron-->
           <a
             href="tel:4159414144"
-            class="flex space-x-2 items-center text-white bg-primary rounded-lg hover:text-white hover:bg-secondary hover:animate-flashShadow transition-all duration-800 ease-out focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium text-sm px-2 md:px-6 py-2 text-center"
+            class="flex space-x-2 items-center text-white bg-primary rounded-lg hover:text-white hover:bg-secondary transition-all duration-800 ease-out focus:ring-4 focus:outline-none font-medium text-sm px-2 md:px-6 py-2"
             >
             <span>Online Booking</span></a
           >
-          
         </div>
         <div class="space-x-1 md:space-x-4">
-          <!--call now buuron-->
           <a
             href="tel:4159414144"
-            class="flex space-x-2 items-center text-white bg-primary rounded-lg hover:text-white hover:bg-secondary hover:animate-flashShadow transition-all duration-800 ease-out focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium text-sm px-2 md:px-4 py-2 text-center"
+            class="flex space-x-2 items-center text-white bg-primary rounded-lg hover:text-white hover:bg-secondary transition-all duration-800 ease-out focus:ring-4 focus:outline-none font-medium text-sm px-2 md:px-4 py-2"
             >
             <span>Request a Call</span></a
           >
-          
         </div>
-
-      </div>
-      <div
-        class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1"
-        id="navbar-sticky"
-      >
-        <ul
-          class="flex flex-col p-4 md:p-0 mt-4 font-medium border border-gray-100 bg-primary md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-transparent dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700"
-        >
-         
-        </ul>
       </div>
     </div>
   </nav>
 </template>
 
-<script setup></script>
+<script setup>
+import { ref, onMounted, onUnmounted } from "vue";
+
+// Reactive state to track scroll position
+const isScrolled = ref(false);
+
+// Function to handle scroll
+const handleScroll = () => {
+  isScrolled.value = window.scrollY > 50; // Change background when scrolled 50px
+};
+
+// Lifecycle hooks
+onMounted(() => {
+  window.addEventListener("scroll", handleScroll);
+});
+
+onUnmounted(() => {
+  window.removeEventListener("scroll", handleScroll);
+});
+</script>
