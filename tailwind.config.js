@@ -23,7 +23,9 @@ export default {
       fontFamily: {
         montserrat: ['Montserrat', 'sans-serif'],
         roboto: ['Roboto', 'sans-serif'],
-        quicksand:['Quicksand','sans-serif']
+        quicksand:['Quicksand','sans-serif'],
+        inter:['Inter','sans-serif'],
+        
       },
       backgroundImage: {
         'contact': "url('/assets/img/oven.png)",
