@@ -2,19 +2,19 @@
   <section
     class="w-full py-12 bg-white bg-[url(/assets/img/promotions/pattern2.png)] bg-repeat pb-[152px]"
   >
-    <div class="w-full max-w-screen-xl mx-auto space-y-6 px-4 md:px-0">
-      <h1 class="text-2xl md:text-4xl font-semibold text-center">
+    <div class="w-full max-w-screen-xl mx-auto space-y-8 px-2 md:px-0">
+      <h1 class="text-3xl md:text-4xl font-semibold text-center">
         Our Services
       </h1>
-      <p class="text-xl text-center">
+      <p class="text-xl text-center bg-white/60">
         We understand the frustration of a malfunctioning appliance — especially
         when it disrupts your daily routine. That’s why Easy Fix Appliance is
         here to provide swift, expert service tailored to local homes, like
         yours.
       </p>
-      <div class="grid grid-cols-2 md:grid-cols-5 gap-6">
+      <div class="grid grid-cols-2 md:grid-cols-5  gap-6 ">
         <div
-          class="flex items-center justify-center bg-[#A7002B] min-h-[157px] w-[156px] rounded-xl relative"
+          class="flex items-center justify-self-center justify-center bg-[#A7002B] min-h-[157px] w-[156px] rounded-xl relative"
         >
           <div class="flex flex-col space-y-4 items-center justify-center p-4">
             <img
@@ -32,7 +32,7 @@
         </div>
 
         <div
-          class="flex items-center justify-center bg-[#A7002B] min-h-[157px] w-[156px] rounded-xl relative"
+          class="flex items-center justify-center justify-self-center bg-[#A7002B] min-h-[157px] w-[156px] rounded-xl relative"
         >
           <div class="flex flex-col space-y-4 items-center justify-center p-4">
             <img
@@ -50,7 +50,7 @@
         </div>
 
         <div
-          class="flex items-center justify-center bg-[#A7002B] min-h-[157px] w-[156px] rounded-xl relative"
+          class="flex items-center justify-center justify-self-center bg-[#A7002B] min-h-[157px] w-[156px] rounded-xl relative"
         >
           <div class="flex flex-col space-y-4 items-center justify-center p-4">
             <img
@@ -68,7 +68,7 @@
         </div>
 
         <div
-          class="flex items-center justify-center bg-[#A7002B] min-h-[157px] w-[156px] rounded-xl relative"
+          class="flex items-center justify-center justify-self-center bg-[#A7002B] min-h-[157px] w-[156px] rounded-xl relative"
         >
           <div class="flex flex-col space-y-4 items-center justify-center p-4">
             <img
@@ -86,7 +86,7 @@
         </div>
 
         <div
-          class="flex items-center justify-center bg-[#A7002B] min-h-[157px] w-[156px] rounded-xl relative"
+          class="flex items-center justify-center justify-self-center bg-[#A7002B] min-h-[157px] w-[156px] rounded-xl relative"
         >
           <div class="flex flex-col space-y-4 items-center justify-center p-4">
             <img
@@ -102,7 +102,7 @@
         </div>
 
         <div
-          class="flex items-center justify-center bg-[#A7002B] min-h-[157px] w-[156px] rounded-xl relative"
+          class="flex items-center justify-center justify-self-center bg-[#A7002B] min-h-[157px] w-[156px] rounded-xl relative"
         >
           <div class="flex flex-col space-y-4 items-center justify-center p-4">
             <img
@@ -117,7 +117,7 @@
           ></div>
         </div>
         <div
-          class="flex items-center justify-center bg-[#A7002B] min-h-[157px] w-[156px] rounded-xl relative"
+          class="flex items-center justify-center justify-self-center bg-[#A7002B] min-h-[157px] w-[156px] rounded-xl relative"
         >
           <div class="flex flex-col space-y-4 items-center justify-center p-4">
             <img
@@ -135,7 +135,7 @@
         </div>
 
         <div
-          class="flex items-center justify-center bg-[#A7002B] min-h-[157px] w-[156px] rounded-xl relative"
+          class="flex items-center justify-center justify-self-center bg-[#A7002B] min-h-[157px] w-[156px] rounded-xl relative"
         >
           <div class="flex flex-col space-y-4 items-center justify-center p-4">
             <img
@@ -151,7 +151,7 @@
         </div>
 
         <div
-          class="flex items-center justify-center bg-[#A7002B] min-h-[157px] w-[156px] rounded-xl relative"
+          class="flex items-center justify-center justify-self-center bg-[#A7002B] min-h-[157px] w-[156px] rounded-xl relative"
         >
           <div class="flex flex-col space-y-4 items-center justify-center p-4">
             <img
@@ -167,7 +167,7 @@
         </div>
 
          <div
-          class="flex items-center justify-center bg-[#A7002B] min-h-[157px] w-[156px] rounded-xl relative"
+          class="flex items-center justify-center justify-self-center bg-[#A7002B] min-h-[157px] w-[156px] rounded-xl relative"
         >
           <div class="flex flex-col space-y-4 items-center justify-center p-4">
             <img

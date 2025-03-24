@@ -58,7 +58,7 @@
       <div class="flex md:order-2 space-x-1 md:space-x-3 md:space-x-0">
         <div class="space-x-1 md:space-x-4">
           <a
-            href="tel:4159414144"
+            href="/booking"
             class="flex space-x-2 items-center text-white bg-primary rounded-lg hover:text-white hover:bg-secondary transition-all duration-800 ease-out focus:ring-4 focus:outline-none font-medium text-sm px-2 md:px-6 py-2"
             >
             <span>Online Booking</span></a

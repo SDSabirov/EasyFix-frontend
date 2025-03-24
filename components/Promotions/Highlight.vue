@@ -14,12 +14,10 @@
       class="flex flex-col space-y-6 w-full max-w-screen-xl mx-auto py-12 px-4 md:px-0 text-center text-white mt-12"
     >
       <h2 class="text-2xl md:text-4xl text-white font-semibold">
-        You pay only for the jobs done. <br />And done well.
+        100%  Job Satisfaction Guarantee
       </h2>
       <p class="text-lg">
-        Need same-day appliance repair? We're available 24/7 to answer your
-        questions and address household appliance issues. Our technicians start
-        repairs promptly upon appointment.
+        Need same-day appliance repair? We're available 24/7 to answer your questions and address household appliance issues. Our technicians start repairs promptly upon appointment.
       </p>
 
       <div class="grid grid-cols-1 md:grid-cols-4 py-6 gap-8">
