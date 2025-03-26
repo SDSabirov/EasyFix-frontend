@@ -1,8 +1,8 @@
 <template>
   <section
-    class="w-full py-12 bg-white bg-[url(/assets/img/promotions/pattern2.png)] bg-repeat pb-[152px]"
+    class="w-full py-12 bg-white bg-[url(/assets/img/promotions/pattern2.png)] bg-repeat pb-[152px] "
   >
-    <div class="w-full max-w-screen-xl mx-auto space-y-8 px-2 md:px-0">
+    <div class="w-full max-w-screen-xl mx-auto space-y-8 px-2 md:px-0 lg:py-8 ">
       <h1 class="text-3xl md:text-4xl font-semibold text-center">
         Our Services
       </h1>

@@ -1,9 +1,9 @@
 <template>
-  <section class="w-full relative bg-white">
+  <section class="w-full h-screen relative bg-white overflow-hidden">
     <img
       src="/assets/img/promotions/viking-hero2.webp"
       alt="Viking Appliances"
-      class="w-full h-full object-cover lg:absolute inset-0 z-0"
+      class="w-full object-cover lg:absolute inset-0 z-0"
     />
     <div
       class="flex w-full max-w-screen-xl mx-auto py-10 bg-[url(/assets/img/promotions/pattern.png)] md:py-28"
@@ -14,7 +14,7 @@
         <h1 class="text-3xl md:text-5xl font-semibold text-[1D1D1F]">
           We Service
         </h1>
-        <ul class="text-xl md:text-2xl  leading-loose list-inside space-y-8">
+        <ul class="text-xl md:text-2xl  leading-loose list-inside space-y-4">
           <li class="flex space-x-2">
             <span
               ><img
