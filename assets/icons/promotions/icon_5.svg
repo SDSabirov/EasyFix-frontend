@@ -1,0 +1,39 @@
+<svg width="80" height="110" viewBox="0 0 80 110" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect x="0.5" y="0.5" width="79" height="109" rx="1.5" stroke="white"/>
+<line x1="8.74228e-08" y1="19" x2="80" y2="19" stroke="white" stroke-width="2"/>
+<line x1="6" y1="25" x2="74" y2="25" stroke="white" stroke-width="2"/>
+<line x1="-8.74228e-08" y1="67" x2="80" y2="67" stroke="white" stroke-width="2"/>
+<line x1="41" y1="67" x2="41" y2="110" stroke="white" stroke-width="2"/>
+<line x1="10" y1="76.5" x2="30" y2="76.5" stroke="white"/>
+<line x1="50" y1="76.5" x2="70" y2="76.5" stroke="white"/>
+<line x1="10" y1="81.5" x2="30" y2="81.5" stroke="white"/>
+<line x1="50" y1="81.5" x2="70" y2="81.5" stroke="white"/>
+<line x1="10" y1="86.5" x2="30" y2="86.5" stroke="white"/>
+<line x1="50" y1="86.5" x2="70" y2="86.5" stroke="white"/>
+<line x1="10" y1="91.5" x2="30" y2="91.5" stroke="white"/>
+<line x1="50" y1="91.5" x2="70" y2="91.5" stroke="white"/>
+<line x1="10" y1="96.5" x2="30" y2="96.5" stroke="white"/>
+<line x1="50" y1="96.5" x2="70" y2="96.5" stroke="white"/>
+<line x1="10" y1="101.5" x2="30" y2="101.5" stroke="white"/>
+<line x1="50" y1="101.5" x2="70" y2="101.5" stroke="white"/>
+<rect x="8" y="6" width="2" height="2" fill="white"/>
+<rect x="14" y="6" width="2" height="2" fill="white"/>
+<rect x="20" y="6" width="2" height="2" fill="white"/>
+<line x1="42.5" y1="30" x2="42.5" y2="64" stroke="white"/>
+<line x1="42.3573" y1="54.6503" x2="46.554" y2="58.9384" stroke="white"/>
+<line x1="42.8394" y1="38.6378" x2="38.6428" y2="34.3497" stroke="white"/>
+<line x1="38.6464" y1="58.8891" x2="42.8891" y2="54.6465" stroke="white"/>
+<line x1="46.5503" y1="34.399" x2="42.3077" y2="38.6416" stroke="white"/>
+<line x1="51.4992" y1="50.9722" x2="51.8322" y2="56.963" stroke="white"/>
+<line x1="58" y1="50.5" x2="51" y2="50.5" stroke="white"/>
+<line x1="42.2774" y1="44.584" x2="57.2774" y2="54.584" stroke="white"/>
+<line y1="-0.5" x2="6" y2="-0.5" transform="matrix(-0.0555033 0.998459 0.998459 0.0555033 34.6934 51)" stroke="white"/>
+<line y1="-0.5" x2="7" y2="-0.5" transform="matrix(1 0 0 -1 27.6934 50)" stroke="white"/>
+<line y1="-0.5" x2="18.0278" y2="-0.5" transform="matrix(-0.83205 0.5547 0.5547 0.83205 43.6934 45)" stroke="white"/>
+<line x1="53.1296" y1="40.6878" x2="58.3679" y2="43.6135" stroke="white"/>
+<line x1="56.2108" y1="34.9441" x2="52.4635" y2="40.8566" stroke="white"/>
+<line x1="42.7971" y1="45.0572" x2="59.2734" y2="37.7407" stroke="white"/>
+<line y1="-0.5" x2="6" y2="-0.5" transform="matrix(-0.873057 0.487618 0.487618 0.873057 32.8076 41.1243)" stroke="white"/>
+<line y1="-0.5" x2="7" y2="-0.5" transform="matrix(0.535324 0.844647 0.844647 -0.535324 29.9049 34.6764)" stroke="white"/>
+<line y1="-0.5" x2="18.0278" y2="-0.5" transform="matrix(-0.913942 -0.405844 -0.405844 0.913942 42.6934 45.5142)" stroke="white"/>
+</svg>

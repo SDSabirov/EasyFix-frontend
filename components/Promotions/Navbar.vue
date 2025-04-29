@@ -6,7 +6,7 @@
     ]"
   >
     <div
-      class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-1"
+      class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-1 py-4"
     >
         <a
         href="/"
@@ -36,7 +36,7 @@
           />
         </svg>
 
-        <div class="flex flex-col">
+        <div class="md:flex flex-col hidden">
           <p>
             <span
               class="self-center text-sm md:text-2xl font-semibold whitespace-nowrap text-white dark:text-white"
@@ -59,12 +59,12 @@
         <div class="space-x-1 md:space-x-4">
           <a
             href="/booking"
-            class="flex space-x-2 items-center text-white bg-primary rounded-lg hover:text-white hover:bg-secondary transition-all duration-800 ease-out focus:ring-4 focus:outline-none font-medium text-sm px-2 md:px-6 py-2"
+            class="flex  items-center text-white bg-primary rounded-lg hover:text-white hover:bg-secondary transition-all duration-800 ease-out focus:ring-4 focus:outline-none font-medium text-sm px-2 md:px-6 py-2"
             >
             <span>Online Booking</span></a
           >
         </div>
-        <div class="space-x-1 md:space-x-4">
+        <div class=" md:space-x-4">
           <a
             href="tel:4159414144"
             class="flex space-x-2 items-center text-white bg-primary rounded-lg hover:text-white hover:bg-secondary transition-all duration-800 ease-out focus:ring-4 focus:outline-none font-medium text-sm px-2 md:px-4 py-2"

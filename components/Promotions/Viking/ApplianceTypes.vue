@@ -54,7 +54,7 @@
         >
           <div class="flex flex-col space-y-4 items-center justify-center p-4">
             <img
-              src="/assets/icons/promotions/washer.svg"
+              src="/assets/icons/promotions/icon_8.png"
               class="h-[50px]"
               alt="refrigerator icon"
             />
@@ -72,7 +72,7 @@
         >
           <div class="flex flex-col space-y-4 items-center justify-center p-4">
             <img
-              src="/assets/icons/promotions/ucrefrigerator.svg"
+              src="/assets/icons/promotions/icon_7.png"
               class="h-[50px]"
               alt="refrigerator icon"
             />
@@ -90,7 +90,7 @@
         >
           <div class="flex flex-col space-y-4 items-center justify-center p-4">
             <img
-              src="/assets/icons/promotions/calendar.svg"
+              src="/assets/icons/promotions/oven.svg"
               class="h-[50px]"
               alt="refrigerator icon"
             />
@@ -106,7 +106,7 @@
         >
           <div class="flex flex-col space-y-4 items-center justify-center p-4">
             <img
-              src="/assets/icons/promotions/freezer.svg"
+              src="/assets/icons/promotions/icon_5.svg"
               class="h-[50px]"
               alt="refrigerator icon"
             />
@@ -171,7 +171,7 @@
         >
           <div class="flex flex-col space-y-4 items-center justify-center p-4">
             <img
-              src="/assets/icons/promotions/stove.svg"
+              src="/assets/icons/promotions/icon_2.svg"
               class="h-[50px]"
               alt="refrigerator icon"
             />

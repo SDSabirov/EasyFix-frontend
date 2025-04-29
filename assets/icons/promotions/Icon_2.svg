@@ -1,0 +1,35 @@
+<svg width="104" height="108" viewBox="0 0 104 108" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect x="1" y="1" width="102" height="102" rx="3" stroke="white" stroke-width="2"/>
+<circle cx="28" cy="29" r="13" stroke="white" stroke-width="2"/>
+<rect x="9" y="9" width="38" height="39" rx="1" stroke="white" stroke-width="2"/>
+<circle cx="28.5" cy="28.5" r="5" stroke="white"/>
+<line x1="42.3536" y1="16.3536" x2="34.3536" y2="24.3536" stroke="white"/>
+<line y1="-0.5" x2="11.3137" y2="-0.5" transform="matrix(-0.707107 0.707107 0.707107 0.707107 23 36)" stroke="white"/>
+<line x1="14.3536" y1="15.6464" x2="22.3536" y2="23.6464" stroke="white"/>
+<line y1="-0.5" x2="11.3137" y2="-0.5" transform="matrix(0.707107 0.707107 0.707107 -0.707107 34 35)" stroke="white"/>
+<circle cx="28" cy="74" r="13" stroke="white" stroke-width="2"/>
+<rect x="9" y="54" width="38" height="39" rx="1" stroke="white" stroke-width="2"/>
+<circle cx="28.5" cy="73.5" r="5" stroke="white"/>
+<line x1="42.3536" y1="61.3536" x2="34.3536" y2="69.3536" stroke="white"/>
+<line y1="-0.5" x2="11.3137" y2="-0.5" transform="matrix(-0.707107 0.707107 0.707107 0.707107 23 81)" stroke="white"/>
+<line x1="14.3536" y1="60.6464" x2="22.3536" y2="68.6464" stroke="white"/>
+<line y1="-0.5" x2="11.3137" y2="-0.5" transform="matrix(0.707107 0.707107 0.707107 -0.707107 34 80)" stroke="white"/>
+<circle cx="76" cy="29" r="13" stroke="white" stroke-width="2"/>
+<rect x="57" y="9" width="38" height="39" rx="1" stroke="white" stroke-width="2"/>
+<circle cx="76.5" cy="28.5" r="5" stroke="white"/>
+<line x1="90.3536" y1="16.3536" x2="82.3536" y2="24.3536" stroke="white"/>
+<line y1="-0.5" x2="11.3137" y2="-0.5" transform="matrix(-0.707107 0.707107 0.707107 0.707107 71 36)" stroke="white"/>
+<line x1="62.3536" y1="15.6464" x2="70.3536" y2="23.6464" stroke="white"/>
+<line y1="-0.5" x2="11.3137" y2="-0.5" transform="matrix(0.707107 0.707107 0.707107 -0.707107 82 35)" stroke="white"/>
+<circle cx="76" cy="74" r="13" stroke="white" stroke-width="2"/>
+<rect x="57" y="54" width="38" height="39" rx="1" stroke="white" stroke-width="2"/>
+<circle cx="76.5" cy="73.5" r="5" stroke="white"/>
+<line x1="90.3536" y1="61.3536" x2="82.3536" y2="69.3536" stroke="white"/>
+<line y1="-0.5" x2="11.3137" y2="-0.5" transform="matrix(-0.707107 0.707107 0.707107 0.707107 71 81)" stroke="white"/>
+<line x1="62.3536" y1="60.6464" x2="70.3536" y2="68.6464" stroke="white"/>
+<line y1="-0.5" x2="11.3137" y2="-0.5" transform="matrix(0.707107 0.707107 0.707107 -0.707107 82 80)" stroke="white"/>
+<circle cx="30.5" cy="98.5" r="1.5" fill="white"/>
+<circle cx="42.5" cy="96.5" r="1.5" fill="white"/>
+<circle cx="57.5" cy="96.5" r="1.5" fill="white"/>
+<circle cx="69.5" cy="98.5" r="1.5" fill="white"/>
+</svg>

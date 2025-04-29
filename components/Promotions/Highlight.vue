@@ -1,11 +1,11 @@
 <template>
   <section class="w-full py-14 bg-primary relative">
     <div
-      class="w-full absolute flex items-center justify-center -translate-y-[80%]"
+      class="w-full absolute flex items-center justify-center -translate-y-[80%] z-20"
     >
       <img
         src="/assets/icons/promotions/badge.png"
-        class="w-38 max-w-38 md:w-58 md:h-58"
+        class="w-38 max-w-38 md:w-58 md:h-58 "
         alt="guarantee badge"
       />
     </div>

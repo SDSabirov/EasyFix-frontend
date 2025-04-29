@@ -50,7 +50,9 @@ export default defineNuxtConfig({
       Roboto: [100, 300, 400, 500, 700, 900],
     },
     display: "swap",
+    preload: true, 
     preconnect: true, // Optimize by preconnecting to Google Fonts
+    inject:true
   },
   site: {
     url: "https://easyfixappliance.com",
