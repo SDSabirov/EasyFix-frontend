@@ -1,7 +1,7 @@
 <template>
   <section
     id="repairs"
-    class="max-w-screen h-full bg-gray-50 flex flex-col items-center justify-center mt-14"
+    class="max-w-screen h-full bg-gray-50 flex flex-col items-center justify-center mt-14 bg-[url(/assets/img/promotions/pattern.png)]"
   >
     <div class="container mx-auto px-2 py-16 lg:px-28">
       <h1 class="text-4xl font-bold text-center text-primary">
