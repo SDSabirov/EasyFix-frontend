@@ -1,7 +1,7 @@
 <template>
   <section
     id="repairs"
-    class="max-w-screen h-full bg-light flex flex-col items-center justify-center mt-14"
+    class="max-w-screen h-full bg-gray-50 flex flex-col items-center justify-center mt-14"
   >
     <div class="container mx-auto px-2 py-16 lg:px-28">
       <h1 class="text-4xl font-bold text-center text-primary">
@@ -25,13 +25,9 @@
         </NuxtLink>
       </div>
 
-      <h2 class="text-2xl font-bold text-center text-primary mt-10">
-        Reliable Cooling Appliance Repair Services
-      </h2>
+    
       <ServicesCoolingAppliance />
-      <h2 class="text-2xl font-bold text-center text-primary mt-10">
-        Expert Cooking Appliance Repair Services
-      </h2>
+     
       <ServicesCookingAppliance />
       <div class="flex w-full items-center justify-center mt-10">
         <a href="tel:4159414144">

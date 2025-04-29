@@ -1,6 +1,14 @@
 <template>
   <nav
-    class="bg-primary transition-all duration-500 dark:bg-gray-900 fixed w-full z-40 top-0 start-0 dark:border-gray-600 animate-fadeDown font-montserrat"
+  :class="[
+    'transition-all duration-500 fixed w-full z-40 top-0 start-0 font-montserrat animate-fadeDown',
+    route.path !== '/' 
+      ? 'bg-primary shadow-md' // Not home -> always bg-primary
+      : isScrolled 
+        ? 'bg-black/50 backdrop-blur-md shadow-md' 
+        : 'bg-transparent dark:bg-gray-900 dark:border-gray-600'
+  ]"
+    class="transition-all duration-500 dark:bg-gray-900 fixed w-full z-40 top-0 start-0 dark:border-gray-600 animate-fadeDown font-montserrat"
   >
     <div
       class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-1 md:p-4"
@@ -153,4 +161,25 @@
   </nav>
 </template>
 
-<script setup></script>
+<script setup>
+import { ref, onMounted, onUnmounted } from "vue";
+import { useRoute } from "vue-router";
+
+// Reactive state to track scroll position
+const isScrolled = ref(false);
+const route = useRoute(); 
+
+// Function to handle scroll
+const handleScroll = () => {
+  isScrolled.value = window.scrollY > 50; // Change background when scrolled 50px
+};
+
+// Lifecycle hooks
+onMounted(() => {
+  window.addEventListener("scroll", handleScroll);
+});
+
+onUnmounted(() => {
+  window.removeEventListener("scroll", handleScroll);
+});
+</script>

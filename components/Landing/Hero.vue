@@ -9,7 +9,7 @@
     />
     <!--Overlay-->
     <div
-      class="absolute top-0 w-full h-full bg-gradient-to-b from-black to-black opacity-70"
+      class="absolute top-0 w-full h-full bg-gradient-to-b from-black to-black opacity-50"
     ></div>
     <div
       class="lg:absolute lg:top-0 flex flex-col justify-center items-center lg:h-full w-full relative h-[100vh]"
