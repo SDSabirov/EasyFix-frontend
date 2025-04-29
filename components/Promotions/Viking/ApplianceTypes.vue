@@ -171,7 +171,7 @@
         >
           <div class="flex flex-col space-y-4 items-center justify-center p-4">
             <img
-              src="/assets/icons/promotions/icon_2.svg"
+              src="/assets/icons/promotions/stove.svg"
               class="h-[50px]"
               alt="refrigerator icon"
             />
@@ -186,5 +186,9 @@
     </div>
   </section>
 </template>
+<script setup>
+
+
+</script>
 
 <style lang="css" scoped></style>
