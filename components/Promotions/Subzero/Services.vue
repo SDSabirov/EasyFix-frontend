@@ -36,7 +36,7 @@
         >
           <button
             class="bg-primary w-full px-6 py-2 rounded-full border-2 border-primary font-normal hover:border-primary hover:text-white hover:bg-secondary transition-all duration-800 ease-out group"
-            aria-label="Call us for Viking appliance repair services"
+            aria-label="Call us for Sub-Zero appliance repair services"
           >
             <p class="text-white group-hover:text-white">Schedule a Repair</p>
           </button>
@@ -57,7 +57,7 @@
             Factory-Trained Experts
           </h2>
           <p>
-            Our technicians undergo rigorous training to handle Viking’s
+            Our technicians undergo rigorous training to handle Sub-Zero
             high-performance technology.
           </p>
         </div>
@@ -93,7 +93,7 @@
             Repairs Done Right the First Time
           </h2>
           <p>
-            We use genuine Viking parts and advanced diagnostics for precise,
+            We use genuine Sub-Zero parts and advanced diagnostics for precise,
             lasting repairs.
           </p>
         </div>

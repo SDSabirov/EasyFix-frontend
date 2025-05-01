@@ -55,9 +55,9 @@
             alt=""
           />
           <p class="text-lg text-left">
-            ““Our Viking fridge wasn’t cooling properly, and Easy Fix diagnosed
+            “Our Viking fridge wasn’t cooling properly, and Easy Fix diagnosed
             the issue immediately. They handled everything with care, and now it
-            works perfectly.””
+            works perfectly.”
           </p>
           <div class="w-full flex justify-between">
             <div class="flex flex-col space-y-2 text-left">
