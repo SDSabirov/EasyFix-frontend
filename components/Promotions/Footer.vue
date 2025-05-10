@@ -10,7 +10,7 @@
       </h2>
       <p class="text-xl leading-8 md:w-[50%] mx-auto">
         Luxury homes require <strong>expert service</strong>— trust the team
-        that specializes in <strong>high-end Viking appliance repair.</strong>
+        that specializes in <strong>high-end {{ brand }} appliance repair.</strong>
       </p>
       <p class="text-xl leading-8 md:w-[50%] mx-auto">
         Experience the <strong>Easy Fix difference</strong>—where precision
@@ -80,3 +80,13 @@
     </div>
   </section>
 </template>
+
+<script setup>
+const props = defineProps({
+  brand: {
+    type: String,
+    required: true
+  }
+  
+})
+</script>

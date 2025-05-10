@@ -8,6 +8,6 @@
         <PromotionsHighlight/>
         <PromotionsTestimonialsV2/>
         <PromotionsMap/>
-        <PromotionsFooter/>
+        <PromotionsFooter brand="Thermador"/>
     </div>
 </template>

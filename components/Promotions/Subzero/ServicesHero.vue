@@ -1,8 +1,8 @@
 <template>
     <section class="w-full h-screen relative bg-white overflow-hidden">
       <img
-        src="/assets/img/promotions/subzero-hero2.webp"
-        alt="Subzero Appliances"
+        src="/assets/img/promotions/Subzero-hero2.webp"
+        alt="Sub-Zero Appliances"
         class="w-full object-cover lg:absolute inset-0 z-0"
       />
       <div
@@ -20,35 +20,35 @@
                 ><img
                   src="/assets/icons/starBullet.svg"
                   alt="star bullet points" /></span
-              ><span>Subzero Refrigerators </span>
+              ><span>Sub-Zero Refrigerators </span>
             </li>
             <li class="flex space-x-2">
               <span
                 ><img
                   src="/assets/icons/starBullet.svg"
                   alt="star bullet points" /></span
-              ><span>Subzero Freezers</span>s
+              ><span>Sub-Zero Freezers</span>s
             </li>
             <li class="flex space-x-2">
               <span
                 ><img
                   src="/assets/icons/starBullet.svg"
                   alt="star bullet points" /></span
-              ><span>Subzero Wine Coolers</span>
+              ><span>Sub-Zero Wine Coolers</span>
             </li>
             <li class="flex space-x-2">
               <span
                 ><img
                   src="/assets/icons/starBullet.svg"
                   alt="star bullet points" /></span
-              ><span>Subzero Under Counter Refrigerators </span>
+              ><span>Sub-Zero Under Counter Refrigerators </span>
             </li>
           </ul>
           <div class="w-full py-8">
             <a href="tel:4159414144" class="w-full md:w-1/3">
               <button
                 class="bg-primary px-6 w-full py-2 rounded-md border-2 border-primary font-normal hover:border-primary hover:text-white hover:bg-secondary transition-all duration-800 ease-out group"
-                aria-label="Call us for Subzero appliance repair services"
+                aria-label="Call us for Sub-Zero appliance repair services"
               >
                 <p class="text-white group-hover:text-white">Request a Call</p>
               </button>

@@ -8,6 +8,6 @@
         <PromotionsHighlight/>
         <PromotionsTestimonialsV2/>
         <PromotionsMap/>
-        <PromotionsFooter/>
+        <PromotionsFooter brand="Sub-Zero"/>
     </div>
 </template>
