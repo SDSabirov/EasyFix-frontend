@@ -10,7 +10,7 @@
         class="w-1/3 h-full hidden md:flex flex-col items-center justify-center space-y-6 ml-20"
       >
         <h2 class="text-[30px] font-semibold text-left">
-          The most reliable Viking appliance repair service in the Bay Area!
+          The most reliable {{brand}} appliance repair service in the Bay Area!
         </h2>
         <a
           class="text-[24px] font-normal text-left w-full underline"
@@ -72,3 +72,12 @@
  
   </section>
 </template>
+<script setup>
+const props = defineProps({
+  brand: {
+    type: String,
+    required: true
+  }
+  
+})
+</script>

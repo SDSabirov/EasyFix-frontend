@@ -8,7 +8,7 @@
         <PromotionsWolfHero3/>
         <PromotionsHighlight/>
         <PromotionsTestimonialsV2/>
-        <PromotionsMap/>
+        <PromotionsMap brand="Wolf and Cove"/>
         <PromotionsFooter brand="Wolf and Cove"/>
     </div>
 </template>

@@ -7,7 +7,7 @@
         <PromotionsVikingApplianceTypes/>
         <PromotionsHighlight/>
         <PromotionsTestimonialsV2/>
-        <PromotionsMap/>
+        <PromotionsMap brand="Thermador"/>
         <PromotionsFooter brand="Thermador"/>
     </div>
 </template>
