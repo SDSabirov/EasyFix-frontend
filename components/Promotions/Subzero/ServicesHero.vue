@@ -1,7 +1,7 @@
 <template>
     <section class="w-full h-screen relative bg-white overflow-hidden">
       <img
-        src="/assets/img/promotions/Subzero-hero2.webp"
+        src="/assets/img/promotions/subzero-hero2.webp"
         alt="Sub-Zero Appliances"
         class="w-full object-cover lg:absolute inset-0 z-0"
       />
