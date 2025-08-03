@@ -1,13 +1,20 @@
 <template>
   <section
     id="services"
-    class="max-w-screen h-full bg-white overflow-hidden z-10"
+    class="bg-gray-50 py-16 lg:py-24"
   >
-    <div class="container mx-auto px-2 py-16 lg:px-28">
-      <h2 class="text-4xl font-bold text-center text-primary">
-        Specialized Service for Luxury Appliance Brands
-      </h2>
-      <p class="text-justify text-gray-500 mt-2 px-2 md:mt-6">
+    <div class="container mx-auto px-4 max-w-screen-xl">
+      <div class="text-center mb-12">
+        <div class="inline-flex items-center px-4 py-2 bg-primary/10 rounded-full mb-6">
+          <svg class="w-5 h-5 text-primary mr-2" fill="currentColor" viewBox="0 0 20 20">
+            <path fill-rule="evenodd" d="M6.267 3.455a3.066 3.066 0 001.745-.723 3.066 3.066 0 013.976 0 3.066 3.066 0 001.745.723 3.066 3.066 0 012.812 2.812c.051.643.304 1.254.723 1.745a3.066 3.066 0 010 3.976 3.066 3.066 0 00-.723 1.745 3.066 3.066 0 01-2.812 2.812 3.066 3.066 0 00-1.745.723 3.066 3.066 0 01-3.976 0 3.066 3.066 0 00-1.745-.723 3.066 3.066 0 01-2.812-2.812 3.066 3.066 0 00-.723-1.745 3.066 3.066 0 010-3.976 3.066 3.066 0 00.723-1.745 3.066 3.066 0 012.812-2.812zm7.44 5.252a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+          </svg>
+          <span class="text-primary font-semibold text-sm">Premium Services</span>
+        </div>
+        <h2 class="text-4xl font-bold text-gray-900 mb-6">
+          Specialized Appliance Repair Services for Luxury Brands in Bay Area
+        </h2>
+        <p class="text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed mb-2">
         <strong>At Easy Fix Appliance</strong>, we deliver premium appliance
         repair services for luxury brands like
         <strong>Sub-Zero,</strong>
@@ -26,537 +33,211 @@
         top-tier customer service, we make appliance repair convenient and
         stress-free. Trust Easy Fix Appliance for expert solutions that fit your
         busy lifestyle.
-      </p>
-      <div
-        class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 px-2 mt-4 justify-center"
-      >
-        <!--Subzero wolf-->
-        <div
-          class="bg-primary dark:bg-gray-800 shadow-lg relative overflow-hidden group hover:shadow-4xl hover:shadow-primary min-h-[340px]"
-        >
-          <NuxtLink to="/subzero-wolf-repairs">
-            <img
-              src="assets/img/subzerowolfappliance.webp"
-              alt="oven"
-              class="z-10 w-full h-full object-cover"
-            />
-          </NuxtLink>
-
-          <div
-            class="flex flex-col p-2 z-20 absolute bottom-0 p-4 bg-primary/70 w-full"
-          >
-            <!-- Header is always visible -->
-            <NuxtLink to="/subzero-wolf-repairs">
-              <div
-                class="mb-2 flex flex-col justify-center items-center w-full"
-              >
-                <div class="flex flex-col space-y-2 mr-4">
-                  <img
-                    src="/assets/img/subzeroLogosilver.png"
-                    class="max-h-[30px] lg:max-h-[40px]"
-                    alt="Subzero Logo"
-                  />
-                  <img
-                    src="/assets/img/wolf.png"
-                    class="max-h-[30px] lg:max-h-[40px]"
-                    alt="Wolf Logo"
-                  />
-                </div>
-
-                <!-- <div
-                  class="max-h-[30px] lg:max-h-[40px] flex space-x-1 align-center grid grid-cols-6 gap-1"
-                >
-                  <img
-                    src="/assets/icons/freezer.svg"
-                    alt="freezer icon"
-                    class="object-contain"
-                  />
-                  <img
-                    src="/assets/icons/fridge.svg"
-                    alt="refrigerator icon"
-                    class="object-contain"
-                  />
-                  <img
-                    src="/assets/icons/cooktopv3.svg"
-                    alt="cooktop icon"
-                    class="object-contain"
-                  />
-                  <img
-                    src="/assets/icons/oven.svg"
-                    alt="oven icon"
-                    class="object-contain"
-                  />
-                  <img
-                    src="/assets/icons/cookingTopv2.svg"
-                    alt="oven icon"
-                    class="object-contain"
-                  />
-                  <img
-                    src="/assets/icons/ovenv2.svg"
-                    alt="oven icon"
-                    class="object-contain"
-                  />
-                </div> -->
-              </div>
-            </NuxtLink>
-
-            <!-- Paragraph is hidden initially and expands on hover -->
-            <div
-              class="text-white text-center opacity-0 max-h-0 overflow-hidden transition-all duration-1000 group-hover:max-h-80 group-hover:opacity-100"
-            >
-              <h3 class="font-bold w-1/2 text-center text-lg w-full capitalize">
-                Expert Services & Repairs for All Sub-Zero & Wolf Appliances
-              </h3>
-
-              <div class="flex items-center justify-between mt-2">
-                <p>
-                  Comprehensive repairs for Refrigerators, Freezers, Wine
-                  Coolers, Ovens, and more.
-                </p>
-              </div>
-              <div class="w-full flex items-center justify-center">
-                <button
-                  class="bg-primary px-4 py-2 mt-2 rounded-xl border-2 border-primary font-semibold hover:border-primary hover:text-white hover:bg-secondary transition-all duration-800 ease-out group"
-                >
-                  <NuxtLink
-                    to="/subzero-wolf-repairs"
-                    class="text-light group-hover:text-white"
-                  >
-                   Explore Sub-Zero & Wolf Services
-                  </NuxtLink>
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!--Viking-->
-        <div
-          class="bg-primary dark:bg-gray-800 shadow-lg relative overflow-hidden group hover:shadow-4xl hover:shadow-primary min-h-[340px]"
-        >
-          <NuxtLink to="/viking">
-            <img
-              src="assets/img/vikingAppliance.webp"
-              alt="oven"
-              class="z-10 w-full h-full object-cover"
-            />
-          </NuxtLink>
-          <div
-            class="flex flex-col p-2 z-20 absolute bottom-0 p-4 bg-light/70 w-full"
-          >
-            <!-- Header is always visible -->
-            <NuxtLink to="/viking">
-              <div class="mb-2 flex flex-col justify-center items-center">
-                <img
-                  src="/assets/img/viking.png"
-                  class="h-[40px]"
-                  alt="viking logo"
-                />
-                <!-- <div
-                  class="max-h-[30px] lg:max-h-[40px] flex space-x-1 align-center grid grid-cols-6 gap-1"
-                >
-                  <img
-                    src="/assets/icons/freezer.svg"
-                    alt="freezer icon"
-                    class="object-contain"
-                  />
-                  <img
-                    src="/assets/icons/fridge.svg"
-                    alt="refrigirator icon"
-                    class="object-contain"
-                  />
-                  <img
-                    src="/assets/icons/cooktopv3.svg"
-                    alt="cooktop icon"
-                    class="object-contain"
-                  />
-                  <img
-                    src="/assets/icons/oven.svg"
-                    alt="oven icon"
-                    class="object-contain"
-                  />
-                  <img
-                    src="/assets/icons/cookingTopv2.svg"
-                    alt="oven icon"
-                    class="object-contain"
-                  />
-                  <img
-                    src="/assets/icons/ovenv2.svg"
-                    alt="oven icon"
-                    class="object-contain"
-                  />
-                </div> -->
-              </div>
-            </NuxtLink>
-            <!-- Paragraph is hidden initially and expands on hover -->
-            <div
-              class="text-primary text-center opacity-0 max-h-0 overflow-hidden transition-all duration-1000 group-hover:max-h-80 group-hover:opacity-100"
-            >
-              <h3 class="font-bold w-full text-center text-lg mt-2 capitalize">
-                Expert Services & Repairs for All Viking Appliances
-              </h3>
-              <div class="flex items-center justify-between mt-2">
-                <p>
-                  Trusted repair solutions for luxury refrigeration, cooking,
-                  and more.
-                </p>
-              </div>
-              <div class="w-full flex items-center justify-center">
-                <NuxtLink to="/viking">
-                  <button
-                    class="bg-primary px-4 py-2 rounded-xl mt-2 border-2 border-primary font-semibold hover:border-primary hover:text-white hover:bg-secondary transition-all duration-800 ease-out group"
-                  >
-                    <p class="text-light group-hover:text-white">Explore Viking Appliance Repairs </p>
-                  </button>
-                </NuxtLink>
-              </div>
-            </div>
-          </div>
-        </div>
-        
-        
-        <!--Kitchenaid-->
-        <div
-          class="bg-primary dark:bg-gray-800 shadow-lg relative  overflow-hidden group hover:shadow-4xl hover:shadow-primary min-h-[340px]"
-        >
-          <NuxtLink to="/kitchenAid">
-            <img
-              src="assets/img/kitchenBlue.jpg"
-              alt="oven"
-              class="z-10 w-full h-full object-cover bg-gray-400"
-            />
-          </NuxtLink>
-          <div
-            class="flex flex-col p-2 z-20 absolute bottom-0 p-4 bg-primary/80 w-full"
-          >
-            <!-- Header is always visible -->
-            <NuxtLink to="/kitchenAid">
-              <div
-                class="mb-2 flex flex-col justify-center items-center max-h-[40px]"
-              >
-                <img
-                  src="/assets/img/kitchenaid.png"
-                  class="max-h-[40px]"
-                  alt="kitchenaind logo"
-                />
-                <!-- <div
-                  class="max-h-[30px] lg:max-h-[40px] flex space-x-1 align-center grid grid-cols-6 gap-1"
-                >
-                  <img
-                    src="/assets/icons/freezer.svg"
-                    alt="freezer icon"
-                    class="object-contain"
-                  />
-                  <img
-                    src="/assets/icons/fridge.svg"
-                    alt="refrigirator icon"
-                    class="object-contain"
-                  />
-                  <img
-                    src="/assets/icons/cooktopv3.svg"
-                    alt="cooktop icon"
-                    class="object-contain"
-                  />
-                  <img
-                    src="/assets/icons/oven.svg"
-                    alt="oven icon"
-                    class="object-contain"
-                  />
-                  <img
-                    src="/assets/icons/cookingTopv2.svg"
-                    alt="oven icon"
-                    class="object-contain"
-                  />
-                  <img
-                    src="/assets/icons/ovenv2.svg"
-                    alt="oven icon"
-                    class="object-contain"
-                  />
-                </div> -->
-              </div>
-            </NuxtLink>
-            <!-- Paragraph is hidden initially and expands on hover -->
-            <div
-              class="text-white text-center opacity-0 max-h-0 overflow-hidden transition-all duration-1000 group-hover:max-h-80 group-hover:opacity-100"
-            >
-              <h3 class="font-bold w-full text-center text-lg mt-2 capitalize">
-                Premium Services & Repairs for All KitchenAid Appliances
-              </h3>
-              <div class="flex items-center justify-between mt-2">
-                <p>Specialized repairs for KitchenAid Refrigerators, Ovens, Ranges, and more.</p>
-              </div>
-              <div class="w-full flex items-center justify-center">
-                <NuxtLink to="/kitchenAid">
-                  <button
-                    class="bg-primary px-4 rounded-xl py-2 mt-2 border-2 border-primary font-semibold hover:border-primary hover:text-white hover:bg-secondary transition-all duration-800 ease-out group"
-                  >
-                    <p class="text-light group-hover:text-white">KitchenAid Repairs</p>
-                  </button>
-                </NuxtLink>
-              </div>
-            </div>
-          </div>
-        </div>
-        <!--Ge monogram-->
-        <div
-          class="bg-primary dark:bg-gray-800 shadow-lg relative overflow-hidden group hover:shadow-4xl hover:shadow-primary min-h-[340px]"
-        >
-          <NuxtLink to="/gemonogram">
-            <img
-              src="assets/img/redAppliance.jpeg"
-              alt="oven"
-              class="z-10 w-full h-full object-cover bg-gray-400"
-            />
-          </NuxtLink>
-          <div
-            class="flex flex-col p-2 z-20 absolute bottom-0 p-4 bg-light/80 w-full"
-          >
-            <!-- Header is always visible -->
-            <NuxtLink to="/gemonogram">
-              <div
-                class="mb-2 flex flex-col justify-center items-center max-h-[40px]"
-              >
-                <img
-                  src="/assets/img/GEmonogram.png"
-                  class="max-h-[40px]"
-                  alt="GE Monogram Logo"
-                />
-                <!-- <div
-                  class="max-h-[30px] lg:max-h-[40px] flex space-x-1 align-center grid grid-cols-6 gap-1"
-                >
-                  <img
-                    src="/assets/icons/freezer.svg"
-                    alt="freezer icon"
-                    class="object-contain"
-                  />
-                  <img
-                    src="/assets/icons/fridge.svg"
-                    alt="refrigirator icon"
-                    class="object-contain"
-                  />
-                  <img
-                    src="/assets/icons/cooktopv3.svg"
-                    alt="cooktop icon"
-                    class="object-contain"
-                  />
-                  <img
-                    src="/assets/icons/oven.svg"
-                    alt="oven icon"
-                    class="object-contain"
-                  />
-                  <img
-                    src="/assets/icons/cookingTopv2.svg"
-                    alt="oven icon"
-                    class="object-contain"
-                  />
-                  <img
-                    src="/assets/icons/ovenv2.svg"
-                    alt="oven icon"
-                    class="object-contain"
-                  />
-                </div> -->
-              </div>
-            </NuxtLink>
-            <!-- Paragraph is hidden initially and expands on hover -->
-            <div
-              class="text-primary text-center opacity-0 max-h-0 overflow-hidden transition-all duration-1000 group-hover:max-h-80 group-hover:opacity-100"
-            >
-              <h3 class="font-bold w-full text-center text-lg mt-2 capitalize">
-                Trusted Services & Repairs for All GE Monogram Appliances
-              </h3>
-              <div class="flex items-center justify-between mt-2">
-                <p>
-                  Precision repairs for GE Monogram Refrigerators, Ovens, Ranges, and more.
-                </p>
-              </div>
-              <div class="w-full flex items-center justify-center">
-                <NuxtLink to="/gemonogram">
-                  <button
-                    class="bg-primary px-4 rounded-xl py-2 mt-2 border-2 border-primary font-semibold hover:border-primary hover:text-white hover:bg-secondary transition-all duration-800 ease-out group"
-                  >
-                    <p class="text-light group-hover:text-white">GE Monogram Expert Repairs</p>
-                  </button>
-                </NuxtLink>
-              </div>
-            </div>
-          </div>
-        </div>
-        <!--dacor-->
-        <div
-          class="bg-primary dark:bg-gray-800 shadow-lg relative overflow-hidden group hover:shadow-4xl hover:shadow-primary min-h-[340px]"
-        >
-          <NuxtLink to="/dacor-appliance">
-            <img
-              src="assets/img/dacor-cover.jpg"
-              alt="oven"
-              class="z-10 w-full h-full object-cover bg-gray-400"
-            />
-          </NuxtLink>
-          <div
-            class="flex flex-col p-2 z-20 absolute bottom-0 p-4 bg-white/70 w-full"
-          >
-            <!-- Header is always visible -->
-            <NuxtLink to="/dacor-appliance">
-              <div
-                class="mb-2 flex flex-col justify-center items-center max-h-[40px]"
-              >
-                <img
-                  src="/assets/img/dacor-logo.png"
-                  class="max-h-[40px]"
-                  alt="Dacor Logo"
-                />
-                <!-- <div
-                  class="max-h-[30px] lg:max-h-[40px] flex space-x-1 align-center grid grid-cols-6 gap-1"
-                >
-                  <img
-                    src="/assets/icons/freezer.svg"
-                    alt="freezer icon"
-                    class="object-contain"
-                  />
-                  <img
-                    src="/assets/icons/fridge.svg"
-                    alt="refrigirator icon"
-                    class="object-contain"
-                  />
-                  <img
-                    src="/assets/icons/cooktopv3.svg"
-                    alt="cooktop icon"
-                    class="object-contain"
-                  />
-                  <img
-                    src="/assets/icons/oven.svg"
-                    alt="oven icon"
-                    class="object-contain"
-                  />
-                  <img
-                    src="/assets/icons/cookingTopv2.svg"
-                    alt="oven icon"
-                    class="object-contain"
-                  />
-                  <img
-                    src="/assets/icons/ovenv2.svg"
-                    alt="oven icon"
-                    class="object-contain"
-                  />
-                </div> -->
-              </div>
-            </NuxtLink>
-            <!-- Paragraph is hidden initially and expands on hover -->
-            <div
-              class="text-primary text-center opacity-0 max-h-0 overflow-hidden transition-all duration-1000 group-hover:max-h-80 group-hover:opacity-100"
-            >
-              <h3 class="font-bold w-full text-center text-lg mt-2 capitalize">
-                Reliable Services & Repairs for All Dacor Appliances
-              </h3>
-              <div class="flex items-center justify-between mt-2">
-                <p>Expert repairs for Dacor Refrigerators, Ovens, Cooktops, and more.</p>
-              </div>
-              <div class="w-full flex items-center justify-center">
-                <NuxtLink to="/dacor-appliance">
-                  <button
-                    class="bg-primary px-4 rounded-xl py-2 mt-2 border-2 border-primary font-semibold hover:border-primary hover:text-white hover:bg-secondary transition-all duration-800 ease-out group"
-                  >
-                    <p class="text-light group-hover:text-white">Dacor Repair Services </p>
-                  </button>
-                </NuxtLink>
-              </div>
-            </div>
-          </div>
-        </div>
-        <!--thermador-->
-        <div
-          class="bg-primary dark:bg-gray-800 shadow-lg relative overflow-hidden group hover:shadow-4xl hover:shadow-primary min-h-[340px]"
-        >
-          <NuxtLink to="/thermador">
-            <img
-              src="assets/img/thermador-cover.jpg"
-              alt="oven"
-              class="z-10 w-full h-full object-cover bg-gray-400"
-            />
-          </NuxtLink>
-          <div
-            class="flex flex-col p-2 z-20 absolute bottom-0 p-4 bg-light/80 w-full"
-          >
-            <!-- Header is always visible -->
-            <NuxtLink to="/thermador">
-              <div
-                class="mb-2 flex flex-col justify-between items-center max-h-[40px] relative -top-14"
-              >
-                <img
-                  src="/assets/img/thermador.png"
-                  class="max-h-[160px]"
-                  alt=""
-                />
-                <!-- <div
-                  class="max-h-[30px] lg:max-h-[40px] flex space-x-1 align-center grid grid-cols-6 gap-1"
-                >
-                  <img
-                    src="/assets/icons/freezer.svg"
-                    alt="freezer icon"
-                    class="object-contain"
-                  />
-                  <img
-                    src="/assets/icons/fridge.svg"
-                    alt="refrigirator icon"
-                    class="object-contain"
-                  />
-                  <img
-                    src="/assets/icons/cooktopv3.svg"
-                    alt="cooktop icon"
-                    class="object-contain"
-                  />
-                  <img
-                    src="/assets/icons/oven.svg"
-                    alt="oven icon"
-                    class="object-contain"
-                  />
-                  <img
-                    src="/assets/icons/cookingTopv2.svg"
-                    alt="oven icon"
-                    class="object-contain"
-                  />
-                  <img
-                    src="/assets/icons/ovenv2.svg"
-                    alt="oven icon"
-                    class="object-contain"
-                  />
-                </div> -->
-              </div>
-            </NuxtLink>
-            <!-- Paragraph is hidden initially and expands on hover -->
-            <div
-              class="text-primary text-cemtrer opacity-0 max-h-0 overflow-hidden transition-all duration-1000 group-hover:max-h-80 group-hover:opacity-100"
-            >
-              <h3 class="font-bold w-full text-center text-lg mt-2 capitalize">
-                Trusted Services & Repairs for All Thermador Appliances
-              </h3>
-              <div class="flex items-center justify-center mt-2">
-                <p>High-quality repairs for Thermador Refrigerators, Ovens, Dishwashers, and more.</p>
-              </div>
-              <div class="w-full flex items-center justify-center">
-                <NuxtLink to="/thermador">
-                  <button
-                    class="bg-primary rounded-xl px-4 py-2 mt-2 border-2 border-primary font-semibold hover:border-primary hover:text-white hover:bg-secondary transition-all duration-800 ease-out group"
-                  >
-                    <p class="text-light group-hover:text-white">Thermador Repair Experts</p>
-                  </button>
-                </NuxtLink>
-              </div>
-            </div>
+        </p>
+      </div>
+      
+      <!-- Brand Grid -->
+      <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6 mb-16">
+        <div v-for="brand in brands" :key="brand.name" 
+             class="group bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 border border-gray-100">
+          <div class="text-center">
+            <img :src="brand.logo" :alt="brand.name + ' appliance repair services'" 
+                 class="h-12 mx-auto mb-4 object-contain filter grayscale group-hover:grayscale-0 transition-all duration-300" />
+            <h3 class="font-semibold text-gray-900 text-sm">{{ brand.name }}</h3>
+            <p class="text-xs text-gray-600 mt-1">{{ brand.specialty }}</p>
           </div>
         </div>
       </div>
-      <div class="flex w-full items-center justify-center mt-10">
-        <a href="tel:4159414144">
-          <button
-            class="bg-primary px-8 py-4 mt-2 rounded-lg border-2 border-primary font-semibold hover:border-primary hover:text-white hover:bg-secondary transition-all duration-800 ease-out group"
-          >
-            <p class="text-white group-hover:text-white">Request a Repair Appointment</p>
-          </button>
-        </a>
+
+      <!-- Services Grid -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div v-for="service in services" :key="service.name"
+             class="group bg-white rounded-2xl shadow-xl overflow-hidden hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border border-gray-100">
+          <div class="relative h-48 overflow-hidden">
+            <img :src="service.image" :alt="service.alt"
+                 class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
+            <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
+          </div>
+          
+          <div class="p-6">
+            <div class="text-center mb-4">
+              <h3 class="text-xl font-bold text-gray-900 mb-2">{{ service.name }}</h3>
+              <div class="flex justify-center space-x-2 mb-4">
+                <img v-for="logo in service.logos" :key="logo.alt" 
+                     :src="logo.src" :alt="logo.alt"
+                     class="h-8 object-contain" />
+              </div>
+              <p class="text-gray-600 leading-relaxed">{{ service.description }}</p>
+            </div>
+            
+            <NuxtLink :to="service.link"
+                      class="inline-flex items-center justify-center w-full px-6 py-3 bg-gradient-to-r from-primary to-secondary text-white font-semibold rounded-xl hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1">
+              <span>{{ service.buttonText }}</span>
+              <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6" />
+              </svg>
+            </NuxtLink>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Call to Action -->
+      <div class="text-center mt-16">
+        <div class="bg-gradient-to-r from-primary to-secondary rounded-3xl p-8 text-white">
+          <div class="max-w-3xl mx-auto">
+            <h3 class="text-3xl font-bold mb-4">
+              Ready to Schedule Your Appliance Repair?
+            </h3>
+            <p class="text-xl text-white/90 mb-8 leading-relaxed">
+              Get expert repair services for your luxury appliances. Our certified technicians are ready to help restore your appliances to peak performance.
+            </p>
+            
+            <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
+              <a 
+                href="tel:4159414144"
+                class="inline-flex items-center px-8 py-4 bg-white text-primary font-bold rounded-xl hover:bg-gray-50 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1"
+              >
+                <svg class="w-6 h-6 mr-3" fill="currentColor" viewBox="0 0 20 20">
+                  <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"/>
+                </svg>
+                Call Now: (415) 941-4144
+              </a>
+              
+              <NuxtLink 
+                to="/booking"
+                class="inline-flex items-center px-8 py-4 border-2 border-white text-white font-bold rounded-xl hover:bg-white hover:text-primary transition-all duration-300 transform hover:-translate-y-1"
+              >
+                <svg class="w-6 h-6 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3a1 1 0 011-1h6a1 1 0 011 1v4m-6 0h6m-6 0V5a1 1 0 00-1 1v1m0 8h6v2a1 1 0 01-1 1H9a1 1 0 01-1-1v-2zm6 0V5a1 1 0 011-1h2a1 1 0 011 1v14a1 1 0 01-1 1h-2a1 1 0 01-1-1V5z"/>
+                </svg>
+                Schedule Service Online
+              </NuxtLink>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </section>
 </template>
 
-<script setup></script>
+<script setup>
+// Import images
+import subZeroLogo from '/assets/img/sub-zero-logo.png'
+import wolfLogo from '/assets/img/wolf.png'
+import vikingLogo from '/assets/img/viking.png'
+import thermadorLogo from '/assets/img/thermador.png'
+import kitchenaidLogo from '/assets/img/kitchenaid.png'
+import geMonogramLogo from '/assets/img/GEmonogram.png'
+import subzeroLogosilver from '/assets/img/subzeroLogosilver.png'
+import dacorLogo from '/assets/img/dacor-logo.png'
+
+import subzeroWolfImage from '/assets/img/subzerowolfappliance.webp'
+import vikingImage from '/assets/img/vikingAppliance.webp'
+import thermadorImage from '/assets/img/thermador-cover.jpg'
+import kitchenaidImage from '/assets/img/kitchenBlue.jpg'
+import geMonogramImage from '/assets/img/redAppliance.jpeg'
+import dacorImage from '/assets/img/dacor-cover.jpg'
+
+const brands = [
+  {
+    name: "Sub-Zero",
+    logo: subZeroLogo,
+    specialty: "Refrigeration"
+  },
+  {
+    name: "Wolf",
+    logo: wolfLogo, 
+    specialty: "Cooking"
+  },
+  {
+    name: "Viking",
+    logo: vikingLogo,
+    specialty: "Professional"
+  },
+  {
+    name: "Thermador",
+    logo: thermadorLogo,
+    specialty: "Luxury"
+  },
+  {
+    name: "KitchenAid",
+    logo: kitchenaidLogo,
+    specialty: "Performance"
+  },
+  {
+    name: "GE Monogram",
+    logo: geMonogramLogo,
+    specialty: "Premium"
+  }
+]
+
+const services = [
+  {
+    name: "Sub-Zero & Wolf",
+    image: subzeroWolfImage,
+    alt: "Sub-Zero and Wolf luxury appliances - professional repair services in Bay Area",
+    logos: [
+      { src: subzeroLogosilver, alt: "Sub-Zero Logo" },
+      { src: wolfLogo, alt: "Wolf Logo" }
+    ],
+    description: "Expert services & repairs for all Sub-Zero & Wolf appliances including refrigerators, freezers, wine coolers, ovens, and more.",
+    link: "/subzero-wolf-repairs",
+    buttonText: "Sub-Zero & Wolf Services"
+  },
+  {
+    name: "Viking Appliances",
+    image: vikingImage,
+    alt: "Viking professional kitchen appliances - expert repair services in San Mateo",
+    logos: [
+      { src: vikingLogo, alt: "Viking Logo" }
+    ],
+    description: "Trusted repair solutions for luxury Viking refrigeration, cooking appliances, and professional kitchen equipment.",
+    link: "/viking",
+    buttonText: "Viking Repair Services"
+  },
+  {
+    name: "Thermador",
+    image: thermadorImage,
+    alt: "Thermador professional cooking appliances - certified repair technicians Bay Area",
+    logos: [
+      { src: thermadorLogo, alt: "Thermador Logo" }
+    ],
+    description: "High-quality repairs for Thermador refrigerators, ovens, dishwashers, and professional cooking appliances.",
+    link: "/thermador",
+    buttonText: "Thermador Repair Experts"
+  },
+  {
+    name: "KitchenAid",
+    image: kitchenaidImage,
+    alt: "KitchenAid appliances in modern kitchen - certified repair technicians Bay Area",
+    logos: [
+      { src: kitchenaidLogo, alt: "KitchenAid Logo" }
+    ],
+    description: "Specialized repairs for KitchenAid refrigerators, ovens, ranges, and premium kitchen appliances.",
+    link: "/kitchenAid",
+    buttonText: "KitchenAid Repairs"
+  },
+  {
+    name: "GE Monogram",
+    image: geMonogramImage,
+    alt: "GE Monogram luxury appliances - professional repair services Palo Alto",
+    logos: [
+      { src: geMonogramLogo, alt: "GE Monogram Logo" }
+    ],
+    description: "Precision repairs for GE Monogram refrigerators, ovens, ranges, and luxury kitchen appliances.",
+    link: "/gemonogram",
+    buttonText: "GE Monogram Expert Repairs"
+  },
+  {
+    name: "Dacor",
+    image: dacorImage,
+    alt: "Dacor premium kitchen appliances - expert repair services San Francisco Bay Area",
+    logos: [
+      { src: dacorLogo, alt: "Dacor Logo" }
+    ],
+    description: "Expert repairs for Dacor refrigerators, ovens, cooktops, and premium kitchen appliances.",
+    link: "/dacor-appliance",
+    buttonText: "Dacor Repair Services"
+  }
+]
+</script>
