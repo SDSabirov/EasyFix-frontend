@@ -650,7 +650,42 @@ useHead(() => ({
             "longitude": "-122.143"
           },
           "openingHours": "Mo-Su 07:00-21:00",
-          "priceRange": "$150-$400"
+          "priceRange": "$150-$400",
+          "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": "4.8",
+            "reviewCount": "127",
+            "bestRating": "5",
+            "worstRating": "1"
+          },
+          "review": [
+            {
+              "@type": "Review",
+              "author": {
+                "@type": "Person",
+                "name": "Sarah M."
+              },
+              "reviewRating": {
+                "@type": "Rating",
+                "ratingValue": "5",
+                "bestRating": "5"
+              },
+              "reviewBody": "Excellent service! Fixed our Sub-Zero refrigerator the same day. Technician was professional and knowledgeable."
+            },
+            {
+              "@type": "Review",
+              "author": {
+                "@type": "Person",
+                "name": "Michael R."
+              },
+              "reviewRating": {
+                "@type": "Rating",
+                "ratingValue": "5",
+                "bestRating": "5"
+              },
+              "reviewBody": "Fast and reliable appliance repair. Used genuine parts and provided excellent warranty. Highly recommended!"
+            }
+          ]
         },
         "areaServed": [
           "San Francisco",
@@ -678,6 +713,90 @@ useHead(() => ({
             }
           })) || []
         }
+      })
+    },
+    {
+      type: "application/ld+json",
+      children: JSON.stringify({
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "@id": `https://easyfixappliance.com/services/${route.params.slug}#faq`,
+        "mainEntityOfPage": {
+          "@type": "WebPage",
+          "@id": `https://easyfixappliance.com/services/${route.params.slug}`
+        },
+        "publisher": {
+          "@type": "Organization",
+          "@id": "https://easyfixappliance.com#organization",
+          "name": "Easy Fix Appliance",
+          "url": "https://easyfixappliance.com",
+          "telephone": "+14159414144"
+        },
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "@id": `https://easyfixappliance.com/services/${route.params.slug}#faq-1`,
+            "name": "How quickly can you repair my appliance?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": `We offer same-day ${pageTitle.value.toLowerCase()} in most Bay Area locations. Our certified technicians carry genuine parts and diagnostic equipment to complete most repairs in a single visit.`
+            }
+          },
+          {
+            "@type": "Question",
+            "@id": `https://easyfixappliance.com/services/${route.params.slug}#faq-2`,
+            "name": "Do you provide warranty on repairs?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": `Yes! All ${pageTitle.value.toLowerCase()} come with a 90-day warranty on parts and labor. We stand behind our work and use only genuine manufacturer parts for lasting repairs.`
+            }
+          },
+          {
+            "@type": "Question",
+            "@id": `https://easyfixappliance.com/services/${route.params.slug}#faq-3`,
+            "name": "What brands do you service?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "We repair all major appliance brands including Sub-Zero, Viking, Wolf, KitchenAid, Whirlpool, GE, Bosch, Miele, and many more. Our technicians are trained on both residential and commercial models."
+            }
+          },
+          {
+            "@type": "Question",
+            "@id": `https://easyfixappliance.com/services/${route.params.slug}#faq-4`,
+            "name": "How much does repair service cost?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": `We provide free estimates and transparent pricing. Our ${pageTitle.value.toLowerCase()} typically range from $150-$400 depending on the issue and parts needed. No hidden fees or surprise charges.`
+            }
+          }
+        ]
+      })
+    },
+    {
+      type: "application/ld+json",
+      children: JSON.stringify({
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://easyfixappliance.com"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Services",
+            "item": "https://easyfixappliance.com/services"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": pageTitle.value,
+            "item": `https://easyfixappliance.com/services/${route.params.slug}`
+          }
+        ]
       })
     }
   ]

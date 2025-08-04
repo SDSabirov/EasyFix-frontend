@@ -356,11 +356,11 @@ const filteredFaqs = computed(() => {
 const createStructuredData = () => {
   const cleanFaqs = faqs.map((faq, index) => ({
     "@type": "Question",
-    "@id": `#faq-${index + 1}`,
+    "@id": `https://easyfixappliance.com/faq#faq-${index + 1}`,
     "name": faq.question,
     "acceptedAnswer": {
       "@type": "Answer",
-      "text": faq.answer.replace(/<[^>]*>/g, '').trim()
+      "text": faq.answer.replace(/<[^>]*>/g, '').replace(/&[^;]+;/g, '').trim()
     }
   }));
 
@@ -368,9 +368,25 @@ const createStructuredData = () => {
     "@context": "https://schema.org",
     "@type": "FAQPage",
     "@id": "https://easyfixappliance.com/faq",
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://easyfixappliance.com/faq"
+    },
     "name": "Appliance Repair Frequently Asked Questions",
     "description": "Common questions and expert answers about appliance repair services in the Bay Area",
-    "url": "https://easyfixappliance.com/faq",
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://easyfixappliance.com#organization",
+      "name": "Easy Fix Appliance",
+      "url": "https://easyfixappliance.com",
+      "telephone": "+14159414144",
+      "address": {
+        "@type": "PostalAddress",
+        "addressRegion": "CA",
+        "addressLocality": "San Mateo",
+        "addressCountry": "US"
+      }
+    },
     "mainEntity": cleanFaqs
   };
 };
