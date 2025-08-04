@@ -40,9 +40,8 @@ export default defineNuxtConfig({
 
   modules: [
     ["@nuxtjs/seo", {
-      schemaOrg: {
-        enabled: false
-      }
+      automaticDefaults: false,
+      fallbackTitle: false
     }],
     "@nuxtjs/google-fonts",
     "nuxt-lazy-load",
