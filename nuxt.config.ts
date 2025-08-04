@@ -39,7 +39,11 @@ export default defineNuxtConfig({
   buildModules: ["@nuxt/postcss8"],
 
   modules: [
-    "@nuxtjs/seo",
+    ["@nuxtjs/seo", {
+      schemaOrg: {
+        enabled: false
+      }
+    }],
     "@nuxtjs/google-fonts",
     "nuxt-lazy-load",
     "@nuxt/content",
