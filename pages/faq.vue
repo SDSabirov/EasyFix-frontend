@@ -167,31 +167,18 @@ const faqs = [
 
 const structuredData = {
   '@context': 'https://schema.org',
-  '@graph': [
-    {
-      '@type': 'WebPage',
-      '@id': 'https://easyfixappliance.com/faq#webpage',
-      url: 'https://easyfixappliance.com/faq',
-      name: 'Frequently Asked Questions',
-      description: 'Certified Sub-Zero, Wolf, and Viking appliance repair specialists serving San Mateo, Palo Alto, and the Bay Area. Expert appliance repair services including refrigerator repair for brands like Thermador, KitchenAid, and more. Fast, reliable service using original parts. Book your repair today!',
-      isPartOf: { '@id': 'https://easyfixappliance.com/#website' },
-      mainEntity: { '@id': 'https://easyfixappliance.com/faq#faq' }
+  '@type': 'FAQPage',
+  '@id': 'https://easyfixappliance.com/faq',
+  mainEntity: faqs.map((faq, idx) => ({
+    '@type': 'Question',
+    '@id': `https://easyfixappliance.com/faq#question${idx}`,
+    name: faq.question,
+    acceptedAnswer: {
+      '@type': 'Answer',
+      '@id': `https://easyfixappliance.com/faq#answer${idx}`,
+      text: faq.answer,
     },
-    {
-      '@type': 'FAQPage',
-      '@id': 'https://easyfixappliance.com/faq#faq',
-      mainEntity: faqs.map((faq, idx) => ({
-        '@type': 'Question',
-        '@id': `https://easyfixappliance.com/faq#question${idx}`,
-        name: faq.question,
-        acceptedAnswer: {
-          '@type': 'Answer',
-          '@id': `https://easyfixappliance.com/faq#answer${idx}`,
-          text: faq.answer
-        }
-      }))
-    }
-  ]
+  })),
 };
 
 useHead({
