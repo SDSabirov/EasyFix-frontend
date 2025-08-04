@@ -364,18 +364,17 @@ useSeoMeta({
   ogUrl: 'https://easyfixappliance.com/faq'
 });
 
-// Use Nuxt SEO schema.org composable to properly define FAQ schema
+// Use proper Nuxt SEO schema.org composables
 useSchemaOrg([
-  defineFAQPage({
-    mainEntity: faqs.map((faq, index) => ({
-      '@type': 'Question',
+  defineWebPage({
+    '@type': 'FAQPage',
+  }),
+  ...faqs.map(faq => 
+    defineQuestion({
       name: faq.question,
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: faq.answer.replace(/<[^>]*>/g, '').replace(/&[^;]+;/g, '').trim()
-      }
-    }))
-  })
+      acceptedAnswer: faq.answer.replace(/<[^>]*>/g, '').replace(/&[^;]+;/g, '').trim(),
+    })
+  )
 ]);
 </script>
 
