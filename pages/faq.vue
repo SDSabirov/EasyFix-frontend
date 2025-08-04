@@ -352,70 +352,31 @@ const filteredFaqs = computed(() => {
   return faqs.filter(faq => faq.category === activeCategory.value);
 });
 
-// SEO and structured data - Create unique structured data
-const createStructuredData = () => {
-  const cleanFaqs = faqs.map((faq, index) => ({
-    "@type": "Question",
-    "@id": `https://easyfixappliance.com/faq#faq-${index + 1}`,
-    "name": faq.question,
-    "acceptedAnswer": {
-      "@type": "Answer",
-      "text": faq.answer.replace(/<[^>]*>/g, '').replace(/&[^;]+;/g, '').trim()
-    }
-  }));
 
-  return {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "@id": "https://easyfixappliance.com/faq",
-    "mainEntityOfPage": {
-      "@type": "WebPage",
-      "@id": "https://easyfixappliance.com/faq"
-    },
-    "name": "Appliance Repair Frequently Asked Questions",
-    "description": "Common questions and expert answers about appliance repair services in the Bay Area",
-    "publisher": {
-      "@type": "Organization",
-      "@id": "https://easyfixappliance.com#organization",
-      "name": "Easy Fix Appliance",
-      "url": "https://easyfixappliance.com",
-      "telephone": "+14159414144",
-      "address": {
-        "@type": "PostalAddress",
-        "addressRegion": "CA",
-        "addressLocality": "San Mateo",
-        "addressCountry": "US"
-      }
-    },
-    "mainEntity": cleanFaqs
-  };
-};
-
-const structuredData = createStructuredData();
-
-// Disable automatic schema generation entirely for this page
-definePageMeta({
-  schemaOrg: false
-});
-
-// Override automatic detection by providing minimal SEO data
+// Use proper Nuxt SEO meta
 useSeoMeta({
   title: 'Frequently Asked Questions | Appliance Repair Bay Area | Easy Fix Appliance',
   description: 'Get answers to common questions about appliance repair services in Bay Area. Sub-Zero, Wolf, Viking repair FAQs, pricing, warranties, and service areas. Expert technicians available 24/7.',
+  keywords: 'appliance repair FAQ, Bay Area appliance service questions, Sub-Zero repair cost, luxury appliance maintenance, same-day appliance repair, certified technicians',
   ogTitle: 'Appliance Repair FAQ | Bay Area Expert Answers',
   ogDescription: 'Find answers to common appliance repair questions. Expert technicians, luxury brand specialists, same-day service in Bay Area.',
-  ogType: 'website'
+  ogType: 'website',
+  ogUrl: 'https://easyfixappliance.com/faq'
 });
 
-// Add our custom schema only
-useHead({
-  script: [
-    {
-      type: 'application/ld+json',
-      children: JSON.stringify(structuredData, null, 0)
-    }
-  ]
-});
+// Use Nuxt SEO schema.org composable to properly define FAQ schema
+useSchemaOrg([
+  defineFAQPage({
+    mainEntity: faqs.map((faq, index) => ({
+      '@type': 'Question',
+      name: faq.question,
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: faq.answer.replace(/<[^>]*>/g, '').replace(/&[^;]+;/g, '').trim()
+      }
+    }))
+  })
+]);
 </script>
 
 <style scoped>

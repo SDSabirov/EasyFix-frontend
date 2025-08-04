@@ -14,6 +14,13 @@ export default defineNuxtConfig({
     head: {
       charset: "utf-8",
       viewport: "width=device-width, initial-scale=1",
+      htmlAttrs: {
+        lang: 'en'
+      },
+      meta: [
+        { name: 'author', content: 'Easy Fix Appliance' },
+        { name: 'robots', content: 'index, follow' }
+      ]
     },
   },
   css: ["~/assets/css/main.css", "~/assets/css/global.css"],
@@ -39,10 +46,7 @@ export default defineNuxtConfig({
   buildModules: ["@nuxt/postcss8"],
 
   modules: [
-    ["@nuxtjs/seo", {
-      automaticDefaults: false,
-      fallbackTitle: false
-    }],
+    "@nuxtjs/seo",
     "@nuxtjs/google-fonts",
     "nuxt-lazy-load",
     "@nuxt/content",
@@ -60,10 +64,8 @@ export default defineNuxtConfig({
   site: {
     url: "https://easyfixappliance.com",
     name: "Easy Fix Appliance Bay Area, California",
-    
-    description:
-      "Certified Sub-Zero, Wolf, and Viking appliance repair specialists serving San Mateo, Palo Alto, and the Bay Area. Expert appliance repair services including refrigerator repair for brands like Thermador, KitchenAid, and more. Fast, reliable service using original parts. Book your repair today!",
-    defaultLocale: "en", // not needed if you have @nuxtjs/i18n installed
+    description: "Certified Sub-Zero, Wolf, and Viking appliance repair specialists serving San Mateo, Palo Alto, and the Bay Area. Expert appliance repair services including refrigerator repair for brands like Thermador, KitchenAid, and more. Fast, reliable service using original parts. Book your repair today!",
+    defaultLocale: "en"
   },
   robots: {
     UserAgent: "*", // Applies to all user agents
