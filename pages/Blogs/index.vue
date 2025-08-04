@@ -1,40 +1,136 @@
 <template>
   <div>
     <Navbar />
-    <div class="bg-secondary py-12 ">
-      <div class="max-w-full md:relative md:top-12 mx-auto px-4 min-h-[100vh] bg-gray-100 sm:px-6 lg:px-40 md:px-20">
-        <h2 class="text-4xl font-bold text-center text-primary  capitalize">
-          Our Blogs
-        </h2>
+    
+    <!-- Hero Section -->
+    <header class="relative h-[60vh] lg:h-[70vh] overflow-hidden mt-16 lg:mt-20" style="background: #0c2a3b; background-image: linear-gradient(to bottom right, #0c2a3b, #1C6E8C, #f97316);">
+      <!-- Professional Background Elements -->
+      <div class="absolute top-16 left-12 w-20 h-20 rounded-full blur-lg animate-bounce" style="background: rgba(249, 115, 22, 0.25); animation-delay: 0.5s;"></div>
+      <div class="absolute bottom-32 right-20 w-36 h-36 rounded-full blur-xl animate-pulse delay-1000" style="background: rgba(28, 110, 140, 0.2);"></div>
+      <div class="absolute top-1/3 right-1/4 w-16 h-16 rounded-full blur-md animate-pulse delay-500" style="background: rgba(251, 191, 36, 0.3);"></div>
+      
+      <!-- Hero Content -->
+      <div class="relative z-10 h-full flex flex-col items-center justify-center px-4 text-center">
+        <div class="max-w-4xl mx-auto">
+          <div class="inline-flex items-center px-6 py-3 rounded-full mb-8 border" style="background: rgba(255, 255, 255, 0.2); backdrop-filter: blur(8px); border-color: rgba(255, 255, 255, 0.3);">
+            <svg class="w-6 h-6 mr-3" style="color: #ffffff;" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M12 6.253v13c0 1.079.952 1.845 2.009 1.674 1.337-.218 2.995-.672 4.49-1.54A2 2 0 0020 17.901V4.508c0-1.079-.952-1.845-2.009-1.674-1.337.218-2.995.672-4.49 1.54A2 2 0 0012 6.253zM8 8v10c0 .552-.895 1-2 1s-2-.448-2-1V8c0-.552.895-1 2-1s2 .448 2 1z" clip-rule="evenodd"/>
+            </svg>
+            <span class="font-semibold text-lg" style="color: #ffffff;">Expert Insights & Tips</span>
+          </div>
+          
+          <h1 class="text-4xl lg:text-6xl font-bold mb-8 leading-tight" style="color: #ffffff;">
+            Appliance Care
+            <span class="block" style="color: #f97316;">Blog & Resources</span>
+          </h1>
+          
+          <p class="text-xl lg:text-2xl mb-12 max-w-3xl mx-auto leading-relaxed" style="color: rgba(255, 255, 255, 0.9);">
+            Expert tips, maintenance guides, and industry insights to help you get the most out of your <strong>luxury appliances</strong>. Learn from Bay Area's trusted repair specialists.
+          </p>
+        </div>
+      </div>
+    </header>
 
-        <div class="grid grid-cols-1 mt-4 md:grid-cols-3 gap-8">
+    <!-- Blog Articles Section -->
+    <section class="py-20 lg:py-32" style="background: linear-gradient(to bottom right, #f8fafc, #ffffff);">
+      <div class="container mx-auto px-4 max-w-screen-xl">
+        <div class="text-center mb-16">
+          <h2 class="text-3xl lg:text-4xl font-bold mb-8" style="color: #1f2937;">Latest Articles</h2>
+          <p class="text-xl max-w-3xl mx-auto" style="color: #6b7280;">
+            Stay informed with expert advice from professional appliance technicians serving the Bay Area
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           <!-- Loop through the blogs array -->
-          <div
+          <article
             v-for="(blog, index) in blogs"
             :key="index"
-            class="bg-white shadow-lg overflow-hidden"
+            class="bg-white rounded-2xl shadow-xl overflow-hidden hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2"
           >
-            <img
-              :src="blog.image"
-              :alt="`${blog.title} Image`"
-              class="w-full h-48 object-cover"
-            />
-            <div class="p-6">
-              <h3 class="text-lg font-semibold mb-2 text-primary">
-                {{ blog.title }}
-              </h3>
-              <p class="text-gray-600 mb-4">{{ blog.description }}</p>
-              <NuxtLink
-                :to="blog.link"
-                class="text-primary font-semibold hover:text-blue-600"
-              >
-                Read More &rarr;
-              </NuxtLink>
+            <div class="relative overflow-hidden">
+              <img
+                :src="blog.image"
+                :alt="`${blog.title} - Appliance maintenance and repair tips`"
+                class="w-full h-56 object-cover transition-transform duration-300 hover:scale-105"
+              />
+              <div class="absolute top-4 left-4 px-3 py-1 rounded-full text-sm font-semibold" style="background: rgba(249, 115, 22, 0.9); color: #ffffff;">
+                {{ blog.category }}
+              </div>
+              <div class="absolute top-4 right-4 text-sm font-medium px-3 py-1 rounded-full" style="background: rgba(255, 255, 255, 0.9); color: #1f2937;">
+                {{ blog.readTime }}
+              </div>
             </div>
+            
+            <div class="p-8">
+              <div class="flex items-center mb-4 text-sm" style="color: #6b7280;">
+                <svg class="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z" clip-rule="evenodd"/>
+                </svg>
+                {{ blog.date }}
+              </div>
+              
+              <h3 class="text-xl font-bold mb-4 leading-tight hover:text-orange-600 transition-colors" style="color: #1f2937;">
+                <NuxtLink :to="blog.link" class="block">
+                  {{ blog.title }}
+                </NuxtLink>
+              </h3>
+              
+              <p class="text-gray-600 mb-6 leading-relaxed">{{ blog.description }}</p>
+              
+              <div class="flex items-center justify-between">
+                <NuxtLink
+                  :to="blog.link"
+                  class="inline-flex items-center font-bold text-lg transition-all duration-300 hover:gap-3" 
+                  style="color: #f97316;"
+                >
+                  Read Article
+                  <svg class="w-5 h-5 ml-2 transition-transform duration-300 group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+                  </svg>
+                </NuxtLink>
+                
+                <div class="flex items-center space-x-3 text-sm" style="color: #6b7280;">
+                  <span class="flex items-center">
+                    <svg class="w-4 h-4 mr-1" fill="currentColor" viewBox="0 0 20 20">
+                      <path d="M10 12a2 2 0 100-4 2 2 0 000 4z"/>
+                      <path fill-rule="evenodd" d="M.458 10C1.732 5.943 5.522 3 10 3s8.268 2.943 9.542 7c-1.274 4.057-5.064 7-9.542 7S1.732 14.057.458 10zM14 10a4 4 0 11-8 0 4 4 0 018 0z" clip-rule="evenodd"/>
+                    </svg>
+                    {{ blog.views }}
+                  </span>
+                </div>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Newsletter Signup Section -->
+    <section class="py-20" style="background: #0c2a3b;">
+      <div class="container mx-auto px-4 max-w-screen-xl text-center">
+        <div class="max-w-2xl mx-auto">
+          <h2 class="text-3xl lg:text-4xl font-bold mb-6" style="color: #ffffff;">
+            Stay Updated with Expert Tips
+          </h2>
+          <p class="text-xl mb-8" style="color: rgba(255, 255, 255, 0.9);">
+            Get the latest appliance maintenance tips and industry insights delivered to your inbox
+          </p>
+          
+          <div class="flex flex-col sm:flex-row gap-4 justify-center items-center max-w-md mx-auto">
+            <input 
+              type="email" 
+              placeholder="Enter your email"
+              class="flex-1 px-6 py-3 rounded-xl text-gray-900 focus:outline-none focus:ring-2 focus:ring-orange-500"
+            />
+            <button class="px-8 py-3 font-bold rounded-xl transition-all duration-300 hover:shadow-lg transform hover:-translate-y-1" style="background: linear-gradient(to right, #facc15, #f97316); color: #ffffff;">
+              Subscribe
+            </button>
           </div>
         </div>
       </div>
-    </div>
+    </section>
+
     <FormsContact />
     <Footer />
     <ModalsPrivacy />
@@ -47,23 +143,65 @@ import oemParts from "~/assets/img/blogs/oem-parts.webp"
 
 const blogs = [
   {
-    title: "How to Maximize the Lifespan of Your High-End Appliances",
-    description: "Luxury appliances like Sub-Zero, Viking, Wolf, and Thermador are designed for performance, longevity, and aesthetics...",
+    title: "2025 Smart Appliance Technology: What Bay Area Homeowners Need to Know",
+    description: "Discover the latest smart appliance innovations revolutionizing modern kitchens. From WiFi-enabled refrigerators to AI-powered ovens, learn how technology is transforming home appliances in 2025.",
     image: appliance1,
-    link: "/blogs/how-to-maximize-appliance-lifespan",
+    link: "/blogs/2025-smart-appliance-technology",
+    category: "Technology",
+    date: "January 15, 2025",
+    readTime: "7 min read",
+    views: "2.1k views"
   },
   {
     title: "Why You Should Only Use OEM Parts for Your Luxury Appliances",
-    description: "When it comes to repairing luxury appliances like Sub-Zero, Viking, or Wolf, homeowners are often...",
+    description: "Learn why genuine manufacturer parts are essential for maintaining your Sub-Zero, Viking, and Wolf appliances. Discover the long-term benefits and cost savings of choosing OEM over aftermarket parts.",
     image: oemParts,
     link: "/blogs/why-use-only-oem-parts",
+    category: "Maintenance",
+    date: "January 8, 2025",
+    readTime: "5 min read",
+    views: "1.8k views"
   },
   {
-    title: "Seasonal Appliance Maintenance Tips for Bay Area Homes",
-    description: "The holiday season is here, and homes across the Bay Area are getting ready to host festive gatherings, family...",
-    image: oemParts,
-    link: "/blogs/seasonal-appliance-maintenance-tips-for-bay-area-homes",
+    title: "Energy Efficiency Tips: Reducing Your Appliance Energy Costs in 2025",
+    description: "Discover proven strategies to cut your energy bills while maintaining optimal appliance performance. Expert tips for Bay Area homeowners on eco-friendly appliance usage and maintenance.",
+    image: appliance1,
+    link: "/blogs/energy-efficiency-tips-2025",
+    category: "Energy Savings",
+    date: "December 28, 2024",
+    readTime: "6 min read",
+    views: "3.2k views"
   },
+  {
+    title: "How to Maximize the Lifespan of Your High-End Appliances",
+    description: "Professional maintenance secrets that can extend your luxury appliances' lifespan by years. Learn the insider tips that Bay Area repair specialists use to keep premium appliances running perfectly.",
+    image: oemParts,
+    link: "/blogs/how-to-maximize-appliance-lifespan",
+    category: "Maintenance",
+    date: "December 20, 2024",
+    readTime: "8 min read",
+    views: "4.5k views"
+  },
+  {
+    title: "Common Appliance Problems and When to Call a Professional",
+    description: "Learn to identify serious appliance issues that require professional repair versus simple DIY fixes. Avoid costly mistakes and know when it's time to call Bay Area's trusted repair experts.",
+    image: appliance1,
+    link: "/blogs/common-appliance-problems",
+    category: "Troubleshooting",
+    date: "December 12, 2024",
+    readTime: "6 min read",
+    views: "2.7k views"
+  },
+  {
+    title: "Winter Appliance Care: Protecting Your Investment During Cold Months",
+    description: "Essential winter maintenance tips for Bay Area homeowners. Learn how seasonal changes affect your appliances and what preventive measures can save you from expensive repairs.",
+    image: oemParts,
+    link: "/blogs/winter-appliance-care",
+    category: "Seasonal Care",
+    date: "December 5, 2024",
+    readTime: "5 min read",
+    views: "1.9k views"
+  }
 ];
 
 // SEO optimization
