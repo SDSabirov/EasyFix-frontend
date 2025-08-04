@@ -512,10 +512,10 @@ const pageTitle = computed(() => applianceDetails.value.title)
 useHead(() => ({
   title: `${pageTitle.value} | Easy Fix Appliance | Bay Area Professional Service`,
   meta: [
-    { name: "description", content: `Professional ${pageTitle.value.toLowerCase()} in the Bay Area. Same-day service, 90-day warranty, genuine parts. Serving San Francisco, Palo Alto, San Mateo, and surrounding areas. Call (415) 941-4144.` },
+    { name: "description", content: `Expert ${pageTitle.value.toLowerCase()} throughout the Bay Area. Factory-certified technicians, genuine parts, same-day service available. Serving San Francisco, Palo Alto, San Mateo, Redwood City & surrounding areas. Call (415) 941-4144.` },
     { name: "keywords", content: `${pageTitle.value.toLowerCase()}, appliance repair, Bay Area, San Francisco, same day service, professional technicians, genuine parts, warranty` },
     { property: "og:title", content: `${pageTitle.value} | Easy Fix Appliance` },
-    { property: "og:description", content: `Professional ${pageTitle.value.toLowerCase()} in the Bay Area with same-day service and 90-day warranty.` },
+    { property: "og:description", content: `Reliable ${pageTitle.value.toLowerCase()} with certified technicians and 90-day warranty. Emergency repairs available throughout the Bay Area.` },
     { property: "og:image", content: "/assets/img/services/detailhero.webp" },
     { property: "og:type", content: "website" },
     { name: "twitter:card", content: "summary_large_image" },

@@ -44,6 +44,7 @@
 <script setup>
 import appliance1 from "~/assets/img/blogs/appliance1.webp"
 import oemParts from "~/assets/img/blogs/oem-parts.webp"
+
 const blogs = [
   {
     title: "How to Maximize the Lifespan of Your High-End Appliances",
@@ -64,4 +65,31 @@ const blogs = [
     link: "/blogs/seasonal-appliance-maintenance-tips-for-bay-area-homes",
   },
 ];
+
+// SEO optimization
+useHead({
+  title: 'Appliance Repair Blog | Expert Tips & Guides | Easy Fix Appliance',
+  meta: [
+    {
+      name: 'description',
+      content: 'Expert appliance repair tips, maintenance guides, and industry insights from Easy Fix Appliance. Learn how to maximize your luxury appliances lifespan and save on repairs.'
+    },
+    {
+      name: 'keywords',
+      content: 'appliance repair blog, appliance maintenance tips, luxury appliance care, Sub-Zero maintenance, Viking appliance tips, appliance troubleshooting'
+    },
+    {
+      property: 'og:title',
+      content: 'Appliance Repair Blog | Easy Fix Appliance'
+    },
+    {
+      property: 'og:description',
+      content: 'Discover professional appliance repair insights, maintenance tips, and expert advice from Bay Area\'s trusted repair specialists.'
+    },
+    {
+      property: 'og:type',
+      content: 'website'
+    }
+  ]
+});
 </script>
