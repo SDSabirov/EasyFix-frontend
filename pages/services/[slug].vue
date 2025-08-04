@@ -475,6 +475,101 @@ const applianceData = {
       service: "Quick turnaround to restore your kitchen convenience with minimal disruption.",
       localService: "Comprehensive Bay Area coverage with flexible appointment scheduling."
     }
+  },
+  "under-counter-fridge-repair": {
+    title: "Under-Counter Fridge Repair Services",
+    intro: "Professional under-counter fridge repair services in the Bay Area.",
+    serviceDescription: "Expert under-counter refrigerator repairs by certified technicians using genuine parts.",
+    expertise: "Specialized repair of all major under-counter fridge brands including Sub-Zero, Viking, and KitchenAid.",
+    additionalExpertise: "Ensuring long-lasting repairs with authentic manufacturer parts and warranty coverage.",
+    models: ["Sub-Zero Under-Counter Fridges", "Viking Compact Refrigerators", "KitchenAid Built-in Fridges"],
+    conclusion: "Schedule your under-counter fridge repair today and restore convenience to your kitchen.",
+    whyChooseUs: {
+      technicians: "Highly skilled in under-counter fridge repairs across all major brands.",
+      parts: "We only use original manufacturer parts.",
+      service: "Fast and dependable service to minimize downtime.",
+      localService: "Proudly serving the Bay Area."
+    }
+  },
+
+  "wine-cooler-repair": {
+    title: "Wine Cooler Repair Services",
+    intro: "Reliable wine cooler repair to maintain your wine collection perfectly.",
+    serviceDescription: "Fast wine cooler repairs by factory-trained technicians with authentic replacement parts.",
+    expertise: "Expert repairs for all major wine cooler brands including Sub-Zero, Viking, and Thermador.",
+    additionalExpertise: "Durable and efficient solutions backed by genuine parts warranty.",
+    models: ["Built-in Wine Coolers", "Freestanding Wine Coolers", "Dual-Zone Wine Coolers"],
+    conclusion: "Contact us today for expert wine cooler repairs.",
+    whyChooseUs: {
+      technicians: "Experienced technicians specialized in wine cooler repairs.",
+      parts: "Genuine parts for reliable cooling performance.",
+      service: "Same-day service to protect your wine collection.",
+      localService: "Serving San Mateo, Palo Alto, Redwood City, and surrounding areas."
+    }
+  },
+
+  "stove-repair": {
+    title: "Stove Repair Services",
+    intro: "Get your stove repaired quickly and efficiently by our experts.",
+    serviceDescription: "Comprehensive stove repair for gas and electric models with guaranteed results.",
+    expertise: "Trained specialists in stove repair for all major appliance brands including Wolf and Viking.",
+    additionalExpertise: "Quality repairs with genuine parts ensuring optimal cooking performance.",
+    models: ["Gas Stoves", "Electric Stoves", "Dual-Fuel Stoves"],
+    conclusion: "Book your stove repair now for swift restoration of your kitchen.",
+    whyChooseUs: {
+      technicians: "Professional stove repair specialists.",
+      parts: "Only original manufacturer parts.",
+      service: "Prompt, reliable service.",
+      localService: "Available throughout the Bay Area."
+    }
+  },
+
+  "double-oven-repair": {
+    title: "Double Oven Repair Services",
+    intro: "Expert double oven repair services to keep your kitchen running smoothly.",
+    serviceDescription: "Specialized repair for double ovens ensuring perfect baking and cooking results.",
+    expertise: "Experienced with all double oven brands including Thermador, Viking, and Bosch.",
+    additionalExpertise: "Genuine parts and professional service ensure long-lasting performance.",
+    models: ["Electric Double Ovens", "Gas Double Ovens", "Wall-Mounted Double Ovens"],
+    conclusion: "Schedule your double oven repair today.",
+    whyChooseUs: {
+      technicians: "Double oven repair experts.",
+      parts: "Certified parts for lasting reliability.",
+      service: "Same-day service available.",
+      localService: "Serving the Bay Area communities."
+    }
+  },
+
+  "ice-maker-repair": {
+    title: "Ice Maker Repair Services",
+    intro: "Fast and reliable ice maker repairs to keep ice flowing.",
+    serviceDescription: "Our professionals diagnose and repair ice maker issues promptly with genuine parts.",
+    expertise: "Experienced in all ice maker brands and models including Sub-Zero and Viking.",
+    additionalExpertise: "We provide long-lasting solutions with authentic manufacturer parts.",
+    models: ["Built-in Ice Makers", "Standalone Ice Makers", "Undercounter Ice Makers"],
+    conclusion: "Restore your ice maker’s functionality today.",
+    whyChooseUs: {
+      technicians: "Ice maker repair specialists.",
+      parts: "High-quality original parts.",
+      service: "Efficient same-day service.",
+      localService: "Proudly serving customers across the Bay Area."
+    }
+  },
+
+  "built-in-fridge-repair": {
+    title: "Built-In Fridge Repair Services",
+    intro: "Professional repair for built-in refrigerators by factory-certified experts.",
+    serviceDescription: "Fast, precise built-in fridge repairs using authentic parts to ensure lasting performance.",
+    expertise: "Expert handling of all built-in refrigerator brands such as Sub-Zero and Viking.",
+    additionalExpertise: "Quality repairs that extend appliance life, backed by warranty.",
+    models: ["Sub-Zero Built-In Refrigerators", "Viking Built-In Fridges", "Custom Panel Refrigerators"],
+    conclusion: "Book your built-in fridge repair today for optimal cooling.",
+    whyChooseUs: {
+      technicians: "Experts in built-in fridge repairs.",
+      parts: "Genuine manufacturer parts for durability.",
+      service: "Quick, reliable repairs.",
+      localService: "Serving San Francisco, Palo Alto, Redwood City, and the entire Bay Area."
+    }
   }
 }
 
