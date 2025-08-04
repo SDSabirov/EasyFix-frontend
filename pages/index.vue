@@ -8,7 +8,7 @@
             <LandingStats />
             <LandingPrices />
             <LandingLocations />
-            <LandingFaq />
+            
             <LandingBlogs />
             <LandingTestimonials />
             <LandingContacts />
@@ -60,9 +60,13 @@ const structuredData = {
 
 // initialize components based on data attribute selectors
 onMounted(() => {
-    useFlowbite(() => {
-        initFlowbite();
-    })
+    // Only initialize Flowbite if there are Flowbite elements on this page
+    const flowbiteElements = document.querySelectorAll('[data-flowbite]');
+    if (flowbiteElements.length > 0) {
+        useFlowbite(() => {
+            initFlowbite();
+        })
+    }
 })
 
 definePageMeta({

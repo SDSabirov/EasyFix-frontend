@@ -111,11 +111,11 @@
           
           <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
             <div class="text-center">
-              <div class="text-3xl font-bold mb-2">4.9/5</div>
+              <div class="text-3xl font-bold mb-2">5/5</div>
               <div class="text-white/80">Google Rating</div>
             </div>
             <div class="text-center">
-              <div class="text-3xl font-bold mb-2">250+</div>
+              <div class="text-3xl font-bold mb-2">50+</div>
               <div class="text-white/80">Reviews</div>
             </div>
             <div class="text-center">
@@ -135,8 +135,10 @@
               <span class="text-sm sm:text-base">Call Now: (415) 941-4144</span>
             </a>
             
-            <NuxtLink 
-              to="/reviews"
+            <a 
+              href="https://share.google/04bpXVl20Le131xo4"
+              target="_blank"
+              rel="noopener noreferrer"
               class="inline-flex items-center justify-center w-full sm:w-auto px-6 py-4 min-h-[48px] border-2 border-white text-white font-bold rounded-xl hover:bg-white hover:text-primary transition-all duration-300 transform hover:-translate-y-1 touch-manipulation"
             >
               <svg class="w-5 h-5 sm:w-6 sm:h-6 mr-2 sm:mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -144,7 +146,7 @@
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"/>
               </svg>
               <span class="text-sm sm:text-base">View All Reviews</span>
-            </NuxtLink>
+            </a>
           </div>
         </div>
       </div>

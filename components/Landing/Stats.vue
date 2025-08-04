@@ -121,26 +121,30 @@ const stats = [
   }
 ]
 
+import featureIcon1 from "~/assets/icons/24hr.svg"
+import featureIcon2 from "~/assets/icons/calendar-event.svg"
+import featureIcon3 from "~/assets/icons/patch-check.svg"
+import featureIcon4 from "~/assets/icons/certificate.svg"
 const features = [
   {
     title: "Emergency Service",
     description: "Emergency and same-day service available. Quick response times for urgent repairs.",
-    icon: "assets/icons/24hr.svg"
+    icon: featureIcon1
   },
   {
     title: "Flexible Scheduling", 
     description: "Convenient scheduling options that work around your busy lifestyle and availability.",
-    icon: "assets/icons/calendar-event.svg"
+    icon: featureIcon2
   },
   {
     title: "Genuine OEM Parts",
     description: "Original manufacturer parts with full warranties for lasting repairs and optimal performance.",
-    icon: "assets/icons/patch-check.svg"
+    icon: featureIcon3
   },
   {
     title: "Certified Technicians",
     description: "Factory-trained and authorized technicians with expertise across all major appliance brands.",
-    icon: "assets/icons/certificate.svg"
+    icon: featureIcon4
   }
 ]
 </script>

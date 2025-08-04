@@ -1,8 +1,8 @@
 <template>
   <div>
     <Navbar class="bg-"/>
-    <ServicesApplianceTypes />
-    <LandingServices/>
+    <ServicesEnhancedApplianceTypes />
+    <ServicesEnhancedServices/>
     <Footer />
     <ModalsPrivacy />
   </div>
