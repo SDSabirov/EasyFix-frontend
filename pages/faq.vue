@@ -393,36 +393,30 @@ const createStructuredData = () => {
 
 const structuredData = createStructuredData();
 
-useHead({
+// Use useSeoMeta to prevent automatic schema generation
+useSeoMeta({
   title: 'Frequently Asked Questions | Appliance Repair Bay Area | Easy Fix Appliance',
-  meta: [
-    {
-      name: 'description',
-      content: 'Get answers to common questions about appliance repair services in Bay Area. Sub-Zero, Wolf, Viking repair FAQs, pricing, warranties, and service areas. Expert technicians available 24/7.'
-    },
-    {
-      name: 'keywords',
-      content: 'appliance repair FAQ, Bay Area appliance service questions, Sub-Zero repair cost, luxury appliance maintenance, same-day appliance repair, certified technicians'
-    },
-    {
-      property: 'og:title',
-      content: 'Appliance Repair FAQ | Bay Area Expert Answers'
-    },
-    {
-      property: 'og:description',
-      content: 'Find answers to common appliance repair questions. Expert technicians, luxury brand specialists, same-day service in Bay Area.'
-    },
-    {
-      property: 'og:type',
-      content: 'website'
-    }
-  ],
+  description: 'Get answers to common questions about appliance repair services in Bay Area. Sub-Zero, Wolf, Viking repair FAQs, pricing, warranties, and service areas. Expert technicians available 24/7.',
+  keywords: 'appliance repair FAQ, Bay Area appliance service questions, Sub-Zero repair cost, luxury appliance maintenance, same-day appliance repair, certified technicians',
+  ogTitle: 'Appliance Repair FAQ | Bay Area Expert Answers',
+  ogDescription: 'Find answers to common appliance repair questions. Expert technicians, luxury brand specialists, same-day service in Bay Area.',
+  ogType: 'website'
+});
+
+// Add only our custom JSON-LD schema
+useHead({
   script: [
     {
       type: 'application/ld+json',
       children: JSON.stringify(structuredData, null, 0)
     }
   ]
+});
+
+// Disable automatic schema generation
+definePageMeta({
+  index: false,
+  schemaOrg: false
 });
 </script>
 
