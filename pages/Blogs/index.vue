@@ -61,7 +61,7 @@ const blogs = [
     title: "Seasonal Appliance Maintenance Tips for Bay Area Homes",
     description: "The holiday season is here, and homes across the Bay Area are getting ready to host festive gatherings, family...",
     image: oemParts,
-    link: "/blogs/seasonal-appliance-,aintenance-tips-for-bay-area-homes",
+    link: "/blogs/seasonal-appliance-maintenance-tips-for-bay-area-homes",
   },
 ];
 </script>

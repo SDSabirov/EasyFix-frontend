@@ -118,7 +118,7 @@ When it comes to repairing high-end appliances, it’s essential to invest in OE
   },
 
   {
-    slug: "seasonal-appliance-,aintenance-tips-for-bay-area-homes",
+    slug: "seasonal-appliance-maintenance-tips-for-bay-area-homes",
     title: "Seasonal Appliance Maintenance Tips for Bay Area Homes",
     image: oemParts,
     content: `
