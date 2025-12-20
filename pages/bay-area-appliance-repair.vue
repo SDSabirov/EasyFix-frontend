@@ -23,9 +23,9 @@
       <div class="max-w-screen-xl w-full mx-auto px-4">
         <div class="grid grid-cols-1 md:grid-cols-2 gap-12 px-2 md:px-0 py-12">
           <div class="flex flex-col space-y-6">
-            <h2 class="text-gray-600 text-lg font-semibold">
+            <h1 class="text-gray-600 text-lg font-semibold">
               Your #1 Choice For Appliance Repair in the Bay Area
-            </h2>
+            </h1>
             <p
               class="text-primary text-3xl md:text-4xl uppercase font-semibold"
             >

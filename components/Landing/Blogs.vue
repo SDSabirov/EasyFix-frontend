@@ -111,37 +111,14 @@
 </template>
   
 <script setup>
-import appliance1 from "~/assets/img/blogs/appliance1.webp"
-import oemParts from "~/assets/img/blogs/oem-parts.webp"
-import seasonalImage from "~/assets/img/kitchenBackground1.webp"
+import { ref, onMounted } from 'vue'
 
-const blogs = [
-  {
-    title: "How to Maximize the Lifespan of Your High-End Appliances",
-    description: "Luxury appliances like Sub-Zero, Viking, Wolf, and Thermador are designed for performance and longevity. Learn the essential maintenance tips that will keep your investment running perfectly for years to come.",
-    image: appliance1,
-    link: "/blogs/how-to-maximize-appliance-lifespan",
-    category: "Maintenance",
-    date: "Jan 15, 2024",
-    readTime: "5 min"
-  },
-  {
-    title: "Why You Should Only Use OEM Parts for Your Luxury Appliances",
-    description: "When repairing luxury appliances like Sub-Zero, Viking, or Wolf, using genuine OEM parts is crucial for performance, warranty protection, and long-term reliability.",
-    image: oemParts,
-    link: "/blogs/why-use-only-oem-parts",
-    category: "Repair Tips",
-    date: "Jan 10, 2024",
-    readTime: "4 min"
-  },
-  {
-    title: "Seasonal Appliance Maintenance Tips for Bay Area Homes",
-    description: "The holiday season brings extra demands on your appliances. Discover essential maintenance tips to keep your kitchen running smoothly during the busiest time of year.",
-    image: seasonalImage,
-    link: "/blogs/seasonal-appliance-maintenance-tips-for-bay-area-homes",
-    category: "Seasonal Care",
-    date: "Dec 20, 2023",
-    readTime: "6 min"
-  },
-]
+const { getAllBlogs } = useBlogApi()
+
+const blogs = ref([])
+
+onMounted(async () => {
+  const allBlogs = await getAllBlogs()
+  blogs.value = allBlogs.slice(0, 3) // Get first 3 for landing page
+})
 </script>

@@ -36,15 +36,59 @@
       <div class="container mx-auto px-4 max-w-screen-xl">
         <div class="text-center mb-16">
           <h2 class="text-3xl lg:text-4xl font-bold mb-8" style="color: #1f2937;">Latest Articles</h2>
-          <p class="text-xl max-w-3xl mx-auto" style="color: #6b7280;">
+          <p class="text-xl max-w-3xl mx-auto mb-8" style="color: #6b7280;">
             Stay informed with expert advice from professional appliance technicians serving the Bay Area
           </p>
+
+          <!-- Search Bar -->
+          <div class="max-w-2xl mx-auto mb-8">
+            <div class="relative">
+              <input
+                v-model="searchQuery"
+                type="text"
+                placeholder="Search articles..."
+                class="w-full px-6 py-4 rounded-2xl border-2 border-gray-200 focus:border-primary focus:outline-none transition-colors"
+                style="color: #1f2937;"
+              />
+              <svg class="absolute right-6 top-1/2 -translate-y-1/2 w-6 h-6 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/>
+              </svg>
+            </div>
+          </div>
+
+          <!-- Category Filter -->
+          <div class="flex flex-wrap gap-3 justify-center">
+            <button
+              v-for="cat in categories"
+              :key="cat"
+              @click="selectedCategory = cat"
+              :class="{
+                'bg-primary text-white': cat === selectedCategory,
+                'bg-white text-primary border-2 border-primary hover:bg-primary/10': cat !== selectedCategory
+              }"
+              class="px-5 py-2 rounded-full transition-all font-semibold text-sm"
+            >
+              {{ cat }}
+            </button>
+          </div>
         </div>
 
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          <!-- Loop through the blogs array -->
+        <!-- Loading State -->
+        <div v-if="loading" class="text-center py-20">
+          <div class="animate-spin rounded-full h-16 w-16 border-b-2 border-t-2 mx-auto mb-4" style="border-color: #f97316;"></div>
+          <p class="text-xl" style="color: #6b7280;">Loading articles...</p>
+        </div>
+
+        <!-- Error State -->
+        <div v-else-if="error" class="text-center py-20">
+          <p class="text-xl text-red-600">{{ error }}</p>
+        </div>
+
+        <!-- Blog Grid -->
+        <div v-else class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <!-- Loop through the paginated blogs array -->
           <article
-            v-for="(blog, index) in blogs"
+            v-for="(blog, index) in paginatedBlogs"
             :key="index"
             class="bg-white rounded-2xl shadow-xl overflow-hidden hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2"
           >
@@ -103,6 +147,37 @@
             </div>
           </article>
         </div>
+
+        <!-- Pagination -->
+        <nav v-if="totalPages > 1 && !loading" class="flex justify-center gap-2 mt-12">
+          <button
+            @click="currentPage = Math.max(1, currentPage - 1)"
+            :disabled="currentPage === 1"
+            class="px-4 py-2 rounded-lg font-semibold transition-all disabled:opacity-50 disabled:cursor-not-allowed"
+            :class="currentPage === 1 ? 'bg-gray-200 text-gray-500' : 'bg-white border-2 border-primary text-primary hover:bg-primary hover:text-white'"
+          >
+            Previous
+          </button>
+
+          <button
+            v-for="page in totalPages"
+            :key="page"
+            @click="currentPage = page"
+            :class="{ 'bg-primary text-white': page === currentPage, 'bg-white border-2 border-primary text-primary hover:bg-primary/10': page !== currentPage }"
+            class="px-4 py-2 rounded-lg font-semibold transition-all"
+          >
+            {{ page }}
+          </button>
+
+          <button
+            @click="currentPage = Math.min(totalPages, currentPage + 1)"
+            :disabled="currentPage === totalPages"
+            class="px-4 py-2 rounded-lg font-semibold transition-all disabled:opacity-50 disabled:cursor-not-allowed"
+            :class="currentPage === totalPages ? 'bg-gray-200 text-gray-500' : 'bg-white border-2 border-primary text-primary hover:bg-primary hover:text-white'"
+          >
+            Next
+          </button>
+        </nav>
       </div>
     </section>
 
@@ -138,71 +213,63 @@
 </template>
 
 <script setup>
-import appliance1 from "~/assets/img/blogs/appliance1.webp"
-import oemParts from "~/assets/img/blogs/oem-parts.webp"
+import { ref, onMounted, computed } from 'vue'
 
-const blogs = [
-  {
-    title: "2025 Smart Appliance Technology: What Bay Area Homeowners Need to Know",
-    description: "Discover the latest smart appliance innovations revolutionizing modern kitchens. From WiFi-enabled refrigerators to AI-powered ovens, learn how technology is transforming home appliances in 2025.",
-    image: appliance1,
-    link: "/blogs/2025-smart-appliance-technology",
-    category: "Technology",
-    date: "January 15, 2025",
-    readTime: "7 min read",
-    views: "2.1k views"
-  },
-  {
-    title: "Why You Should Only Use OEM Parts for Your Luxury Appliances",
-    description: "Learn why genuine manufacturer parts are essential for maintaining your Sub-Zero, Viking, and Wolf appliances. Discover the long-term benefits and cost savings of choosing OEM over aftermarket parts.",
-    image: oemParts,
-    link: "/blogs/why-use-only-oem-parts",
-    category: "Maintenance",
-    date: "January 8, 2025",
-    readTime: "5 min read",
-    views: "1.8k views"
-  },
-  {
-    title: "Energy Efficiency Tips: Reducing Your Appliance Energy Costs in 2025",
-    description: "Discover proven strategies to cut your energy bills while maintaining optimal appliance performance. Expert tips for Bay Area homeowners on eco-friendly appliance usage and maintenance.",
-    image: appliance1,
-    link: "/blogs/energy-efficiency-tips-2025",
-    category: "Energy Savings",
-    date: "December 28, 2024",
-    readTime: "6 min read",
-    views: "3.2k views"
-  },
-  {
-    title: "How to Maximize the Lifespan of Your High-End Appliances",
-    description: "Professional maintenance secrets that can extend your luxury appliances' lifespan by years. Learn the insider tips that Bay Area repair specialists use to keep premium appliances running perfectly.",
-    image: oemParts,
-    link: "/blogs/how-to-maximize-appliance-lifespan",
-    category: "Maintenance",
-    date: "December 20, 2024",
-    readTime: "8 min read",
-    views: "4.5k views"
-  },
-  {
-    title: "Common Appliance Problems and When to Call a Professional",
-    description: "Learn to identify serious appliance issues that require professional repair versus simple DIY fixes. Avoid costly mistakes and know when it's time to call Bay Area's trusted repair experts.",
-    image: appliance1,
-    link: "/blogs/common-appliance-problems",
-    category: "Troubleshooting",
-    date: "December 12, 2024",
-    readTime: "6 min read",
-    views: "2.7k views"
-  },
-  {
-    title: "Winter Appliance Care: Protecting Your Investment During Cold Months",
-    description: "Essential winter maintenance tips for Bay Area homeowners. Learn how seasonal changes affect your appliances and what preventive measures can save you from expensive repairs.",
-    image: oemParts,
-    link: "/blogs/winter-appliance-care",
-    category: "Seasonal Care",
-    date: "December 5, 2024",
-    readTime: "5 min read",
-    views: "1.9k views"
+const { getAllBlogs } = useBlogApi()
+
+const blogs = ref([])
+const loading = ref(true)
+const error = ref(null)
+
+// Search and filter
+const searchQuery = ref('')
+const selectedCategory = ref('All')
+const categories = ref(['All', 'Technology', 'Maintenance', 'Energy Savings', 'Troubleshooting', 'Seasonal Care', 'Repair Tips'])
+
+// Pagination
+const currentPage = ref(1)
+const perPage = 9
+
+// Filtered blogs
+const filteredBlogs = computed(() => {
+  let filtered = blogs.value
+
+  // Filter by category
+  if (selectedCategory.value !== 'All') {
+    filtered = filtered.filter(b => b.category === selectedCategory.value)
   }
-];
+
+  // Filter by search query
+  if (searchQuery.value) {
+    const query = searchQuery.value.toLowerCase()
+    filtered = filtered.filter(b =>
+      b.title.toLowerCase().includes(query) ||
+      b.description.toLowerCase().includes(query)
+    )
+  }
+
+  return filtered
+})
+
+// Paginated blogs
+const paginatedBlogs = computed(() => {
+  const start = (currentPage.value - 1) * perPage
+  const end = start + perPage
+  return filteredBlogs.value.slice(start, end)
+})
+
+const totalPages = computed(() => Math.ceil(filteredBlogs.value.length / perPage))
+
+onMounted(async () => {
+  try {
+    blogs.value = await getAllBlogs()
+  } catch (e) {
+    error.value = 'Failed to load blog posts'
+    console.error(e)
+  } finally {
+    loading.value = false
+  }
+})
 
 // SEO optimization
 useHead({

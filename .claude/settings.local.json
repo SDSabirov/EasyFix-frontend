@@ -2,7 +2,17 @@
   "permissions": {
     "allow": [
       "Bash(mv:*)",
-      "Bash(curl:*)"
+      "Bash(curl:*)",
+      "Bash(test:*)",
+      "Bash(cat:*)",
+      "Bash(python manage.py startapp:*)",
+      "Bash(pip install:*)",
+      "Bash(python manage.py makemigrations:*)",
+      "Bash(python manage.py migrate:*)",
+      "Bash(python -m pip install:*)",
+      "Bash(../venv/Scripts/python:*)",
+      "Bash(./venv/Scripts/pip install:*)",
+      "Bash(../venv/Scripts/pip install:*)"
     ],
     "deny": []
   }
