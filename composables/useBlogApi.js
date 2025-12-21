@@ -1,9 +1,9 @@
-import api from '~/api/drf'
-
 export const useBlogApi = () => {
+  const { $api } = useNuxtApp()
+
   const getAllBlogs = async () => {
     try {
-      const response = await api.get('/blog/posts/')
+      const response = await $api.get('/blog/posts/')
       return response.data
     } catch (error) {
       console.error('Error fetching blogs:', error)
@@ -13,7 +13,7 @@ export const useBlogApi = () => {
 
   const getBlogBySlug = async (slug) => {
     try {
-      const response = await api.get(`/blog/posts/${slug}/`)
+      const response = await $api.get(`/blog/posts/${slug}/`)
       return response.data
     } catch (error) {
       console.error('Error fetching blog:', error)
@@ -23,7 +23,7 @@ export const useBlogApi = () => {
 
   const getRelatedBlogs = async (slug) => {
     try {
-      const response = await api.get(`/blog/posts/${slug}/related/`)
+      const response = await $api.get(`/blog/posts/${slug}/related/`)
       return response.data
     } catch (error) {
       console.error('Error fetching related blogs:', error)
@@ -33,7 +33,7 @@ export const useBlogApi = () => {
 
   const getBlogsByCategory = async (category) => {
     try {
-      const response = await api.get('/blog/posts/', {
+      const response = await $api.get('/blog/posts/', {
         params: { category }
       })
       return response.data
