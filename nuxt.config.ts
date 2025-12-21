@@ -80,6 +80,7 @@ export default defineNuxtConfig({
   runtimeConfig: {
     public: {
       mapsApiKey: process.env.MAPS_API, // Define your public environment variable
+      apiBaseUrl: process.env.NUXT_PUBLIC_API_BASE_URL || 'http://127.0.0.1:8000/api',
     },
   },
 
