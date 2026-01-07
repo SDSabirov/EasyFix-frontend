@@ -37,16 +37,29 @@
       </div>
       
       <!-- Brand Grid -->
-      <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6 mb-16">
-        <div v-for="brand in brands" :key="brand.name" 
+      <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6 mb-8">
+        <div v-for="brand in brands" :key="brand.name"
              class="group bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 border border-gray-100">
           <div class="text-center">
-            <img :src="brand.logo" :alt="brand.name + ' appliance repair services'" 
+            <img :src="brand.logo" :alt="brand.name + ' appliance repair services'"
                  class="h-12 mx-auto mb-4 object-contain filter grayscale group-hover:grayscale-0 transition-all duration-300" />
             <h3 class="font-semibold text-gray-900 text-sm">{{ brand.name }}</h3>
             <p class="text-xs text-gray-600 mt-1">{{ brand.specialty }}</p>
           </div>
         </div>
+      </div>
+
+      <!-- And Many More Link -->
+      <div class="text-center mb-16">
+        <NuxtLink
+          to="/services"
+          class="inline-flex items-center text-lg font-semibold text-primary hover:text-secondary transition-colors duration-300 group"
+        >
+          <span>And Many More</span>
+          <svg class="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6" />
+          </svg>
+        </NuxtLink>
       </div>
 
       <!-- Services Grid -->

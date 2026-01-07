@@ -28,7 +28,7 @@
               ><img
                 src="/assets/icons/starBullet.svg"
                 alt="star bullet points" /></span
-            ><span>24/7 Customer Care</span>
+            ><span>Same-Day & After-Hours Service</span>
           </li>
           <li class="flex space-x-2 items-center">
             <span

@@ -197,7 +197,7 @@
                 </div>
                 <div>
                   <h3 class="font-bold mb-2" style="color: #ffffff;">Same-Day Service</h3>
-                  <p class="text-sm" style="color: rgba(255, 255, 255, 0.8);">Emergency repairs available 24/7</p>
+                  <p class="text-sm" style="color: rgba(255, 255, 255, 0.8);">Same-day & after-hours repairs available</p>
                 </div>
               </div>
               

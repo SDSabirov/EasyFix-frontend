@@ -154,7 +154,7 @@
               </div>
               <h3 class="text-xl font-bold mb-3" style="color: #ffffff;">Book Online</h3>
               <p style="color: rgba(255, 255, 255, 0.8);">Schedule convenient service</p>
-              <p class="font-bold text-lg mt-2" style="color: #f97316;">24/7 Available</p>
+              <p class="font-bold text-lg mt-2" style="color: #f97316;">Same-Day Service</p>
             </div>
             
             <div class="p-6 rounded-2xl" style="background: rgba(255, 255, 255, 0.1); backdrop-filter: blur(8px);">
@@ -241,7 +241,7 @@ const faqs = [
   {
     category: 'general',
     question: "How quickly can you schedule a repair appointment?",
-    answer: "We offer <strong>same-day and next-day appointments</strong> to minimize your downtime. For urgent issues, we provide <strong>emergency repair services</strong> with technicians available 24/7. Most appointments can be scheduled within 24-48 hours, depending on your location and the complexity of the repair."
+    answer: "We offer <strong>same-day and next-day appointments</strong> to minimize your downtime. For urgent issues, we provide <strong>emergency repair services</strong> with technicians available for same-day and after-hours service. Most appointments can be scheduled within 24-48 hours, depending on your location and the complexity of the repair."
   },
   {
     category: 'general',
@@ -339,7 +339,7 @@ const faqs = [
   {
     category: 'service',
     question: "Do you provide emergency repair services?",
-    answer: "Yes, we offer <strong>24/7 emergency repair services</strong> for critical appliances like refrigerators, freezers, and other essential units. Emergency service may include additional fees for after-hours calls, but we'll always provide upfront pricing. Call our emergency line for immediate assistance with urgent appliance failures."
+    answer: "Yes, we offer <strong>same-day and after-hours emergency repair services</strong> for critical appliances like refrigerators, freezers, and other essential units. Emergency service may include additional fees for after-hours calls, but we'll always provide upfront pricing. Call our emergency line for immediate assistance with urgent appliance failures."
   },
   {
     category: 'general',
@@ -356,7 +356,7 @@ const filteredFaqs = computed(() => {
 // Use proper Nuxt SEO meta
 useSeoMeta({
   title: 'Frequently Asked Questions | Appliance Repair Bay Area | Easy Fix Appliance',
-  description: 'Get answers to common questions about appliance repair services in Bay Area. Sub-Zero, Wolf, Viking repair FAQs, pricing, warranties, and service areas. Expert technicians available 24/7.',
+  description: 'Get answers to common questions about appliance repair services in Bay Area. Sub-Zero, Wolf, Viking repair FAQs, pricing, warranties, and service areas. Expert technicians available for same-day service.',
   keywords: 'appliance repair FAQ, Bay Area appliance service questions, Sub-Zero repair cost, luxury appliance maintenance, same-day appliance repair, certified technicians',
   ogTitle: 'Appliance Repair FAQ | Bay Area Expert Answers',
   ogDescription: 'Find answers to common appliance repair questions. Expert technicians, luxury brand specialists, same-day service in Bay Area.',

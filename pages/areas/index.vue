@@ -64,8 +64,8 @@
               <div class="text-white/80 font-medium">Years Experience</div>
             </div>
             <div class="text-center">
-              <div class="text-3xl lg:text-4xl font-bold text-white mb-2">24/7</div>
-              <div class="text-white/80 font-medium">Emergency Service</div>
+              <div class="text-3xl lg:text-4xl font-bold text-white mb-2">Same Day</div>
+              <div class="text-white/80 font-medium">Fast Service</div>
             </div>
             <div class="text-center">
               <div class="text-3xl lg:text-4xl font-bold text-white mb-2">100%</div>

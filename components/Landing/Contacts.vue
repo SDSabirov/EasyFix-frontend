@@ -31,7 +31,7 @@
               </div>
               <div class="flex-1">
                 <h3 class="text-2xl font-bold mb-3">Call or Text Us</h3>
-                <p class="text-white/90 mb-4">Available for emergency repairs 24/7</p>
+                <p class="text-white/90 mb-4">Same-day & after-hours service available</p>
                 <p class="text-lg mb-2">📞 Regular Service: Mon-Fri 8am-8pm</p>
                 <p class="text-lg mb-4">🚨 Emergency Service: Weekends & Holidays</p>
                 

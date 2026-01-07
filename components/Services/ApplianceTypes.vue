@@ -55,8 +55,8 @@
             <div class="text-gray-600 font-medium text-sm">Repairs Completed</div>
           </div>
           <div class="text-center">
-            <div class="text-3xl font-bold text-primary mb-2">24/7</div>
-            <div class="text-gray-600 font-medium text-sm">Emergency Service</div>
+            <div class="text-3xl font-bold text-primary mb-2">Same Day</div>
+            <div class="text-gray-600 font-medium text-sm">Fast Service</div>
           </div>
           <div class="text-center">
             <div class="text-3xl font-bold text-primary mb-2">100%</div>

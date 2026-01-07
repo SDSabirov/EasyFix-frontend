@@ -17,7 +17,7 @@
         100%  Job Satisfaction Guarantee
       </h2>
       <p class="text-lg">
-        Need same-day appliance repair? We're available 24/7 to answer your questions and address household appliance issues. Our technicians start repairs promptly upon appointment.
+        Need same-day appliance repair? We're available for same-day and after-hours service to answer your questions and address household appliance issues. Our technicians start repairs promptly upon appointment.
       </p>
 
       <div class="grid grid-cols-1 md:grid-cols-4 py-6 gap-8">

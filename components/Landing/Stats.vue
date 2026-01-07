@@ -27,8 +27,21 @@
              class="group text-center">
           <div class="bg-white/10 backdrop-blur-sm rounded-3xl p-8 border border-white/20 hover:bg-white/20 transition-all duration-300 transform hover:-translate-y-2 hover:shadow-2xl">
             <div class="w-20 h-20 bg-white/20 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:bg-white/30 transition-all duration-300">
-              <svg class="w-10 h-10 text-white" fill="currentColor" viewBox="0 0 20 20">
-                <path :d="stat.icon"/>
+              <!-- Trophy Icon - Years Experience -->
+              <svg v-if="stat.icon === 'trophy'" class="w-10 h-10 text-white" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M12 15a7 7 0 01-7-7h2a5 5 0 0010 0h2a7 7 0 01-7 7zM5 2h14a1 1 0 011 1v3a4 4 0 01-4 4h-1a5 5 0 01-10 0H4a4 4 0 01-4-4V3a1 1 0 011-1zm2 2v2a2 2 0 002 2h6a2 2 0 002-2V4H7zm4 13h2v5h-2v-5zm-3 2h8v3H8v-3z"/>
+              </svg>
+              <!-- Wrench Icon - Repairs Completed -->
+              <svg v-else-if="stat.icon === 'wrench'" class="w-10 h-10 text-white" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M22.7 19l-9.1-9.1c.9-2.3.4-5-1.5-6.9-2-2-5-2.4-7.4-1.3L9 6 6 9 1.6 4.7C.4 7.1.9 10.1 2.9 12.1c1.9 1.9 4.6 2.4 6.9 1.5l9.1 9.1c.4.4 1 .4 1.4 0l2.3-2.3c.5-.4.5-1.1.1-1.4z"/>
+              </svg>
+              <!-- Clock Icon - Emergency Service -->
+              <svg v-else-if="stat.icon === 'clock'" class="w-10 h-10 text-white" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10 10-4.5 10-10S17.5 2 12 2zm0 18c-4.4 0-8-3.6-8-8s3.6-8 8-8 8 3.6 8 8-3.6 8-8 8zm.5-13H11v6l5.2 3.2.8-1.3-4.5-2.7V7z"/>
+              </svg>
+              <!-- Star Icon - Satisfaction Rate -->
+              <svg v-else-if="stat.icon === 'star'" class="w-10 h-10 text-white" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
               </svg>
             </div>
             <div class="text-4xl font-bold text-white mb-2">{{ stat.number }}</div>
@@ -99,25 +112,25 @@ const stats = [
     number: "15+",
     title: "Years Experience",
     description: "Serving Bay Area with excellence",
-    icon: "M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"
+    icon: "trophy"
   },
   {
     number: "5000+",
     title: "Repairs Completed",
     description: "Satisfied customers across Bay Area",
-    icon: "M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
+    icon: "wrench"
   },
   {
-    number: "24/7",
-    title: "Emergency Service",
-    description: "Available when you need us most",
-    icon: "M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"
+    number: "Same Day",
+    title: "Fast Service",
+    description: "Same-day & after-hours available",
+    icon: "clock"
   },
   {
     number: "100%",
     title: "Satisfaction Rate",
     description: "Guaranteed quality workmanship",
-    icon: "M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"
+    icon: "star"
   }
 ]
 
