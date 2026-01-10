@@ -37,7 +37,7 @@
       </div>
       
       <!-- Brand Grid -->
-      <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6 mb-8">
+      <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 mb-8">
         <div v-for="brand in brands" :key="brand.name"
              class="group bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 border border-gray-100">
           <div class="text-center">
@@ -143,6 +143,8 @@ import kitchenaidLogo from '/assets/img/kitchenaid.png'
 import geMonogramLogo from '/assets/img/GEmonogram.png'
 import subzeroLogosilver from '/assets/img/subzeroLogosilver.png'
 import dacorLogo from '/assets/img/dacor-logo.png'
+import laCornueLogo from '/assets/img/la_cornue.svg'
+import gaggenauLogo from '/assets/img/gagganue-logo.png'
 
 import subzeroWolfImage from '/assets/img/subzerowolfappliance.webp'
 import vikingImage from '/assets/img/vikingAppliance.webp'
@@ -181,6 +183,16 @@ const brands = [
     name: "GE Monogram",
     logo: geMonogramLogo,
     specialty: "Premium"
+  },
+  {
+    name: "La Cornue",
+    logo: laCornueLogo,
+    specialty: "French Luxury"
+  },
+  {
+    name: "GAGGENAU",
+    logo: gaggenauLogo,
+    specialty: "German Engineering"
   }
 ]
 

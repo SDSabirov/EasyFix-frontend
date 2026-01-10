@@ -22,7 +22,7 @@ const applianceTypes = [
   'Built-In Appliances'
 ]
 
-const brandExamples = 'Samsung, LG, Whirlpool, Maytag, Frigidaire, Bosch, GE, Kenmore, Amana, Hotpoint, Haier, and many more'
+const brandExamples = 'Samsung, LG, Whirlpool, Maytag, Frigidaire, Bosch, GE, Kenmore, Amana, and many more'
 </script>
 
 <template>

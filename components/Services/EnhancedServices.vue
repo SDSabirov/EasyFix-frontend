@@ -59,7 +59,7 @@
       <!-- Enhanced Brand Grid -->
       <div class="mb-20">
         <h3 class="text-3xl font-bold text-center text-gray-900 mb-12">Authorized Service for Premium Brands</h3>
-        <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8">
+        <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
           <div v-for="brand in brands" :key="brand.name" 
                class="group bg-gradient-to-br from-white to-gray-50 rounded-3xl p-8 shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-3 border border-gray-100 hover:border-primary/20">
             <div class="text-center">
@@ -198,6 +198,8 @@ import kitchenaidLogo from '/assets/img/kitchenaid.png'
 import geMonogramLogo from '/assets/img/GEmonogram.png'
 import subzeroLogosilver from '/assets/img/subzeroLogosilver.png'
 import dacorLogo from '/assets/img/dacor-logo.png'
+import laCornueLogo from '/assets/img/la_cornue.svg'
+import gaggenauLogo from '/assets/img/gagganue-logo.png'
 
 import subzeroWolfImage from '/assets/img/subzerowolfappliance.webp'
 import vikingImage from '/assets/img/vikingAppliance.webp'
@@ -236,6 +238,16 @@ const brands = [
     name: "GE Monogram",
     logo: geMonogramLogo,
     specialty: "Premium Design"
+  },
+  {
+    name: "La Cornue",
+    logo: laCornueLogo,
+    specialty: "French Luxury"
+  },
+  {
+    name: "GAGGENAU",
+    logo: gaggenauLogo,
+    specialty: "German Engineering"
   }
 ]
 
