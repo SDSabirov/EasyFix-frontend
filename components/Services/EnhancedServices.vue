@@ -78,9 +78,9 @@
       <!-- Enhanced Services Grid -->
       <div class="mb-20">
         <h3 class="text-3xl font-bold text-center text-gray-900 mb-12">Our Specialized Repair Services</h3>
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+        <div class="flex flex-wrap justify-center gap-10">
           <div v-for="service in services" :key="service.name"
-               class="group bg-white rounded-3xl shadow-2xl overflow-hidden hover:shadow-3xl transition-all duration-500 transform hover:-translate-y-3 border border-gray-100 hover:border-primary/20">
+               class="group bg-white rounded-3xl shadow-2xl overflow-hidden hover:shadow-3xl transition-all duration-500 transform hover:-translate-y-3 border border-gray-100 hover:border-primary/20 w-full md:w-[calc(50%-1.25rem)] lg:w-[calc(33.333%-1.7rem)]">
             <div class="relative h-64 overflow-hidden">
               <img :src="service.image" :alt="service.alt"
                    class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" />
@@ -202,6 +202,8 @@ import laCornueLogo from '/assets/img/la_cornue.svg'
 import gaggenauLogo from '/assets/img/gagganue-logo.png'
 
 import subzeroWolfImage from '/assets/img/subzerowolfappliance.webp'
+import laCornueImage from '/assets/img/la_courne.webp'
+import gaggenauImage from '/assets/img/gaggenau.webp'
 import vikingImage from '/assets/img/vikingAppliance.webp'
 import thermadorImage from '/assets/img/thermador-cover.jpg'
 import kitchenaidImage from '/assets/img/kitchenBlue.jpg'
@@ -318,6 +320,28 @@ const services = [
     description: "Expert repairs for Dacor refrigerators, ovens, cooktops, wine preservation systems, and premium kitchen appliances with specialized training.",
     link: "/dacor-appliance",
     buttonText: "Dacor Repair Services"
+  },
+  {
+    name: "La Cornue",
+    image: laCornueImage,
+    alt: "La Cornue French luxury ranges - expert repair services Bay Area",
+    logos: [
+      { src: laCornueLogo, alt: "La Cornue Logo" }
+    ],
+    description: "Specialized repairs for La Cornue Chateau, CornuFe, and all French luxury ranges with factory-trained expertise and genuine parts.",
+    link: "/la-cornue",
+    buttonText: "La Cornue Repair Services"
+  },
+  {
+    name: "GAGGENAU",
+    image: gaggenauImage,
+    alt: "GAGGENAU German precision appliances - expert repair services Bay Area",
+    logos: [
+      { src: gaggenauLogo, alt: "GAGGENAU Logo" }
+    ],
+    description: "Expert repairs for GAGGENAU steam ovens, induction cooktops, refrigeration, and all German precision appliances with certified technicians.",
+    link: "/gaggenau",
+    buttonText: "GAGGENAU Repair Services"
   }
 ]
 

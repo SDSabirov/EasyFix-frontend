@@ -63,9 +63,9 @@
       </div>
 
       <!-- Services Grid -->
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <div class="flex flex-wrap justify-center gap-8">
         <div v-for="service in services" :key="service.name"
-             class="group bg-white rounded-2xl shadow-xl overflow-hidden hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border border-gray-100">
+             class="group bg-white rounded-2xl shadow-xl overflow-hidden hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border border-gray-100 w-full md:w-[calc(50%-1rem)] lg:w-[calc(33.333%-1.4rem)]">
           <div class="relative h-48 overflow-hidden">
             <img :src="service.image" :alt="service.alt"
                  class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
@@ -147,6 +147,8 @@ import laCornueLogo from '/assets/img/la_cornue.svg'
 import gaggenauLogo from '/assets/img/gagganue-logo.png'
 
 import subzeroWolfImage from '/assets/img/subzerowolfappliance.webp'
+import laCornueImage from '/assets/img/la_courne.webp'
+import gaggenauImage from '/assets/img/gaggenau.webp'
 import vikingImage from '/assets/img/vikingAppliance.webp'
 import thermadorImage from '/assets/img/thermador-cover.jpg'
 import kitchenaidImage from '/assets/img/kitchenBlue.jpg'
@@ -263,6 +265,28 @@ const services = [
     description: "Expert repairs for Dacor refrigerators, ovens, cooktops, and premium kitchen appliances.",
     link: "/dacor-appliance",
     buttonText: "Dacor Repair Services"
+  },
+  {
+    name: "La Cornue",
+    image: laCornueImage,
+    alt: "La Cornue French luxury ranges - expert repair services Bay Area",
+    logos: [
+      { src: laCornueLogo, alt: "La Cornue Logo" }
+    ],
+    description: "Specialized repairs for La Cornue Chateau, CornuFe, and all French luxury ranges.",
+    link: "/la-cornue",
+    buttonText: "La Cornue Repairs"
+  },
+  {
+    name: "GAGGENAU",
+    image: gaggenauImage,
+    alt: "GAGGENAU German precision appliances - expert repair services Bay Area",
+    logos: [
+      { src: gaggenauLogo, alt: "GAGGENAU Logo" }
+    ],
+    description: "Expert repairs for GAGGENAU steam ovens, induction cooktops, and German precision appliances.",
+    link: "/gaggenau",
+    buttonText: "GAGGENAU Repairs"
   }
 ]
 </script>
