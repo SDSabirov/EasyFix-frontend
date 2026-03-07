@@ -2,7 +2,7 @@
 import { brandsData } from '~/data/brands_data'
 
 // Premium brand logos (existing brands)
-import logoSubzero from '~/assets/img/subzerowolfappliance.webp'
+import logoSubzero from '~/assets/img/sub-zero-logo.png'
 import logoViking from '~/assets/img/viking.png'
 import logoThermador from '~/assets/img/thermador.png'
 import logoGaggenau from '~/assets/img/gagganue-logo.png'
