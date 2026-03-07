@@ -43,8 +43,6 @@ export default defineNuxtConfig({
       },
     },
   },
-  buildModules: ["@nuxt/postcss8"],
-
   modules: [
     "@nuxtjs/seo",
     "@nuxtjs/google-fonts",
@@ -71,11 +69,6 @@ export default defineNuxtConfig({
     UserAgent: "*", // Applies to all user agents
     Disallow: "/admin", // Disallow access to admin pages
     Allow: "/", // Allow access to all other pages
-  },
-  vite: {
-    optimizeDeps: {
-      include: ['fast-deep-equal'],
-    },
   },
   runtimeConfig: {
     public: {

@@ -12,7 +12,22 @@
       "Bash(python -m pip install:*)",
       "Bash(../venv/Scripts/python:*)",
       "Bash(./venv/Scripts/pip install:*)",
-      "Bash(../venv/Scripts/pip install:*)"
+      "Bash(../venv/Scripts/pip install:*)",
+      "WebSearch",
+      "WebFetch(domain:nuxtseo.com)",
+      "WebFetch(domain:github.com)",
+      "Bash(npm update:*)",
+      "Bash(npm install:*)",
+      "Bash(ls -la /c/Users/saido/Desktop/easyfix/Easyfix-frontend/pages/*.vue)",
+      "Bash(xargs basename:*)",
+      "Bash(xargs grep:*)",
+      "Bash(grep:*)",
+      "Bash(npx nuxt:*)",
+      "Bash(taskkill:*)",
+      "mcp__plugin_playwright_playwright__browser_navigate",
+      "mcp__plugin_playwright_playwright__browser_take_screenshot",
+      "mcp__plugin_playwright_playwright__browser_evaluate",
+      "mcp__plugin_playwright_playwright__browser_wait_for"
     ],
     "deny": []
   }
