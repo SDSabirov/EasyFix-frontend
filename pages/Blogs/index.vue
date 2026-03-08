@@ -3,7 +3,7 @@
     <Navbar />
     
     <!-- Hero Section -->
-    <header class="relative h-[60vh] lg:h-[70vh] overflow-hidden mt-16 lg:mt-20" style="background: #0c2a3b; background-image: linear-gradient(to bottom right, #0c2a3b, #1C6E8C, #f97316);">
+    <header class="relative h-[45vh] sm:h-[60vh] lg:h-[70vh] overflow-hidden mt-16 lg:mt-20" style="background: #0c2a3b; background-image: linear-gradient(to bottom right, #0c2a3b, #1C6E8C, #f97316);">
       <!-- Professional Background Elements -->
       <div class="absolute top-16 left-12 w-20 h-20 rounded-full blur-lg animate-bounce" style="background: rgba(249, 115, 22, 0.25); animation-delay: 0.5s;"></div>
       <div class="absolute bottom-32 right-20 w-36 h-36 rounded-full blur-xl animate-pulse delay-1000" style="background: rgba(28, 110, 140, 0.2);"></div>
@@ -16,15 +16,15 @@
             <svg class="w-6 h-6 mr-3" style="color: #ffffff;" fill="currentColor" viewBox="0 0 20 20">
               <path fill-rule="evenodd" d="M12 6.253v13c0 1.079.952 1.845 2.009 1.674 1.337-.218 2.995-.672 4.49-1.54A2 2 0 0020 17.901V4.508c0-1.079-.952-1.845-2.009-1.674-1.337.218-2.995.672-4.49 1.54A2 2 0 0012 6.253zM8 8v10c0 .552-.895 1-2 1s-2-.448-2-1V8c0-.552.895-1 2-1s2 .448 2 1z" clip-rule="evenodd"/>
             </svg>
-            <span class="font-semibold text-lg" style="color: #ffffff;">Expert Insights & Tips</span>
+            <span class="font-semibold text-base sm:text-lg" style="color: #ffffff;">Expert Insights & Tips</span>
           </div>
           
-          <h1 class="text-4xl lg:text-6xl font-bold mb-8 leading-tight" style="color: #ffffff;">
+          <h1 class="text-2xl sm:text-4xl lg:text-6xl font-bold mb-8 leading-tight" style="color: #ffffff;">
             Appliance Care
             <span class="block" style="color: #f97316;">Blog & Resources</span>
           </h1>
           
-          <p class="text-xl lg:text-2xl mb-12 max-w-3xl mx-auto leading-relaxed" style="color: rgba(255, 255, 255, 0.9);">
+          <p class="text-base sm:text-xl lg:text-2xl mb-8 sm:mb-12 max-w-3xl mx-auto leading-relaxed" style="color: rgba(255, 255, 255, 0.9);">
             Expert tips, maintenance guides, and industry insights to help you get the most out of your <strong>luxury appliances</strong>. Learn from Bay Area's trusted repair specialists.
           </p>
         </div>
@@ -32,11 +32,11 @@
     </header>
 
     <!-- Blog Articles Section -->
-    <section class="py-20 lg:py-32" style="background: linear-gradient(to bottom right, #f8fafc, #ffffff);">
+    <section class="py-12 sm:py-20 lg:py-32" style="background: linear-gradient(to bottom right, #f8fafc, #ffffff);">
       <div class="container mx-auto px-4 max-w-screen-xl">
         <div class="text-center mb-16">
-          <h2 class="text-3xl lg:text-4xl font-bold mb-8" style="color: #1f2937;">Latest Articles</h2>
-          <p class="text-xl max-w-3xl mx-auto mb-8" style="color: #6b7280;">
+          <h2 class="text-2xl sm:text-3xl lg:text-4xl font-bold mb-8" style="color: #1f2937;">Latest Articles</h2>
+          <p class="text-base sm:text-xl max-w-3xl mx-auto mb-8" style="color: #6b7280;">
             Stay informed with expert advice from professional appliance technicians serving the Bay Area
           </p>
 
@@ -47,7 +47,7 @@
                 v-model="searchQuery"
                 type="text"
                 placeholder="Search articles..."
-                class="w-full px-6 py-4 rounded-2xl border-2 border-gray-200 focus:border-primary focus:outline-none transition-colors"
+                class="w-full px-4 py-3 sm:px-6 sm:py-4 rounded-2xl border-2 border-gray-200 focus:border-primary focus:outline-none transition-colors"
                 style="color: #1f2937;"
               />
               <svg class="absolute right-6 top-1/2 -translate-y-1/2 w-6 h-6 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -85,7 +85,7 @@
         </div>
 
         <!-- Blog Grid -->
-        <div v-else class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div v-else class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
           <!-- Loop through the paginated blogs array -->
           <article
             v-for="(blog, index) in paginatedBlogs"
@@ -96,7 +96,7 @@
               <img
                 :src="blog.image"
                 :alt="`${blog.title} - Appliance maintenance and repair tips`"
-                class="w-full h-56 object-cover transition-transform duration-300 hover:scale-105"
+                class="w-full h-44 sm:h-56 object-cover transition-transform duration-300 hover:scale-105"
               />
               <div class="absolute top-4 left-4 px-3 py-1 rounded-full text-sm font-semibold" style="background: rgba(249, 115, 22, 0.9); color: #ffffff;">
                 {{ blog.category }}
@@ -106,7 +106,7 @@
               </div>
             </div>
             
-            <div class="p-8">
+            <div class="p-5 sm:p-8">
               <div class="flex items-center mb-4 text-sm" style="color: #6b7280;">
                 <svg class="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 20 20">
                   <path fill-rule="evenodd" d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z" clip-rule="evenodd"/>
@@ -114,7 +114,7 @@
                 {{ blog.date }}
               </div>
               
-              <h3 class="text-xl font-bold mb-4 leading-tight hover:text-orange-600 transition-colors" style="color: #1f2937;">
+              <h3 class="text-lg sm:text-xl font-bold mb-4 leading-tight hover:text-orange-600 transition-colors" style="color: #1f2937;">
                 <NuxtLink :to="blog.link" class="block">
                   {{ blog.title }}
                 </NuxtLink>
@@ -125,7 +125,7 @@
               <div class="flex items-center justify-between">
                 <NuxtLink
                   :to="blog.link"
-                  class="inline-flex items-center font-bold text-lg transition-all duration-300 hover:gap-3" 
+                  class="inline-flex items-center font-bold text-base sm:text-lg transition-all duration-300 hover:gap-3" 
                   style="color: #f97316;"
                 >
                   Read Article
@@ -153,7 +153,7 @@
           <button
             @click="currentPage = Math.max(1, currentPage - 1)"
             :disabled="currentPage === 1"
-            class="px-4 py-2 rounded-lg font-semibold transition-all disabled:opacity-50 disabled:cursor-not-allowed"
+            class="px-3 py-2 sm:px-4 min-h-[44px] rounded-lg font-semibold transition-all disabled:opacity-50 disabled:cursor-not-allowed touch-manipulation"
             :class="currentPage === 1 ? 'bg-gray-200 text-gray-500' : 'bg-white border-2 border-primary text-primary hover:bg-primary hover:text-white'"
           >
             Previous
@@ -164,7 +164,7 @@
             :key="page"
             @click="currentPage = page"
             :class="{ 'bg-primary text-white': page === currentPage, 'bg-white border-2 border-primary text-primary hover:bg-primary/10': page !== currentPage }"
-            class="px-4 py-2 rounded-lg font-semibold transition-all"
+            class="px-3 py-2 sm:px-4 min-h-[44px] rounded-lg font-semibold transition-all touch-manipulation"
           >
             {{ page }}
           </button>
@@ -172,7 +172,7 @@
           <button
             @click="currentPage = Math.min(totalPages, currentPage + 1)"
             :disabled="currentPage === totalPages"
-            class="px-4 py-2 rounded-lg font-semibold transition-all disabled:opacity-50 disabled:cursor-not-allowed"
+            class="px-3 py-2 sm:px-4 min-h-[44px] rounded-lg font-semibold transition-all disabled:opacity-50 disabled:cursor-not-allowed touch-manipulation"
             :class="currentPage === totalPages ? 'bg-gray-200 text-gray-500' : 'bg-white border-2 border-primary text-primary hover:bg-primary hover:text-white'"
           >
             Next
@@ -182,13 +182,13 @@
     </section>
 
     <!-- Newsletter Signup Section -->
-    <section class="py-20" style="background: #0c2a3b;">
+    <section class="py-12 sm:py-20" style="background: #0c2a3b;">
       <div class="container mx-auto px-4 max-w-screen-xl text-center">
         <div class="max-w-2xl mx-auto">
-          <h2 class="text-3xl lg:text-4xl font-bold mb-6" style="color: #ffffff;">
+          <h2 class="text-2xl sm:text-3xl lg:text-4xl font-bold mb-6" style="color: #ffffff;">
             Stay Updated with Expert Tips
           </h2>
-          <p class="text-xl mb-8" style="color: rgba(255, 255, 255, 0.9);">
+          <p class="text-base sm:text-xl mb-8" style="color: rgba(255, 255, 255, 0.9);">
             Get the latest appliance maintenance tips and industry insights delivered to your inbox
           </p>
           
@@ -198,7 +198,7 @@
               placeholder="Enter your email"
               class="flex-1 px-6 py-3 rounded-xl text-gray-900 focus:outline-none focus:ring-2 focus:ring-orange-500"
             />
-            <button class="px-8 py-3 font-bold rounded-xl transition-all duration-300 hover:shadow-lg transform hover:-translate-y-1" style="background: linear-gradient(to right, #facc15, #f97316); color: #ffffff;">
+            <button class="w-full sm:w-auto px-8 py-3 min-h-[48px] touch-manipulation font-bold rounded-xl transition-all duration-300 hover:shadow-lg transform hover:-translate-y-1" style="background: linear-gradient(to right, #facc15, #f97316); color: #ffffff;">
               Subscribe
             </button>
           </div>

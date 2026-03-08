@@ -9,10 +9,10 @@
           </svg>
           <span class="text-primary font-semibold text-sm">Contact Us</span>
         </div>
-        <h2 class="text-4xl font-bold text-gray-900 mb-6">
+        <h2 class="text-2xl sm:text-4xl font-bold text-gray-900 mb-6">
           Get in Touch with Easy Fix Appliance
         </h2>
-        <p class="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+        <p class="text-base sm:text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
           Ready to schedule a repair or have questions about our services? Our friendly team is here to help you get your luxury appliances back to perfect working condition.
         </p>
       </div>
@@ -22,10 +22,10 @@
         <!-- Contact Information -->
         <div class="space-y-8">
           <!-- Phone Contact -->
-          <div class="bg-gradient-to-r from-primary to-secondary rounded-3xl p-8 text-white">
-            <div class="flex items-start space-x-6">
-              <div class="w-16 h-16 bg-white/20 rounded-2xl flex items-center justify-center flex-shrink-0">
-                <svg class="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 20 20">
+          <div class="bg-gradient-to-r from-primary to-secondary rounded-3xl p-5 sm:p-8 text-white overflow-hidden">
+            <div class="flex items-start space-x-4 sm:space-x-6">
+              <div class="w-12 h-12 sm:w-16 sm:h-16 bg-white/20 rounded-2xl flex items-center justify-center flex-shrink-0">
+                <svg class="w-6 h-6 sm:w-8 sm:h-8 text-white" fill="currentColor" viewBox="0 0 20 20">
                   <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"/>
                 </svg>
               </div>
@@ -60,36 +60,36 @@
           </div>
 
           <!-- Email Contact -->
-          <div class="bg-gray-50 rounded-3xl p-8 border border-gray-200">
-            <div class="flex items-start space-x-6">
-              <div class="w-16 h-16 bg-primary/10 rounded-2xl flex items-center justify-center flex-shrink-0">
-                <svg class="w-8 h-8 text-primary" fill="currentColor" viewBox="0 0 20 20">
+          <div class="bg-gray-50 rounded-3xl p-5 sm:p-8 border border-gray-200 overflow-hidden">
+            <div class="flex items-start space-x-4 sm:space-x-6">
+              <div class="w-12 h-12 sm:w-16 sm:h-16 bg-primary/10 rounded-2xl flex items-center justify-center flex-shrink-0">
+                <svg class="w-6 h-6 sm:w-8 sm:h-8 text-primary" fill="currentColor" viewBox="0 0 20 20">
                   <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"/>
                   <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"/>
                 </svg>
               </div>
-              <div class="flex-1">
+              <div class="flex-1 min-w-0">
                 <h3 class="text-2xl font-bold text-gray-900 mb-3">Email Support</h3>
                 <p class="text-gray-600 mb-4">Send us your questions or service requests</p>
-                <a 
+                <a
                   href="mailto:care@easyfixappliance.com"
-                  class="inline-flex items-center px-6 py-3 bg-primary text-white font-semibold rounded-xl hover:bg-secondary transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1"
+                  class="inline-flex items-center px-4 py-3 sm:px-6 bg-primary text-white font-semibold rounded-xl hover:bg-secondary transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1 text-sm sm:text-base max-w-full"
                 >
-                  <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                  <svg class="w-5 h-5 mr-2 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
                     <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"/>
                     <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"/>
                   </svg>
-                  care@easyfixappliance.com
+                  <span class="truncate">care@easyfixappliance.com</span>
                 </a>
               </div>
             </div>
           </div>
 
           <!-- Service Area -->
-          <div class="bg-blue-50 rounded-3xl p-8 border border-blue-200">
-            <div class="flex items-start space-x-6">
-              <div class="w-16 h-16 bg-blue-600 rounded-2xl flex items-center justify-center flex-shrink-0">
-                <svg class="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 20 20">
+          <div class="bg-blue-50 rounded-3xl p-5 sm:p-8 border border-blue-200 overflow-hidden">
+            <div class="flex items-start space-x-4 sm:space-x-6">
+              <div class="w-12 h-12 sm:w-16 sm:h-16 bg-blue-600 rounded-2xl flex items-center justify-center flex-shrink-0">
+                <svg class="w-6 h-6 sm:w-8 sm:h-8 text-white" fill="currentColor" viewBox="0 0 20 20">
                   <path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"/>
                 </svg>
               </div>
@@ -108,9 +108,9 @@
         </div>
 
         <!-- Quick Service Form -->
-        <div class="bg-white rounded-3xl shadow-2xl p-8 border border-gray-100">
+        <div class="bg-white rounded-3xl shadow-2xl p-6 sm:p-8 border border-gray-100">
           <div class="mb-8">
-            <h3 class="text-3xl font-bold text-gray-900 mb-4">
+            <h3 class="text-2xl sm:text-3xl font-bold text-gray-900 mb-4">
               Schedule Service Online
             </h3>
             <p class="text-gray-600">
@@ -191,8 +191,8 @@
       </div>
 
       <!-- Payment Methods -->
-      <div class="bg-gray-50 rounded-3xl p-8 text-center">
-        <h3 class="text-2xl font-bold text-gray-900 mb-6">
+      <div class="bg-gray-50 rounded-3xl p-5 sm:p-8 text-center">
+        <h3 class="text-xl sm:text-2xl font-bold text-gray-900 mb-6">
           Convenient Payment Options
         </h3>
         <p class="text-gray-600 mb-8">

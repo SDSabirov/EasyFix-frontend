@@ -13,19 +13,19 @@
           </svg>
           <span class="text-white font-semibold text-sm">Trusted Excellence</span>
         </div>
-        <h2 class="text-4xl font-bold text-white mb-6">
+        <h2 class="text-2xl sm:text-4xl font-bold text-white mb-6">
           Why Choose Easy Fix Appliance?
         </h2>
-        <p class="text-xl text-white/90 max-w-3xl mx-auto leading-relaxed">
+        <p class="text-base sm:text-xl text-white/90 max-w-3xl mx-auto leading-relaxed">
           Our commitment to excellence and customer satisfaction sets us apart as the Bay Area's premier appliance repair service.
         </p>
       </div>
 
       <!-- Stats Grid -->
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
-        <div v-for="stat in stats" :key="stat.title" 
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-8 mb-12">
+        <div v-for="stat in stats" :key="stat.title"
              class="group text-center">
-          <div class="bg-white/10 backdrop-blur-sm rounded-3xl p-8 border border-white/20 hover:bg-white/20 transition-all duration-300 transform hover:-translate-y-2 hover:shadow-2xl">
+          <div class="bg-white/10 backdrop-blur-sm rounded-3xl p-5 sm:p-8 border border-white/20 hover:bg-white/20 transition-all duration-300 transform hover:-translate-y-2 hover:shadow-2xl">
             <div class="w-20 h-20 bg-white/20 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:bg-white/30 transition-all duration-300">
               <!-- Trophy Icon - Years Experience -->
               <svg v-if="stat.icon === 'trophy'" class="w-10 h-10 text-white" fill="currentColor" viewBox="0 0 24 24">
@@ -44,15 +44,15 @@
                 <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
               </svg>
             </div>
-            <div class="text-4xl font-bold text-white mb-2">{{ stat.number }}</div>
-            <div class="text-xl font-semibold text-white/90 mb-2">{{ stat.title }}</div>
+            <div class="text-2xl sm:text-4xl font-bold text-white mb-2">{{ stat.number }}</div>
+            <div class="text-base sm:text-xl font-semibold text-white/90 mb-2">{{ stat.title }}</div>
             <p class="text-white/80 text-sm leading-relaxed">{{ stat.description }}</p>
           </div>
         </div>
       </div>
 
       <!-- Trust Features -->
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-8 mb-12">
         <div v-for="feature in features" :key="feature.title"
              class="group">
           <div class="bg-white/5 backdrop-blur-sm rounded-2xl p-6 border border-white/10 hover:bg-white/10 transition-all duration-300">
@@ -71,7 +71,7 @@
 
       <!-- Call to Action -->
       <div class="text-center">
-        <div class="bg-white/10 backdrop-blur-sm rounded-3xl p-8 border border-white/20">
+        <div class="bg-white/10 backdrop-blur-sm rounded-3xl p-5 sm:p-8 border border-white/20">
           <h3 class="text-2xl font-bold text-white mb-4">
             Ready to Experience Premium Service?
           </h3>
@@ -82,7 +82,7 @@
           <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
             <a 
               href="tel:4159414144"
-              class="group inline-flex items-center px-8 py-4 bg-white text-primary font-bold rounded-xl hover:bg-gray-50 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1"
+              class="group w-full sm:w-auto inline-flex items-center justify-center px-8 py-4 min-h-[48px] bg-white text-primary font-bold rounded-xl hover:bg-gray-50 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1 touch-manipulation"
             >
               <svg class="w-6 h-6 mr-3 group-hover:animate-pulse" fill="currentColor" viewBox="0 0 20 20">
                 <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"/>
@@ -92,7 +92,7 @@
             
             <NuxtLink 
               to="/booking"
-              class="inline-flex items-center px-8 py-4 border-2 border-white text-white font-bold rounded-xl hover:bg-white hover:text-primary transition-all duration-300 transform hover:-translate-y-1"
+              class="w-full sm:w-auto inline-flex items-center justify-center px-8 py-4 min-h-[48px] border-2 border-white text-white font-bold rounded-xl hover:bg-white hover:text-primary transition-all duration-300 transform hover:-translate-y-1 touch-manipulation"
             >
               <svg class="w-6 h-6 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3a1 1 0 011-1h6a1 1 0 011 1v4m-6 0h6m-6 0V5a1 1 0 00-1 1v1m0 8h6v2a1 1 0 01-1 1H9a1 1 0 01-1-1v-2zm6 0V5a1 1 0 011-1h2a1 1 0 011 1v14a1 1 0 01-1 1h-2a1 1 0 01-1-1V5z"/>

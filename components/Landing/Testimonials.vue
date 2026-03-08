@@ -8,16 +8,16 @@
           </svg>
           <span class="text-primary font-semibold text-sm">Customer Reviews</span>
         </div>
-        <h2 class="text-4xl font-bold text-gray-900 mb-6">
+        <h2 class="text-2xl sm:text-4xl font-bold text-gray-900 mb-6">
           What Our Clients Say About Us
         </h2>
-        <p class="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+        <p class="text-base sm:text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
           Read real testimonials from satisfied customers across the Bay Area who trust Easy Fix Appliance for their luxury appliance repair needs.
         </p>
       </div>
 
       <!-- Featured Review -->
-      <div class="bg-white rounded-3xl shadow-2xl p-8 lg:p-12 mb-12 border border-gray-100">
+      <div class="bg-white rounded-3xl shadow-2xl p-5 sm:p-8 lg:p-12 mb-12 border border-gray-100">
         <div class="max-w-4xl mx-auto text-center">
           <div class="relative mb-8">
             <svg class="w-16 h-16 text-primary/20 mx-auto mb-6" viewBox="0 0 24 27" fill="currentColor">
@@ -100,7 +100,7 @@
       </div>
 
       <!-- Review Platform Stats -->
-      <div class="bg-gradient-to-r from-primary to-secondary rounded-3xl p-8 text-white text-center">
+      <div class="bg-gradient-to-r from-primary to-secondary rounded-3xl p-5 sm:p-8 text-white text-center">
         <div class="max-w-3xl mx-auto">
           <h3 class="text-2xl font-bold mb-4">
             Join Thousands of Satisfied Customers
@@ -111,15 +111,15 @@
           
           <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
             <div class="text-center">
-              <div class="text-3xl font-bold mb-2">5/5</div>
+              <div class="text-2xl sm:text-3xl font-bold mb-2">5/5</div>
               <div class="text-white/80">Google Rating</div>
             </div>
             <div class="text-center">
-              <div class="text-3xl font-bold mb-2">50+</div>
+              <div class="text-2xl sm:text-3xl font-bold mb-2">50+</div>
               <div class="text-white/80">Reviews</div>
             </div>
             <div class="text-center">
-              <div class="text-3xl font-bold mb-2">100%</div>
+              <div class="text-2xl sm:text-3xl font-bold mb-2">100%</div>
               <div class="text-white/80">Satisfaction</div>
             </div>
           </div>

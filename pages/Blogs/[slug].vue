@@ -4,7 +4,7 @@
     <Navbar />
 
     <!-- Hero Section -->
-    <header v-if="blog" class="relative h-[70vh] lg:h-[80vh] overflow-hidden mt-16 lg:mt-20">
+    <header v-if="blog" class="relative h-[50vh] sm:h-[70vh] lg:h-[80vh] overflow-hidden mt-16 lg:mt-20">
       <img
         :src="blog.image"
         :alt="`${blog.title} - Expert appliance repair insights`"
@@ -22,11 +22,11 @@
             <span class="text-sm font-semibold" style="color: #ffffff;">{{ blog.date }} • {{ blog.readTime }}</span>
           </div>
           
-          <h1 class="text-3xl lg:text-5xl font-bold mb-6 leading-tight" style="color: #ffffff;">
+          <h1 class="text-2xl sm:text-3xl lg:text-5xl font-bold mb-6 leading-tight" style="color: #ffffff;">
             {{ blog.title }}
           </h1>
           
-          <p v-if="blog.excerpt" class="text-xl lg:text-2xl max-w-3xl mx-auto leading-relaxed" style="color: rgba(255, 255, 255, 0.9);">
+          <p v-if="blog.excerpt" class="text-base sm:text-xl lg:text-2xl max-w-3xl mx-auto leading-relaxed" style="color: rgba(255, 255, 255, 0.9);">
             {{ blog.excerpt }}
           </p>
         </div>
@@ -34,12 +34,12 @@
     </header>
 
     <!-- Article Content -->
-    <article v-if="blog" class="py-20" style="background: linear-gradient(to bottom right, #f8fafc, #ffffff);">
+    <article v-if="blog" class="py-12 sm:py-20" style="background: linear-gradient(to bottom right, #f8fafc, #ffffff);">
       <div class="container mx-auto px-4 max-w-4xl">
         
         <!-- Article Meta Info -->
-        <div class="flex flex-wrap items-center justify-between mb-12 p-6 rounded-2xl" style="background: rgba(249, 115, 22, 0.05); border-left: 4px solid #f97316;">
-          <div class="flex items-center space-x-6 mb-4 sm:mb-0">
+        <div class="flex flex-wrap items-center justify-between mb-8 sm:mb-12 p-4 sm:p-6 rounded-2xl" style="background: rgba(249, 115, 22, 0.05); border-left: 4px solid #f97316;">
+          <div class="flex items-center space-x-3 sm:space-x-6 mb-4 sm:mb-0">
             <div class="flex items-center text-sm" style="color: #6b7280;">
               <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 20 20">
                 <path fill-rule="evenodd" d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z" clip-rule="evenodd"/>
@@ -71,29 +71,29 @@
 
         <!-- Article Body -->
         <div class="prose prose-lg max-w-none">
-          <div class="text-gray-800 leading-relaxed space-y-6" style="font-size: 18px; line-height: 1.8;">
+          <div class="text-gray-800 leading-relaxed space-y-6">
             <div v-html="formatContent(blog.content)" class="formatted-content"></div>
           </div>
         </div>
 
         <!-- Call to Action Section -->
-        <div class="mt-16 p-8 rounded-3xl text-center" style="background: linear-gradient(to right, #0c2a3b, #1C6E8C, #f97316);">
-          <h3 class="text-2xl lg:text-3xl font-bold mb-4" style="color: #ffffff;">
+        <div class="mt-16 p-5 sm:p-8 rounded-3xl text-center" style="background: linear-gradient(to right, #0c2a3b, #1C6E8C, #f97316);">
+          <h3 class="text-xl sm:text-2xl lg:text-3xl font-bold mb-4" style="color: #ffffff;">
             Need Professional Appliance Repair?
           </h3>
-          <p class="text-lg mb-8 max-w-2xl mx-auto" style="color: rgba(255, 255, 255, 0.9);">
+          <p class="text-base sm:text-lg mb-8 max-w-2xl mx-auto" style="color: rgba(255, 255, 255, 0.9);">
             Don't let appliance problems disrupt your daily routine. Our certified technicians are ready to help with same-day service throughout the Bay Area.
           </p>
           
           <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
-            <a href="tel:4159414144" class="inline-flex items-center px-8 py-4 font-bold rounded-2xl transition-all duration-300 shadow-xl hover:shadow-2xl transform hover:-translate-y-1" style="background: #ffffff; color: #0c2a3b;">
+            <a href="tel:4159414144" class="w-full sm:w-auto inline-flex items-center justify-center px-8 py-4 min-h-[48px] touch-manipulation font-bold rounded-2xl transition-all duration-300 shadow-xl hover:shadow-2xl transform hover:-translate-y-1" style="background: #ffffff; color: #0c2a3b;">
               <svg class="w-6 h-6 mr-3" fill="currentColor" viewBox="0 0 20 20">
                 <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"/>
               </svg>
               Call Now: (415) 941-4144
             </a>
             
-            <NuxtLink to="/booking" class="inline-flex items-center px-8 py-4 border-2 font-bold rounded-2xl transition-all duration-300 transform hover:-translate-y-1" style="border-color: #ffffff; color: #ffffff; background: rgba(255, 255, 255, 0.1); backdrop-filter: blur(8px);">
+            <NuxtLink to="/booking" class="w-full sm:w-auto inline-flex items-center justify-center px-8 py-4 min-h-[48px] touch-manipulation border-2 font-bold rounded-2xl transition-all duration-300 transform hover:-translate-y-1" style="border-color: #ffffff; color: #ffffff; background: rgba(255, 255, 255, 0.1); backdrop-filter: blur(8px);">
               <svg class="w-6 h-6 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3a1 1 0 011-1h6a1 1 0 011 1v4m-6 0h6m-6 0V5a1 1 0 00-1 1v1m0 8h6v2a1 1 0 01-1 1H9a1 1 0 01-1-1v-2zm6 0V5a1 1 0 011-1h2a1 1 0 011 1v14a1 1 0 01-1 1h-2a1 1 0 01-1-1V5z"/>
               </svg>
@@ -103,15 +103,15 @@
         </div>
 
         <!-- Related Articles -->
-        <div class="mt-20">
-          <h3 class="text-2xl lg:text-3xl font-bold mb-8 text-center" style="color: #1f2937;">
+        <div class="mt-12 sm:mt-20">
+          <h3 class="text-xl sm:text-2xl lg:text-3xl font-bold mb-8 text-center" style="color: #1f2937;">
             Related Articles
           </h3>
           
-          <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8">
             <div v-for="relatedBlog in relatedBlogs" :key="relatedBlog.slug" class="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
-              <img :src="relatedBlog.image" :alt="relatedBlog.title" class="w-full h-48 object-cover"/>
-              <div class="p-6">
+              <img :src="relatedBlog.image" :alt="relatedBlog.title" class="w-full h-40 sm:h-48 object-cover"/>
+              <div class="p-4 sm:p-6">
                 <div class="text-sm mb-2" style="color: #6b7280;">{{ relatedBlog.date }}</div>
                 <h4 class="text-lg font-bold mb-3 hover:text-orange-600 transition-colors" style="color: #1f2937;">
                   <NuxtLink :to="relatedBlog.link">{{ relatedBlog.title }}</NuxtLink>
@@ -261,13 +261,20 @@ useHead(() => {
 <style scoped>
 .formatted-content {
   max-width: none;
-  font-size: 18px;
-  line-height: 1.8;
+  font-size: 16px;
+  line-height: 1.75;
   color: #374151;
 }
 
+@media (min-width: 640px) {
+  .formatted-content {
+    font-size: 18px;
+    line-height: 1.8;
+  }
+}
+
 .formatted-content h2 {
-  font-size: 1.5rem;
+  font-size: 1.25rem;
   font-weight: 700;
   margin-top: 2rem;
   margin-bottom: 1rem;
@@ -275,13 +282,25 @@ useHead(() => {
   line-height: 1.3;
 }
 
+@media (min-width: 640px) {
+  .formatted-content h2 {
+    font-size: 1.5rem;
+  }
+}
+
 .formatted-content h3 {
-  font-size: 1.25rem;
+  font-size: 1.125rem;
   font-weight: 600;
   margin-top: 1.5rem;
   margin-bottom: 0.75rem;
   color: #1f2937;
   line-height: 1.4;
+}
+
+@media (min-width: 640px) {
+  .formatted-content h3 {
+    font-size: 1.25rem;
+  }
 }
 
 .formatted-content p {

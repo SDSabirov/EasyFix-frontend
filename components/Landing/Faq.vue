@@ -8,10 +8,10 @@
           </svg>
           <span class="text-primary font-semibold text-sm">FAQ</span>
         </div>
-        <h2 class="text-4xl font-bold text-gray-900 mb-6">
+        <h2 class="text-2xl sm:text-4xl font-bold text-gray-900 mb-6">
           Frequently Asked Questions About Appliance Repair in Bay Area
         </h2>
-        <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+        <p class="text-base sm:text-xl text-gray-600 max-w-3xl mx-auto">
           Get answers to common questions about our Sub-Zero, Wolf, Viking, and luxury appliance repair services.
         </p>
       </div>
@@ -45,7 +45,7 @@
               aria-labelledby="accordion-collapse-heading-1"
             >
               <div class="p-6 bg-white border-t border-gray-100">
-                <p class="text-gray-700 leading-relaxed text-lg">
+                <p class="text-gray-700 leading-relaxed text-base sm:text-lg">
                   We specialize in luxury appliance brands including <strong class="text-primary">Sub-Zero, Wolf, Viking, Thermador, KitchenAid, GE Monogram, Dacor, Bertazzoni, Miele, and Uline</strong>. Our certified technicians are trained on the latest models and use only genuine manufacturer parts for all repairs in San Mateo, Palo Alto, San Francisco, and surrounding Bay Area communities.
                 </p>
               </div>
@@ -79,7 +79,7 @@
               aria-labelledby="accordion-collapse-heading-2"
             >
               <div class="p-6 bg-white border-t border-gray-100">
-                <p class="text-gray-700 leading-relaxed text-lg">
+                <p class="text-gray-700 leading-relaxed text-base sm:text-lg">
                   Yes! We understand how important your appliances are to your daily routine. We offer same-day and next-day repair services throughout San Mateo, Palo Alto, and the greater Bay Area. Call us at <strong class="text-primary">(415) 941-4144</strong> to schedule your emergency appliance repair appointment.
                 </p>
               </div>
@@ -113,7 +113,7 @@
               aria-labelledby="accordion-collapse-heading-3"
             >
               <div class="p-6 bg-white border-t border-gray-100">
-                <p class="text-gray-700 leading-relaxed text-lg">
+                <p class="text-gray-700 leading-relaxed text-base sm:text-lg">
                   We provide professional appliance repair services throughout the Bay Area including <strong class="text-primary">San Mateo, Palo Alto, San Francisco, San Jose, Redwood City, Mountain View, Menlo Park, Burlingame, Millbrae, Foster City, Belmont, San Carlos, Atherton, Portola Valley, Woodside, and Los Altos</strong>.
                 </p>
               </div>
@@ -123,7 +123,7 @@
 
         <!-- Call to Action -->
         <div class="text-center mt-12">
-          <div class="bg-gradient-to-r from-primary to-secondary rounded-2xl p-8 text-white">
+          <div class="bg-gradient-to-r from-primary to-secondary rounded-2xl p-5 sm:p-8 text-white">
             <h3 class="text-2xl font-bold mb-4">
               Still have questions about our appliance repair services?
             </h3>

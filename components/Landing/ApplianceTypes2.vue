@@ -9,10 +9,10 @@
           </svg>
           <span class="text-primary font-semibold text-sm">Expert Repairs</span>
         </div>
-        <h2 class="text-4xl font-bold text-gray-900 mb-6">
+        <h2 class="text-2xl sm:text-4xl font-bold text-gray-900 mb-6">
           Professional Appliance Repair Services
         </h2>
-        <p class="text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
+        <p class="text-base sm:text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
           From refrigeration to cooking appliances, our certified technicians provide comprehensive repair services for all major appliance types in your Bay Area home.
         </p>
       </div>
@@ -166,8 +166,8 @@
       </div>
 
       <!-- Service Features -->
-      <div class="bg-gray-50 rounded-3xl p-8 mb-12">
-        <h3 class="text-2xl font-bold text-center text-gray-900 mb-8">
+      <div class="bg-gray-50 rounded-3xl p-5 sm:p-8 mb-12">
+        <h3 class="text-xl sm:text-2xl font-bold text-center text-gray-900 mb-8">
           Why Choose Our Appliance Repair Services?
         </h3>
         <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
@@ -183,7 +183,7 @@
 
       <!-- Call to Action -->
       <div class="text-center">
-        <div class="bg-gradient-to-r from-primary to-secondary rounded-3xl p-8 text-white relative overflow-hidden">
+        <div class="bg-gradient-to-r from-primary to-secondary rounded-3xl p-5 sm:p-8 text-white relative overflow-hidden">
           <!-- Background pattern -->
           <div class="absolute inset-0 opacity-10">
             <div class="absolute inset-0" style="background-image: radial-gradient(circle at 2px 2px, white 1px, transparent 0); background-size: 20px 20px;"></div>

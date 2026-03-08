@@ -14,15 +14,15 @@
             <svg class="w-6 h-6 text-primary mr-3" fill="currentColor" viewBox="0 0 20 20">
               <path fill-rule="evenodd" d="M6.267 3.455a3.066 3.066 0 001.745-.723 3.066 3.066 0 013.976 0 3.066 3.066 0 001.745.723 3.066 3.066 0 012.812 2.812c.051.643.304 1.254.723 1.745a3.066 3.066 0 010 3.976 3.066 3.066 0 00-.723 1.745 3.066 3.066 0 01-2.812 2.812 3.066 3.066 0 00-1.745.723 3.066 3.066 0 01-3.976 0 3.066 3.066 0 00-1.745-.723 3.066 3.066 0 01-2.812-2.812 3.066 3.066 0 00-.723-1.745 3.066 3.066 0 010-3.976 3.066 3.066 0 00.723-1.745 3.066 3.066 0 012.812-2.812zm7.44 5.252a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
             </svg>
-            <span class="text-primary font-bold text-lg">Professional Appliance Services</span>
+            <span class="text-primary font-bold text-base sm:text-lg">Professional Appliance Services</span>
           </div>
 
-          <h1 class="text-4xl lg:text-5xl font-bold text-gray-900 mb-6 leading-tight">
+          <h1 class="text-2xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-6 leading-tight">
             Expert Appliance Repair
             <span class="block text-primary">Services in Bay Area</span>
           </h1>
 
-          <p class="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+          <p class="text-base sm:text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
             Serving <strong class="text-primary">San Francisco, San Mateo, Palo Alto, Mountain View</strong>, and the entire Bay Area with quality service you can trust.
           </p>
         </div>

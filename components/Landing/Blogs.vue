@@ -8,10 +8,10 @@
           </svg>
           <span class="text-primary font-semibold text-sm">Expert Tips</span>
         </div>
-        <h2 class="text-4xl font-bold text-gray-900 mb-6">
+        <h2 class="text-2xl sm:text-4xl font-bold text-gray-900 mb-6">
           Latest Appliance Care & Repair Insights
         </h2>
-        <p class="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+        <p class="text-base sm:text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
           Stay informed with expert advice, maintenance tips, and industry insights from our certified appliance repair specialists.
         </p>
       </div>
@@ -73,7 +73,7 @@
       </div>
 
       <!-- Newsletter Signup -->
-      <div class="bg-gradient-to-r from-primary to-secondary rounded-3xl p-8 text-white text-center mb-12">
+      <div class="bg-gradient-to-r from-primary to-secondary rounded-3xl p-5 sm:p-8 text-white text-center mb-12">
         <div class="max-w-2xl mx-auto">
           <h3 class="text-2xl font-bold mb-4">
             Stay Updated with Expert Tips

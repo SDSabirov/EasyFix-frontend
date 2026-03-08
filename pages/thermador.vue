@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="pb-[72px] lg:pb-0">
     <Navbar />
     
     <!-- Hero Section -->
@@ -19,27 +19,27 @@
             <span class="font-semibold text-lg" style="color: #ffffff;">Certified Thermador Specialists</span>
           </div>
           
-          <h1 class="text-4xl lg:text-7xl font-bold mb-8 leading-tight" style="color: #ffffff;">
+          <h1 class="text-2xl sm:text-4xl lg:text-7xl font-bold mb-4 sm:mb-8 leading-tight" style="color: #ffffff;">
             Professional Thermador
             <span class="block" style="color: #f97316;">Appliance Repair Services</span>
           </h1>
           
-          <p class="text-xl lg:text-2xl mb-12 max-w-4xl mx-auto leading-relaxed" style="color: rgba(255, 255, 255, 0.9);">
+          <p class="text-base sm:text-xl lg:text-2xl mb-8 sm:mb-12 max-w-4xl mx-auto leading-relaxed" style="color: rgba(255, 255, 255, 0.9);">
             Expert repair services for luxury Thermador cooking and refrigeration appliances. 
             <strong>Factory-trained technicians</strong> serving the Bay Area with <strong>same-day service</strong> and genuine Thermador parts.
           </p>
           
           <!-- CTA Buttons -->
-          <div class="flex flex-col sm:flex-row gap-6 justify-center items-center mb-16">
-            <a href="tel:4159414144" class="group inline-flex items-center px-10 py-5 font-bold rounded-2xl transition-all duration-300 shadow-2xl hover:shadow-3xl transform hover:-translate-y-2 text-xl min-h-[70px]" style="background: linear-gradient(to right, #facc15, #f97316); color: #ffffff;">
-              <svg class="w-7 h-7 mr-4 group-hover:animate-pulse" fill="currentColor" viewBox="0 0 20 20">
+          <div class="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center items-center mb-8 sm:mb-16">
+            <a href="tel:4159414144" class="group w-full sm:w-auto inline-flex items-center justify-center px-6 py-4 sm:px-10 sm:py-5 font-bold rounded-2xl transition-all duration-300 shadow-2xl hover:shadow-3xl transform hover:-translate-y-2 text-base sm:text-xl min-h-[48px] sm:min-h-[70px] touch-manipulation" style="background: linear-gradient(to right, #facc15, #f97316); color: #ffffff;">
+              <svg class="w-5 h-5 mr-3 sm:w-7 sm:h-7 sm:mr-4 group-hover:animate-pulse" fill="currentColor" viewBox="0 0 20 20">
                 <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"/>
               </svg>
               Call Now: (415) 941-4144
             </a>
             
-            <NuxtLink to="/booking" class="inline-flex items-center px-10 py-5 border-3 font-bold rounded-2xl transition-all duration-300 transform hover:-translate-y-2 text-xl min-h-[70px] hover:bg-white hover:text-primary" style="border-color: #ffffff; color: #ffffff; background: rgba(255, 255, 255, 0.1); backdrop-filter: blur(8px);">
-              <svg class="w-7 h-7 mr-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <NuxtLink to="/booking" class="w-full sm:w-auto inline-flex items-center justify-center px-6 py-4 sm:px-10 sm:py-5 border-3 font-bold rounded-2xl transition-all duration-300 transform hover:-translate-y-2 text-base sm:text-xl min-h-[48px] sm:min-h-[70px] touch-manipulation hover:bg-white hover:text-primary" style="border-color: #ffffff; color: #ffffff; background: rgba(255, 255, 255, 0.1); backdrop-filter: blur(8px);">
+              <svg class="w-5 h-5 mr-3 sm:w-7 sm:h-7 sm:mr-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3a1 1 0 011-1h6a1 1 0 011 1v4m-6 0h6m-6 0V5a1 1 0 00-1 1v1m0 8h6v2a1 1 0 01-1 1H9a1 1 0 01-1-1v-2zm6 0V5a1 1 0 011-1h2a1 1 0 011 1v14a1 1 0 01-1 1h-2a1 1 0 01-1-1V5z"/>
               </svg>
               Schedule Service Online
@@ -50,29 +50,29 @@
     </header>
 
     <!-- About Thermador Section -->
-    <section class="py-20 lg:py-32" style="background: linear-gradient(to bottom right, #f8fafc, #ffffff);">
+    <section class="py-10 sm:py-16 lg:py-32" style="background: linear-gradient(to bottom right, #f8fafc, #ffffff);">
       <div class="container mx-auto px-4 max-w-screen-xl">
-        <div class="text-center mb-16">
-          <div class="inline-flex items-center px-6 py-3 rounded-full mb-8" style="background: rgba(12, 42, 59, 0.1);">
+        <div class="text-center mb-8 sm:mb-16">
+          <div class="inline-flex items-center px-6 py-3 rounded-full mb-4 sm:mb-8" style="background: rgba(12, 42, 59, 0.1);">
             <svg class="w-6 h-6 mr-3" style="color: #0c2a3b;" fill="currentColor" viewBox="0 0 20 20">
               <path fill-rule="evenodd" d="M12.395 2.553a1 1 0 00-1.45-.385c-.345.23-.614.558-.822.88-.214.33-.403.713-.57 1.116-.334.804-.614 1.768-.84 2.734a31.365 31.365 0 00-.613 3.58 2.64 2.64 0 01-.945-1.067c-.328-.68-.398-1.534-.398-2.654A1 1 0 005.05 6.05 6.981 6.981 0 003 11a7 7 0 1011.95-4.95c-.592-.591-.98-.985-1.348-1.467-.363-.476-.724-1.063-1.207-2.03zM12.12 15.12A3 3 0 017 13s.879.5 2.5.5c0-1 .5-4 1.25-4.5.5 1 .786 1.293 1.371 1.879A2.99 2.99 0 0113 13a2.99 2.99 0 01-.879 2.121z" clip-rule="evenodd"/>
             </svg>
             <span class="font-bold text-lg" style="color: #0c2a3b;">Luxury Appliance Innovation</span>
           </div>
           
-          <h2 class="text-4xl lg:text-6xl font-bold mb-8 leading-tight" style="color: #1f2937;">
+          <h2 class="text-2xl sm:text-4xl lg:text-6xl font-bold mb-4 sm:mb-8 leading-tight" style="color: #1f2937;">
             Thermador: 
             <span class="text-transparent bg-clip-text" style="background-image: linear-gradient(to right, #0c2a3b, #1C6E8C);">Culinary Excellence</span>
           </h2>
           
-          <p class="text-xl lg:text-2xl max-w-4xl mx-auto leading-relaxed" style="color: #6b7280;">
+          <p class="text-base sm:text-xl lg:text-2xl max-w-4xl mx-auto leading-relaxed" style="color: #6b7280;">
             Discover why Thermador has been the choice of culinary professionals and luxury homeowners for over 100 years, combining innovation with unmatched performance.
           </p>
         </div>
         
-        <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center mb-20">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-12 lg:gap-16 items-center mb-10 sm:mb-20">
           <div>
-            <h3 class="text-3xl lg:text-4xl font-bold mb-8" style="color: #1f2937;">Century of Culinary Innovation</h3>
+            <h3 class="text-xl sm:text-3xl lg:text-4xl font-bold mb-4 sm:mb-8" style="color: #1f2937;">Century of Culinary Innovation</h3>
             <div class="space-y-6 text-lg leading-relaxed" style="color: #4b5563;">
               <p>
                 Since 1916, Thermador has been pioneering luxury kitchen appliances with groundbreaking innovations. They introduced the first <strong>built-in wall oven</strong>, the first <strong>commercial-style range for homes</strong>, and revolutionary <strong>Star Burner technology</strong> that delivers even heat distribution across the entire pan bottom.
@@ -103,33 +103,33 @@
         </div>
         
         <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
-          <div class="p-8 rounded-2xl shadow-lg" style="background: #ffffff;">
+          <div class="p-5 sm:p-8 rounded-2xl shadow-lg" style="background: #ffffff;">
             <div class="w-16 h-16 rounded-xl mb-6 flex items-center justify-center" style="background: rgba(249, 115, 22, 0.1);">
               <svg class="w-8 h-8" style="color: #f97316;" fill="currentColor" viewBox="0 0 20 20">
                 <path fill-rule="evenodd" d="M12.395 2.553a1 1 0 00-1.45-.385c-.345.23-.614.558-.822.88-.214.33-.403.713-.57 1.116-.334.804-.614 1.768-.84 2.734a31.365 31.365 0 00-.613 3.58 2.64 2.64 0 01-.945-1.067c-.328-.68-.398-1.534-.398-2.654A1 1 0 005.05 6.05 6.981 6.981 0 003 11a7 7 0 1011.95-4.95c-.592-.591-.98-.985-1.348-1.467-.363-.476-.724-1.063-1.207-2.03zM12.12 15.12A3 3 0 017 13s.879.5 2.5.5c0-1 .5-4 1.25-4.5.5 1 .786 1.293 1.371 1.879A2.99 2.99 0 0113 13a2.99 2.99 0 01-.879 2.121z" clip-rule="evenodd"/>
               </svg>
             </div>
-            <h3 class="text-2xl font-bold mb-4" style="color: #1f2937;">Star Burner Technology</h3>
+            <h3 class="text-lg sm:text-2xl font-bold mb-4" style="color: #1f2937;">Star Burner Technology</h3>
             <p style="color: #6b7280;">Exclusive star-shaped burner design provides even heat distribution across the entire cookware bottom for superior cooking results.</p>
           </div>
           
-          <div class="p-8 rounded-2xl shadow-lg" style="background: #ffffff;">
+          <div class="p-5 sm:p-8 rounded-2xl shadow-lg" style="background: #ffffff;">
             <div class="w-16 h-16 rounded-xl mb-6 flex items-center justify-center" style="background: rgba(249, 115, 22, 0.1);">
               <svg class="w-8 h-8" style="color: #f97316;" fill="currentColor" viewBox="0 0 20 20">
                 <path fill-rule="evenodd" d="M4 2a2 2 0 00-2 2v11a3 3 0 106 0V4a2 2 0 00-2-2H4zM3 15.5a1.5 1.5 0 113 0 1.5 1.5 0 01-3 0zm6.14-11.76a1 1 0 011.5.98L10 8v1a1 1 0 01-1 1H8a1 1 0 110-2h1V8l.64-3.24z" clip-rule="evenodd"/>
               </svg>
             </div>
-            <h3 class="text-2xl font-bold mb-4" style="color: #1f2937;">Steam & Convection</h3>
+            <h3 class="text-lg sm:text-2xl font-bold mb-4" style="color: #1f2937;">Steam & Convection</h3>
             <p style="color: #6b7280;">Advanced steam and convection cooking technology for professional-level baking, roasting, and precision cooking.</p>
           </div>
           
-          <div class="p-8 rounded-2xl shadow-lg" style="background: #ffffff;">
+          <div class="p-5 sm:p-8 rounded-2xl shadow-lg" style="background: #ffffff;">
             <div class="w-16 h-16 rounded-xl mb-6 flex items-center justify-center" style="background: rgba(249, 115, 22, 0.1);">
               <svg class="w-8 h-8" style="color: #f97316;" fill="currentColor" viewBox="0 0 20 20">
                 <path fill-rule="evenodd" d="M3 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm0 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm0 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd"/>
               </svg>
             </div>
-            <h3 class="text-2xl font-bold mb-4" style="color: #1f2937;">Masterpiece Integration</h3>
+            <h3 class="text-lg sm:text-2xl font-bold mb-4" style="color: #1f2937;">Masterpiece Integration</h3>
             <p style="color: #6b7280;">Seamless design integration with built-in appliances that blend perfectly with luxury kitchen aesthetics.</p>
           </div>
         </div>
@@ -137,18 +137,18 @@
     </section>
 
     <!-- Our Expertise Section -->
-    <section class="py-20 lg:py-32" style="background: #0c2a3b;">
+    <section class="py-10 sm:py-16 lg:py-32" style="background: #0c2a3b;">
       <div class="container mx-auto px-4 max-w-screen-xl">
-        <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-12 lg:gap-16 items-center">
           <div>
-            <div class="inline-flex items-center px-6 py-3 rounded-full mb-8" style="background: rgba(249, 115, 22, 0.2);">
+            <div class="inline-flex items-center px-6 py-3 rounded-full mb-4 sm:mb-8" style="background: rgba(249, 115, 22, 0.2);">
               <svg class="w-6 h-6 mr-3" style="color: #f97316;" fill="currentColor" viewBox="0 0 20 20">
                 <path fill-rule="evenodd" d="M6.267 3.455a3.066 3.066 0 001.745-.723 3.066 3.066 0 013.976 0 3.066 3.066 0 001.745.723 3.066 3.066 0 012.812 2.812c.051.643.304 1.254.723 1.745a3.066 3.066 0 010 3.976 3.066 3.066 0 00-.723 1.745 3.066 3.066 0 01-2.812 2.812 3.066 3.066 0 00-1.745.723 3.066 3.066 0 01-3.976 0 3.066 3.066 0 00-1.745-.723 3.066 3.066 0 01-2.812-2.812 3.066 3.066 0 00-.723-1.745 3.066 3.066 0 010-3.976 3.066 3.066 0 00.723-1.745 3.066 3.066 0 012.812-2.812zm7.44 5.252a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
               </svg>
               <span class="font-bold text-lg" style="color: #ffffff;">Certified Expertise</span>
             </div>
             
-            <h2 class="text-4xl lg:text-5xl font-bold mb-8 leading-tight" style="color: #ffffff;">
+            <h2 class="text-2xl sm:text-4xl lg:text-5xl font-bold mb-4 sm:mb-8 leading-tight" style="color: #ffffff;">
               15+ Years of 
               <span style="color: #f97316;">Thermador</span> 
               Repair Excellence
@@ -164,7 +164,7 @@
             </div>
             
             <!-- Key Benefits -->
-            <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 mt-12">
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 mt-8 sm:mt-12">
               <div class="flex items-start space-x-4">
                 <div class="flex-shrink-0 w-12 h-12 rounded-xl flex items-center justify-center" style="background: rgba(249, 115, 22, 0.2);">
                   <svg class="w-6 h-6" style="color: #f97316;" fill="currentColor" viewBox="0 0 20 20">
@@ -216,9 +216,9 @@
           </div>
           
           <div class="relative">
-            <div class="p-8 rounded-3xl" style="background: linear-gradient(to bottom right, #1C6E8C, #f97316);">
-              <div class="text-center mb-8">
-                <h3 class="text-3xl font-bold mb-4" style="color: #ffffff;">Thermador Appliances We Service</h3>
+            <div class="p-5 sm:p-8 rounded-3xl" style="background: linear-gradient(to bottom right, #1C6E8C, #f97316);">
+              <div class="text-center mb-4 sm:mb-8">
+                <h3 class="text-xl sm:text-3xl font-bold mb-4" style="color: #ffffff;">Thermador Appliances We Service</h3>
                 <p class="text-lg" style="color: rgba(255, 255, 255, 0.9);">Complete repair solutions for all Thermador models</p>
               </div>
               
@@ -260,35 +260,35 @@
     </section>
 
     <!-- FAQ Section -->
-    <section class="py-20 lg:py-32" style="background: linear-gradient(to bottom right, #f8fafc, #ffffff);">
+    <section class="py-10 sm:py-16 lg:py-32" style="background: linear-gradient(to bottom right, #f8fafc, #ffffff);">
       <div class="container mx-auto px-4 max-w-screen-xl">
-        <div class="text-center mb-16">
-          <h2 class="text-4xl lg:text-5xl font-bold mb-8" style="color: #1f2937;">
+        <div class="text-center mb-8 sm:mb-16">
+          <h2 class="text-2xl sm:text-4xl lg:text-5xl font-bold mb-4 sm:mb-8" style="color: #1f2937;">
             Frequently Asked Questions
           </h2>
-          <p class="text-xl max-w-3xl mx-auto" style="color: #6b7280;">
+          <p class="text-base sm:text-xl max-w-3xl mx-auto" style="color: #6b7280;">
             Get answers to common questions about Thermador appliance repairs in the Bay Area
           </p>
         </div>
         
         <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto">
-          <div class="p-8 rounded-2xl shadow-lg" style="background: #ffffff;">
-            <h3 class="text-xl font-bold mb-4" style="color: #1f2937;">What makes Thermador appliances unique?</h3>
+          <div class="p-5 sm:p-8 rounded-2xl shadow-lg" style="background: #ffffff;">
+            <h3 class="text-lg sm:text-xl font-bold mb-4" style="color: #1f2937;">What makes Thermador appliances unique?</h3>
             <p style="color: #6b7280;">Thermador's Star Burner technology, steam ovens, and Masterpiece Series integration make them industry leaders in luxury kitchen appliances with over 100 years of innovation.</p>
           </div>
           
-          <div class="p-8 rounded-2xl shadow-lg" style="background: #ffffff;">
-            <h3 class="text-xl font-bold mb-4" style="color: #1f2937;">Do you service Thermador steam ovens?</h3>
+          <div class="p-5 sm:p-8 rounded-2xl shadow-lg" style="background: #ffffff;">
+            <h3 class="text-lg sm:text-xl font-bold mb-4" style="color: #1f2937;">Do you service Thermador steam ovens?</h3>
             <p style="color: #6b7280;">Yes, we specialize in Thermador steam oven repairs, including steam generator issues, temperature calibration, and advanced cooking mode troubleshooting.</p>
           </div>
           
-          <div class="p-8 rounded-2xl shadow-lg" style="background: #ffffff;">
-            <h3 class="text-xl font-bold mb-4" style="color: #1f2937;">How often should Thermador appliances be serviced?</h3>
+          <div class="p-5 sm:p-8 rounded-2xl shadow-lg" style="background: #ffffff;">
+            <h3 class="text-lg sm:text-xl font-bold mb-4" style="color: #1f2937;">How often should Thermador appliances be serviced?</h3>
             <p style="color: #6b7280;">We recommend annual maintenance for optimal performance, with immediate service for any issues to maintain Thermador's precision cooking capabilities.</p>
           </div>
           
-          <div class="p-8 rounded-2xl shadow-lg" style="background: #ffffff;">
-            <h3 class="text-xl font-bold mb-4" style="color: #1f2937;">Are Thermador repairs cost-effective?</h3>
+          <div class="p-5 sm:p-8 rounded-2xl shadow-lg" style="background: #ffffff;">
+            <h3 class="text-lg sm:text-xl font-bold mb-4" style="color: #1f2937;">Are Thermador repairs cost-effective?</h3>
             <p style="color: #6b7280;">Absolutely. Thermador appliances are built to last decades, making professional repairs a smart investment compared to replacement costs.</p>
           </div>
         </div>
@@ -296,26 +296,26 @@
     </section>
 
     <!-- Call to Action Section -->
-    <section class="py-20" style="background: linear-gradient(to right, #0c2a3b, #1C6E8C, #f97316);">
+    <section class="py-10 sm:py-16 lg:py-20" style="background: linear-gradient(to right, #0c2a3b, #1C6E8C, #f97316);">
       <div class="container mx-auto px-4 max-w-screen-xl text-center">
         <div class="max-w-4xl mx-auto">
-          <h2 class="text-4xl lg:text-5xl font-bold mb-8" style="color: #ffffff;">
+          <h2 class="text-2xl sm:text-4xl lg:text-5xl font-bold mb-4 sm:mb-8" style="color: #ffffff;">
             Ready to Restore Your Thermador Appliances?
           </h2>
-          <p class="text-xl lg:text-2xl mb-12" style="color: rgba(255, 255, 255, 0.9);">
+          <p class="text-base sm:text-xl lg:text-2xl mb-8 sm:mb-12" style="color: rgba(255, 255, 255, 0.9);">
             Don't let appliance issues compromise your culinary experience. Our certified technicians are ready to provide expert Thermador repair services with same-day availability throughout the Bay Area.
           </p>
           
-          <div class="flex flex-col sm:flex-row gap-6 justify-center items-center">
-            <a href="tel:4159414144" class="group inline-flex items-center px-12 py-6 font-bold rounded-2xl transition-all duration-300 shadow-2xl hover:shadow-3xl transform hover:-translate-y-2 text-xl min-h-[70px]" style="background: #ffffff; color: #0c2a3b;">
-              <svg class="w-7 h-7 mr-4 group-hover:animate-pulse" fill="currentColor" viewBox="0 0 20 20">
+          <div class="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center items-center">
+            <a href="tel:4159414144" class="group w-full sm:w-auto inline-flex items-center justify-center px-6 py-4 sm:px-12 sm:py-6 font-bold rounded-2xl transition-all duration-300 shadow-2xl hover:shadow-3xl transform hover:-translate-y-2 text-base sm:text-xl min-h-[48px] sm:min-h-[70px] touch-manipulation" style="background: #ffffff; color: #0c2a3b;">
+              <svg class="w-5 h-5 mr-3 sm:w-7 sm:h-7 sm:mr-4 group-hover:animate-pulse" fill="currentColor" viewBox="0 0 20 20">
                 <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"/>
               </svg>
               Call Now: (415) 941-4144
             </a>
             
-            <NuxtLink to="/booking" class="inline-flex items-center px-12 py-6 border-3 font-bold rounded-2xl transition-all duration-300 transform hover:-translate-y-2 text-xl min-h-[70px] hover:bg-white hover:text-primary" style="border-color: #ffffff; color: #ffffff; background: rgba(255, 255, 255, 0.1); backdrop-filter: blur(8px);">
-              <svg class="w-7 h-7 mr-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <NuxtLink to="/booking" class="w-full sm:w-auto inline-flex items-center justify-center px-6 py-4 sm:px-12 sm:py-6 border-3 font-bold rounded-2xl transition-all duration-300 transform hover:-translate-y-2 text-base sm:text-xl min-h-[48px] sm:min-h-[70px] touch-manipulation hover:bg-white hover:text-primary" style="border-color: #ffffff; color: #ffffff; background: rgba(255, 255, 255, 0.1); backdrop-filter: blur(8px);">
+              <svg class="w-5 h-5 mr-3 sm:w-7 sm:h-7 sm:mr-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3a1 1 0 011-1h6a1 1 0 011 1v4m-6 0h6m-6 0V5a1 1 0 00-1 1v1m0 8h6v2a1 1 0 01-1 1H9a1 1 0 01-1-1v-2zm6 0V5a1 1 0 011-1h2a1 1 0 011 1v14a1 1 0 01-1 1h-2a1 1 0 01-1-1V5z"/>
               </svg>
               Schedule Service Online
@@ -327,11 +327,50 @@
 
     <Footer />
     <ModalsPrivacy />
+
+    <!-- Sticky Mobile CTA Bar -->
+    <div
+      class="fixed bottom-0 left-0 right-0 z-50 lg:hidden transition-transform duration-300 ease-out"
+      :class="showStickyCta ? 'translate-y-0' : 'translate-y-full'"
+      :style="{ paddingBottom: 'env(safe-area-inset-bottom)' }"
+    >
+      <div class="flex gap-2 px-3 py-2 bg-white shadow-[0_-4px_20px_rgba(0,0,0,0.15)]">
+        <a
+          href="tel:4159414144"
+          class="flex-1 inline-flex items-center justify-center px-4 py-3 font-bold rounded-xl text-sm min-h-[48px] touch-manipulation active:scale-[0.97] transition-transform text-white"
+          style="background: linear-gradient(to right, #facc15, #f97316);"
+        >
+          <svg class="w-5 h-5 mr-2 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+            <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"/>
+          </svg>
+          Call Now
+        </a>
+        <NuxtLink
+          to="/booking"
+          class="flex-1 inline-flex items-center justify-center px-4 py-3 font-bold rounded-xl text-sm min-h-[48px] touch-manipulation active:scale-[0.97] transition-transform border-2"
+          style="background: #ffffff; color: #1f2937; border-color: #e5e7eb;"
+        >
+          <svg class="w-5 h-5 mr-2 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3a1 1 0 011-1h6a1 1 0 011 1v4m-6 0h6m-6 0V5a1 1 0 00-1 1v1m0 8h6v2a1 1 0 01-1 1H9a1 1 0 01-1-1v-2zm6 0V5a1 1 0 011-1h2a1 1 0 011 1v14a1 1 0 01-1 1h-2a1 1 0 01-1-1V5z"/>
+          </svg>
+          Book Online
+        </NuxtLink>
+      </div>
+    </div>
   </div>
 </template>
 
 <script setup>
+import { ref, onMounted, onUnmounted } from 'vue';
 import { useFlowbite } from '~/composables/useFlowbite';
+
+// Sticky CTA visibility
+const showStickyCta = ref(false);
+
+const handleScroll = () => {
+  const threshold = window.innerHeight * 0.75;
+  showStickyCta.value = window.scrollY > threshold;
+};
 
 // SEO optimization
 useHead({
@@ -393,6 +432,14 @@ useHead({
       })
     }
   ]
+});
+
+onMounted(() => {
+  window.addEventListener('scroll', handleScroll, { passive: true });
+});
+
+onUnmounted(() => {
+  window.removeEventListener('scroll', handleScroll);
 });
 
 // Flowbite initialization

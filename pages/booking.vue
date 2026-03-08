@@ -3,7 +3,7 @@
     <Navbar />
     <div class="max-w-screen h-full bg-light">
       <!-- Blog Image with overlay -->
-      <div class="relative w-full h-96 overflow-hidden">
+      <div class="relative w-full h-64 sm:h-96 overflow-hidden">
         <img
           src="/assets/img/dacor-cover.jpg"
           alt="Hero image"
@@ -18,7 +18,8 @@
       <iframe
         src="https://online-booking.workiz.com/?ac=df293d7dfac82f3233068ff6ed38d341f0f350efd0c9fbfe9070308fd4e0efa7"
         width="100%"
-        height="1000px"
+        height="800px"
+        class="min-h-[600px] sm:min-h-[800px] lg:min-h-[1000px]"
         style="border: none"
       ></iframe>
 

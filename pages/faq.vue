@@ -19,26 +19,26 @@
             <span class="font-semibold text-lg" style="color: #ffffff;">Get Your Questions Answered</span>
           </div>
           
-          <h1 class="text-4xl lg:text-6xl font-bold mb-8 leading-tight" style="color: #ffffff;">
+          <h1 class="text-2xl sm:text-4xl lg:text-6xl font-bold mb-8 leading-tight" style="color: #ffffff;">
             Frequently Asked
             <span class="block" style="color: #f97316;">Questions</span>
           </h1>
           
-          <p class="text-xl lg:text-2xl mb-12 max-w-3xl mx-auto leading-relaxed" style="color: rgba(255, 255, 255, 0.9);">
+          <p class="text-base sm:text-xl lg:text-2xl mb-12 max-w-3xl mx-auto leading-relaxed" style="color: rgba(255, 255, 255, 0.9);">
             Find answers to common questions about our <strong>appliance repair services</strong> in the Bay Area. 
             Can't find what you're looking for? <strong>Call us directly</strong> for personalized assistance.
           </p>
           
           <!-- CTA Buttons -->
-          <div class="flex flex-col sm:flex-row gap-6 justify-center items-center">
-            <a href="tel:4159414144" class="group inline-flex items-center px-10 py-4 font-bold rounded-2xl transition-all duration-300 shadow-2xl hover:shadow-3xl transform hover:-translate-y-2 text-lg min-h-[60px]" style="background: linear-gradient(to right, #facc15, #f97316); color: #ffffff;">
+          <div class="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center items-center">
+            <a href="tel:4159414144" class="group w-full sm:w-auto inline-flex items-center justify-center px-6 py-4 sm:px-10 font-bold rounded-2xl transition-all duration-300 shadow-2xl hover:shadow-3xl transform hover:-translate-y-2 text-lg min-h-[48px] sm:min-h-[60px] touch-manipulation" style="background: linear-gradient(to right, #facc15, #f97316); color: #ffffff;">
               <svg class="w-6 h-6 mr-3 group-hover:animate-pulse" fill="currentColor" viewBox="0 0 20 20">
                 <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"/>
               </svg>
               Call Now: (415) 941-4144
             </a>
-            
-            <NuxtLink to="/booking" class="inline-flex items-center px-10 py-4 border-3 font-bold rounded-2xl transition-all duration-300 transform hover:-translate-y-2 text-lg min-h-[60px] hover:bg-white hover:text-primary" style="border-color: #ffffff; color: #ffffff; background: rgba(255, 255, 255, 0.1); backdrop-filter: blur(8px);">
+
+            <NuxtLink to="/booking" class="w-full sm:w-auto inline-flex items-center justify-center px-6 py-4 sm:px-10 border-3 font-bold rounded-2xl transition-all duration-300 transform hover:-translate-y-2 text-lg min-h-[48px] sm:min-h-[60px] hover:bg-white hover:text-primary touch-manipulation" style="border-color: #ffffff; color: #ffffff; background: rgba(255, 255, 255, 0.1); backdrop-filter: blur(8px);">
               <svg class="w-6 h-6 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3a1 1 0 011-1h6a1 1 0 011 1v4m-6 0h6m-6 0V5a1 1 0 00-1 1v1m0 8h6v2a1 1 0 01-1 1H9a1 1 0 01-1-1v-2zm6 0V5a1 1 0 011-1h2a1 1 0 011 1v14a1 1 0 01-1 1h-2a1 1 0 01-1-1V5z"/>
               </svg>
@@ -50,11 +50,11 @@
     </header>
 
     <!-- FAQ Categories Section -->
-    <section class="py-20 lg:py-32" style="background: linear-gradient(to bottom right, #f8fafc, #ffffff);">
+    <section class="py-12 sm:py-20 lg:py-32" style="background: linear-gradient(to bottom right, #f8fafc, #ffffff);">
       <div class="container mx-auto px-4 max-w-screen-xl">
         <!-- Category Navigation -->
         <div class="text-center mb-16">
-          <h2 class="text-3xl lg:text-4xl font-bold mb-8" style="color: #1f2937;">Browse by Category</h2>
+          <h2 class="text-2xl sm:text-3xl lg:text-4xl font-bold mb-8" style="color: #1f2937;">Browse by Category</h2>
           <div class="flex flex-wrap justify-center gap-4 mb-12">
             <button 
               v-for="category in categories" 
@@ -88,7 +88,7 @@
           >
             <button
               @click="toggleFaq(index)"
-              class="w-full p-8 text-left flex items-center justify-between hover:bg-gray-50 transition-colors duration-300"
+              class="w-full p-5 sm:p-8 text-left flex items-center justify-between hover:bg-gray-50 transition-colors duration-300"
             >
               <div class="flex items-start space-x-4">
                 <div class="flex-shrink-0 w-10 h-10 rounded-xl flex items-center justify-center" style="background: rgba(249, 115, 22, 0.1);">
@@ -96,7 +96,7 @@
                     <path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-8-3a1 1 0 00-.867.5 1 1 0 11-1.731-1A3 3 0 0113 8a3.001 3.001 0 01-2 2.83V11a1 1 0 11-2 0v-1a1 1 0 011-1 1 1 0 100-2zm0 8a1 1 0 100-2 1 1 0 000 2z" clip-rule="evenodd"/>
                   </svg>
                 </div>
-                <h3 class="text-xl font-bold text-left" style="color: #1f2937;">{{ faq.question }}</h3>
+                <h3 class="text-lg sm:text-xl font-bold text-left" style="color: #1f2937;">{{ faq.question }}</h3>
               </div>
               <svg 
                 class="w-6 h-6 transition-transform duration-300"
@@ -115,7 +115,7 @@
               class="px-8 pb-8 animate-fadeIn"
             >
               <div class="pl-14">
-                <p class="text-lg leading-relaxed" style="color: #4b5563;" v-html="faq.answer"></p>
+                <p class="text-base sm:text-lg leading-relaxed" style="color: #4b5563;" v-html="faq.answer"></p>
               </div>
             </div>
           </div>
@@ -124,17 +124,17 @@
     </section>
 
     <!-- Still Have Questions Section -->
-    <section class="py-20" style="background: #0c2a3b;">
+    <section class="py-12 sm:py-20" style="background: #0c2a3b;">
       <div class="container mx-auto px-4 max-w-screen-xl text-center">
         <div class="max-w-4xl mx-auto">
-          <h2 class="text-4xl lg:text-5xl font-bold mb-8" style="color: #ffffff;">
+          <h2 class="text-2xl sm:text-4xl lg:text-5xl font-bold mb-8" style="color: #ffffff;">
             Still Have Questions?
           </h2>
-          <p class="text-xl lg:text-2xl mb-12" style="color: rgba(255, 255, 255, 0.9);">
+          <p class="text-base sm:text-xl lg:text-2xl mb-12" style="color: rgba(255, 255, 255, 0.9);">
             Our friendly customer service team is standing by to help you with any questions about appliance repairs, scheduling, or our services.
           </p>
           
-          <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8 mb-12">
             <div class="p-6 rounded-2xl" style="background: rgba(255, 255, 255, 0.1); backdrop-filter: blur(8px);">
               <div class="w-16 h-16 rounded-xl mx-auto mb-4 flex items-center justify-center" style="background: rgba(249, 115, 22, 0.2);">
                 <svg class="w-8 h-8" style="color: #f97316;" fill="currentColor" viewBox="0 0 20 20">
@@ -169,15 +169,15 @@
             </div>
           </div>
           
-          <div class="flex flex-col sm:flex-row gap-6 justify-center items-center">
-            <a href="tel:4159414144" class="group inline-flex items-center px-12 py-6 font-bold rounded-2xl transition-all duration-300 shadow-2xl hover:shadow-3xl transform hover:-translate-y-2 text-xl min-h-[70px]" style="background: #ffffff; color: #0c2a3b;">
+          <div class="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center items-center">
+            <a href="tel:4159414144" class="group w-full sm:w-auto inline-flex items-center justify-center px-8 py-4 sm:px-12 sm:py-6 font-bold rounded-2xl transition-all duration-300 shadow-2xl hover:shadow-3xl transform hover:-translate-y-2 text-base sm:text-xl min-h-[48px] sm:min-h-[70px] touch-manipulation" style="background: #ffffff; color: #0c2a3b;">
               <svg class="w-7 h-7 mr-4 group-hover:animate-pulse" fill="currentColor" viewBox="0 0 20 20">
                 <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"/>
               </svg>
               Call for Immediate Help
             </a>
-            
-            <NuxtLink to="/contact-us" class="inline-flex items-center px-12 py-6 border-3 font-bold rounded-2xl transition-all duration-300 transform hover:-translate-y-2 text-xl min-h-[70px] hover:bg-white hover:text-primary" style="border-color: #ffffff; color: #ffffff; background: rgba(255, 255, 255, 0.1); backdrop-filter: blur(8px);">
+
+            <NuxtLink to="/contact-us" class="w-full sm:w-auto inline-flex items-center justify-center px-8 py-4 sm:px-12 sm:py-6 border-3 font-bold rounded-2xl transition-all duration-300 transform hover:-translate-y-2 text-base sm:text-xl min-h-[48px] sm:min-h-[70px] hover:bg-white hover:text-primary touch-manipulation" style="border-color: #ffffff; color: #ffffff; background: rgba(255, 255, 255, 0.1); backdrop-filter: blur(8px);">
               <svg class="w-7 h-7 mr-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"/>
               </svg>
