@@ -71,9 +71,7 @@
 
         <!-- Article Body -->
         <div class="prose prose-lg max-w-none">
-          <div class="text-gray-800 leading-relaxed space-y-6">
-            <div v-html="formatContent(blog.content)" class="formatted-content"></div>
-          </div>
+          <div v-html="blog.content" class="formatted-content"></div>
         </div>
 
         <!-- Call to Action Section -->
@@ -171,21 +169,6 @@ onMounted(async () => {
   }
 })
 
-// Content formatting function
-const formatContent = (content) => {
-  if (!content) return '';
-  
-  // Convert line breaks to proper HTML
-  return content
-    .replace(/\n\n/g, '</p><p>')
-    .replace(/\n/g, '<br>')
-    .replace(/^/, '<p>')
-    .replace(/$/, '</p>')
-    .replace(/<p><\/p>/g, '')
-    .replace(/<p><br>/g, '<p>')
-    .replace(/<br><\/p>/g, '</p>');
-};
-
 // Enhanced SEO meta tags
 useHead(() => {
   if (!blog.value) return {};
@@ -280,63 +263,56 @@ useHead(() => {
   }
 }
 
-.formatted-content h2 {
+.formatted-content :deep(h2) {
   font-size: 1.25rem;
   font-weight: 700;
-  margin-top: 2rem;
-  margin-bottom: 1rem;
   color: #111827;
   line-height: 1.3;
 }
 
 @media (min-width: 640px) {
-  .formatted-content h2 {
+  .formatted-content :deep(h2) {
     font-size: 1.5rem;
   }
 }
 
-.formatted-content h3 {
+.formatted-content :deep(h3) {
   font-size: 1.125rem;
   font-weight: 600;
-  margin-top: 1.5rem;
-  margin-bottom: 0.75rem;
   color: #1f2937;
   line-height: 1.4;
 }
 
 @media (min-width: 640px) {
-  .formatted-content h3 {
+  .formatted-content :deep(h3) {
     font-size: 1.25rem;
   }
 }
 
-.formatted-content p {
-  margin-bottom: 1rem;
+.formatted-content :deep(p) {
   line-height: 1.75;
   color: #374151;
 }
 
-.formatted-content strong {
+.formatted-content :deep(strong) {
   font-weight: 600;
   color: #111827;
 }
 
-.formatted-content ul, .formatted-content ol {
-  margin-bottom: 1rem;
+.formatted-content :deep(ul), .formatted-content :deep(ol) {
   padding-left: 1.5rem;
 }
 
-.formatted-content li {
-  margin-bottom: 0.5rem;
+.formatted-content :deep(li) {
   line-height: 1.6;
 }
 
-.formatted-content a {
+.formatted-content :deep(a) {
   color: #f97316;
   text-decoration: underline;
 }
 
-.formatted-content a:hover {
+.formatted-content :deep(a:hover) {
   color: #ea580c;
 }
 </style>
