@@ -36,7 +36,8 @@
       "mcp__plugin_playwright_playwright__browser_resize",
       "mcp__plugin_playwright_playwright__browser_press_key",
       "Bash(find /c/Users/saido/Desktop/easyfix/Easyfix-frontend -type f \\\\\\(-name *blog* -o -name *post* \\\\\\))",
-      "Bash(find /c/Users/saido/Desktop/easyfix/Easyfix-frontend -type f \\\\\\(-name *blog* -o -name *api* \\\\\\))"
+      "Bash(find /c/Users/saido/Desktop/easyfix/Easyfix-frontend -type f \\\\\\(-name *blog* -o -name *api* \\\\\\))",
+      "Bash(ls *)"
     ],
     "deny": []
   }

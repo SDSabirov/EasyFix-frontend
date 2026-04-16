@@ -161,7 +161,7 @@ import { ref, onMounted, onUnmounted } from "vue"
 import googleLogo from '/assets/img/google.svg'
 import yelpLogo from '/assets/img/yelp.svg'
 
-const Reviews = ref([
+const FallbackReviews = [
   {
     review:
       "Had Tom come repair our Subzero fridge last week. He was an amazing technician, ontime, and very professional. When the fridge stopped cooling, we were so worried ... with a new baby, it would have been a nightmare. Tom had the parts he needed and proceeded to do the repair. He was thorough and informative the entire time. I've definitely found my goto company and texh. Thanks EasyFix!",
@@ -197,12 +197,16 @@ const Reviews = ref([
     date: "2 days ago",
     platform: "Google"
   }
-])
+]
+
+const Reviews = ref([...FallbackReviews])
 
 let currentIndex = ref(0)
 let currentReview = ref(Reviews.value[0])
 let animate = ref(true)
 let intervalId = ref(null)
+
+const { fetchGoogleReviews } = useGoogleReviews()
 
 const goToReview = (index) => {
   if (index !== currentIndex.value) {
@@ -226,7 +230,17 @@ const cycleReviews = () => {
   }, 5000)
 }
 
+const loadLiveReviews = async () => {
+  const data = await fetchGoogleReviews()
+  if (data && Array.isArray(data.reviews) && data.reviews.length > 0) {
+    Reviews.value = data.reviews
+    currentIndex.value = 0
+    currentReview.value = Reviews.value[0]
+  }
+}
+
 onMounted(() => {
+  loadLiveReviews()
   cycleReviews()
 })
 
