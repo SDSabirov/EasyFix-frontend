@@ -39,6 +39,10 @@ Professional appliance repair services for Sub-Zero, Wolf, Viking, Thermador & l
 - [Email Us](mailto:care@easyfixappliance.com): Email contact for inquiries: care@easyfixappliance.com.
 - [Book Now](https://www.easyfixappliance.com/booking): Online booking option for scheduling repair services.
 
+## Tools
+
+- [Repair vs. Replace Calculator](https://www.easyfixappliance.com/tools/repair-vs-replace): Free interactive tool that helps homeowners decide whether to repair or replace an appliance based on age, repair cost, lifespan, and 5-year cost-per-year projection. Built around the appliance industry's "50% rule".
+
 ## Additional Resources
 
 - [FAQ](https://www.easyfixappliance.com/faq): Frequently asked questions regarding services, pricing, and policies.

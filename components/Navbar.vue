@@ -258,6 +258,26 @@
           ></span>
         </NuxtLink>
 
+        <!-- Calculator -->
+        <NuxtLink
+          to="/tools/repair-vs-replace"
+          :class="[
+            'relative px-4 py-2 font-medium transition-all duration-300 rounded-lg group',
+            isScrolled || route.path !== '/'
+              ? 'text-gray-700 hover:text-primary hover:bg-gray-50'
+              : 'text-white/90 hover:text-white hover:bg-white/10',
+            route.path.startsWith('/tools') && 'font-semibold'
+          ]"
+        >
+          <span>Calculator</span>
+          <span
+            :class="[
+              'absolute bottom-1 left-4 right-4 h-0.5 bg-primary rounded-full transition-transform duration-300 origin-left',
+              route.path.startsWith('/tools') ? 'scale-x-100' : 'scale-x-0 group-hover:scale-x-100'
+            ]"
+          ></span>
+        </NuxtLink>
+
         <!-- FAQ -->
         <NuxtLink
           to="/faq"
@@ -449,6 +469,15 @@
             class="block py-3 px-4 text-gray-700 font-medium hover:bg-gray-50 hover:text-primary rounded-xl transition-colors"
           >
             Blog
+          </NuxtLink>
+
+          <!-- Calculator -->
+          <NuxtLink
+            to="/tools/repair-vs-replace"
+            @click="closeMobileMenu"
+            class="block py-3 px-4 text-gray-700 font-medium hover:bg-gray-50 hover:text-primary rounded-xl transition-colors"
+          >
+            Repair Calculator
           </NuxtLink>
 
           <!-- FAQ -->

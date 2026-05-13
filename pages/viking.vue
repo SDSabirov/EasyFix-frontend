@@ -428,7 +428,11 @@ useHead({
           "Commercial Kitchen Appliance Service"
         ],
         "openingHours": "Mo-Su 08:00-20:00",
-        "priceRange": "$$"
+        "priceRange": "$$",
+        "sameAs": [
+          "https://www.instagram.com/easyfixappliance/",
+          "https://www.facebook.com/profile.php?id=61570244923151"
+        ]
       })
     }
   ]

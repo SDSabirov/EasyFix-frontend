@@ -651,6 +651,10 @@ useHead(() => ({
           },
           "openingHours": "Mo-Su 07:00-21:00",
           "priceRange": "$150-$400",
+          "sameAs": [
+            "https://www.instagram.com/easyfixappliance/",
+            "https://www.facebook.com/profile.php?id=61570244923151"
+          ],
           "aggregateRating": {
             "@type": "AggregateRating",
             "ratingValue": "4.8",
@@ -730,7 +734,11 @@ useHead(() => ({
           "@id": "https://easyfixappliance.com#organization",
           "name": "Easy Fix Appliance",
           "url": "https://easyfixappliance.com",
-          "telephone": "+14159414144"
+          "telephone": "+14159414144",
+          "sameAs": [
+            "https://www.instagram.com/easyfixappliance/",
+            "https://www.facebook.com/profile.php?id=61570244923151"
+          ]
         },
         "mainEntity": [
           {

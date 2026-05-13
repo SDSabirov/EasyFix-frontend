@@ -398,6 +398,10 @@ useHead({
             "postalCode": "94065",
             "addressCountry": "US",
           },
+          "sameAs": [
+            "https://www.instagram.com/easyfixappliance/",
+            "https://www.facebook.com/profile.php?id=61570244923151"
+          ],
         },
       }),
     },

@@ -232,10 +232,15 @@ useHead(() => {
           "publisher": {
             "@type": "Organization",
             "name": "Easy Fix Appliance",
+            "url": "https://easyfixappliance.com",
             "logo": {
               "@type": "ImageObject",
               "url": "https://easyfixappliance.com/logo.png"
-            }
+            },
+            "sameAs": [
+              "https://www.instagram.com/easyfixappliance/",
+              "https://www.facebook.com/profile.php?id=61570244923151"
+            ]
           },
           "mainEntityOfPage": {
             "@type": "WebPage",

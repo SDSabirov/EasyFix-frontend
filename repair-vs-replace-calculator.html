@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Repair vs. Replace Calculator</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg: #ffffff;
+      --bg-secondary: #f5f5f2;
+      --text: #1a1a18;
+      --text-muted: #6b6b66;
+      --border: rgba(0,0,0,0.12);
+      --border-hover: rgba(0,0,0,0.25);
+      --radius-md: 8px;
+      --radius-lg: 12px;
+      --teal: #1D9E75;
+      --teal-dark: #0F6E56;
+      --blue: #378ADD;
+      --blue-dark: #185FA5;
+      --gray: #888780;
+    }
+
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #1e1e1c;
+        --bg-secondary: #2a2a28;
+        --text: #f0ede6;
+        --text-muted: #a0a09a;
+        --border: rgba(255,255,255,0.12);
+        --border-hover: rgba(255,255,255,0.25);
+      }
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      background: var(--bg-secondary);
+      color: var(--text);
+      min-height: 100vh;
+      padding: 2rem 1rem;
+      line-height: 1.6;
+    }
+
+    .wrap {
+      max-width: 620px;
+      margin: 0 auto;
+    }
+
+    h1 {
+      font-size: 22px;
+      font-weight: 500;
+      margin-bottom: 0.25rem;
+    }
+
+    .subtitle {
+      font-size: 14px;
+      color: var(--text-muted);
+      margin-bottom: 1.5rem;
+    }
+
+    .section {
+      background: var(--bg);
+      border: 0.5px solid var(--border);
+      border-radius: var(--radius-lg);
+      padding: 1.25rem;
+      margin-bottom: 1rem;
+    }
+
+    .section-title {
+      font-size: 12px;
+      font-weight: 500;
+      color: var(--text-muted);
+      text-transform: uppercase;
+      letter-spacing: 0.07em;
+      margin-bottom: 1rem;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+    }
+
+    @media (max-width: 480px) {
+      .grid { grid-template-columns: 1fr; }
+      .metrics { grid-template-columns: 1fr 1fr !important; }
+    }
+
+    .field {
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+    }
+
+    label {
+      font-size: 13px;
+      color: var(--text-muted);
+    }
+
+    input[type="number"],
+    select {
+      width: 100%;
+      padding: 8px 10px;
+      font-size: 14px;
+      color: var(--text);
+      background: var(--bg);
+      border: 0.5px solid var(--border);
+      border-radius: var(--radius-md);
+      outline: none;
+      transition: border-color 0.15s;
+      appearance: none;
+      -webkit-appearance: none;
+    }
+
+    input[type="number"]:hover,
+    select:hover { border-color: var(--border-hover); }
+
+    input[type="number"]:focus,
+    select:focus {
+      border-color: var(--blue);
+      box-shadow: 0 0 0 3px rgba(55,138,221,0.15);
+    }
+
+    button {
+      width: 100%;
+      padding: 11px;
+      font-size: 15px;
+      font-weight: 500;
+      color: var(--text);
+      background: var(--bg);
+      border: 0.5px solid var(--border);
+      border-radius: var(--radius-md);
+      cursor: pointer;
+      transition: background 0.15s, transform 0.1s;
+      margin-top: 0.25rem;
+    }
+
+    button:hover { background: var(--bg-secondary); }
+    button:active { transform: scale(0.98); }
+
+    .result {
+      background: var(--bg);
+      border: 0.5px solid var(--border);
+      border-radius: var(--radius-lg);
+      padding: 1.5rem;
+      margin-top: 1rem;
+      display: none;
+    }
+
+    .verdict { font-size: 20px; font-weight: 500; margin-bottom: 6px; }
+    .verdict-sub { font-size: 14px; color: var(--text-muted); margin-bottom: 1.25rem; }
+
+    .bar-wrap { margin-bottom: 0.25rem; }
+    .bar-label { display: flex; justify-content: space-between; font-size: 12px; color: var(--text-muted); margin-bottom: 4px; }
+    .bar-track { height: 8px; background: var(--bg-secondary); border-radius: 99px; overflow: hidden; margin-bottom: 10px; }
+    .bar-fill { height: 100%; border-radius: 99px; transition: width 0.45s cubic-bezier(.4,0,.2,1); }
+    .bar-teal { background: var(--teal); }
+    .bar-blue { background: var(--blue); }
+
+    .metrics {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 10px;
+      margin-top: 1rem;
+    }
+
+    .metric {
+      background: var(--bg-secondary);
+      border-radius: var(--radius-md);
+      padding: 0.75rem 1rem;
+    }
+
+    .metric-label { font-size: 12px; color: var(--text-muted); margin-bottom: 3px; }
+    .metric-value { font-size: 17px; font-weight: 500; }
+
+    .footer {
+      text-align: center;
+      font-size: 12px;
+      color: var(--text-muted);
+      margin-top: 1.5rem;
+    }
+  </style>
+</head>
+<body>
+<div class="wrap">
+  <h1>Repair vs. Replace</h1>
+  <p class="subtitle">Find out which option makes more financial sense.</p>
+
+  <div class="section">
+    <p class="section-title">About the item</p>
+    <div class="grid">
+      <div class="field">
+        <label for="item-age">Current age (years)</label>
+        <input type="number" id="item-age" min="0" value="5" step="1">
+      </div>
+      <div class="field">
+        <label for="item-lifespan">Expected total lifespan (years)</label>
+        <input type="number" id="item-lifespan" min="1" value="12" step="1">
+      </div>
+      <div class="field">
+        <label for="replace-cost">Replacement cost ($)</label>
+        <input type="number" id="replace-cost" min="0" value="1200" step="10">
+      </div>
+      <div class="field">
+        <label for="current-value">Estimated current value ($)</label>
+        <input type="number" id="current-value" min="0" value="400" step="10">
+      </div>
+    </div>
+  </div>
+
+  <div class="section">
+    <p class="section-title">Repair details</p>
+    <div class="grid">
+      <div class="field">
+        <label for="repair-cost">Repair cost ($)</label>
+        <input type="number" id="repair-cost" min="0" value="300" step="10">
+      </div>
+      <div class="field">
+        <label for="repair-life">Life added by repair (years)</label>
+        <input type="number" id="repair-life" min="0" value="4" step="1">
+      </div>
+      <div class="field">
+        <label for="repair-reliability">Reliability after repair</label>
+        <select id="repair-reliability">
+          <option value="1.0">High — works like new</option>
+          <option value="0.8" selected>Medium — occasional issues</option>
+          <option value="0.6">Low — frequent issues likely</option>
+        </select>
+      </div>
+      <div class="field">
+        <label for="annual-savings">Annual savings if new ($)</label>
+        <input type="number" id="annual-savings" min="0" value="80" step="10" title="e.g. energy efficiency gains">
+      </div>
+    </div>
+  </div>
+
+  <button onclick="calculate()">Calculate</button>
+
+  <div class="result" id="result">
+    <div class="verdict" id="verdict-text"></div>
+    <div class="verdict-sub" id="verdict-sub"></div>
+
+    <div class="bar-wrap">
+      <div class="bar-label"><span>Repair — cost per year of use</span><span id="repair-cpy">—</span></div>
+      <div class="bar-track"><div class="bar-fill bar-teal" id="bar-repair" style="width:0%"></div></div>
+      <div class="bar-label"><span>Replace — cost per year of use</span><span id="replace-cpy">—</span></div>
+      <div class="bar-track"><div class="bar-fill bar-blue" id="bar-replace" style="width:0%"></div></div>
+    </div>
+
+    <div class="metrics">
+      <div class="metric">
+        <div class="metric-label">Rule of thumb</div>
+        <div class="metric-value" id="m-rule">—</div>
+      </div>
+      <div class="metric">
+        <div class="metric-label">Break-even (years)</div>
+        <div class="metric-value" id="m-breakeven">—</div>
+      </div>
+      <div class="metric">
+        <div class="metric-label">5-yr cost diff.</div>
+        <div class="metric-value" id="m-5yr">—</div>
+      </div>
+    </div>
+  </div>
+
+  <p class="footer">This calculator provides estimates for informational purposes only.</p>
+</div>
+
+<script>
+  function calculate() {
+    const age = parseFloat(document.getElementById('item-age').value) || 0;
+    const lifespan = parseFloat(document.getElementById('item-lifespan').value) || 12;
+    const replaceCost = parseFloat(document.getElementById('replace-cost').value) || 0;
+    const currentValue = parseFloat(document.getElementById('current-value').value) || 0;
+    const repairCost = parseFloat(document.getElementById('repair-cost').value) || 0;
+    const repairLife = parseFloat(document.getElementById('repair-life').value) || 1;
+    const reliability = parseFloat(document.getElementById('repair-reliability').value) || 1;
+    const annualSavings = parseFloat(document.getElementById('annual-savings').value) || 0;
+
+    const effectiveRepairLife = Math.max(repairLife * reliability, 0.1);
+    const repairCPY = repairCost / effectiveRepairLife;
+    const netReplaceCost = replaceCost - currentValue;
+    const replaceCPYDisplay = netReplaceCost / lifespan;
+
+    const ruleOfThumb = repairCost / replaceCost;
+    const ruleLabel = ruleOfThumb <= 0.5 ? '✓ Under 50%' : ruleOfThumb <= 1.0 ? '⚠ 50–100%' : '✗ Over 100%';
+
+    const breakeven = annualSavings > 0 ? (netReplaceCost - repairCost) / annualSavings : null;
+
+    const repair5yr = repairCost + (5 / Math.max(lifespan, 1)) * replaceCost * (1 - reliability) * 0.5;
+    const replace5yr = (netReplaceCost / lifespan) * 5 - annualSavings * 5;
+    const diff5yr = replace5yr - repair5yr;
+
+    const maxBar = Math.max(repairCPY, replaceCPYDisplay, 1);
+    document.getElementById('bar-repair').style.width = Math.min(100, (repairCPY / maxBar) * 100) + '%';
+    document.getElementById('bar-replace').style.width = Math.min(100, (replaceCPYDisplay / maxBar) * 100) + '%';
+    document.getElementById('repair-cpy').textContent = '$' + Math.round(repairCPY) + '/yr';
+    document.getElementById('replace-cpy').textContent = '$' + Math.round(replaceCPYDisplay) + '/yr';
+
+    document.getElementById('m-rule').textContent = ruleLabel;
+    document.getElementById('m-breakeven').textContent = breakeven !== null && breakeven > 0
+      ? (Math.round(breakeven * 10) / 10) + ' yrs' : 'N/A';
+    document.getElementById('m-5yr').textContent = (diff5yr > 0 ? '+' : '') + '$' +
+      Math.round(Math.abs(diff5yr)) + (diff5yr > 0 ? ' repair' : ' replace');
+
+    const verdictEl = document.getElementById('verdict-text');
+    const subEl = document.getElementById('verdict-sub');
+
+    if (repairCPY < replaceCPYDisplay * 0.8) {
+      verdictEl.textContent = '🔧 Repair is the better value';
+      verdictEl.style.color = '#0F6E56';
+      subEl.textContent = `At $${Math.round(repairCPY)}/yr vs $${Math.round(replaceCPYDisplay)}/yr, repairing costs significantly less per year of use.`;
+    } else if (repairCPY > replaceCPYDisplay * 1.2) {
+      verdictEl.textContent = '🛒 Consider replacing';
+      verdictEl.style.color = '#185FA5';
+      subEl.textContent = `At $${Math.round(repairCPY)}/yr vs $${Math.round(replaceCPYDisplay)}/yr, a new item may offer better long-term value.`;
+    } else {
+      verdictEl.textContent = "⚖️ It's a close call";
+      verdictEl.style.color = '';
+      subEl.textContent = `Both options cost roughly the same per year. Non-financial factors like reliability and features may tip the balance.`;
+    }
+
+    document.getElementById('result').style.display = 'block';
+  }
+</script>
+</body>
+</html>
