@@ -6,6 +6,10 @@ export default defineNuxtConfig({
   compatibilityDate: "2024-04-03",
   devtools: { enabled: true },
 
+  nitro: {
+    preset: process.env.NITRO_PRESET || "cloudflare-pages",
+  },
+
   alias: {
     "@": resolve(__dirname),
     "~": resolve(__dirname),

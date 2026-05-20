@@ -1,0 +1,7 @@
+name = "easyfix-frontend"
+compatibility_date = "2024-09-19"
+compatibility_flags = ["nodejs_compat"]
+pages_build_output_dir = "dist"
+
+[vars]
+NUXT_PUBLIC_API_BASE_URL = "https://api.easyfixappliance.com/api"

@@ -170,7 +170,6 @@
 <script setup>
 
 import { ref, onMounted, onUnmounted } from 'vue'
-import { useFlowbite } from '~/composables/useFlowbite';
 
 // Sticky mobile CTA bar
 const showStickyCta = ref(false)

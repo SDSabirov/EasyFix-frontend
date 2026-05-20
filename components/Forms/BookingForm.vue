@@ -72,7 +72,6 @@
 
 <script setup>
 import { onMounted } from "vue";
-import { useFlowbite } from "~/composables/useFlowbite";
 
 let step = ref(1);
 const loading = ref(false);

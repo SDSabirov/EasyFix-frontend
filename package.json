@@ -4,9 +4,13 @@
   "type": "module",
   "scripts": {
     "build": "nuxt build",
+    "build:cloudflare": "NITRO_PRESET=cloudflare-pages nuxt build",
+    "build:node": "NITRO_PRESET=node-server nuxt build",
     "dev": "nuxt dev",
     "generate": "nuxt generate",
     "preview": "nuxt preview",
+    "preview:cloudflare": "wrangler pages dev",
+    "deploy:cloudflare": "npm run build:cloudflare && wrangler pages deploy",
     "postinstall": "nuxt prepare"
   },
   "dependencies": {
@@ -25,6 +29,7 @@
   "devDependencies": {
     "autoprefixer": "^10.4.20",
     "postcss": "^8.4.41",
-    "tailwindcss": "^3.4.10"
+    "tailwindcss": "^3.4.10",
+    "wrangler": "^3.114.17"
   }
 }
