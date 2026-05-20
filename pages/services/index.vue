@@ -45,7 +45,6 @@
 
 <script setup>
 import { ref, onMounted } from "vue";
-import { useFlowbite } from "~/composables/useFlowbite";
 
 const selectedSegment = ref('premium')
 

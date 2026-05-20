@@ -362,7 +362,6 @@
 
 <script setup>
 import { ref, onMounted, onUnmounted } from 'vue';
-import { useFlowbite } from '~/composables/useFlowbite';
 
 // Sticky CTA visibility
 const showStickyCta = ref(false);
