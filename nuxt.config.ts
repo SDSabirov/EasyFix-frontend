@@ -51,6 +51,7 @@ export default defineNuxtConfig({
     "@nuxtjs/seo",
     "@nuxtjs/google-fonts",
     "nuxt-lazy-load",
+    "@nuxt/content",
   ],
   googleFonts: {
     families: {
