@@ -278,45 +278,67 @@
           ></span>
         </NuxtLink>
 
-        <!-- FAQ -->
-        <NuxtLink
-          to="/faq"
-          :class="[
-            'relative px-4 py-2 font-medium transition-all duration-300 rounded-lg group',
-            isScrolled || route.path !== '/'
-              ? 'text-gray-700 hover:text-primary hover:bg-gray-50'
-              : 'text-white/90 hover:text-white hover:bg-white/10',
-            route.path === '/faq' && 'font-semibold'
-          ]"
+        <!-- More Dropdown (FAQ, Contact, Careers) -->
+        <div
+          class="relative"
+          @mouseenter="openDropdown('more')"
+          @mouseleave="closeDropdown"
         >
-          <span>FAQ</span>
-          <span
+          <button
             :class="[
-              'absolute bottom-1 left-4 right-4 h-0.5 bg-primary rounded-full transition-transform duration-300 origin-left',
-              route.path === '/faq' ? 'scale-x-100' : 'scale-x-0 group-hover:scale-x-100'
+              'flex items-center px-4 py-2 font-medium transition-all duration-300 rounded-lg group',
+              isScrolled || route.path !== '/'
+                ? 'text-gray-700 hover:text-primary hover:bg-gray-50'
+                : 'text-white/90 hover:text-white hover:bg-white/10',
+              moreLinks.some(l => route.path === l.link) && 'font-semibold'
             ]"
-          ></span>
-        </NuxtLink>
+          >
+            <span>More</span>
+            <svg
+              :class="[
+                'w-4 h-4 ml-1 transition-transform duration-200',
+                activeDropdown === 'more' && 'rotate-180'
+              ]"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </button>
 
-        <!-- Contact -->
-        <NuxtLink
-          to="/contact-us"
-          :class="[
-            'relative px-4 py-2 font-medium transition-all duration-300 rounded-lg group',
-            isScrolled || route.path !== '/'
-              ? 'text-gray-700 hover:text-primary hover:bg-gray-50'
-              : 'text-white/90 hover:text-white hover:bg-white/10',
-            route.path === '/contact-us' && 'font-semibold'
-          ]"
-        >
-          <span>Contact</span>
-          <span
-            :class="[
-              'absolute bottom-1 left-4 right-4 h-0.5 bg-primary rounded-full transition-transform duration-300 origin-left',
-              route.path === '/contact-us' ? 'scale-x-100' : 'scale-x-0 group-hover:scale-x-100'
-            ]"
-          ></span>
-        </NuxtLink>
+          <Transition
+            enter-active-class="transition duration-200 ease-out"
+            enter-from-class="opacity-0 translate-y-2"
+            enter-to-class="opacity-100 translate-y-0"
+            leave-active-class="transition duration-150 ease-in"
+            leave-from-class="opacity-100 translate-y-0"
+            leave-to-class="opacity-0 translate-y-2"
+          >
+            <div
+              v-show="activeDropdown === 'more'"
+              class="absolute top-full right-0 mt-2 w-56 bg-white rounded-2xl shadow-xl border border-gray-100 overflow-hidden"
+            >
+              <div class="p-2">
+                <NuxtLink
+                  v-for="item in moreLinks"
+                  :key="item.label"
+                  :to="item.link"
+                  @click="closeDropdown"
+                  :class="[
+                    'flex items-center px-3 py-2.5 rounded-xl transition-colors',
+                    route.path === item.link
+                      ? 'bg-primary/5 text-primary font-semibold'
+                      : 'text-gray-700 hover:bg-primary/5 hover:text-primary'
+                  ]"
+                >
+                  <component :is="item.icon" class="w-4 h-4 mr-3 text-gray-400" />
+                  <span class="font-medium">{{ item.label }}</span>
+                </NuxtLink>
+              </div>
+            </div>
+          </Transition>
+        </div>
       </div>
 
       <!-- CTA Buttons -->
@@ -480,23 +502,34 @@
             Repair Calculator
           </NuxtLink>
 
-          <!-- FAQ -->
-          <NuxtLink
-            to="/faq"
-            @click="closeMobileMenu"
-            class="block py-3 px-4 text-gray-700 font-medium hover:bg-gray-50 hover:text-primary rounded-xl transition-colors"
-          >
-            FAQ
-          </NuxtLink>
-
-          <!-- Contact -->
-          <NuxtLink
-            to="/contact-us"
-            @click="closeMobileMenu"
-            class="block py-3 px-4 text-gray-700 font-medium hover:bg-gray-50 hover:text-primary rounded-xl transition-colors"
-          >
-            Contact
-          </NuxtLink>
+          <!-- More Accordion (FAQ, Contact, Careers) -->
+          <div class="rounded-xl overflow-hidden">
+            <button
+              @click="toggleMobileAccordion('more')"
+              class="w-full flex items-center justify-between py-3 px-4 text-gray-700 font-medium hover:bg-gray-50 rounded-xl transition-colors"
+            >
+              <span>More</span>
+              <svg
+                :class="['w-5 h-5 transition-transform duration-200', mobileAccordion === 'more' && 'rotate-180']"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+              </svg>
+            </button>
+            <div v-show="mobileAccordion === 'more'" class="pl-4 pb-2 space-y-1">
+              <NuxtLink
+                v-for="item in moreLinks"
+                :key="item.label"
+                :to="item.link"
+                @click="closeMobileMenu"
+                class="block py-2.5 px-4 text-gray-600 hover:text-primary rounded-lg transition-colors"
+              >
+                {{ item.label }}
+              </NuxtLink>
+            </div>
+          </div>
 
           <!-- Mobile CTAs -->
           <div class="pt-4 space-y-3 border-t border-gray-100 mt-4">
@@ -568,6 +601,24 @@ const StarIcon = () => h('svg', { class: 'w-4 h-4', fill: 'currentColor', viewBo
 const ListIcon = () => h('svg', { class: 'w-4 h-4', fill: 'currentColor', viewBox: '0 0 20 20' }, [
   h('path', { 'fill-rule': 'evenodd', d: 'M3 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm0 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm0 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm0 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z', 'clip-rule': 'evenodd' })
 ]);
+
+const QuestionIcon = () => h('svg', { class: 'w-4 h-4', fill: 'none', stroke: 'currentColor', viewBox: '0 0 24 24' }, [
+  h('path', { 'stroke-linecap': 'round', 'stroke-linejoin': 'round', 'stroke-width': '2', d: 'M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093M12 17h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z' })
+]);
+
+const EnvelopeIcon = () => h('svg', { class: 'w-4 h-4', fill: 'none', stroke: 'currentColor', viewBox: '0 0 24 24' }, [
+  h('path', { 'stroke-linecap': 'round', 'stroke-linejoin': 'round', 'stroke-width': '2', d: 'M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z' })
+]);
+
+const BriefcaseIcon = () => h('svg', { class: 'w-4 h-4', fill: 'none', stroke: 'currentColor', viewBox: '0 0 24 24' }, [
+  h('path', { 'stroke-linecap': 'round', 'stroke-linejoin': 'round', 'stroke-width': '2', d: 'M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z' })
+]);
+
+const moreLinks = [
+  { label: 'FAQ', link: '/faq', icon: QuestionIcon },
+  { label: 'Contact', link: '/contact-us', icon: EnvelopeIcon },
+  { label: 'Careers', link: '/careers', icon: BriefcaseIcon },
+];
 
 // Dropdown Data
 const servicesDropdown = {

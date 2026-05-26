@@ -38,15 +38,15 @@
       
       <!-- Brand Grid -->
       <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 mb-8">
-        <div v-for="brand in brands" :key="brand.name"
-             class="group bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 border border-gray-100">
+        <NuxtLink v-for="brand in brands" :key="brand.name" :to="brand.link"
+             class="group bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 border border-gray-100 block">
           <div class="text-center">
             <img :src="brand.logo" :alt="brand.name + ' appliance repair services'"
                  class="h-12 mx-auto mb-4 object-contain filter grayscale group-hover:grayscale-0 transition-all duration-300" />
             <h3 class="font-semibold text-gray-900 text-sm">{{ brand.name }}</h3>
             <p class="text-xs text-gray-600 mt-1">{{ brand.specialty }}</p>
           </div>
-        </div>
+        </NuxtLink>
       </div>
 
       <!-- And Many More Link -->
@@ -160,47 +160,56 @@ const brands = [
   {
     name: "Sub-Zero",
     logo: subZeroLogo,
-    specialty: "Refrigeration"
+    specialty: "Refrigeration",
+    link: "/subzero-wolf-repairs"
   },
   {
     name: "Wolf",
-    logo: wolfLogo, 
-    specialty: "Cooking"
+    logo: wolfLogo,
+    specialty: "Cooking",
+    link: "/subzero-wolf-repairs"
   },
   {
     name: "Viking",
     logo: vikingLogo,
-    specialty: "Professional"
+    specialty: "Professional",
+    link: "/viking"
   },
   {
     name: "Thermador",
     logo: thermadorLogo,
-    specialty: "Luxury"
+    specialty: "Luxury",
+    link: "/thermador"
   },
   {
     name: "KitchenAid",
     logo: kitchenaidLogo,
-    specialty: "Performance"
+    specialty: "Performance",
+    link: "/kitchenAid"
   },
   {
     name: "GE Monogram",
     logo: geMonogramLogo,
-    specialty: "Premium"
+    specialty: "Premium",
+    link: "/gemonogram"
   },
   {
     name: "La Cornue",
     logo: laCornueLogo,
-    specialty: "French Luxury"
+    specialty: "French Luxury",
+    link: "/la-cornue"
   },
   {
     name: "GAGGENAU",
     logo: gaggenauLogo,
-    specialty: "German Engineering"
+    specialty: "German Engineering",
+    link: "/gaggenau"
   },
   {
     name: "Liebherr",
     logo: liebherrLogo,
-    specialty: "German Cooling"
+    specialty: "German Cooling",
+    link: "/liebherr"
   }
 ]
 

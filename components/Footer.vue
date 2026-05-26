@@ -95,6 +95,11 @@
                 Online Booking
               </NuxtLink>
             </li>
+            <li>
+              <NuxtLink to="/careers" class="text-gray-300 hover:text-white transition-colors hover:translate-x-1 transform duration-300 inline-block py-2 min-h-[44px] touch-manipulation">
+                Careers
+              </NuxtLink>
+            </li>
           </ul>
         </div>
 

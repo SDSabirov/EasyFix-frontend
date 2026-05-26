@@ -60,18 +60,18 @@
       <div class="mb-20">
         <h3 class="text-3xl font-bold text-center text-gray-900 mb-12">Authorized Service for Premium Brands</h3>
         <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
-          <div v-for="brand in brands" :key="brand.name" 
-               class="group bg-gradient-to-br from-white to-gray-50 rounded-3xl p-8 shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-3 border border-gray-100 hover:border-primary/20">
+          <NuxtLink v-for="brand in brands" :key="brand.name" :to="brand.link"
+               class="group bg-gradient-to-br from-white to-gray-50 rounded-3xl p-8 shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-3 border border-gray-100 hover:border-primary/20 block">
             <div class="text-center">
-              <img :src="brand.logo" :alt="brand.name + ' appliance repair services'" 
+              <img :src="brand.logo" :alt="brand.name + ' appliance repair services'"
                    class="h-16 mx-auto mb-6 object-contain filter grayscale group-hover:grayscale-0 transition-all duration-500 group-hover:scale-110" />
               <h4 class="font-bold text-gray-900 text-lg mb-2">{{ brand.name }}</h4>
               <p class="text-sm text-gray-600 mb-4">{{ brand.specialty }}</p>
-              <div class="text-xs text-primary font-semibold bg-primary/10 px-3 py-1 rounded-full">
+              <div class="inline-block text-xs text-primary font-semibold bg-primary/10 px-3 py-1 rounded-full">
                 Authorized Service
               </div>
             </div>
-          </div>
+          </NuxtLink>
         </div>
       </div>
 
@@ -215,47 +215,56 @@ const brands = [
   {
     name: "Sub-Zero",
     logo: subZeroLogo,
-    specialty: "Premium Refrigeration"
+    specialty: "Premium Refrigeration",
+    link: "/subzero-wolf-repairs"
   },
   {
     name: "Wolf",
-    logo: wolfLogo, 
-    specialty: "Professional Cooking"
+    logo: wolfLogo,
+    specialty: "Professional Cooking",
+    link: "/subzero-wolf-repairs"
   },
   {
     name: "Viking",
     logo: vikingLogo,
-    specialty: "Commercial Grade"
+    specialty: "Commercial Grade",
+    link: "/viking"
   },
   {
     name: "Thermador",
     logo: thermadorLogo,
-    specialty: "Luxury Performance"
+    specialty: "Luxury Performance",
+    link: "/thermador"
   },
   {
     name: "KitchenAid",
     logo: kitchenaidLogo,
-    specialty: "Culinary Excellence"
+    specialty: "Culinary Excellence",
+    link: "/kitchenAid"
   },
   {
     name: "GE Monogram",
     logo: geMonogramLogo,
-    specialty: "Premium Design"
+    specialty: "Premium Design",
+    link: "/gemonogram"
   },
   {
     name: "La Cornue",
     logo: laCornueLogo,
-    specialty: "French Luxury"
+    specialty: "French Luxury",
+    link: "/la-cornue"
   },
   {
     name: "GAGGENAU",
     logo: gaggenauLogo,
-    specialty: "German Engineering"
+    specialty: "German Engineering",
+    link: "/gaggenau"
   },
   {
     name: "Liebherr",
     logo: liebherrLogo,
-    specialty: "German Cooling"
+    specialty: "German Cooling",
+    link: "/liebherr"
   }
 ]
 
