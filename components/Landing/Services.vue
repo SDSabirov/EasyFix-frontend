@@ -145,6 +145,7 @@ import subzeroLogosilver from '/assets/img/subzeroLogosilver.png'
 import dacorLogo from '/assets/img/dacor-logo.png'
 import laCornueLogo from '/assets/img/la_cornue.svg'
 import gaggenauLogo from '/assets/img/gagganue-logo.png'
+import liebherrLogo from '/assets/img/newbrand-logos/logo_ci_liebherr.svg'
 
 import subzeroWolfImage from '/assets/img/subzerowolfappliance.webp'
 import laCornueImage from '/assets/img/la_courne.webp'
@@ -195,6 +196,11 @@ const brands = [
     name: "GAGGENAU",
     logo: gaggenauLogo,
     specialty: "German Engineering"
+  },
+  {
+    name: "Liebherr",
+    logo: liebherrLogo,
+    specialty: "German Cooling"
   }
 ]
 
