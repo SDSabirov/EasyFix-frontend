@@ -72,10 +72,10 @@
         
         <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-12 lg:gap-16 items-center mb-10 sm:mb-20">
           <div>
-            <h3 class="text-xl sm:text-3xl lg:text-4xl font-bold mb-4 sm:mb-8" style="color: #1f2937;">Stand Mixer Heritage & Innovation</h3>
+            <h3 class="text-xl sm:text-3xl lg:text-4xl font-bold mb-4 sm:mb-8" style="color: #1f2937;">A Heritage of Kitchen Innovation</h3>
             <div class="space-y-6 text-lg leading-relaxed" style="color: #4b5563;">
               <p>
-                Since 1919, KitchenAid has been synonymous with <strong>stand mixer excellence</strong>, starting with the iconic H-5 mixer that revolutionized home baking. Today, KitchenAid's legacy extends far beyond mixers to include professional-grade ranges, precision refrigeration, and innovative cooking appliances that embody the same commitment to quality and performance.
+                Since 1919, KitchenAid has been synonymous with <strong>kitchen excellence</strong>, building a reputation for craftsmanship that transformed the way home chefs cook. Today, KitchenAid's lineup includes professional-grade ranges, precision refrigeration, and innovative cooking appliances that embody an enduring commitment to quality and performance.
               </p>
               <p>
                 KitchenAid appliances feature <strong>commercial-inspired design</strong> with robust construction built to withstand daily use. From their <strong>even-heat technology</strong> in ovens to precise temperature control in refrigeration systems, every KitchenAid appliance is engineered to help home chefs achieve <strong>professional results</strong> with confidence and style.
@@ -94,7 +94,7 @@
           </div>
           
           <div class="relative">
-            <img src="/assets/img/kitchenaidCover.png" alt="KitchenAid professional appliances with stand mixer heritage design" class="w-full h-auto rounded-2xl shadow-2xl">
+            <img src="/assets/img/kitchenaidCover.png" alt="KitchenAid professional kitchen appliances with iconic heritage design" class="w-full h-auto rounded-2xl shadow-2xl">
             <div class="absolute -bottom-6 -right-6 p-6 rounded-2xl shadow-xl" style="background: #ffffff;">
               <div class="text-2xl font-bold mb-1" style="color: #dc2626;">Iconic</div>
               <div class="text-sm font-medium" style="color: #6b7280;">Design</div>
@@ -156,7 +156,7 @@
             
             <div class="space-y-6 text-lg leading-relaxed" style="color: rgba(255, 255, 255, 0.9);">
               <p>
-                At Easy Fix Appliance, we've been the Bay Area's trusted KitchenAid repair specialists for over <strong>15 years</strong>. Our factory-certified technicians understand the precision engineering behind KitchenAid's iconic appliances, from stand mixer motors to professional range systems and advanced refrigeration technology.
+                At Easy Fix Appliance, we've been the Bay Area's trusted KitchenAid repair specialists for over <strong>15 years</strong>. Our factory-certified technicians understand the precision engineering behind KitchenAid's iconic appliances, from professional range systems to advanced refrigeration technology and precision dishwashers.
               </p>
               <p>
                 We serve <strong>San Mateo, Palo Alto, Foster City, San Francisco</strong>, and the entire Bay Area with comprehensive KitchenAid repair services. From oven calibration to refrigerator compressor replacement, we use only <strong>genuine KitchenAid parts</strong> and specialized diagnostic tools to restore your appliances to factory performance standards.
@@ -224,12 +224,12 @@
               
               <div class="space-y-4">
                 <div class="p-4 rounded-xl" style="background: rgba(255, 255, 255, 0.1); backdrop-filter: blur(8px);">
-                  <h4 class="font-bold mb-2" style="color: #ffffff;">Stand Mixers & Small Appliances</h4>
+                  <h4 class="font-bold mb-2" style="color: #ffffff;">Wall Ovens & Microwaves</h4>
                   <ul class="text-sm space-y-1" style="color: rgba(255, 255, 255, 0.8);">
-                    <li>• Stand mixer motor repairs</li>
-                    <li>• Food processor service</li>
-                    <li>• Blender troubleshooting</li>
-                    <li>• Attachment replacements</li>
+                    <li>• Wall oven repairs</li>
+                    <li>• Built-in microwave service</li>
+                    <li>• Convection system repairs</li>
+                    <li>• Door & seal replacements</li>
                   </ul>
                 </div>
                 
@@ -274,12 +274,12 @@
         <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto">
           <div class="p-5 sm:p-8 rounded-2xl shadow-lg" style="background: #ffffff;">
             <h3 class="text-lg sm:text-xl font-bold mb-4" style="color: #1f2937;">How long do KitchenAid appliances typically last?</h3>
-            <p style="color: #6b7280;">KitchenAid appliances are built for durability and typically last 15-20 years with proper maintenance. Stand mixers can last even longer with regular service.</p>
+            <p style="color: #6b7280;">KitchenAid appliances are built for durability and typically last 15-20 years with proper maintenance. Ranges and refrigerators can last even longer with regular service.</p>
           </div>
           
           <div class="p-5 sm:p-8 rounded-2xl shadow-lg" style="background: #ffffff;">
-            <h3 class="text-lg sm:text-xl font-bold mb-4" style="color: #1f2937;">Do you repair KitchenAid stand mixers?</h3>
-            <p style="color: #6b7280;">Yes, we specialize in KitchenAid stand mixer repairs, including motor issues, speed control problems, and attachment troubleshooting.</p>
+            <h3 class="text-lg sm:text-xl font-bold mb-4" style="color: #1f2937;">Which KitchenAid appliances do you repair?</h3>
+            <p style="color: #6b7280;">We service major KitchenAid kitchen appliances, including ranges, wall ovens, cooktops, refrigerators, and dishwashers. Please note we do not repair stand mixers or other small countertop appliances.</p>
           </div>
           
           <div class="p-5 sm:p-8 rounded-2xl shadow-lg" style="background: #ffffff;">
@@ -377,11 +377,11 @@ useHead({
   meta: [
     {
       name: 'description',
-      content: 'Expert KitchenAid appliance repairs in Bay Area. Factory-certified technicians for stand mixers, ranges, refrigerators, and cooking appliances. Same-day service, genuine parts, 2-year warranty. Call (415) 941-4144'
+      content: 'Expert KitchenAid appliance repairs in Bay Area. Factory-certified technicians for ranges, wall ovens, cooktops, refrigerators, and dishwashers. Same-day service, genuine parts, 2-year warranty. Call (415) 941-4144'
     },
     {
       name: 'keywords',
-      content: 'KitchenAid appliance repair, KitchenAid stand mixer repair, KitchenAid range repair, home chef appliances, Bay Area appliance repair, San Mateo KitchenAid repair, certified technicians'
+      content: 'KitchenAid appliance repair, KitchenAid range repair, KitchenAid refrigerator repair, KitchenAid dishwasher repair, home chef appliances, Bay Area appliance repair, San Mateo KitchenAid repair, certified technicians'
     },
     {
       property: 'og:title',
@@ -421,8 +421,8 @@ useHead({
         ],
         "serviceType": [
           "KitchenAid Appliance Repair",
-          "Stand Mixer Repair",
           "KitchenAid Range Repair",
+          "KitchenAid Dishwasher Repair",
           "Home Chef Appliance Service",
           "KitchenAid Refrigeration Repair"
         ],
