@@ -1,0 +1,159 @@
+- generic [ref=f10e4]:
+  - navigation [ref=f10e5]:
+    - generic [ref=f10e6]:
+      - link "Easy Fix Appliance Repair" [ref=f10e7] [cursor=pointer]:
+        - /url: /
+        - generic [ref=f10e13]:
+          - generic [ref=f10e14]:
+            - generic [ref=f10e15]: Easy
+            - generic [ref=f10e16]: Fix
+          - generic [ref=f10e17]: Appliance Repair
+      - button [ref=f10e18] [cursor=pointer]
+  - banner [ref=f10e21]:
+    - generic [ref=f10e26]:
+      - generic [ref=f10e27]: Expert Insights & Tips
+      - heading "Appliance Care Blog & Resources" [level=1] [ref=f10e31]:
+        - text: Appliance Care
+        - generic [ref=f10e32]: Blog & Resources
+      - paragraph [ref=f10e33]:
+        - text: Expert tips, maintenance guides, and industry insights to help you get the most out of your
+        - strong [ref=f10e34]: luxury appliances
+        - text: . Learn from Bay Area's trusted repair specialists.
+  - generic [ref=f10e36]:
+    - generic [ref=f10e37]:
+      - heading "Latest Articles" [level=2] [ref=f10e38]
+      - paragraph [ref=f10e39]: Stay informed with expert advice from professional appliance technicians serving the Bay Area
+      - textbox "Search articles..." [ref=f10e42]
+      - generic [ref=f10e45]:
+        - button "All" [ref=f10e46] [cursor=pointer]
+        - button "Technology" [ref=f10e47] [cursor=pointer]
+        - button "Maintenance" [ref=f10e48] [cursor=pointer]
+        - button "Energy Savings" [ref=f10e49] [cursor=pointer]
+        - button "Troubleshooting" [ref=f10e50] [cursor=pointer]
+        - button "Seasonal Care" [ref=f10e51] [cursor=pointer]
+        - button "Repair Tips" [ref=f10e52] [cursor=pointer]
+    - paragraph [ref=f10e55]: Loading articles...
+  - generic [ref=f10e58]:
+    - heading "Stay Updated with Expert Tips" [level=2] [ref=f10e59]
+    - paragraph [ref=f10e60]: Get the latest appliance maintenance tips and industry insights delivered to your inbox
+    - generic [ref=f10e61]:
+      - textbox "Enter your email" [ref=f10e62]
+      - button "Subscribe" [ref=f10e63] [cursor=pointer]
+  - generic [ref=f10e64]:
+    - heading "Contact us" [level=5] [ref=f10e65]
+    - button "Close menu" [ref=f10e69] [cursor=pointer]
+    - generic [ref=f10e73]:
+      - generic [ref=f10e74]:
+        - generic [ref=f10e75]: Name
+        - textbox "Name" [ref=f10e76]:
+          - /placeholder: John Doe
+        - text: Name is required
+      - generic [ref=f10e77]:
+        - generic [ref=f10e78]: Your email
+        - textbox "Your email" [ref=f10e79]:
+          - /placeholder: name@company.com
+        - text: Please enter a valid email
+      - generic [ref=f10e80]:
+        - generic [ref=f10e81]: Phone number
+        - textbox "Phone number" [ref=f10e82]:
+          - /placeholder: "+123456789"
+        - text: Please enter a valid phone number
+      - generic [ref=f10e83]:
+        - generic [ref=f10e84]: Subject
+        - textbox "Subject" [ref=f10e85]:
+          - /placeholder: Let us know how we can help you
+        - text: Subject is required
+      - generic [ref=f10e86]:
+        - generic [ref=f10e87]: Your message
+        - textbox "Your message" [ref=f10e88]:
+          - /placeholder: Your message...
+        - text: Message is required
+      - generic [ref=f10e89]:
+        - checkbox "By clicking this box, you agree to receive SMS communications from Easy Fix Appliance you can reply STOP to opt-out at any time." [ref=f10e90]
+        - text: By clicking this box, you agree to receive SMS communications from Easy Fix Appliance you can reply STOP to opt-out at any time.
+      - generic [ref=f10e92]:
+        - text: By submitting this form, you agree to our
+        - button "View Privacy Policy" [ref=f10e93] [cursor=pointer]: Privacy Policy
+      - button "Send message" [disabled] [ref=f10e94]
+    - paragraph [ref=f10e95]:
+      - link "care@easyfixappliance.com" [ref=f10e96] [cursor=pointer]:
+        - /url: mailto:care@easyfixappliance.com
+    - paragraph [ref=f10e97]:
+      - link "(415) 941-4144" [ref=f10e98] [cursor=pointer]:
+        - /url: tel:4159414144
+  - contentinfo [ref=f10e99]:
+    - generic [ref=f10e100]:
+      - generic [ref=f10e101]:
+        - generic [ref=f10e102]:
+          - generic [ref=f10e108]:
+            - generic [ref=f10e109]:
+              - generic [ref=f10e110]: Easy
+              - generic [ref=f10e111]: Fix
+            - text: Appliance Repair
+          - paragraph [ref=f10e112]: Your trusted partner for luxury appliance repair in the San Francisco Bay Area. We specialize in Sub-Zero, Wolf, Viking, Thermador, and other premium brands with certified technicians and genuine OEM parts.
+          - generic [ref=f10e113]:
+            - link "(415) 941-4144" [ref=f10e117] [cursor=pointer]:
+              - /url: tel:4159414144
+            - link "care@easyfixappliance.com" [ref=f10e122] [cursor=pointer]:
+              - /url: mailto:care@easyfixappliance.com
+            - generic [ref=f10e123]: San Francisco Bay Area
+        - generic [ref=f10e127]:
+          - heading "Quick Links" [level=3] [ref=f10e128]
+          - list [ref=f10e129]:
+            - listitem [ref=f10e130]:
+              - link "Home" [ref=f10e131] [cursor=pointer]:
+                - /url: /
+            - listitem [ref=f10e132]:
+              - link "Services" [ref=f10e133] [cursor=pointer]:
+                - /url: /services
+            - listitem [ref=f10e134]:
+              - link "Appliances" [ref=f10e135] [cursor=pointer]:
+                - /url: /#services
+            - listitem [ref=f10e136]:
+              - link "Contact Us" [ref=f10e137] [cursor=pointer]:
+                - /url: /contact-us
+            - listitem [ref=f10e138]:
+              - link "Online Booking" [ref=f10e139] [cursor=pointer]:
+                - /url: /booking
+            - listitem [ref=f10e140]:
+              - link "Careers" [ref=f10e141] [cursor=pointer]:
+                - /url: /careers
+        - generic [ref=f10e142]:
+          - heading "Resources" [level=3] [ref=f10e143]
+          - list [ref=f10e144]:
+            - listitem [ref=f10e145]:
+              - link "Blogs" [ref=f10e146] [cursor=pointer]:
+                - /url: /blogs
+            - listitem [ref=f10e147]:
+              - link "FAQ" [ref=f10e148] [cursor=pointer]:
+                - /url: /faq
+            - listitem [ref=f10e149]:
+              - link "Service Areas" [ref=f10e150] [cursor=pointer]:
+                - /url: /areas
+            - listitem [ref=f10e151]:
+              - button "Privacy Policy" [ref=f10e152] [cursor=pointer]
+            - listitem [ref=f10e153]:
+              - link "Sitemap" [ref=f10e154] [cursor=pointer]:
+                - /url: /sitemap.xml
+      - generic [ref=f10e156]:
+        - generic [ref=f10e157]:
+          - heading "Business Hours" [level=4] [ref=f10e158]
+          - generic [ref=f10e161]:
+            - paragraph [ref=f10e162]: "Monday - Friday: 8:00 AM - 8:00 PM"
+            - paragraph [ref=f10e163]: Same-Day & After-Hours Service
+        - generic [ref=f10e164]:
+          - heading "Why Choose Us" [level=4] [ref=f10e165]
+          - generic [ref=f10e168]:
+            - paragraph [ref=f10e169]: ✓ Certified Technicians
+            - paragraph [ref=f10e170]: ✓ Genuine OEM Parts
+            - paragraph [ref=f10e171]: ✓ Same-Day Service Available
+      - generic [ref=f10e173]:
+        - generic [ref=f10e174]: © 2026 Easy Fix Appliance™. All Rights Reserved.
+        - generic [ref=f10e175]:
+          - generic [ref=f10e176]:
+            - link "Follow Easy Fix Appliance on Instagram" [ref=f10e177] [cursor=pointer]:
+              - /url: https://www.instagram.com/easyfixappliance/
+            - link "Follow Easy Fix Appliance on Facebook" [ref=f10e180] [cursor=pointer]:
+              - /url: https://www.facebook.com/profile.php?id=61570244923151
+          - generic [ref=f10e183]: Licensed & Insured
+          - generic [ref=f10e187]: Factory Certified

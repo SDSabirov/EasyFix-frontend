@@ -1,12 +1,7 @@
 /** @type {import('tailwindcss').Config} */
 export default {
   content: [
-    "./components/**/*.{js,vue,ts}",
-    "./layouts/**/*.vue",
-    "./pages/**/*.vue",
-    "./plugins/**/*.{js,ts}",
-    "./app.vue",
-    "./error.vue",
+    "./app/**/*.{js,vue,ts}",
     "./node_modules/flowbite/**/*.{js,ts}"
   ],
   theme: {
@@ -28,7 +23,7 @@ export default {
         
       },
       backgroundImage: {
-        'contact': "url('/assets/img/oven.png)",
+        'contact': "url('/assets/img/oven.webp')",
       },
       animation: {
         bounceSlow: 'bounce 2s infinite',

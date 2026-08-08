@@ -1,0 +1,320 @@
+- generic [active] [ref=f8e1]:
+  - generic [ref=f8e4]:
+    - navigation [ref=f8e5]:
+      - generic [ref=f8e6]:
+        - link "Easy Fix Appliance Repair" [ref=f8e7] [cursor=pointer]:
+          - /url: /
+          - generic [ref=f8e13]:
+            - generic [ref=f8e14]:
+              - generic [ref=f8e15]: Easy
+              - generic [ref=f8e16]: Fix
+            - generic [ref=f8e17]: Appliance Repair
+        - button [ref=f8e18] [cursor=pointer]
+    - banner [ref=f8e21]:
+      - img "Bay Area Map" [ref=f8e23]
+      - generic [ref=f8e28]:
+        - generic [ref=f8e29]: Bay Area Service Coverage
+        - heading "Professional Appliance Repair Across the Bay Area" [level=1] [ref=f8e33]:
+          - text: Professional Appliance Repair
+          - generic [ref=f8e34]: Across the Bay Area
+        - paragraph [ref=f8e35]:
+          - text: Serving
+          - strong [ref=f8e36]: 24 cities
+          - text: with fast, reliable appliance repair services. From
+          - strong [ref=f8e37]: San Francisco to Palo Alto
+          - text: ", we're your trusted local experts."
+        - generic [ref=f8e38]:
+          - 'link "Call Now: (415) 941-4144" [ref=f8e39] [cursor=pointer]':
+            - /url: tel:(415) 941-4144
+          - link "Schedule Online" [ref=f8e42] [cursor=pointer]:
+            - /url: /booking
+        - generic [ref=f8e45]:
+          - generic [ref=f8e46]:
+            - generic [ref=f8e47]: "24"
+            - generic [ref=f8e48]: Cities Served
+          - generic [ref=f8e49]:
+            - generic [ref=f8e50]: 15+
+            - generic [ref=f8e51]: Years Experience
+          - generic [ref=f8e52]:
+            - generic [ref=f8e53]: Same Day
+            - generic [ref=f8e54]: Fast Service
+          - generic [ref=f8e55]:
+            - generic [ref=f8e56]: 100%
+            - generic [ref=f8e57]: Satisfaction
+    - generic [ref=f8e61]:
+      - generic [ref=f8e62]:
+        - generic [ref=f8e63]: Our Service Locations
+        - heading "We Serve Your Neighborhood" [level=2] [ref=f8e67]
+        - paragraph [ref=f8e68]: Professional appliance repair services across the San Francisco Bay Area. Click on your city to learn more about our local services and get a free estimate.
+      - generic [ref=f8e70]:
+        - link [ref=f8e71] [cursor=pointer]:
+          - /url: /areas/atherton
+          - generic [ref=f8e77]:
+            - heading "Atherton" [level=3] [ref=f8e78]
+            - paragraph [ref=f8e79]: Professional Service
+        - link [ref=f8e82] [cursor=pointer]:
+          - /url: /areas/belmont
+          - generic [ref=f8e88]:
+            - heading "Belmont" [level=3] [ref=f8e89]
+            - paragraph [ref=f8e90]: Professional Service
+        - link [ref=f8e93] [cursor=pointer]:
+          - /url: /areas/burlingame
+          - generic [ref=f8e99]:
+            - heading "Burlingame" [level=3] [ref=f8e100]
+            - paragraph [ref=f8e101]: Professional Service
+        - link [ref=f8e104] [cursor=pointer]:
+          - /url: /areas/emerald_hills
+          - generic [ref=f8e110]:
+            - heading "Emerald Hills" [level=3] [ref=f8e111]
+            - paragraph [ref=f8e112]: Professional Service
+        - link [ref=f8e115] [cursor=pointer]:
+          - /url: /areas/foster_city
+          - generic [ref=f8e121]:
+            - heading "Foster City" [level=3] [ref=f8e122]
+            - paragraph [ref=f8e123]: Professional Service
+        - link [ref=f8e126] [cursor=pointer]:
+          - /url: /areas/half_moon_bay
+          - generic [ref=f8e132]:
+            - heading "Half Moon Bay" [level=3] [ref=f8e133]
+            - paragraph [ref=f8e134]: Professional Service
+        - link [ref=f8e137] [cursor=pointer]:
+          - /url: /areas/hillsborough
+          - generic [ref=f8e143]:
+            - heading "Hillsborough" [level=3] [ref=f8e144]
+            - paragraph [ref=f8e145]: Professional Service
+        - link [ref=f8e148] [cursor=pointer]:
+          - /url: /areas/los_altos
+          - generic [ref=f8e154]:
+            - heading "Los Altos" [level=3] [ref=f8e155]
+            - paragraph [ref=f8e156]: Professional Service
+        - link [ref=f8e159] [cursor=pointer]:
+          - /url: /areas/los_altos_hills
+          - generic [ref=f8e165]:
+            - heading "Los Altos Hills" [level=3] [ref=f8e166]
+            - paragraph [ref=f8e167]: Professional Service
+        - link [ref=f8e170] [cursor=pointer]:
+          - /url: /areas/los_gatos
+          - generic [ref=f8e176]:
+            - heading "Los Gatos" [level=3] [ref=f8e177]
+            - paragraph [ref=f8e178]: Professional Service
+        - link [ref=f8e181] [cursor=pointer]:
+          - /url: /areas/menlo_park
+          - generic [ref=f8e187]:
+            - heading "Menlo Park" [level=3] [ref=f8e188]
+            - paragraph [ref=f8e189]: Professional Service
+        - link [ref=f8e192] [cursor=pointer]:
+          - /url: /areas/millbrae
+          - generic [ref=f8e198]:
+            - heading "Millbrae" [level=3] [ref=f8e199]
+            - paragraph [ref=f8e200]: Professional Service
+        - link [ref=f8e203] [cursor=pointer]:
+          - /url: /areas/monte_sereno
+          - generic [ref=f8e209]:
+            - heading "Monte Sereno" [level=3] [ref=f8e210]
+            - paragraph [ref=f8e211]: Professional Service
+        - link [ref=f8e214] [cursor=pointer]:
+          - /url: /areas/mountain_view
+          - generic [ref=f8e220]:
+            - heading "Mountain View" [level=3] [ref=f8e221]
+            - paragraph [ref=f8e222]: Professional Service
+        - link [ref=f8e225] [cursor=pointer]:
+          - /url: /areas/pacifica
+          - generic [ref=f8e231]:
+            - heading "Pacifica" [level=3] [ref=f8e232]
+            - paragraph [ref=f8e233]: Professional Service
+        - link [ref=f8e236] [cursor=pointer]:
+          - /url: /areas/palo_alto
+          - generic [ref=f8e242]:
+            - heading "Palo Alto" [level=3] [ref=f8e243]
+            - paragraph [ref=f8e244]: Professional Service
+        - link [ref=f8e247] [cursor=pointer]:
+          - /url: /areas/portola_valley
+          - generic [ref=f8e253]:
+            - heading "Portola Valley" [level=3] [ref=f8e254]
+            - paragraph [ref=f8e255]: Professional Service
+        - link [ref=f8e258] [cursor=pointer]:
+          - /url: /areas/redwood_city
+          - generic [ref=f8e264]:
+            - heading "Redwood City" [level=3] [ref=f8e265]
+            - paragraph [ref=f8e266]: Professional Service
+        - link [ref=f8e269] [cursor=pointer]:
+          - /url: /areas/san_carlos
+          - generic [ref=f8e275]:
+            - heading "San Carlos" [level=3] [ref=f8e276]
+            - paragraph [ref=f8e277]: Professional Service
+        - link [ref=f8e280] [cursor=pointer]:
+          - /url: /areas/san_francisco
+          - generic [ref=f8e286]:
+            - heading "San Francisco" [level=3] [ref=f8e287]
+            - paragraph [ref=f8e288]: Professional Service
+        - link [ref=f8e291] [cursor=pointer]:
+          - /url: /areas/san_mateo
+          - generic [ref=f8e297]:
+            - heading "San Mateo" [level=3] [ref=f8e298]
+            - paragraph [ref=f8e299]: Professional Service
+        - link [ref=f8e302] [cursor=pointer]:
+          - /url: /areas/saratoga
+          - generic [ref=f8e308]:
+            - heading "Saratoga" [level=3] [ref=f8e309]
+            - paragraph [ref=f8e310]: Professional Service
+        - link [ref=f8e313] [cursor=pointer]:
+          - /url: /areas/sunnyvale
+          - generic [ref=f8e319]:
+            - heading "Sunnyvale" [level=3] [ref=f8e320]
+            - paragraph [ref=f8e321]: Professional Service
+        - link [ref=f8e324] [cursor=pointer]:
+          - /url: /areas/woodside
+          - generic [ref=f8e330]:
+            - heading "Woodside" [level=3] [ref=f8e331]
+            - paragraph [ref=f8e332]: Professional Service
+      - generic [ref=f8e335]:
+        - generic [ref=f8e336]:
+          - heading "Find Your Zip Code" [level=3] [ref=f8e337]
+          - paragraph [ref=f8e338]: We provide professional appliance repair services in these zip code areas across the Bay Area
+        - generic [ref=f8e339]:
+          - generic [ref=f8e340]: "94020"
+          - generic [ref=f8e341]: "94022"
+          - generic [ref=f8e342]: "94028"
+          - generic [ref=f8e343]: "94301"
+          - generic [ref=f8e344]: "94302"
+          - generic [ref=f8e345]: "94303"
+          - generic [ref=f8e346]: "94304"
+          - generic [ref=f8e347]: "94306"
+          - generic [ref=f8e348]: "95033"
+          - generic [ref=f8e349]: "94010"
+          - generic [ref=f8e350]: "94401"
+          - generic [ref=f8e351]: "94402"
+          - generic [ref=f8e352]: "94403"
+          - generic [ref=f8e353]: "94404"
+          - generic [ref=f8e354]: "94497"
+          - generic [ref=f8e355]: "94025"
+          - generic [ref=f8e356]: "94026"
+          - generic [ref=f8e357]: "94027"
+          - generic [ref=f8e358]: "94061"
+          - generic [ref=f8e359]: "94062"
+          - generic [ref=f8e360]: "94062"
+          - generic [ref=f8e361]: "94027"
+          - generic [ref=f8e362]: "94023"
+          - generic [ref=f8e363]: "94024"
+          - generic [ref=f8e364]: "95030"
+          - generic [ref=f8e365]: "95032"
+          - generic [ref=f8e366]: "944011"
+          - generic [ref=f8e367]: "95030"
+          - generic [ref=f8e368]: "94019"
+          - generic [ref=f8e369]: "94063"
+          - generic [ref=f8e370]: "94064"
+          - generic [ref=f8e371]: "94065"
+          - generic [ref=f8e372]: "94039"
+          - generic [ref=f8e373]: "94040"
+          - generic [ref=f8e374]: "94041"
+          - generic [ref=f8e375]: "94042"
+          - generic [ref=f8e376]: "94043"
+          - generic [ref=f8e377]: "94085"
+          - generic [ref=f8e378]: "94086"
+          - generic [ref=f8e379]: "94087"
+          - generic [ref=f8e380]: "94089"
+          - generic [ref=f8e381]: "95070"
+          - generic [ref=f8e382]: "95071"
+          - generic [ref=f8e383]: "94002"
+          - generic [ref=f8e384]: "94070"
+          - generic [ref=f8e385]: "94121"
+          - generic [ref=f8e386]: "94122"
+          - generic [ref=f8e387]: "94123"
+          - generic [ref=f8e388]: "94118"
+          - generic [ref=f8e389]: "94115"
+          - generic [ref=f8e390]: "94158"
+          - generic [ref=f8e391]: "94114"
+          - generic [ref=f8e392]: "94117"
+          - generic [ref=f8e393]: "94110"
+          - generic [ref=f8e394]: "941131"
+          - generic [ref=f8e395]: "94127"
+    - generic [ref=f8e398]:
+      - heading "Ready to Get Your Appliances Fixed?" [level=3] [ref=f8e399]
+      - paragraph [ref=f8e400]: Don't see your city listed? We serve the entire Bay Area! Call us today to confirm service in your location and get a free estimate.
+      - generic [ref=f8e401]:
+        - link "Call for Service Area Confirmation" [ref=f8e402] [cursor=pointer]:
+          - /url: tel:(415) 941-4144
+        - link "Get Free Estimate" [ref=f8e405] [cursor=pointer]:
+          - /url: /contact-us
+    - contentinfo [ref=f8e408]:
+      - generic [ref=f8e409]:
+        - generic [ref=f8e410]:
+          - generic [ref=f8e411]:
+            - generic [ref=f8e417]:
+              - generic [ref=f8e418]:
+                - generic [ref=f8e419]: Easy
+                - generic [ref=f8e420]: Fix
+              - text: Appliance Repair
+            - paragraph [ref=f8e421]: Your trusted partner for luxury appliance repair in the San Francisco Bay Area. We specialize in Sub-Zero, Wolf, Viking, Thermador, and other premium brands with certified technicians and genuine OEM parts.
+            - generic [ref=f8e422]:
+              - link "(415) 941-4144" [ref=f8e426] [cursor=pointer]:
+                - /url: tel:4159414144
+              - link "care@easyfixappliance.com" [ref=f8e431] [cursor=pointer]:
+                - /url: mailto:care@easyfixappliance.com
+              - generic [ref=f8e432]: San Francisco Bay Area
+          - generic [ref=f8e436]:
+            - heading "Quick Links" [level=3] [ref=f8e437]
+            - list [ref=f8e438]:
+              - listitem [ref=f8e439]:
+                - link "Home" [ref=f8e440] [cursor=pointer]:
+                  - /url: /
+              - listitem [ref=f8e441]:
+                - link "Services" [ref=f8e442] [cursor=pointer]:
+                  - /url: /services
+              - listitem [ref=f8e443]:
+                - link "Appliances" [ref=f8e444] [cursor=pointer]:
+                  - /url: /#services
+              - listitem [ref=f8e445]:
+                - link "Contact Us" [ref=f8e446] [cursor=pointer]:
+                  - /url: /contact-us
+              - listitem [ref=f8e447]:
+                - link "Online Booking" [ref=f8e448] [cursor=pointer]:
+                  - /url: /booking
+              - listitem [ref=f8e449]:
+                - link "Careers" [ref=f8e450] [cursor=pointer]:
+                  - /url: /careers
+          - generic [ref=f8e451]:
+            - heading "Resources" [level=3] [ref=f8e452]
+            - list [ref=f8e453]:
+              - listitem [ref=f8e454]:
+                - link "Blogs" [ref=f8e455] [cursor=pointer]:
+                  - /url: /blogs
+              - listitem [ref=f8e456]:
+                - link "FAQ" [ref=f8e457] [cursor=pointer]:
+                  - /url: /faq
+              - listitem [ref=f8e458]:
+                - link "Service Areas" [ref=f8e459] [cursor=pointer]:
+                  - /url: /areas
+              - listitem [ref=f8e460]:
+                - button "Privacy Policy" [ref=f8e461] [cursor=pointer]
+              - listitem [ref=f8e462]:
+                - link "Sitemap" [ref=f8e463] [cursor=pointer]:
+                  - /url: /sitemap.xml
+        - generic [ref=f8e465]:
+          - generic [ref=f8e466]:
+            - heading "Business Hours" [level=4] [ref=f8e467]
+            - generic [ref=f8e470]:
+              - paragraph [ref=f8e471]: "Monday - Friday: 8:00 AM - 8:00 PM"
+              - paragraph [ref=f8e472]: Same-Day & After-Hours Service
+          - generic [ref=f8e473]:
+            - heading "Why Choose Us" [level=4] [ref=f8e474]
+            - generic [ref=f8e477]:
+              - paragraph [ref=f8e478]: ✓ Certified Technicians
+              - paragraph [ref=f8e479]: ✓ Genuine OEM Parts
+              - paragraph [ref=f8e480]: ✓ Same-Day Service Available
+        - generic [ref=f8e482]:
+          - generic [ref=f8e483]: © 2026 Easy Fix Appliance™. All Rights Reserved.
+          - generic [ref=f8e484]:
+            - generic [ref=f8e485]:
+              - link "Follow Easy Fix Appliance on Instagram" [ref=f8e486] [cursor=pointer]:
+                - /url: https://www.instagram.com/easyfixappliance/
+              - link "Follow Easy Fix Appliance on Facebook" [ref=f8e489] [cursor=pointer]:
+                - /url: https://www.facebook.com/profile.php?id=61570244923151
+            - generic [ref=f8e492]: Licensed & Insured
+            - generic [ref=f8e496]: Factory Certified
+  - generic [ref=f8e500]:
+    - button "Toggle Nuxt DevTools" [ref=f8e501] [cursor=pointer]
+    - generic "Page load time" [ref=f8e505]:
+      - generic [ref=f8e506]: "65"
+      - generic [ref=f8e507]: ms
+    - button "Toggle Component Inspector" [ref=f8e509] [cursor=pointer]

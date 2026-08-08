@@ -1,0 +1,103 @@
+- generic [active] [ref=f4e1]:
+  - generic [ref=f4e4]:
+    - navigation [ref=f4e5]:
+      - generic [ref=f4e6]:
+        - link "Easy Fix Appliance Repair" [ref=f4e7] [cursor=pointer]:
+          - /url: /
+          - generic [ref=f4e13]:
+            - generic [ref=f4e14]:
+              - generic [ref=f4e15]: Easy
+              - generic [ref=f4e16]: Fix
+            - generic [ref=f4e17]: Appliance Repair
+        - button [ref=f4e18] [cursor=pointer]
+    - generic [ref=f4e21]:
+      - img "Hero image" [ref=f4e23]
+      - iframe [ref=f4e25]:
+        - generic [ref=f5e3]:
+          - progressbar [ref=f5e10]
+          - link "Powered by workiz" [ref=f5e16] [cursor=pointer]:
+            - /url: https://workiz.com?utm_source=bookingv2
+            - generic [ref=f5e17]: Powered by
+            - img "workiz" [ref=f5e18]
+      - contentinfo [ref=f4e26]:
+        - generic [ref=f4e27]:
+          - generic [ref=f4e28]:
+            - generic [ref=f4e29]:
+              - generic [ref=f4e35]:
+                - generic [ref=f4e36]:
+                  - generic [ref=f4e37]: Easy
+                  - generic [ref=f4e38]: Fix
+                - text: Appliance Repair
+              - paragraph [ref=f4e39]: Your trusted partner for luxury appliance repair in the San Francisco Bay Area. We specialize in Sub-Zero, Wolf, Viking, Thermador, and other premium brands with certified technicians and genuine OEM parts.
+              - generic [ref=f4e40]:
+                - link "(415) 941-4144" [ref=f4e44] [cursor=pointer]:
+                  - /url: tel:4159414144
+                - link "care@easyfixappliance.com" [ref=f4e49] [cursor=pointer]:
+                  - /url: mailto:care@easyfixappliance.com
+                - generic [ref=f4e50]: San Francisco Bay Area
+            - generic [ref=f4e54]:
+              - heading "Quick Links" [level=3] [ref=f4e55]
+              - list [ref=f4e56]:
+                - listitem [ref=f4e57]:
+                  - link "Home" [ref=f4e58] [cursor=pointer]:
+                    - /url: /
+                - listitem [ref=f4e59]:
+                  - link "Services" [ref=f4e60] [cursor=pointer]:
+                    - /url: /services
+                - listitem [ref=f4e61]:
+                  - link "Appliances" [ref=f4e62] [cursor=pointer]:
+                    - /url: /#services
+                - listitem [ref=f4e63]:
+                  - link "Contact Us" [ref=f4e64] [cursor=pointer]:
+                    - /url: /contact-us
+                - listitem [ref=f4e65]:
+                  - link "Online Booking" [ref=f4e66] [cursor=pointer]:
+                    - /url: /booking
+                - listitem [ref=f4e67]:
+                  - link "Careers" [ref=f4e68] [cursor=pointer]:
+                    - /url: /careers
+            - generic [ref=f4e69]:
+              - heading "Resources" [level=3] [ref=f4e70]
+              - list [ref=f4e71]:
+                - listitem [ref=f4e72]:
+                  - link "Blogs" [ref=f4e73] [cursor=pointer]:
+                    - /url: /blogs
+                - listitem [ref=f4e74]:
+                  - link "FAQ" [ref=f4e75] [cursor=pointer]:
+                    - /url: /faq
+                - listitem [ref=f4e76]:
+                  - link "Service Areas" [ref=f4e77] [cursor=pointer]:
+                    - /url: /areas
+                - listitem [ref=f4e78]:
+                  - button "Privacy Policy" [ref=f4e79] [cursor=pointer]
+                - listitem [ref=f4e80]:
+                  - link "Sitemap" [ref=f4e81] [cursor=pointer]:
+                    - /url: /sitemap.xml
+          - generic [ref=f4e83]:
+            - generic [ref=f4e84]:
+              - heading "Business Hours" [level=4] [ref=f4e85]
+              - generic [ref=f4e88]:
+                - paragraph [ref=f4e89]: "Monday - Friday: 8:00 AM - 8:00 PM"
+                - paragraph [ref=f4e90]: Same-Day & After-Hours Service
+            - generic [ref=f4e91]:
+              - heading "Why Choose Us" [level=4] [ref=f4e92]
+              - generic [ref=f4e95]:
+                - paragraph [ref=f4e96]: ✓ Certified Technicians
+                - paragraph [ref=f4e97]: ✓ Genuine OEM Parts
+                - paragraph [ref=f4e98]: ✓ Same-Day Service Available
+          - generic [ref=f4e100]:
+            - generic [ref=f4e101]: © 2026 Easy Fix Appliance™. All Rights Reserved.
+            - generic [ref=f4e102]:
+              - generic [ref=f4e103]:
+                - link "Follow Easy Fix Appliance on Instagram" [ref=f4e104] [cursor=pointer]:
+                  - /url: https://www.instagram.com/easyfixappliance/
+                - link "Follow Easy Fix Appliance on Facebook" [ref=f4e107] [cursor=pointer]:
+                  - /url: https://www.facebook.com/profile.php?id=61570244923151
+              - generic [ref=f4e110]: Licensed & Insured
+              - generic [ref=f4e114]: Factory Certified
+  - generic [ref=f4e118]:
+    - button "Toggle Nuxt DevTools" [ref=f4e119] [cursor=pointer]
+    - generic "Page load time" [ref=f4e123]:
+      - generic [ref=f4e124]: "37"
+      - generic [ref=f4e125]: ms
+    - button "Toggle Component Inspector" [ref=f4e127] [cursor=pointer]

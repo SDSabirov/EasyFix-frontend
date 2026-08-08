@@ -1,0 +1,148 @@
+- generic [ref=f12e4]:
+  - navigation [ref=f12e5]:
+    - generic [ref=f12e6]:
+      - link "Easy Fix Appliance Repair" [ref=f12e7] [cursor=pointer]:
+        - /url: /
+        - generic [ref=f12e13]:
+          - generic [ref=f12e14]:
+            - generic [ref=f12e15]: Easy
+            - generic [ref=f12e16]: Fix
+          - generic [ref=f12e17]: Appliance Repair
+      - button [ref=f12e18] [cursor=pointer]
+  - banner [ref=f12e21]:
+    - generic [ref=f12e26]:
+      - generic [ref=f12e27]: Get Your Questions Answered
+      - heading "Frequently Asked Questions" [level=1] [ref=f12e31]:
+        - text: Frequently Asked
+        - generic [ref=f12e32]: Questions
+      - paragraph [ref=f12e33]:
+        - text: Find answers to common questions about our
+        - strong [ref=f12e34]: appliance repair services
+        - text: in the Bay Area. Can't find what you're looking for?
+        - strong [ref=f12e35]: Call us directly
+        - text: for personalized assistance.
+      - generic [ref=f12e36]:
+        - 'link "Call Now: (415) 941-4144" [ref=f12e37] [cursor=pointer]':
+          - /url: tel:4159414144
+        - link "Schedule Service Online" [ref=f12e40] [cursor=pointer]:
+          - /url: /booking
+  - generic [ref=f12e44]:
+    - generic [ref=f12e45]:
+      - heading "Browse by Category" [level=2] [ref=f12e46]
+      - generic [ref=f12e47]:
+        - button "General Questions" [ref=f12e48] [cursor=pointer]
+        - button "Service & Repairs" [ref=f12e51] [cursor=pointer]
+        - button "Brand Specific" [ref=f12e54] [cursor=pointer]
+        - button "Troubleshooting" [ref=f12e57] [cursor=pointer]
+    - generic [ref=f12e60]:
+      - button [ref=f12e62] [cursor=pointer]:
+        - heading "What types of appliances do you repair?" [level=3] [ref=f12e67]
+      - button [ref=f12e71] [cursor=pointer]:
+        - heading "What areas do you serve in the Bay Area?" [level=3] [ref=f12e76]
+      - button [ref=f12e80] [cursor=pointer]:
+        - heading "How quickly can you schedule a repair appointment?" [level=3] [ref=f12e85]
+      - button [ref=f12e89] [cursor=pointer]:
+        - heading "What is your warranty policy on repairs?" [level=3] [ref=f12e94]
+      - button [ref=f12e98] [cursor=pointer]:
+        - heading "Are your technicians certified and insured?" [level=3] [ref=f12e103]
+      - button [ref=f12e107] [cursor=pointer]:
+        - heading "What payment methods do you accept?" [level=3] [ref=f12e112]
+      - button [ref=f12e116] [cursor=pointer]:
+        - heading "How do I know if my appliance is worth repairing vs. replacing?" [level=3] [ref=f12e121]
+  - generic [ref=f12e126]:
+    - heading "Still Have Questions?" [level=2] [ref=f12e127]
+    - paragraph [ref=f12e128]: Our friendly customer service team is standing by to help you with any questions about appliance repairs, scheduling, or our services.
+    - generic [ref=f12e129]:
+      - generic [ref=f12e130]:
+        - heading "Call Us" [level=3] [ref=f12e134]
+        - paragraph [ref=f12e135]: Speak directly with our experts
+        - paragraph [ref=f12e136]: (415) 941-4144
+      - generic [ref=f12e137]:
+        - heading "Book Online" [level=3] [ref=f12e141]
+        - paragraph [ref=f12e142]: Schedule convenient service
+        - paragraph [ref=f12e143]: Same-Day Service
+      - generic [ref=f12e144]:
+        - heading "Same-Day Service" [level=3] [ref=f12e148]
+        - paragraph [ref=f12e149]: Emergency repairs available
+        - paragraph [ref=f12e150]: Fast Response
+    - generic [ref=f12e151]:
+      - link "Call for Immediate Help" [ref=f12e152] [cursor=pointer]:
+        - /url: tel:4159414144
+      - link "Send Us a Message" [ref=f12e155] [cursor=pointer]:
+        - /url: /contact-us
+  - contentinfo [ref=f12e158]:
+    - generic [ref=f12e159]:
+      - generic [ref=f12e160]:
+        - generic [ref=f12e161]:
+          - generic [ref=f12e167]:
+            - generic [ref=f12e168]:
+              - generic [ref=f12e169]: Easy
+              - generic [ref=f12e170]: Fix
+            - text: Appliance Repair
+          - paragraph [ref=f12e171]: Your trusted partner for luxury appliance repair in the San Francisco Bay Area. We specialize in Sub-Zero, Wolf, Viking, Thermador, and other premium brands with certified technicians and genuine OEM parts.
+          - generic [ref=f12e172]:
+            - link "(415) 941-4144" [ref=f12e176] [cursor=pointer]:
+              - /url: tel:4159414144
+            - link "care@easyfixappliance.com" [ref=f12e181] [cursor=pointer]:
+              - /url: mailto:care@easyfixappliance.com
+            - generic [ref=f12e182]: San Francisco Bay Area
+        - generic [ref=f12e186]:
+          - heading "Quick Links" [level=3] [ref=f12e187]
+          - list [ref=f12e188]:
+            - listitem [ref=f12e189]:
+              - link "Home" [ref=f12e190] [cursor=pointer]:
+                - /url: /
+            - listitem [ref=f12e191]:
+              - link "Services" [ref=f12e192] [cursor=pointer]:
+                - /url: /services
+            - listitem [ref=f12e193]:
+              - link "Appliances" [ref=f12e194] [cursor=pointer]:
+                - /url: /#services
+            - listitem [ref=f12e195]:
+              - link "Contact Us" [ref=f12e196] [cursor=pointer]:
+                - /url: /contact-us
+            - listitem [ref=f12e197]:
+              - link "Online Booking" [ref=f12e198] [cursor=pointer]:
+                - /url: /booking
+            - listitem [ref=f12e199]:
+              - link "Careers" [ref=f12e200] [cursor=pointer]:
+                - /url: /careers
+        - generic [ref=f12e201]:
+          - heading "Resources" [level=3] [ref=f12e202]
+          - list [ref=f12e203]:
+            - listitem [ref=f12e204]:
+              - link "Blogs" [ref=f12e205] [cursor=pointer]:
+                - /url: /blogs
+            - listitem [ref=f12e206]:
+              - link "FAQ" [ref=f12e207] [cursor=pointer]:
+                - /url: /faq
+            - listitem [ref=f12e208]:
+              - link "Service Areas" [ref=f12e209] [cursor=pointer]:
+                - /url: /areas
+            - listitem [ref=f12e210]:
+              - button "Privacy Policy" [ref=f12e211] [cursor=pointer]
+            - listitem [ref=f12e212]:
+              - link "Sitemap" [ref=f12e213] [cursor=pointer]:
+                - /url: /sitemap.xml
+      - generic [ref=f12e215]:
+        - generic [ref=f12e216]:
+          - heading "Business Hours" [level=4] [ref=f12e217]
+          - generic [ref=f12e220]:
+            - paragraph [ref=f12e221]: "Monday - Friday: 8:00 AM - 8:00 PM"
+            - paragraph [ref=f12e222]: Same-Day & After-Hours Service
+        - generic [ref=f12e223]:
+          - heading "Why Choose Us" [level=4] [ref=f12e224]
+          - generic [ref=f12e227]:
+            - paragraph [ref=f12e228]: ✓ Certified Technicians
+            - paragraph [ref=f12e229]: ✓ Genuine OEM Parts
+            - paragraph [ref=f12e230]: ✓ Same-Day Service Available
+      - generic [ref=f12e232]:
+        - generic [ref=f12e233]: © 2026 Easy Fix Appliance™. All Rights Reserved.
+        - generic [ref=f12e234]:
+          - generic [ref=f12e235]:
+            - link "Follow Easy Fix Appliance on Instagram" [ref=f12e236] [cursor=pointer]:
+              - /url: https://www.instagram.com/easyfixappliance/
+            - link "Follow Easy Fix Appliance on Facebook" [ref=f12e239] [cursor=pointer]:
+              - /url: https://www.facebook.com/profile.php?id=61570244923151
+          - generic [ref=f12e242]: Licensed & Insured
+          - generic [ref=f12e246]: Factory Certified
