@@ -42,6 +42,7 @@ export default defineNuxtConfig({
     families: {
       Montserrat: [400, 500, 600, 700],
       Roboto: [400, 500, 600, 700],
+      "Cormorant Garamond": [500, 600],
     },
     display: "swap",
     preload: true,

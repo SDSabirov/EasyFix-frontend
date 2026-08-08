@@ -1,132 +1,89 @@
 <template>
-  <section class="bg-white py-16 lg:py-24">
+  <section class="relative bg-white py-20 lg:py-28 overflow-hidden">
     <div class="container mx-auto px-4 max-w-screen-xl">
-      <!-- Section Header -->
-      <div class="text-center mb-12">
-        <div class="inline-flex items-center px-4 py-2 bg-primary/10 rounded-full mb-6">
-          <svg class="w-5 h-5 text-primary mr-2" fill="currentColor" viewBox="0 0 20 20">
-            <path d="M3 4a1 1 0 011-1h12a1 1 0 011 1v2a1 1 0 01-1 1H4a1 1 0 01-1-1V4zM3 10a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H4a1 1 0 01-1-1v-6zM14 9a1 1 0 00-1 1v6a1 1 0 001 1h2a1 1 0 001-1v-6a1 1 0 00-1-1h-2z"/>
-          </svg>
-          <span class="text-primary font-semibold text-sm">Expert Repairs</span>
+      <!-- Header -->
+      <div class="relative mb-12 lg:mb-16">
+        <span class="ghost-word text-[7rem] lg:text-[12rem] -top-6 lg:-top-10 -right-4" aria-hidden="true">Repairs</span>
+        <div class="relative z-10 max-w-3xl" v-reveal>
+          <span class="inline-flex items-center gap-2.5 rounded-full border border-primary/15 bg-cream px-4 py-2 font-montserrat text-[10px] font-semibold uppercase tracking-[0.25em] text-primary mb-6">
+            <span class="w-1.5 h-1.5 rounded-full bg-brass animate-pulse" aria-hidden="true"></span>
+            Expert Repairs
+          </span>
+          <h2 class="font-montserrat font-bold tracking-[-0.02em] text-3xl sm:text-5xl text-primary leading-[1.05] mb-6">
+            Professional Appliance
+            <em class="font-display font-semibold italic text-brass-dark">Repair Services</em>
+          </h2>
+          <p class="text-gray-600 leading-relaxed">
+            From refrigeration to cooking appliances, our certified technicians provide comprehensive repair
+            services for all major appliance types in your Bay Area home.
+          </p>
         </div>
-        <h2 class="text-2xl sm:text-4xl font-bold text-gray-900 mb-6">
-          Professional Appliance Repair Services
-        </h2>
-        <p class="text-base sm:text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
-          From refrigeration to cooking appliances, our certified technicians provide comprehensive repair services for all major appliance types in your Bay Area home.
-        </p>
       </div>
 
       <!-- ========== DESKTOP: 3-Column Grid ========== -->
-      <div class="hidden md:grid grid-cols-1 lg:grid-cols-3 gap-8 mb-16">
+      <div class="hidden md:grid grid-cols-1 lg:grid-cols-3 gap-6 mb-16 lg:mb-20">
         <div
-          v-for="category in categories"
+          v-for="(category, index) in categories"
           :key="category.id"
-          :class="[
-            'rounded-3xl p-8 border transition-all duration-300 hover:shadow-xl',
-            categoryStyles[category.color].bg,
-            categoryStyles[category.color].border
-          ]"
+          class="group/card relative rounded-[1.75rem] p-8 lg:p-9 transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl hover:shadow-ink/10"
+          :class="tints[category.id]"
+          v-reveal="index * 120"
         >
-          <!-- Category Header -->
-          <div class="flex items-center mb-6">
-            <div :class="['w-14 h-14 rounded-2xl flex items-center justify-center mr-4', categoryStyles[category.color].icon]">
-              <component :is="getCategoryIcon(category.id)" class="w-7 h-7 text-white" />
-            </div>
-            <div>
-              <h3 class="text-xl font-bold text-gray-900">{{ category.title }}</h3>
-              <p :class="['text-sm font-medium', categoryStyles[category.color].subtitle]">{{ category.subtitle }}</p>
-            </div>
+          <!-- Category header -->
+          <div class="flex items-start justify-between mb-6">
+            <span class="font-display font-semibold text-6xl text-primary/10 leading-none transition-colors duration-500 group-hover/card:text-brass/30" aria-hidden="true">0{{ index + 1 }}</span>
+            <span class="flex items-center justify-center w-12 h-12 rounded-full bg-white shadow-sm">
+              <component :is="getCategoryIcon(category.id)" class="w-5 h-5 text-brass-dark" aria-hidden="true" />
+            </span>
           </div>
+          <h3 class="font-montserrat font-bold tracking-[-0.01em] text-2xl text-primary mb-1">{{ category.title }}</h3>
+          <p class="font-montserrat text-[11px] font-medium uppercase tracking-[0.2em] text-gray-500 mb-7">{{ category.subtitle }}</p>
 
-          <!-- Service Items -->
-          <div class="grid grid-cols-2 gap-3 mb-6">
+          <!-- Service chips -->
+          <div class="flex flex-wrap gap-2.5 mb-8">
             <NuxtLink
               v-for="service in category.services"
               :key="service.name"
               :to="service.link"
-              class="group bg-white/70 backdrop-blur-sm rounded-xl p-4 hover:bg-white hover:shadow-md transition-all duration-300"
+              class="inline-flex items-center gap-2 rounded-full bg-white/80 border border-primary/10 px-4 py-2.5 text-sm font-medium text-gray-800 transition-all duration-300 hover:bg-ink hover:text-white hover:border-ink hover:scale-[1.04]"
             >
-              <div class="flex items-center">
-                <div :class="['w-10 h-10 rounded-lg flex items-center justify-center mr-3', categoryStyles[category.color].itemIcon]">
-                  <component :is="getServiceIcon(service.icon)" :class="['w-5 h-5', categoryStyles[category.color].itemIconColor]" />
-                </div>
-                <div class="flex-1 min-w-0">
-                  <h4 class="font-semibold text-gray-900 text-sm group-hover:text-primary transition-colors truncate">{{ service.name }}</h4>
-                </div>
-              </div>
+              <component :is="getServiceIcon(service.icon)" class="w-4 h-4 opacity-60" aria-hidden="true" />
+              {{ service.name }}
             </NuxtLink>
           </div>
 
-          <!-- View All Link -->
           <NuxtLink
             :to="category.viewAllLink"
-            :class="['inline-flex items-center text-sm font-semibold transition-colors group', categoryStyles[category.color].link]"
+            class="group inline-flex items-center gap-3 font-montserrat text-[11px] font-semibold uppercase tracking-[0.2em] text-primary hover:text-brass-dark transition-colors"
           >
-            <span>View all {{ category.id }} services</span>
-            <svg class="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6" />
-            </svg>
+            View All {{ category.id }} Services
+            <span class="flex items-center justify-center w-8 h-8 rounded-full border border-primary/20 transition-all duration-300 group-hover:bg-ink group-hover:border-ink group-hover:text-white" aria-hidden="true">&rarr;</span>
           </NuxtLink>
         </div>
       </div>
 
       <!-- ========== MOBILE: Accordion ========== -->
-      <div class="md:hidden space-y-3 mb-12">
-        <div
-          v-for="category in categories"
-          :key="category.id"
-          class="rounded-2xl overflow-hidden border transition-colors"
-          :class="[
-            isExpanded(category.id)
-              ? categoryStyles[category.color].border
-              : 'border-gray-200'
-          ]"
-        >
-          <!-- Accordion Header -->
+      <div class="md:hidden border-t border-primary/10 mb-14">
+        <div v-for="(category, index) in categories" :key="category.id" class="border-b border-primary/10">
           <button
             @click="toggleSection(category.id)"
-            class="w-full px-4 py-4 flex items-center justify-between transition-colors"
-            :class="[
-              isExpanded(category.id)
-                ? categoryStyles[category.color].bgLight
-                : 'bg-white hover:bg-gray-50'
-            ]"
+            class="w-full py-5 flex items-center justify-between text-left"
+            :aria-expanded="isExpanded(category.id)"
           >
-            <div class="flex items-center gap-3">
-              <div
-                :class="['w-10 h-10 rounded-xl flex items-center justify-center text-white', categoryStyles[category.color].icon]"
-              >
-                <component :is="getCategoryIcon(category.id)" class="w-5 h-5" />
-              </div>
-              <div class="text-left">
-                <span
-                  class="font-bold text-base"
-                  :class="isExpanded(category.id) ? categoryStyles[category.color].textColor : 'text-gray-900'"
-                >
-                  {{ category.title }}
-                </span>
-                <span class="ml-2 text-sm text-gray-500">
-                  ({{ category.services.length }})
-                </span>
-              </div>
-            </div>
-
+            <span class="flex items-center gap-4">
+              <span class="font-display text-base text-brass" aria-hidden="true">0{{ index + 1 }}</span>
+              <span class="font-display font-semibold text-xl text-primary">{{ category.title }}</span>
+              <span class="text-sm text-gray-400">({{ category.services.length }})</span>
+            </span>
             <svg
-              class="w-5 h-5 transition-transform duration-300"
-              :class="[
-                isExpanded(category.id) ? 'rotate-180' : '',
-                isExpanded(category.id) ? categoryStyles[category.color].textColor : 'text-gray-400'
-              ]"
-              fill="none"
-              stroke="currentColor"
-              viewBox="0 0 24 24"
+              class="w-5 h-5 text-brass transition-transform duration-300"
+              :class="isExpanded(category.id) ? 'rotate-180' : ''"
+              fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"
             >
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M19 9l-7 7-7-7" />
             </svg>
           </button>
 
-          <!-- Accordion Content -->
           <Transition
             enter-active-class="transition-all duration-300 ease-out"
             enter-from-class="opacity-0 max-h-0"
@@ -136,96 +93,44 @@
             leave-to-class="opacity-0 max-h-0"
           >
             <div v-show="isExpanded(category.id)" class="overflow-hidden">
-              <div class="grid grid-cols-2 gap-3 p-4 bg-white">
-                <NuxtLink
-                  v-for="service in category.services"
-                  :key="service.name"
-                  :to="service.link"
-                  class="flex items-center gap-2 p-3 rounded-xl bg-gray-50 hover:bg-gray-100 transition-colors"
-                >
-                  <div :class="['w-8 h-8 rounded-lg flex items-center justify-center', categoryStyles[category.color].itemIcon]">
-                    <component :is="getServiceIcon(service.icon)" :class="['w-4 h-4', categoryStyles[category.color].itemIconColor]" />
-                  </div>
-                  <span class="text-sm font-medium text-gray-800">{{ service.name }}</span>
-                </NuxtLink>
-              </div>
-              <div class="px-4 pb-4 bg-white">
-                <NuxtLink
-                  :to="category.viewAllLink"
-                  :class="['inline-flex items-center text-sm font-semibold transition-colors', categoryStyles[category.color].link]"
-                >
-                  <span>View all</span>
-                  <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6" />
-                  </svg>
-                </NuxtLink>
-              </div>
+              <ul class="pb-4">
+                <li v-for="service in category.services" :key="service.name">
+                  <NuxtLink
+                    :to="service.link"
+                    class="flex items-center gap-3 py-2.5 pl-9 text-sm font-medium text-gray-700"
+                  >
+                    <component :is="getServiceIcon(service.icon)" class="w-4 h-4 text-brass" aria-hidden="true" />
+                    {{ service.name }}
+                  </NuxtLink>
+                </li>
+                <li class="pl-9 pt-2">
+                  <NuxtLink
+                    :to="category.viewAllLink"
+                    class="inline-flex items-center font-montserrat text-[11px] font-semibold uppercase tracking-[0.2em] text-brass-dark"
+                  >
+                    View All
+                    <span class="ml-2" aria-hidden="true">&rarr;</span>
+                  </NuxtLink>
+                </li>
+              </ul>
             </div>
           </Transition>
         </div>
       </div>
 
-      <!-- Service Features -->
-      <div class="bg-gray-50 rounded-3xl p-5 sm:p-8 mb-12">
-        <h3 class="text-xl sm:text-2xl font-bold text-center text-gray-900 mb-8">
-          Why Choose Our Appliance Repair Services?
-        </h3>
-        <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
-          <div v-for="feature in features" :key="feature.title" class="text-center group">
-            <div class="w-14 h-14 md:w-16 md:h-16 bg-white rounded-2xl shadow-lg flex items-center justify-center mx-auto mb-4 group-hover:shadow-xl transition-shadow duration-300">
-              <component :is="feature.iconComponent" class="w-7 h-7 md:w-8 md:h-8 text-primary" />
-            </div>
-            <h4 class="font-semibold text-gray-900 mb-2 text-sm md:text-base">{{ feature.title }}</h4>
-            <p class="text-xs md:text-sm text-gray-600">{{ feature.description }}</p>
-          </div>
-        </div>
-      </div>
-
-      <!-- Call to Action -->
-      <div class="text-center">
-        <div class="bg-gradient-to-r from-primary to-secondary rounded-3xl p-5 sm:p-8 text-white relative overflow-hidden">
-          <!-- Background pattern -->
-          <div class="absolute inset-0 opacity-10">
-            <div class="absolute inset-0" style="background-image: radial-gradient(circle at 2px 2px, white 1px, transparent 0); background-size: 20px 20px;"></div>
-          </div>
-
-          <div class="max-w-3xl mx-auto relative z-10">
-            <h3 class="text-2xl md:text-3xl font-bold mb-4">
-              Ready to Fix Your Appliance?
-            </h3>
-            <p class="text-lg md:text-xl text-white/90 mb-8 leading-relaxed">
-              Don't let a broken appliance disrupt your daily routine. Our expert technicians are ready to diagnose and repair your appliances quickly and efficiently.
-            </p>
-
-            <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
-              <!-- Call Button with shine effect -->
-              <a
-                href="tel:4159414144"
-                class="group relative w-full sm:w-auto inline-flex items-center justify-center px-8 py-4 bg-white text-primary font-bold rounded-xl hover:bg-gray-50 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1 overflow-hidden"
-              >
-                <span class="absolute inset-0 bg-gradient-to-r from-transparent via-primary/10 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-700"></span>
-                <svg class="w-6 h-6 mr-3 relative z-10" fill="currentColor" viewBox="0 0 20 20">
-                  <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"/>
-                </svg>
-                <span class="relative z-10">Call Now: (415) 941-4144</span>
-              </a>
-
-              <!-- View All Services Button with fill effect -->
-              <NuxtLink
-                to="/services"
-                class="group relative w-full sm:w-auto inline-flex items-center justify-center px-8 py-4 border-2 border-white text-white font-bold rounded-xl transition-all duration-300 transform hover:-translate-y-1 overflow-hidden"
-              >
-                <span class="absolute inset-0 bg-white transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"></span>
-                <svg class="w-6 h-6 mr-3 relative z-10 transition-colors group-hover:text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
-                </svg>
-                <span class="relative z-10 transition-colors group-hover:text-primary">View All Services</span>
-                <svg class="w-5 h-5 ml-2 relative z-10 opacity-0 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-300 group-hover:text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
-                </svg>
-              </NuxtLink>
-            </div>
-          </div>
+      <!-- Service assurances -->
+      <div class="grid grid-cols-2 lg:grid-cols-4 gap-4 lg:gap-6">
+        <div
+          v-for="(feature, index) in features"
+          :key="feature.title"
+          class="group rounded-[1.25rem] border border-primary/10 bg-white px-5 py-6 lg:px-7 transition-all duration-300 hover:border-brass/50 hover:shadow-lg hover:shadow-ink/5 hover:-translate-y-1"
+          v-reveal="index * 80"
+        >
+          <span class="flex items-center justify-center w-11 h-11 rounded-full bg-cream mb-4 transition-colors duration-300 group-hover:bg-brass/15">
+            <component :is="feature.iconComponent" class="w-5 h-5 text-brass-dark" aria-hidden="true" />
+          </span>
+          <h4 class="font-montserrat font-bold text-base text-primary mb-1">{{ feature.title }}</h4>
+          <p class="text-xs sm:text-sm text-gray-500 leading-relaxed">{{ feature.description }}</p>
         </div>
       </div>
     </div>
@@ -249,41 +154,11 @@ const toggleSection = (id) => {
 
 const isExpanded = (id) => expandedSections.value.includes(id)
 
-// Category styles
-const categoryStyles = {
-  blue: {
-    bg: 'bg-gradient-to-br from-blue-50 to-blue-100',
-    bgLight: 'bg-blue-50',
-    border: 'border-blue-200',
-    icon: 'bg-blue-600',
-    subtitle: 'text-blue-700',
-    textColor: 'text-blue-600',
-    itemIcon: 'bg-blue-100',
-    itemIconColor: 'text-blue-600',
-    link: 'text-blue-600 hover:text-blue-700'
-  },
-  orange: {
-    bg: 'bg-gradient-to-br from-orange-50 to-orange-100',
-    bgLight: 'bg-orange-50',
-    border: 'border-orange-200',
-    icon: 'bg-orange-600',
-    subtitle: 'text-orange-700',
-    textColor: 'text-orange-600',
-    itemIcon: 'bg-orange-100',
-    itemIconColor: 'text-orange-600',
-    link: 'text-orange-600 hover:text-orange-700'
-  },
-  purple: {
-    bg: 'bg-gradient-to-br from-purple-50 to-purple-100',
-    bgLight: 'bg-purple-50',
-    border: 'border-purple-200',
-    icon: 'bg-purple-600',
-    subtitle: 'text-purple-700',
-    textColor: 'text-purple-600',
-    itemIcon: 'bg-purple-100',
-    itemIconColor: 'text-purple-600',
-    link: 'text-purple-600 hover:text-purple-700'
-  }
+// Soft background tints per category (desktop cards)
+const tints = {
+  refrigeration: 'bg-[#EDF4F7]',
+  cooking: 'bg-[#F8F0E4]',
+  laundry: 'bg-[#F3F1EC]',
 }
 
 // Categories data
@@ -292,7 +167,6 @@ const categories = [
     id: 'refrigeration',
     title: 'Refrigeration Services',
     subtitle: 'Keep your food fresh & safe',
-    color: 'blue',
     viewAllLink: '/services?tab=cooling',
     services: [
       { name: 'Refrigerators', icon: 'refrigerator', link: '/services/refrigerator-repair' },
@@ -305,7 +179,6 @@ const categories = [
     id: 'cooking',
     title: 'Cooking Appliances',
     subtitle: 'Professional cooking solutions',
-    color: 'orange',
     viewAllLink: '/services?tab=cooking',
     services: [
       { name: 'Ranges', icon: 'range', link: '/services/range-repair' },
@@ -318,7 +191,6 @@ const categories = [
     id: 'laundry',
     title: 'Laundry & Dishwasher',
     subtitle: 'Complete cleaning solutions',
-    color: 'purple',
     viewAllLink: '/services?tab=laundry',
     services: [
       { name: 'Washers', icon: 'washer', link: '/services/washer-repair' },

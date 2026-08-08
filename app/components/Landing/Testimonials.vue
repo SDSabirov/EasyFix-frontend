@@ -1,154 +1,110 @@
 <template>
-  <section id="testimonials" class="bg-gray-50 py-16 lg:py-24">
-    <div class="container mx-auto px-4 max-w-screen-xl">
-      <div class="text-center mb-12">
-        <div class="inline-flex items-center px-4 py-2 bg-primary/10 rounded-full mb-6">
-          <svg class="w-5 h-5 text-primary mr-2" fill="currentColor" viewBox="0 0 20 20">
-            <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
-          </svg>
-          <span class="text-primary font-semibold text-sm">Customer Reviews</span>
-        </div>
-        <h2 class="text-2xl sm:text-4xl font-bold text-gray-900 mb-6">
-          What Our Clients Say About Us
+  <section id="testimonials" class="relative bg-white py-20 lg:py-28 overflow-hidden">
+    <span class="ghost-word text-[7rem] lg:text-[12rem] top-4 -left-8" aria-hidden="true">Reviews</span>
+
+    <div class="container mx-auto px-4 max-w-screen-xl relative z-10">
+      <!-- Header -->
+      <div class="max-w-3xl mb-14 lg:mb-16" v-reveal>
+        <span class="inline-flex items-center gap-2.5 rounded-full border border-primary/15 bg-cream px-4 py-2 font-montserrat text-[10px] font-semibold uppercase tracking-[0.25em] text-primary mb-6">
+          <span class="w-1.5 h-1.5 rounded-full bg-brass animate-pulse" aria-hidden="true"></span>
+          Customer Reviews
+        </span>
+        <h2 class="font-montserrat font-bold tracking-[-0.02em] text-3xl sm:text-5xl text-primary leading-[1.05]">
+          What our clients
+          <em class="font-display font-semibold italic text-brass-dark">say about us</em>
         </h2>
-        <p class="text-base sm:text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-          Read real testimonials from satisfied customers across the Bay Area who trust Easy Fix Appliance for their luxury appliance repair needs.
-        </p>
       </div>
 
-      <!-- Featured Review -->
-      <div class="bg-white rounded-3xl shadow-2xl p-5 sm:p-8 lg:p-12 mb-12 border border-gray-100">
-        <div class="max-w-4xl mx-auto text-center">
-          <div class="relative mb-8">
-            <svg class="w-16 h-16 text-primary/20 mx-auto mb-6" viewBox="0 0 24 27" fill="currentColor">
-              <path d="M14.017 18L14.017 10.609C14.017 4.905 17.748 1.039 23 0L23.995 2.151C21.563 3.068 20 5.789 20 8H24V18H14.017ZM0 18V10.609C0 4.905 3.748 1.038 9 0L9.996 2.151C7.563 3.068 6 5.789 6 8H9.983L9.983 18L0 18Z"/>
-            </svg>
-            
-            <div :key="currentIndex" class="transition-all duration-500 ease-in-out" :class="{ 'opacity-100': animate, 'opacity-0': !animate }">
-              <blockquote class="mb-8">
-                <p class="text-xl lg:text-2xl text-gray-700 leading-relaxed font-medium">
-                  "{{ currentReview.review }}"
-                </p>
-              </blockquote>
-              
-              <div class="flex items-center justify-center space-x-4">
-                <div class="w-12 h-12 bg-gradient-to-br from-primary to-secondary rounded-full flex items-center justify-center">
-                  <svg class="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 20 20">
-                    <path fill-rule="evenodd" d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z" clip-rule="evenodd"/>
-                  </svg>
-                </div>
-                <div class="text-left">
-                  <div class="font-bold text-gray-900 text-lg">{{ currentReview.author }}</div>
-                  <div class="flex items-center text-gray-600 text-sm">
-                    <span>{{ currentReview.date }} on</span>
-                    <img loading="lazy" decoding="async" v-if="currentReview.platform=='Yelp'" :src="yelpLogo" class="h-5 ml-2" alt="Yelp logo">
-                    <img loading="lazy" decoding="async" v-if="currentReview.platform=='Google'" :src="googleLogo" class="h-5 ml-2" alt="Google logo">
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          
-          <!-- Navigation Dots -->
-          <div class="flex justify-center space-x-3 mt-8">
-            <button 
-              v-for="(review, index) in Reviews" 
-              :key="index"
-              @click="goToReview(index)"
-              class="w-4 h-4 sm:w-3 sm:h-3 rounded-full transition-all duration-300 min-w-[16px] min-h-[16px] touch-manipulation"
-              :class="currentIndex === index ? 'bg-primary scale-125' : 'bg-gray-300 hover:bg-gray-400'"
-            ></button>
-          </div>
+      <!-- Featured review -->
+      <figure class="max-w-4xl mx-auto text-center mb-16 lg:mb-20" v-reveal>
+        <span class="font-display text-8xl leading-none text-brass/30 block mb-2" aria-hidden="true">&ldquo;</span>
+        <div :key="currentIndex" class="transition-opacity duration-500 ease-in-out" :class="animate ? 'opacity-100' : 'opacity-0'">
+          <blockquote class="mb-8">
+            <p class="font-display text-2xl sm:text-3xl text-primary/90 leading-normal">
+              {{ currentReview.review }}
+            </p>
+          </blockquote>
+          <figcaption class="flex items-center justify-center gap-3">
+            <span class="h-px w-8 bg-brass" aria-hidden="true"></span>
+            <span class="font-montserrat text-[12px] font-semibold uppercase tracking-[0.2em] text-primary">{{ currentReview.author }}</span>
+            <span class="text-gray-400 text-sm">{{ currentReview.date }}</span>
+            <img loading="lazy" decoding="async" v-if="currentReview.platform=='Yelp'" :src="yelpLogo" class="h-4" alt="Yelp logo">
+            <img loading="lazy" decoding="async" v-if="currentReview.platform=='Google'" :src="googleLogo" class="h-4" alt="Google logo">
+          </figcaption>
         </div>
-      </div>
 
-      <!-- Review Grid -->
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8 mb-12">
-        <div 
-          v-for="(review, index) in Reviews.slice(0, 6)" 
+        <!-- Navigation dashes -->
+        <div class="flex justify-center gap-2 mt-10">
+          <button
+            v-for="(review, index) in Reviews"
+            :key="index"
+            @click="goToReview(index)"
+            class="h-4 flex items-center touch-manipulation px-1"
+            :aria-label="`Show review ${index + 1}`"
+          >
+            <span
+              class="block h-px transition-all duration-300"
+              :class="currentIndex === index ? 'w-8 bg-brass' : 'w-4 bg-primary/20 hover:bg-primary/40'"
+            ></span>
+          </button>
+        </div>
+      </figure>
+
+      <!-- Review grid -->
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-5 lg:gap-6 mb-14">
+        <article
+          v-for="(review, index) in Reviews.slice(0, 3)"
           :key="index"
-          class="group bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 border border-gray-100 flex flex-col h-full"
+          class="group bg-cream rounded-[1.5rem] border border-primary/5 p-8 flex flex-col transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl hover:shadow-ink/10 hover:bg-white hover:border-brass/30"
+          v-reveal="index * 110"
         >
-          <div class="flex items-center mb-4">
-            <!-- Star Rating -->
-            <div class="flex text-yellow-400 mr-3">
-              <svg v-for="i in 5" :key="i" class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+          <div class="flex items-center justify-between mb-5">
+            <div class="flex text-brass gap-0.5" aria-label="5 out of 5 stars">
+              <svg v-for="i in 5" :key="i" class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
                 <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
               </svg>
             </div>
-            <div class="flex items-center text-sm text-gray-600">
-              <span class="mr-2">{{ review.date }}</span>
-              <img loading="lazy" decoding="async" v-if="review.platform=='Yelp'" :src="yelpLogo" class="h-4" alt="Yelp">
-              <img loading="lazy" decoding="async" v-if="review.platform=='Google'" :src="googleLogo" class="h-4" alt="Google">
-            </div>
+            <img loading="lazy" decoding="async" v-if="review.platform=='Yelp'" :src="yelpLogo" class="h-4 opacity-70" alt="Yelp">
+            <img loading="lazy" decoding="async" v-if="review.platform=='Google'" :src="googleLogo" class="h-4 opacity-70" alt="Google">
           </div>
-          
-          <p class="text-gray-700 leading-relaxed mb-4 line-clamp-4">
-            "{{ review.review.substring(0, 200) }}{{ review.review.length > 200 ? '...' : '' }}"
+          <p class="text-sm text-gray-600 leading-relaxed mb-6 flex-1">
+            &ldquo;{{ review.review.substring(0, 190) }}{{ review.review.length > 190 ? '&hellip;' : '' }}&rdquo;
           </p>
-          
-          <div class="flex items-center">
-            <div class="w-10 h-10 bg-gradient-to-br from-primary to-secondary rounded-full flex items-center justify-center mr-3">
-              <span class="text-white font-semibold text-sm">{{ review.author.charAt(0) }}</span>
-            </div>
+          <div class="flex items-center gap-3 border-t border-primary/10 pt-5">
+            <span class="flex items-center justify-center w-9 h-9 rounded-full bg-ink text-white font-montserrat text-xs font-bold shrink-0">{{ review.author.charAt(0) }}</span>
             <div>
-              <div class="font-semibold text-gray-900">{{ review.author }}</div>
-              <div class="text-sm text-gray-600">Verified Customer</div>
+              <span class="block font-montserrat text-[11px] font-semibold uppercase tracking-[0.15em] text-primary">{{ review.author }}</span>
+              <span class="text-xs text-gray-400">Verified Customer</span>
             </div>
           </div>
-        </div>
+        </article>
       </div>
 
-      <!-- Review Platform Stats -->
-      <div class="bg-gradient-to-r from-primary to-secondary rounded-3xl p-5 sm:p-8 text-white text-center">
-        <div class="max-w-3xl mx-auto">
-          <h3 class="text-2xl font-bold mb-4">
-            Join Thousands of Satisfied Customers
-          </h3>
-          <p class="text-white/90 mb-6">
-            See why Bay Area homeowners trust Easy Fix Appliance for their luxury appliance repair needs.
-          </p>
-          
-          <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
-            <div class="text-center">
-              <div class="text-2xl sm:text-3xl font-bold mb-2">5/5</div>
-              <div class="text-white/80">Google Rating</div>
-            </div>
-            <div class="text-center">
-              <div class="text-2xl sm:text-3xl font-bold mb-2">50+</div>
-              <div class="text-white/80">Reviews</div>
-            </div>
-            <div class="text-center">
-              <div class="text-2xl sm:text-3xl font-bold mb-2">100%</div>
-              <div class="text-white/80">Satisfaction</div>
-            </div>
+      <!-- Rating strip -->
+      <div class="flex flex-col sm:flex-row items-center justify-between gap-6 rounded-[1.5rem] bg-cream border border-primary/10 px-8 py-7" v-reveal>
+        <div class="flex items-center gap-8 sm:gap-12">
+          <div>
+            <span class="font-display font-semibold text-4xl text-primary">5/5</span>
+            <span class="block font-montserrat text-[10px] font-semibold uppercase tracking-[0.2em] text-gray-500 mt-1">Google Rating</span>
           </div>
-          
-          <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
-            <a 
-              href="tel:4159414144"
-              class="inline-flex items-center justify-center w-full sm:w-auto px-6 py-4 min-h-[48px] bg-white text-primary font-bold rounded-xl hover:bg-gray-50 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1 touch-manipulation"
-            >
-              <svg class="w-5 h-5 sm:w-6 sm:h-6 mr-2 sm:mr-3" fill="currentColor" viewBox="0 0 20 20">
-                <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"/>
-              </svg>
-              <span class="text-sm sm:text-base">Call Now: (415) 941-4144</span>
-            </a>
-            
-            <a 
-              href="https://share.google/04bpXVl20Le131xo4"
-              target="_blank"
-              rel="noopener noreferrer"
-              class="inline-flex items-center justify-center w-full sm:w-auto px-6 py-4 min-h-[48px] border-2 border-white text-white font-bold rounded-xl hover:bg-white hover:text-primary transition-all duration-300 transform hover:-translate-y-1 touch-manipulation"
-            >
-              <svg class="w-5 h-5 sm:w-6 sm:h-6 mr-2 sm:mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/>
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"/>
-              </svg>
-              <span class="text-sm sm:text-base">View All Reviews</span>
-            </a>
+          <div>
+            <span class="font-display font-semibold text-4xl text-primary">50+</span>
+            <span class="block font-montserrat text-[10px] font-semibold uppercase tracking-[0.2em] text-gray-500 mt-1">Reviews</span>
+          </div>
+          <div>
+            <span class="font-display font-semibold text-4xl text-primary">100%</span>
+            <span class="block font-montserrat text-[10px] font-semibold uppercase tracking-[0.2em] text-gray-500 mt-1">Satisfaction</span>
           </div>
         </div>
+        <a
+          href="https://share.google/04bpXVl20Le131xo4"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="group inline-flex items-center gap-3 whitespace-nowrap font-montserrat text-[12px] font-semibold uppercase tracking-[0.18em] text-primary hover:text-brass-dark transition-colors"
+        >
+          View All Reviews
+          <span class="flex items-center justify-center w-10 h-10 rounded-full border border-primary/20 transition-all duration-300 group-hover:bg-ink group-hover:border-ink group-hover:text-white" aria-hidden="true">&#8599;</span>
+        </a>
       </div>
     </div>
   </section>
@@ -227,7 +183,7 @@ const cycleReviews = () => {
       currentReview.value = Reviews.value[currentIndex.value]
       animate.value = true
     }, 150)
-  }, 5000)
+  }, 6000)
 }
 
 const loadLiveReviews = async () => {

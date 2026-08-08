@@ -1,255 +1,109 @@
 <template>
-  <section id="contacts" class="bg-white py-16 lg:py-24">
-    <div class="container mx-auto px-4 max-w-screen-xl">
-      <div class="text-center mb-12">
-        <div class="inline-flex items-center px-4 py-2 bg-primary/10 rounded-full mb-6">
-          <svg class="w-5 h-5 text-primary mr-2" fill="currentColor" viewBox="0 0 20 20">
-            <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"/>
-            <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"/>
-          </svg>
-          <span class="text-primary font-semibold text-sm">Contact Us</span>
-        </div>
-        <h2 class="text-2xl sm:text-4xl font-bold text-gray-900 mb-6">
-          Get in Touch with Easy Fix Appliance
-        </h2>
-        <p class="text-base sm:text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-          Ready to schedule a repair or have questions about our services? Our friendly team is here to help you get your luxury appliances back to perfect working condition.
-        </p>
-      </div>
+  <section id="contacts" class="grain glow-brass relative bg-ink py-20 lg:py-28 overflow-hidden">
+    <div class="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-brass to-transparent" aria-hidden="true"></div>
+    <span class="ghost-word ghost-word--light text-[7rem] lg:text-[13rem] top-8 -right-8" aria-hidden="true">Contact</span>
 
-      <!-- Main Contact Grid -->
-      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-16">
-        <!-- Contact Information -->
-        <div class="space-y-8">
-          <!-- Phone Contact -->
-          <div class="bg-gradient-to-r from-primary to-secondary rounded-3xl p-5 sm:p-8 text-white overflow-hidden">
-            <div class="flex items-start space-x-4 sm:space-x-6">
-              <div class="w-12 h-12 sm:w-16 sm:h-16 bg-white/20 rounded-2xl flex items-center justify-center flex-shrink-0">
-                <svg class="w-6 h-6 sm:w-8 sm:h-8 text-white" fill="currentColor" viewBox="0 0 20 20">
-                  <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"/>
-                </svg>
-              </div>
-              <div class="flex-1">
-                <h3 class="text-2xl font-bold mb-3">Call or Text Us</h3>
-                <p class="text-white/90 mb-4">Same-day & after-hours service available</p>
-                <p class="text-lg mb-2">📞 Regular Service: Mon-Fri 8am-8pm</p>
-                <p class="text-lg mb-4">🚨 Emergency Service: Weekends & Holidays</p>
-                
-                <div class="flex flex-col sm:flex-row gap-3">
-                  <a 
-                    href="tel:4159414144"
-                    class="inline-flex items-center justify-center w-full sm:w-auto px-6 py-4 min-h-[48px] bg-white text-primary font-bold rounded-xl hover:bg-gray-50 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1 touch-manipulation"
-                  >
-                    <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 20 20">
-                      <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"/>
-                    </svg>
-                    <span class="text-sm sm:text-base">Call (415) 941-4144</span>
-                  </a>
-                  <a 
-                    href="sms:14159414144"
-                    class="inline-flex items-center justify-center w-full sm:w-auto px-6 py-4 min-h-[48px] border-2 border-white text-white font-bold rounded-xl hover:bg-white hover:text-primary transition-all duration-300 transform hover:-translate-y-1 touch-manipulation"
-                  >
-                    <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 20 20">
-                      <path fill-rule="evenodd" d="M18 10c0 3.866-3.582 7-8 7a8.841 8.841 0 01-4.083-.98L2 17l1.338-3.123C2.493 12.767 2 11.434 2 10c0-3.866 3.582-7 8-7s8 3.134 8 7zM7 9H5v2h2V9zm8 0h-2v2h2V9zM9 9h2v2H9V9z" clip-rule="evenodd"/>
-                    </svg>
-                    <span class="text-sm sm:text-base">Text Us</span>
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
+    <div class="container mx-auto px-4 max-w-screen-xl relative z-10">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 mb-16 lg:mb-20">
+        <!-- Left: speak with a specialist -->
+        <div class="lg:col-span-7" v-reveal>
+          <span class="inline-flex items-center gap-2.5 rounded-full border border-white/15 bg-white/5 px-4 py-2 font-montserrat text-[10px] font-semibold uppercase tracking-[0.25em] text-brass-light mb-6">
+            <span class="w-1.5 h-1.5 rounded-full bg-brass animate-pulse" aria-hidden="true"></span>
+            Contact Us
+          </span>
+          <h2 class="font-montserrat font-bold tracking-[-0.02em] text-3xl sm:text-5xl text-white leading-[1.05] mb-8">
+            Get in touch with
+            <em class="font-display font-semibold italic text-brass-light">Easy Fix Appliance</em>
+          </h2>
 
-          <!-- Email Contact -->
-          <div class="bg-gray-50 rounded-3xl p-5 sm:p-8 border border-gray-200 overflow-hidden">
-            <div class="flex items-start space-x-4 sm:space-x-6">
-              <div class="w-12 h-12 sm:w-16 sm:h-16 bg-primary/10 rounded-2xl flex items-center justify-center flex-shrink-0">
-                <svg class="w-6 h-6 sm:w-8 sm:h-8 text-primary" fill="currentColor" viewBox="0 0 20 20">
-                  <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"/>
-                  <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"/>
-                </svg>
-              </div>
-              <div class="flex-1 min-w-0">
-                <h3 class="text-2xl font-bold text-gray-900 mb-3">Email Support</h3>
-                <p class="text-gray-600 mb-4">Send us your questions or service requests</p>
-                <a
-                  href="mailto:care@easyfixappliance.com"
-                  class="inline-flex items-center px-4 py-3 sm:px-6 bg-primary text-white font-semibold rounded-xl hover:bg-secondary transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1 text-sm sm:text-base max-w-full"
-                >
-                  <svg class="w-5 h-5 mr-2 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
-                    <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"/>
-                    <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"/>
-                  </svg>
-                  <span class="truncate">care@easyfixappliance.com</span>
-                </a>
-              </div>
-            </div>
-          </div>
+          <a href="tel:4159414144" class="group inline-block mb-10">
+            <span class="font-display font-medium text-4xl sm:text-6xl text-brass-light group-hover:text-white transition-colors duration-300 [text-decoration:underline] [text-decoration-thickness:1px] [text-underline-offset:12px] decoration-brass/30 group-hover:decoration-white/40">
+              (415) 941-4144
+            </span>
+            <span class="block font-montserrat text-[11px] font-semibold uppercase tracking-[0.25em] text-white/50 mt-3">
+              Call or Text &mdash; Same-Day &amp; After-Hours Service
+            </span>
+          </a>
 
-          <!-- Service Area -->
-          <div class="bg-blue-50 rounded-3xl p-5 sm:p-8 border border-blue-200 overflow-hidden">
-            <div class="flex items-start space-x-4 sm:space-x-6">
-              <div class="w-12 h-12 sm:w-16 sm:h-16 bg-blue-600 rounded-2xl flex items-center justify-center flex-shrink-0">
-                <svg class="w-6 h-6 sm:w-8 sm:h-8 text-white" fill="currentColor" viewBox="0 0 20 20">
-                  <path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"/>
-                </svg>
-              </div>
-              <div class="flex-1">
-                <h3 class="text-2xl font-bold text-gray-900 mb-3">Service Area</h3>
-                <p class="text-gray-600 mb-4">Serving the entire San Francisco Bay Area</p>
-                <div class="text-sm text-gray-600 space-y-1">
-                  <p>• San Francisco & Peninsula</p>
-                  <p>• South Bay & Silicon Valley</p>
-                  <p>• East Bay & North Bay</p>
-                  <p>• Marin & Sonoma Counties</p>
-                </div>
-              </div>
+          <dl class="space-y-5 border-t border-white/10 pt-8 max-w-lg">
+            <div class="flex items-baseline justify-between gap-6">
+              <dt class="font-montserrat text-[11px] font-semibold uppercase tracking-[0.22em] text-white/50 shrink-0">Regular Service</dt>
+              <dd class="text-white/80 text-sm text-right">Monday &ndash; Friday, 8am &ndash; 8pm</dd>
             </div>
-          </div>
+            <div class="flex items-baseline justify-between gap-6">
+              <dt class="font-montserrat text-[11px] font-semibold uppercase tracking-[0.22em] text-white/50 shrink-0">Emergency Service</dt>
+              <dd class="text-white/80 text-sm text-right">Weekends &amp; Holidays</dd>
+            </div>
+            <div class="flex items-baseline justify-between gap-6">
+              <dt class="font-montserrat text-[11px] font-semibold uppercase tracking-[0.22em] text-white/50 shrink-0">Email</dt>
+              <dd class="text-right">
+                <a href="mailto:care@easyfixappliance.com" class="text-white/80 text-sm hover:text-brass-light transition-colors">care@easyfixappliance.com</a>
+              </dd>
+            </div>
+            <div class="flex items-baseline justify-between gap-6">
+              <dt class="font-montserrat text-[11px] font-semibold uppercase tracking-[0.22em] text-white/50 shrink-0">Service Area</dt>
+              <dd class="text-white/80 text-sm text-right">San Francisco, Peninsula, South Bay &amp; Silicon Valley</dd>
+            </div>
+          </dl>
         </div>
 
-        <!-- Quick Service Form -->
-        <div class="bg-white rounded-3xl shadow-2xl p-6 sm:p-8 border border-gray-100">
-          <div class="mb-8">
-            <h3 class="text-2xl sm:text-3xl font-bold text-gray-900 mb-4">
-              Schedule Service Online
-            </h3>
-            <p class="text-gray-600">
-              Fill out the form below and we'll contact you within 2 hours to schedule your repair appointment.
+        <!-- Right: booking panel -->
+        <div class="lg:col-span-5" v-reveal="150">
+          <div class="bg-white rounded-[2rem] p-8 sm:p-10 h-full flex flex-col shadow-2xl shadow-black/30">
+            <h3 class="font-montserrat font-bold tracking-[-0.01em] text-2xl sm:text-3xl text-primary mb-4">Schedule Service Online</h3>
+            <span class="h-px w-10 bg-brass mb-6" aria-hidden="true"></span>
+            <p class="text-gray-600 text-sm leading-relaxed mb-8">
+              Choose a time that works for you &mdash; our team will confirm your appointment
+              and arrive with the parts most repairs need.
             </p>
+            <ul class="space-y-4 mb-10">
+              <li v-for="point in bookingPoints" :key="point" class="flex items-start gap-3 text-sm text-gray-700">
+                <span class="w-1 h-1 rotate-45 bg-brass mt-2 shrink-0" aria-hidden="true"></span>
+                {{ point }}
+              </li>
+            </ul>
+            <div class="mt-auto space-y-3">
+              <NuxtLink
+                to="/booking"
+                class="inline-flex items-center justify-center w-full min-h-[52px] px-8 py-4 rounded-full bg-ink text-white font-montserrat text-sm font-semibold uppercase tracking-[0.12em] transition-all duration-300 hover:bg-brass hover:scale-[1.02] touch-manipulation"
+              >
+                Book an Appointment
+              </NuxtLink>
+              <a
+                href="sms:14159414144"
+                class="inline-flex items-center justify-center w-full min-h-[52px] px-8 py-4 rounded-full border border-ink/20 text-ink font-montserrat text-sm font-semibold uppercase tracking-[0.12em] transition-all duration-300 hover:border-brass hover:text-brass-dark hover:scale-[1.02] touch-manipulation"
+              >
+                Text Us Instead
+              </a>
+            </div>
           </div>
-
-          <form class="space-y-6">
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-              <div>
-                <label class="block text-sm font-semibold text-gray-900 mb-2">First Name</label>
-                <input 
-                  type="text" 
-                  class="w-full h-12 px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-primary focus:border-transparent transition-all duration-300 text-base"
-                  placeholder="Your first name"
-                />
-              </div>
-              <div>
-                <label class="block text-sm font-semibold text-gray-900 mb-2">Last Name</label>
-                <input 
-                  type="text" 
-                  class="w-full h-12 px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-primary focus:border-transparent transition-all duration-300 text-base"
-                  placeholder="Your last name"
-                />
-              </div>
-            </div>
-
-            <div>
-              <label class="block text-sm font-semibold text-gray-900 mb-2">Phone Number</label>
-              <input 
-                type="tel" 
-                class="w-full h-12 px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-primary focus:border-transparent transition-all duration-300 text-base"
-                placeholder="(___) ___-____"
-              />
-            </div>
-
-            <div>
-              <label class="block text-sm font-semibold text-gray-900 mb-2">Email Address</label>
-              <input 
-                type="email" 
-                class="w-full h-12 px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-primary focus:border-transparent transition-all duration-300 text-base"
-                placeholder="your.email@example.com"
-              />
-            </div>
-
-            <div>
-              <label class="block text-sm font-semibold text-gray-900 mb-2">Appliance Brand</label>
-              <select class="w-full h-12 px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-primary focus:border-transparent transition-all duration-300 text-base">
-                <option>Select your appliance brand</option>
-                <option>Sub-Zero</option>
-                <option>Wolf</option>
-                <option>Viking</option>
-                <option>Thermador</option>
-                <option>KitchenAid</option>
-                <option>GE Monogram</option>
-                <option>Dacor</option>
-                <option>Other</option>
-              </select>
-            </div>
-
-            <div>
-              <label class="block text-sm font-semibold text-gray-900 mb-2">Describe the Issue</label>
-              <textarea 
-                rows="4" 
-                class="w-full min-h-[120px] px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-primary focus:border-transparent transition-all duration-300 text-base resize-y"
-                placeholder="Please describe what's wrong with your appliance..."
-              ></textarea>
-            </div>
-
-            <button 
-              type="submit"
-              class="w-full min-h-[48px] bg-gradient-to-r from-primary to-secondary text-white font-bold py-4 px-8 rounded-xl hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1 touch-manipulation text-base"
-            >
-              Schedule My Repair
-            </button>
-          </form>
         </div>
       </div>
 
-      <!-- Payment Methods -->
-      <div class="bg-gray-50 rounded-3xl p-5 sm:p-8 text-center">
-        <h3 class="text-xl sm:text-2xl font-bold text-gray-900 mb-6">
-          Convenient Payment Options
-        </h3>
-        <p class="text-gray-600 mb-8">
-          We accept all major payment methods for your convenience
-        </p>
-        
-        <div class="flex flex-wrap justify-center items-center gap-3 sm:gap-4 mb-8">
-          <div class="bg-blue-900 rounded-lg p-3 sm:p-4 shadow-sm border border-blue-800 hover:shadow-md transition-all duration-300 hover:scale-105 min-h-[48px] min-w-[64px] flex items-center justify-center">
-            <img loading="lazy" decoding="async" :src="visaLogo" alt="Visa" class="h-5 sm:h-6 max-w-full object-contain" />
+      <!-- Payment methods -->
+      <div class="border-t border-white/10 pt-10">
+        <div class="flex flex-col lg:flex-row items-start lg:items-center justify-between gap-8">
+          <div>
+            <h3 class="font-montserrat text-[11px] font-semibold uppercase tracking-[0.3em] text-white/50 mb-2">Payment Options</h3>
+            <p class="text-white/40 text-xs">Secure processing &middot; No hidden fees &middot; Payment after service</p>
           </div>
-          <div class="bg-blue-900 rounded-lg p-3 sm:p-4 shadow-sm border border-blue-800 hover:shadow-md transition-all duration-300 hover:scale-105 min-h-[48px] min-w-[64px] flex items-center justify-center">
-            <img loading="lazy" decoding="async" :src="mastercardLogo" alt="Mastercard" class="h-5 sm:h-6 max-w-full object-contain" />
-          </div>
-          <div class="bg-blue-900 rounded-lg p-3 sm:p-4 shadow-sm border border-blue-800 hover:shadow-md transition-all duration-300 hover:scale-105 min-h-[48px] min-w-[64px] flex items-center justify-center">
-            <img loading="lazy" decoding="async" :src="amexLogo" alt="American Express" class="h-5 sm:h-6 max-w-full object-contain" />
-          </div>
-          <div class="bg-blue-900 rounded-lg p-3 sm:p-4 shadow-sm border border-blue-800 hover:shadow-md transition-all duration-300 hover:scale-105 min-h-[48px] min-w-[64px] flex items-center justify-center">
-            <img loading="lazy" decoding="async" :src="discoverLogo" alt="Discover" class="h-5 sm:h-6 max-w-full object-contain" />
-          </div>
-          <div class="bg-blue-900 rounded-lg p-3 sm:p-4 shadow-sm border border-blue-800 hover:shadow-md transition-all duration-300 hover:scale-105 min-h-[48px] min-w-[64px] flex items-center justify-center">
-            <img loading="lazy" decoding="async" :src="applePayLogo" alt="Apple Pay" class="h-5 sm:h-6 max-w-full object-contain" />
-          </div>
-          <div class="bg-blue-900 rounded-lg p-3 sm:p-4 shadow-sm border border-blue-800 hover:shadow-md transition-all duration-300 hover:scale-105 min-h-[48px] min-w-[64px] flex items-center justify-center">
-            <img loading="lazy" decoding="async" :src="googlePayLogo" alt="Google Pay" class="h-5 sm:h-6 max-w-full object-contain" />
-          </div>
-          <div class="bg-blue-900 rounded-lg p-3 sm:p-4 shadow-sm border border-blue-800 hover:shadow-md transition-all duration-300 hover:scale-105 min-h-[48px] min-w-[64px] flex items-center justify-center">
-            <img loading="lazy" decoding="async" :src="venmoLogo" alt="Venmo" class="h-5 sm:h-6 max-w-full object-contain" />
-          </div>
-          <div class="bg-blue-900 rounded-lg p-3 sm:p-4 shadow-sm border border-blue-800 hover:shadow-md transition-all duration-300 hover:scale-105 min-h-[48px] min-w-[64px] flex items-center justify-center">
-            <img loading="lazy" decoding="async" :src="zelleLogo" alt="Zelle" class="h-5 sm:h-6 max-w-full object-contain" />
-          </div>
-        </div>
-        
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 text-sm text-gray-600">
-          <div class="flex items-center justify-center">
-            <svg class="w-5 h-5 text-green-500 mr-2" fill="currentColor" viewBox="0 0 20 20">
-              <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
-            </svg>
-            Secure Processing
-          </div>
-          <div class="flex items-center justify-center">
-            <svg class="w-5 h-5 text-green-500 mr-2" fill="currentColor" viewBox="0 0 20 20">
-              <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
-            </svg>
-            No Hidden Fees
-          </div>
-          <div class="flex items-center justify-center">
-            <svg class="w-5 h-5 text-green-500 mr-2" fill="currentColor" viewBox="0 0 20 20">
-              <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
-            </svg>
-            Payment After Service
+          <div class="flex flex-wrap items-center gap-x-7 gap-y-4">
+            <img
+              v-for="method in paymentMethods"
+              :key="method.alt"
+              loading="lazy"
+              decoding="async"
+              :src="method.logo"
+              :alt="method.alt"
+              class="h-5 object-contain opacity-50 hover:opacity-90 transition-opacity"
+            />
           </div>
         </div>
       </div>
     </div>
   </section>
 </template>
+
 <script setup>
 // Import payment method logos
 import visaLogo from '/assets/icons/visa.svg'
@@ -260,4 +114,22 @@ import applePayLogo from '/assets/icons/applepay.svg'
 import googlePayLogo from '/assets/icons/googlepay.svg'
 import venmoLogo from '/assets/icons/venmo.svg'
 import zelleLogo from '/assets/icons/zelle.svg'
+
+const paymentMethods = [
+  { logo: visaLogo, alt: 'Visa' },
+  { logo: mastercardLogo, alt: 'Mastercard' },
+  { logo: amexLogo, alt: 'American Express' },
+  { logo: discoverLogo, alt: 'Discover' },
+  { logo: applePayLogo, alt: 'Apple Pay' },
+  { logo: googlePayLogo, alt: 'Google Pay' },
+  { logo: venmoLogo, alt: 'Venmo' },
+  { logo: zelleLogo, alt: 'Zelle' },
+]
+
+const bookingPoints = [
+  'Same-day appointments available',
+  'We confirm within 2 hours',
+  'Factory-trained, background-checked technicians',
+  'Genuine OEM parts with warranty',
+]
 </script>

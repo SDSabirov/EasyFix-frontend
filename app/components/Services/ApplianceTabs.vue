@@ -63,7 +63,7 @@ const services = {
     },
     {
       title: 'Built-In Fridges Repair',
-      description: 'High-end built-in fridge repair service with precision and original parts.',
+      description: 'High-end Built-In Fridge repair service with precision and original parts.',
       link: '/services/built-in-fridge-repair',
       colorScheme: 'gray' as const,
       icon: 'built-in-fridge' as const

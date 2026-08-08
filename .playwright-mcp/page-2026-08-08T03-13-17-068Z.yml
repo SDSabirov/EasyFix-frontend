@@ -1,0 +1,237 @@
+- generic [active] [ref=f42e1]:
+  - generic [ref=f42e4]:
+    - heading "500" [level=1] [ref=f42e5]
+    - heading "Server Error" [level=2] [ref=f42e6]
+    - paragraph [ref=f42e7]: Cannot read properties of undefined (reading 'getSSRProps')
+  - status [ref=f42e8]
+  - iframe [ref=f42e9]:
+    - generic [ref=f43e2]:
+      - banner [ref=f43e3]:
+        - generic [ref=f43e5]:
+          - checkbox [ref=f43e6]
+          - generic "Light mode" [ref=f43e8] [cursor=pointer]
+      - generic [ref=f43e13]:
+        - heading "Error" [level=4] [ref=f43e14]
+        - heading "An error has occurred" [level=1] [ref=f43e15]
+      - heading "Cannot read properties of undefined (reading 'getSSRProps') Copy error with stack trace to clipboard" [level=2] [ref=f43e19]:
+        - generic [ref=f43e23]: Cannot read properties of undefined (reading 'getSSRProps')
+        - button "Copy error with stack trace to clipboard" [ref=f43e24] [cursor=pointer]
+      - generic [ref=f43e30]:
+        - heading "Stack Trace" [level=3] [ref=f43e33]
+        - generic [ref=f43e35]:
+          - generic [ref=f43e36]:
+            - generic [ref=f43e38]:
+              - checkbox "View All Frames" [ref=f43e39]
+              - generic [ref=f43e40]: View All Frames
+            - generic [ref=f43e42]:
+              - button "Pretty" [ref=f43e43]
+              - button "Raw" [ref=f43e44]
+          - list [ref=f43e47]:
+            - listitem [ref=f43e48]:
+              - generic [ref=f43e49]:
+                - button [ref=f43e50]:
+                  - link "C:/Users/saido/Desktop/easyfix/Easyfix-frontend/node_modules/@vue/server-renderer/dist/server-renderer.cjs.js" [ref=f43e51] [cursor=pointer]:
+                    - /url: vscode://file/C:/Users/saido/Desktop/easyfix/Easyfix-frontend/node_modules/@vue/server-renderer/dist/server-renderer.cjs.js:268
+                  - generic [ref=f43e52]:
+                    - text: in
+                    - code [ref=f43e53]: ssrGetDirectiveProps
+                  - generic [ref=f43e54]:
+                    - text: at line
+                    - code [ref=f43e55]: 268:40
+                - button [ref=f43e57]
+            - listitem [ref=f43e60]:
+              - generic [ref=f43e61]:
+                - button [ref=f43e62]:
+                  - link "C:/Users/saido/Desktop/easyfix/Easyfix-frontend/app/components/Landing/Services.vue" [ref=f43e63] [cursor=pointer]:
+                    - /url: vscode://file/C:/Users/saido/Desktop/easyfix/Easyfix-frontend/app/components/Landing/Services.vue:164
+                  - generic [ref=f43e64]:
+                    - text: in
+                    - code [ref=f43e65]: _sfc_ssrRender
+                  - generic [ref=f43e66]:
+                    - text: at line
+                    - code [ref=f43e67]: 164:170
+                - generic [ref=f43e68]:
+                  - generic [ref=f43e69]: In App
+                  - button [ref=f43e70]
+              - code [ref=f43e75]:
+                - generic [ref=f43e76]: "{ name: \"GAGGENAU\", logo: gaggenauLogo, specialty: \"German Engineering\", link: \"/gaggenau\" }, { name: \"Liebherr\", logo: liebherrLogo, specialty: \"German Cooling\", link: \"/liebherr\" }, ] const services = [ { name: \"Sub-Zero & Wolf\", image: subzeroWolfImage, alt: \"Sub-Zero and Wolf luxury appliances - professional repair services in Bay Area\", logos: [ { src: subzeroLogosilver, alt: \"Sub-Zero Logo\" },"
+            - listitem [ref=f43e90]:
+              - generic [ref=f43e91]:
+                - button [ref=f43e92]:
+                  - link "C:/Users/saido/Desktop/easyfix/Easyfix-frontend/node_modules/@vue/server-renderer/dist/server-renderer.cjs.js" [ref=f43e93] [cursor=pointer]:
+                    - /url: vscode://file/C:/Users/saido/Desktop/easyfix/Easyfix-frontend/node_modules/@vue/server-renderer/dist/server-renderer.cjs.js:495
+                  - generic [ref=f43e94]:
+                    - text: in
+                    - code [ref=f43e95]: renderComponentSubTree
+                  - generic [ref=f43e96]:
+                    - text: at line
+                    - code [ref=f43e97]: 495:9
+                - button [ref=f43e99]
+            - listitem [ref=f43e102]:
+              - generic [ref=f43e103]:
+                - button [ref=f43e104]:
+                  - link "C:/Users/saido/Desktop/easyfix/Easyfix-frontend/node_modules/@vue/server-renderer/dist/server-renderer.cjs.js" [ref=f43e105] [cursor=pointer]:
+                    - /url: vscode://file/C:/Users/saido/Desktop/easyfix/Easyfix-frontend/node_modules/@vue/server-renderer/dist/server-renderer.cjs.js:441
+                  - generic [ref=f43e106]:
+                    - text: in
+                    - code [ref=f43e107]: renderComponentVNode
+                  - generic [ref=f43e108]:
+                    - text: at line
+                    - code [ref=f43e109]: 441:14
+                - button [ref=f43e111]
+            - listitem [ref=f43e114]:
+              - generic [ref=f43e115]:
+                - button [ref=f43e116]:
+                  - link "C:/Users/saido/Desktop/easyfix/Easyfix-frontend/node_modules/@vue/server-renderer/dist/server-renderer.cjs.js" [ref=f43e117] [cursor=pointer]:
+                    - /url: vscode://file/C:/Users/saido/Desktop/easyfix/Easyfix-frontend/node_modules/@vue/server-renderer/dist/server-renderer.cjs.js:104
+                  - generic [ref=f43e118]:
+                    - text: in
+                    - code [ref=f43e119]: ssrRenderComponent
+                  - generic [ref=f43e120]:
+                    - text: at line
+                    - code [ref=f43e121]: 104:10
+                - button [ref=f43e123]
+            - listitem [ref=f43e126]:
+              - generic [ref=f43e127]:
+                - button [ref=f43e128]:
+                  - link "C:/Users/saido/Desktop/easyfix/Easyfix-frontend/app/pages/index.vue" [ref=f43e129] [cursor=pointer]:
+                    - /url: vscode://file/C:/Users/saido/Desktop/easyfix/Easyfix-frontend/app/pages/index.vue:110
+                  - generic [ref=f43e130]:
+                    - text: in
+                    - code [ref=f43e131]: _sfc_ssrRender
+                  - generic [ref=f43e132]:
+                    - text: at line
+                    - code [ref=f43e133]: 110:53
+                - generic [ref=f43e134]:
+                  - generic [ref=f43e135]: In App
+                  - button [ref=f43e136]
+            - listitem [ref=f43e139]:
+              - generic [ref=f43e140]:
+                - button [ref=f43e141]:
+                  - link "C:/Users/saido/Desktop/easyfix/Easyfix-frontend/node_modules/@vue/server-renderer/dist/server-renderer.cjs.js" [ref=f43e142] [cursor=pointer]:
+                    - /url: vscode://file/C:/Users/saido/Desktop/easyfix/Easyfix-frontend/node_modules/@vue/server-renderer/dist/server-renderer.cjs.js:495
+                  - generic [ref=f43e143]:
+                    - text: in
+                    - code [ref=f43e144]: renderComponentSubTree
+                  - generic [ref=f43e145]:
+                    - text: at line
+                    - code [ref=f43e146]: 495:9
+                - button [ref=f43e148]
+            - listitem [ref=f43e151]:
+              - generic [ref=f43e152]:
+                - button [ref=f43e153]:
+                  - link "C:/Users/saido/Desktop/easyfix/Easyfix-frontend/node_modules/@vue/server-renderer/dist/server-renderer.cjs.js" [ref=f43e154] [cursor=pointer]:
+                    - /url: vscode://file/C:/Users/saido/Desktop/easyfix/Easyfix-frontend/node_modules/@vue/server-renderer/dist/server-renderer.cjs.js:441
+                  - generic [ref=f43e155]:
+                    - text: in
+                    - code [ref=f43e156]: renderComponentVNode
+                  - generic [ref=f43e157]:
+                    - text: at line
+                    - code [ref=f43e158]: 441:14
+                - button [ref=f43e160]
+            - listitem [ref=f43e163]:
+              - generic [ref=f43e164]:
+                - button [ref=f43e165]:
+                  - link "C:/Users/saido/Desktop/easyfix/Easyfix-frontend/node_modules/@vue/server-renderer/dist/server-renderer.cjs.js" [ref=f43e166] [cursor=pointer]:
+                    - /url: vscode://file/C:/Users/saido/Desktop/easyfix/Easyfix-frontend/node_modules/@vue/server-renderer/dist/server-renderer.cjs.js:561
+                  - generic [ref=f43e167]:
+                    - text: in
+                    - code [ref=f43e168]: renderVNode
+                  - generic [ref=f43e169]:
+                    - text: at line
+                    - code [ref=f43e170]: 561:14
+                - button [ref=f43e172]
+            - listitem [ref=f43e175]:
+              - generic [ref=f43e176]:
+                - button [ref=f43e177]:
+                  - link "C:/Users/saido/Desktop/easyfix/Easyfix-frontend/node_modules/@vue/server-renderer/dist/server-renderer.cjs.js" [ref=f43e178] [cursor=pointer]:
+                    - /url: vscode://file/C:/Users/saido/Desktop/easyfix/Easyfix-frontend/node_modules/@vue/server-renderer/dist/server-renderer.cjs.js:512
+                  - generic [ref=f43e179]:
+                    - text: in
+                    - code [ref=f43e180]: renderComponentSubTree
+                  - generic [ref=f43e181]:
+                    - text: at line
+                    - code [ref=f43e182]: 512:7
+                - button [ref=f43e184]
+      - generic [ref=f43e188]:
+        - heading "Error Cause" [level=3] [ref=f43e191]
+        - code [ref=f43e196]:
+          - generic [ref=f43e197]:
+            - text: "TypeError {"
+            - button "▼" [ref=f43e198]
+            - text: "}"
+      - generic [ref=f43e201]:
+        - heading "Request" [level=3] [ref=f43e203]
+        - generic [ref=f43e204]:
+          - generic [ref=f43e205]:
+            - heading "url" [level=4] [ref=f43e206]
+            - text: http://localhost:3001/
+          - generic [ref=f43e207]:
+            - heading "method" [level=4] [ref=f43e208]
+            - text: GET
+          - generic [ref=f43e209]:
+            - heading "headers" [level=4] [ref=f43e210]
+            - table [ref=f43e211]:
+              - rowgroup [ref=f43e212]:
+                - row [ref=f43e213]:
+                  - cell "host" [ref=f43e214]
+                  - cell "localhost:3001" [ref=f43e215]
+                - row [ref=f43e216]:
+                  - cell "connection" [ref=f43e217]
+                  - cell "keep-alive" [ref=f43e218]
+                - row [ref=f43e219]:
+                  - cell "sec-ch-ua" [ref=f43e220]
+                  - cell "\"Not;A=Brand\";v=\"8\", \"Chromium\";v=\"150\", \"Google Chrome\";v=\"150\"" [ref=f43e221]
+                - row [ref=f43e222]:
+                  - cell "sec-ch-ua-mobile" [ref=f43e223]
+                  - cell "?0" [ref=f43e224]
+                - row [ref=f43e225]:
+                  - cell "sec-ch-ua-platform" [ref=f43e226]
+                  - cell "\"Windows\"" [ref=f43e227]
+                - row [ref=f43e228]:
+                  - cell "upgrade-insecure-requests" [ref=f43e229]
+                  - cell "1" [ref=f43e230]
+                - row [ref=f43e231]:
+                  - cell "user-agent" [ref=f43e232]
+                  - cell "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36" [ref=f43e233]
+                - row [ref=f43e234]:
+                  - cell "accept" [ref=f43e235]
+                  - cell "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7" [ref=f43e236]
+                - row [ref=f43e237]:
+                  - cell "sec-fetch-site" [ref=f43e238]
+                  - cell "none" [ref=f43e239]
+                - row [ref=f43e240]:
+                  - cell "sec-fetch-mode" [ref=f43e241]
+                  - cell "navigate" [ref=f43e242]
+                - row [ref=f43e243]:
+                  - cell "sec-fetch-user" [ref=f43e244]
+                  - cell "?1" [ref=f43e245]
+                - row [ref=f43e246]:
+                  - cell "sec-fetch-dest" [ref=f43e247]
+                  - cell "document" [ref=f43e248]
+                - row [ref=f43e249]:
+                  - cell "accept-encoding" [ref=f43e250]
+                  - cell "gzip, deflate, br, zstd" [ref=f43e251]
+                - row [ref=f43e252]:
+                  - cell "accept-language" [ref=f43e253]
+                  - cell "en-GB,en-US;q=0.9,en;q=0.8" [ref=f43e254]
+                - row [ref=f43e255]:
+                  - cell "cookie" [ref=f43e256]
+                  - cell [ref=f43e257]:
+                    - code [ref=f43e260]:
+                      - generic [ref=f43e261]:
+                        - text: "Object {"
+                        - button "▼" [ref=f43e262]
+                        - text: "}"
+                - row [ref=f43e264]:
+                  - cell "x-forwarded-for" [ref=f43e265]
+                  - cell "::1" [ref=f43e266]
+                - row [ref=f43e267]:
+                  - cell "x-forwarded-port" [ref=f43e268]
+                  - cell "3001" [ref=f43e269]
+                - row [ref=f43e270]:
+                  - cell "x-forwarded-proto" [ref=f43e271]
+                  - cell "http" [ref=f43e272]
+  - button "Toggle detailed error view Hide error page preview" [expanded] [ref=f42e10]:
+    - generic [ref=f42e11]: Toggle detailed error view
+    - button "Hide error page preview" [ref=f42e12] [cursor=pointer]: ×

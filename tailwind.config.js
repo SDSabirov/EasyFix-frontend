@@ -15,12 +15,22 @@ export default {
       blackOpacity: 'rgba(0, 0, 0, 0.5)',
     },
     extend: {
+      colors: {
+        brass: {
+          light: '#C9AD7F',
+          DEFAULT: '#B08D57',
+          dark: '#8F7040',
+        },
+        cream: '#FAF7F1',
+        ink: '#0A2333',
+      },
       fontFamily: {
+        display: ['"Cormorant Garamond"', 'Georgia', 'serif'],
         montserrat: ['Montserrat', 'sans-serif'],
         roboto: ['Roboto', 'sans-serif'],
         quicksand:['Quicksand','sans-serif'],
         inter:['Inter','sans-serif'],
-        
+
       },
       backgroundImage: {
         'contact': "url('/assets/img/oven.webp')",

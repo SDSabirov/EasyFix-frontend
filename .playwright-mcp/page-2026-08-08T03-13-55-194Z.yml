@@ -1,0 +1,728 @@
+- generic [ref=f49e4]:
+  - navigation [ref=f49e5]:
+    - generic [ref=f49e6]:
+      - link "Easy Fix Appliance Repair" [ref=f49e7] [cursor=pointer]:
+        - /url: /
+        - generic [ref=f49e13]:
+          - generic [ref=f49e14]:
+            - generic [ref=f49e15]: Easy
+            - generic [ref=f49e16]: Fix
+          - generic [ref=f49e17]: Appliance Repair
+      - generic [ref=f49e18]:
+        - link "Home" [ref=f49e19] [cursor=pointer]:
+          - /url: /
+        - button "Services" [ref=f49e22] [cursor=pointer]
+        - button "Locations" [ref=f49e27] [cursor=pointer]
+        - link "Blog" [ref=f49e31] [cursor=pointer]:
+          - /url: /blogs
+        - link "Calculator" [ref=f49e32] [cursor=pointer]:
+          - /url: /tools/repair-vs-replace
+        - button "More" [ref=f49e34] [cursor=pointer]
+      - generic [ref=f49e38]:
+        - link "(415) 941-4144" [ref=f49e39] [cursor=pointer]:
+          - /url: tel:4159414144
+        - link "Book Now" [ref=f49e46] [cursor=pointer]:
+          - /url: /booking
+  - main [ref=f49e52]:
+    - banner [ref=f49e53]:
+      - img "Luxury kitchen with professional-grade appliances in a Bay Area home" [ref=f49e55]
+      - generic [ref=f49e58]:
+        - paragraph [ref=f49e59]: Bay Area’s Luxury Appliance Specialists
+        - heading [level=1] [ref=f49e60]:
+          - text: Expert
+          - emphasis [ref=f49e61]: Sub-Zero, Wolf & Viking
+          - text: Appliance Repair in San Mateo & Bay Area
+        - heading "Certified technicians serving Palo Alto, San Francisco, San Jose, and surrounding Bay Area communities with same-day appliance repairs throughout the Bay Area" [level=2] [ref=f49e66]
+        - generic [ref=f49e67]:
+          - link "(415) 941-4144" [ref=f49e68] [cursor=pointer]:
+            - /url: tel:4159414144
+          - link "Schedule Service" [ref=f49e71] [cursor=pointer]:
+            - /url: /booking
+        - paragraph [ref=f49e72]:
+          - text: Same-Day Service · Certified Technicians ·
+          - generic [ref=f49e73]: Genuine OEM Parts ·
+          - text: Warranty Included
+    - generic [ref=f49e76]:
+      - generic [ref=f49e78]:
+        - generic: Brands
+        - generic [ref=f49e79]:
+          - generic [ref=f49e80]: Premium Services
+          - heading [level=2] [ref=f49e82]:
+            - text: Specialized Appliance Repair for
+            - emphasis [ref=f49e83]: Luxury Brands
+            - text: in the Bay Area
+      - generic [ref=f49e85]:
+        - link [ref=f49e86] [cursor=pointer]:
+          - /url: /subzero-wolf-repairs
+          - img "Sub-Zero appliance repair services" [ref=f49e87]
+          - generic [ref=f49e88]: ✦
+        - link [ref=f49e89] [cursor=pointer]:
+          - /url: /subzero-wolf-repairs
+          - img "Wolf appliance repair services" [ref=f49e90]
+          - generic [ref=f49e91]: ✦
+        - link [ref=f49e92] [cursor=pointer]:
+          - /url: /viking
+          - img "Viking appliance repair services" [ref=f49e93]
+          - generic [ref=f49e94]: ✦
+        - link [ref=f49e95] [cursor=pointer]:
+          - /url: /thermador
+          - img "Thermador appliance repair services" [ref=f49e96]
+          - generic [ref=f49e97]: ✦
+        - link [ref=f49e98] [cursor=pointer]:
+          - /url: /kitchenAid
+          - img "KitchenAid appliance repair services" [ref=f49e99]
+          - generic [ref=f49e100]: ✦
+        - link [ref=f49e101] [cursor=pointer]:
+          - /url: /gemonogram
+          - img "GE Monogram appliance repair services" [ref=f49e102]
+          - generic [ref=f49e103]: ✦
+        - link [ref=f49e104] [cursor=pointer]:
+          - /url: /la-cornue
+          - img "La Cornue appliance repair services" [ref=f49e105]
+          - generic [ref=f49e106]: ✦
+        - link [ref=f49e107] [cursor=pointer]:
+          - /url: /gaggenau
+          - img "GAGGENAU appliance repair services" [ref=f49e108]
+          - generic [ref=f49e109]: ✦
+        - link [ref=f49e110] [cursor=pointer]:
+          - /url: /liebherr
+          - img "Liebherr appliance repair services" [ref=f49e111]
+          - generic [ref=f49e112]: ✦
+        - link [ref=f49e113] [cursor=pointer]:
+          - /url: /subzero-wolf-repairs
+          - generic [ref=f49e114]: ✦
+        - link [ref=f49e115] [cursor=pointer]:
+          - /url: /subzero-wolf-repairs
+          - generic [ref=f49e116]: ✦
+        - link [ref=f49e117] [cursor=pointer]:
+          - /url: /viking
+          - generic [ref=f49e118]: ✦
+        - link [ref=f49e119] [cursor=pointer]:
+          - /url: /thermador
+          - generic [ref=f49e120]: ✦
+        - link [ref=f49e121] [cursor=pointer]:
+          - /url: /kitchenAid
+          - generic [ref=f49e122]: ✦
+        - link [ref=f49e123] [cursor=pointer]:
+          - /url: /gemonogram
+          - generic [ref=f49e124]: ✦
+        - link [ref=f49e125] [cursor=pointer]:
+          - /url: /la-cornue
+          - generic [ref=f49e126]: ✦
+        - link [ref=f49e127] [cursor=pointer]:
+          - /url: /gaggenau
+          - generic [ref=f49e128]: ✦
+        - link [ref=f49e129] [cursor=pointer]:
+          - /url: /liebherr
+          - generic [ref=f49e130]: ✦
+      - generic [ref=f49e131]:
+        - generic [ref=f49e132]:
+          - paragraph [ref=f49e133]:
+            - strong [ref=f49e134]: At Easy Fix Appliance
+            - text: ", we deliver premium repair services for"
+            - strong [ref=f49e135]: Sub-Zero, Viking, Dacor, Bertazzoni, Thermador, KitchenAid, GE Monogram,
+            - text: and more. Our
+            - strong [ref=f49e136]: certified technicians
+            - text: use
+            - strong [ref=f49e137]: genuine manufacturer parts
+            - text: and advanced techniques, with flexible scheduling built around your lifestyle.
+          - link "All Brands & Services" [ref=f49e139] [cursor=pointer]:
+            - /url: /services
+            - text: All Brands & Services
+            - generic [ref=f49e140]: →
+        - generic [ref=f49e141]:
+          - link [ref=f49e142] [cursor=pointer]:
+            - /url: /subzero-wolf-repairs
+            - generic [ref=f49e143]:
+              - img "Sub-Zero and Wolf luxury appliances - professional repair services in Bay Area" [ref=f49e144]
+              - generic [ref=f49e146]: ↗
+            - generic [ref=f49e147]:
+              - heading "Sub-Zero & Wolf" [level=3] [ref=f49e148]
+              - paragraph [ref=f49e149]: Expert services & repairs for all Sub-Zero & Wolf appliances including refrigerators, freezers, wine coolers, ovens, and more.
+          - link [ref=f49e150] [cursor=pointer]:
+            - /url: /viking
+            - generic [ref=f49e151]:
+              - img "Viking professional kitchen appliances - expert repair services in San Mateo" [ref=f49e152]
+              - generic [ref=f49e154]: ↗
+            - generic [ref=f49e155]:
+              - heading "Viking Appliances" [level=3] [ref=f49e156]
+              - paragraph [ref=f49e157]: Trusted repair solutions for luxury Viking refrigeration, cooking appliances, and professional kitchen equipment.
+          - link [ref=f49e158] [cursor=pointer]:
+            - /url: /thermador
+            - generic [ref=f49e159]:
+              - img "Thermador professional cooking appliances - certified repair technicians Bay Area" [ref=f49e160]
+              - generic [ref=f49e162]: ↗
+            - generic [ref=f49e163]:
+              - heading "Thermador" [level=3] [ref=f49e164]
+              - paragraph [ref=f49e165]: High-quality repairs for Thermador refrigerators, ovens, dishwashers, and professional cooking appliances.
+          - link [ref=f49e166] [cursor=pointer]:
+            - /url: /kitchenAid
+            - generic [ref=f49e167]:
+              - img "KitchenAid appliances in modern kitchen - certified repair technicians Bay Area" [ref=f49e168]
+              - generic [ref=f49e170]: ↗
+            - generic [ref=f49e171]:
+              - heading "KitchenAid" [level=3] [ref=f49e172]
+              - paragraph [ref=f49e173]: Specialized repairs for KitchenAid refrigerators, ovens, ranges, and premium kitchen appliances.
+          - link [ref=f49e174] [cursor=pointer]:
+            - /url: /gemonogram
+            - generic [ref=f49e175]:
+              - img "GE Monogram luxury appliances - professional repair services Palo Alto" [ref=f49e176]
+              - generic [ref=f49e178]: ↗
+            - generic [ref=f49e179]:
+              - heading "GE Monogram" [level=3] [ref=f49e180]
+              - paragraph [ref=f49e181]: Precision repairs for GE Monogram refrigerators, ovens, ranges, and luxury kitchen appliances.
+          - link [ref=f49e182] [cursor=pointer]:
+            - /url: /dacor-appliance
+            - generic [ref=f49e183]:
+              - img "Dacor premium kitchen appliances - expert repair services San Francisco Bay Area" [ref=f49e184]
+              - generic [ref=f49e186]: ↗
+            - generic [ref=f49e187]:
+              - heading "Dacor" [level=3] [ref=f49e188]
+              - paragraph [ref=f49e189]: Expert repairs for Dacor refrigerators, ovens, cooktops, and premium kitchen appliances.
+          - link [ref=f49e190] [cursor=pointer]:
+            - /url: /la-cornue
+            - generic [ref=f49e191]:
+              - img "La Cornue French luxury ranges - expert repair services Bay Area" [ref=f49e192]
+              - generic [ref=f49e194]: ↗
+            - generic [ref=f49e195]:
+              - heading "La Cornue" [level=3] [ref=f49e196]
+              - paragraph [ref=f49e197]: Specialized repairs for La Cornue Chateau, CornuFe, and all French luxury ranges.
+          - link [ref=f49e198] [cursor=pointer]:
+            - /url: /gaggenau
+            - generic [ref=f49e199]:
+              - img "GAGGENAU German precision appliances - expert repair services Bay Area" [ref=f49e200]
+              - generic [ref=f49e202]: ↗
+            - generic [ref=f49e203]:
+              - heading "GAGGENAU" [level=3] [ref=f49e204]
+              - paragraph [ref=f49e205]: Expert repairs for GAGGENAU steam ovens, induction cooktops, and German precision appliances.
+        - generic [ref=f49e207]:
+          - generic [ref=f49e208]:
+            - heading [level=3] [ref=f49e209]:
+              - text: Ready to schedule your
+              - emphasis [ref=f49e210]: appliance repair?
+            - paragraph [ref=f49e211]: Our certified technicians are ready to restore your appliances to peak performance.
+          - generic [ref=f49e212]:
+            - link "Call (415) 941-4144" [ref=f49e213] [cursor=pointer]:
+              - /url: tel:4159414144
+            - link "Schedule Online" [ref=f49e214] [cursor=pointer]:
+              - /url: /booking
+    - generic [ref=f49e216]:
+      - generic [ref=f49e217]:
+        - generic: Repairs
+        - generic [ref=f49e218]:
+          - generic [ref=f49e219]: Expert Repairs
+          - heading [level=2] [ref=f49e221]:
+            - text: Professional Appliance
+            - emphasis [ref=f49e222]: Repair Services
+          - paragraph [ref=f49e223]: From refrigeration to cooking appliances, our certified technicians provide comprehensive repair services for all major appliance types in your Bay Area home.
+      - generic [ref=f49e224]:
+        - generic [ref=f49e225]:
+          - generic [ref=f49e226]: "01"
+          - heading "Refrigeration Services" [level=3] [ref=f49e231]
+          - paragraph [ref=f49e232]: Keep your food fresh & safe
+          - generic [ref=f49e233]:
+            - link "Refrigerators" [ref=f49e234] [cursor=pointer]:
+              - /url: /services/refrigerator-repair
+            - link "Freezers" [ref=f49e237] [cursor=pointer]:
+              - /url: /services/freezer-repair
+            - link "Ice Makers" [ref=f49e240] [cursor=pointer]:
+              - /url: /services/ice-maker-repair
+            - link "Wine Coolers" [ref=f49e243] [cursor=pointer]:
+              - /url: /services/wine-cooler-repair
+          - link "View All refrigeration Services" [ref=f49e246] [cursor=pointer]:
+            - /url: /services?tab=cooling
+            - text: View All refrigeration Services
+            - generic [ref=f49e247]: →
+        - generic [ref=f49e248]:
+          - generic [ref=f49e249]: "02"
+          - heading "Cooking Appliances" [level=3] [ref=f49e254]
+          - paragraph [ref=f49e255]: Professional cooking solutions
+          - generic [ref=f49e256]:
+            - link "Ranges" [ref=f49e257] [cursor=pointer]:
+              - /url: /services/range-repair
+            - link "Ovens" [ref=f49e260] [cursor=pointer]:
+              - /url: /services/oven-repair
+            - link "Cooktops" [ref=f49e263] [cursor=pointer]:
+              - /url: /services/cooktop-repair
+            - link "Stoves" [ref=f49e266] [cursor=pointer]:
+              - /url: /services/stove-repair
+          - link "View All cooking Services" [ref=f49e269] [cursor=pointer]:
+            - /url: /services?tab=cooking
+            - text: View All cooking Services
+            - generic [ref=f49e270]: →
+        - generic [ref=f49e271]:
+          - generic [ref=f49e272]: "03"
+          - heading "Laundry & Dishwasher" [level=3] [ref=f49e277]
+          - paragraph [ref=f49e278]: Complete cleaning solutions
+          - generic [ref=f49e279]:
+            - link "Washers" [ref=f49e280] [cursor=pointer]:
+              - /url: /services/washer-repair
+            - link "Dryers" [ref=f49e283] [cursor=pointer]:
+              - /url: /services/dryer-repair
+            - link "Dishwashers" [ref=f49e286] [cursor=pointer]:
+              - /url: /services/dishwasher-repair
+          - link "View All laundry Services" [ref=f49e289] [cursor=pointer]:
+            - /url: /services?tab=laundry
+            - text: View All laundry Services
+            - generic [ref=f49e290]: →
+      - generic [ref=f49e291]:
+        - generic [ref=f49e292]:
+          - heading "Same-Day Service" [level=4] [ref=f49e296]
+          - paragraph [ref=f49e297]: Fast response for urgent repairs
+        - generic [ref=f49e298]:
+          - heading "Certified Technicians" [level=4] [ref=f49e302]
+          - paragraph [ref=f49e303]: Trained on all major brands
+        - generic [ref=f49e304]:
+          - heading "Genuine Parts" [level=4] [ref=f49e308]
+          - paragraph [ref=f49e309]: OEM parts for lasting repairs
+        - generic [ref=f49e310]:
+          - heading "Warranty Included" [level=4] [ref=f49e314]
+          - paragraph [ref=f49e315]: Peace of mind guarantee
+    - generic [ref=f49e316]:
+      - generic: Trusted
+      - generic [ref=f49e318]:
+        - generic [ref=f49e319]:
+          - generic [ref=f49e320]: Trusted Excellence
+          - heading [level=2] [ref=f49e322]:
+            - text: Why choose
+            - emphasis [ref=f49e323]: Easy Fix Appliance?
+          - paragraph [ref=f49e324]: Our commitment to excellence and customer satisfaction sets us apart as the Bay Area’s premier appliance repair service.
+        - generic [ref=f49e325]:
+          - generic [ref=f49e326]:
+            - generic [ref=f49e327]: 15+
+            - generic [ref=f49e328]: Years Experience
+            - paragraph [ref=f49e329]: Serving Bay Area with excellence
+          - generic [ref=f49e330]:
+            - generic [ref=f49e331]: 5000+
+            - generic [ref=f49e332]: Repairs Completed
+            - paragraph [ref=f49e333]: Satisfied customers across Bay Area
+          - generic [ref=f49e334]:
+            - generic [ref=f49e335]: 24h
+            - generic [ref=f49e336]: Same-Day Service
+            - paragraph [ref=f49e337]: Same-day & after-hours available
+          - generic [ref=f49e338]:
+            - generic [ref=f49e339]: 100%
+            - generic [ref=f49e340]: Satisfaction Rate
+            - paragraph [ref=f49e341]: Guaranteed quality workmanship
+        - generic [ref=f49e342]:
+          - generic [ref=f49e346]:
+            - heading "Emergency Service" [level=4] [ref=f49e347]
+            - paragraph [ref=f49e348]: Emergency and same-day service available. Quick response times for urgent repairs.
+          - generic [ref=f49e352]:
+            - heading "Flexible Scheduling" [level=4] [ref=f49e353]
+            - paragraph [ref=f49e354]: Convenient scheduling options that work around your busy lifestyle and availability.
+          - generic [ref=f49e358]:
+            - heading "Genuine OEM Parts" [level=4] [ref=f49e359]
+            - paragraph [ref=f49e360]: Original manufacturer parts with full warranties for lasting repairs and optimal performance.
+          - generic [ref=f49e364]:
+            - heading "Certified Technicians" [level=4] [ref=f49e365]
+            - paragraph [ref=f49e366]: Factory-trained and authorized technicians with expertise across all major appliance brands.
+        - generic [ref=f49e367]:
+          - paragraph [ref=f49e368]: Experience service worthy of your appliances.
+          - link "Speak with a Technician — (415) 941-4144" [ref=f49e369] [cursor=pointer]:
+            - /url: tel:4159414144
+            - text: Speak with a Technician — (415) 941-4144
+            - generic [ref=f49e370]: →
+    - generic [ref=f49e371]:
+      - generic: Pricing
+      - generic [ref=f49e372]:
+        - generic [ref=f49e373]:
+          - generic [ref=f49e374]: Transparent Pricing
+          - heading [level=2] [ref=f49e376]:
+            - text: Fair prices,
+            - emphasis [ref=f49e377]: exceptional service
+          - paragraph [ref=f49e378]: No hidden fees, no surprises — just honest, upfront pricing for premium appliance repair services.
+        - generic [ref=f49e379]:
+          - generic [ref=f49e381]:
+            - generic [ref=f49e382]:
+              - generic [ref=f49e383]: Diagnostic
+              - generic [ref=f49e384]: Most Booked
+            - generic [ref=f49e385]: $99
+            - heading "Standard Service Visit" [level=4] [ref=f49e386]
+            - paragraph [ref=f49e387]: Expert diagnostic and troubleshooting for your appliance issues.
+          - generic [ref=f49e389]:
+            - generic [ref=f49e390]: Add-On
+            - generic [ref=f49e392]: $49
+            - heading "Additional Appliance" [level=4] [ref=f49e393]
+            - paragraph [ref=f49e394]: Same-visit diagnostic for each additional appliance.
+          - generic [ref=f49e396]:
+            - generic [ref=f49e397]:
+              - generic [ref=f49e398]: After-Hours
+              - generic [ref=f49e399]: Urgent
+            - generic [ref=f49e400]: $149
+            - heading "Emergency Service" [level=4] [ref=f49e401]
+            - paragraph [ref=f49e402]: After-hours emergency service visits for urgent repairs.
+          - generic [ref=f49e404]:
+            - generic [ref=f49e405]: Preventive
+            - generic [ref=f49e407]: $249
+            - heading "Maintenance Service" [level=4] [ref=f49e408]
+            - paragraph [ref=f49e409]: Comprehensive appliance tune-up, inspection, and preventive cleaning.
+        - generic [ref=f49e410]:
+          - paragraph [ref=f49e411]: The diagnostic fee is applied toward your repair cost if you choose to proceed. Free estimates available by phone.
+          - link "Call for a Free Quote" [ref=f49e412] [cursor=pointer]:
+            - /url: tel:4159414144
+            - text: Call for a Free Quote
+            - generic [ref=f49e413]: →
+    - generic [ref=f49e414]:
+      - generic: Tools
+      - generic [ref=f49e416]:
+        - generic [ref=f49e417]:
+          - generic [ref=f49e418]: Free Tool
+          - heading [level=2] [ref=f49e420]:
+            - text: Repair or replace?
+            - emphasis [ref=f49e421]: Run the math.
+          - paragraph [ref=f49e422]: Skip the guesswork. Plug in your repair quote and a few appliance details — we'll show you cost per year, break-even, and the smarter long-term choice.
+          - list [ref=f49e423]:
+            - listitem [ref=f49e424]: Built on the 50% rule used by appliance pros
+            - listitem [ref=f49e426]: 5-year cost projection & break-even years
+            - listitem [ref=f49e428]: Free, no signup, takes about 30 seconds
+          - link "Try the Calculator" [ref=f49e430] [cursor=pointer]:
+            - /url: /tools/repair-vs-replace
+            - text: Try the Calculator
+            - generic [ref=f49e431]: →
+        - generic [ref=f49e433]:
+          - generic [ref=f49e434]:
+            - generic [ref=f49e435]: Sample Result
+            - generic [ref=f49e436]: Repair Wins
+          - heading "Repair is the better value" [level=3] [ref=f49e437]
+          - paragraph [ref=f49e438]: $94/yr vs $67/yr — for a 5-year-old Sub-Zero with a $300 repair.
+          - generic [ref=f49e439]:
+            - generic [ref=f49e441]:
+              - generic [ref=f49e442]: Repair
+              - generic [ref=f49e443]: $94/yr
+            - generic [ref=f49e447]:
+              - generic [ref=f49e448]: Replace
+              - generic [ref=f49e449]: $67/yr
+          - generic [ref=f49e452]:
+            - generic [ref=f49e453]:
+              - generic [ref=f49e454]: Rule
+              - generic [ref=f49e455]: 25%
+            - generic [ref=f49e456]:
+              - generic [ref=f49e457]: Break-even
+              - generic [ref=f49e458]: 6.3 yrs
+            - generic [ref=f49e459]:
+              - generic [ref=f49e460]: 5-yr diff
+              - generic [ref=f49e461]: $135
+    - generic [ref=f49e462]:
+      - generic: Bay Area
+      - generic [ref=f49e463]:
+        - generic [ref=f49e464]:
+          - generic [ref=f49e465]: Service Coverage
+          - heading [level=2] [ref=f49e467]:
+            - text: Appliance repair
+            - emphasis [ref=f49e468]: throughout the Bay Area
+          - paragraph [ref=f49e469]: Expert Sub-Zero, Wolf, Viking, and luxury appliance repair in San Mateo, Palo Alto, San Francisco, and surrounding Bay Area communities. Same-day service available.
+        - generic [ref=f49e470]:
+          - link "Atherton" [ref=f49e471] [cursor=pointer]:
+            - /url: /areas/atherton
+          - link "Belmont" [ref=f49e473] [cursor=pointer]:
+            - /url: /areas/belmont
+          - link "Burlingame" [ref=f49e475] [cursor=pointer]:
+            - /url: /areas/burlingame
+          - link "Emerald Hills" [ref=f49e477] [cursor=pointer]:
+            - /url: /areas/emerald_hills
+          - link "Foster City" [ref=f49e479] [cursor=pointer]:
+            - /url: /areas/foster_city
+          - link "Half Moon Bay" [ref=f49e481] [cursor=pointer]:
+            - /url: /areas/half_moon_bay
+          - link "Hillsborough" [ref=f49e483] [cursor=pointer]:
+            - /url: /areas/hillsborough
+          - link "Los Altos" [ref=f49e485] [cursor=pointer]:
+            - /url: /areas/los_altos
+          - link "Los Altos Hills" [ref=f49e487] [cursor=pointer]:
+            - /url: /areas/los_altos_hills
+          - link "Los Gatos" [ref=f49e489] [cursor=pointer]:
+            - /url: /areas/los_gatos
+          - link "Menlo Park" [ref=f49e491] [cursor=pointer]:
+            - /url: /areas/menlo_park
+          - link "Millbrae" [ref=f49e493] [cursor=pointer]:
+            - /url: /areas/millbrae
+          - link "Monte Sereno" [ref=f49e495] [cursor=pointer]:
+            - /url: /areas/monte_sereno
+          - link "Mountain View" [ref=f49e497] [cursor=pointer]:
+            - /url: /areas/mountain_view
+          - link "Pacifica" [ref=f49e499] [cursor=pointer]:
+            - /url: /areas/pacifica
+          - link "Palo Alto" [ref=f49e501] [cursor=pointer]:
+            - /url: /areas/palo_alto
+          - link "Portola Valley" [ref=f49e503] [cursor=pointer]:
+            - /url: /areas/portola_valley
+          - link "Redwood City" [ref=f49e505] [cursor=pointer]:
+            - /url: /areas/redwood_city
+          - link "San Carlos" [ref=f49e507] [cursor=pointer]:
+            - /url: /areas/san_carlos
+          - link "San Francisco" [ref=f49e509] [cursor=pointer]:
+            - /url: /areas/san_francisco
+          - link "San Mateo" [ref=f49e511] [cursor=pointer]:
+            - /url: /areas/san_mateo
+          - link "Saratoga" [ref=f49e513] [cursor=pointer]:
+            - /url: /areas/saratoga
+          - link "Sunnyvale" [ref=f49e515] [cursor=pointer]:
+            - /url: /areas/sunnyvale
+          - link "Woodside" [ref=f49e517] [cursor=pointer]:
+            - /url: /areas/woodside
+        - group [ref=f49e519]:
+          - generic "Service Zip Codes" [ref=f49e520] [cursor=pointer]
+        - generic [ref=f49e525]:
+          - paragraph [ref=f49e526]: Don’t see your city or zip code listed? We serve many additional communities throughout the Bay Area — call to confirm availability in your location.
+          - generic [ref=f49e527]:
+            - link "Call Now" [ref=f49e528] [cursor=pointer]:
+              - /url: tel:4159414144
+              - text: Call Now
+              - generic [ref=f49e529]: →
+            - link "All Areas" [ref=f49e530] [cursor=pointer]:
+              - /url: /areas
+              - text: All Areas
+              - generic [ref=f49e531]: →
+    - generic [ref=f49e532]:
+      - generic: Journal
+      - generic [ref=f49e533]:
+        - generic [ref=f49e534]:
+          - generic [ref=f49e535]:
+            - generic [ref=f49e536]: The Journal
+            - heading [level=2] [ref=f49e538]:
+              - text: Appliance care &
+              - emphasis [ref=f49e539]: repair insights
+          - link "View All Articles" [ref=f49e540] [cursor=pointer]:
+            - /url: /blogs
+            - text: View All Articles
+            - generic [ref=f49e541]: →
+        - generic [ref=f49e542]:
+          - article [ref=f49e543]:
+            - link "Fridge Warm but Freezer Cold? Try This Simple 2-Minute Check First Troubleshooting July 16, 2026 · 5 min read read Fridge Warm but Freezer Cold? Try This Simple 2-Minute Check First Learn why your fridge may feel warm while the freezer stays cold and discover the simple checks you can perform before calling for repairs. This guide explains common causes, quick fixes, and when it is time to repair or replace your refrigerator. Read Article" [ref=f49e544] [cursor=pointer]:
+              - /url: /blogs/fridge-warm-but-freezer-cold-try-this-simple-2-minute-check-first
+              - generic [ref=f49e545]:
+                - img "Fridge Warm but Freezer Cold? Try This Simple 2-Minute Check First" [ref=f49e546]
+                - generic [ref=f49e547]: Troubleshooting
+              - generic [ref=f49e548]:
+                - generic [ref=f49e549]: July 16, 2026 · 5 min read read
+                - heading "Fridge Warm but Freezer Cold? Try This Simple 2-Minute Check First" [level=3] [ref=f49e550]
+                - paragraph [ref=f49e551]: Learn why your fridge may feel warm while the freezer stays cold and discover the simple checks you can perform before calling for repairs. This guide explains common causes, quick fixes, and when it is time to repair or replace your refrigerator.
+                - generic [ref=f49e552]:
+                  - text: Read Article
+                  - generic [ref=f49e553]: ↗
+          - article [ref=f49e554]:
+            - link "7 Warning Signs Your Appliance Needs Professional Repair (Before It Breaks Completely) Repair Tips July 14, 2026 · 5 min read read 7 Warning Signs Your Appliance Needs Professional Repair (Before It Breaks Completely) Strange noises, leaks, or rising energy bills? Learn the key warning signs your household appliances need professional repair—and how early action can save you time, money, and stress. Read Article" [ref=f49e555] [cursor=pointer]:
+              - /url: /blogs/7-warning-signs-your-appliance-needs-professional-repair-before-it-breaks-completely
+              - generic [ref=f49e556]:
+                - img "7 Warning Signs Your Appliance Needs Professional Repair (Before It Breaks Completely)" [ref=f49e557]
+                - generic [ref=f49e558]: Repair Tips
+              - generic [ref=f49e559]:
+                - generic [ref=f49e560]: July 14, 2026 · 5 min read read
+                - heading "7 Warning Signs Your Appliance Needs Professional Repair (Before It Breaks Completely)" [level=3] [ref=f49e561]
+                - paragraph [ref=f49e562]: Strange noises, leaks, or rising energy bills? Learn the key warning signs your household appliances need professional repair—and how early action can save you time, money, and stress.
+                - generic [ref=f49e563]:
+                  - text: Read Article
+                  - generic [ref=f49e564]: ↗
+          - article [ref=f49e565]:
+            - link "5 Easy Ways to Help Your Refrigerator Last Longer Repair Tips July 14, 2026 · 5 min read read 5 Easy Ways to Help Your Refrigerator Last Longer Keep your refrigerator running efficiently for years with these five simple maintenance tips. Learn how to clean condenser coils, inspect door seals, set the right temperature, improve airflow, and know when it's time to call a professional for service. Read Article" [ref=f49e566] [cursor=pointer]:
+              - /url: /blogs/5-easy-ways-to-help-your-refrigerator-last-longer
+              - generic [ref=f49e567]:
+                - img "5 Easy Ways to Help Your Refrigerator Last Longer" [ref=f49e568]
+                - generic [ref=f49e569]: Repair Tips
+              - generic [ref=f49e570]:
+                - generic [ref=f49e571]: July 14, 2026 · 5 min read read
+                - heading "5 Easy Ways to Help Your Refrigerator Last Longer" [level=3] [ref=f49e572]
+                - paragraph [ref=f49e573]: Keep your refrigerator running efficiently for years with these five simple maintenance tips. Learn how to clean condenser coils, inspect door seals, set the right temperature, improve airflow, and know when it's time to call a professional for service.
+                - generic [ref=f49e574]:
+                  - text: Read Article
+                  - generic [ref=f49e575]: ↗
+    - generic [ref=f49e576]:
+      - generic: Reviews
+      - generic [ref=f49e577]:
+        - generic [ref=f49e578]:
+          - generic [ref=f49e579]: Customer Reviews
+          - heading [level=2] [ref=f49e581]:
+            - text: What our clients
+            - emphasis [ref=f49e582]: say about us
+        - figure [ref=f49e583]:
+          - generic [ref=f49e584]: “
+          - generic [ref=f49e585]:
+            - blockquote [ref=f49e586]:
+              - paragraph [ref=f49e587]: Had Tom come repair our Subzero fridge last week. He was an amazing technician, ontime, and very professional. When the fridge stopped cooling, we were so worried ... with a new baby, it would have been a nightmare. Tom had the parts he needed and proceeded to do the repair. He was thorough and informative the entire time. I've definitely found my goto company and texh. Thanks EasyFix!
+            - generic [ref=f49e588]:
+              - generic [ref=f49e590]: Den Baron
+              - generic [ref=f49e591]: 3 years ago
+              - img "Google logo"
+          - generic [ref=f49e592]:
+            - button "Show review 1" [ref=f49e593] [cursor=pointer]
+            - button "Show review 2" [ref=f49e595] [cursor=pointer]
+            - button "Show review 3" [ref=f49e597] [cursor=pointer]
+            - button "Show review 4" [ref=f49e599] [cursor=pointer]
+            - button "Show review 5" [ref=f49e601] [cursor=pointer]
+        - generic [ref=f49e603]:
+          - article [ref=f49e604]:
+            - generic [ref=f49e605]:
+              - generic "5 out of 5 stars" [ref=f49e606]
+              - img "Google"
+            - paragraph [ref=f49e617]: “Had Tom come repair our Subzero fridge last week. He was an amazing technician, ontime, and very professional. When the fridge stopped cooling, we were so worried ... with a new baby, it wou…”
+            - generic [ref=f49e618]:
+              - generic [ref=f49e619]: D
+              - generic [ref=f49e620]:
+                - generic [ref=f49e621]: Den Baron
+                - text: Verified Customer
+          - article [ref=f49e622]:
+            - generic [ref=f49e623]:
+              - generic "5 out of 5 stars" [ref=f49e624]
+              - img "Google"
+            - paragraph [ref=f49e635]: “I had an amazing experience with Easy Fix. My Viking oven wasn't heating properly, and they sent a technician who was not only punctual but also incredibly professional. He diagnosed and fix…”
+            - generic [ref=f49e636]:
+              - generic [ref=f49e637]: U
+              - generic [ref=f49e638]:
+                - generic [ref=f49e639]: Uzak Almasbek
+                - text: Verified Customer
+          - article [ref=f49e640]:
+            - generic [ref=f49e641]:
+              - generic "5 out of 5 stars" [ref=f49e642]
+              - img "Google"
+            - paragraph [ref=f49e653]: “I recently had an issue with my Wolf Range where the oven wasn't heating evenly, causing my food to cook inconsistently. I called Easy Fix Appliance, and I'm so impressed with their service!…”
+            - generic [ref=f49e654]:
+              - generic [ref=f49e655]: t
+              - generic [ref=f49e656]:
+                - generic [ref=f49e657]: thai bui
+                - text: Verified Customer
+        - generic [ref=f49e658]:
+          - generic [ref=f49e659]:
+            - generic [ref=f49e660]:
+              - text: 5/5
+              - generic [ref=f49e661]: Google Rating
+            - generic [ref=f49e662]:
+              - text: 50+
+              - generic [ref=f49e663]: Reviews
+            - generic [ref=f49e664]:
+              - text: 100%
+              - generic [ref=f49e665]: Satisfaction
+          - link "View All Reviews" [ref=f49e666] [cursor=pointer]:
+            - /url: https://share.google/04bpXVl20Le131xo4
+            - text: View All Reviews
+            - generic [ref=f49e667]: ↗
+    - generic [ref=f49e668]:
+      - generic: Contact
+      - generic [ref=f49e670]:
+        - generic [ref=f49e671]:
+          - generic [ref=f49e672]:
+            - generic [ref=f49e673]: Contact Us
+            - heading [level=2] [ref=f49e675]:
+              - text: Get in touch with
+              - emphasis [ref=f49e676]: Easy Fix Appliance
+            - link "(415) 941-4144 Call or Text — Same-Day & After-Hours Service" [ref=f49e677] [cursor=pointer]:
+              - /url: tel:4159414144
+              - text: (415) 941-4144
+              - generic [ref=f49e678]: Call or Text — Same-Day & After-Hours Service
+            - generic [ref=f49e679]:
+              - generic [ref=f49e680]:
+                - term [ref=f49e681]: Regular Service
+                - definition [ref=f49e682]: Monday – Friday, 8am – 8pm
+              - generic [ref=f49e683]:
+                - term [ref=f49e684]: Emergency Service
+                - definition [ref=f49e685]: Weekends & Holidays
+              - generic [ref=f49e686]:
+                - term [ref=f49e687]: Email
+                - definition [ref=f49e688]:
+                  - link "care@easyfixappliance.com" [ref=f49e689] [cursor=pointer]:
+                    - /url: mailto:care@easyfixappliance.com
+              - generic [ref=f49e690]:
+                - term [ref=f49e691]: Service Area
+                - definition [ref=f49e692]: San Francisco, Peninsula, South Bay & Silicon Valley
+          - generic [ref=f49e694]:
+            - heading "Schedule Service Online" [level=3] [ref=f49e695]
+            - paragraph [ref=f49e697]: Choose a time that works for you — our team will confirm your appointment and arrive with the parts most repairs need.
+            - list [ref=f49e698]:
+              - listitem [ref=f49e699]: Same-day appointments available
+              - listitem [ref=f49e701]: We confirm within 2 hours
+              - listitem [ref=f49e703]: Factory-trained, background-checked technicians
+              - listitem [ref=f49e705]: Genuine OEM parts with warranty
+            - generic [ref=f49e707]:
+              - link "Book an Appointment" [ref=f49e708] [cursor=pointer]:
+                - /url: /booking
+              - link "Text Us Instead" [ref=f49e709] [cursor=pointer]:
+                - /url: sms:14159414144
+        - generic [ref=f49e711]:
+          - generic [ref=f49e712]:
+            - heading "Payment Options" [level=3] [ref=f49e713]
+            - paragraph [ref=f49e714]: Secure processing · No hidden fees · Payment after service
+          - generic [ref=f49e715]:
+            - img "Visa"
+            - img "Mastercard"
+            - img "American Express"
+            - img "Discover"
+            - img "Apple Pay"
+            - img "Google Pay"
+            - img "Venmo"
+            - img "Zelle"
+  - contentinfo [ref=f49e716]:
+    - generic [ref=f49e717]:
+      - generic [ref=f49e718]:
+        - generic [ref=f49e719]:
+          - generic [ref=f49e725]:
+            - generic [ref=f49e726]:
+              - generic [ref=f49e727]: Easy
+              - generic [ref=f49e728]: Fix
+            - text: Appliance Repair
+          - paragraph [ref=f49e729]: Your trusted partner for luxury appliance repair in the San Francisco Bay Area. We specialize in Sub-Zero, Wolf, Viking, Thermador, and other premium brands with certified technicians and genuine OEM parts.
+          - generic [ref=f49e730]:
+            - link "(415) 941-4144" [ref=f49e734] [cursor=pointer]:
+              - /url: tel:4159414144
+            - link "care@easyfixappliance.com" [ref=f49e739] [cursor=pointer]:
+              - /url: mailto:care@easyfixappliance.com
+            - generic [ref=f49e740]: San Francisco Bay Area
+        - generic [ref=f49e744]:
+          - heading "Quick Links" [level=3] [ref=f49e745]
+          - list [ref=f49e746]:
+            - listitem [ref=f49e747]:
+              - link "Home" [ref=f49e748] [cursor=pointer]:
+                - /url: /
+            - listitem [ref=f49e749]:
+              - link "Services" [ref=f49e750] [cursor=pointer]:
+                - /url: /services
+            - listitem [ref=f49e751]:
+              - link "Appliances" [ref=f49e752] [cursor=pointer]:
+                - /url: /#services
+            - listitem [ref=f49e753]:
+              - link "Contact Us" [ref=f49e754] [cursor=pointer]:
+                - /url: /contact-us
+            - listitem [ref=f49e755]:
+              - link "Online Booking" [ref=f49e756] [cursor=pointer]:
+                - /url: /booking
+            - listitem [ref=f49e757]:
+              - link "Careers" [ref=f49e758] [cursor=pointer]:
+                - /url: /careers
+        - generic [ref=f49e759]:
+          - heading "Resources" [level=3] [ref=f49e760]
+          - list [ref=f49e761]:
+            - listitem [ref=f49e762]:
+              - link "Blogs" [ref=f49e763] [cursor=pointer]:
+                - /url: /blogs
+            - listitem [ref=f49e764]:
+              - link "FAQ" [ref=f49e765] [cursor=pointer]:
+                - /url: /faq
+            - listitem [ref=f49e766]:
+              - link "Service Areas" [ref=f49e767] [cursor=pointer]:
+                - /url: /areas
+            - listitem [ref=f49e768]:
+              - button "Privacy Policy" [ref=f49e769] [cursor=pointer]
+            - listitem [ref=f49e770]:
+              - link "Sitemap" [ref=f49e771] [cursor=pointer]:
+                - /url: /sitemap.xml
+      - generic [ref=f49e773]:
+        - generic [ref=f49e774]:
+          - heading "Business Hours" [level=4] [ref=f49e775]
+          - generic [ref=f49e778]:
+            - paragraph [ref=f49e779]: "Monday - Friday: 8:00 AM - 8:00 PM"
+            - paragraph [ref=f49e780]: Same-Day & After-Hours Service
+        - generic [ref=f49e781]:
+          - heading "Why Choose Us" [level=4] [ref=f49e782]
+          - generic [ref=f49e785]:
+            - paragraph [ref=f49e786]: ✓ Certified Technicians
+            - paragraph [ref=f49e787]: ✓ Genuine OEM Parts
+            - paragraph [ref=f49e788]: ✓ Same-Day Service Available
+      - generic [ref=f49e790]:
+        - generic [ref=f49e791]: © 2026 Easy Fix Appliance™. All Rights Reserved.
+        - generic [ref=f49e792]:
+          - generic [ref=f49e793]:
+            - link "Follow Easy Fix Appliance on Instagram" [ref=f49e794] [cursor=pointer]:
+              - /url: https://www.instagram.com/easyfixappliance/
+            - link "Follow Easy Fix Appliance on Facebook" [ref=f49e797] [cursor=pointer]:
+              - /url: https://www.facebook.com/profile.php?id=61570244923151
+          - generic [ref=f49e800]: Licensed & Insured
+          - generic [ref=f49e804]: Factory Certified

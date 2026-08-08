@@ -1,14 +1,16 @@
 <template>
-  <footer class="bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 text-white" id="footer">
-    <div class="max-w-screen-xl mx-auto px-4 py-12">
-      <!-- Main Footer Content -->
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-8">
-        <!-- Company Info -->
-        <div class="lg:col-span-2">
-          <div class="flex items-center space-x-3 mb-6">
+  <footer class="grain relative bg-ink text-white overflow-hidden" id="footer">
+    <div class="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-brass to-transparent" aria-hidden="true"></div>
+
+    <div class="relative z-10 max-w-screen-xl mx-auto px-4 pt-16 pb-8">
+      <!-- Main footer content -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 lg:gap-8 mb-14">
+        <!-- Company info -->
+        <div class="lg:col-span-2 lg:pr-12">
+          <NuxtLink to="/" class="inline-flex items-center gap-3 mb-6">
             <svg
-              width="48"
-              height="48"
+              width="44"
+              height="44"
               viewBox="0 0 52 52"
               fill="none"
               xmlns="http://www.w3.org/2000/svg"
@@ -29,168 +31,122 @@
                 fill="#F8EDE3"
               />
             </svg>
-            <div>
-              <div class="flex items-baseline">
-                <span class="text-2xl font-bold text-white">Easy</span>
-                <span class="text-2xl font-bold text-orange-400">Fix</span>
-              </div>
-              <span class="text-sm text-gray-300">Appliance Repair</span>
-            </div>
-          </div>
-          
-          <p class="text-gray-300 mb-6 leading-relaxed">
-            Your trusted partner for luxury appliance repair in the San Francisco Bay Area. We specialize in Sub-Zero, Wolf, Viking, Thermador, and other premium brands with certified technicians and genuine OEM parts.
+            <span class="flex flex-col">
+              <span class="font-montserrat text-2xl font-bold leading-none">
+                <span class="text-white">Easy</span><span class="text-brass-light">Fix</span>
+              </span>
+              <span class="font-montserrat text-[10px] font-semibold uppercase tracking-[0.25em] text-white/50 mt-1.5">Appliance Repair</span>
+            </span>
+          </NuxtLink>
+
+          <p class="font-display italic text-xl text-white/80 mb-4">
+            Service worthy of your appliances.
           </p>
-          
-          <!-- Contact Info -->
-          <div class="space-y-3">
-            <div class="flex items-center space-x-3">
-              <svg class="w-5 h-5 text-blue-400" fill="currentColor" viewBox="0 0 20 20">
+          <p class="text-sm text-white/50 leading-relaxed mb-8 max-w-md">
+            Your trusted partner for luxury appliance repair in the San Francisco Bay Area.
+            We specialize in Sub-Zero, Wolf, Viking, Thermador, and other premium brands
+            with certified technicians and genuine OEM parts.
+          </p>
+
+          <!-- Contact rows -->
+          <div class="space-y-1">
+            <a href="tel:4159414144" class="group flex items-center gap-3 py-1.5 text-white/80 hover:text-brass-light transition-colors touch-manipulation">
+              <svg class="w-4 h-4 text-brass" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
                 <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"/>
               </svg>
-              <a href="tel:4159414144" class="text-white hover:text-blue-400 transition-colors py-2 min-h-[44px] touch-manipulation inline-block">(415) 941-4144</a>
-            </div>
-            <div class="flex items-center space-x-3">
-              <svg class="w-5 h-5 text-blue-400" fill="currentColor" viewBox="0 0 20 20">
+              <span class="text-sm font-medium">(415) 941-4144</span>
+            </a>
+            <a href="mailto:care@easyfixappliance.com" class="group flex items-center gap-3 py-1.5 text-white/80 hover:text-brass-light transition-colors touch-manipulation">
+              <svg class="w-4 h-4 text-brass" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
                 <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"/>
                 <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"/>
               </svg>
-              <a href="mailto:care@easyfixappliance.com" class="text-white hover:text-blue-400 transition-colors py-2 min-h-[44px] touch-manipulation inline-block break-all">care@easyfixappliance.com</a>
-            </div>
-            <div class="flex items-center space-x-3">
-              <svg class="w-5 h-5 text-blue-400" fill="currentColor" viewBox="0 0 20 20">
+              <span class="text-sm font-medium break-all">care@easyfixappliance.com</span>
+            </a>
+            <div class="flex items-center gap-3 py-1.5 text-white/50">
+              <svg class="w-4 h-4 text-brass" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
                 <path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"/>
               </svg>
-              <span class="text-gray-300">San Francisco Bay Area</span>
+              <span class="text-sm">San Francisco Bay Area</span>
             </div>
           </div>
         </div>
 
-        <!-- Quick Links -->
-        <div>
-          <h3 class="text-lg font-semibold text-white mb-4">Quick Links</h3>
-          <ul class="space-y-3">
-            <li>
-              <NuxtLink to="/" class="text-gray-300 hover:text-white transition-colors hover:translate-x-1 transform duration-300 inline-block py-2 min-h-[44px] touch-manipulation">
-                Home
-              </NuxtLink>
-            </li>
-            <li>
-              <NuxtLink to="/services" class="text-gray-300 hover:text-white transition-colors hover:translate-x-1 transform duration-300 inline-block py-2 min-h-[44px] touch-manipulation">
-                Services
-              </NuxtLink>
-            </li>
-            <li>
-              <NuxtLink to="/#services" class="text-gray-300 hover:text-white transition-colors hover:translate-x-1 transform duration-300 inline-block py-2 min-h-[44px] touch-manipulation">
-                Appliances
-              </NuxtLink>
-            </li>
-            <li>
-              <NuxtLink to="/contact-us" class="text-gray-300 hover:text-white transition-colors hover:translate-x-1 transform duration-300 inline-block py-2 min-h-[44px] touch-manipulation">
-                Contact Us
-              </NuxtLink>
-            </li>
-            <li>
-              <NuxtLink to="/booking" class="text-gray-300 hover:text-white transition-colors hover:translate-x-1 transform duration-300 inline-block py-2 min-h-[44px] touch-manipulation">
-                Online Booking
-              </NuxtLink>
-            </li>
-            <li>
-              <NuxtLink to="/careers" class="text-gray-300 hover:text-white transition-colors hover:translate-x-1 transform duration-300 inline-block py-2 min-h-[44px] touch-manipulation">
-                Careers
+        <!-- Quick links -->
+        <nav aria-label="Footer quick links">
+          <h3 class="font-montserrat text-[11px] font-semibold uppercase tracking-[0.25em] text-white/40 mb-5">Quick Links</h3>
+          <ul class="space-y-1">
+            <li v-for="link in quickLinks" :key="link.label">
+              <NuxtLink :to="link.to" class="inline-block py-1.5 text-sm text-white/70 hover:text-brass-light transition-colors touch-manipulation">
+                {{ link.label }}
               </NuxtLink>
             </li>
           </ul>
-        </div>
+        </nav>
 
         <!-- Resources -->
-        <div>
-          <h3 class="text-lg font-semibold text-white mb-4">Resources</h3>
-          <ul class="space-y-3">
-            <li>
-              <NuxtLink to="/blogs" class="text-gray-300 hover:text-white transition-colors hover:translate-x-1 transform duration-300 inline-block py-2 min-h-[44px] touch-manipulation">
-                Blogs
+        <nav aria-label="Footer resources">
+          <h3 class="font-montserrat text-[11px] font-semibold uppercase tracking-[0.25em] text-white/40 mb-5">Resources</h3>
+          <ul class="space-y-1">
+            <li v-for="link in resourceLinks" :key="link.label">
+              <NuxtLink :to="link.to" class="inline-block py-1.5 text-sm text-white/70 hover:text-brass-light transition-colors touch-manipulation">
+                {{ link.label }}
               </NuxtLink>
             </li>
             <li>
-              <NuxtLink to="/faq" class="text-gray-300 hover:text-white transition-colors hover:translate-x-1 transform duration-300 inline-block py-2 min-h-[44px] touch-manipulation">
-                FAQ
-              </NuxtLink>
-            </li>
-            <li>
-              <NuxtLink to="/areas" class="text-gray-300 hover:text-white transition-colors hover:translate-x-1 transform duration-300 inline-block py-2 min-h-[44px] touch-manipulation">
-                Service Areas
-              </NuxtLink>
-            </li>
-            <li>
-              <button 
-                data-modal-target="privacy-modal" 
-                data-modal-toggle="privacy-modal" 
-                class="text-gray-300 hover:text-white transition-colors hover:translate-x-1 transform duration-300 inline-block text-left py-2 min-h-[44px] touch-manipulation"
+              <button
+                data-modal-target="privacy-modal"
+                data-modal-toggle="privacy-modal"
+                class="inline-block py-1.5 text-sm text-white/70 hover:text-brass-light transition-colors text-left touch-manipulation"
                 type="button"
               >
                 Privacy Policy
               </button>
             </li>
             <li>
-              <a href="/sitemap.xml" class="text-gray-300 hover:text-white transition-colors hover:translate-x-1 transform duration-300 inline-block py-2 min-h-[44px] touch-manipulation">
+              <a href="/sitemap.xml" class="inline-block py-1.5 text-sm text-white/70 hover:text-brass-light transition-colors touch-manipulation">
                 Sitemap
               </a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+
+      <!-- Hours + assurances strip -->
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8 border-t border-white/10 py-8 mb-8">
+        <div>
+          <h4 class="font-montserrat text-[11px] font-semibold uppercase tracking-[0.25em] text-white/40 mb-3">Business Hours</h4>
+          <p class="text-sm text-white/70">Monday &ndash; Friday, 8:00 AM &ndash; 8:00 PM</p>
+          <p class="text-sm text-brass-light font-medium mt-1">Same-Day &amp; After-Hours Service Available</p>
+        </div>
+        <div>
+          <h4 class="font-montserrat text-[11px] font-semibold uppercase tracking-[0.25em] text-white/40 mb-3">Why Choose Us</h4>
+          <ul class="space-y-1.5">
+            <li v-for="point in assurances" :key="point" class="flex items-center gap-3 text-sm text-white/70">
+              <span class="w-1 h-1 rotate-45 bg-brass shrink-0" aria-hidden="true"></span>
+              {{ point }}
             </li>
           </ul>
         </div>
       </div>
 
-      <!-- Service Hours -->
-      <div class="bg-gray-800/50 rounded-2xl p-6 mb-8">
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-          <div>
-            <h4 class="text-lg font-semibold text-white mb-3 flex items-center">
-              <svg class="w-5 h-5 text-blue-400 mr-2" fill="currentColor" viewBox="0 0 20 20">
-                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z" clip-rule="evenodd"/>
-              </svg>
-              Business Hours
-            </h4>
-            <div class="space-y-2 text-gray-300">
-              <p>Monday - Friday: 8:00 AM - 8:00 PM</p>
-              <p class="text-orange-400 font-medium">Same-Day & After-Hours Service</p>
-            </div>
+      <!-- Bottom bar -->
+      <div class="border-t border-white/10 pt-7">
+        <div class="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-6">
+          <div class="text-xs text-white/40">
+            &copy; 2026 <span class="text-white/70 font-medium">Easy Fix Appliance&trade;</span>. All Rights Reserved.
           </div>
-          
-          <div>
-            <h4 class="text-lg font-semibold text-white mb-3 flex items-center">
-              <svg class="w-5 h-5 text-blue-400 mr-2" fill="currentColor" viewBox="0 0 20 20">
-                <path fill-rule="evenodd" d="M6.267 3.455a3.066 3.066 0 001.745-.723 3.066 3.066 0 013.976 0 3.066 3.066 0 001.745.723 3.066 3.066 0 012.812 2.812c.051.643.304 1.254.723 1.745a3.066 3.066 0 010 3.976 3.066 3.066 0 00-.723 1.745 3.066 3.066 0 01-2.812 2.812 3.066 3.066 0 00-1.745.723 3.066 3.066 0 01-3.976 0 3.066 3.066 0 00-1.745-.723 3.066 3.066 0 01-2.812-2.812 3.066 3.066 0 00-.723-1.745 3.066 3.066 0 010-3.976 3.066 3.066 0 00.723-1.745 3.066 3.066 0 012.812-2.812zm7.44 5.252a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
-              </svg>
-              Why Choose Us
-            </h4>
-            <div class="space-y-1 text-gray-300">
-              <p>✓ Certified Technicians</p>
-              <p>✓ Genuine OEM Parts</p>
-              <p>✓ Same-Day Service Available</p>
-            </div>
-          </div>
-        </div>
-      </div>
 
-      <!-- Bottom Bar -->
-      <div class="pt-8 border-t border-gray-700">
-        <div class="flex flex-col md:flex-row md:items-center md:justify-between space-y-4 md:space-y-0">
-          <div class="text-gray-400 text-sm">
-            © 2026 <span class="text-white font-medium">Easy Fix Appliance™</span>. All Rights Reserved.
-          </div>
-          
-          <!-- Social Links or Certifications -->
-          <div class="flex flex-wrap items-center gap-4">
-            <div class="flex items-center space-x-3">
+          <div class="flex flex-wrap items-center gap-x-7 gap-y-4">
+            <div class="flex items-center gap-3">
               <a
                 href="https://www.instagram.com/easyfixappliance/"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Follow Easy Fix Appliance on Instagram"
-                class="text-gray-400 hover:text-white transition-colors min-h-[44px] min-w-[44px] flex items-center justify-center"
+                class="flex items-center justify-center w-10 h-10 rounded-full border border-white/15 text-white/60 transition-all duration-300 hover:border-brass hover:text-brass-light"
               >
-                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                   <path d="M12 2.163c3.204 0 3.584.012 4.85.07 1.366.062 2.633.336 3.608 1.311.975.975 1.249 2.242 1.311 3.608.058 1.266.069 1.646.069 4.85s-.012 3.584-.07 4.85c-.062 1.366-.336 2.633-1.311 3.608-.975.975-2.242 1.249-3.608 1.311-1.266.058-1.646.069-4.85.069s-3.584-.012-4.85-.07c-1.366-.062-2.633-.336-3.608-1.311-.975-.975-1.249-2.242-1.311-3.608C2.175 15.747 2.163 15.367 2.163 12s.012-3.584.07-4.85c.062-1.366.336-2.633 1.311-3.608.975-.975 2.242-1.249 3.608-1.311C8.416 2.175 8.796 2.163 12 2.163zm0 1.802c-3.141 0-3.503.012-4.74.068-.93.042-1.435.196-1.77.325-.445.173-.762.379-1.096.713-.334.334-.54.651-.713 1.096-.13.336-.283.84-.325 1.77-.057 1.238-.068 1.6-.068 4.74s.012 3.503.068 4.74c.042.93.196 1.435.325 1.77.173.445.379.762.713 1.096.334.334.651.54 1.096.713.336.13.84.283 1.77.325 1.238.057 1.6.068 4.74.068s3.503-.012 4.74-.068c.93-.042 1.435-.196 1.77-.325.445-.173.762-.379 1.096-.713.334-.334.54-.651.713-1.096.13-.336.283-.84.325-1.77.057-1.238.068-1.6.068-4.74s-.012-3.503-.068-4.74c-.042-.93-.196-1.435-.325-1.77-.173-.445-.379-.762-.713-1.096-.334-.334-.651-.54-1.096-.713-.336-.13-.84-.283-1.77-.325-1.238-.057-1.6-.068-4.74-.068zm0 3.063A4.972 4.972 0 1 1 12 17a4.972 4.972 0 0 1 0-9.972zm0 8.2a3.229 3.229 0 1 0 0-6.457 3.229 3.229 0 0 0 0 6.457zm6.338-8.394a1.162 1.162 0 1 1-2.324 0 1.162 1.162 0 0 1 2.324 0z"/>
                 </svg>
               </a>
@@ -199,28 +155,56 @@
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Follow Easy Fix Appliance on Facebook"
-                class="text-gray-400 hover:text-white transition-colors min-h-[44px] min-w-[44px] flex items-center justify-center"
+                class="flex items-center justify-center w-10 h-10 rounded-full border border-white/15 text-white/60 transition-all duration-300 hover:border-brass hover:text-brass-light"
               >
-                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                   <path d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.99 22 12z"/>
                 </svg>
               </a>
             </div>
-            <div class="flex items-center space-x-2 text-xs text-gray-400">
-              <svg class="w-4 h-4 text-green-400" fill="currentColor" viewBox="0 0 20 20">
-                <path fill-rule="evenodd" d="M2.166 4.999A11.954 11.954 0 0010 1.944 11.954 11.954 0 0017.834 5c.11.65.166 1.32.166 2.001 0 5.225-3.34 9.67-8 11.317C5.34 16.67 2 12.225 2 7c0-.682.057-1.35.166-2.001zm11.541 3.708a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
-              </svg>
-              <span>Licensed & Insured</span>
-            </div>
-            <div class="flex items-center space-x-2 text-xs text-gray-400">
-              <svg class="w-4 h-4 text-blue-400" fill="currentColor" viewBox="0 0 20 20">
-                <path fill-rule="evenodd" d="M6.267 3.455a3.066 3.066 0 001.745-.723 3.066 3.066 0 013.976 0 3.066 3.066 0 001.745.723 3.066 3.066 0 012.812 2.812c.051.643.304 1.254.723 1.745a3.066 3.066 0 010 3.976 3.066 3.066 0 00-.723 1.745 3.066 3.066 0 01-2.812 2.812 3.066 3.066 0 00-1.745.723 3.066 3.066 0 01-3.976 0 3.066 3.066 0 00-1.745-.723 3.066 3.066 0 01-2.812-2.812 3.066 3.066 0 00-.723-1.745 3.066 3.066 0 010-3.976 3.066 3.066 0 00.723-1.745 3.066 3.066 0 012.812-2.812zm7.44 5.252a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
-              </svg>
-              <span>Factory Certified</span>
-            </div>
+            <span class="font-montserrat text-[10px] font-semibold uppercase tracking-[0.2em] text-white/40">Licensed &amp; Insured</span>
+            <span class="font-montserrat text-[10px] font-semibold uppercase tracking-[0.2em] text-white/40">Factory Certified</span>
           </div>
+        </div>
+
+        <!-- Developer credit — bottom right corner -->
+        <div class="flex justify-end mt-6">
+          <a
+            href="https://sdsabirov.com"
+            target="_blank"
+            rel="noopener"
+            class="group inline-flex items-center gap-1.5 text-[11px] text-white/35 hover:text-brass-light transition-colors"
+          >
+            Developed by
+            <span class="font-medium text-white/55 group-hover:text-brass-light transition-colors">sdsabirov</span>
+            <span class="text-brass/60 transition-transform duration-300 group-hover:translate-x-0.5" aria-hidden="true">&#8599;</span>
+          </a>
         </div>
       </div>
     </div>
   </footer>
 </template>
+
+<script setup>
+const quickLinks = [
+  { label: 'Home', to: '/' },
+  { label: 'Services', to: '/services' },
+  { label: 'Appliances', to: '/#services' },
+  { label: 'Contact Us', to: '/contact-us' },
+  { label: 'Online Booking', to: '/booking' },
+  { label: 'Careers', to: '/careers' },
+]
+
+const resourceLinks = [
+  { label: 'Blogs', to: '/blogs' },
+  { label: 'FAQ', to: '/faq' },
+  { label: 'Service Areas', to: '/areas' },
+  { label: 'Repair Calculator', to: '/tools/repair-vs-replace' },
+]
+
+const assurances = [
+  'Certified Technicians',
+  'Genuine OEM Parts',
+  'Same-Day Service Available',
+]
+</script>
