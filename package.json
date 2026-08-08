@@ -15,7 +15,7 @@
   },
   "dependencies": {
     "@fawmi/vue-google-maps": "^0.9.79",
-    "@nuxtjs/google-fonts": "^3.2.0",
+    "@nuxt/fonts": "^0.14.0",
     "@nuxtjs/seo": "^5.3.10",
     "flowbite": "^2.5.1",
     "marked": "^14.1.3",

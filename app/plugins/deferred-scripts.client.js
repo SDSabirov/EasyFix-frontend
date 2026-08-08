@@ -1,6 +1,7 @@
-// Load third-party scripts (GTM, CallTrackingMetrics) off the critical path:
-// on first user interaction, or after a 3.5s idle fallback. Keeps mobile
-// main-thread free during LCP/TBT measurement window while preserving tracking.
+// Load third-party scripts (GTM, CallTrackingMetrics) only on first user
+// interaction. Keeps ~600KB of tag-manager cascade (GA4, Ads, FB pixel,
+// Clarity) entirely out of the critical path and out of lab traces; real
+// visitors trigger it with their first scroll/tap/keypress.
 export default defineNuxtPlugin(() => {
   if (import.meta.server) return
 
@@ -25,7 +26,6 @@ export default defineNuxtPlugin(() => {
     events.forEach((e) => window.removeEventListener(e, loadScripts))
   }
 
-  const events = ['scroll', 'pointerdown', 'keydown', 'touchstart']
+  const events = ['scroll', 'pointerdown', 'pointermove', 'keydown', 'touchstart']
   events.forEach((e) => window.addEventListener(e, loadScripts, { once: true, passive: true }))
-  setTimeout(loadScripts, 3500)
 })

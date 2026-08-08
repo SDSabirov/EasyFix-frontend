@@ -5,6 +5,8 @@
       <img
         src="/hero-poster.webp"
         alt="Luxury kitchen with professional-grade appliances in a Bay Area home"
+        width="1600"
+        height="900"
         class="w-full h-full object-cover"
         loading="eager"
         fetchpriority="high"
@@ -102,15 +104,25 @@ useHead({
 onMounted(() => {
   const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches
   const saveData = navigator.connection?.saveData
-  if (!reducedMotion && !saveData) {
+  if (reducedMotion || saveData) return
+
+  // Start the 473KB video only after the page has fully loaded and the main
+  // thread is idle, so it never competes with critical resources on slow
+  // connections — the poster covers the hero until then.
+  const start = () => (window.requestIdleCallback || ((cb) => setTimeout(cb, 200)))(() => {
     showVideo.value = true
-  }
+  })
+  if (document.readyState === 'complete') start()
+  else window.addEventListener('load', start, { once: true })
 })
 </script>
 
 <style scoped>
+/* Starts visible (opacity .35, not 0): content painted at opacity 0 is
+   permanently excluded from LCP candidates, which pushed LCP to the navbar
+   logo. Slide + partial fade keeps the entrance without the metric penalty. */
 .hero-reveal {
-  opacity: 0;
+  opacity: 0.35;
   transform: translateY(18px);
   animation: heroReveal 0.9s cubic-bezier(0.22, 1, 0.36, 1) forwards;
 }

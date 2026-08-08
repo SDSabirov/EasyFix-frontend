@@ -7,6 +7,21 @@ export default defineNuxtConfig({
     preset: process.env.NITRO_PRESET || "cloudflare-pages",
   },
 
+  // Inline component styles into the HTML to cut render-blocking CSS requests
+  // (Navbar.css alone cost ~350ms on slow 4G).
+  features: {
+    inlineStyles: true,
+  },
+
+  // Cache headers for unversioned public media (emitted to dist/_headers on
+  // Cloudflare Pages). Rename these files if their content ever changes.
+  routeRules: {
+    "/hero-720.mp4": { headers: { "cache-control": "public, max-age=604800, stale-while-revalidate=86400" } },
+    "/hero-poster.webp": { headers: { "cache-control": "public, max-age=604800, stale-while-revalidate=86400" } },
+    "/og-image.jpg": { headers: { "cache-control": "public, max-age=604800" } },
+    "/logo.svg": { headers: { "cache-control": "public, max-age=604800" } },
+  },
+
   app: {
     head: {
       charset: "utf-8",
@@ -34,20 +49,17 @@ export default defineNuxtConfig({
     },
   },
 
-  modules: ["@nuxtjs/seo", "@nuxtjs/google-fonts"],
+  modules: ["@nuxtjs/seo", "@nuxt/fonts"],
 
-  googleFonts: {
-    // Only weights the site actually uses (font-medium/semibold/bold + body).
-    // 600 was previously missing entirely despite 200+ font-semibold usages.
-    families: {
-      Montserrat: [400, 500, 600, 700],
-      Roboto: [400, 500, 600, 700],
-      "Cormorant Garamond": [500, 600],
-    },
-    display: "swap",
-    preload: true,
-    preconnect: true,
-    inject: true,
+  // @nuxt/fonts self-hosts and generates metric-matched fallback fonts,
+  // which removes the font-swap layout shift (CLS) the previous module caused.
+  fonts: {
+    families: [
+      // preload: the h1/display font — pulls its woff2 ahead of the queue for LCP
+      { name: "Cormorant Garamond", provider: "google", weights: [500, 600], preload: true },
+      { name: "Montserrat", provider: "google", weights: [400, 500, 600, 700] },
+      { name: "Roboto", provider: "google", weights: [400, 500, 600, 700] },
+    ],
   },
 
   site: {
