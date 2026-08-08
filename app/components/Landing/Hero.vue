@@ -1,5 +1,5 @@
 <template>
-  <section class="relative min-h-screen flex flex-col overflow-hidden bg-ink" role="banner">
+  <section class="relative min-h-screen flex flex-col overflow-hidden bg-ink">
     <!-- Poster image is the LCP element; the video layers in after hydration -->
     <div class="absolute inset-0 z-0">
       <img

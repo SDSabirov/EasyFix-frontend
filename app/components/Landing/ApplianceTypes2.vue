@@ -129,7 +129,7 @@
           <span class="flex items-center justify-center w-11 h-11 rounded-full bg-cream mb-4 transition-colors duration-300 group-hover:bg-brass/15">
             <component :is="feature.iconComponent" class="w-5 h-5 text-brass-dark" aria-hidden="true" />
           </span>
-          <h4 class="font-montserrat font-bold text-base text-primary mb-1">{{ feature.title }}</h4>
+          <h3 class="font-montserrat font-bold text-base text-primary mb-1">{{ feature.title }}</h3>
           <p class="text-xs sm:text-sm text-gray-500 leading-relaxed">{{ feature.description }}</p>
         </div>
       </div>

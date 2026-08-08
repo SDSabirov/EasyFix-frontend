@@ -41,7 +41,7 @@
             <div class="font-display font-semibold text-6xl mb-3 transition-transform duration-500 group-hover:scale-105 origin-left" :class="offer.featured ? 'text-brass-light' : 'text-primary'">
               {{ offer.price }}
             </div>
-            <h4 class="font-montserrat font-bold text-lg mb-3" :class="offer.featured ? 'text-white' : 'text-primary'">{{ offer.title }}</h4>
+            <h3 class="font-montserrat font-bold text-lg mb-3" :class="offer.featured ? 'text-white' : 'text-primary'">{{ offer.title }}</h3>
             <p class="text-sm leading-relaxed" :class="offer.featured ? 'text-white/60' : 'text-gray-600'">{{ offer.description }}</p>
           </div>
         </div>

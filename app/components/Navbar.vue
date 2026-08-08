@@ -1,5 +1,6 @@
 <template>
   <nav
+    aria-label="Main"
     :class="[
       'fixed top-3 inset-x-3 lg:top-4 lg:inset-x-6 z-50 font-montserrat transition-transform duration-500 ease-[cubic-bezier(0.22,1,0.36,1)]',
       isHidden ? '-translate-y-[150%]' : 'translate-y-0'
@@ -61,7 +62,7 @@
 
         <!-- Services dropdown -->
         <div class="relative" @mouseenter="openDropdown('services')" @mouseleave="closeDropdown">
-          <button :class="[linkClass, route.path.startsWith('/services') ? activeTextClass : idleTextClass]">
+          <button :aria-expanded="activeDropdown === 'services'" :class="[linkClass, route.path.startsWith('/services') ? activeTextClass : idleTextClass]">
             Services
             <svg :class="['w-3.5 h-3.5 ml-1.5 transition-transform duration-300', activeDropdown === 'services' && 'rotate-180']" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
@@ -107,7 +108,7 @@
 
         <!-- Locations dropdown -->
         <div class="relative" @mouseenter="openDropdown('locations')" @mouseleave="closeDropdown">
-          <button :class="[linkClass, route.path.startsWith('/areas') ? activeTextClass : idleTextClass]">
+          <button :aria-expanded="activeDropdown === 'locations'" :class="[linkClass, route.path.startsWith('/areas') ? activeTextClass : idleTextClass]">
             Locations
             <svg :class="['w-3.5 h-3.5 ml-1.5 transition-transform duration-300', activeDropdown === 'locations' && 'rotate-180']" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
@@ -165,7 +166,7 @@
 
         <!-- More dropdown -->
         <div class="relative" @mouseenter="openDropdown('more')" @mouseleave="closeDropdown">
-          <button :class="[linkClass, moreLinks.some(l => route.path === l.link) ? activeTextClass : idleTextClass]">
+          <button :aria-expanded="activeDropdown === 'more'" :class="[linkClass, moreLinks.some(l => route.path === l.link) ? activeTextClass : idleTextClass]">
             More
             <svg :class="['w-3.5 h-3.5 ml-1.5 transition-transform duration-300', activeDropdown === 'more' && 'rotate-180']" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
@@ -233,6 +234,7 @@
             onDark ? 'text-white hover:bg-white/10' : 'text-ink hover:bg-ink/5'
           ]"
           aria-label="Toggle menu"
+          :aria-expanded="mobileMenuOpen"
         >
           <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path v-if="!mobileMenuOpen" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 7h16M4 12h10M4 17h16"/>
@@ -268,6 +270,7 @@
           <div>
             <button
               @click="toggleMobileAccordion('services')"
+              :aria-expanded="mobileAccordion === 'services'"
               class="w-full flex items-center justify-between py-3 px-5 text-gray-800 font-medium rounded-full hover:bg-cream transition-colors"
             >
               <span>Services</span>
@@ -292,6 +295,7 @@
           <div>
             <button
               @click="toggleMobileAccordion('locations')"
+              :aria-expanded="mobileAccordion === 'locations'"
               class="w-full flex items-center justify-between py-3 px-5 text-gray-800 font-medium rounded-full hover:bg-cream transition-colors"
             >
               <span>Locations</span>
@@ -339,6 +343,7 @@
           <div>
             <button
               @click="toggleMobileAccordion('more')"
+              :aria-expanded="mobileAccordion === 'more'"
               class="w-full flex items-center justify-between py-3 px-5 text-gray-800 font-medium rounded-full hover:bg-cream transition-colors"
             >
               <span>More</span>

@@ -48,7 +48,7 @@
             <img loading="lazy" decoding="async" :src="feature.icon" :alt="''" aria-hidden="true" class="w-5 h-5 filter brightness-0 invert opacity-80" />
           </span>
           <div>
-            <h4 class="font-montserrat font-bold text-lg text-white mb-1">{{ feature.title }}</h4>
+            <h3 class="font-montserrat font-bold text-lg text-white mb-1">{{ feature.title }}</h3>
             <p class="text-sm text-white/50 leading-relaxed">{{ feature.description }}</p>
           </div>
         </div>
