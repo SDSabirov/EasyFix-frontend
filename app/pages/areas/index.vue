@@ -1,194 +1,182 @@
 <template>
   <div>
     <Navbar />
-    
-    <!-- Enhanced Hero Section -->
-    <header class="relative h-[80vh] lg:h-[90vh] overflow-hidden bg-gradient-to-br from-primary to-secondary">
-      <!-- Background Image with Overlay -->
-      <div class="absolute inset-0">
-        <img src="/assets/img/baymap.webp" alt="Bay Area Map" class="w-full h-full object-cover opacity-30">
-        <div class="absolute inset-0 bg-gradient-to-r from-primary/80 to-secondary/80"></div>
+
+    <!-- Hero Section -->
+    <header class="grain glow-brass relative bg-ink pt-32 pb-16 lg:pt-44 lg:pb-20 overflow-hidden">
+      <!-- Background map image -->
+      <div class="absolute inset-0" aria-hidden="true">
+        <img src="/assets/img/baymap.webp" alt="" class="w-full h-full object-cover opacity-15" loading="eager" decoding="async">
+        <div class="absolute inset-0 bg-gradient-to-b from-ink/70 via-ink/50 to-ink"></div>
       </div>
-      
-      <!-- Floating Background Elements -->
-      <div class="absolute top-20 left-20 w-32 h-32 bg-white/10 rounded-full blur-xl animate-pulse"></div>
-      <div class="absolute bottom-32 right-16 w-48 h-48 bg-tertiary/20 rounded-full blur-2xl animate-pulse delay-700"></div>
-      
+
+      <span class="ghost-word ghost-word--light text-[6rem] lg:text-[11rem] top-24 -right-6" aria-hidden="true">Coverage</span>
+
       <!-- Hero Content -->
-      <div class="relative z-10 h-full flex flex-col items-center justify-center px-4 text-center">
-        <div class="max-w-6xl mx-auto">
-          <div class="inline-flex items-center px-6 py-3 bg-white/20 backdrop-blur-sm rounded-full mb-8 border border-white/30">
-            <svg class="w-6 h-6 text-white mr-3" fill="currentColor" viewBox="0 0 20 20">
-              <path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"/>
-            </svg>
-            <span class="text-white font-bold text-lg">Bay Area Service Coverage</span>
-          </div>
-          
-          <h1 class="text-5xl lg:text-7xl font-bold text-white mb-8 leading-tight">
+      <div class="container mx-auto px-4 max-w-screen-xl relative z-10">
+        <div class="max-w-4xl mx-auto text-center">
+          <span class="inline-flex items-center gap-2.5 rounded-full border border-white/15 bg-white/5 px-4 py-2 font-montserrat text-[10px] font-semibold uppercase tracking-[0.25em] text-brass-light mb-6">
+            <span class="w-1.5 h-1.5 rounded-full bg-brass animate-pulse" aria-hidden="true"></span>
+            Bay Area Service Coverage
+          </span>
+
+          <h1 class="font-montserrat font-bold tracking-[-0.02em] text-3xl sm:text-5xl lg:text-6xl text-white leading-[1.05] mb-6">
             Professional Appliance Repair
-            <span class="block text-tertiary">Across the Bay Area</span>
+            <em class="block font-display font-semibold italic text-brass-light">Across the Bay&nbsp;Area</em>
           </h1>
-          
-          <p class="text-xl lg:text-2xl text-white/90 mb-12 max-w-4xl mx-auto leading-relaxed">
-            Serving <strong>24 cities</strong> with fast, reliable appliance repair services. 
-            From <strong>San Francisco to Palo Alto</strong>, we're your trusted local experts.
+
+          <p class="text-base sm:text-xl text-white/70 max-w-3xl mx-auto leading-relaxed mb-10">
+            Serving <strong class="text-white font-semibold">24 cities</strong> with fast, reliable appliance repair services.
+            From <strong class="text-white font-semibold">San Francisco to Palo Alto</strong>, we're your trusted local experts.
           </p>
-          
-          <!-- Enhanced CTA Buttons -->
-          <div class="flex flex-col sm:flex-row gap-6 justify-center items-center mb-16">
-            <a href="tel:(415) 941-4144"
-               class="group inline-flex items-center px-10 py-5 bg-white text-primary font-bold rounded-2xl hover:bg-gray-50 transition-all duration-300 shadow-2xl hover:shadow-3xl transform hover:-translate-y-2 text-xl min-h-[70px]">
-              <svg class="w-7 h-7 mr-4 group-hover:animate-pulse" fill="currentColor" viewBox="0 0 20 20">
-                <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"/>
-              </svg>
+
+          <!-- CTA Buttons -->
+          <div class="flex flex-col sm:flex-row gap-4 justify-center items-center mb-14">
+            <a
+              href="tel:(415) 941-4144"
+              class="w-full sm:w-auto inline-flex items-center justify-center min-h-[54px] px-9 py-4 rounded-full bg-white text-ink font-montserrat text-sm font-semibold uppercase tracking-[0.12em] transition-all duration-300 hover:bg-brass hover:text-white hover:scale-[1.03] touch-manipulation"
+            >
               Call Now: (415) 941-4144
             </a>
-            
-            <NuxtLink to="/booking"
-                      class="inline-flex items-center px-10 py-5 border-3 border-white text-white font-bold rounded-2xl hover:bg-white hover:text-primary transition-all duration-300 transform hover:-translate-y-2 text-xl min-h-[70px]">
-              <svg class="w-7 h-7 mr-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3a1 1 0 011-1h6a1 1 0 011 1v4m-6 0h6m-6 0V5a1 1 0 00-1 1v1m0 8h6v2a1 1 0 01-1 1H9a1 1 0 01-1-1v-2zm6 0V5a1 1 0 011-1h2a1 1 0 011 1v14a1 1 0 01-1 1h-2a1 1 0 01-1-1V5z"/>
-              </svg>
+
+            <NuxtLink
+              to="/booking"
+              class="w-full sm:w-auto inline-flex items-center justify-center min-h-[54px] px-9 py-4 rounded-full border border-white/30 text-white font-montserrat text-sm font-semibold uppercase tracking-[0.12em] transition-all duration-300 hover:border-brass hover:text-brass-light hover:scale-[1.03] touch-manipulation"
+            >
               Schedule Online
             </NuxtLink>
           </div>
-          
+
           <!-- Trust Indicators -->
-          <div class="grid grid-cols-1 md:grid-cols-4 gap-6 bg-white/10 backdrop-blur-sm rounded-3xl p-6 lg:p-8 border border-white/20">
-            <div class="text-center">
-              <div class="text-3xl lg:text-4xl font-bold text-white mb-2">24</div>
-              <div class="text-white/80 font-medium">Cities Served</div>
+          <div class="grid grid-cols-2 lg:grid-cols-4 gap-4 text-left">
+            <div class="rounded-[1.25rem] border border-white/10 bg-white/[0.04] backdrop-blur-sm p-6">
+              <div class="font-display font-semibold text-3xl text-white mb-1">24</div>
+              <div class="font-montserrat text-[11px] font-semibold uppercase tracking-[0.2em] text-brass-light">Cities Served</div>
             </div>
-            <div class="text-center">
-              <div class="text-3xl lg:text-4xl font-bold text-white mb-2">15+</div>
-              <div class="text-white/80 font-medium">Years Experience</div>
+            <div class="rounded-[1.25rem] border border-white/10 bg-white/[0.04] backdrop-blur-sm p-6">
+              <div class="font-display font-semibold text-3xl text-white mb-1">15+</div>
+              <div class="font-montserrat text-[11px] font-semibold uppercase tracking-[0.2em] text-brass-light">Years Experience</div>
             </div>
-            <div class="text-center">
-              <div class="text-3xl lg:text-4xl font-bold text-white mb-2">Same Day</div>
-              <div class="text-white/80 font-medium">Fast Service</div>
+            <div class="rounded-[1.25rem] border border-white/10 bg-white/[0.04] backdrop-blur-sm p-6">
+              <div class="font-display font-semibold text-3xl text-white mb-1">Same Day</div>
+              <div class="font-montserrat text-[11px] font-semibold uppercase tracking-[0.2em] text-brass-light">Fast Service</div>
             </div>
-            <div class="text-center">
-              <div class="text-3xl lg:text-4xl font-bold text-white mb-2">100%</div>
-              <div class="text-white/80 font-medium">Satisfaction</div>
+            <div class="rounded-[1.25rem] border border-white/10 bg-white/[0.04] backdrop-blur-sm p-6">
+              <div class="font-display font-semibold text-3xl text-white mb-1">100%</div>
+              <div class="font-montserrat text-[11px] font-semibold uppercase tracking-[0.2em] text-brass-light">Satisfaction</div>
             </div>
           </div>
         </div>
       </div>
     </header>
-    
-    <!-- Enhanced Service Areas Section -->
-    <div class="py-20 lg:py-32 bg-gradient-to-br from-gray-50 to-white relative overflow-hidden">
-      <!-- Background Elements -->
-      <div class="absolute top-10 right-10 w-24 h-24 bg-primary/10 rounded-full blur-xl"></div>
-      <div class="absolute bottom-20 left-16 w-32 h-32 bg-secondary/10 rounded-full blur-2xl"></div>
-      
+
+    <!-- Service Areas Section -->
+    <section class="relative bg-cream py-20 lg:py-28 overflow-hidden">
+      <span class="ghost-word text-[7rem] lg:text-[12rem] -top-6 -left-8" aria-hidden="true">Cities</span>
+
       <div class="container mx-auto px-4 max-w-screen-xl relative z-10">
-        <!-- Enhanced Header -->
-        <div class="text-center mb-16">
-          <div class="inline-flex items-center px-6 py-3 bg-primary/10 rounded-full mb-8">
-            <svg class="w-6 h-6 text-primary mr-3" fill="currentColor" viewBox="0 0 20 20">
-              <path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"/>
-            </svg>
-            <span class="text-primary font-bold text-lg">Our Service Locations</span>
-          </div>
-          
-          <h2 class="text-4xl lg:text-6xl font-bold text-gray-900 mb-8 leading-tight">
-            We Serve Your 
-            <span class="text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary">Neighborhood</span>
+        <!-- Header -->
+        <div class="text-center max-w-4xl mx-auto mb-12 lg:mb-16" v-reveal>
+          <span class="inline-flex items-center gap-2.5 rounded-full border border-primary/15 bg-white px-4 py-2 font-montserrat text-[10px] font-semibold uppercase tracking-[0.25em] text-primary mb-6">
+            <span class="w-1.5 h-1.5 rounded-full bg-brass animate-pulse" aria-hidden="true"></span>
+            Our Service Locations
+          </span>
+
+          <h2 class="font-montserrat font-bold tracking-[-0.02em] text-3xl sm:text-5xl text-primary leading-[1.05] mb-6">
+            We Serve Your
+            <em class="font-display font-semibold italic text-brass-dark">Neighborhood</em>
           </h2>
-          
-          <p class="text-xl lg:text-2xl text-gray-600 max-w-4xl mx-auto leading-relaxed mb-12">
-            Professional appliance repair services across the San Francisco Bay Area. 
+
+          <p class="text-base sm:text-lg text-gray-600 max-w-3xl mx-auto leading-relaxed">
+            Professional appliance repair services across the San Francisco Bay Area.
             Click on your city to learn more about our local services and get a free estimate.
           </p>
         </div>
 
-        <!-- Enhanced Cities Grid -->
-        <div class="mb-20">
-          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
-            <NuxtLink 
-              v-for="(city, cityIndex) in cities" 
-              :key="cityIndex"
-              :to="`/areas/${replaceSpacesWithUnderscore(city.toLowerCase())}`"
-              class="group bg-white rounded-2xl p-6 shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border border-gray-100 hover:border-primary/30"
-            >
-              <div class="flex items-center justify-between">
-                <div class="flex items-center">
-                  <div class="w-12 h-12 bg-gradient-to-br from-primary to-secondary rounded-xl flex items-center justify-center mr-4 group-hover:scale-110 transition-transform duration-300">
-                    <svg class="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 20 20">
-                      <path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"/>
-                    </svg>
-                  </div>
-                  <div>
-                    <h3 class="text-lg font-bold text-gray-900 group-hover:text-primary transition-colors">{{ city }}</h3>
-                    <p class="text-sm text-gray-600">Professional Service</p>
-                  </div>
-                </div>
-                <svg class="w-5 h-5 text-gray-400 group-hover:text-primary group-hover:translate-x-1 transition-all duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"/>
-                </svg>
+        <!-- Cities Grid -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 lg:gap-5 mb-16 lg:mb-20">
+          <NuxtLink
+            v-for="(city, cityIndex) in cities"
+            :key="cityIndex"
+            :to="`/areas/${replaceSpacesWithUnderscore(city.toLowerCase())}`"
+            class="group flex items-center justify-between gap-4 bg-white rounded-[1.5rem] border border-primary/5 shadow-sm px-6 py-5 transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl hover:shadow-ink/10"
+            v-reveal="(cityIndex % 4) * 90"
+          >
+            <div class="flex items-start gap-3 min-w-0">
+              <span class="w-1 h-1 rotate-45 bg-brass mt-2.5 shrink-0" aria-hidden="true"></span>
+              <div class="min-w-0">
+                <h3 class="font-montserrat font-bold text-base text-primary group-hover:text-brass-dark transition-colors truncate">{{ city }}</h3>
+                <p class="text-xs text-gray-500">Professional Service</p>
               </div>
-            </NuxtLink>
-          </div>
+            </div>
+            <span
+              class="flex items-center justify-center w-9 h-9 rounded-full border border-primary/15 text-primary shrink-0 transition-all duration-300 group-hover:bg-ink group-hover:border-ink group-hover:text-white"
+              aria-hidden="true"
+            >&#8599;</span>
+          </NuxtLink>
         </div>
 
-        <!-- Enhanced Zip Codes Section -->
-        <div class="bg-white rounded-3xl p-8 lg:p-12 shadow-xl border border-gray-100">
-          <div class="text-center mb-12">
-            <h3 class="text-3xl lg:text-4xl font-bold text-gray-900 mb-6">
-              Find Your Zip Code
+        <!-- Zip Codes Panel -->
+        <div class="bg-white rounded-[2rem] border border-primary/5 shadow-sm p-8 lg:p-12" v-reveal>
+          <div class="text-center mb-10">
+            <h3 class="font-montserrat font-bold tracking-[-0.02em] text-2xl sm:text-3xl text-primary mb-4">
+              Find Your
+              <em class="font-display font-semibold italic text-brass-dark">Zip Code</em>
             </h3>
-            <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+            <p class="text-base sm:text-lg text-gray-600 max-w-3xl mx-auto leading-relaxed">
               We provide professional appliance repair services in these zip code areas across the Bay Area
             </p>
           </div>
-          
-          <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 xl:grid-cols-8 gap-3">
-            <div 
-              v-for="(zipCode, zipIndex) in zipCodes" 
+
+          <div class="flex flex-wrap justify-center gap-2">
+            <span
+              v-for="(zipCode, zipIndex) in zipCodes"
               :key="zipIndex"
-              class="bg-gradient-to-br from-primary/10 to-secondary/10 rounded-xl p-3 text-center border border-primary/20 hover:border-primary/40 hover:bg-primary/20 transition-all duration-300"
+              class="font-mono text-xs text-gray-500 bg-cream border border-primary/10 rounded-full px-3 py-1.5"
             >
-              <span class="text-primary font-semibold text-sm">{{ zipCode }}</span>
+              {{ zipCode }}
+            </span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="bg-white py-20 lg:py-28">
+      <div class="container mx-auto px-4 max-w-screen-xl">
+        <div class="grain glow-brass relative bg-ink rounded-[2rem] px-6 py-14 sm:px-14 sm:py-16 text-center overflow-hidden" v-reveal>
+          <div class="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-brass to-transparent" aria-hidden="true"></div>
+          <div class="relative z-10">
+            <h3 class="font-montserrat font-bold tracking-[-0.02em] text-3xl sm:text-4xl text-white leading-tight mb-6">
+              Ready to Get Your Appliances
+              <em class="font-display font-semibold italic text-brass-light">Fixed?</em>
+            </h3>
+
+            <p class="text-white/60 max-w-3xl mx-auto leading-relaxed mb-10">
+              Don't see your city listed? We serve the entire Bay Area!
+              Call us today to confirm service in your location and get a free estimate.
+            </p>
+
+            <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
+              <a
+                href="tel:(415) 941-4144"
+                class="w-full sm:w-auto inline-flex items-center justify-center min-h-[54px] px-9 py-4 rounded-full bg-white text-ink font-montserrat text-sm font-semibold uppercase tracking-[0.12em] transition-all duration-300 hover:bg-brass hover:text-white hover:scale-[1.03] touch-manipulation"
+              >
+                Call for Service Area Confirmation
+              </a>
+
+              <NuxtLink
+                to="/contact-us"
+                class="w-full sm:w-auto inline-flex items-center justify-center min-h-[54px] px-9 py-4 rounded-full border border-white/30 text-white font-montserrat text-sm font-semibold uppercase tracking-[0.12em] transition-all duration-300 hover:border-brass hover:text-brass-light hover:scale-[1.03] touch-manipulation"
+              >
+                Get Free Estimate
+              </NuxtLink>
             </div>
           </div>
         </div>
       </div>
-    </div>
-    
-    <!-- Enhanced Call to Action -->
-    <div class="py-20 bg-gradient-to-r from-primary to-secondary">
-      <div class="container mx-auto px-4 max-w-screen-xl">
-        <div class="text-center text-white">
-          <h3 class="text-4xl lg:text-5xl font-bold mb-6">
-            Ready to Get Your Appliances Fixed?
-          </h3>
-          <p class="text-xl lg:text-2xl text-white/90 mb-12 max-w-4xl mx-auto leading-relaxed">
-            Don't see your city listed? We serve the entire Bay Area! 
-            Call us today to confirm service in your location and get a free estimate.
-          </p>
-          
-          <div class="flex flex-col sm:flex-row gap-6 justify-center items-center">
-            <a href="tel:(415) 941-4144"
-               class="inline-flex items-center px-12 py-6 bg-white text-primary font-bold rounded-2xl hover:bg-gray-50 transition-all duration-300 shadow-2xl hover:shadow-3xl transform hover:-translate-y-2 text-xl min-h-[70px]">
-              <svg class="w-7 h-7 mr-4" fill="currentColor" viewBox="0 0 20 20">
-                <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"/>
-              </svg>
-              Call for Service Area Confirmation
-            </a>
-            
-            <NuxtLink to="/contact-us"
-                      class="inline-flex items-center px-12 py-6 border-3 border-white text-white font-bold rounded-2xl hover:bg-white hover:text-primary transition-all duration-300 transform hover:-translate-y-2 text-xl min-h-[70px]">
-              <svg class="w-7 h-7 mr-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"/>
-              </svg>
-              Get Free Estimate
-            </NuxtLink>
-          </div>
-        </div>
-      </div>
-    </div>
-    
+    </section>
+
     <Footer />
   </div>
 </template>

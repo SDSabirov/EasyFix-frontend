@@ -1,16 +1,16 @@
 <template>
   <div class="relative w-full h-full">
     <!-- Loading State -->
-    <div v-if="!mapLoaded" class="absolute inset-0 flex items-center justify-center bg-gray-100 rounded-3xl">
+    <div v-if="!mapLoaded" class="absolute inset-0 flex items-center justify-center bg-cream rounded-[2rem]">
       <div class="text-center">
-        <div class="inline-flex items-center px-6 py-3 bg-primary/10 rounded-full mb-4">
-          <svg class="w-6 h-6 text-primary mr-3 animate-spin" fill="none" viewBox="0 0 24 24">
+        <div class="inline-flex items-center gap-3 rounded-full border border-primary/15 bg-white px-5 py-2.5 mb-4">
+          <svg class="w-5 h-5 text-brass-dark animate-spin" fill="none" viewBox="0 0 24 24" aria-hidden="true">
             <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
             <path class="opacity-75" fill="currentColor" d="m4 12a8 8 0 0 1 8-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 0 1 4 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
           </svg>
-          <span class="text-primary font-semibold">Loading Map...</span>
+          <span class="font-montserrat text-[11px] font-semibold uppercase tracking-[0.25em] text-primary">Loading Map</span>
         </div>
-        <p class="text-gray-600">Finding the best route to your location</p>
+        <p class="text-sm text-gray-500">Finding the best route to your location</p>
       </div>
     </div>
 
@@ -20,7 +20,7 @@
         :center="currentLocation" 
         :zoom="zoom" 
         :options="mapOptions"
-        class="w-full h-full rounded-3xl overflow-hidden"
+        class="w-full h-full rounded-[2rem] overflow-hidden"
         @idle="onMapLoaded"
       >
         <!-- Main Location Marker -->
@@ -43,41 +43,35 @@
           :position="currentLocation"
           @closeclick="infoWindowOpen = false"
         >
-          <div class="p-4 max-w-sm">
-            <div class="flex items-center space-x-3 mb-3">
-              <div class="w-12 h-12 bg-gradient-to-br from-primary to-secondary rounded-xl flex items-center justify-center">
-                <svg class="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 20 20">
+          <div class="p-5 max-w-sm">
+            <div class="flex items-center gap-3 mb-3">
+              <span class="flex items-center justify-center w-11 h-11 rounded-full bg-cream border border-primary/10 shrink-0">
+                <svg class="w-5 h-5 text-brass-dark" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
                   <path fill-rule="evenodd" d="M6.267 3.455a3.066 3.066 0 001.745-.723 3.066 3.066 0 013.976 0 3.066 3.066 0 001.745.723 3.066 3.066 0 012.812 2.812c.051.643.304 1.254.723 1.745a3.066 3.066 0 010 3.976 3.066 3.066 0 00-.723 1.745 3.066 3.066 0 01-2.812 2.812 3.066 3.066 0 00-1.745.723 3.066 3.066 0 01-3.976 0 3.066 3.066 0 00-1.745-.723 3.066 3.066 0 01-2.812-2.812 3.066 3.066 0 00-.723-1.745 3.066 3.066 0 010-3.976 3.066 3.066 0 00.723-1.745 3.066 3.066 0 012.812-2.812zm7.44 5.252a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
                 </svg>
-              </div>
+              </span>
               <div>
-                <h3 class="font-bold text-gray-900 text-lg">Easy Fix Appliance</h3>
-                <p class="text-primary font-medium">Professional Service Area</p>
+                <h3 class="font-montserrat font-bold text-primary text-base">Easy Fix Appliance</h3>
+                <p class="font-montserrat text-[10px] font-semibold uppercase tracking-[0.2em] text-brass-dark">Professional Service Area</p>
               </div>
             </div>
-            
-            <p class="text-gray-600 mb-4 leading-relaxed">
+
+            <p class="text-sm text-gray-600 mb-4 leading-relaxed">
               We provide expert appliance repair services in this area with same-day availability.
             </p>
-            
+
             <div class="flex flex-col sm:flex-row gap-2">
-              <a 
+              <a
                 href="tel:4159414144"
-                class="inline-flex items-center justify-center px-4 py-2 bg-primary text-white font-semibold rounded-lg hover:bg-secondary transition-colors text-sm"
+                class="inline-flex items-center justify-center px-5 py-2.5 rounded-full bg-ink text-white font-montserrat text-xs font-semibold uppercase tracking-[0.12em] transition-all duration-300 hover:bg-brass"
               >
-                <svg class="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 20 20">
-                  <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"/>
-                </svg>
                 Call Now
               </a>
-              
-              <NuxtLink 
+
+              <NuxtLink
                 to="/booking"
-                class="inline-flex items-center justify-center px-4 py-2 border border-primary text-primary font-semibold rounded-lg hover:bg-primary hover:text-white transition-colors text-sm"
+                class="inline-flex items-center justify-center px-5 py-2.5 rounded-full border border-ink/20 text-ink font-montserrat text-xs font-semibold uppercase tracking-[0.12em] transition-all duration-300 hover:border-brass hover:text-brass-dark"
               >
-                <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3a1 1 0 011-1h6a1 1 0 011 1v4m-6 0h6m-6 0V5a1 1 0 00-1 1v1m0 8h6v2a1 1 0 01-1 1H9a1 1 0 01-1-1v-2zm6 0V5a1 1 0 011-1h2a1 1 0 011 1v14a1 1 0 01-1 1h-2a1 1 0 01-1-1V5z"/>
-                </svg>
                 Book Online
               </NuxtLink>
             </div>
@@ -87,29 +81,28 @@
     </ClientOnly>
 
     <!-- Map Controls Overlay -->
-    <div class="absolute top-4 left-4 bg-white/90 backdrop-blur-sm rounded-2xl p-3 shadow-lg border border-gray-200">
-      <div class="flex items-center space-x-2">
-        <div class="w-3 h-3 bg-green-500 rounded-full animate-pulse"></div>
-        <span class="text-sm font-medium text-gray-700">Service Available</span>
-      </div>
+    <div class="absolute top-4 left-4 inline-flex items-center gap-2.5 rounded-full border border-primary/10 bg-white/90 backdrop-blur-sm px-4 py-2 shadow-lg shadow-ink/5">
+      <span class="w-1.5 h-1.5 rounded-full bg-brass animate-pulse" aria-hidden="true"></span>
+      <span class="font-montserrat text-[10px] font-semibold uppercase tracking-[0.2em] text-primary">Service Available</span>
     </div>
 
     <!-- Legend -->
-    <div class="absolute bottom-4 left-4 bg-white/90 backdrop-blur-sm rounded-2xl p-4 shadow-lg border border-gray-200 max-w-xs">
-      <h4 class="font-bold text-gray-900 mb-3 text-sm">Service Area Legend</h4>
+    <div class="absolute bottom-4 left-4 rounded-[1.25rem] border border-primary/10 bg-white/90 backdrop-blur-sm p-5 shadow-lg shadow-ink/5 max-w-xs">
+      <h4 class="font-montserrat text-[10px] font-semibold uppercase tracking-[0.25em] text-gray-500 mb-3">Service Area Legend</h4>
       <div class="space-y-2 text-xs">
-        <div class="flex items-center space-x-2">
-          <div class="w-4 h-4 bg-primary rounded-full flex items-center justify-center">
-            <div class="w-2 h-2 bg-white rounded-full"></div>
-          </div>
+        <div class="flex items-center gap-2.5">
+          <span class="w-4 h-4 bg-primary rounded-full flex items-center justify-center shrink-0" aria-hidden="true">
+            <span class="w-2 h-2 bg-white rounded-full"></span>
+          </span>
           <span class="text-gray-600">Service Location</span>
         </div>
-        <div class="flex items-center space-x-2">
-          <div class="w-4 h-1 bg-primary/30 rounded"></div>
+        <div class="flex items-center gap-2.5">
+          <span class="w-4 h-1 bg-primary/30 rounded-full shrink-0" aria-hidden="true"></span>
           <span class="text-gray-600">Coverage Area</span>
         </div>
-        <div class="text-gray-500 mt-2">
-          <strong>Response Time:</strong> 1-2 hours
+        <div class="flex items-center gap-2.5 pt-1">
+          <span class="w-1 h-1 rotate-45 bg-brass shrink-0" aria-hidden="true"></span>
+          <span class="text-gray-500"><strong class="text-primary font-semibold">Response Time:</strong> 1-2 hours</span>
         </div>
       </div>
     </div>
@@ -206,7 +199,7 @@ watch(() => props.modelValue, (newLocation) => {
 <style scoped>
 /* Ensure the map container has proper styling */
 :deep(.gm-style) {
-  border-radius: 1.5rem;
+  border-radius: 2rem;
 }
 
 :deep(.gm-style-iw) {
@@ -234,11 +227,11 @@ watch(() => props.modelValue, (newLocation) => {
 }
 
 :deep(.gm-style-iw::-webkit-scrollbar-thumb) {
-  background: #164863;
+  background: #B08D57;
   border-radius: 3px;
 }
 
 :deep(.gm-style-iw::-webkit-scrollbar-thumb:hover) {
-  background: #0f3a4a;
+  background: #8F7040;
 }
 </style>
