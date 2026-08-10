@@ -1,47 +1,40 @@
 <template>
   <div>
     <Navbar />
-    
+
     <!-- Hero Section -->
-    <header class="relative h-[60vh] lg:h-[70vh] overflow-hidden mt-16 lg:mt-20" style="background: #0c2a3b; background-image: linear-gradient(to bottom right, #0c2a3b, #1C6E8C, #f97316);">
-      <!-- Professional Background Elements -->
-      <div class="absolute top-16 left-12 w-20 h-20 rounded-full blur-lg animate-bounce" style="background: rgba(249, 115, 22, 0.25); animation-delay: 0.5s;"></div>
-      <div class="absolute bottom-32 right-20 w-36 h-36 rounded-full blur-xl animate-pulse delay-1000" style="background: rgba(28, 110, 140, 0.2);"></div>
-      <div class="absolute top-1/3 right-1/4 w-16 h-16 rounded-full blur-md animate-pulse delay-500" style="background: rgba(251, 191, 36, 0.3);"></div>
-      
-      <!-- Hero Content -->
-      <div class="relative z-10 h-full flex flex-col items-center justify-center px-4 text-center">
-        <div class="max-w-4xl mx-auto">
-          <div class="inline-flex items-center px-6 py-3 rounded-full mb-8 border" style="background: rgba(255, 255, 255, 0.2); backdrop-filter: blur(8px); border-color: rgba(255, 255, 255, 0.3);">
-            <svg class="w-6 h-6 mr-3" style="color: #ffffff;" fill="currentColor" viewBox="0 0 20 20">
-              <path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-8-3a1 1 0 00-.867.5 1 1 0 11-1.731-1A3 3 0 0113 8a3.001 3.001 0 01-2 2.83V11a1 1 0 11-2 0v-1a1 1 0 011-1 1 1 0 100-2zm0 8a1 1 0 100-2 1 1 0 000 2z" clip-rule="evenodd"/>
-            </svg>
-            <span class="font-semibold text-lg" style="color: #ffffff;">Get Your Questions Answered</span>
-          </div>
-          
-          <h1 class="text-2xl sm:text-4xl lg:text-6xl font-bold mb-8 leading-tight" style="color: #ffffff;">
+    <header class="relative bg-cream pt-32 pb-16 lg:pt-40 lg:pb-20 overflow-hidden">
+      <span class="ghost-word text-[6rem] lg:text-[11rem] top-20 -right-6" aria-hidden="true">Answers</span>
+
+      <div class="container mx-auto px-4 max-w-screen-xl relative z-10">
+        <div class="text-center max-w-4xl mx-auto">
+          <span class="inline-flex items-center gap-2.5 rounded-full border border-primary/15 bg-white px-4 py-2 font-montserrat text-[10px] font-semibold uppercase tracking-[0.25em] text-primary mb-6">
+            <span class="w-1.5 h-1.5 rounded-full bg-brass animate-pulse" aria-hidden="true"></span>
+            Get Your Questions Answered
+          </span>
+
+          <h1 class="font-montserrat font-bold tracking-[-0.02em] text-3xl sm:text-5xl lg:text-6xl text-primary leading-[1.05] mb-6">
             Frequently Asked
-            <span class="block" style="color: #f97316;">Questions</span>
+            <em class="block font-display font-semibold italic text-brass-dark">Questions</em>
           </h1>
-          
-          <p class="text-base sm:text-xl lg:text-2xl mb-12 max-w-3xl mx-auto leading-relaxed" style="color: rgba(255, 255, 255, 0.9);">
-            Find answers to common questions about our <strong>appliance repair services</strong> in the Bay Area. 
-            Can't find what you're looking for? <strong>Call us directly</strong> for personalized assistance.
+
+          <p class="text-base sm:text-lg text-gray-600 max-w-3xl mx-auto leading-relaxed mb-10">
+            Find answers to common questions about our <strong class="text-primary font-semibold">appliance repair services</strong> in the Bay Area.
+            Can't find what you're looking for? <strong class="text-primary font-semibold">Call us directly</strong> for personalized assistance.
           </p>
-          
+
           <!-- CTA Buttons -->
-          <div class="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center items-center">
-            <a href="tel:4159414144" class="group w-full sm:w-auto inline-flex items-center justify-center px-6 py-4 sm:px-10 font-bold rounded-2xl transition-all duration-300 shadow-2xl hover:shadow-3xl transform hover:-translate-y-2 text-lg min-h-[48px] sm:min-h-[60px] touch-manipulation" style="background: linear-gradient(to right, #facc15, #f97316); color: #ffffff;">
-              <svg class="w-6 h-6 mr-3 group-hover:animate-pulse" fill="currentColor" viewBox="0 0 20 20">
-                <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"/>
-              </svg>
+          <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
+            <a
+              href="tel:4159414144"
+              class="w-full sm:w-auto inline-flex items-center justify-center min-h-[54px] px-9 py-4 rounded-full bg-ink text-white font-montserrat text-sm font-semibold uppercase tracking-[0.12em] transition-all duration-300 hover:bg-brass hover:scale-[1.03] touch-manipulation"
+            >
               Call Now: (415) 941-4144
             </a>
-
-            <NuxtLink to="/booking" class="w-full sm:w-auto inline-flex items-center justify-center px-6 py-4 sm:px-10 border-3 font-bold rounded-2xl transition-all duration-300 transform hover:-translate-y-2 text-lg min-h-[48px] sm:min-h-[60px] hover:bg-white hover:text-primary touch-manipulation" style="border-color: #ffffff; color: #ffffff; background: rgba(255, 255, 255, 0.1); backdrop-filter: blur(8px);">
-              <svg class="w-6 h-6 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3a1 1 0 011-1h6a1 1 0 011 1v4m-6 0h6m-6 0V5a1 1 0 00-1 1v1m0 8h6v2a1 1 0 01-1 1H9a1 1 0 01-1-1v-2zm6 0V5a1 1 0 011-1h2a1 1 0 011 1v14a1 1 0 01-1 1h-2a1 1 0 01-1-1V5z"/>
-              </svg>
+            <NuxtLink
+              to="/booking"
+              class="w-full sm:w-auto inline-flex items-center justify-center min-h-[54px] px-9 py-4 rounded-full border border-ink/20 text-ink font-montserrat text-sm font-semibold uppercase tracking-[0.12em] transition-all duration-300 hover:border-brass hover:text-brass-dark hover:scale-[1.03] touch-manipulation"
+            >
               Schedule Service Online
             </NuxtLink>
           </div>
@@ -50,28 +43,36 @@
     </header>
 
     <!-- FAQ Categories Section -->
-    <section class="py-12 sm:py-20 lg:py-32" style="background: linear-gradient(to bottom right, #f8fafc, #ffffff);">
-      <div class="container mx-auto px-4 max-w-screen-xl">
+    <section class="relative bg-white py-20 lg:py-28 overflow-hidden">
+      <span class="ghost-word text-[7rem] lg:text-[12rem] -top-6 -left-8" aria-hidden="true">Repairs</span>
+
+      <div class="container mx-auto px-4 max-w-screen-xl relative z-10">
         <!-- Category Navigation -->
-        <div class="text-center mb-16">
-          <h2 class="text-2xl sm:text-3xl lg:text-4xl font-bold mb-8" style="color: #1f2937;">Browse by Category</h2>
-          <div class="flex flex-wrap justify-center gap-4 mb-12">
-            <button 
-              v-for="category in categories" 
+        <div class="text-center mb-12 lg:mb-16" v-reveal>
+          <span class="inline-flex items-center gap-2.5 rounded-full border border-primary/15 bg-cream px-4 py-2 font-montserrat text-[10px] font-semibold uppercase tracking-[0.25em] text-primary mb-6">
+            <span class="w-1.5 h-1.5 rounded-full bg-brass animate-pulse" aria-hidden="true"></span>
+            Knowledge Base
+          </span>
+
+          <h2 class="font-montserrat font-bold tracking-[-0.02em] text-3xl sm:text-5xl text-primary leading-[1.05] mb-10">
+            Browse by
+            <em class="font-display font-semibold italic text-brass-dark">Category</em>
+          </h2>
+
+          <div class="flex flex-wrap justify-center gap-3">
+            <button
+              v-for="category in categories"
               :key="category.id"
+              type="button"
               @click="activeCategory = category.id"
-              :class="[
-                'px-6 py-3 rounded-xl font-semibold transition-all duration-300 transform hover:-translate-y-1',
-                activeCategory === category.id 
-                  ? 'text-white shadow-lg' 
-                  : 'border-2'
-              ]"
-              :style="activeCategory === category.id 
-                ? 'background: linear-gradient(to right, #0c2a3b, #1C6E8C);' 
-                : 'border-color: #0c2a3b; color: #0c2a3b; background: #ffffff;'"
+              :aria-pressed="activeCategory === category.id"
+              class="inline-flex items-center gap-2.5 rounded-full border px-5 py-3 font-montserrat text-xs font-semibold uppercase tracking-[0.14em] transition-all duration-300 hover:scale-[1.05] touch-manipulation"
+              :class="activeCategory === category.id
+                ? 'bg-ink text-white border-ink'
+                : 'bg-white text-primary border-primary/15 hover:bg-ink hover:text-white hover:border-ink'"
             >
-              <svg class="w-5 h-5 mr-2 inline" fill="currentColor" viewBox="0 0 20 20">
-                <path :d="category.icon"/>
+              <svg class="w-4 h-4 opacity-60" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" :d="category.icon" />
               </svg>
               {{ category.name }}
             </button>
@@ -79,111 +80,112 @@
         </div>
 
         <!-- FAQ Items -->
-        <div class="max-w-4xl mx-auto">
-          <div 
-            v-for="(faq, index) in filteredFaqs" 
-            :key="index"
-            class="mb-6 rounded-2xl shadow-lg overflow-hidden transition-all duration-300 hover:shadow-xl"
-            style="background: #ffffff;"
+        <div class="max-w-4xl mx-auto space-y-4">
+          <div
+            v-for="(faq, index) in filteredFaqs"
+            :key="faq.question"
+            class="bg-white border border-primary/10 rounded-[1.5rem] overflow-hidden transition-colors duration-300 hover:border-brass/40"
           >
-            <button
-              @click="toggleFaq(index)"
-              class="w-full p-5 sm:p-8 text-left flex items-center justify-between hover:bg-gray-50 transition-colors duration-300"
-            >
-              <div class="flex items-start space-x-4">
-                <div class="flex-shrink-0 w-10 h-10 rounded-xl flex items-center justify-center" style="background: rgba(249, 115, 22, 0.1);">
-                  <svg class="w-5 h-5" style="color: #f97316;" fill="currentColor" viewBox="0 0 20 20">
-                    <path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-8-3a1 1 0 00-.867.5 1 1 0 11-1.731-1A3 3 0 0113 8a3.001 3.001 0 01-2 2.83V11a1 1 0 11-2 0v-1a1 1 0 011-1 1 1 0 100-2zm0 8a1 1 0 100-2 1 1 0 000 2z" clip-rule="evenodd"/>
-                  </svg>
-                </div>
-                <h3 class="text-lg sm:text-xl font-bold text-left" style="color: #1f2937;">{{ faq.question }}</h3>
-              </div>
-              <svg 
-                class="w-6 h-6 transition-transform duration-300"
-                :class="{ 'rotate-180': activeFaq === index }"
-                style="color: #6b7280;"
-                fill="none" 
-                stroke="currentColor" 
-                viewBox="0 0 24 24"
+            <h3>
+              <button
+                type="button"
+                @click="toggleFaq(index)"
+                :aria-expanded="activeFaq === index"
+                :aria-controls="`faq-panel-${index}`"
+                class="w-full flex items-center justify-between gap-6 text-left p-5 sm:p-7 touch-manipulation"
               >
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
-              </svg>
-            </button>
-            
-            <div 
-              v-show="activeFaq === index"
-              class="px-8 pb-8 animate-fadeIn"
+                <span class="flex items-start gap-4">
+                  <span class="font-display font-semibold text-base text-brass mt-0.5 shrink-0" aria-hidden="true">{{ String(index + 1).padStart(2, '0') }}</span>
+                  <span class="font-montserrat font-semibold text-base sm:text-lg text-primary leading-snug">{{ faq.question }}</span>
+                </span>
+                <svg
+                  class="w-5 h-5 text-brass shrink-0 transition-transform duration-300"
+                  :class="{ 'rotate-180': activeFaq === index }"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                  aria-hidden="true"
+                >
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M19 9l-7 7-7-7" />
+                </svg>
+              </button>
+            </h3>
+
+            <Transition
+              enter-active-class="transition-all duration-300 ease-out"
+              enter-from-class="opacity-0 max-h-0"
+              enter-to-class="opacity-100 max-h-[40rem]"
+              leave-active-class="transition-all duration-200 ease-in"
+              leave-from-class="opacity-100 max-h-[40rem]"
+              leave-to-class="opacity-0 max-h-0"
             >
-              <div class="pl-14">
-                <p class="text-base sm:text-lg leading-relaxed" style="color: #4b5563;" v-html="faq.answer"></p>
+              <div v-show="activeFaq === index" :id="`faq-panel-${index}`" class="overflow-hidden">
+                <div class="px-5 sm:px-7 pb-6 sm:pb-7">
+                  <div class="border-t border-primary/10 pt-5 sm:pl-9">
+                    <p class="text-gray-600 leading-relaxed text-sm sm:text-base" v-html="faq.answer"></p>
+                  </div>
+                </div>
               </div>
-            </div>
+            </Transition>
           </div>
         </div>
       </div>
     </section>
 
     <!-- Still Have Questions Section -->
-    <section class="py-12 sm:py-20" style="background: #0c2a3b;">
-      <div class="container mx-auto px-4 max-w-screen-xl text-center">
-        <div class="max-w-4xl mx-auto">
-          <h2 class="text-2xl sm:text-4xl lg:text-5xl font-bold mb-8" style="color: #ffffff;">
-            Still Have Questions?
+    <section class="grain glow-brass relative bg-ink py-20 lg:py-28 overflow-hidden">
+      <div class="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-brass to-transparent" aria-hidden="true"></div>
+      <span class="ghost-word ghost-word--light text-[7rem] lg:text-[12rem] top-8 -right-8" aria-hidden="true">Support</span>
+
+      <div class="container mx-auto px-4 max-w-screen-xl relative z-10">
+        <div class="text-center max-w-3xl mx-auto mb-14" v-reveal>
+          <span class="inline-flex items-center gap-2.5 rounded-full border border-white/15 bg-white/5 px-4 py-2 font-montserrat text-[10px] font-semibold uppercase tracking-[0.25em] text-brass-light mb-6">
+            <span class="w-1.5 h-1.5 rounded-full bg-brass animate-pulse" aria-hidden="true"></span>
+            We're Here to Help
+          </span>
+
+          <h2 class="font-montserrat font-bold tracking-[-0.02em] text-3xl sm:text-5xl text-white leading-[1.05] mb-6">
+            Still Have
+            <em class="font-display font-semibold italic text-brass-light">Questions?</em>
           </h2>
-          <p class="text-base sm:text-xl lg:text-2xl mb-12" style="color: rgba(255, 255, 255, 0.9);">
+          <p class="text-white/60 text-base sm:text-lg leading-relaxed">
             Our friendly customer service team is standing by to help you with any questions about appliance repairs, scheduling, or our services.
           </p>
-          
-          <div class="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8 mb-12">
-            <div class="p-6 rounded-2xl" style="background: rgba(255, 255, 255, 0.1); backdrop-filter: blur(8px);">
-              <div class="w-16 h-16 rounded-xl mx-auto mb-4 flex items-center justify-center" style="background: rgba(249, 115, 22, 0.2);">
-                <svg class="w-8 h-8" style="color: #f97316;" fill="currentColor" viewBox="0 0 20 20">
-                  <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"/>
-                </svg>
-              </div>
-              <h3 class="text-xl font-bold mb-3" style="color: #ffffff;">Call Us</h3>
-              <p style="color: rgba(255, 255, 255, 0.8);">Speak directly with our experts</p>
-              <p class="font-bold text-lg mt-2" style="color: #f97316;">(415) 941-4144</p>
-            </div>
-            
-            <div class="p-6 rounded-2xl" style="background: rgba(255, 255, 255, 0.1); backdrop-filter: blur(8px);">
-              <div class="w-16 h-16 rounded-xl mx-auto mb-4 flex items-center justify-center" style="background: rgba(249, 115, 22, 0.2);">
-                <svg class="w-8 h-8" style="color: #f97316;" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3a1 1 0 011-1h6a1 1 0 011 1v4m-6 0h6m-6 0V5a1 1 0 00-1 1v1m0 8h6v2a1 1 0 01-1 1H9a1 1 0 01-1-1v-2zm6 0V5a1 1 0 011-1h2a1 1 0 011 1v14a1 1 0 01-1 1h-2a1 1 0 01-1-1V5z"/>
-                </svg>
-              </div>
-              <h3 class="text-xl font-bold mb-3" style="color: #ffffff;">Book Online</h3>
-              <p style="color: rgba(255, 255, 255, 0.8);">Schedule convenient service</p>
-              <p class="font-bold text-lg mt-2" style="color: #f97316;">Same-Day Service</p>
-            </div>
-            
-            <div class="p-6 rounded-2xl" style="background: rgba(255, 255, 255, 0.1); backdrop-filter: blur(8px);">
-              <div class="w-16 h-16 rounded-xl mx-auto mb-4 flex items-center justify-center" style="background: rgba(249, 115, 22, 0.2);">
-                <svg class="w-8 h-8" style="color: #f97316;" fill="currentColor" viewBox="0 0 20 20">
-                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z" clip-rule="evenodd"/>
-                </svg>
-              </div>
-              <h3 class="text-xl font-bold mb-3" style="color: #ffffff;">Same-Day Service</h3>
-              <p style="color: rgba(255, 255, 255, 0.8);">Emergency repairs available</p>
-              <p class="font-bold text-lg mt-2" style="color: #f97316;">Fast Response</p>
-            </div>
-          </div>
-          
-          <div class="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center items-center">
-            <a href="tel:4159414144" class="group w-full sm:w-auto inline-flex items-center justify-center px-8 py-4 sm:px-12 sm:py-6 font-bold rounded-2xl transition-all duration-300 shadow-2xl hover:shadow-3xl transform hover:-translate-y-2 text-base sm:text-xl min-h-[48px] sm:min-h-[70px] touch-manipulation" style="background: #ffffff; color: #0c2a3b;">
-              <svg class="w-7 h-7 mr-4 group-hover:animate-pulse" fill="currentColor" viewBox="0 0 20 20">
-                <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"/>
-              </svg>
-              Call for Immediate Help
-            </a>
+        </div>
 
-            <NuxtLink to="/contact-us" class="w-full sm:w-auto inline-flex items-center justify-center px-8 py-4 sm:px-12 sm:py-6 border-3 font-bold rounded-2xl transition-all duration-300 transform hover:-translate-y-2 text-base sm:text-xl min-h-[48px] sm:min-h-[70px] hover:bg-white hover:text-primary touch-manipulation" style="border-color: #ffffff; color: #ffffff; background: rgba(255, 255, 255, 0.1); backdrop-filter: blur(8px);">
-              <svg class="w-7 h-7 mr-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"/>
-              </svg>
-              Send Us a Message
-            </NuxtLink>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-5 lg:gap-6 max-w-4xl mx-auto mb-14">
+          <div class="border border-white/10 bg-white/5 rounded-[1.5rem] p-7 text-center" v-reveal>
+            <h3 class="font-montserrat text-[11px] font-semibold uppercase tracking-[0.25em] text-white/50 mb-3">Call Us</h3>
+            <p class="font-display font-semibold text-2xl text-brass-light mb-2">(415) 941-4144</p>
+            <p class="text-white/60 text-sm">Speak directly with our experts</p>
           </div>
+
+          <div class="border border-white/10 bg-white/5 rounded-[1.5rem] p-7 text-center" v-reveal="90">
+            <h3 class="font-montserrat text-[11px] font-semibold uppercase tracking-[0.25em] text-white/50 mb-3">Book Online</h3>
+            <p class="font-display font-semibold text-2xl text-brass-light mb-2">Same-Day Service</p>
+            <p class="text-white/60 text-sm">Schedule convenient service</p>
+          </div>
+
+          <div class="border border-white/10 bg-white/5 rounded-[1.5rem] p-7 text-center" v-reveal="180">
+            <h3 class="font-montserrat text-[11px] font-semibold uppercase tracking-[0.25em] text-white/50 mb-3">Same-Day Service</h3>
+            <p class="font-display font-semibold text-2xl text-brass-light mb-2">Fast Response</p>
+            <p class="text-white/60 text-sm">Emergency repairs available</p>
+          </div>
+        </div>
+
+        <div class="flex flex-col sm:flex-row gap-4 justify-center items-center" v-reveal>
+          <a
+            href="tel:4159414144"
+            class="w-full sm:w-auto inline-flex items-center justify-center min-h-[54px] px-9 py-4 rounded-full bg-white text-ink font-montserrat text-sm font-semibold uppercase tracking-[0.12em] transition-all duration-300 hover:bg-brass hover:text-white hover:scale-[1.03] touch-manipulation"
+          >
+            Call for Immediate Help
+          </a>
+          <NuxtLink
+            to="/contact-us"
+            class="w-full sm:w-auto inline-flex items-center justify-center min-h-[54px] px-9 py-4 rounded-full border border-white/30 text-white font-montserrat text-sm font-semibold uppercase tracking-[0.12em] transition-all duration-300 hover:border-brass hover:text-brass-light hover:scale-[1.03] touch-manipulation"
+          >
+            Send Us a Message
+          </NuxtLink>
         </div>
       </div>
     </section>
@@ -368,7 +370,7 @@ useSchemaOrg([
   defineWebPage({
     '@type': 'FAQPage',
   }),
-  ...faqs.map(faq => 
+  ...faqs.map(faq =>
     defineQuestion({
       name: faq.question,
       acceptedAnswer: faq.answer.replace(/<[^>]*>/g, '').replace(/&[^;]+;/g, '').trim(),
@@ -376,20 +378,3 @@ useSchemaOrg([
   )
 ]);
 </script>
-
-<style scoped>
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(-10px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-.animate-fadeIn {
-  animation: fadeIn 0.3s ease-out;
-}
-</style>
