@@ -1,185 +1,190 @@
 <template>
-  <section class="bg-white py-20 lg:py-32">
-    <div class="container mx-auto px-4 max-w-screen-xl">
-      <!-- Enhanced Header -->
-      <div class="text-center mb-20">
-        <div class="inline-flex items-center px-6 py-3 bg-gradient-to-r from-primary/10 to-secondary/10 rounded-full mb-8">
-          <svg class="w-6 h-6 text-primary mr-3" fill="currentColor" viewBox="0 0 20 20">
-            <path fill-rule="evenodd" d="M6.267 3.455a3.066 3.066 0 001.745-.723 3.066 3.066 0 013.976 0 3.066 3.066 0 001.745.723 3.066 3.066 0 012.812 2.812c.051.643.304 1.254.723 1.745a3.066 3.066 0 010 3.976 3.066 3.066 0 00-.723 1.745 3.066 3.066 0 01-2.812 2.812 3.066 3.066 0 00-1.745.723 3.066 3.066 0 01-3.976 0 3.066 3.066 0 00-1.745-.723 3.066 3.066 0 01-2.812-2.812 3.066 3.066 0 00-.723-1.745 3.066 3.066 0 010-3.976 3.066 3.066 0 00.723-1.745 3.066 3.066 0 012.812-2.812zm7.44 5.252a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
-          </svg>
-          <span class="text-primary font-bold text-lg">Premium Brand Specialists</span>
-        </div>
-        
-        <h2 class="text-5xl lg:text-6xl font-bold text-gray-900 mb-8 leading-tight">
+  <section class="relative bg-white py-16 lg:py-24 overflow-hidden">
+    <span class="ghost-word text-[6rem] lg:text-[11rem] -top-4 -right-6" aria-hidden="true">Premium</span>
+
+    <div class="container mx-auto px-4 max-w-screen-xl relative z-10">
+      <!-- Header -->
+      <div class="text-center max-w-4xl mx-auto mb-12 lg:mb-16" v-reveal>
+        <span class="inline-flex items-center gap-2.5 rounded-full border border-primary/15 bg-cream px-4 py-2 font-montserrat text-[10px] font-semibold uppercase tracking-[0.25em] text-primary mb-6">
+          <span class="w-1.5 h-1.5 rounded-full bg-brass animate-pulse" aria-hidden="true"></span>
+          Premium Brand Specialists
+        </span>
+
+        <h2 class="font-montserrat font-bold tracking-[-0.02em] text-3xl sm:text-5xl text-primary leading-[1.05] mb-6">
           Luxury Appliance Repair Services
-          <span class="block text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary">for Premium Brands</span>
+          <em class="block font-display font-semibold italic text-brass-dark">for Premium Brands</em>
         </h2>
-        
-        <p class="text-xl lg:text-2xl text-gray-600 max-w-5xl mx-auto leading-relaxed mb-12">
-          <strong>At Easy Fix Appliance</strong>, we deliver premium appliance repair services for luxury brands like
-          <strong class="text-primary">Sub-Zero, Viking, Dacor, Bertazzoni, Thermador, KitchenAid, GE Monogram</strong>, and more. 
-          Our <strong class="text-secondary">highly trained and certified</strong> technicians specialize in high-end appliance repair, 
+
+        <p class="text-gray-600 leading-relaxed text-base sm:text-lg">
+          <strong class="text-primary font-semibold">At Easy Fix Appliance</strong>, we deliver premium appliance repair services for luxury brands like
+          <strong>Sub-Zero, Viking, Dacor, Bertazzoni, Thermador, KitchenAid, GE Monogram</strong>, and more.
+          Our <strong>highly trained and certified</strong> technicians specialize in high-end appliance repair,
           ensuring your appliances perform at their best.
         </p>
-        
-        <!-- Enhanced Value Propositions -->
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
-          <div class="bg-gradient-to-br from-blue-50 to-blue-100 rounded-3xl p-8 border-l-4 border-blue-500">
-            <div class="w-16 h-16 bg-blue-500 rounded-2xl flex items-center justify-center mx-auto mb-4">
-              <svg class="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 20 20">
-                <path fill-rule="evenodd" d="M6.267 3.455a3.066 3.066 0 001.745-.723 3.066 3.066 0 013.976 0 3.066 3.066 0 001.745.723 3.066 3.066 0 012.812 2.812c.051.643.304 1.254.723 1.745a3.066 3.066 0 010 3.976 3.066 3.066 0 00-.723 1.745 3.066 3.066 0 01-2.812 2.812 3.066 3.066 0 00-1.745.723 3.066 3.066 0 01-3.976 0 3.066 3.066 0 00-1.745-.723 3.066 3.066 0 01-2.812-2.812 3.066 3.066 0 00-.723-1.745 3.066 3.066 0 010-3.976 3.066 3.066 0 00.723-1.745 3.066 3.066 0 012.812-2.812zm7.44 5.252a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
-              </svg>
-            </div>
-            <h3 class="text-xl font-bold text-gray-900 mb-3">Genuine OEM Parts</h3>
-            <p class="text-gray-600">We use authentic manufacturer parts for lasting repairs and optimal performance</p>
-          </div>
-          
-          <div class="bg-gradient-to-br from-green-50 to-green-100 rounded-3xl p-8 border-l-4 border-green-500">
-            <div class="w-16 h-16 bg-green-500 rounded-2xl flex items-center justify-center mx-auto mb-4">
-              <svg class="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 20 20">
-                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z" clip-rule="evenodd"/>
-              </svg>
-            </div>
-            <h3 class="text-xl font-bold text-gray-900 mb-3">Advanced Techniques</h3>
-            <p class="text-gray-600">Our technicians use cutting-edge repair methods for challenging issues</p>
-          </div>
-          
-          <div class="bg-gradient-to-br from-purple-50 to-purple-100 rounded-3xl p-8 border-l-4 border-purple-500">
-            <div class="w-16 h-16 bg-purple-500 rounded-2xl flex items-center justify-center mx-auto mb-4">
-              <svg class="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 20 20">
-                <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
-              </svg>
-            </div>
-            <h3 class="text-xl font-bold text-gray-900 mb-3">Flexible Scheduling</h3>
-            <p class="text-gray-600">Convenient scheduling that fits your busy lifestyle with same-day service available</p>
-          </div>
+      </div>
+
+      <!-- Value Propositions -->
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-5 lg:gap-6 mb-16 lg:mb-20">
+        <div
+          class="group rounded-[1.5rem] border border-primary/10 bg-white px-7 py-8 transition-all duration-300 hover:border-brass/50 hover:shadow-lg hover:shadow-ink/5 hover:-translate-y-1"
+          v-reveal
+        >
+          <span class="flex items-center justify-center w-12 h-12 rounded-full bg-cream mb-5 transition-colors duration-300 group-hover:bg-brass/15">
+            <svg class="w-5 h-5 text-brass-dark" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+              <path fill-rule="evenodd" d="M6.267 3.455a3.066 3.066 0 001.745-.723 3.066 3.066 0 013.976 0 3.066 3.066 0 001.745.723 3.066 3.066 0 012.812 2.812c.051.643.304 1.254.723 1.745a3.066 3.066 0 010 3.976 3.066 3.066 0 00-.723 1.745 3.066 3.066 0 01-2.812 2.812 3.066 3.066 0 00-1.745.723 3.066 3.066 0 01-3.976 0 3.066 3.066 0 00-1.745-.723 3.066 3.066 0 01-2.812-2.812 3.066 3.066 0 00-.723-1.745 3.066 3.066 0 010-3.976 3.066 3.066 0 00.723-1.745 3.066 3.066 0 012.812-2.812zm7.44 5.252a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+            </svg>
+          </span>
+          <h3 class="font-montserrat font-bold text-lg text-primary mb-2">Genuine OEM Parts</h3>
+          <p class="text-sm text-gray-600 leading-relaxed">We use authentic manufacturer parts for lasting repairs and optimal performance</p>
+        </div>
+
+        <div
+          class="group rounded-[1.5rem] border border-primary/10 bg-white px-7 py-8 transition-all duration-300 hover:border-brass/50 hover:shadow-lg hover:shadow-ink/5 hover:-translate-y-1"
+          v-reveal="90"
+        >
+          <span class="flex items-center justify-center w-12 h-12 rounded-full bg-cream mb-5 transition-colors duration-300 group-hover:bg-brass/15">
+            <svg class="w-5 h-5 text-brass-dark" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+              <path fill-rule="evenodd" d="M11.49 3.17c-.38-1.56-2.6-1.56-2.98 0a1.532 1.532 0 01-2.286.948c-1.372-.836-2.942.734-2.106 2.106.54.886.061 2.042-.947 2.287-1.561.379-1.561 2.6 0 2.978a1.532 1.532 0 01.947 2.287c-.836 1.372.734 2.942 2.106 2.106a1.532 1.532 0 012.287.947c.379 1.561 2.6 1.561 2.978 0a1.533 1.533 0 012.287-.947c1.372.836 2.942-.734 2.106-2.106a1.533 1.533 0 01.947-2.287c1.561-.379 1.561-2.6 0-2.978a1.532 1.532 0 01-.947-2.287c.836-1.372-.734-2.942-2.106-2.106a1.532 1.532 0 01-2.287-.947zM10 13a3 3 0 100-6 3 3 0 000 6z" clip-rule="evenodd"/>
+            </svg>
+          </span>
+          <h3 class="font-montserrat font-bold text-lg text-primary mb-2">Advanced Techniques</h3>
+          <p class="text-sm text-gray-600 leading-relaxed">Our technicians use cutting-edge repair methods for challenging issues</p>
+        </div>
+
+        <div
+          class="group rounded-[1.5rem] border border-primary/10 bg-white px-7 py-8 transition-all duration-300 hover:border-brass/50 hover:shadow-lg hover:shadow-ink/5 hover:-translate-y-1"
+          v-reveal="180"
+        >
+          <span class="flex items-center justify-center w-12 h-12 rounded-full bg-cream mb-5 transition-colors duration-300 group-hover:bg-brass/15">
+            <svg class="w-5 h-5 text-brass-dark" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+              <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z" clip-rule="evenodd"/>
+            </svg>
+          </span>
+          <h3 class="font-montserrat font-bold text-lg text-primary mb-2">Flexible Scheduling</h3>
+          <p class="text-sm text-gray-600 leading-relaxed">Convenient scheduling that fits your busy lifestyle with same-day service available</p>
         </div>
       </div>
-      
-      <!-- Enhanced Brand Grid -->
-      <div class="mb-20">
-        <h3 class="text-3xl font-bold text-center text-gray-900 mb-12">Authorized Service for Premium Brands</h3>
-        <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
-          <NuxtLink v-for="brand in brands" :key="brand.name" :to="brand.link"
-               class="group bg-gradient-to-br from-white to-gray-50 rounded-3xl p-8 shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-3 border border-gray-100 hover:border-primary/20 block">
-            <div class="text-center">
-              <img loading="lazy" decoding="async" :src="brand.logo" :alt="brand.name + ' appliance repair services'"
-                   class="h-16 mx-auto mb-6 object-contain filter grayscale group-hover:grayscale-0 transition-all duration-500 group-hover:scale-110" />
-              <h4 class="font-bold text-gray-900 text-lg mb-2">{{ brand.name }}</h4>
-              <p class="text-sm text-gray-600 mb-4">{{ brand.specialty }}</p>
-              <div class="inline-block text-xs text-primary font-semibold bg-primary/10 px-3 py-1 rounded-full">
-                Authorized Service
-              </div>
+
+      <!-- Brand Grid -->
+      <div class="mb-16 lg:mb-20">
+        <h3 class="font-montserrat font-bold tracking-[-0.02em] text-2xl sm:text-3xl text-primary text-center mb-10" v-reveal>
+          Authorized Service for
+          <em class="font-display font-semibold italic text-brass-dark">Premium Brands</em>
+        </h3>
+        <div class="grid grid-cols-2 md:grid-cols-3 gap-5 lg:gap-6">
+          <NuxtLink
+            v-for="(brand, index) in brands"
+            :key="brand.name"
+            :to="brand.link"
+            class="group bg-white rounded-[1.5rem] border border-primary/5 shadow-sm p-7 flex flex-col items-center text-center transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl hover:shadow-ink/10"
+            v-reveal="(index % 3) * 90"
+          >
+            <img
+              loading="lazy"
+              decoding="async"
+              :src="brand.logo"
+              :alt="brand.name + ' appliance repair services'"
+              class="h-12 lg:h-14 object-contain grayscale opacity-60 transition-all duration-500 group-hover:grayscale-0 group-hover:opacity-100 mb-4"
+            />
+            <h4 class="font-display font-semibold text-xl text-primary mb-1 transition-colors group-hover:text-brass-dark">{{ brand.name }}</h4>
+            <p class="font-montserrat text-[10px] font-semibold uppercase tracking-[0.2em] text-gray-500">{{ brand.specialty }}</p>
+          </NuxtLink>
+        </div>
+      </div>
+
+      <!-- Services Grid -->
+      <div class="mb-16 lg:mb-20">
+        <h3 class="font-montserrat font-bold tracking-[-0.02em] text-2xl sm:text-3xl text-primary text-center mb-10" v-reveal>
+          Our Specialized
+          <em class="font-display font-semibold italic text-brass-dark">Repair Services</em>
+        </h3>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 lg:gap-6">
+          <NuxtLink
+            v-for="(service, index) in services"
+            :key="service.name"
+            :to="service.link"
+            class="group relative bg-white rounded-[1.5rem] overflow-hidden border border-primary/5 shadow-sm transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl hover:shadow-ink/10"
+            v-reveal="(index % 4) * 90"
+          >
+            <div class="relative overflow-hidden aspect-[4/3]">
+              <img
+                loading="lazy"
+                decoding="async"
+                :src="service.image"
+                :alt="service.alt"
+                class="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-110"
+              />
+              <div class="absolute inset-0 bg-gradient-to-t from-ink/50 via-transparent to-transparent"></div>
+              <span
+                class="absolute bottom-3 right-3 flex items-center justify-center w-10 h-10 rounded-full bg-white/90 text-ink backdrop-blur-sm translate-y-14 group-hover:translate-y-0 transition-transform duration-500"
+                aria-hidden="true"
+              >&#8599;</span>
+            </div>
+            <div class="p-6">
+              <h4 class="font-display font-semibold text-2xl text-primary mb-2 transition-colors group-hover:text-brass-dark">{{ service.name }}</h4>
+              <p class="text-sm text-gray-600 leading-relaxed line-clamp-3">{{ service.description }}</p>
             </div>
           </NuxtLink>
         </div>
       </div>
 
-      <!-- Enhanced Services Grid -->
-      <div class="mb-20">
-        <h3 class="text-3xl font-bold text-center text-gray-900 mb-12">Our Specialized Repair Services</h3>
-        <div class="flex flex-wrap justify-center gap-10">
-          <div v-for="service in services" :key="service.name"
-               class="group bg-white rounded-3xl shadow-2xl overflow-hidden hover:shadow-3xl transition-all duration-500 transform hover:-translate-y-3 border border-gray-100 hover:border-primary/20 w-full md:w-[calc(50%-1.25rem)] lg:w-[calc(33.333%-1.7rem)]">
-            <div class="relative h-64 overflow-hidden">
-              <img loading="lazy" decoding="async" :src="service.image" :alt="service.alt"
-                   class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" />
-              <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
-              <div class="absolute bottom-6 left-6 right-6">
-                <div class="flex flex-wrap gap-2 mb-4">
-                  <img loading="lazy" decoding="async" v-for="logo in service.logos" :key="logo.alt" 
-                       :src="logo.src" :alt="logo.alt"
-                       class="h-8 object-contain bg-white/20 backdrop-blur-sm rounded-lg p-1" />
-                </div>
-              </div>
-            </div>
-            
-            <div class="p-8">
-              <h4 class="text-2xl font-bold text-gray-900 mb-4 group-hover:text-primary transition-colors">{{ service.name }}</h4>
-              <p class="text-gray-600 leading-relaxed mb-6 text-lg">{{ service.description }}</p>
-              
-              <NuxtLink :to="service.link"
-                        class="inline-flex items-center justify-center w-full px-8 py-4 bg-gradient-to-r from-primary to-secondary text-white font-bold rounded-2xl hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 group-hover:scale-105 text-lg">
-                <span>{{ service.buttonText }}</span>
-                <svg class="w-6 h-6 ml-3 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6" />
-                </svg>
-              </NuxtLink>
+      <!-- Process Section -->
+      <div class="mb-16 lg:mb-20" v-reveal>
+        <div class="bg-cream border border-primary/10 rounded-[2rem] p-8 sm:p-12">
+          <h3 class="font-montserrat font-bold tracking-[-0.02em] text-2xl sm:text-3xl text-primary text-center mb-10">
+            Our Simple
+            <em class="font-display font-semibold italic text-brass-dark">Repair Process</em>
+          </h3>
+          <div class="grid grid-cols-1 md:grid-cols-4 gap-8 lg:gap-10">
+            <div v-for="(step, index) in repairProcess" :key="step.title" v-reveal="index * 90">
+              <div class="font-display font-semibold text-5xl text-brass/40 leading-none mb-4" aria-hidden="true">0{{ index + 1 }}</div>
+              <h4 class="font-montserrat font-bold text-lg text-primary mb-2">{{ step.title }}</h4>
+              <p class="text-sm text-gray-600 leading-relaxed">{{ step.description }}</p>
             </div>
           </div>
         </div>
       </div>
-      
-      <!-- Enhanced Process Section -->
-      <div class="mb-20">
-        <div class="bg-gradient-to-br from-gray-50 to-gray-100 rounded-3xl p-12">
-          <h3 class="text-3xl font-bold text-center text-gray-900 mb-12">Our Simple Repair Process</h3>
-          <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
-            <div v-for="(step, index) in repairProcess" :key="step.title" class="text-center group">
-              <div class="relative mb-6">
-                <div class="w-20 h-20 bg-gradient-to-br from-primary to-secondary rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
-                  <span class="text-2xl font-bold text-white">{{ index + 1 }}</span>
-                </div>
-                <div v-if="index < 3" class="hidden md:block absolute top-10 left-full w-full h-0.5 bg-gradient-to-r from-primary to-secondary transform -translate-y-1/2"></div>
-              </div>
-              <h4 class="text-xl font-bold text-gray-900 mb-3">{{ step.title }}</h4>
-              <p class="text-gray-600">{{ step.description }}</p>
-            </div>
+
+      <!-- Call to Action -->
+      <div class="grain glow-brass relative bg-ink rounded-[2rem] px-6 py-14 sm:px-14 sm:py-16 overflow-hidden" v-reveal>
+        <div class="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-brass to-transparent" aria-hidden="true"></div>
+        <div class="relative z-10 max-w-4xl mx-auto text-center">
+          <h3 class="font-montserrat font-bold tracking-[-0.02em] text-3xl sm:text-4xl text-white leading-tight mb-4">
+            Ready to Schedule Your Professional
+            <em class="font-display font-semibold italic text-brass-light">Appliance Repair?</em>
+          </h3>
+          <p class="text-white/60 leading-relaxed mb-10">
+            Get expert repair services for your luxury appliances. Our certified technicians are ready to help restore your appliances to peak performance with guaranteed satisfaction.
+          </p>
+
+          <div class="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
+            <a
+              href="tel:4159414144"
+              class="w-full sm:w-auto inline-flex items-center justify-center min-h-[54px] px-9 py-4 rounded-full bg-white text-ink font-montserrat text-sm font-semibold uppercase tracking-[0.12em] transition-all duration-300 hover:bg-brass hover:text-white hover:scale-[1.03] touch-manipulation"
+            >
+              Call Now: (415) 941-4144
+            </a>
+            <NuxtLink
+              to="/booking"
+              class="w-full sm:w-auto inline-flex items-center justify-center min-h-[54px] px-9 py-4 rounded-full border border-white/30 text-white font-montserrat text-sm font-semibold uppercase tracking-[0.12em] transition-all duration-300 hover:border-brass hover:text-brass-light hover:scale-[1.03] touch-manipulation"
+            >
+              Schedule Service Online
+            </NuxtLink>
           </div>
-        </div>
-      </div>
-      
-      <!-- Enhanced Call to Action -->
-      <div class="text-center">
-        <div class="bg-gradient-to-r from-primary via-primary to-secondary rounded-3xl p-12 lg:p-16 text-white relative overflow-hidden">
-          <div class="absolute inset-0 opacity-10">
-            <div class="absolute inset-0" style="background-image: radial-gradient(circle at 1px 1px, white 1px, transparent 0); background-size: 20px 20px;"></div>
-          </div>
-          
-          <div class="max-w-4xl mx-auto relative z-10">
-            <h3 class="text-4xl lg:text-5xl font-bold mb-6">
-              Ready to Schedule Your Professional Appliance Repair?
-            </h3>
-            <p class="text-xl lg:text-2xl text-white/90 mb-12 leading-relaxed">
-              Get expert repair services for your luxury appliances. Our certified technicians are ready to help restore your appliances to peak performance with guaranteed satisfaction.
-            </p>
-            
-            <div class="flex flex-col sm:flex-row gap-6 justify-center items-center mb-8">
-              <a 
-                href="tel:4159414144"
-                class="group inline-flex items-center px-12 py-6 bg-white text-primary font-bold rounded-2xl hover:bg-gray-50 transition-all duration-300 shadow-2xl hover:shadow-3xl transform hover:-translate-y-2 text-xl min-h-[70px]"
-              >
-                <svg class="w-7 h-7 mr-4 group-hover:animate-pulse" fill="currentColor" viewBox="0 0 20 20">
-                  <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"/>
-                </svg>
-                Call Now: (415) 941-4144
-              </a>
-              
-              <NuxtLink 
-                to="/booking"
-                class="inline-flex items-center px-12 py-6 border-3 border-white text-white font-bold rounded-2xl hover:bg-white hover:text-primary transition-all duration-300 transform hover:-translate-y-2 text-xl min-h-[70px]"
-              >
-                <svg class="w-7 h-7 mr-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3a1 1 0 011-1h6a1 1 0 011 1v4m-6 0h6m-6 0V5a1 1 0 00-1 1v1m0 8h6v2a1 1 0 01-1 1H9a1 1 0 01-1-1v-2zm6 0V5a1 1 0 011-1h2a1 1 0 011 1v14a1 1 0 01-1 1h-2a1 1 0 01-1-1V5z"/>
-                </svg>
-                Schedule Service Online
-              </NuxtLink>
+
+          <!-- Service Guarantees -->
+          <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 text-left">
+            <div class="rounded-[1.25rem] border border-white/10 bg-white/[0.04] p-6">
+              <div class="font-display font-semibold text-2xl text-brass-light mb-1">Same-Day Service</div>
+              <div class="text-sm text-white/50">Available for urgent repairs</div>
             </div>
-            
-            <!-- Service Guarantees -->
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mt-12">
-              <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20">
-                <div class="text-2xl font-bold mb-2">Same-Day Service</div>
-                <div class="text-white/80">Available for urgent repairs</div>
-              </div>
-              <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20">
-                <div class="text-2xl font-bold mb-2">90-Day Warranty</div>
-                <div class="text-white/80">On all parts and labor</div>
-              </div>
-              <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20">
-                <div class="text-2xl font-bold mb-2">100% Satisfaction</div>
-                <div class="text-white/80">Guaranteed or money back</div>
-              </div>
+            <div class="rounded-[1.25rem] border border-white/10 bg-white/[0.04] p-6">
+              <div class="font-display font-semibold text-2xl text-brass-light mb-1">90-Day Warranty</div>
+              <div class="text-sm text-white/50">On all parts and labor</div>
+            </div>
+            <div class="rounded-[1.25rem] border border-white/10 bg-white/[0.04] p-6">
+              <div class="font-display font-semibold text-2xl text-brass-light mb-1">100% Satisfaction</div>
+              <div class="text-sm text-white/50">Guaranteed or money back</div>
             </div>
           </div>
         </div>

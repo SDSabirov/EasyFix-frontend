@@ -106,77 +106,89 @@ const applianceTypes = [
     <Navbar />
     <main role="main">
       <!-- Hero Section -->
-      <section class="relative overflow-hidden pt-28 pb-16 lg:pt-36 lg:pb-24" style="background: linear-gradient(135deg, #0f172a 0%, #164863 50%, #1e3a5f 100%);">
-        <div class="absolute inset-0 opacity-10">
-          <div class="absolute inset-0" style="background-image: radial-gradient(circle at 1px 1px, #ffffff 1px, transparent 0); background-size: 40px 40px;"></div>
-        </div>
+      <section class="grain glow-brass relative bg-ink pt-32 pb-16 lg:pt-44 lg:pb-20 overflow-hidden">
+        <span class="ghost-word ghost-word--light text-[6rem] lg:text-[11rem] top-24 -right-6" aria-hidden="true">Brands</span>
 
         <div class="container mx-auto px-4 max-w-screen-xl relative z-10 text-center">
-          <div class="inline-flex items-center px-5 py-2 rounded-full mb-6 border border-white/20" style="background: rgba(255,255,255,0.1); backdrop-filter: blur(8px);">
-            <svg class="w-5 h-5 mr-2 text-emerald-400" fill="currentColor" viewBox="0 0 20 20">
-              <path fill-rule="evenodd" d="M6.267 3.455a3.066 3.066 0 001.745-.723 3.066 3.066 0 013.976 0 3.066 3.066 0 001.745.723 3.066 3.066 0 012.812 2.812c.051.643.304 1.254.723 1.745a3.066 3.066 0 010 3.976 3.066 3.066 0 00-.723 1.745 3.066 3.066 0 01-2.812 2.812 3.066 3.066 0 00-1.745.723 3.066 3.066 0 01-3.976 0 3.066 3.066 0 00-1.745-.723 3.066 3.066 0 01-2.812-2.812 3.066 3.066 0 00-.723-1.745 3.066 3.066 0 010-3.976 3.066 3.066 0 00.723-1.745 3.066 3.066 0 012.812-2.812zm7.44 5.252a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
-            </svg>
-            <span class="text-white font-semibold text-sm">27+ Premium Brands Serviced</span>
-          </div>
+          <span class="inline-flex items-center gap-2.5 rounded-full border border-white/15 bg-white/5 px-4 py-2 font-montserrat text-[10px] font-semibold uppercase tracking-[0.25em] text-brass-light mb-6">
+            <span class="w-1.5 h-1.5 rounded-full bg-brass animate-pulse" aria-hidden="true"></span>
+            27+ Premium Brands Serviced
+          </span>
 
-          <h1 class="text-4xl lg:text-6xl font-bold text-white mb-6 leading-tight">
-            Every Brand. <span class="text-emerald-400">Every Appliance.</span><br>
+          <h1 class="font-montserrat font-bold tracking-[-0.02em] text-3xl sm:text-5xl lg:text-6xl text-white leading-[1.05] mb-6">
+            Every Brand. <em class="font-display font-semibold italic text-brass-light">Every Appliance.</em><br>
             Expert Repairs.
           </h1>
-          <p class="text-xl text-white/80 max-w-3xl mx-auto leading-relaxed">
-            From luxury European imports to trusted American brands, our factory-trained technicians deliver certified repair services for <strong class="text-white">every major appliance brand</strong>.
+          <p class="text-base sm:text-xl text-white/70 max-w-3xl mx-auto leading-relaxed">
+            From luxury European imports to trusted American brands, our factory-trained technicians deliver certified repair services for <strong class="text-white font-semibold">every major appliance brand</strong>.
           </p>
         </div>
       </section>
 
       <!-- Established Premium Brands -->
-      <section class="py-16 lg:py-20 bg-white">
-        <div class="container mx-auto px-4 max-w-screen-xl">
-          <div class="text-center mb-12">
-            <h2 class="text-3xl lg:text-4xl font-bold text-gray-900 mb-3">Our Flagship Brand Specializations</h2>
-            <p class="text-lg text-gray-500">Luxury brands we've serviced for 15+ years</p>
+      <section class="relative bg-white py-20 lg:py-28 overflow-hidden">
+        <span class="ghost-word text-[6rem] lg:text-[11rem] -top-4 -left-8" aria-hidden="true">Flagship</span>
+
+        <div class="container mx-auto px-4 max-w-screen-xl relative z-10">
+          <div class="text-center max-w-3xl mx-auto mb-12 lg:mb-14" v-reveal>
+            <span class="inline-flex items-center gap-2.5 rounded-full border border-primary/15 bg-cream px-4 py-2 font-montserrat text-[10px] font-semibold uppercase tracking-[0.25em] text-primary mb-6">
+              <span class="w-1.5 h-1.5 rounded-full bg-brass animate-pulse" aria-hidden="true"></span>
+              Flagship Expertise
+            </span>
+            <h2 class="font-montserrat font-bold tracking-[-0.02em] text-3xl sm:text-5xl text-primary leading-[1.05] mb-4">
+              Our Flagship
+              <em class="font-display font-semibold italic text-brass-dark">Brand Specializations</em>
+            </h2>
+            <p class="text-gray-600 leading-relaxed">Luxury brands we've serviced for 15+ years</p>
           </div>
 
-          <div class="grid grid-cols-2 md:grid-cols-4 gap-5 max-w-5xl mx-auto">
+          <div class="grid grid-cols-2 md:grid-cols-4 gap-5 lg:gap-6 max-w-5xl mx-auto">
             <NuxtLink
-              v-for="brand in premiumBrands"
+              v-for="(brand, index) in premiumBrands"
               :key="brand.slug"
               :to="brand.slug"
-              class="group relative flex flex-col items-center justify-center p-6 bg-gray-50 rounded-2xl border border-gray-100 hover:border-gray-300 hover:shadow-xl transition-all duration-300 hover:-translate-y-1"
+              class="group flex flex-col items-center justify-center p-6 lg:p-7 bg-white rounded-[1.5rem] border border-primary/5 shadow-sm transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl hover:shadow-ink/10"
+              v-reveal="(index % 4) * 90"
             >
-              <div class="h-16 flex items-center justify-center mb-3">
-                <img :src="brand.logo" :alt="brand.name + ' logo'" class="max-h-14 max-w-[120px] object-contain grayscale group-hover:grayscale-0 transition-all duration-300 opacity-70 group-hover:opacity-100">
+              <div class="h-16 flex items-center justify-center mb-4">
+                <img :src="brand.logo" :alt="brand.name + ' logo'" loading="lazy" decoding="async" class="max-h-14 max-w-[120px] object-contain grayscale opacity-60 transition-all duration-500 group-hover:grayscale-0 group-hover:opacity-100">
               </div>
-              <span class="text-sm font-semibold text-gray-600 group-hover:text-gray-900 transition-colors">{{ brand.name }}</span>
-              <div class="absolute inset-0 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300" :style="{ boxShadow: `0 0 0 2px ${brand.color}30` }"></div>
+              <span class="font-montserrat text-sm font-semibold text-primary transition-colors group-hover:text-brass-dark">{{ brand.name }}</span>
             </NuxtLink>
           </div>
         </div>
       </section>
 
       <!-- New Brand Specializations -->
-      <section class="py-16 lg:py-20" style="background: linear-gradient(to bottom, #f8fafc, #ffffff);">
-        <div class="container mx-auto px-4 max-w-screen-xl">
-          <div class="text-center mb-12">
-            <div class="inline-flex items-center px-4 py-2 bg-emerald-50 rounded-full mb-4">
-              <span class="text-emerald-700 font-semibold text-sm">Expanded Coverage</span>
-            </div>
-            <h2 class="text-3xl lg:text-4xl font-bold text-gray-900 mb-3">More Premium Brands We Service</h2>
-            <p class="text-lg text-gray-500 max-w-2xl mx-auto">Expert repair for these additional premium and specialty brands — each with a dedicated landing page</p>
+      <section class="relative bg-cream py-20 lg:py-28 overflow-hidden">
+        <span class="ghost-word text-[6rem] lg:text-[11rem] -top-4 -right-6" aria-hidden="true">Coverage</span>
+
+        <div class="container mx-auto px-4 max-w-screen-xl relative z-10">
+          <div class="text-center max-w-3xl mx-auto mb-12 lg:mb-14" v-reveal>
+            <span class="inline-flex items-center gap-2.5 rounded-full border border-primary/15 bg-white px-4 py-2 font-montserrat text-[10px] font-semibold uppercase tracking-[0.25em] text-primary mb-6">
+              <span class="w-1.5 h-1.5 rounded-full bg-brass animate-pulse" aria-hidden="true"></span>
+              Expanded Coverage
+            </span>
+            <h2 class="font-montserrat font-bold tracking-[-0.02em] text-3xl sm:text-5xl text-primary leading-[1.05] mb-4">
+              More Premium Brands
+              <em class="font-display font-semibold italic text-brass-dark">We Service</em>
+            </h2>
+            <p class="text-gray-600 leading-relaxed max-w-2xl mx-auto">Expert repair for these additional premium and specialty brands — each with a dedicated landing page</p>
           </div>
 
-          <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4 max-w-6xl mx-auto">
+          <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4 lg:gap-5 max-w-6xl mx-auto">
             <NuxtLink
-              v-for="key in newBrandKeys"
+              v-for="(key, index) in newBrandKeys"
               :key="key"
               :to="'/' + brandsData[key].slug"
-              class="group flex flex-col items-center p-5 bg-white rounded-2xl border border-gray-100 shadow-sm hover:shadow-lg hover:border-gray-200 transition-all duration-300 hover:-translate-y-1"
+              class="group flex flex-col items-center p-5 bg-white rounded-[1.5rem] border border-primary/5 shadow-sm transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl hover:shadow-ink/10"
+              v-reveal="(index % 5) * 70"
             >
               <div class="h-14 w-full flex items-center justify-center mb-3">
-                <img :src="getBrandLogo(key)" :alt="brandsData[key].name + ' logo'" class="max-h-12 max-w-[100px] object-contain grayscale group-hover:grayscale-0 transition-all duration-300 opacity-60 group-hover:opacity-100" data-not-lazy>
+                <img :src="getBrandLogo(key)" :alt="brandsData[key].name + ' logo'" class="max-h-12 max-w-[100px] object-contain grayscale opacity-60 transition-all duration-500 group-hover:grayscale-0 group-hover:opacity-100" data-not-lazy>
               </div>
-              <span class="text-sm font-semibold text-gray-600 group-hover:text-gray-900 transition-colors text-center">{{ brandsData[key].name }}</span>
-              <span class="text-xs mt-1 px-2 py-0.5 rounded-full transition-colors" :style="{ color: brandsData[key].accentColor + '99', background: brandsData[key].accentColor + '10' }">
+              <span class="font-montserrat text-sm font-semibold text-primary transition-colors group-hover:text-brass-dark text-center">{{ brandsData[key].name }}</span>
+              <span class="mt-1.5 font-montserrat text-[9px] font-semibold uppercase tracking-[0.18em] text-gray-400 text-center">
                 {{ brandsData[key].tagline.split(' ').slice(0, 3).join(' ') }}
               </span>
             </NuxtLink>
@@ -185,95 +197,104 @@ const applianceTypes = [
       </section>
 
       <!-- Appliance Types -->
-      <section class="py-16 lg:py-20 bg-white">
+      <section class="relative bg-white py-20 lg:py-28 overflow-hidden">
         <div class="container mx-auto px-4 max-w-screen-xl">
-          <div class="text-center mb-12">
-            <h2 class="text-3xl lg:text-4xl font-bold text-gray-900 mb-3">Appliances We Repair</h2>
-            <p class="text-lg text-gray-500">All types, all brands, all models</p>
+          <div class="text-center max-w-3xl mx-auto mb-12" v-reveal>
+            <span class="inline-flex items-center gap-2.5 rounded-full border border-primary/15 bg-cream px-4 py-2 font-montserrat text-[10px] font-semibold uppercase tracking-[0.25em] text-primary mb-6">
+              <span class="w-1.5 h-1.5 rounded-full bg-brass animate-pulse" aria-hidden="true"></span>
+              Complete Coverage
+            </span>
+            <h2 class="font-montserrat font-bold tracking-[-0.02em] text-3xl sm:text-5xl text-primary leading-[1.05] mb-4">
+              Appliances
+              <em class="font-display font-semibold italic text-brass-dark">We Repair</em>
+            </h2>
+            <p class="text-gray-600 leading-relaxed">All types, all brands, all models</p>
           </div>
 
-          <div class="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-4xl mx-auto">
+          <div class="flex flex-wrap justify-center gap-3 max-w-4xl mx-auto" v-reveal="120">
             <div
               v-for="appliance in applianceTypes"
               :key="appliance.name"
-              class="flex items-center p-4 bg-gray-50 rounded-xl border border-gray-100"
+              class="inline-flex items-center gap-2.5 rounded-full border border-primary/15 bg-white px-5 py-3"
             >
-              <svg class="w-5 h-5 text-primary mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+              <svg class="w-4 h-4 text-brass-dark shrink-0" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
                 <path :d="appliance.icon"/>
               </svg>
-              <span class="text-gray-700 font-medium text-sm">{{ appliance.name }}</span>
+              <span class="text-sm font-medium text-gray-700">{{ appliance.name }}</span>
             </div>
           </div>
         </div>
       </section>
 
-      <!-- Why Choose Us -->
-      <section class="py-16 lg:py-20" style="background: linear-gradient(to bottom, #f8fafc, #ffffff);">
-        <div class="container mx-auto px-4 max-w-screen-xl">
-          <div class="bg-white rounded-3xl shadow-xl p-8 lg:p-12 border border-gray-100 max-w-4xl mx-auto">
-            <h2 class="text-2xl font-bold text-gray-900 text-center mb-8">Why Choose Easy Fix Appliance?</h2>
-            <div class="grid md:grid-cols-3 gap-8">
-              <div class="text-center">
-                <div class="w-16 h-16 bg-primary/10 rounded-2xl flex items-center justify-center mx-auto mb-4">
-                  <svg class="w-8 h-8 text-primary" fill="currentColor" viewBox="0 0 20 20">
-                    <path fill-rule="evenodd" d="M6.267 3.455a3.066 3.066 0 001.745-.723 3.066 3.066 0 013.976 0 3.066 3.066 0 001.745.723 3.066 3.066 0 012.812 2.812c.051.643.304 1.254.723 1.745a3.066 3.066 0 010 3.976 3.066 3.066 0 00-.723 1.745 3.066 3.066 0 01-2.812 2.812 3.066 3.066 0 00-1.745.723 3.066 3.066 0 01-3.976 0 3.066 3.066 0 00-1.745-.723 3.066 3.066 0 01-2.812-2.812 3.066 3.066 0 00-.723-1.745 3.066 3.066 0 010-3.976 3.066 3.066 0 00.723-1.745 3.066 3.066 0 012.812-2.812zm7.44 5.252a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
-                  </svg>
-                </div>
-                <h3 class="font-bold text-gray-900 mb-2">Certified Technicians</h3>
-                <p class="text-gray-600 text-sm">Factory-trained experts with 15+ years of experience across all brands</p>
-              </div>
-              <div class="text-center">
-                <div class="w-16 h-16 bg-primary/10 rounded-2xl flex items-center justify-center mx-auto mb-4">
-                  <svg class="w-8 h-8 text-primary" fill="currentColor" viewBox="0 0 20 20">
-                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z" clip-rule="evenodd"/>
-                  </svg>
-                </div>
-                <h3 class="font-bold text-gray-900 mb-2">Same-Day Service</h3>
-                <p class="text-gray-600 text-sm">Fast response times throughout the Bay Area</p>
-              </div>
-              <div class="text-center">
-                <div class="w-16 h-16 bg-primary/10 rounded-2xl flex items-center justify-center mx-auto mb-4">
-                  <svg class="w-8 h-8 text-primary" fill="currentColor" viewBox="0 0 20 20">
-                    <path fill-rule="evenodd" d="M2.166 4.999A11.954 11.954 0 0010 1.944 11.954 11.954 0 0017.834 5c.11.65.166 1.32.166 2.001 0 5.225-3.34 9.67-8 11.317C5.34 16.67 2 12.225 2 7c0-.682.057-1.35.166-2.001zm11.541 3.708a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
-                  </svg>
-                </div>
-                <h3 class="font-bold text-gray-900 mb-2">2-Year Warranty</h3>
-                <p class="text-gray-600 text-sm">All repairs backed by our comprehensive warranty</p>
-              </div>
+      <!-- Why Choose Us + CTA -->
+      <section class="grain glow-brass relative bg-ink py-20 lg:py-28 overflow-hidden">
+        <div class="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-brass to-transparent" aria-hidden="true"></div>
+        <span class="ghost-word ghost-word--light text-[6rem] lg:text-[11rem] top-8 -left-6" aria-hidden="true">Trusted</span>
+
+        <div class="container mx-auto px-4 max-w-screen-xl relative z-10">
+          <div class="text-center max-w-3xl mx-auto mb-12 lg:mb-14" v-reveal>
+            <span class="inline-flex items-center gap-2.5 rounded-full border border-white/15 bg-white/5 px-4 py-2 font-montserrat text-[10px] font-semibold uppercase tracking-[0.25em] text-brass-light mb-6">
+              <span class="w-1.5 h-1.5 rounded-full bg-brass animate-pulse" aria-hidden="true"></span>
+              Trusted Excellence
+            </span>
+            <h2 class="font-montserrat font-bold tracking-[-0.02em] text-3xl sm:text-5xl text-white leading-[1.05]">
+              Why Choose
+              <em class="font-display font-semibold italic text-brass-light">Easy Fix Appliance?</em>
+            </h2>
+          </div>
+
+          <div class="grid md:grid-cols-3 gap-5 lg:gap-6 max-w-4xl mx-auto mb-16 lg:mb-20">
+            <div class="group rounded-[1.5rem] border border-white/10 bg-white/[0.04] p-7 transition-all duration-500 hover:border-brass/40 hover:bg-white/[0.07] hover:-translate-y-1.5" v-reveal>
+              <span class="flex items-center justify-center w-12 h-12 rounded-full bg-white/10 mb-5 transition-colors duration-300 group-hover:bg-brass/25">
+                <svg class="w-5 h-5 text-brass-light" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+                  <path fill-rule="evenodd" d="M6.267 3.455a3.066 3.066 0 001.745-.723 3.066 3.066 0 013.976 0 3.066 3.066 0 001.745.723 3.066 3.066 0 012.812 2.812c.051.643.304 1.254.723 1.745a3.066 3.066 0 010 3.976 3.066 3.066 0 00-.723 1.745 3.066 3.066 0 01-2.812 2.812 3.066 3.066 0 00-1.745.723 3.066 3.066 0 01-3.976 0 3.066 3.066 0 00-1.745-.723 3.066 3.066 0 01-2.812-2.812 3.066 3.066 0 00-.723-1.745 3.066 3.066 0 010-3.976 3.066 3.066 0 00.723-1.745 3.066 3.066 0 012.812-2.812zm7.44 5.252a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                </svg>
+              </span>
+              <h3 class="font-montserrat font-bold text-lg text-white mb-2">Certified Technicians</h3>
+              <p class="text-sm text-white/50 leading-relaxed">Factory-trained experts with 15+ years of experience across all brands</p>
+            </div>
+            <div class="group rounded-[1.5rem] border border-white/10 bg-white/[0.04] p-7 transition-all duration-500 hover:border-brass/40 hover:bg-white/[0.07] hover:-translate-y-1.5" v-reveal="90">
+              <span class="flex items-center justify-center w-12 h-12 rounded-full bg-white/10 mb-5 transition-colors duration-300 group-hover:bg-brass/25">
+                <svg class="w-5 h-5 text-brass-light" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z" clip-rule="evenodd"/>
+                </svg>
+              </span>
+              <h3 class="font-montserrat font-bold text-lg text-white mb-2">Same-Day Service</h3>
+              <p class="text-sm text-white/50 leading-relaxed">Fast response times throughout the Bay Area</p>
+            </div>
+            <div class="group rounded-[1.5rem] border border-white/10 bg-white/[0.04] p-7 transition-all duration-500 hover:border-brass/40 hover:bg-white/[0.07] hover:-translate-y-1.5" v-reveal="180">
+              <span class="flex items-center justify-center w-12 h-12 rounded-full bg-white/10 mb-5 transition-colors duration-300 group-hover:bg-brass/25">
+                <svg class="w-5 h-5 text-brass-light" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+                  <path fill-rule="evenodd" d="M2.166 4.999A11.954 11.954 0 0010 1.944 11.954 11.954 0 0017.834 5c.11.65.166 1.32.166 2.001 0 5.225-3.34 9.67-8 11.317C5.34 16.67 2 12.225 2 7c0-.682.057-1.35.166-2.001zm11.541 3.708a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                </svg>
+              </span>
+              <h3 class="font-montserrat font-bold text-lg text-white mb-2">2-Year Warranty</h3>
+              <p class="text-sm text-white/50 leading-relaxed">All repairs backed by our comprehensive warranty</p>
             </div>
           </div>
-        </div>
-      </section>
 
-      <!-- CTA Section -->
-      <section class="py-16 lg:py-20 bg-white">
-        <div class="container mx-auto px-4 max-w-screen-xl">
-          <div class="bg-gradient-to-r from-primary to-secondary rounded-3xl p-10 text-white max-w-3xl mx-auto text-center">
-            <h3 class="text-2xl lg:text-3xl font-bold mb-4">
-              Have an Appliance That Needs Repair?
+          <!-- CTA -->
+          <div class="text-center" v-reveal>
+            <h3 class="font-montserrat font-bold tracking-[-0.02em] text-2xl sm:text-3xl text-white leading-tight mb-3">
+              Have an Appliance That Needs
+              <em class="font-display font-semibold italic text-brass-light">Repair?</em>
             </h3>
-            <p class="text-lg text-white/90 mb-8">
+            <p class="text-white/60 leading-relaxed mb-8">
               Contact us today — we service all major brands!
             </p>
 
             <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
               <a
                 :href="`tel:${phoneNumber}`"
-                class="inline-flex items-center px-8 py-4 bg-white text-primary font-bold rounded-xl hover:bg-gray-50 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1"
+                class="w-full sm:w-auto inline-flex items-center justify-center min-h-[52px] px-9 py-4 rounded-full bg-white text-ink font-montserrat text-sm font-semibold uppercase tracking-[0.12em] transition-all duration-300 hover:bg-brass hover:text-white hover:scale-[1.03] touch-manipulation"
               >
-                <svg class="w-5 h-5 mr-3" fill="currentColor" viewBox="0 0 20 20">
-                  <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"/>
-                </svg>
                 {{ phoneDisplay }}
               </a>
 
               <NuxtLink
                 :to="bookingUrl"
-                class="inline-flex items-center px-8 py-4 border-2 border-white text-white font-bold rounded-xl hover:bg-white hover:text-primary transition-all duration-300 transform hover:-translate-y-1"
+                class="w-full sm:w-auto inline-flex items-center justify-center min-h-[52px] px-9 py-4 rounded-full border border-white/30 text-white font-montserrat text-sm font-semibold uppercase tracking-[0.12em] transition-all duration-300 hover:border-brass hover:text-brass-light hover:scale-[1.03] touch-manipulation"
               >
-                <svg class="w-5 h-5 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3a1 1 0 011-1h6a1 1 0 011 1v4m-6 0h6m-6 0V5a1 1 0 00-1 1v1m0 8h6v2a1 1 0 01-1 1H9a1 1 0 01-1-1v-2zm6 0V5a1 1 0 011-1h2a1 1 0 011 1v14a1 1 0 01-1 1h-2a1 1 0 01-1-1V5z"/>
-                </svg>
                 Schedule Service
               </NuxtLink>
             </div>
@@ -282,14 +303,12 @@ const applianceTypes = [
       </section>
 
       <!-- Back Link -->
-      <div class="text-center pb-12 bg-white">
+      <div class="bg-white py-12 text-center">
         <NuxtLink
           to="/services"
-          class="inline-flex items-center text-gray-600 hover:text-primary transition-colors"
+          class="group inline-flex items-center gap-3 font-montserrat text-[12px] font-semibold uppercase tracking-[0.18em] text-primary hover:text-brass-dark transition-colors"
         >
-          <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18" />
-          </svg>
+          <span class="flex items-center justify-center w-10 h-10 rounded-full border border-primary/20 transition-all duration-300 group-hover:bg-ink group-hover:border-ink group-hover:text-white" aria-hidden="true">&larr;</span>
           Back to Services
         </NuxtLink>
       </div>

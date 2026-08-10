@@ -3,27 +3,23 @@
     <Navbar />
 
     <!-- Hero Section -->
-    <section class="bg-gradient-to-br from-gray-50 via-white to-gray-50 pt-12 lg:pt-16 relative overflow-hidden">
-      <div class="absolute inset-0 opacity-5">
-        <div class="absolute inset-0" style="background-image: radial-gradient(circle at 1px 1px, #164863 1px, transparent 0); background-size: 30px 30px;"></div>
-      </div>
+    <section class="relative bg-cream pt-32 pb-6 lg:pt-40 lg:pb-8 overflow-hidden">
+      <span class="ghost-word text-[6rem] lg:text-[11rem] top-20 -right-6" aria-hidden="true">Services</span>
 
       <div class="container mx-auto px-4 max-w-screen-xl relative z-10">
-        <div class="text-center mb-8">
-          <div class="inline-flex items-center px-6 py-3 bg-primary/10 rounded-full mb-6">
-            <svg class="w-6 h-6 text-primary mr-3" fill="currentColor" viewBox="0 0 20 20">
-              <path fill-rule="evenodd" d="M6.267 3.455a3.066 3.066 0 001.745-.723 3.066 3.066 0 013.976 0 3.066 3.066 0 001.745.723 3.066 3.066 0 012.812 2.812c.051.643.304 1.254.723 1.745a3.066 3.066 0 010 3.976 3.066 3.066 0 00-.723 1.745 3.066 3.066 0 01-2.812 2.812 3.066 3.066 0 00-1.745.723 3.066 3.066 0 01-3.976 0 3.066 3.066 0 00-1.745-.723 3.066 3.066 0 01-2.812-2.812 3.066 3.066 0 00-.723-1.745 3.066 3.066 0 010-3.976 3.066 3.066 0 00.723-1.745 3.066 3.066 0 012.812-2.812zm7.44 5.252a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
-            </svg>
-            <span class="text-primary font-bold text-base sm:text-lg">Professional Appliance Services</span>
-          </div>
+        <div class="text-center max-w-4xl mx-auto mb-6">
+          <span class="inline-flex items-center gap-2.5 rounded-full border border-primary/15 bg-white px-4 py-2 font-montserrat text-[10px] font-semibold uppercase tracking-[0.25em] text-primary mb-6">
+            <span class="w-1.5 h-1.5 rounded-full bg-brass animate-pulse" aria-hidden="true"></span>
+            Professional Appliance Services
+          </span>
 
-          <h1 class="text-2xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-6 leading-tight">
+          <h1 class="font-montserrat font-bold tracking-[-0.02em] text-3xl sm:text-5xl lg:text-6xl text-primary leading-[1.05] mb-6">
             Expert Appliance Repair
-            <span class="block text-primary">Services in Bay Area</span>
+            <em class="block font-display font-semibold italic text-brass-dark">Services in Bay&nbsp;Area</em>
           </h1>
 
-          <p class="text-base sm:text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-            Serving <strong class="text-primary">San Francisco, San Mateo, Palo Alto, Mountain View</strong>, and the entire Bay Area with quality service you can trust.
+          <p class="text-base sm:text-lg text-gray-600 max-w-3xl mx-auto leading-relaxed">
+            Serving <strong class="text-primary font-semibold">San Francisco, San Mateo, Palo Alto, Mountain View</strong>, and the entire Bay Area with quality service you can trust.
           </p>
         </div>
 

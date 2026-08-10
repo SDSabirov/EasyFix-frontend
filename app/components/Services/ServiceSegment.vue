@@ -19,91 +19,54 @@ const selectSegment = (segment: 'premium' | 'all') => {
 <template>
   <div class="py-8">
     <div class="container mx-auto px-4 max-w-screen-xl">
-      <div class="text-center mb-6">
-        <p class="text-lg text-gray-600 font-medium">What are you looking for?</p>
-      </div>
+      <p class="text-center font-montserrat text-[11px] font-semibold uppercase tracking-[0.25em] text-gray-500 mb-5">
+        What are you looking for?
+      </p>
 
-      <div class="flex flex-col sm:flex-row justify-center gap-4 max-w-2xl mx-auto">
+      <div class="flex flex-col sm:flex-row justify-center items-stretch sm:items-center gap-3 max-w-xl mx-auto">
         <!-- Premium Brands Option -->
         <button
           @click="selectSegment('premium')"
+          :aria-pressed="selected === 'premium'"
           :class="[
-            'flex-1 p-6 rounded-2xl border-2 transition-all duration-300 text-left group',
+            'flex-1 inline-flex items-center justify-center gap-2.5 min-h-[52px] px-8 py-3.5 rounded-full font-montserrat text-[12px] font-semibold uppercase tracking-[0.12em] transition-all duration-300',
             selected === 'premium'
-              ? 'border-primary bg-primary/5 shadow-lg'
-              : 'border-gray-200 bg-white hover:border-primary/50 hover:shadow-md'
+              ? 'bg-ink text-white shadow-lg shadow-ink/20'
+              : 'bg-white text-primary border border-primary/15 hover:border-brass hover:text-brass-dark hover:scale-[1.03]'
           ]"
         >
-          <div class="flex items-start gap-4">
-            <div :class="[
-              'w-12 h-12 rounded-xl flex items-center justify-center flex-shrink-0 transition-colors',
-              selected === 'premium' ? 'bg-primary text-white' : 'bg-gray-100 text-gray-600 group-hover:bg-primary/10'
-            ]">
-              <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20">
-                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
-              </svg>
-            </div>
-            <div>
-              <h3 :class="[
-                'font-bold text-lg mb-1 transition-colors',
-                selected === 'premium' ? 'text-primary' : 'text-gray-900'
-              ]">
-                Premium Brands
-              </h3>
-              <p class="text-sm text-gray-600">
-                Sub-Zero, Wolf, Viking, Thermador & more luxury brands
-              </p>
-            </div>
-          </div>
-          <!-- Selected indicator -->
-          <div v-if="selected === 'premium'" class="mt-4 flex items-center text-primary text-sm font-medium">
-            <svg class="w-4 h-4 mr-1" fill="currentColor" viewBox="0 0 20 20">
-              <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
-            </svg>
-            Selected
-          </div>
+          <span
+            class="w-1 h-1 rotate-45 shrink-0"
+            :class="selected === 'premium' ? 'bg-brass-light' : 'bg-brass'"
+            aria-hidden="true"
+          ></span>
+          Premium Brands
         </button>
 
         <!-- All Appliances Option -->
         <button
           @click="selectSegment('all')"
+          :aria-pressed="selected === 'all'"
           :class="[
-            'flex-1 p-6 rounded-2xl border-2 transition-all duration-300 text-left group',
+            'flex-1 inline-flex items-center justify-center gap-2.5 min-h-[52px] px-8 py-3.5 rounded-full font-montserrat text-[12px] font-semibold uppercase tracking-[0.12em] transition-all duration-300',
             selected === 'all'
-              ? 'border-secondary bg-secondary/5 shadow-lg'
-              : 'border-gray-200 bg-white hover:border-secondary/50 hover:shadow-md'
+              ? 'bg-ink text-white shadow-lg shadow-ink/20'
+              : 'bg-white text-primary border border-primary/15 hover:border-brass hover:text-brass-dark hover:scale-[1.03]'
           ]"
         >
-          <div class="flex items-start gap-4">
-            <div :class="[
-              'w-12 h-12 rounded-xl flex items-center justify-center flex-shrink-0 transition-colors',
-              selected === 'all' ? 'bg-secondary text-white' : 'bg-gray-100 text-gray-600 group-hover:bg-secondary/10'
-            ]">
-              <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20">
-                <path fill-rule="evenodd" d="M3 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm0 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm0 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm0 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd"/>
-              </svg>
-            </div>
-            <div>
-              <h3 :class="[
-                'font-bold text-lg mb-1 transition-colors',
-                selected === 'all' ? 'text-secondary' : 'text-gray-900'
-              ]">
-                All Appliances
-              </h3>
-              <p class="text-sm text-gray-600">
-                Refrigerators, Washers, Dryers, Ovens & all major brands
-              </p>
-            </div>
-          </div>
-          <!-- Selected indicator -->
-          <div v-if="selected === 'all'" class="mt-4 flex items-center text-secondary text-sm font-medium">
-            <svg class="w-4 h-4 mr-1" fill="currentColor" viewBox="0 0 20 20">
-              <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
-            </svg>
-            Selected
-          </div>
+          <span
+            class="w-1 h-1 rotate-45 shrink-0"
+            :class="selected === 'all' ? 'bg-brass-light' : 'bg-brass'"
+            aria-hidden="true"
+          ></span>
+          All Appliances
         </button>
       </div>
+
+      <p class="text-center text-sm text-gray-500 mt-5">
+        <span v-if="selected === 'premium'">Sub-Zero, Wolf, Viking, Thermador &amp; more luxury brands</span>
+        <span v-else>Refrigerators, Washers, Dryers, Ovens &amp; all major brands</span>
+      </p>
     </div>
   </div>
 </template>
