@@ -1,135 +1,150 @@
 <template>
   <div class="pb-[72px] lg:pb-0">
     <Navbar />
-    
+
     <!-- Hero Section -->
-    <header class="relative h-[75vh] lg:h-[85vh] overflow-hidden mt-16 lg:mt-20" style="background: #0c2a3b; background-image: linear-gradient(to bottom right, #0c2a3b, #1C6E8C, #f97316);">
-      <!-- Professional Background Elements -->
-      <div class="absolute top-16 left-12 w-20 h-20 rounded-full blur-lg animate-bounce" style="background: rgba(249, 115, 22, 0.25); animation-delay: 0.5s;"></div>
-      <div class="absolute bottom-40 right-20 w-36 h-36 rounded-full blur-xl animate-pulse delay-1000" style="background: rgba(28, 110, 140, 0.2);"></div>
-      <div class="absolute top-1/3 right-1/4 w-16 h-16 rounded-full blur-md animate-pulse delay-500" style="background: rgba(251, 191, 36, 0.3);"></div>
-      
+    <header class="grain glow-brass relative bg-ink pt-32 pb-16 lg:pt-44 lg:pb-24 overflow-hidden">
+      <span class="ghost-word ghost-word--light text-[6rem] lg:text-[11rem] top-24 -right-6" aria-hidden="true">Repairs</span>
+
       <!-- Hero Content -->
-      <div class="relative z-10 h-full flex flex-col items-center justify-center px-4 text-center">
-        <div class="max-w-5xl mx-auto">
-          <div class="inline-flex items-center px-6 py-3 rounded-full mb-8 border" style="background: rgba(255, 255, 255, 0.2); backdrop-filter: blur(8px); border-color: rgba(255, 255, 255, 0.3);">
-            <svg class="w-6 h-6 mr-3" style="color: #ffffff;" fill="currentColor" viewBox="0 0 20 20">
-              <path fill-rule="evenodd" d="M11.49 3.17c-.38-1.56-2.6-1.56-2.98 0a1.532 1.532 0 01-2.286.948c-1.372-.836-2.942.734-2.106 2.106.54.886.061 2.042-.947 2.287-1.561.379-1.561 2.6 0 2.978a1.532 1.532 0 01.947 2.287c-.836 1.372.734 2.942 2.106 2.106a1.532 1.532 0 012.287.947c.379 1.561 2.6 1.561 2.978 0a1.533 1.533 0 012.287-.947c1.372.836 2.942-.734 2.106-2.106a1.533 1.533 0 01.947-2.287c1.561-.379 1.561-2.6 0-2.978a1.532 1.532 0 01-.947-2.287c.836-1.372-.734-2.942-2.106-2.106a1.532 1.532 0 01-2.287-.947zM10 13a3 3 0 100-6 3 3 0 000 6z" clip-rule="evenodd"/>
-            </svg>
-            <span class="font-semibold text-lg" style="color: #ffffff;">Certified Sub-Zero & Wolf Specialists</span>
-          </div>
-          
-          <h1 class="text-2xl sm:text-4xl lg:text-7xl font-bold mb-4 sm:mb-8 leading-tight" style="color: #ffffff;">
+      <div class="container mx-auto px-4 max-w-screen-xl relative z-10">
+        <div class="max-w-4xl mx-auto text-center">
+          <span class="inline-flex items-center gap-2.5 rounded-full border border-white/15 bg-white/5 px-4 py-2 font-montserrat text-[10px] font-semibold uppercase tracking-[0.25em] text-brass-light mb-6">
+            <span class="w-1.5 h-1.5 rounded-full bg-brass animate-pulse" aria-hidden="true"></span>
+            Certified Sub-Zero & Wolf Specialists
+          </span>
+
+          <h1 class="font-montserrat font-bold tracking-[-0.02em] text-3xl sm:text-5xl lg:text-6xl text-white leading-[1.05] mb-6">
             Professional Sub-Zero & Wolf
-            <span class="block" style="color: #f97316;">Appliance Repair Services</span>
+            <em class="block font-display font-semibold italic text-brass-light">Appliance Repair Services</em>
           </h1>
-          
-          <p class="text-base sm:text-xl lg:text-2xl mb-8 sm:mb-12 max-w-4xl mx-auto leading-relaxed" style="color: rgba(255, 255, 255, 0.9);">
-            Expert repair services for luxury Sub-Zero refrigeration and Wolf cooking appliances. 
+
+          <p class="text-base sm:text-xl text-white/70 max-w-3xl mx-auto leading-relaxed mb-10 [&_strong]:text-white [&_strong]:font-semibold">
+            Expert repair services for luxury Sub-Zero refrigeration and Wolf cooking appliances.
             <strong>Certified technicians</strong> serving the Bay Area with <strong>same-day service</strong> and genuine OEM parts.
           </p>
-          
+
           <!-- CTA Buttons -->
-          <div class="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center items-center mb-8 sm:mb-16">
-            <a href="tel:4159414144" class="group w-full sm:w-auto inline-flex items-center justify-center px-6 py-4 sm:px-10 sm:py-5 font-bold rounded-2xl transition-all duration-300 shadow-2xl hover:shadow-3xl transform hover:-translate-y-2 text-base sm:text-xl min-h-[48px] sm:min-h-[70px] touch-manipulation" style="background: linear-gradient(to right, #facc15, #f97316); color: #ffffff;">
-              <svg class="w-5 h-5 mr-3 sm:w-7 sm:h-7 sm:mr-4 group-hover:animate-pulse" fill="currentColor" viewBox="0 0 20 20">
-                <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"/>
-              </svg>
+          <div class="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
+            <a
+              href="tel:4159414144"
+              class="w-full sm:w-auto inline-flex items-center justify-center min-h-[54px] px-9 py-4 rounded-full bg-white text-ink font-montserrat text-sm font-semibold uppercase tracking-[0.12em] transition-all duration-300 hover:bg-brass hover:text-white hover:scale-[1.03] touch-manipulation"
+            >
               Call Now: (415) 941-4144
             </a>
-            
-            <NuxtLink to="/booking" class="w-full sm:w-auto inline-flex items-center justify-center px-6 py-4 sm:px-10 sm:py-5 border-3 font-bold rounded-2xl transition-all duration-300 transform hover:-translate-y-2 text-base sm:text-xl min-h-[48px] sm:min-h-[70px] touch-manipulation hover:bg-white hover:text-primary" style="border-color: #ffffff; color: #ffffff; background: rgba(255, 255, 255, 0.1); backdrop-filter: blur(8px);">
-              <svg class="w-5 h-5 mr-3 sm:w-7 sm:h-7 sm:mr-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3a1 1 0 011-1h6a1 1 0 011 1v4m-6 0h6m-6 0V5a1 1 0 00-1 1v1m0 8h6v2a1 1 0 01-1 1H9a1 1 0 01-1-1v-2zm6 0V5a1 1 0 011-1h2a1 1 0 011 1v14a1 1 0 01-1 1h-2a1 1 0 01-1-1V5z"/>
-              </svg>
+
+            <NuxtLink
+              to="/booking"
+              class="w-full sm:w-auto inline-flex items-center justify-center min-h-[54px] px-9 py-4 rounded-full border border-white/30 text-white font-montserrat text-sm font-semibold uppercase tracking-[0.12em] transition-all duration-300 hover:border-brass hover:text-brass-light hover:scale-[1.03] touch-manipulation"
+            >
               Schedule Service Online
             </NuxtLink>
+          </div>
+
+          <!-- Trust line -->
+          <div class="flex flex-wrap justify-center items-center gap-x-8 gap-y-3">
+            <span class="inline-flex items-center gap-3 font-montserrat text-[11px] font-semibold uppercase tracking-[0.2em] text-white/50">
+              <span class="w-1 h-1 rotate-45 bg-brass shrink-0" aria-hidden="true"></span>
+              Certified Technicians
+            </span>
+            <span class="inline-flex items-center gap-3 font-montserrat text-[11px] font-semibold uppercase tracking-[0.2em] text-white/50">
+              <span class="w-1 h-1 rotate-45 bg-brass shrink-0" aria-hidden="true"></span>
+              Genuine OEM Parts
+            </span>
+            <span class="inline-flex items-center gap-3 font-montserrat text-[11px] font-semibold uppercase tracking-[0.2em] text-white/50">
+              <span class="w-1 h-1 rotate-45 bg-brass shrink-0" aria-hidden="true"></span>
+              Same-Day Service
+            </span>
           </div>
         </div>
       </div>
     </header>
 
     <!-- About Sub-Zero & Wolf Section -->
-    <section class="py-10 sm:py-16 lg:py-32" style="background: linear-gradient(to bottom right, #f8fafc, #ffffff);">
-      <div class="container mx-auto px-4 max-w-screen-xl">
-        <div class="text-center mb-8 sm:mb-16">
-          <div class="inline-flex items-center px-6 py-3 rounded-full mb-4 sm:mb-8" style="background: rgba(12, 42, 59, 0.1);">
-            <svg class="w-6 h-6 mr-3" style="color: #0c2a3b;" fill="currentColor" viewBox="0 0 20 20">
-              <path fill-rule="evenodd" d="M3 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm0 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm0 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd"/>
-            </svg>
-            <span class="font-bold text-lg" style="color: #0c2a3b;">Premium Appliance Brands</span>
-          </div>
-          
-          <h2 class="text-2xl sm:text-4xl lg:text-6xl font-bold mb-4 sm:mb-8 leading-tight" style="color: #1f2937;">
-            Sub-Zero & Wolf: 
-            <span class="text-transparent bg-clip-text" style="background-image: linear-gradient(to right, #0c2a3b, #1C6E8C);">Industry Leaders</span>
+    <section class="relative bg-cream py-20 lg:py-28 overflow-hidden">
+      <span class="ghost-word text-[7rem] lg:text-[12rem] -top-6 -right-4" aria-hidden="true">Heritage</span>
+
+      <div class="container mx-auto px-4 max-w-screen-xl relative z-10">
+        <div class="text-center max-w-4xl mx-auto mb-14 lg:mb-16" v-reveal>
+          <span class="inline-flex items-center gap-2.5 rounded-full border border-primary/15 bg-white px-4 py-2 font-montserrat text-[10px] font-semibold uppercase tracking-[0.25em] text-primary mb-6">
+            <span class="w-1.5 h-1.5 rounded-full bg-brass animate-pulse" aria-hidden="true"></span>
+            Premium Appliance Brands
+          </span>
+
+          <h2 class="font-montserrat font-bold tracking-[-0.02em] text-3xl sm:text-5xl text-primary leading-[1.05] mb-6">
+            Sub-Zero & Wolf:
+            <em class="font-display font-semibold italic text-brass-dark">Industry Leaders</em>
           </h2>
-          
-          <p class="text-base sm:text-xl lg:text-2xl max-w-4xl mx-auto leading-relaxed" style="color: #6b7280;">
+
+          <p class="text-base sm:text-lg text-gray-600 max-w-3xl mx-auto leading-relaxed">
             Discover why Sub-Zero and Wolf appliances represent the pinnacle of luxury kitchen technology and why professional repair services are essential for maintaining their performance.
           </p>
         </div>
-        
-        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-12 lg:gap-16 items-center mb-10 sm:mb-20">
-          <div>
-            <h3 class="text-xl sm:text-3xl lg:text-4xl font-bold mb-4 sm:mb-8" style="color: #1f2937;">Sub-Zero: Revolutionary Refrigeration</h3>
-            <div class="space-y-6 text-lg leading-relaxed" style="color: #4b5563;">
+
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-start mb-16 lg:mb-20">
+          <div v-reveal>
+            <h3 class="font-montserrat font-bold tracking-[-0.02em] text-2xl sm:text-3xl text-primary mb-6">Sub-Zero: Revolutionary Refrigeration</h3>
+            <div class="space-y-5 text-base sm:text-lg text-gray-600 leading-relaxed [&_strong]:text-primary [&_strong]:font-semibold">
               <p>
                 Sub-Zero pioneered <strong>dual refrigeration technology</strong>, featuring separate cooling systems for fresh food and freezer compartments. This innovative approach prevents odor transfer and maintains optimal humidity levels, keeping your food fresher up to <strong>3x longer</strong> than conventional refrigerators.
               </p>
               <p>
-                With <strong>NASA-inspired air purification</strong> systems and precision temperature control within ±1°F, Sub-Zero refrigerators create the perfect environment for food preservation. Their built-in and integrated designs seamlessly blend with luxury kitchen aesthetics while delivering unmatched performance.
+                With <strong>NASA-inspired air purification</strong> systems and precision temperature control within &plusmn;1&deg;F, Sub-Zero refrigerators create the perfect environment for food preservation. Their built-in and integrated designs seamlessly blend with luxury kitchen aesthetics while delivering unmatched performance.
               </p>
-              <div class="grid grid-cols-2 gap-4 mt-8">
-                <div class="p-4 rounded-xl" style="background: rgba(249, 115, 22, 0.1);">
-                  <div class="text-2xl font-bold mb-2" style="color: #f97316;">20+</div>
-                  <div class="text-sm font-medium" style="color: #1f2937;">Years Average Lifespan</div>
-                </div>
-                <div class="p-4 rounded-xl" style="background: rgba(249, 115, 22, 0.1);">
-                  <div class="text-2xl font-bold mb-2" style="color: #f97316;">±1°F</div>
-                  <div class="text-sm font-medium" style="color: #1f2937;">Temperature Precision</div>
-                </div>
+            </div>
+
+            <div class="grid grid-cols-2 gap-4 mt-8">
+              <div class="rounded-[1.25rem] bg-white border border-primary/5 shadow-sm p-6">
+                <div class="font-display font-semibold text-3xl text-brass-dark mb-1">20+</div>
+                <div class="font-montserrat text-[11px] font-semibold uppercase tracking-[0.2em] text-gray-500">Years Average Lifespan</div>
+              </div>
+              <div class="rounded-[1.25rem] bg-white border border-primary/5 shadow-sm p-6">
+                <div class="font-display font-semibold text-3xl text-brass-dark mb-1">&plusmn;1&deg;F</div>
+                <div class="font-montserrat text-[11px] font-semibold uppercase tracking-[0.2em] text-gray-500">Temperature Precision</div>
               </div>
             </div>
           </div>
-          
-          <div class="relative">
-            <img src="/assets/img/subzerowolfappliance.webp" alt="Sub-Zero built-in refrigerator with dual refrigeration technology" class="w-full h-auto rounded-2xl shadow-2xl">
-            <div class="absolute -bottom-6 -right-6 p-6 rounded-2xl shadow-xl" style="background: #ffffff;">
-              <div class="text-2xl font-bold mb-1" style="color: #0c2a3b;">Dual</div>
-              <div class="text-sm font-medium" style="color: #6b7280;">Refrigeration</div>
+
+          <div class="relative rounded-[2rem] overflow-hidden border border-primary/5 shadow-sm" v-reveal="150">
+            <img loading="lazy" decoding="async" src="/assets/img/subzerowolfappliance.webp" alt="Sub-Zero built-in refrigerator with dual refrigeration technology" class="w-full aspect-[4/3] object-cover">
+            <div class="absolute inset-0 bg-gradient-to-t from-ink/40 via-transparent to-transparent" aria-hidden="true"></div>
+            <div class="absolute bottom-4 right-4 rounded-[1.25rem] bg-white/95 backdrop-blur-sm shadow-lg px-6 py-4">
+              <div class="font-display font-semibold text-2xl text-brass-dark">Dual</div>
+              <div class="font-montserrat text-[10px] font-semibold uppercase tracking-[0.2em] text-gray-500">Refrigeration</div>
             </div>
           </div>
         </div>
-        
-        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-12 lg:gap-16 items-center">
-          <div class="lg:order-2">
-            <h3 class="text-xl sm:text-3xl lg:text-4xl font-bold mb-4 sm:mb-8" style="color: #1f2937;">Wolf: Professional-Grade Cooking</h3>
-            <div class="space-y-6 text-lg leading-relaxed" style="color: #4b5563;">
+
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-start">
+          <div class="lg:order-2" v-reveal>
+            <h3 class="font-montserrat font-bold tracking-[-0.02em] text-2xl sm:text-3xl text-primary mb-6">Wolf: Professional-Grade Cooking</h3>
+            <div class="space-y-5 text-base sm:text-lg text-gray-600 leading-relaxed [&_strong]:text-primary [&_strong]:font-semibold">
               <p>
                 Wolf cooking appliances bring <strong>restaurant-quality performance</strong> to residential kitchens. With <strong>dual-stacked burners</strong> delivering up to 20,000 BTUs and precise <strong>red knobs</strong> that have become synonymous with culinary excellence, Wolf ranges are the choice of professional chefs worldwide.
               </p>
               <p>
                 From <strong>convection ovens</strong> with multiple cooking modes to <strong>induction cooktops</strong> with instant heat response, Wolf appliances feature advanced technology that ensures consistent, professional results. Their distinctive design and robust construction make them a centerpiece of luxury kitchens.
               </p>
-              <div class="grid grid-cols-2 gap-4 mt-8">
-                <div class="p-4 rounded-xl" style="background: rgba(249, 115, 22, 0.1);">
-                  <div class="text-2xl font-bold mb-2" style="color: #f97316;">20,000</div>
-                  <div class="text-sm font-medium" style="color: #1f2937;">BTU Power Output</div>
-                </div>
-                <div class="p-4 rounded-xl" style="background: rgba(249, 115, 22, 0.1);">
-                  <div class="text-2xl font-bold mb-2" style="color: #f97316;">8</div>
-                  <div class="text-sm font-medium" style="color: #1f2937;">Cooking Modes</div>
-                </div>
+            </div>
+
+            <div class="grid grid-cols-2 gap-4 mt-8">
+              <div class="rounded-[1.25rem] bg-white border border-primary/5 shadow-sm p-6">
+                <div class="font-display font-semibold text-3xl text-brass-dark mb-1">20,000</div>
+                <div class="font-montserrat text-[11px] font-semibold uppercase tracking-[0.2em] text-gray-500">BTU Power Output</div>
+              </div>
+              <div class="rounded-[1.25rem] bg-white border border-primary/5 shadow-sm p-6">
+                <div class="font-display font-semibold text-3xl text-brass-dark mb-1">8</div>
+                <div class="font-montserrat text-[11px] font-semibold uppercase tracking-[0.2em] text-gray-500">Cooking Modes</div>
               </div>
             </div>
           </div>
-          
-          <div class="lg:order-1 relative">
-            <img src="/assets/img/wolfCooking.webp" alt="Wolf professional range with red knobs and dual-stacked burners" class="w-full h-auto rounded-2xl shadow-2xl">
-            <div class="absolute -bottom-6 -left-6 p-6 rounded-2xl shadow-xl" style="background: #ffffff;">
-              <div class="text-2xl font-bold mb-1" style="color: #dc2626;">Red</div>
-              <div class="text-sm font-medium" style="color: #6b7280;">Knobs</div>
+
+          <div class="lg:order-1 relative rounded-[2rem] overflow-hidden border border-primary/5 shadow-sm" v-reveal="150">
+            <img loading="lazy" decoding="async" src="/assets/img/wolfCooking.webp" alt="Wolf professional range with red knobs and dual-stacked burners" class="w-full aspect-[4/3] object-cover">
+            <div class="absolute inset-0 bg-gradient-to-t from-ink/40 via-transparent to-transparent" aria-hidden="true"></div>
+            <div class="absolute bottom-4 left-4 rounded-[1.25rem] bg-white/95 backdrop-blur-sm shadow-lg px-6 py-4">
+              <div class="font-display font-semibold text-2xl text-brass-dark">Red</div>
+              <div class="font-montserrat text-[10px] font-semibold uppercase tracking-[0.2em] text-gray-500">Knobs</div>
             </div>
           </div>
         </div>
@@ -137,24 +152,23 @@
     </section>
 
     <!-- Our Expertise Section -->
-    <section class="py-10 sm:py-16 lg:py-32" style="background: #0c2a3b;">
-      <div class="container mx-auto px-4 max-w-screen-xl">
-        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-12 lg:gap-16 items-center">
-          <div>
-            <div class="inline-flex items-center px-6 py-3 rounded-full mb-4 sm:mb-8" style="background: rgba(249, 115, 22, 0.2);">
-              <svg class="w-6 h-6 mr-3" style="color: #f97316;" fill="currentColor" viewBox="0 0 20 20">
-                <path fill-rule="evenodd" d="M6.267 3.455a3.066 3.066 0 001.745-.723 3.066 3.066 0 013.976 0 3.066 3.066 0 001.745.723 3.066 3.066 0 012.812 2.812c.051.643.304 1.254.723 1.745a3.066 3.066 0 010 3.976 3.066 3.066 0 00-.723 1.745 3.066 3.066 0 01-2.812 2.812 3.066 3.066 0 00-1.745.723 3.066 3.066 0 01-3.976 0 3.066 3.066 0 00-1.745-.723 3.066 3.066 0 01-2.812-2.812 3.066 3.066 0 00-.723-1.745 3.066 3.066 0 010-3.976 3.066 3.066 0 00.723-1.745 3.066 3.066 0 012.812-2.812zm7.44 5.252a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
-              </svg>
-              <span class="font-bold text-lg" style="color: #ffffff;">Certified Expertise</span>
-            </div>
-            
-            <h2 class="text-2xl sm:text-4xl lg:text-5xl font-bold mb-4 sm:mb-8 leading-tight" style="color: #ffffff;">
-              15+ Years of 
-              <span style="color: #f97316;">Sub-Zero & Wolf</span> 
-              Repair Excellence
+    <section class="grain relative bg-ink py-20 lg:py-28 overflow-hidden">
+      <span class="ghost-word ghost-word--light text-[6rem] lg:text-[11rem] -top-4 -left-8" aria-hidden="true">Expertise</span>
+
+      <div class="container mx-auto px-4 max-w-screen-xl relative z-10">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-start">
+          <div v-reveal>
+            <span class="inline-flex items-center gap-2.5 rounded-full border border-white/15 bg-white/5 px-4 py-2 font-montserrat text-[10px] font-semibold uppercase tracking-[0.25em] text-brass-light mb-6">
+              <span class="w-1.5 h-1.5 rounded-full bg-brass animate-pulse" aria-hidden="true"></span>
+              Certified Expertise
+            </span>
+
+            <h2 class="font-montserrat font-bold tracking-[-0.02em] text-3xl sm:text-4xl lg:text-5xl text-white leading-[1.05] mb-8">
+              15+ Years of Sub-Zero & Wolf
+              <em class="block font-display font-semibold italic text-brass-light">Repair Excellence</em>
             </h2>
-            
-            <div class="space-y-6 text-lg leading-relaxed" style="color: rgba(255, 255, 255, 0.9);">
+
+            <div class="space-y-5 text-base sm:text-lg text-white/70 leading-relaxed [&_strong]:text-white [&_strong]:font-semibold">
               <p>
                 At Easy Fix Appliance, we've been the Bay Area's trusted Sub-Zero and Wolf repair specialists for over <strong>15 years</strong>. Our factory-trained technicians understand the intricate engineering behind these premium appliances, from Sub-Zero's dual refrigeration systems to Wolf's precise temperature controls.
               </p>
@@ -162,96 +176,124 @@
                 We serve <strong>San Mateo, Palo Alto, Foster City, San Francisco</strong>, and the entire Bay Area with same-day emergency service and comprehensive maintenance programs. Using only <strong>genuine OEM parts</strong> and advanced diagnostic equipment, we ensure your luxury appliances perform at their peak for decades.
               </p>
             </div>
-            
+
             <!-- Key Benefits -->
-            <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 mt-8 sm:mt-12">
-              <div class="flex items-start space-x-4">
-                <div class="flex-shrink-0 w-12 h-12 rounded-xl flex items-center justify-center" style="background: rgba(249, 115, 22, 0.2);">
-                  <svg class="w-6 h-6" style="color: #f97316;" fill="currentColor" viewBox="0 0 20 20">
-                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
-                  </svg>
-                </div>
-                <div>
-                  <h3 class="font-bold mb-2" style="color: #ffffff;">Factory Certification</h3>
-                  <p class="text-sm" style="color: rgba(255, 255, 255, 0.8);">Authorized service technicians with manufacturer training</p>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-10">
+              <div class="rounded-[1.25rem] border border-white/10 bg-white/[0.04] p-5" v-reveal>
+                <div class="flex items-start gap-3">
+                  <span class="w-1 h-1 rotate-45 bg-brass mt-2.5 shrink-0" aria-hidden="true"></span>
+                  <div>
+                    <h3 class="font-montserrat font-bold text-base text-white mb-1.5">Factory Certification</h3>
+                    <p class="text-sm text-white/50 leading-relaxed">Authorized service technicians with manufacturer training</p>
+                  </div>
                 </div>
               </div>
-              
-              <div class="flex items-start space-x-4">
-                <div class="flex-shrink-0 w-12 h-12 rounded-xl flex items-center justify-center" style="background: rgba(249, 115, 22, 0.2);">
-                  <svg class="w-6 h-6" style="color: #f97316;" fill="currentColor" viewBox="0 0 20 20">
-                    <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
-                  </svg>
-                </div>
-                <div>
-                  <h3 class="font-bold mb-2" style="color: #ffffff;">Genuine OEM Parts</h3>
-                  <p class="text-sm" style="color: rgba(255, 255, 255, 0.8);">Only authentic Sub-Zero & Wolf replacement parts</p>
+
+              <div class="rounded-[1.25rem] border border-white/10 bg-white/[0.04] p-5" v-reveal="90">
+                <div class="flex items-start gap-3">
+                  <span class="w-1 h-1 rotate-45 bg-brass mt-2.5 shrink-0" aria-hidden="true"></span>
+                  <div>
+                    <h3 class="font-montserrat font-bold text-base text-white mb-1.5">Genuine OEM Parts</h3>
+                    <p class="text-sm text-white/50 leading-relaxed">Only authentic Sub-Zero & Wolf replacement parts</p>
+                  </div>
                 </div>
               </div>
-              
-              <div class="flex items-start space-x-4">
-                <div class="flex-shrink-0 w-12 h-12 rounded-xl flex items-center justify-center" style="background: rgba(249, 115, 22, 0.2);">
-                  <svg class="w-6 h-6" style="color: #f97316;" fill="currentColor" viewBox="0 0 20 20">
-                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z" clip-rule="evenodd"/>
-                  </svg>
-                </div>
-                <div>
-                  <h3 class="font-bold mb-2" style="color: #ffffff;">Same-Day Service</h3>
-                  <p class="text-sm" style="color: rgba(255, 255, 255, 0.8);">Emergency repairs within 24 hours</p>
+
+              <div class="rounded-[1.25rem] border border-white/10 bg-white/[0.04] p-5" v-reveal="180">
+                <div class="flex items-start gap-3">
+                  <span class="w-1 h-1 rotate-45 bg-brass mt-2.5 shrink-0" aria-hidden="true"></span>
+                  <div>
+                    <h3 class="font-montserrat font-bold text-base text-white mb-1.5">Same-Day Service</h3>
+                    <p class="text-sm text-white/50 leading-relaxed">Emergency repairs within 24 hours</p>
+                  </div>
                 </div>
               </div>
-              
-              <div class="flex items-start space-x-4">
-                <div class="flex-shrink-0 w-12 h-12 rounded-xl flex items-center justify-center" style="background: rgba(249, 115, 22, 0.2);">
-                  <svg class="w-6 h-6" style="color: #f97316;" fill="currentColor" viewBox="0 0 20 20">
-                    <path fill-rule="evenodd" d="M3.172 5.172a4 4 0 015.656 0L10 6.343l1.172-1.171a4 4 0 115.656 5.656L10 17.657l-6.828-6.829a4 4 0 010-5.656z" clip-rule="evenodd"/>
-                  </svg>
-                </div>
-                <div>
-                  <h3 class="font-bold mb-2" style="color: #ffffff;">2-Year Warranty</h3>
-                  <p class="text-sm" style="color: rgba(255, 255, 255, 0.8);">Extended warranty on all repairs</p>
+
+              <div class="rounded-[1.25rem] border border-white/10 bg-white/[0.04] p-5" v-reveal="270">
+                <div class="flex items-start gap-3">
+                  <span class="w-1 h-1 rotate-45 bg-brass mt-2.5 shrink-0" aria-hidden="true"></span>
+                  <div>
+                    <h3 class="font-montserrat font-bold text-base text-white mb-1.5">2-Year Warranty</h3>
+                    <p class="text-sm text-white/50 leading-relaxed">Extended warranty on all repairs</p>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
-          
-          <div class="relative">
-            <div class="p-5 sm:p-8 rounded-3xl" style="background: linear-gradient(to bottom right, #1C6E8C, #f97316);">
-              <div class="text-center mb-4 sm:mb-8">
-                <h3 class="text-xl sm:text-3xl font-bold mb-4" style="color: #ffffff;">Common Issues We Fix</h3>
-                <p class="text-lg" style="color: rgba(255, 255, 255, 0.9);">Expert solutions for all Sub-Zero & Wolf problems</p>
+
+          <!-- Common Issues Panel -->
+          <div class="rounded-[2rem] border border-white/10 bg-white/[0.04] backdrop-blur-sm p-8 lg:p-10" v-reveal="150">
+            <h3 class="font-montserrat font-bold tracking-[-0.02em] text-2xl sm:text-3xl text-white mb-2">
+              Common Issues
+              <em class="font-display font-semibold italic text-brass-light">We Fix</em>
+            </h3>
+            <p class="text-white/60 mb-8">Expert solutions for all Sub-Zero & Wolf problems</p>
+
+            <div class="space-y-6">
+              <div class="border-b border-white/10 pb-6">
+                <h4 class="font-montserrat text-[11px] font-semibold uppercase tracking-[0.25em] text-brass-light mb-3">Sub-Zero Refrigeration Issues</h4>
+                <ul class="space-y-2">
+                  <li class="flex items-start gap-3 text-sm sm:text-base text-white/70">
+                    <span class="w-1 h-1 rotate-45 bg-brass mt-2.5 shrink-0" aria-hidden="true"></span>
+                    Temperature control problems
+                  </li>
+                  <li class="flex items-start gap-3 text-sm sm:text-base text-white/70">
+                    <span class="w-1 h-1 rotate-45 bg-brass mt-2.5 shrink-0" aria-hidden="true"></span>
+                    Ice maker malfunctions
+                  </li>
+                  <li class="flex items-start gap-3 text-sm sm:text-base text-white/70">
+                    <span class="w-1 h-1 rotate-45 bg-brass mt-2.5 shrink-0" aria-hidden="true"></span>
+                    Condenser fan repairs
+                  </li>
+                  <li class="flex items-start gap-3 text-sm sm:text-base text-white/70">
+                    <span class="w-1 h-1 rotate-45 bg-brass mt-2.5 shrink-0" aria-hidden="true"></span>
+                    Door seal replacements
+                  </li>
+                </ul>
               </div>
-              
-              <div class="space-y-4">
-                <div class="p-4 rounded-xl" style="background: rgba(255, 255, 255, 0.1); backdrop-filter: blur(8px);">
-                  <h4 class="font-bold mb-2" style="color: #ffffff;">Sub-Zero Refrigeration Issues</h4>
-                  <ul class="text-sm space-y-1" style="color: rgba(255, 255, 255, 0.8);">
-                    <li>• Temperature control problems</li>
-                    <li>• Ice maker malfunctions</li>
-                    <li>• Condenser fan repairs</li>
-                    <li>• Door seal replacements</li>
-                  </ul>
-                </div>
-                
-                <div class="p-4 rounded-xl" style="background: rgba(255, 255, 255, 0.1); backdrop-filter: blur(8px);">
-                  <h4 class="font-bold mb-2" style="color: #ffffff;">Wolf Cooking Appliance Repairs</h4>
-                  <ul class="text-sm space-y-1" style="color: rgba(255, 255, 255, 0.8);">
-                    <li>• Burner ignition issues</li>
-                    <li>• Oven calibration problems</li>
-                    <li>• Control panel malfunctions</li>
-                    <li>• Convection fan repairs</li>
-                  </ul>
-                </div>
-                
-                <div class="p-4 rounded-xl" style="background: rgba(255, 255, 255, 0.1); backdrop-filter: blur(8px);">
-                  <h4 class="font-bold mb-2" style="color: #ffffff;">Preventive Maintenance</h4>
-                  <ul class="text-sm space-y-1" style="color: rgba(255, 255, 255, 0.8);">
-                    <li>• Annual service inspections</li>
-                    <li>• Filter replacements</li>
-                    <li>• Performance optimization</li>
-                    <li>• Extended warranty plans</li>
-                  </ul>
-                </div>
+
+              <div class="border-b border-white/10 pb-6">
+                <h4 class="font-montserrat text-[11px] font-semibold uppercase tracking-[0.25em] text-brass-light mb-3">Wolf Cooking Appliance Repairs</h4>
+                <ul class="space-y-2">
+                  <li class="flex items-start gap-3 text-sm sm:text-base text-white/70">
+                    <span class="w-1 h-1 rotate-45 bg-brass mt-2.5 shrink-0" aria-hidden="true"></span>
+                    Burner ignition issues
+                  </li>
+                  <li class="flex items-start gap-3 text-sm sm:text-base text-white/70">
+                    <span class="w-1 h-1 rotate-45 bg-brass mt-2.5 shrink-0" aria-hidden="true"></span>
+                    Oven calibration problems
+                  </li>
+                  <li class="flex items-start gap-3 text-sm sm:text-base text-white/70">
+                    <span class="w-1 h-1 rotate-45 bg-brass mt-2.5 shrink-0" aria-hidden="true"></span>
+                    Control panel malfunctions
+                  </li>
+                  <li class="flex items-start gap-3 text-sm sm:text-base text-white/70">
+                    <span class="w-1 h-1 rotate-45 bg-brass mt-2.5 shrink-0" aria-hidden="true"></span>
+                    Convection fan repairs
+                  </li>
+                </ul>
+              </div>
+
+              <div>
+                <h4 class="font-montserrat text-[11px] font-semibold uppercase tracking-[0.25em] text-brass-light mb-3">Preventive Maintenance</h4>
+                <ul class="space-y-2">
+                  <li class="flex items-start gap-3 text-sm sm:text-base text-white/70">
+                    <span class="w-1 h-1 rotate-45 bg-brass mt-2.5 shrink-0" aria-hidden="true"></span>
+                    Annual service inspections
+                  </li>
+                  <li class="flex items-start gap-3 text-sm sm:text-base text-white/70">
+                    <span class="w-1 h-1 rotate-45 bg-brass mt-2.5 shrink-0" aria-hidden="true"></span>
+                    Filter replacements
+                  </li>
+                  <li class="flex items-start gap-3 text-sm sm:text-base text-white/70">
+                    <span class="w-1 h-1 rotate-45 bg-brass mt-2.5 shrink-0" aria-hidden="true"></span>
+                    Performance optimization
+                  </li>
+                  <li class="flex items-start gap-3 text-sm sm:text-base text-white/70">
+                    <span class="w-1 h-1 rotate-45 bg-brass mt-2.5 shrink-0" aria-hidden="true"></span>
+                    Extended warranty plans
+                  </li>
+                </ul>
               </div>
             </div>
           </div>
@@ -260,66 +302,92 @@
     </section>
 
     <!-- FAQ Section -->
-    <section class="py-10 sm:py-16 lg:py-32" style="background: linear-gradient(to bottom right, #f8fafc, #ffffff);">
-      <div class="container mx-auto px-4 max-w-screen-xl">
-        <div class="text-center mb-8 sm:mb-16">
-          <h2 class="text-2xl sm:text-4xl lg:text-5xl font-bold mb-4 sm:mb-8" style="color: #1f2937;">
-            Frequently Asked Questions
+    <section class="relative bg-white py-20 lg:py-28 overflow-hidden">
+      <span class="ghost-word text-[7rem] lg:text-[12rem] -top-6 -left-8" aria-hidden="true">Answers</span>
+
+      <div class="container mx-auto px-4 max-w-screen-xl relative z-10">
+        <div class="text-center max-w-4xl mx-auto mb-12 lg:mb-16" v-reveal>
+          <span class="inline-flex items-center gap-2.5 rounded-full border border-primary/15 bg-cream px-4 py-2 font-montserrat text-[10px] font-semibold uppercase tracking-[0.25em] text-primary mb-6">
+            <span class="w-1.5 h-1.5 rounded-full bg-brass animate-pulse" aria-hidden="true"></span>
+            Common Questions
+          </span>
+
+          <h2 class="font-montserrat font-bold tracking-[-0.02em] text-3xl sm:text-5xl text-primary leading-[1.05] mb-6">
+            Frequently Asked
+            <em class="font-display font-semibold italic text-brass-dark">Questions</em>
           </h2>
-          <p class="text-base sm:text-xl max-w-3xl mx-auto" style="color: #6b7280;">
+
+          <p class="text-base sm:text-lg text-gray-600 max-w-3xl mx-auto leading-relaxed">
             Get answers to common questions about Sub-Zero and Wolf appliance repairs in the Bay Area
           </p>
         </div>
-        
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto">
-          <div class="p-5 sm:p-8 rounded-2xl shadow-lg" style="background: #ffffff;">
-            <h3 class="text-lg sm:text-xl font-bold mb-4" style="color: #1f2937;">How long do Sub-Zero appliances typically last?</h3>
-            <p style="color: #6b7280;">Sub-Zero appliances are built to last 20+ years with proper maintenance. Regular service every 12-18 months can extend their lifespan even further.</p>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-5 lg:gap-6 max-w-6xl mx-auto">
+          <div class="rounded-[1.5rem] border border-primary/10 bg-cream p-7 lg:p-8" v-reveal>
+            <h3 class="flex items-start gap-3 font-montserrat font-bold text-lg text-primary mb-3">
+              <span class="w-1 h-1 rotate-45 bg-brass mt-2.5 shrink-0" aria-hidden="true"></span>
+              How long do Sub-Zero appliances typically last?
+            </h3>
+            <p class="text-gray-600 leading-relaxed">Sub-Zero appliances are built to last 20+ years with proper maintenance. Regular service every 12-18 months can extend their lifespan even further.</p>
           </div>
-          
-          <div class="p-5 sm:p-8 rounded-2xl shadow-lg" style="background: #ffffff;">
-            <h3 class="text-lg sm:text-xl font-bold mb-4" style="color: #1f2937;">Do you provide same-day Wolf range repairs?</h3>
-            <p style="color: #6b7280;">Yes, we offer same-day emergency service for Wolf appliances throughout the Bay Area, including San Mateo, Palo Alto, and San Francisco.</p>
+
+          <div class="rounded-[1.5rem] border border-primary/10 bg-cream p-7 lg:p-8" v-reveal="90">
+            <h3 class="flex items-start gap-3 font-montserrat font-bold text-lg text-primary mb-3">
+              <span class="w-1 h-1 rotate-45 bg-brass mt-2.5 shrink-0" aria-hidden="true"></span>
+              Do you provide same-day Wolf range repairs?
+            </h3>
+            <p class="text-gray-600 leading-relaxed">Yes, we offer same-day emergency service for Wolf appliances throughout the Bay Area, including San Mateo, Palo Alto, and San Francisco.</p>
           </div>
-          
-          <div class="p-5 sm:p-8 rounded-2xl shadow-lg" style="background: #ffffff;">
-            <h3 class="text-lg sm:text-xl font-bold mb-4" style="color: #1f2937;">Are your technicians factory-certified?</h3>
-            <p style="color: #6b7280;">All our technicians are factory-trained and certified by Sub-Zero and Wolf, ensuring expert knowledge of these premium appliance brands.</p>
+
+          <div class="rounded-[1.5rem] border border-primary/10 bg-cream p-7 lg:p-8" v-reveal>
+            <h3 class="flex items-start gap-3 font-montserrat font-bold text-lg text-primary mb-3">
+              <span class="w-1 h-1 rotate-45 bg-brass mt-2.5 shrink-0" aria-hidden="true"></span>
+              Are your technicians factory-certified?
+            </h3>
+            <p class="text-gray-600 leading-relaxed">All our technicians are factory-trained and certified by Sub-Zero and Wolf, ensuring expert knowledge of these premium appliance brands.</p>
           </div>
-          
-          <div class="p-5 sm:p-8 rounded-2xl shadow-lg" style="background: #ffffff;">
-            <h3 class="text-lg sm:text-xl font-bold mb-4" style="color: #1f2937;">What warranty do you provide on repairs?</h3>
-            <p style="color: #6b7280;">We provide a 2-year warranty on all parts and labor for Sub-Zero and Wolf repairs, giving you peace of mind and protection for your investment.</p>
+
+          <div class="rounded-[1.5rem] border border-primary/10 bg-cream p-7 lg:p-8" v-reveal="90">
+            <h3 class="flex items-start gap-3 font-montserrat font-bold text-lg text-primary mb-3">
+              <span class="w-1 h-1 rotate-45 bg-brass mt-2.5 shrink-0" aria-hidden="true"></span>
+              What warranty do you provide on repairs?
+            </h3>
+            <p class="text-gray-600 leading-relaxed">We provide a 2-year warranty on all parts and labor for Sub-Zero and Wolf repairs, giving you peace of mind and protection for your investment.</p>
           </div>
         </div>
       </div>
     </section>
 
     <!-- Call to Action Section -->
-    <section class="py-10 sm:py-16 lg:py-20" style="background: linear-gradient(to right, #0c2a3b, #1C6E8C, #f97316);">
-      <div class="container mx-auto px-4 max-w-screen-xl text-center">
-        <div class="max-w-4xl mx-auto">
-          <h2 class="text-2xl sm:text-4xl lg:text-5xl font-bold mb-4 sm:mb-8" style="color: #ffffff;">
-            Ready to Restore Your Sub-Zero & Wolf Appliances?
-          </h2>
-          <p class="text-base sm:text-xl lg:text-2xl mb-8 sm:mb-12" style="color: rgba(255, 255, 255, 0.9);">
-            Don't let appliance issues disrupt your luxury kitchen experience. Our certified technicians are ready to provide expert Sub-Zero and Wolf repair services with same-day availability.
-          </p>
-          
-          <div class="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center items-center">
-            <a href="tel:4159414144" class="group w-full sm:w-auto inline-flex items-center justify-center px-6 py-4 sm:px-12 sm:py-6 font-bold rounded-2xl transition-all duration-300 shadow-2xl hover:shadow-3xl transform hover:-translate-y-2 text-base sm:text-xl min-h-[48px] sm:min-h-[70px] touch-manipulation" style="background: #ffffff; color: #0c2a3b;">
-              <svg class="w-5 h-5 mr-3 sm:w-7 sm:h-7 sm:mr-4 group-hover:animate-pulse" fill="currentColor" viewBox="0 0 20 20">
-                <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"/>
-              </svg>
-              Call Now: (415) 941-4144
-            </a>
-            
-            <NuxtLink to="/booking" class="w-full sm:w-auto inline-flex items-center justify-center px-6 py-4 sm:px-12 sm:py-6 border-3 font-bold rounded-2xl transition-all duration-300 transform hover:-translate-y-2 text-base sm:text-xl min-h-[48px] sm:min-h-[70px] touch-manipulation hover:bg-white hover:text-primary" style="border-color: #ffffff; color: #ffffff; background: rgba(255, 255, 255, 0.1); backdrop-filter: blur(8px);">
-              <svg class="w-5 h-5 mr-3 sm:w-7 sm:h-7 sm:mr-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3a1 1 0 011-1h6a1 1 0 011 1v4m-6 0h6m-6 0V5a1 1 0 00-1 1v1m0 8h6v2a1 1 0 01-1 1H9a1 1 0 01-1-1v-2zm6 0V5a1 1 0 011-1h2a1 1 0 011 1v14a1 1 0 01-1 1h-2a1 1 0 01-1-1V5z"/>
-              </svg>
-              Schedule Service Online
-            </NuxtLink>
+    <section class="bg-cream py-20 lg:py-28">
+      <div class="container mx-auto px-4 max-w-screen-xl">
+        <div class="grain glow-brass relative bg-ink rounded-[2rem] px-6 py-14 sm:px-14 sm:py-16 text-center overflow-hidden" v-reveal>
+          <div class="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-brass to-transparent" aria-hidden="true"></div>
+          <div class="relative z-10 max-w-4xl mx-auto">
+            <h2 class="font-montserrat font-bold tracking-[-0.02em] text-3xl sm:text-4xl lg:text-5xl text-white leading-tight mb-6">
+              Ready to Restore Your
+              <em class="font-display font-semibold italic text-brass-light">Sub-Zero & Wolf Appliances?</em>
+            </h2>
+
+            <p class="text-white/60 max-w-3xl mx-auto leading-relaxed mb-10">
+              Don't let appliance issues disrupt your luxury kitchen experience. Our certified technicians are ready to provide expert Sub-Zero and Wolf repair services with same-day availability.
+            </p>
+
+            <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
+              <a
+                href="tel:4159414144"
+                class="w-full sm:w-auto inline-flex items-center justify-center min-h-[54px] px-9 py-4 rounded-full bg-white text-ink font-montserrat text-sm font-semibold uppercase tracking-[0.12em] transition-all duration-300 hover:bg-brass hover:text-white hover:scale-[1.03] touch-manipulation"
+              >
+                Call Now: (415) 941-4144
+              </a>
+
+              <NuxtLink
+                to="/booking"
+                class="w-full sm:w-auto inline-flex items-center justify-center min-h-[54px] px-9 py-4 rounded-full border border-white/30 text-white font-montserrat text-sm font-semibold uppercase tracking-[0.12em] transition-all duration-300 hover:border-brass hover:text-brass-light hover:scale-[1.03] touch-manipulation"
+              >
+                Schedule Service Online
+              </NuxtLink>
+            </div>
           </div>
         </div>
       </div>
@@ -333,25 +401,17 @@
       :class="showStickyCta ? 'translate-y-0' : 'translate-y-full'"
       :style="{ paddingBottom: 'env(safe-area-inset-bottom)' }"
     >
-      <div class="flex gap-2 px-3 py-2 bg-white shadow-[0_-4px_20px_rgba(0,0,0,0.15)]">
+      <div class="flex gap-2 px-3 py-2 bg-white/95 backdrop-blur-sm border-t border-primary/10 shadow-[0_-4px_20px_rgba(10,35,51,0.12)]">
         <a
           href="tel:4159414144"
-          class="flex-1 inline-flex items-center justify-center px-4 py-3 font-bold rounded-xl text-sm min-h-[48px] touch-manipulation active:scale-[0.97] transition-transform text-white"
-          style="background: linear-gradient(to right, #facc15, #f97316);"
+          class="flex-1 inline-flex items-center justify-center min-h-[48px] px-4 py-3 rounded-full bg-ink text-white font-montserrat text-xs font-semibold uppercase tracking-[0.12em] touch-manipulation active:scale-[0.97] transition-transform"
         >
-          <svg class="w-5 h-5 mr-2 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
-            <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"/>
-          </svg>
           Call Now
         </a>
         <NuxtLink
           to="/booking"
-          class="flex-1 inline-flex items-center justify-center px-4 py-3 font-bold rounded-xl text-sm min-h-[48px] touch-manipulation active:scale-[0.97] transition-transform border-2"
-          style="background: #ffffff; color: #1f2937; border-color: #e5e7eb;"
+          class="flex-1 inline-flex items-center justify-center min-h-[48px] px-4 py-3 rounded-full border border-ink/20 text-ink font-montserrat text-xs font-semibold uppercase tracking-[0.12em] touch-manipulation active:scale-[0.97] transition-transform"
         >
-          <svg class="w-5 h-5 mr-2 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3a1 1 0 011-1h6a1 1 0 011 1v4m-6 0h6m-6 0V5a1 1 0 00-1 1v1m0 8h6v2a1 1 0 01-1 1H9a1 1 0 01-1-1v-2zm6 0V5a1 1 0 011-1h2a1 1 0 011 1v14a1 1 0 01-1 1h-2a1 1 0 01-1-1V5z"/>
-          </svg>
           Book Online
         </NuxtLink>
       </div>
@@ -387,7 +447,7 @@ useHead({
       content: 'Sub-Zero & Wolf Appliance Repair Services | Bay Area Certified Technicians'
     },
     {
-      property: 'og:description', 
+      property: 'og:description',
       content: 'Factory-certified Sub-Zero and Wolf appliance repair services in the Bay Area. Same-day service, genuine OEM parts, 2-year warranty.'
     },
     {
@@ -414,7 +474,7 @@ useHead({
         "areaServed": [
           "San Mateo",
           "Palo Alto",
-          "Foster City", 
+          "Foster City",
           "San Francisco",
           "Bay Area"
         ],

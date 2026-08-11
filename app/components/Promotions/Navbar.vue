@@ -1,24 +1,23 @@
 <template>
-  <nav
-    :class="[
-      'transition-all duration-500 fixed w-full z-40 top-0 start-0 font-montserrat',
-      isScrolled ? 'bg-black/50 backdrop-blur-md shadow-md' : 'bg-transparent',
-    ]"
-  >
+  <nav aria-label="Main" class="fixed top-3 inset-x-3 lg:top-4 lg:inset-x-6 z-50 font-montserrat">
+    <!-- Floating capsule -->
     <div
-      class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-1 py-4"
+      :class="[
+        'max-w-screen-xl mx-auto flex items-center justify-between gap-3 rounded-full pl-4 pr-2 lg:pl-6 lg:pr-2.5 py-2 border backdrop-blur-2xl transition-all duration-500',
+        isScrolled
+          ? 'bg-white/85 border-ink/10 shadow-[0_10px_40px_-12px_rgba(10,35,51,0.25)]'
+          : 'bg-ink/35 border-white/15',
+      ]"
     >
-        <a
-        href="/"
-        class="flex items-center space-x-1 md:space-x-3 rtl:space-x-reverse"
-      >
+      <!-- Logo -->
+      <a href="/" class="flex items-center gap-2.5 shrink-0 group">
         <svg
-          width="52"
-          height="52"
+          width="34"
+          height="34"
           viewBox="0 0 52 52"
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
-          class="rounded-full max-h-[38px] md:max-h-[52px]"
+          class="rounded-full transition-transform duration-500 group-hover:rotate-[30deg]"
         >
           <path
             d="M7.80934 8.52637L9.85214 12.745L8 16.5L5.5 20.5L5.52335 25.3528L1 26.8869L2.0214 32.9751H6.83658L8.00389 35.2761L4.64786 39.1592L8.92802 43.953L12.9163 41.8437L15.2996 43.4736L14.3268 47.7881L20.2607 50.185L22.3521 46.2541L25.6109 46.5417L27.1187 51L33.1012 50.185V45.3912L35.9222 44.4803L39.3268 47.4525L44.4825 43.4736L41.9047 39.1592L44.4825 35.8035L46 31.5L46.5253 26.5513L51 24.9214L50.0759 18.9291H45.358L44.142 15.9089L47.2062 12.745L42.9747 7.90316L39.035 10.1083L36.8463 8.52637L37.7218 3.9722L31.7393 1.95877L29.4533 5.50623L26.2918 5.17066L24.6868 1L18.4611 1.95877V6.56088L16.0292 7.90316L12.3327 4.88303L7.80934 8.52637Z"
@@ -35,43 +34,45 @@
             fill="#F8EDE3"
           />
         </svg>
-
-        <div class="md:flex flex-col hidden">
-          <p>
-            <span
-              class="self-center text-sm md:text-2xl font-semibold whitespace-nowrap text-white dark:text-white"
-              >Easy</span
-            >
-            <span
-              class="self-center text-sm md:text-2xl font-semibold whitespace-nowrap text-tertiary dark:text-white"
-              >Fix</span
-            >
-          </p>
-
-          <p
-            class="self-center text-white text-sm md:text-2xl font-semibold whitespace-nowrap dark:text-white"
+        <span class="flex flex-col leading-none">
+          <span
+            :class="[
+              'text-lg font-bold tracking-tight transition-colors duration-300',
+              isScrolled ? 'text-ink' : 'text-white',
+            ]"
+          >
+            Easy<span class="text-brass">Fix</span>
+          </span>
+          <span
+            :class="[
+              'text-[8.5px] font-semibold uppercase tracking-[0.28em] mt-1 transition-colors duration-300 hidden sm:block',
+              isScrolled ? 'text-ink/40' : 'text-white/50',
+            ]"
           >
             Appliance
-          </p>
-        </div>
+          </span>
+        </span>
       </a>
-      <div class="flex md:order-2 space-x-1 md:space-x-3 md:space-x-0">
-        <div class="space-x-1 md:space-x-4">
-          <a
-            href="/booking"
-            class="flex  items-center text-white bg-primary rounded-lg hover:text-white hover:bg-secondary transition-all duration-800 ease-out focus:ring-4 focus:outline-none font-medium text-sm px-2 md:px-6 py-2"
-            >
-            <span>Online Booking</span></a
-          >
-        </div>
-        <div class=" md:space-x-4">
-          <a
-            href="tel:4159414144"
-            class="flex space-x-2 items-center text-white bg-primary rounded-lg hover:text-white hover:bg-secondary transition-all duration-800 ease-out focus:ring-4 focus:outline-none font-medium text-sm px-2 md:px-4 py-2"
-            >
-            <span>Request a Call</span></a
-          >
-        </div>
+
+      <!-- CTAs -->
+      <div class="flex items-center gap-1.5 sm:gap-2.5">
+        <a
+          href="/booking"
+          :class="[
+            'inline-flex items-center justify-center rounded-full border px-3.5 sm:px-6 py-2.5 text-[10px] sm:text-[11px] font-semibold uppercase tracking-[0.14em] transition-all duration-300 hover:scale-[1.03] touch-manipulation whitespace-nowrap',
+            isScrolled
+              ? 'border-ink/20 text-ink hover:border-brass hover:text-brass-dark'
+              : 'border-white/30 text-white hover:border-brass hover:text-brass-light',
+          ]"
+        >
+          Online Booking
+        </a>
+        <a
+          href="tel:4159414144"
+          class="inline-flex items-center justify-center rounded-full bg-brass px-3.5 sm:px-6 py-2.5 text-[10px] sm:text-[11px] font-semibold uppercase tracking-[0.14em] text-white transition-all duration-300 hover:bg-brass-dark hover:scale-[1.03] touch-manipulation whitespace-nowrap"
+        >
+          Request a Call
+        </a>
       </div>
     </div>
   </nav>
@@ -90,7 +91,7 @@ const handleScroll = () => {
 
 // Lifecycle hooks
 onMounted(() => {
-  window.addEventListener("scroll", handleScroll);
+  window.addEventListener("scroll", handleScroll, { passive: true });
 });
 
 onUnmounted(() => {

@@ -1,149 +1,99 @@
 <template>
-  <section class="w-full bg-white relative">
-    <img loading="lazy" decoding="async"
-      src="/assets/img/promotions/pattern.webp"
-      class="w-full h-full object-cover absolute inset-0 z-0"
-      alt=" background pattern"
-    />
-    <div class="w-full max-w-screen-xl mx-auto flex flex-col py-10 z-10">
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-4 px-2 md:px-0 py-12">
-        <div class="flex flex-col space-y-6">
-          <h1
-            class="text-2xl md:text-4xl text-primary font-semibold text-center md:text-left px-2 md:px-0"
-          >
-            Why Choose Easy Fix for Your <br /><span class="text-red-700">
-              Wolf and Cove Repair Needs?</span
-            >
-          </h1>
+  <section class="relative bg-cream py-20 lg:py-28 overflow-hidden">
+    <span class="ghost-word text-[6rem] lg:text-[11rem] -top-6 -right-4" aria-hidden="true">Expertise</span>
+
+    <div class="container mx-auto px-4 max-w-screen-xl relative z-10">
+      <!-- Header -->
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-start mb-12 lg:mb-16">
+        <div v-reveal>
+          <span class="inline-flex items-center gap-2.5 rounded-full border border-primary/15 bg-white px-4 py-2 font-montserrat text-[10px] font-semibold uppercase tracking-[0.25em] text-primary mb-6">
+            <span class="w-1.5 h-1.5 rounded-full bg-brass animate-pulse" aria-hidden="true"></span>
+            Why Easy Fix
+          </span>
+          <h2 class="font-montserrat font-bold tracking-[-0.02em] text-3xl sm:text-4xl lg:text-5xl text-primary leading-[1.05]">
+            Why Choose Easy Fix for Your
+            <em class="block font-display font-semibold italic text-brass-dark">Wolf and Cove Repair Needs?</em>
+          </h2>
         </div>
-        <div
-          class="flex flex-col space-y-6 text-xl text-center md:text-left md:px-0"
-        >
-          <p>
+        <div class="space-y-8" v-reveal="120">
+          <p class="text-base sm:text-lg text-gray-600 leading-relaxed">
             At Easy Fix Appliance, we've handled over 10,000 repairs, making us
             the go-to experts for Wolf and Cove. We know these appliances inside
             and out and are committed to keeping them running smoothly, so your
             kitchen stays hassle-free.
           </p>
+          <a
+            href="tel:4159414144"
+            aria-label="Call us for Wolf and Cove appliance repair services"
+            class="inline-flex items-center justify-center min-h-[54px] px-9 py-4 rounded-full bg-ink text-white font-montserrat text-sm font-semibold uppercase tracking-[0.12em] transition-all duration-300 hover:bg-brass hover:scale-[1.03] touch-manipulation"
+          >
+            Schedule a Repair
+          </a>
         </div>
       </div>
-      <div
-        class="w-full flex items-center justify-center relative px-2 md:px-0 mb-6"
-      >
-        <a
-          href="tel:4159414144"
-          class="w-full md:w-1/4 md:absolute md:-top-14 md:left-0"
-        >
-          <button
-            class="bg-primary w-full px-6 py-2 rounded-full border-2 border-primary font-normal hover:border-primary hover:text-white hover:bg-secondary transition-all duration-800 ease-out group"
-            aria-label="Call us for Wolf and Coveppliance repair services"
-          >
-            <p class="text-white group-hover:text-white">Schedule a Repair</p>
-          </button>
-        </a>
-      </div>
-      <div
-        class="grid grid-cols-1 gap-6 md:grid-cols-3 px-2 mx-auto md:px-0 mt-6"
-      >
-        <div
-          class="flex flex-col p-10 rounded-xl bg-white shadow-xl z-20 space-y-6 py-14 max-w-[377px]"
-        >
-          <div
-            class="rounded-full w-[70px] h-[70px] flex items-center justify-center bg-primary"
-          >
-            <img loading="lazy" decoding="async" src="/assets/icons/promotions/user.png" alt="user icon" />
-          </div>
-          <h2 class="text-2xl text-primary font-semibold">
-            Factory-Trained Experts
-          </h2>
-          <p>
-            Our technicians undergo rigorous training to handle Wolf and Cove
-            high-performance technology.
-          </p>
-        </div>
 
+      <!-- Cards -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 lg:gap-6">
         <div
-          class="flex flex-col p-8 rounded-xl bg-white shadow-xl z-20 space-y-6 py-14 max-w-[377px]"
+          v-for="(card, index) in cards"
+          :key="card.title"
+          class="bg-white rounded-[1.5rem] border border-primary/5 shadow-sm p-7 lg:p-8 transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl hover:shadow-ink/10"
+          v-reveal="(index % 3) * 90"
         >
-          <div
-            class="rounded-full w-[70px] h-[70px] flex items-center justify-center bg-primary"
-          >
-            <img loading="lazy" decoding="async"
-              src="/assets/icons/promotions/headphone.png"
-              alt="support icon"
-            />
-          </div>
-          <h2 class="text-2xl text-primary font-semibold">
-            White-Glove Service
-          </h2>
-          <p>
-            We respect your home with meticulous care, arriving in professional
-            attire and using protective measures.
-          </p>
-        </div>
-        <div
-          class="flex flex-col p-8 rounded-xl bg-white shadow-xl z-20 space-y-6 py-14 max-w-[377px]"
-        >
-          <div
-            class="rounded-full w-[70px] h-[70px] flex items-center justify-center bg-primary"
-          >
-            <img loading="lazy" decoding="async" src="/assets/icons/promotions/wrench.png" alt="wrench icon" />
-          </div>
-          <h2 class="text-2xl text-primary font-semibold">
-            Repairs Done Right the First Time
-          </h2>
-          <p>
-            We use genuine Wolf and Cove parts and advanced diagnostics for precise,
-            lasting repairs.
-          </p>
-        </div>
-
-        <div
-          class="flex flex-col p-10 rounded-xl bg-white shadow-xl z-20 space-y-6 py-14 max-w-[377px]"
-        >
-          <div
-            class="rounded-full w-[70px] h-[70px] flex items-center justify-center bg-primary"
-          >
-            <img loading="lazy" decoding="async" src="/assets/icons/promotions/wrench.png" alt="wrench icon" />
-          </div>
-          <h2 class="text-2xl text-primary font-semibold">
-            Concierge-Level Convenience
-          </h2>
-          <p>
-            Flexible scheduling, minimal disruption, and VIP priority service.
-          </p>
-        </div>
-        <div
-          class="flex flex-col p-10 rounded-xl bg-white shadow-xl z-20 space-y-6 py-14 max-w-[377px]"
-        >
-          <div
-            class="rounded-full w-[70px] h-[70px] flex items-center justify-center bg-primary"
-          >
-            <img loading="lazy" decoding="async" src="/assets/icons/promotions/house.png" alt="house icon" />
-          </div>
-          <h2 class="text-2xl text-primary font-semibold">
-            Trusted in High-End Residences
-          </h2>
-          <p>Servicing luxury homes throughout the Bay Area.</p>
-        </div>
-
-        <div
-          class="flex flex-col p-10 rounded-xl bg-white shadow-xl z-20 space-y-6 py-14 max-w-[377px]"
-        >
-          <div
-            class="rounded-full w-[70px] h-[70px] flex items-center justify-center bg-primary"
-          >
-            <img loading="lazy" decoding="async" src="/assets/icons/promotions/iconx2.png" alt="house icon" />
-          </div>
-          <h2 class="text-2xl text-primary font-semibold">
-            Longest Warranty Coverage in the Bay Area
-          </h2>
-          <p>
-            We stand behind our work. Get up to 3 years of warranty coverage on
-            select repairs.
-          </p>
+          <span class="flex items-center justify-center w-14 h-14 rounded-full bg-ink mb-5">
+            <img loading="lazy" decoding="async" :src="card.icon" :alt="card.iconAlt" class="w-7 h-7 object-contain" />
+          </span>
+          <h3 class="font-montserrat font-bold text-lg sm:text-xl text-primary mb-3">{{ card.title }}</h3>
+          <p class="text-sm sm:text-base text-gray-600 leading-relaxed">{{ card.description }}</p>
         </div>
       </div>
     </div>
   </section>
 </template>
+
+<script setup>
+import userIcon from '/assets/icons/promotions/user.png'
+import headphoneIcon from '/assets/icons/promotions/headphone.png'
+import wrenchIcon from '/assets/icons/promotions/wrench.png'
+import houseIcon from '/assets/icons/promotions/house.png'
+import warrantyIcon from '/assets/icons/promotions/iconx2.png'
+
+const cards = [
+  {
+    icon: userIcon,
+    iconAlt: 'user icon',
+    title: 'Factory-Trained Experts',
+    description: 'Our technicians undergo rigorous training to handle Wolf and Cove high-performance technology.',
+  },
+  {
+    icon: headphoneIcon,
+    iconAlt: 'support icon',
+    title: 'White-Glove Service',
+    description: 'We respect your home with meticulous care, arriving in professional attire and using protective measures.',
+  },
+  {
+    icon: wrenchIcon,
+    iconAlt: 'wrench icon',
+    title: 'Repairs Done Right the First Time',
+    description: 'We use genuine Wolf and Cove parts and advanced diagnostics for precise, lasting repairs.',
+  },
+  {
+    icon: wrenchIcon,
+    iconAlt: 'wrench icon',
+    title: 'Concierge-Level Convenience',
+    description: 'Flexible scheduling, minimal disruption, and VIP priority service.',
+  },
+  {
+    icon: houseIcon,
+    iconAlt: 'house icon',
+    title: 'Trusted in High-End Residences',
+    description: 'Servicing luxury homes throughout the Bay Area.',
+  },
+  {
+    icon: warrantyIcon,
+    iconAlt: 'warranty icon',
+    title: 'Longest Warranty Coverage in the Bay Area',
+    description: 'We stand behind our work. Get up to 3 years of warranty coverage on select repairs.',
+  },
+]
+</script>

@@ -1,57 +1,56 @@
 <template>
-  <section class="w-full h-screen relative bg-white overflow-hidden">
-    <img loading="lazy" decoding="async"
-      src="/assets/img/promotions/viking-hero2.webp"
-      alt="Viking Appliances"
-      class="w-full object-cover lg:absolute inset-0 z-0"
-    />
-    <div
-      class="flex w-full max-w-screen-xl mx-auto py-10 bg-[url(/assets/img/promotions/pattern.webp)] md:py-28"
-    >
-      <div
-        class="bg-white/60 backdrop-blur-sm p-6 md:p-10 rounded-2xl space-y-12 max-w-[529px] mx-2 z-20 md:py-20"
-      >
-        <h1 class="text-3xl md:text-5xl font-semibold text-[1D1D1F]">
-          We Service
-        </h1>
-        <ul class="text-xl md:text-2xl  leading-loose list-inside space-y-4">
-          <li class="flex space-x-2">
-            <span
-              ><img loading="lazy" decoding="async"
-                src="/assets/icons/starBullet.svg"
-                alt="star bullet points" /></span
-            ><span>Viking Refrigerators & Freezers</span>
-          </li>
-          <li class="flex space-x-2">
-            <span
-              ><img loading="lazy" decoding="async"
-                src="/assets/icons/starBullet.svg"
-                alt="star bullet points" /></span
-            ><span>Viking Ranges & Cooktops</span>s
-          </li>
-          <li class="flex space-x-2">
-            <span
-              ><img loading="lazy" decoding="async"
-                src="/assets/icons/starBullet.svg"
-                alt="star bullet points" /></span
-            ><span>Viking Wall Ovens & Microwaves</span>
-          </li>
-          <li class="flex space-x-2">
-            <span
-              ><img loading="lazy" decoding="async"
-                src="/assets/icons/starBullet.svg"
-                alt="star bullet points" /></span
-            ><span>Viking Dishwashers </span>
-          </li>
-        </ul>
-        <div class="w-full py-8">
-          <a href="tel:4159414144" class="w-full md:w-1/3">
-            <button
-              class="bg-primary px-6 w-full py-2 rounded-md border-2 border-primary font-normal hover:border-primary hover:text-white hover:bg-secondary transition-all duration-800 ease-out group"
-              aria-label="Call us for Viking appliance repair services"
-            >
-              <p class="text-white group-hover:text-white">Request a Call</p>
-            </button>
+  <section class="relative bg-white py-20 lg:py-28 overflow-hidden">
+    <span class="ghost-word text-[6rem] lg:text-[11rem] -top-6 -left-8" aria-hidden="true">Service</span>
+
+    <div class="container mx-auto px-4 max-w-screen-xl relative z-10">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-center">
+        <!-- Image -->
+        <div class="group relative rounded-[2rem] overflow-hidden border border-primary/10 shadow-sm" v-reveal>
+          <img loading="lazy" decoding="async"
+            src="/assets/img/promotions/viking-hero2.webp"
+            alt="Viking Appliances"
+            class="w-full aspect-[4/3] object-cover transition-transform duration-700 ease-out group-hover:scale-110"
+          />
+          <div class="absolute inset-0 bg-gradient-to-t from-ink/40 via-transparent to-transparent" aria-hidden="true"></div>
+        </div>
+
+        <!-- Content -->
+        <div v-reveal="120">
+          <span class="inline-flex items-center gap-2.5 rounded-full border border-primary/15 bg-cream px-4 py-2 font-montserrat text-[10px] font-semibold uppercase tracking-[0.25em] text-primary mb-6">
+            <span class="w-1.5 h-1.5 rounded-full bg-brass animate-pulse" aria-hidden="true"></span>
+            Viking Specialists
+          </span>
+
+          <h2 class="font-montserrat font-bold tracking-[-0.02em] text-3xl sm:text-4xl lg:text-5xl text-primary leading-[1.05] mb-8">
+            We
+            <em class="font-display font-semibold italic text-brass-dark">Service</em>
+          </h2>
+
+          <ul class="space-y-4 mb-10">
+            <li class="flex items-start gap-3 text-base sm:text-lg text-gray-700">
+              <span class="w-1 h-1 rotate-45 bg-brass mt-2.5 shrink-0" aria-hidden="true"></span>
+              <span>Viking Refrigerators &amp; Freezers</span>
+            </li>
+            <li class="flex items-start gap-3 text-base sm:text-lg text-gray-700">
+              <span class="w-1 h-1 rotate-45 bg-brass mt-2.5 shrink-0" aria-hidden="true"></span>
+              <span>Viking Ranges &amp; Cooktops</span>
+            </li>
+            <li class="flex items-start gap-3 text-base sm:text-lg text-gray-700">
+              <span class="w-1 h-1 rotate-45 bg-brass mt-2.5 shrink-0" aria-hidden="true"></span>
+              <span>Viking Wall Ovens &amp; Microwaves</span>
+            </li>
+            <li class="flex items-start gap-3 text-base sm:text-lg text-gray-700">
+              <span class="w-1 h-1 rotate-45 bg-brass mt-2.5 shrink-0" aria-hidden="true"></span>
+              <span>Viking Dishwashers</span>
+            </li>
+          </ul>
+
+          <a
+            href="tel:4159414144"
+            aria-label="Call us for Viking appliance repair services"
+            class="inline-flex items-center justify-center min-h-[54px] px-9 py-4 rounded-full bg-ink text-white font-montserrat text-sm font-semibold uppercase tracking-[0.12em] transition-all duration-300 hover:bg-brass hover:scale-[1.03] touch-manipulation"
+          >
+            Request a Call
           </a>
         </div>
       </div>
