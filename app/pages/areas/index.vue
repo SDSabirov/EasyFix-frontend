@@ -15,6 +15,8 @@
       <!-- Hero Content -->
       <div class="container mx-auto px-4 max-w-screen-xl relative z-10">
         <div class="max-w-4xl mx-auto text-center">
+          <Breadcrumb dark :custom-breadcrumbs="[{ name: 'Service Areas', path: '/areas' }]" />
+
           <span class="inline-flex items-center gap-2.5 rounded-full border border-white/15 bg-white/5 px-4 py-2 font-montserrat text-[10px] font-semibold uppercase tracking-[0.25em] text-brass-light mb-6">
             <span class="w-1.5 h-1.5 rounded-full bg-brass animate-pulse" aria-hidden="true"></span>
             Bay Area Service Coverage

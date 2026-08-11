@@ -8,6 +8,8 @@
 
       <div class="container mx-auto px-4 max-w-screen-xl relative z-10">
         <div class="text-center max-w-4xl mx-auto">
+          <Breadcrumb :custom-breadcrumbs="[{ name: 'FAQ', path: '/faq' }]" />
+
           <span class="inline-flex items-center gap-2.5 rounded-full border border-primary/15 bg-white px-4 py-2 font-montserrat text-[10px] font-semibold uppercase tracking-[0.25em] text-primary mb-6">
             <span class="w-1.5 h-1.5 rounded-full bg-brass animate-pulse" aria-hidden="true"></span>
             Get Your Questions Answered

@@ -1,43 +1,32 @@
 <template>
-  <nav aria-label="Breadcrumb" class="bg-gray-50 py-3 px-4">
-    <div class="container mx-auto max-w-screen-xl">
-      <ol class="flex items-center space-x-2 text-sm text-gray-600">
-        <li>
-          <NuxtLink 
-            to="/" 
-            class="hover:text-primary transition-colors"
-            aria-label="Go to homepage"
-          >
-            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
-              <path d="m19.707 9.293-2-2-7-7a1 1 0 0 0-1.414 0l-7 7-2 2a1 1 0 0 0 1.414 1.414L2 10.414V18a2 2 0 0 0 2 2h3a1 1 0 0 0 1-1v-4a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v4a1 1 0 0 0 1 1h3a2 2 0 0 0 2-2v-7.586l.293.293a1 1 0 0 0 1.414-1.414Z"/>
-            </svg>
-            <span class="sr-only">Home</span>
-          </NuxtLink>
-        </li>
-        
-        <li v-for="(crumb, index) in breadcrumbs" :key="index" class="flex items-center">
-          <svg class="w-4 h-4 text-gray-400 mx-1" fill="currentColor" viewBox="0 0 20 20">
-            <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"/>
-          </svg>
-          
-          <NuxtLink 
-            v-if="index < breadcrumbs.length - 1"
-            :to="crumb.path" 
-            class="hover:text-primary transition-colors"
-          >
-            {{ crumb.name }}
-          </NuxtLink>
-          
-          <span 
-            v-else 
-            class="text-gray-900 font-medium"
-            aria-current="page"
-          >
-            {{ crumb.name }}
-          </span>
-        </li>
-      </ol>
-    </div>
+  <nav aria-label="Breadcrumb" class="mb-6">
+    <ol
+      class="flex flex-wrap items-center justify-center gap-x-3 gap-y-1.5 font-montserrat text-[11px] font-semibold uppercase tracking-[0.2em]"
+    >
+      <li>
+        <NuxtLink to="/" :class="linkClass">Home</NuxtLink>
+      </li>
+
+      <li
+        v-for="(crumb, index) in breadcrumbs"
+        :key="crumb.path"
+        class="flex items-center gap-x-3"
+      >
+        <span class="w-1 h-1 rotate-45 bg-brass shrink-0" aria-hidden="true"></span>
+
+        <NuxtLink
+          v-if="index < breadcrumbs.length - 1"
+          :to="crumb.path"
+          :class="linkClass"
+        >
+          {{ crumb.name }}
+        </NuxtLink>
+
+        <span v-else :class="currentClass" aria-current="page">
+          {{ crumb.name }}
+        </span>
+      </li>
+    </ol>
   </nav>
 </template>
 
@@ -49,6 +38,16 @@ const props = defineProps({
   customBreadcrumbs: {
     type: Array,
     default: () => []
+  },
+  // Switches text colors for placement on dark (ink) heroes.
+  dark: {
+    type: Boolean,
+    default: false
+  },
+  // Set to false when the page already emits BreadcrumbList schema itself.
+  schema: {
+    type: Boolean,
+    default: true
   }
 })
 
@@ -76,12 +75,24 @@ const breadcrumbs = computed(() => {
   return breadcrumbArray
 })
 
-useSchemaOrg([
-  defineBreadcrumb({
-    itemListElement: [
-      { name: 'Home', item: '/' },
-      ...breadcrumbs.value.map((crumb) => ({ name: crumb.name, item: crumb.path })),
-    ],
-  }),
-])
+const linkClass = computed(() =>
+  props.dark
+    ? 'text-white/50 hover:text-brass-light transition-colors'
+    : 'text-gray-500 hover:text-brass-dark transition-colors'
+)
+
+const currentClass = computed(() =>
+  props.dark ? 'text-brass-light' : 'text-brass-dark'
+)
+
+if (props.schema) {
+  useSchemaOrg([
+    defineBreadcrumb({
+      itemListElement: () => [
+        { name: 'Home', item: '/' },
+        ...breadcrumbs.value.map((crumb) => ({ name: crumb.name, item: crumb.path })),
+      ],
+    }),
+  ])
+}
 </script>

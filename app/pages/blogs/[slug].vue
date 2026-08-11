@@ -18,6 +18,14 @@
       <!-- Hero Content -->
       <div class="absolute inset-0 flex items-end sm:items-center justify-center pb-14 sm:pb-0">
         <div class="max-w-4xl mx-auto px-4 text-center">
+          <Breadcrumb
+            dark
+            :custom-breadcrumbs="[
+              { name: 'Blog', path: '/blogs' },
+              { name: blog.title, path: `/blogs/${blog.slug}` }
+            ]"
+          />
+
           <span class="inline-flex items-center gap-2.5 rounded-full border border-white/20 bg-white/10 backdrop-blur-sm px-4 py-2 font-montserrat text-[10px] font-semibold uppercase tracking-[0.25em] text-brass-light mb-6">
             <span class="w-1.5 h-1.5 rounded-full bg-brass" aria-hidden="true"></span>
             {{ formatDate(blog.date) }} &middot; {{ blog.readTime }}

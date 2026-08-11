@@ -110,6 +110,14 @@ const applianceTypes = [
         <span class="ghost-word ghost-word--light text-[6rem] lg:text-[11rem] top-24 -right-6" aria-hidden="true">Brands</span>
 
         <div class="container mx-auto px-4 max-w-screen-xl relative z-10 text-center">
+          <Breadcrumb
+            dark
+            :custom-breadcrumbs="[
+              { name: 'Services', path: '/services' },
+              { name: 'All Brands', path: '/services/all-brands' }
+            ]"
+          />
+
           <span class="inline-flex items-center gap-2.5 rounded-full border border-white/15 bg-white/5 px-4 py-2 font-montserrat text-[10px] font-semibold uppercase tracking-[0.25em] text-brass-light mb-6">
             <span class="w-1.5 h-1.5 rounded-full bg-brass animate-pulse" aria-hidden="true"></span>
             27+ Premium Brands Serviced
