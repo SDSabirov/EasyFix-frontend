@@ -16,9 +16,9 @@
       </div>
 
       <!-- Featured review -->
-      <figure class="max-w-4xl mx-auto text-center mb-16 lg:mb-20" v-reveal>
+      <div class="max-w-4xl mx-auto text-center mb-16 lg:mb-20" v-reveal>
         <span class="font-display text-8xl leading-none text-brass/30 block mb-2" aria-hidden="true">&ldquo;</span>
-        <div :key="currentIndex" class="transition-opacity duration-500 ease-in-out" :class="animate ? 'opacity-100' : 'opacity-0'">
+        <figure :key="currentIndex" class="transition-opacity duration-500 ease-in-out" :class="animate ? 'opacity-100' : 'opacity-0'">
           <blockquote class="mb-8">
             <p class="font-display text-2xl sm:text-3xl text-primary/90 leading-normal">
               {{ currentReview.review }}
@@ -31,7 +31,7 @@
             <img loading="lazy" decoding="async" v-if="currentReview.platform=='Yelp'" :src="yelpLogo" class="h-4" alt="Yelp logo">
             <img loading="lazy" decoding="async" v-if="currentReview.platform=='Google'" :src="googleLogo" class="h-4" alt="Google logo">
           </figcaption>
-        </div>
+        </figure>
 
         <!-- Navigation dashes -->
         <div class="flex justify-center gap-2 mt-10">
@@ -48,7 +48,7 @@
             ></span>
           </button>
         </div>
-      </figure>
+      </div>
 
       <!-- Review grid -->
       <div class="grid grid-cols-1 md:grid-cols-3 gap-5 lg:gap-6 mb-14">

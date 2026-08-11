@@ -51,13 +51,13 @@
       <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6 border-t border-primary/10 pt-8" v-reveal>
         <p class="text-sm text-gray-500 max-w-xl leading-relaxed">
           The diagnostic fee is applied toward your repair cost if you choose to proceed.
-          Free estimates available by phone.
+          Your exact repair quote is provided after diagnosis.
         </p>
         <a
           href="tel:4159414144"
           class="group inline-flex items-center gap-3 whitespace-nowrap font-montserrat text-[12px] font-semibold uppercase tracking-[0.18em] text-primary hover:text-brass-dark transition-colors"
         >
-          Call for a Free Quote
+          Call for Pricing Details
           <span class="flex items-center justify-center w-10 h-10 rounded-full border border-primary/20 transition-all duration-300 group-hover:bg-ink group-hover:border-ink group-hover:text-white" aria-hidden="true">&rarr;</span>
         </a>
       </div>

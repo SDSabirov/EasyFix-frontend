@@ -62,6 +62,14 @@
         <a href="/" class="text-white/70 hover:text-brass-light transition-colors">Easy Fix Appliance&trade;</a>.
         All Rights Reserved.
       </span>
+      <button
+        data-modal-target="privacy-modal"
+        data-modal-toggle="privacy-modal"
+        class="ms-3 text-sm text-white/70 hover:text-brass-light transition-colors touch-manipulation"
+        type="button"
+      >
+        Privacy Policy
+      </button>
     </div>
   </footer>
 </template>

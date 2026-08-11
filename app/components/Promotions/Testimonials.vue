@@ -20,9 +20,9 @@
       </div>
 
       <!-- Featured rotating review -->
-      <figure class="max-w-3xl mx-auto text-center" v-reveal>
+      <div class="max-w-3xl mx-auto text-center" v-reveal>
         <span class="font-display text-7xl leading-none text-brass/30 block mb-2" aria-hidden="true">&ldquo;</span>
-        <div
+        <figure
           :key="currentIndex"
           class="transition-opacity duration-500 ease-in-out"
           :class="animate ? 'opacity-100' : 'opacity-0'"
@@ -44,8 +44,8 @@
             <img loading="lazy" decoding="async" v-if="currentReview.platform=='Yelp'" src="/assets/img/yelp.svg" class="h-4" alt="Yelp logo">
             <img loading="lazy" decoding="async" v-if="currentReview.platform=='Google'" src="/assets/img/google.svg" class="h-4" alt="Google logo">
           </figcaption>
-        </div>
-      </figure>
+        </figure>
+      </div>
     </div>
   </section>
 </template>

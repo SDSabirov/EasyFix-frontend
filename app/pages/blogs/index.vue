@@ -217,7 +217,6 @@
       </div>
     </section>
 
-    <FormsContact />
     <Footer />
   </div>
 </template>
