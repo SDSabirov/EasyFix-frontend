@@ -146,19 +146,24 @@ Container: `container mx-auto px-4 max-w-screen-xl`.
 
 ---
 
-## Rollout TODO — pages still on the OLD design
+## Rollout status — COMPLETE (2026-08-11)
 
-Priority order (traffic/visibility first):
+All pages are on the new system: services (index/[slug]/all-brands), faq,
+contact-us, areas (index/[slug] + GoogleMap chrome), `BrandLanding.vue`
+(19 brand pages), the 8 promo pages + `components/Promotions/*` (legacy
+`/brands/*` pages), blogs (index/[slug] + ReadingProgress/ShareButtons),
+booking, careers (+ confirmation pages), repair-vs-replace (+ calculator),
+ContactButton, `Forms/*`, Booking pickers/steps, `Modals/Privacy.vue`.
+`Breadcrumb.vue` (restyled, `dark` prop, BreadcrumbList schema with
+`schema=false` opt-out) is wired into all main inner pages + BrandLanding.
 
-1. `pages/services/index.vue`, `services/[slug].vue`, `services/all-brands.vue` (+ `components/Services/*`)
-2. `pages/faq.vue` (orange gradient hero), `pages/contact-us.vue`
-3. `pages/areas/index.vue`, `areas/[slug].vue` (+ map components)
-4. `components/BrandLanding.vue` → restyles ~20 brand pages at once (asko, bosch, miele, liebherr, …)
-5. Promo pages: `subzero-wolf-repairs`, `viking`, `thermador`, `kitchenAid`, `gemonogram`, `gaggenau`, `dacor-appliance`, `la-cornue` (+ `components/Promotions/*`)
-6. `pages/blogs/index.vue`, `blogs/[slug].vue`, `pages/booking.vue`, `careers.vue`, `tools/repair-vs-replace.vue`
-7. `components/ContactButton.vue`, `Forms/*` (drawer + booking forms), `Modals/Privacy.vue`
-8. Consider adding `components/Breadcrumb.vue` to inner pages — it's unused but already emits BreadcrumbList schema.
+Known leftovers, deliberately untouched because NO page renders them:
+`Landing/Faq.vue`, `Landing/Services_old.vue`, `Landing/ApplianceTypes.vue`,
+`Services/{SectionHeader,SectionCTA,ApplianceTypes,CookingAppliance,CoolingAppliance,LaundryAppliance}.vue`
+— still old-design; restyle or delete if they ever get used again.
+Unused per-brand fields in `app/data/brands_data.js` (`heroGradient`,
+`primaryColor`, `accentColor`, `darkBg`) remain in data but are ignored.
 
-Per-page checklist: eyebrow chip → serif-accent headline → ghost word → hairline/card
-surfaces → pill CTAs → `v-reveal` staggers → keep h1/h2 keywords → verify heading
-order → `npm run build` passes.
+Per-page checklist (for future pages): eyebrow chip → serif-accent headline
+→ ghost word → hairline/card surfaces → pill CTAs → `v-reveal` staggers →
+keep h1/h2 keywords → verify heading order → `npm run build` passes.
