@@ -8,8 +8,8 @@
       @mouseleave="hideTextPart"
     >
       <button
-        
-        class="flex items-center bg-primary text-white font-medium py-3 pl-4 pr-6 rounded-l-full shadow-lg hover:bg-secondary transition duration-300"
+
+        class="flex items-center bg-ink text-white font-montserrat text-[12px] font-semibold uppercase tracking-[0.12em] py-3.5 pl-4 pr-6 rounded-l-full shadow-lg shadow-ink/20 hover:bg-brass transition duration-300"
         :class="{
             'translate-x-0 opacity-100': isTextVisible,
             '-translate-x-full opacity-0': !isTextVisible,

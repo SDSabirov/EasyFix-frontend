@@ -3,7 +3,7 @@
     <!-- Personal Info -->
     <div class="grid gap-4 sm:grid-cols-2 sm:gap-6">
       <div>
-        <label for="fullName" class="block mb-2 text-sm font-medium text-gray-900">
+        <label for="fullName" class="block mb-2 font-montserrat text-[11px] font-semibold uppercase tracking-[0.25em] text-gray-500">
           Full Name <span class="text-red-500">*</span>
         </label>
         <input
@@ -11,14 +11,14 @@
           type="text"
           v-model="formData.fullName"
           :class="{ 'border-red-500': errors.fullName }"
-          class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
+          class="bg-cream/50 border border-primary/15 text-primary text-sm rounded-2xl focus:ring-2 focus:ring-brass/30 focus:border-brass focus:outline-none block w-full p-3.5 transition-colors"
           placeholder="John Doe"
         />
         <span v-if="errors.fullName" class="text-sm text-red-500">{{ errors.fullName }}</span>
       </div>
 
       <div>
-        <label for="phone" class="block mb-2 text-sm font-medium text-gray-900">
+        <label for="phone" class="block mb-2 font-montserrat text-[11px] font-semibold uppercase tracking-[0.25em] text-gray-500">
           Phone <span class="text-red-500">*</span>
         </label>
         <input
@@ -26,7 +26,7 @@
           type="tel"
           v-model="formData.phone"
           :class="{ 'border-red-500': errors.phone }"
-          class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
+          class="bg-cream/50 border border-primary/15 text-primary text-sm rounded-2xl focus:ring-2 focus:ring-brass/30 focus:border-brass focus:outline-none block w-full p-3.5 transition-colors"
           placeholder="(415) 555-0123"
         />
         <span v-if="errors.phone" class="text-sm text-red-500">{{ errors.phone }}</span>
@@ -34,7 +34,7 @@
     </div>
 
     <div>
-      <label for="email" class="block mb-2 text-sm font-medium text-gray-900">
+      <label for="email" class="block mb-2 font-montserrat text-[11px] font-semibold uppercase tracking-[0.25em] text-gray-500">
         Email <span class="text-red-500">*</span>
       </label>
       <input
@@ -42,7 +42,7 @@
         type="email"
         v-model="formData.email"
         :class="{ 'border-red-500': errors.email }"
-        class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
+        class="bg-cream/50 border border-primary/15 text-primary text-sm rounded-2xl focus:ring-2 focus:ring-brass/30 focus:border-brass focus:outline-none block w-full p-3.5 transition-colors"
         placeholder="name@example.com"
       />
       <span v-if="errors.email" class="text-sm text-red-500">{{ errors.email }}</span>
@@ -50,14 +50,14 @@
 
     <!-- Years of Experience -->
     <div>
-      <label for="yearsExperience" class="block mb-2 text-sm font-medium text-gray-900">
+      <label for="yearsExperience" class="block mb-2 font-montserrat text-[11px] font-semibold uppercase tracking-[0.25em] text-gray-500">
         Years of Experience <span class="text-red-500">*</span>
       </label>
       <select
         id="yearsExperience"
         v-model="formData.yearsExperience"
         :class="{ 'border-red-500': errors.yearsExperience }"
-        class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-xl focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5"
+        class="bg-cream/50 border border-primary/15 text-primary text-sm rounded-2xl focus:ring-2 focus:ring-brass/30 focus:border-brass focus:outline-none block w-full p-3.5 cursor-pointer transition-colors"
       >
         <option value="">Select experience level</option>
         <option value="None">None</option>
@@ -71,7 +71,7 @@
 
     <!-- Schedule Availability -->
     <div>
-      <span class="block mb-2 text-sm font-medium text-gray-900">
+      <span class="block mb-2 font-montserrat text-[11px] font-semibold uppercase tracking-[0.25em] text-gray-500">
         Schedule Availability <span class="text-red-500">*</span>
       </span>
       <div class="space-y-2">
@@ -80,7 +80,7 @@
             type="radio"
             :value="option"
             v-model="formData.scheduleAvailability"
-            class="w-5 h-5 text-primary border-gray-300 focus:ring-primary-500"
+            class="w-5 h-5 text-brass border-primary/30 focus:ring-brass"
           />
           <span class="ml-3 text-sm text-gray-700">{{ option }}</span>
         </label>
@@ -90,7 +90,7 @@
         v-model="formData.scheduleAvailabilityOther"
         type="text"
         :class="{ 'border-red-500': errors.scheduleAvailabilityOther }"
-        class="mt-3 bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
+        class="mt-3 bg-cream/50 border border-primary/15 text-primary text-sm rounded-2xl focus:ring-2 focus:ring-brass/30 focus:border-brass focus:outline-none block w-full p-3.5 transition-colors"
         placeholder="Please specify"
       />
       <span v-if="errors.scheduleAvailability" class="text-sm text-red-500 block mt-1">{{ errors.scheduleAvailability }}</span>
@@ -99,7 +99,7 @@
 
     <!-- Appliance Types Serviced -->
     <div>
-      <span class="block mb-2 text-sm font-medium text-gray-900">
+      <span class="block mb-2 font-montserrat text-[11px] font-semibold uppercase tracking-[0.25em] text-gray-500">
         Appliance Types Serviced <span class="text-red-500">*</span>
       </span>
       <div class="grid grid-cols-1 sm:grid-cols-2 gap-2">
@@ -108,7 +108,7 @@
             type="checkbox"
             :value="type"
             v-model="formData.applianceTypes"
-            class="w-5 h-5 text-primary border-gray-300 rounded focus:ring-primary-500"
+            class="w-5 h-5 text-brass border-primary/30 rounded focus:ring-brass"
           />
           <span class="ml-3 text-sm text-gray-700">{{ type }}</span>
         </label>
@@ -118,7 +118,7 @@
         v-model="formData.applianceTypesOther"
         type="text"
         :class="{ 'border-red-500': errors.applianceTypesOther }"
-        class="mt-3 bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
+        class="mt-3 bg-cream/50 border border-primary/15 text-primary text-sm rounded-2xl focus:ring-2 focus:ring-brass/30 focus:border-brass focus:outline-none block w-full p-3.5 transition-colors"
         placeholder="Please specify other appliance types"
       />
       <span v-if="errors.applianceTypes" class="text-sm text-red-500 block mt-1">{{ errors.applianceTypes }}</span>
@@ -127,7 +127,7 @@
 
     <!-- Preferred Work Areas -->
     <div>
-      <span class="block mb-2 text-sm font-medium text-gray-900">
+      <span class="block mb-2 font-montserrat text-[11px] font-semibold uppercase tracking-[0.25em] text-gray-500">
         Preferred Work Areas <span class="text-red-500">*</span>
       </span>
       <div class="grid grid-cols-1 sm:grid-cols-2 gap-2">
@@ -136,7 +136,7 @@
             type="checkbox"
             :value="area"
             v-model="formData.preferredWorkAreas"
-            class="w-5 h-5 text-primary border-gray-300 rounded focus:ring-primary-500"
+            class="w-5 h-5 text-brass border-primary/30 rounded focus:ring-brass"
           />
           <span class="ml-3 text-sm text-gray-700">{{ area }}</span>
         </label>
@@ -146,7 +146,7 @@
         v-model="formData.preferredWorkAreasOther"
         type="text"
         :class="{ 'border-red-500': errors.preferredWorkAreasOther }"
-        class="mt-3 bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
+        class="mt-3 bg-cream/50 border border-primary/15 text-primary text-sm rounded-2xl focus:ring-2 focus:ring-brass/30 focus:border-brass focus:outline-none block w-full p-3.5 transition-colors"
         placeholder="Please specify other work area(s)"
       />
       <span v-if="errors.preferredWorkAreas" class="text-sm text-red-500 block mt-1">{{ errors.preferredWorkAreas }}</span>
@@ -155,7 +155,7 @@
 
     <!-- Has LLC or Corp -->
     <div>
-      <span class="block mb-2 text-sm font-medium text-gray-900">
+      <span class="block mb-2 font-montserrat text-[11px] font-semibold uppercase tracking-[0.25em] text-gray-500">
         Has LLC or Corp? <span class="text-red-500">*</span>
       </span>
       <div class="space-y-2">
@@ -164,7 +164,7 @@
             type="radio"
             :value="option"
             v-model="formData.hasLLC"
-            class="w-5 h-5 text-primary border-gray-300 focus:ring-primary-500"
+            class="w-5 h-5 text-brass border-primary/30 focus:ring-brass"
           />
           <span class="ml-3 text-sm text-gray-700">{{ option }}</span>
         </label>
@@ -174,7 +174,7 @@
 
     <!-- Has License & Insurance -->
     <div>
-      <span class="block mb-2 text-sm font-medium text-gray-900">
+      <span class="block mb-2 font-montserrat text-[11px] font-semibold uppercase tracking-[0.25em] text-gray-500">
         Has appliance repair license &amp; insurance? <span class="text-red-500">*</span>
       </span>
       <div class="space-y-2">
@@ -183,7 +183,7 @@
             type="radio"
             :value="option"
             v-model="formData.hasLicenseInsurance"
-            class="w-5 h-5 text-primary border-gray-300 focus:ring-primary-500"
+            class="w-5 h-5 text-brass border-primary/30 focus:ring-brass"
           />
           <span class="ml-3 text-sm text-gray-700">{{ option }}</span>
         </label>
@@ -193,7 +193,7 @@
 
     <!-- Reliable Vehicle -->
     <div>
-      <span class="block mb-2 text-sm font-medium text-gray-900">
+      <span class="block mb-2 font-montserrat text-[11px] font-semibold uppercase tracking-[0.25em] text-gray-500">
         Has reliable, insured vehicle? <span class="text-red-500">*</span>
       </span>
       <div class="flex gap-6">
@@ -202,7 +202,7 @@
             type="radio"
             :value="option"
             v-model="formData.hasReliableVehicle"
-            class="w-5 h-5 text-primary border-gray-300 focus:ring-primary-500"
+            class="w-5 h-5 text-brass border-primary/30 focus:ring-brass"
           />
           <span class="ml-3 text-sm text-gray-700">{{ option }}</span>
         </label>
@@ -212,7 +212,7 @@
 
     <!-- Subcontractor or Sales Experience -->
     <div>
-      <span class="block mb-2 text-sm font-medium text-gray-900">
+      <span class="block mb-2 font-montserrat text-[11px] font-semibold uppercase tracking-[0.25em] text-gray-500">
         Subcontractor or sales experience? <span class="text-red-500">*</span>
       </span>
       <div class="space-y-2">
@@ -221,7 +221,7 @@
             type="radio"
             :value="option"
             v-model="formData.subcontractorSalesExperience"
-            class="w-5 h-5 text-primary border-gray-300 focus:ring-primary-500"
+            class="w-5 h-5 text-brass border-primary/30 focus:ring-brass"
           />
           <span class="ml-3 text-sm text-gray-700">{{ option }}</span>
         </label>
@@ -231,7 +231,7 @@
         v-model="formData.subcontractorSalesExperienceOther"
         type="text"
         :class="{ 'border-red-500': errors.subcontractorSalesExperienceOther }"
-        class="mt-3 bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
+        class="mt-3 bg-cream/50 border border-primary/15 text-primary text-sm rounded-2xl focus:ring-2 focus:ring-brass/30 focus:border-brass focus:outline-none block w-full p-3.5 transition-colors"
         placeholder="Please specify"
       />
       <span v-if="errors.subcontractorSalesExperience" class="text-sm text-red-500 block mt-1">{{ errors.subcontractorSalesExperience }}</span>
@@ -240,7 +240,7 @@
 
     <!-- Desired Start Date -->
     <div>
-      <label for="desiredStartDate" class="block mb-2 text-sm font-medium text-gray-900">
+      <label for="desiredStartDate" class="block mb-2 font-montserrat text-[11px] font-semibold uppercase tracking-[0.25em] text-gray-500">
         Desired Start Date <span class="text-red-500">*</span>
       </label>
       <input
@@ -248,35 +248,35 @@
         type="date"
         v-model="formData.desiredStartDate"
         :class="{ 'border-red-500': errors.desiredStartDate }"
-        class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
+        class="bg-cream/50 border border-primary/15 text-primary text-sm rounded-2xl focus:ring-2 focus:ring-brass/30 focus:border-brass focus:outline-none block w-full p-3.5 transition-colors"
       />
       <span v-if="errors.desiredStartDate" class="text-sm text-red-500">{{ errors.desiredStartDate }}</span>
     </div>
 
     <!-- Referral Source -->
     <div>
-      <label for="referralSource" class="block mb-2 text-sm font-medium text-gray-900">
+      <label for="referralSource" class="block mb-2 font-montserrat text-[11px] font-semibold uppercase tracking-[0.25em] text-gray-500">
         How did you hear about us?
       </label>
       <input
         id="referralSource"
         type="text"
         v-model="formData.referralSource"
-        class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
+        class="bg-cream/50 border border-primary/15 text-primary text-sm rounded-2xl focus:ring-2 focus:ring-brass/30 focus:border-brass focus:outline-none block w-full p-3.5 transition-colors"
         placeholder="Google, friend, social media, etc."
       />
     </div>
 
     <!-- Additional Notes -->
     <div>
-      <label for="additionalNotes" class="block mb-2 text-sm font-medium text-gray-900">
+      <label for="additionalNotes" class="block mb-2 font-montserrat text-[11px] font-semibold uppercase tracking-[0.25em] text-gray-500">
         Anything else we should know about you?
       </label>
       <textarea
         id="additionalNotes"
         v-model="formData.additionalNotes"
         rows="4"
-        class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500"
+        class="block p-3.5 w-full text-sm text-primary bg-cream/50 rounded-2xl border border-primary/15 focus:ring-2 focus:ring-brass/30 focus:border-brass focus:outline-none transition-colors"
         placeholder="Certifications, specialties, brands you specialize in, etc."
       ></textarea>
     </div>
@@ -287,7 +287,7 @@
         id="sms-consent"
         type="checkbox"
         v-model="formData.agreedToSms"
-        class="w-5 h-5 text-primary border-gray-300 rounded focus:ring-primary-500 mt-1 flex-shrink-0"
+        class="w-5 h-5 text-brass border-primary/30 rounded focus:ring-brass mt-1 flex-shrink-0"
       />
       <label for="sms-consent" class="ml-3 text-sm text-gray-700">
         By clicking this box, you agree to receive SMS communications from Easy Fix Appliance — you can reply STOP to opt-out at any time.
@@ -301,7 +301,7 @@
         <button
           data-modal-target="privacy-modal"
           data-modal-toggle="privacy-modal"
-          class="text-primary hover:underline"
+          class="font-semibold text-brass-dark hover:text-brass hover:underline transition-colors"
           type="button"
           aria-label="View Privacy Policy"
         >
@@ -311,7 +311,7 @@
     </div>
 
     <!-- Submission Error -->
-    <div v-if="submissionError" class="rounded-lg bg-red-50 border border-red-200 p-4 text-sm text-red-700">
+    <div v-if="submissionError" class="rounded-2xl bg-red-50 border border-red-200 p-4 text-sm text-red-700">
       {{ submissionError }}
     </div>
 
@@ -320,8 +320,8 @@
       type="submit"
       :disabled="isSubmitting"
       :class="[
-        isSubmitted ? 'bg-green-500' : 'bg-primary hover:bg-primary/90',
-        'text-white w-full focus:ring-4 focus:ring-blue-300 font-semibold rounded-lg text-base px-5 py-3 transition-colors disabled:opacity-60 disabled:cursor-not-allowed'
+        isSubmitted ? 'bg-green-500' : 'bg-ink hover:bg-brass hover:scale-[1.01]',
+        'text-white w-full rounded-full font-montserrat text-sm font-semibold uppercase tracking-[0.12em] px-8 py-4 transition-all duration-300 disabled:opacity-60 disabled:cursor-not-allowed disabled:hover:scale-100 focus:outline-none focus-visible:ring-2 focus-visible:ring-brass focus-visible:ring-offset-2'
       ]"
     >
       {{ isSubmitting ? 'Submitting...' : isSubmitted ? 'Submitted!' : 'Submit Application' }}

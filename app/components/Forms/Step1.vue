@@ -5,7 +5,7 @@
       <div class="w-full">
         <label
           for="name"
-          class="block mb-2 text-sm font-medium text-primary"
+          class="block mb-2 font-montserrat text-[11px] font-semibold uppercase tracking-[0.25em] text-gray-500"
           :class="{ 'text-red-500': Errors.firstName }"
         >
           First Name
@@ -17,7 +17,7 @@
           v-model="localData.firstName"
           type="text"
           id="name"
-          class="bg-gray-50 rounded-xl border border-gray-300 text-gray-900 text-sm focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5"
+          class="bg-cream/50 rounded-2xl border border-primary/15 text-primary text-sm focus:ring-2 focus:ring-brass/30 focus:border-brass focus:outline-none block w-full p-3.5 transition-colors"
           placeholder="Alex"
           :class="{ 'border-red-500': Errors.firstName }"
         />
@@ -27,7 +27,7 @@
       <div class="w-full">
         <label
           for="last-name"
-          class="block mb-2 text-sm font-medium text-primary"
+          class="block mb-2 font-montserrat text-[11px] font-semibold uppercase tracking-[0.25em] text-gray-500"
           :class="{ 'text-red-500': Errors.lastName }"
         >
           Last Name
@@ -39,7 +39,7 @@
           v-model="localData.lastName"
           type="text"
           id="last-name"
-          class="bg-gray-50 rounded-xl border border-gray-300 text-gray-900 text-sm focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5"
+          class="bg-cream/50 rounded-2xl border border-primary/15 text-primary text-sm focus:ring-2 focus:ring-brass/30 focus:border-brass focus:outline-none block w-full p-3.5 transition-colors"
           placeholder="Smith"
           :class="{ 'border-red-500': Errors.lastName }"
         />
@@ -49,7 +49,7 @@
       <div class="w-full">
         <label
           for="email"
-          class="block mb-2 text-sm font-medium text-primary"
+          class="block mb-2 font-montserrat text-[11px] font-semibold uppercase tracking-[0.25em] text-gray-500"
           :class="{ 'text-red-500': Errors.email }"
         >
           Email
@@ -59,7 +59,7 @@
           v-model="localData.email"
           type="email"
           id="email"
-          class="bg-gray-50 rounded-xl border border-gray-300 text-gray-900 text-sm focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5"
+          class="bg-cream/50 rounded-2xl border border-primary/15 text-primary text-sm focus:ring-2 focus:ring-brass/30 focus:border-brass focus:outline-none block w-full p-3.5 transition-colors"
           placeholder="example@mail.com"
           :class="{ 'border-red-500': Errors.email }"
         />
@@ -69,7 +69,7 @@
       <div class="w-full">
         <label
           for="address"
-          class="block mb-2 text-sm font-medium text-primary"
+          class="block mb-2 font-montserrat text-[11px] font-semibold uppercase tracking-[0.25em] text-gray-500"
           :class="{ 'text-red-500': Errors.address }"
         >
           Address
@@ -81,7 +81,7 @@
           v-model="localData.address"
           type="text"
           id="address"
-          class="bg-gray-50 rounded-xl border border-gray-300 text-gray-900 text-sm focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5"
+          class="bg-cream/50 rounded-2xl border border-primary/15 text-primary text-sm focus:ring-2 focus:ring-brass/30 focus:border-brass focus:outline-none block w-full p-3.5 transition-colors"
           placeholder="123 Main St"
           :class="{ 'border-red-500': Errors.address }"
         />
@@ -91,7 +91,7 @@
       <div class="w-full">
         <label
           for="zip"
-          class="block mb-2 text-sm font-medium text-primary"
+          class="block mb-2 font-montserrat text-[11px] font-semibold uppercase tracking-[0.25em] text-gray-500"
           :class="{ 'text-red-500': Errors.zip }"
         >
           Zip/Postal Code
@@ -101,7 +101,7 @@
           v-model="localData.zip"
           type="text"
           id="zip"
-          class="bg-gray-50 rounded-xl border border-gray-300 text-gray-900 text-sm focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5"
+          class="bg-cream/50 rounded-2xl border border-primary/15 text-primary text-sm focus:ring-2 focus:ring-brass/30 focus:border-brass focus:outline-none block w-full p-3.5 transition-colors"
           placeholder="12345"
           :class="{ 'border-red-500': Errors.zip }"
         />
@@ -110,7 +110,7 @@
       <div class="w-full">
         <label
           for="phone-input"
-          class="block mb-2 text-sm font-medium text-primary"
+          class="block mb-2 font-montserrat text-[11px] font-semibold uppercase tracking-[0.25em] text-gray-500"
           :class="{ 'text-red-500': Errors.phone }"
         >
           Phone Number
@@ -120,7 +120,7 @@
           v-model="localData.phone"
           type="text"
           id="phone-input"
-          class="bg-gray-50 rounded-xl border border-gray-300 text-gray-900 text-sm focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5"
+          class="bg-cream/50 rounded-2xl border border-primary/15 text-primary text-sm focus:ring-2 focus:ring-brass/30 focus:border-brass focus:outline-none block w-full p-3.5 transition-colors"
           placeholder="123-456-7890"
           :class="{ 'border-red-500': Errors.phone }"
         />
@@ -130,12 +130,12 @@
             type="checkbox"
             name=""
             id=""
-            class="rounded"
+            class="w-4 h-4 shrink-0 rounded border-primary/30 text-brass focus:ring-brass"
             v-model="localData.smsConsent"
           />
           <label
             for="privacy-policy-consent"
-            class="ml-3 text-xs md:text-sm text-gray-700"
+            class="ml-3 text-xs md:text-sm text-gray-600 leading-relaxed"
           >
             By clicking this box, you agree to receive SMS communications from
             Easy Fix Appliance you can reply STOP to opt-out at any time.

@@ -2,35 +2,24 @@
   <!-- drawer component -->
   <div
     id="drawer-contact"
-    class="fixed top-0 right-0 z-40 h-screen p-4 overflow-y-auto transition-transform translate-x-full bg-secondary w-80 dark:bg-gray-800"
+    class="fixed top-0 right-0 z-40 h-screen p-6 overflow-y-auto transition-transform translate-x-full bg-white border-l border-primary/10 shadow-2xl shadow-ink/10 w-80"
     tabindex="-1"
     aria-labelledby="drawer-contact-label"
   >
     <h5
       id="drawer-label"
-      class="inline-flex items-center mb-6 text-base font-semibold text-light uppercase dark:text-gray-400"
+      class="inline-flex items-center gap-2.5 mb-2 font-montserrat text-lg font-bold tracking-[-0.01em] text-primary"
     >
-      <svg
-        class="w-4 h-4 me-2.5"
-        aria-hidden="true"
-        xmlns="http://www.w3.org/2000/svg"
-        fill="currentColor"
-        viewBox="0 0 20 16"
-      >
-        <path
-          d="m10.036 8.278 9.258-7.79A1.979 1.979 0 0 0 18 0H2A1.987 1.987 0 0 0 .641.541l9.395 7.737Z"
-        />
-        <path
-          d="M11.241 9.817c-.36.275-.801.425-1.255.427-.428 0-.845-.138-1.187-.395L0 2.6V14a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V2.5l-8.759 7.317Z"
-        />
-      </svg>
-      Contact us
+      <span class="w-1 h-1 rotate-45 bg-brass shrink-0" aria-hidden="true"></span>
+      Contact
+      <em class="font-display font-semibold italic text-brass-dark">us</em>
     </h5>
+    <span class="block h-px w-10 bg-brass mb-6" aria-hidden="true"></span>
     <button
       type="button"
       data-drawer-hide="drawer-contact"
       aria-controls="drawer-contact"
-      class="text-light bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm w-8 h-8 absolute top-2.5 end-2.5 inline-flex items-center justify-center dark:hover:bg-gray-600 dark:hover:text-white"
+      class="text-gray-500 bg-white border border-primary/15 hover:border-brass hover:text-brass-dark rounded-full text-sm w-9 h-9 absolute top-4 end-4 inline-flex items-center justify-center transition-colors"
     >
       <svg
         class="w-3 h-3"
@@ -54,7 +43,7 @@
       <div class="mb-6">
         <label
           for="name"
-          class="block mb-2 text-sm font-medium text-light dark:text-white"
+          class="block mb-2 font-montserrat text-[11px] font-semibold uppercase tracking-[0.25em] text-gray-500"
           >Name</label
         >
         <input
@@ -62,7 +51,7 @@
           id="name"
           v-model="formData.name"
           :class="{ 'border-red-500': errors.name }"
-          class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+          class="bg-cream/50 border border-primary/15 text-primary text-sm rounded-2xl focus:ring-2 focus:ring-brass/30 focus:border-brass focus:outline-none block w-full p-3.5 transition-colors"
           placeholder="John Doe"
           required
         />
@@ -73,7 +62,7 @@
       <div class="mb-6">
         <label
           for="email"
-          class="block mb-2 text-sm font-medium text-light dark:text-white"
+          class="block mb-2 font-montserrat text-[11px] font-semibold uppercase tracking-[0.25em] text-gray-500"
           >Your email</label
         >
         <input
@@ -81,7 +70,7 @@
           id="email"
           v-model="formData.email"
           :class="{ 'border-red-500': errors.email }"
-          class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+          class="bg-cream/50 border border-primary/15 text-primary text-sm rounded-2xl focus:ring-2 focus:ring-brass/30 focus:border-brass focus:outline-none block w-full p-3.5 transition-colors"
           placeholder="name@company.com"
           required
         />
@@ -92,7 +81,7 @@
       <div class="mb-6">
         <label
           for="phone"
-          class="block mb-2 text-sm font-medium text-light dark:text-white"
+          class="block mb-2 font-montserrat text-[11px] font-semibold uppercase tracking-[0.25em] text-gray-500"
           >Phone number</label
         >
         <input
@@ -100,7 +89,7 @@
           id="phone"
           v-model="formData.phone"
           :class="{ 'border-red-500': errors.phone }"
-          class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+          class="bg-cream/50 border border-primary/15 text-primary text-sm rounded-2xl focus:ring-2 focus:ring-brass/30 focus:border-brass focus:outline-none block w-full p-3.5 transition-colors"
           placeholder="+123456789"
           required
         />
@@ -111,7 +100,7 @@
       <div class="mb-6">
         <label
           for="subject"
-          class="block mb-2 text-sm font-medium text-light dark:text-white"
+          class="block mb-2 font-montserrat text-[11px] font-semibold uppercase tracking-[0.25em] text-gray-500"
           >Subject</label
         >
         <input
@@ -119,7 +108,7 @@
           id="subject"
           v-model="formData.subject"
           :class="{ 'border-red-500': errors.subject }"
-          class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+          class="bg-cream/50 border border-primary/15 text-primary text-sm rounded-2xl focus:ring-2 focus:ring-brass/30 focus:border-brass focus:outline-none block w-full p-3.5 transition-colors"
           placeholder="Let us know how we can help you"
           required
         />
@@ -131,7 +120,7 @@
       <div class="mb-6">
         <label
           for="message"
-          class="block mb-2 text-sm font-medium text-light dark:text-white"
+          class="block mb-2 font-montserrat text-[11px] font-semibold uppercase tracking-[0.25em] text-gray-500"
           >Your message</label
         >
         <textarea
@@ -139,7 +128,7 @@
           v-model="formData.message"
           :class="{ 'border-red-500': errors.message }"
           rows="4"
-          class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+          class="block p-3.5 w-full text-sm text-primary bg-cream/50 rounded-2xl border border-primary/15 focus:ring-2 focus:ring-brass/30 focus:border-brass focus:outline-none transition-colors"
           placeholder="Your message..."
         ></textarea>
         <span v-if="errors.message" class="text-sm text-red-500">{{
@@ -151,9 +140,9 @@
           id="sms-email-consent"
           type="checkbox"
           v-model="formData.agreedToSms"
-          class="w-5 h-5 text-primary border-gray-300 rounded focus:ring-primary-500 mt-1"
+          class="w-5 h-5 text-brass border-primary/30 rounded focus:ring-brass mt-1"
         />
-        <label for="sms-email-consent" class="ml-3 text-sm text-white"
+        <label for="sms-email-consent" class="ml-3 text-xs text-gray-600 leading-relaxed"
           >By clicking this box, you agree to receive SMS communications from Easy Fix Appliance you can reply STOP to opt-out at any time.
         </label>
       </div>
@@ -161,13 +150,13 @@
     <div class="mb-6">
       <label
         for="privacy-policy-consent"
-        class="ml-3 text-sm text-white"
+        class="ml-3 text-xs text-gray-600 leading-relaxed"
       >
         By submitting this form, you agree to our
         <button
           data-modal-target="privacy-modal"
           data-modal-toggle="privacy-modal"
-          class="hover:underline"
+          class="font-semibold text-brass-dark hover:text-brass hover:underline transition-colors"
           type="button"
           aria-label="View Privacy Policy"
         >
@@ -180,8 +169,8 @@
         id="submit-contact-form"
         :disabled="!isFormValid || isSubmitting"
         :class="[
-          isSubmitted ? 'bg-green-500' : 'bg-primary',
-          'text-white w-full focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 mb-2 dark:focus:ring-blue-800 block',
+          isSubmitted ? 'bg-green-500' : 'bg-ink hover:bg-brass',
+          'text-white w-full rounded-full font-montserrat text-sm font-semibold uppercase tracking-[0.12em] px-5 py-3.5 mb-2 block transition-all duration-300 disabled:opacity-60 disabled:cursor-not-allowed focus:outline-none focus-visible:ring-2 focus-visible:ring-brass focus-visible:ring-offset-2',
         ]"
       >
         {{
@@ -193,14 +182,16 @@
         }}
       </button>
     </form>
-    <p class="mb-2 text-sm text-light dark:text-gray-400">
-      <a href="mailto:care@easyfixappliance.com" class="hover:underline"
-        >care@easyfixappliance.com</a
-      >
-    </p>
-    <p class="text-sm text-light dark:text-gray-400">
-      <a href="tel:4159414144" class="hover:underline">(415) 941-4144</a>
-    </p>
+    <div class="border-t border-primary/10 pt-5">
+      <p class="mb-2 text-sm text-gray-600">
+        <a href="mailto:care@easyfixappliance.com" class="hover:text-brass-dark transition-colors"
+          >care@easyfixappliance.com</a
+        >
+      </p>
+      <p class="text-sm text-gray-600">
+        <a href="tel:4159414144" class="hover:text-brass-dark transition-colors">(415) 941-4144</a>
+      </p>
+    </div>
   </div>
 </template>
 
@@ -310,20 +301,3 @@ const resetForm = () => {
 };
 </script>
 
-<style scoped>
-.bg-primary {
-  background-color: #007bff;
-}
-
-.bg-secondary {
-  background-color: #343a40;
-}
-
-.bg-green-500 {
-  background-color: #38a169;
-}
-
-.text-light {
-  color: #f8f9fa;
-}
-</style>

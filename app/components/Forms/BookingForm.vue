@@ -1,11 +1,12 @@
 <template>
-  <section class="bg-light max-h-fit md:px-32">
-    <div class="py-8 px-4 mx-auto max-w-2xl lg:py-16">
-      <h2 class="mb-4 text-xl font-bold text-primary text-center">
-        Request a Booking
+  <section class="bg-cream max-h-fit md:px-32">
+    <div class="py-10 px-4 mx-auto max-w-2xl lg:py-16">
+      <h2 class="mb-6 font-montserrat font-bold tracking-[-0.02em] text-2xl sm:text-3xl leading-[1.1] text-primary text-center">
+        Request a
+        <em class="font-display font-semibold italic text-brass-dark">Booking</em>
       </h2>
 
-      <form @submit.prevent="submitForm">
+      <form @submit.prevent="submitForm" class="bg-white rounded-[2rem] border border-primary/10 shadow-xl shadow-ink/5 p-6 sm:p-8">
         <div class="w-full items-center justify-center">
           <BookingSteps :currentStep="step" />
         </div>
@@ -25,7 +26,7 @@
             v-if="step > 1 && step < 4"
             @click="subtractStep"
             type="button"
-            class="flex mx-auto rounded-xl items-center px-8 py-2.5 mt-4 sm:mt-6 text-sm font-medium text-center text-white bg-primary focus:ring-4 focus:ring-primary-200 dark:focus:ring-primary-900 hover:bg-secondary"
+            class="flex mx-auto rounded-full items-center gap-2 px-7 py-3 mt-4 sm:mt-6 font-montserrat text-xs font-semibold uppercase tracking-[0.12em] text-center text-ink border border-ink/20 transition-all duration-300 hover:border-brass hover:text-brass-dark hover:scale-[1.03] focus:outline-none focus-visible:ring-2 focus-visible:ring-brass focus-visible:ring-offset-2"
           >
             <span>
               <svg
@@ -48,7 +49,7 @@
             v-if="step < 3"
             @click="addStep"
             type="button"
-            class="flex mx-auto rounded-xl items-center px-8 py-2.5 mt-4 sm:mt-6 text-sm font-medium text-center text-white bg-primary focus:ring-4 focus:ring-primary-200 dark:focus:ring-primary-900 hover:bg-secondary"
+            class="flex mx-auto rounded-full items-center px-9 py-3 mt-4 sm:mt-6 font-montserrat text-xs font-semibold uppercase tracking-[0.12em] text-center text-white bg-ink transition-all duration-300 hover:bg-brass hover:scale-[1.03] focus:outline-none focus-visible:ring-2 focus-visible:ring-brass focus-visible:ring-offset-2"
           >
             Next
           </button>
@@ -57,7 +58,7 @@
             @click="submitBooking"
             type="button"
             :disabled="loading"
-            class="flex mx-auto rounded-xl items-center px-8 py-2.5 mt-4 sm:mt-6 text-sm font-medium text-center text-white bg-primary focus:ring-4 focus:ring-primary-200 dark:focus:ring-primary-900 hover:bg-secondary"
+            class="flex mx-auto rounded-full items-center px-9 py-3 mt-4 sm:mt-6 font-montserrat text-xs font-semibold uppercase tracking-[0.12em] text-center text-white bg-ink transition-all duration-300 hover:bg-brass hover:scale-[1.03] disabled:opacity-60 disabled:cursor-not-allowed disabled:hover:scale-100 focus:outline-none focus-visible:ring-2 focus-visible:ring-brass focus-visible:ring-offset-2"
           >
             <span v-if="loading">Loading...</span>
             <!-- Show loading text -->

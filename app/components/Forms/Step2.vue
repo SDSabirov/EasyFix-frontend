@@ -3,13 +3,13 @@
             <div>
               <label
                 for="Appliance type"
-                class="block mb-2 text-sm font-medium text-primary"
+                class="block mb-2 font-montserrat text-[11px] font-semibold uppercase tracking-[0.25em] text-gray-500"
                 :class="{'text-red-500': Errors.type}"
                 >Appliance Type</label
               >
               <select
                 id="applianceType"
-                class="bg-gray-50 border rounded-xl border-gray-300 text-gray-900 text-sm  focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"
+                class="bg-cream/50 border rounded-2xl border-primary/15 text-primary text-sm focus:ring-2 focus:ring-brass/30 focus:border-brass focus:outline-none block w-full p-3.5 cursor-pointer transition-colors"
                 v-model="localData.type"
                 :class="{'border-red-500': Errors.type}"
                 >
@@ -26,13 +26,13 @@
             <div>
               <label
                 for="Appliance Brand"
-                class="block mb-2 text-sm font-medium text-primary"
+                class="block mb-2 font-montserrat text-[11px] font-semibold uppercase tracking-[0.25em] text-gray-500"
                 :class="{'text-red-500': Errors.brand}"
                 >Appliance brand</label
               >
               <select
                 id="applianceBrand"
-                class="bg-gray-50 border rounded-xl border-gray-300 text-gray-900 text-sm  focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"
+                class="bg-cream/50 border rounded-2xl border-primary/15 text-primary text-sm focus:ring-2 focus:ring-brass/30 focus:border-brass focus:outline-none block w-full p-3.5 cursor-pointer transition-colors"
                 v-model="localData.brand"
                 :class="{'border-red-500': Errors.brand}"
                 >
@@ -53,13 +53,13 @@
             <div>
               <label
                 for="Appliance Brand"
-                class="block mb-2 text-sm font-medium text-primary"
+                class="block mb-2 font-montserrat text-[11px] font-semibold uppercase tracking-[0.25em] text-gray-500"
                 :class="{'text-red-500': Errors.age}"
                 >Approximate appliance age</label
               >
               <select
                 id="applianceAge"
-                class="bg-gray-50 border rounded-xl border-gray-300 text-gray-900 text-sm  focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"
+                class="bg-cream/50 border rounded-2xl border-primary/15 text-primary text-sm focus:ring-2 focus:ring-brass/30 focus:border-brass focus:outline-none block w-full p-3.5 cursor-pointer transition-colors"
                 v-model="localData.age"
                 :class="{'border-red-500': Errors.age}"
                 >
@@ -76,7 +76,7 @@
             <div class="relative max-w-sm ">
               <label
                 for="Preffered Date"
-                class="block mb-2 text-sm font-medium text-primary"
+                class="block mb-2 font-montserrat text-[11px] font-semibold uppercase tracking-[0.25em] text-gray-500"
                 >Preffered Date & Time</label
               >
               <div class="flex space-x-1">

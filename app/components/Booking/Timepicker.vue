@@ -11,17 +11,17 @@
       :class="{
         'border-red-500': timeError
       }"
-      class="rounded-xl bg-gray-50 border text-gray-900 leading-none focus:ring-blue-500 focus:border-blue-500 block flex-1 w-full text-sm border-gray-300 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+      class="rounded-2xl bg-cream/50 border text-primary leading-none focus:ring-2 focus:ring-brass/30 focus:border-brass focus:outline-none block flex-1 w-full text-sm border-primary/15 p-3.5 transition-colors"
       required
       readonly
     />
 
     <!-- Icon -->
     <span
-      class="inline-flex items-center rounded-xl px-3 text-sm text-gray-900 bg-gray-200 border rounded-s-0 border-s-0 border-gray-300 dark:bg-gray-600 dark:text-gray-400 dark:border-gray-600"
+      class="inline-flex items-center rounded-2xl px-3 text-sm text-primary bg-cream border rounded-s-0 border-s-0 border-primary/15"
     >
       <svg
-        class="w-4 h-4 text-gray-500 dark:text-gray-400"
+        class="w-4 h-4 text-brass"
         aria-hidden="true"
         xmlns="http://www.w3.org/2000/svg"
         fill="currentColor"
@@ -38,13 +38,13 @@
     <!-- Dropdown List -->
     <ul
       v-show="showDropdown"
-      class="absolute z-10 w-full bg-white border border-gray-300 rounded-xl mt-1 shadow-lg max-h-48 overflow-y-auto dark:bg-gray-700 dark:border-gray-600"
+      class="absolute z-10 w-full bg-white border border-primary/15 rounded-2xl mt-1 shadow-lg shadow-ink/10 max-h-48 overflow-y-auto"
     >
       <li
         v-for="time in timeOptions"
         :key="time"
         @mousedown.prevent="selectTime(time)"
-        class="px-4 py-2 cursor-pointer hover:bg-blue-500 hover:text-white dark:hover:bg-blue-600"
+        class="px-4 py-2 text-sm text-primary cursor-pointer transition-colors hover:bg-ink hover:text-white"
       >
         {{ time }}
       </li>

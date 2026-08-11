@@ -4,10 +4,10 @@
     <div class="sm:col-span-2">
       <label
         for="description"
-        class="block mb-2 text-lg font-medium text-primary"
+        class="block mb-2 font-montserrat font-bold tracking-[-0.01em] text-lg sm:text-xl text-primary"
         >What is the problem with your appliances?</label
       >
-      <label for="common issues" class="block mb-2 text-sm text-gray"
+      <label for="common issues" class="block mb-2 font-montserrat text-[11px] font-semibold uppercase tracking-[0.25em] text-gray-500"
         >Here are some common issues
       </label>
       <div
@@ -16,7 +16,7 @@
         <button
           v-for="(suggestion, index) in currentSuggestions"
           :key="index"
-          class="rounded-xl w-fit bg-secondary px-4 py-2 text-light text-sm text-left hover:bg-primary selected animate-fadeDown"
+          class="rounded-full w-fit border border-primary/15 bg-white px-4 py-2 text-primary text-sm text-left transition-colors duration-300 hover:bg-ink hover:border-ink hover:text-white selected animate-fadeDown"
           @click="fillSuggestion(suggestion)"
           type="button"
           aria-label="Common appliance issue"
@@ -27,14 +27,14 @@
         </button>
       </div>
       <small
-        class="text-gray-600 font-semibold"
+        class="text-gray-500 text-xs font-medium block mb-2"
         :class="{'text-red-500': localData.error}"
         >Please choose one of the suggestions or provide a brief description below</small
       >
       <textarea
         id="description"
         rows="8"
-        class="block p-2.5 rounded-xl w-full text-sm text-gray-900 bg-gray-50 border border-gray-300 focus:ring-primary-500 focus:border-primary-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"
+        class="block p-3.5 rounded-2xl w-full text-sm text-primary bg-cream/50 border border-primary/15 focus:ring-2 focus:ring-brass/30 focus:border-brass focus:outline-none transition-colors"
         placeholder="Please provide a brief description of the issue"
         v-model="userMessage"
         :class="{'border-red-500': localData.error}"
@@ -47,19 +47,19 @@
     <div class="flex items-start mt-2">
       <label
         for="privacy-policy-consent"
-        class="ml-3 text-sm text-gray-700"
+        class="ml-3 text-sm text-gray-600"
       >
         By submitting this form, you agree to our
         <button
           data-modal-target="privacy-modal"
           data-modal-toggle="privacy-modal"
-          class="hover:underline"
+          class="hover:underline transition-colors"
           type="button"
           aria-label="View Privacy Policy"
         >
-          <span class="text-primary font-semibold">Privacy Policy</span>
+          <span class="text-brass-dark font-semibold hover:text-brass transition-colors">Privacy Policy</span>
         </button>
-        
+
       </label>
     </div>
 
