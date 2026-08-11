@@ -1,33 +1,21 @@
 <template>
   <div class="font-montserrat">
     <div
-      class="bg-white rounded-2xl shadow-xl ring-1 ring-gray-100 p-6 sm:p-8 lg:p-10"
+      class="bg-white rounded-[2rem] border border-primary/10 shadow-xl shadow-ink/5 p-6 sm:p-8 lg:p-10"
     >
       <!-- Header -->
       <div class="mb-8 text-center">
-        <div
-          class="inline-flex items-center px-4 py-2 bg-primary/10 rounded-full mb-4"
+        <span
+          class="inline-flex items-center gap-2.5 rounded-full border border-primary/15 bg-cream px-4 py-2 font-montserrat text-[10px] font-semibold uppercase tracking-[0.25em] text-primary mb-6"
         >
-          <svg
-            class="w-4 h-4 text-primary mr-2"
-            fill="none"
-            stroke="currentColor"
-            viewBox="0 0 24 24"
-            aria-hidden="true"
-          >
-            <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="2"
-              d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"
-            />
-          </svg>
-          <span class="text-primary font-semibold text-sm">Free Tool · ~30 seconds</span>
-        </div>
-        <h2 class="text-2xl sm:text-3xl font-bold text-primary mb-2">
-          Should you repair or replace?
+          <span class="w-1.5 h-1.5 rounded-full bg-brass animate-pulse" aria-hidden="true"></span>
+          Free Tool &middot; ~30 Seconds
+        </span>
+        <h2 class="font-montserrat font-bold tracking-[-0.02em] text-2xl sm:text-3xl text-primary leading-[1.1] mb-3">
+          Should you repair or
+          <em class="font-display font-semibold italic text-brass-dark">replace?</em>
         </h2>
-        <p class="text-gray-600 text-sm sm:text-base max-w-xl mx-auto">
+        <p class="text-gray-600 text-sm sm:text-base max-w-xl mx-auto leading-relaxed">
           Enter a few details about your appliance and we'll do the cost-per-year math for you.
         </p>
       </div>
@@ -35,32 +23,17 @@
       <form @submit.prevent="onCalculate" novalidate>
         <!-- Section 1: About the item -->
         <fieldset class="mb-8">
-          <legend class="mb-4">
-            <span
-              class="inline-flex items-center px-3 py-1.5 bg-secondary/10 rounded-full"
-            >
-              <svg
-                class="w-4 h-4 text-secondary mr-2"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-                aria-hidden="true"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"
-                />
-              </svg>
-              <span class="text-secondary font-semibold text-xs uppercase tracking-wider">About the item</span>
+          <legend class="mb-5">
+            <span class="inline-flex items-center gap-3">
+              <span class="w-1 h-1 rotate-45 bg-brass shrink-0" aria-hidden="true"></span>
+              <span class="font-montserrat text-[11px] font-semibold uppercase tracking-[0.25em] text-gray-500">About the item</span>
             </span>
           </legend>
 
           <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-5">
             <div>
-              <label for="rrc-age" class="block text-sm font-medium text-gray-700 mb-1.5">
-                Current age <span class="text-gray-500 font-normal">(years)</span>
+              <label for="rrc-age" class="block text-sm font-medium text-primary mb-1.5">
+                Current age <span class="text-gray-400 font-normal">(years)</span>
               </label>
               <input
                 id="rrc-age"
@@ -69,7 +42,7 @@
                 inputmode="numeric"
                 min="0"
                 step="1"
-                class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-2 focus:ring-secondary/30 focus:border-secondary block w-full p-3 transition-colors"
+                class="bg-cream/60 border border-primary/15 text-primary text-sm rounded-2xl focus:ring-2 focus:ring-brass/30 focus:border-brass focus:outline-none block w-full p-3.5 transition-colors"
                 :class="{ 'border-tertiary focus:border-tertiary focus:ring-tertiary/30': fieldErrors.itemAge }"
               />
               <p v-if="fieldErrors.itemAge" role="alert" class="text-xs text-tertiary mt-1">
@@ -78,8 +51,8 @@
             </div>
 
             <div>
-              <label for="rrc-lifespan" class="block text-sm font-medium text-gray-700 mb-1.5">
-                Expected lifespan <span class="text-gray-500 font-normal">(years)</span>
+              <label for="rrc-lifespan" class="block text-sm font-medium text-primary mb-1.5">
+                Expected lifespan <span class="text-gray-400 font-normal">(years)</span>
               </label>
               <input
                 id="rrc-lifespan"
@@ -88,7 +61,7 @@
                 inputmode="decimal"
                 min="1"
                 step="1"
-                class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-2 focus:ring-secondary/30 focus:border-secondary block w-full p-3 transition-colors"
+                class="bg-cream/60 border border-primary/15 text-primary text-sm rounded-2xl focus:ring-2 focus:ring-brass/30 focus:border-brass focus:outline-none block w-full p-3.5 transition-colors"
                 :class="{ 'border-tertiary focus:border-tertiary focus:ring-tertiary/30': fieldErrors.itemLifespan }"
               />
               <p v-if="fieldErrors.itemLifespan" role="alert" class="text-xs text-tertiary mt-1">
@@ -97,8 +70,8 @@
             </div>
 
             <div>
-              <label for="rrc-replace" class="block text-sm font-medium text-gray-700 mb-1.5">
-                Replacement cost <span class="text-gray-500 font-normal">($)</span>
+              <label for="rrc-replace" class="block text-sm font-medium text-primary mb-1.5">
+                Replacement cost <span class="text-gray-400 font-normal">($)</span>
               </label>
               <input
                 id="rrc-replace"
@@ -107,7 +80,7 @@
                 inputmode="decimal"
                 min="0"
                 step="10"
-                class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-2 focus:ring-secondary/30 focus:border-secondary block w-full p-3 transition-colors"
+                class="bg-cream/60 border border-primary/15 text-primary text-sm rounded-2xl focus:ring-2 focus:ring-brass/30 focus:border-brass focus:outline-none block w-full p-3.5 transition-colors"
                 :class="{ 'border-tertiary focus:border-tertiary focus:ring-tertiary/30': fieldErrors.replaceCost }"
               />
               <p v-if="fieldErrors.replaceCost" role="alert" class="text-xs text-tertiary mt-1">
@@ -116,8 +89,8 @@
             </div>
 
             <div>
-              <label for="rrc-value" class="block text-sm font-medium text-gray-700 mb-1.5">
-                Current resale value <span class="text-gray-500 font-normal">($)</span>
+              <label for="rrc-value" class="block text-sm font-medium text-primary mb-1.5">
+                Current resale value <span class="text-gray-400 font-normal">($)</span>
               </label>
               <input
                 id="rrc-value"
@@ -126,7 +99,7 @@
                 inputmode="decimal"
                 min="0"
                 step="10"
-                class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-2 focus:ring-secondary/30 focus:border-secondary block w-full p-3 transition-colors"
+                class="bg-cream/60 border border-primary/15 text-primary text-sm rounded-2xl focus:ring-2 focus:ring-brass/30 focus:border-brass focus:outline-none block w-full p-3.5 transition-colors"
               />
             </div>
           </div>
@@ -134,32 +107,17 @@
 
         <!-- Section 2: Repair details -->
         <fieldset class="mb-8">
-          <legend class="mb-4">
-            <span
-              class="inline-flex items-center px-3 py-1.5 bg-primary/10 rounded-full"
-            >
-              <svg
-                class="w-4 h-4 text-primary mr-2"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-                aria-hidden="true"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  d="M11.42 15.17L17.25 21A2.652 2.652 0 0021 17.25l-5.877-5.877M11.42 15.17l2.496-3.03c.317-.384.74-.626 1.208-.766M11.42 15.17l-4.655 5.653a2.548 2.548 0 11-3.586-3.586l6.837-5.63m5.108-.233c.55-.164 1.163-.188 1.743-.14a4.5 4.5 0 004.486-6.336l-3.276 3.277a3.004 3.004 0 01-2.25-2.25l3.276-3.276a4.5 4.5 0 00-6.336 4.486c.091 1.076-.071 2.264-.904 2.95l-.102.085m-1.745 1.437L5.909 7.5H4.5L2.25 3.75l1.5-1.5L7.5 4.5v1.409l4.26 4.26m-1.745 1.437l1.745-1.437m6.615 8.206L15.75 15.75M4.867 19.125h.008v.008h-.008v-.008z"
-                />
-              </svg>
-              <span class="text-primary font-semibold text-xs uppercase tracking-wider">Repair details</span>
+          <legend class="mb-5">
+            <span class="inline-flex items-center gap-3">
+              <span class="w-1 h-1 rotate-45 bg-brass shrink-0" aria-hidden="true"></span>
+              <span class="font-montserrat text-[11px] font-semibold uppercase tracking-[0.25em] text-gray-500">Repair details</span>
             </span>
           </legend>
 
           <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-5">
             <div>
-              <label for="rrc-repair" class="block text-sm font-medium text-gray-700 mb-1.5">
-                Repair quote <span class="text-gray-500 font-normal">($)</span>
+              <label for="rrc-repair" class="block text-sm font-medium text-primary mb-1.5">
+                Repair quote <span class="text-gray-400 font-normal">($)</span>
               </label>
               <input
                 id="rrc-repair"
@@ -168,7 +126,7 @@
                 inputmode="decimal"
                 min="0"
                 step="10"
-                class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-2 focus:ring-secondary/30 focus:border-secondary block w-full p-3 transition-colors"
+                class="bg-cream/60 border border-primary/15 text-primary text-sm rounded-2xl focus:ring-2 focus:ring-brass/30 focus:border-brass focus:outline-none block w-full p-3.5 transition-colors"
                 :class="{ 'border-tertiary focus:border-tertiary focus:ring-tertiary/30': fieldErrors.repairCost }"
               />
               <p v-if="fieldErrors.repairCost" role="alert" class="text-xs text-tertiary mt-1">
@@ -177,7 +135,7 @@
             </div>
 
             <div>
-              <label for="rrc-life" class="block text-sm font-medium text-gray-700 mb-1.5">
+              <label for="rrc-life" class="block text-sm font-medium text-primary mb-1.5">
                 Years added by repair
               </label>
               <input
@@ -187,18 +145,18 @@
                 inputmode="numeric"
                 min="0"
                 step="1"
-                class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-2 focus:ring-secondary/30 focus:border-secondary block w-full p-3 transition-colors"
+                class="bg-cream/60 border border-primary/15 text-primary text-sm rounded-2xl focus:ring-2 focus:ring-brass/30 focus:border-brass focus:outline-none block w-full p-3.5 transition-colors"
               />
             </div>
 
             <div>
-              <label for="rrc-reliability" class="block text-sm font-medium text-gray-700 mb-1.5">
+              <label for="rrc-reliability" class="block text-sm font-medium text-primary mb-1.5">
                 Reliability after repair
               </label>
               <select
                 id="rrc-reliability"
                 v-model.number="reliability"
-                class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-2 focus:ring-secondary/30 focus:border-secondary block w-full p-3 cursor-pointer transition-colors"
+                class="bg-cream/60 border border-primary/15 text-primary text-sm rounded-2xl focus:ring-2 focus:ring-brass/30 focus:border-brass focus:outline-none block w-full p-3.5 cursor-pointer transition-colors"
               >
                 <option :value="1.0">High — works like new</option>
                 <option :value="0.8">Medium — occasional issues</option>
@@ -207,8 +165,8 @@
             </div>
 
             <div>
-              <label for="rrc-savings" class="block text-sm font-medium text-gray-700 mb-1.5">
-                Annual savings if new <span class="text-gray-500 font-normal">($)</span>
+              <label for="rrc-savings" class="block text-sm font-medium text-primary mb-1.5">
+                Annual savings if new <span class="text-gray-400 font-normal">($)</span>
               </label>
               <input
                 id="rrc-savings"
@@ -218,7 +176,7 @@
                 min="0"
                 step="10"
                 title="e.g. energy efficiency gains"
-                class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-2 focus:ring-secondary/30 focus:border-secondary block w-full p-3 transition-colors"
+                class="bg-cream/60 border border-primary/15 text-primary text-sm rounded-2xl focus:ring-2 focus:ring-brass/30 focus:border-brass focus:outline-none block w-full p-3.5 transition-colors"
               />
             </div>
           </div>
@@ -228,27 +186,11 @@
         <button
           type="submit"
           :disabled="isCalculating"
-          class="group relative w-full sm:w-auto sm:min-w-[280px] mx-auto flex items-center justify-center px-8 py-4 bg-gradient-to-r from-primary to-secondary text-white font-bold rounded-xl shadow-lg hover:shadow-2xl hover:shadow-primary/40 transition-all duration-300 transform hover:-translate-y-0.5 active:translate-y-0 disabled:opacity-70 disabled:cursor-not-allowed disabled:hover:translate-y-0 cursor-pointer overflow-hidden min-h-[52px] focus:outline-none focus-visible:ring-4 focus-visible:ring-primary/40 focus-visible:ring-offset-2"
+          class="w-full sm:w-auto sm:min-w-[280px] mx-auto flex items-center justify-center min-h-[54px] px-9 py-4 rounded-full bg-ink text-white font-montserrat text-sm font-semibold uppercase tracking-[0.12em] transition-all duration-300 hover:bg-brass hover:scale-[1.03] active:scale-100 disabled:opacity-70 disabled:cursor-not-allowed disabled:hover:scale-100 cursor-pointer touch-manipulation focus:outline-none focus-visible:ring-2 focus-visible:ring-brass focus-visible:ring-offset-2"
         >
-          <span class="absolute inset-0 bg-gradient-to-r from-transparent via-white/15 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-700"></span>
           <svg
-            v-if="!isCalculating"
-            class="w-5 h-5 mr-2 relative z-10"
-            fill="none"
-            stroke="currentColor"
-            viewBox="0 0 24 24"
-            aria-hidden="true"
-          >
-            <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="2"
-              d="M9 7h6m0 10v-3m-3 3h.01M9 17h.01M9 14h.01M12 14h.01M15 11h.01M12 11h.01M9 11h.01M7 21h10a2 2 0 002-2V5a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2z"
-            />
-          </svg>
-          <svg
-            v-else
-            class="w-5 h-5 mr-2 relative z-10 animate-spin"
+            v-if="isCalculating"
+            class="w-5 h-5 mr-3 animate-spin"
             fill="none"
             viewBox="0 0 24 24"
             aria-hidden="true"
@@ -256,7 +198,7 @@
             <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
             <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
           </svg>
-          <span class="relative z-10">{{ isCalculating ? 'Calculating…' : 'Calculate Recommendation' }}</span>
+          <span>{{ isCalculating ? 'Calculating…' : 'Calculate Recommendation' }}</span>
         </button>
       </form>
 
@@ -272,16 +214,16 @@
           role="region"
           aria-live="polite"
           aria-atomic="true"
-          class="mt-10 space-y-6"
+          class="mt-10 space-y-5"
         >
           <!-- Verdict Card -->
           <div
-            class="rounded-2xl p-6 sm:p-8 ring-1"
+            class="rounded-[1.5rem] p-6 sm:p-8 border bg-cream"
             :class="verdictSurfaceClass"
           >
-            <div class="flex items-start gap-4">
+            <div class="flex items-start gap-4 sm:gap-5">
               <div
-                class="flex-shrink-0 w-12 h-12 sm:w-14 sm:h-14 rounded-xl flex items-center justify-center"
+                class="flex-shrink-0 w-12 h-12 sm:w-14 sm:h-14 rounded-full flex items-center justify-center"
                 :class="verdictIconBgClass"
               >
                 <!-- Wrench icon: repair -->
@@ -297,7 +239,7 @@
                   <path
                     stroke-linecap="round"
                     stroke-linejoin="round"
-                    stroke-width="2"
+                    stroke-width="1.5"
                     d="M11.42 15.17L17.25 21A2.652 2.652 0 0021 17.25l-5.877-5.877M11.42 15.17l2.496-3.03c.317-.384.74-.626 1.208-.766m-2.587 4.254L4.5 19.5l2.5-2.5 2.587-2.587"
                   />
                 </svg>
@@ -314,7 +256,7 @@
                   <path
                     stroke-linecap="round"
                     stroke-linejoin="round"
-                    stroke-width="2"
+                    stroke-width="1.5"
                     d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"
                   />
                 </svg>
@@ -331,16 +273,16 @@
                   <path
                     stroke-linecap="round"
                     stroke-linejoin="round"
-                    stroke-width="2"
+                    stroke-width="1.5"
                     d="M12 3v18m-7-7l-3-6h6l-3 6zm14 0l-3-6h6l-3 6zM4 21h16"
                   />
                 </svg>
               </div>
               <div class="flex-1 min-w-0">
-                <h3 class="text-xl sm:text-2xl font-bold mb-1" :class="verdictTextClass">
+                <h3 class="font-display font-semibold text-2xl sm:text-3xl mb-1" :class="verdictTextClass">
                   {{ verdict.headline }}
                 </h3>
-                <p class="text-sm sm:text-base text-gray-700">
+                <p class="text-sm sm:text-base text-gray-600 leading-relaxed">
                   {{ verdict.subline }}
                 </p>
               </div>
@@ -348,31 +290,31 @@
           </div>
 
           <!-- Cost-per-year bars -->
-          <div class="bg-gray-50 rounded-2xl p-6 sm:p-8 ring-1 ring-gray-100">
-            <h4 class="text-sm font-semibold text-gray-500 uppercase tracking-wider mb-5">
+          <div class="bg-cream border border-primary/10 rounded-[1.5rem] p-6 sm:p-8">
+            <h4 class="font-montserrat text-[11px] font-semibold uppercase tracking-[0.25em] text-gray-500 mb-6">
               Cost per year of use
             </h4>
             <div class="space-y-5">
               <div>
                 <div class="flex items-baseline justify-between mb-2">
-                  <span class="text-sm font-medium text-gray-700">Repair</span>
-                  <span class="text-base font-bold text-primary">${{ formatNumber(repairCPY) }}/yr</span>
+                  <span class="font-montserrat text-[11px] font-semibold uppercase tracking-[0.2em] text-gray-500">Repair</span>
+                  <span class="font-display font-semibold text-lg text-primary">${{ formatNumber(repairCPY) }}/yr</span>
                 </div>
-                <div class="h-2.5 rounded-full bg-white ring-1 ring-gray-200 overflow-hidden">
+                <div class="h-1 bg-primary/10 overflow-hidden">
                   <div
-                    class="h-full bg-gradient-to-r from-primary to-secondary rounded-full transition-all duration-700 ease-out"
+                    class="h-full bg-primary transition-all duration-700 ease-out"
                     :style="{ width: `${barWidth(repairCPY)}%` }"
                   ></div>
                 </div>
               </div>
               <div>
                 <div class="flex items-baseline justify-between mb-2">
-                  <span class="text-sm font-medium text-gray-700">Replace</span>
-                  <span class="text-base font-bold text-secondary">${{ formatNumber(replaceCPY) }}/yr</span>
+                  <span class="font-montserrat text-[11px] font-semibold uppercase tracking-[0.2em] text-gray-500">Replace</span>
+                  <span class="font-display font-semibold text-lg text-brass-dark">${{ formatNumber(replaceCPY) }}/yr</span>
                 </div>
-                <div class="h-2.5 rounded-full bg-white ring-1 ring-gray-200 overflow-hidden">
+                <div class="h-1 bg-primary/10 overflow-hidden">
                   <div
-                    class="h-full bg-gradient-to-r from-secondary to-primary rounded-full transition-all duration-700 ease-out"
+                    class="h-full bg-brass transition-all duration-700 ease-out"
                     :style="{ width: `${barWidth(replaceCPY)}%` }"
                   ></div>
                 </div>
@@ -382,9 +324,9 @@
 
           <!-- Metric Cards -->
           <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
-            <div class="bg-white ring-1 ring-gray-100 rounded-xl p-5 shadow-sm">
+            <div class="bg-white border border-primary/10 rounded-[1.5rem] p-5">
               <div class="flex items-center justify-between mb-2">
-                <span class="text-xs font-semibold text-gray-500 uppercase tracking-wider">Rule of thumb</span>
+                <span class="font-montserrat text-[10px] font-semibold uppercase tracking-[0.2em] text-gray-500">Rule of thumb</span>
                 <span
                   class="inline-flex items-center justify-center w-6 h-6 rounded-full text-xs font-bold"
                   :class="ruleOfThumb.badgeClass"
@@ -393,58 +335,50 @@
                   {{ ruleOfThumb.symbol }}
                 </span>
               </div>
-              <div class="text-lg font-bold text-gray-900">{{ ruleOfThumb.label }}</div>
+              <div class="font-display font-semibold text-2xl text-primary">{{ ruleOfThumb.label }}</div>
               <p class="text-xs text-gray-500 mt-1">Repair cost vs. replacement</p>
             </div>
 
-            <div class="bg-white ring-1 ring-gray-100 rounded-xl p-5 shadow-sm">
+            <div class="bg-white border border-primary/10 rounded-[1.5rem] p-5">
               <div class="flex items-center justify-between mb-2">
-                <span class="text-xs font-semibold text-gray-500 uppercase tracking-wider">Break-even</span>
-                <svg class="w-5 h-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"/>
+                <span class="font-montserrat text-[10px] font-semibold uppercase tracking-[0.2em] text-gray-500">Break-even</span>
+                <svg class="w-5 h-5 text-brass" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"/>
                 </svg>
               </div>
-              <div class="text-lg font-bold text-gray-900">{{ breakevenLabel }}</div>
+              <div class="font-display font-semibold text-2xl text-primary">{{ breakevenLabel }}</div>
               <p class="text-xs text-gray-500 mt-1">Years for new to pay back</p>
             </div>
 
-            <div class="bg-white ring-1 ring-gray-100 rounded-xl p-5 shadow-sm">
+            <div class="bg-white border border-primary/10 rounded-[1.5rem] p-5">
               <div class="flex items-center justify-between mb-2">
-                <span class="text-xs font-semibold text-gray-500 uppercase tracking-wider">5-year diff</span>
-                <svg class="w-5 h-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/>
+                <span class="font-montserrat text-[10px] font-semibold uppercase tracking-[0.2em] text-gray-500">5-year diff</span>
+                <svg class="w-5 h-5 text-brass" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/>
                 </svg>
               </div>
-              <div class="text-lg font-bold text-gray-900">${{ formatNumber(Math.abs(diff5yr)) }}</div>
+              <div class="font-display font-semibold text-2xl text-primary">${{ formatNumber(Math.abs(diff5yr)) }}</div>
               <p class="text-xs text-gray-500 mt-1">{{ diff5yrLabel }}</p>
             </div>
           </div>
 
           <!-- CTAs -->
           <div class="pt-2">
-            <p class="text-center text-sm text-gray-600 mb-4">
+            <p class="text-center text-sm text-gray-600 mb-5">
               Ready to take the next step? Our Bay Area technicians service Sub-Zero, Wolf, Viking, Thermador, and more.
             </p>
-            <div class="flex flex-col sm:flex-row gap-3 justify-center">
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
               <NuxtLink
                 to="/booking"
-                class="group inline-flex items-center justify-center px-6 sm:px-8 py-3.5 bg-gradient-to-r from-primary to-secondary text-white font-bold rounded-xl shadow-lg hover:shadow-2xl hover:shadow-primary/40 transition-all duration-300 transform hover:-translate-y-0.5 cursor-pointer min-h-[48px] focus:outline-none focus-visible:ring-4 focus-visible:ring-primary/40 focus-visible:ring-offset-2"
+                class="group inline-flex items-center justify-center gap-3 min-h-[52px] px-9 py-4 rounded-full bg-ink text-white font-montserrat text-sm font-semibold uppercase tracking-[0.12em] transition-all duration-300 hover:bg-brass hover:scale-[1.03] cursor-pointer touch-manipulation focus:outline-none focus-visible:ring-2 focus-visible:ring-brass focus-visible:ring-offset-2"
               >
-                <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/>
-                </svg>
                 Book a Repair
-                <svg class="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
-                </svg>
+                <span class="transition-transform group-hover:translate-x-1" aria-hidden="true">&rarr;</span>
               </NuxtLink>
               <a
                 href="tel:4159414144"
-                class="inline-flex items-center justify-center px-6 sm:px-8 py-3.5 bg-white border-2 border-primary text-primary font-bold rounded-xl hover:bg-primary/5 transition-all duration-300 cursor-pointer min-h-[48px] focus:outline-none focus-visible:ring-4 focus-visible:ring-primary/30 focus-visible:ring-offset-2"
+                class="inline-flex items-center justify-center min-h-[52px] px-9 py-4 rounded-full border border-ink/20 text-ink font-montserrat text-sm font-semibold uppercase tracking-[0.12em] transition-all duration-300 hover:border-brass hover:text-brass-dark hover:scale-[1.03] cursor-pointer touch-manipulation focus:outline-none focus-visible:ring-2 focus-visible:ring-brass focus-visible:ring-offset-2"
               >
-                <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
-                  <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"/>
-                </svg>
                 Call (415) 941-4144
               </a>
             </div>
@@ -452,7 +386,7 @@
         </div>
       </Transition>
 
-      <p class="text-xs text-gray-400 text-center mt-8 pt-6 border-t border-gray-100">
+      <p class="text-xs text-gray-400 text-center mt-8 pt-6 border-t border-primary/10">
         Estimates are based on the values you enter. For an accurate diagnosis, book a service visit.
       </p>
     </div>
@@ -526,21 +460,21 @@ const verdict = computed(() => {
 })
 
 const verdictSurfaceClass = computed(() => {
-  if (verdict.value.type === 'repair') return 'bg-emerald-50 ring-emerald-200'
-  if (verdict.value.type === 'replace') return 'bg-secondary/5 ring-secondary/20'
-  return 'bg-amber-50 ring-amber-200'
+  if (verdict.value.type === 'repair') return 'border-brass/40'
+  if (verdict.value.type === 'replace') return 'border-ink/30'
+  return 'border-primary/15'
 })
 
 const verdictIconBgClass = computed(() => {
-  if (verdict.value.type === 'repair') return 'bg-emerald-100'
-  if (verdict.value.type === 'replace') return 'bg-secondary/15'
-  return 'bg-amber-100'
+  if (verdict.value.type === 'repair') return 'bg-brass/15'
+  if (verdict.value.type === 'replace') return 'bg-ink/10'
+  return 'bg-primary/10'
 })
 
 const verdictTextClass = computed(() => {
-  if (verdict.value.type === 'repair') return 'text-emerald-700'
-  if (verdict.value.type === 'replace') return 'text-secondary'
-  return 'text-amber-700'
+  if (verdict.value.type === 'repair') return 'text-brass-dark'
+  if (verdict.value.type === 'replace') return 'text-ink'
+  return 'text-primary'
 })
 
 const ruleOfThumb = computed(() => {
@@ -552,7 +486,7 @@ const ruleOfThumb = computed(() => {
       symbol: '✓',
       label: 'Under 50%',
       ariaLabel: 'Repair is under 50% of replacement cost — favors repair',
-      badgeClass: 'bg-emerald-100 text-emerald-700',
+      badgeClass: 'bg-brass/15 text-brass-dark',
     }
   }
   if (ratio <= 1.0) {
@@ -560,14 +494,14 @@ const ruleOfThumb = computed(() => {
       symbol: '!',
       label: '50–100%',
       ariaLabel: 'Repair is between 50% and 100% of replacement — borderline',
-      badgeClass: 'bg-amber-100 text-amber-700',
+      badgeClass: 'bg-primary/10 text-primary',
     }
   }
   return {
     symbol: '×',
     label: 'Over 100%',
     ariaLabel: 'Repair costs more than replacement — favors replace',
-    badgeClass: 'bg-red-100 text-tertiary',
+    badgeClass: 'bg-tertiary/10 text-tertiary',
   }
 })
 

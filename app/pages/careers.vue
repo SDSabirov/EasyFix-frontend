@@ -3,40 +3,40 @@
     <Navbar />
 
     <!-- Hero -->
-    <header
-      class="relative pt-32 pb-16 sm:pt-40 sm:pb-20"
-      style="background: linear-gradient(135deg, #0c2a3b 0%, #1c6e8c 100%);"
-    >
-      <div class="max-w-screen-xl mx-auto px-4 text-center">
-        <span
-          class="inline-block text-xs sm:text-sm font-semibold uppercase tracking-[0.18em] mb-4"
-          style="color: #f97316;"
-        >
-          We're hiring
+    <header class="relative bg-cream pt-32 pb-16 lg:pt-40 lg:pb-20 overflow-hidden">
+      <span class="ghost-word text-[6rem] lg:text-[11rem] top-20 -right-6" aria-hidden="true">Careers</span>
+
+      <div class="container mx-auto px-4 max-w-screen-xl relative z-10 text-center">
+        <span class="inline-flex items-center gap-2.5 rounded-full border border-primary/15 bg-white px-4 py-2 font-montserrat text-[10px] font-semibold uppercase tracking-[0.25em] text-primary mb-6">
+          <span class="w-1.5 h-1.5 rounded-full bg-brass animate-pulse" aria-hidden="true"></span>
+          We're Hiring
         </span>
-        <h1 class="font-montserrat text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-4 tracking-tight">
-          Easy Fix Appliance Technician Application
+
+        <h1 class="font-montserrat font-bold tracking-[-0.02em] text-3xl sm:text-5xl lg:text-6xl text-primary leading-[1.05] mb-6">
+          Easy Fix Appliance
+          <em class="block font-display font-semibold italic text-brass-dark">Technician Application</em>
         </h1>
-        <p class="text-base sm:text-lg text-white/80 max-w-2xl mx-auto leading-relaxed">
+
+        <p class="text-base sm:text-lg text-gray-600 max-w-2xl mx-auto leading-relaxed">
           Join the Bay Area's trusted appliance repair team. Fill out the application below — we review every submission and follow up within a few business days.
         </p>
       </div>
     </header>
 
     <!-- Form Section -->
-    <main class="flex-1 bg-gray-50 py-12 sm:py-16 lg:py-20">
+    <main class="flex-1 bg-white py-14 sm:py-16 lg:py-20">
       <div class="max-w-3xl mx-auto px-4">
         <section
-          class="bg-white rounded-3xl shadow-[0_20px_60px_-20px_rgba(12,42,59,0.18)] ring-1 ring-gray-100 p-6 sm:p-10 lg:p-12"
+          class="bg-white rounded-[2rem] border border-primary/10 shadow-xl shadow-ink/5 p-6 sm:p-10 lg:p-12"
         >
           <FormsJobApplication />
         </section>
 
         <p class="text-center text-sm text-gray-500 mt-8">
           Questions about the position? Call us at
-          <a href="tel:4159414144" class="text-primary font-medium hover:underline">(415) 941-4144</a>
+          <a href="tel:4159414144" class="font-montserrat font-semibold text-brass-dark hover:text-brass transition-colors">(415) 941-4144</a>
           or email
-          <a href="mailto:care@easyfixappliance.com" class="text-primary font-medium hover:underline">care@easyfixappliance.com</a>.
+          <a href="mailto:care@easyfixappliance.com" class="font-montserrat font-semibold text-brass-dark hover:text-brass transition-colors">care@easyfixappliance.com</a>.
         </p>
       </div>
     </main>

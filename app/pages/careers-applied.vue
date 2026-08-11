@@ -2,31 +2,27 @@
   <div class="flex flex-col min-h-screen bg-white">
     <Navbar />
 
-    <main
-      class="flex-1 flex items-center justify-center px-4 pt-24 pb-16 sm:pt-28 sm:pb-20"
-      style="background: linear-gradient(160deg, #fff7ed 0%, #ffffff 45%, #f8fafc 100%);"
-    >
+    <main class="flex-1 flex items-center justify-center px-4 pt-32 pb-16 sm:pt-36 sm:pb-20 bg-cream relative overflow-hidden">
+      <span class="ghost-word text-[6rem] lg:text-[11rem] top-20 -right-6" aria-hidden="true">Thanks</span>
+
       <section
-        class="w-full max-w-2xl bg-white rounded-3xl shadow-[0_20px_60px_-20px_rgba(12,42,59,0.18)] ring-1 ring-gray-100 p-6 sm:p-10 lg:p-12"
+        class="relative z-10 w-full max-w-2xl bg-white rounded-[2rem] border border-primary/10 shadow-xl shadow-ink/5 p-6 sm:p-10 lg:p-12"
         aria-labelledby="application-success-title"
       >
         <!-- Success icon -->
         <div class="flex justify-center">
-          <div
-            class="relative flex items-center justify-center w-20 h-20 sm:w-24 sm:h-24 rounded-full"
-            style="background: rgba(249, 115, 22, 0.12);"
-          >
+          <div class="relative flex items-center justify-center w-20 h-20 sm:w-24 sm:h-24 rounded-full bg-brass/10">
             <span
-              class="absolute inset-0 rounded-full motion-safe:animate-ping"
-              style="background: rgba(249, 115, 22, 0.18); animation-duration: 2.4s;"
+              class="absolute inset-0 rounded-full motion-safe:animate-ping bg-brass/15"
+              style="animation-duration: 2.4s;"
               aria-hidden="true"
             ></span>
             <svg
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 24 24"
               fill="none"
-              stroke="#f97316"
-              stroke-width="2.5"
+              stroke="#B08D57"
+              stroke-width="2"
               stroke-linecap="round"
               stroke-linejoin="round"
               class="relative w-10 h-10 sm:w-12 sm:h-12"
@@ -40,10 +36,10 @@
         <!-- Heading -->
         <h1
           id="application-success-title"
-          class="mt-6 sm:mt-8 text-center font-montserrat text-2xl sm:text-3xl lg:text-4xl font-bold tracking-tight"
-          style="color: #0c2a3b;"
+          class="mt-6 sm:mt-8 text-center font-montserrat font-bold tracking-[-0.02em] text-2xl sm:text-3xl lg:text-4xl text-primary leading-[1.1]"
         >
-          Application received
+          Application
+          <em class="font-display font-semibold italic text-brass-dark">received</em>
         </h1>
 
         <p class="mt-4 text-center text-base sm:text-lg leading-relaxed text-gray-600 max-w-xl mx-auto">
@@ -53,29 +49,25 @@
 
         <!-- Divider -->
         <div class="mt-8 sm:mt-10 flex items-center gap-4">
-          <div class="h-px flex-1 bg-gray-200"></div>
-          <span
-            class="text-xs sm:text-sm font-semibold uppercase tracking-[0.18em]"
-            style="color: #f97316;"
-          >
+          <div class="h-px flex-1 bg-gradient-to-r from-transparent to-brass/40" aria-hidden="true"></div>
+          <span class="font-montserrat text-[11px] font-semibold uppercase tracking-[0.25em] text-brass-dark">
             What happens next
           </span>
-          <div class="h-px flex-1 bg-gray-200"></div>
+          <div class="h-px flex-1 bg-gradient-to-l from-transparent to-brass/40" aria-hidden="true"></div>
         </div>
 
         <!-- Next steps -->
         <ul class="mt-8 space-y-5 sm:space-y-6">
           <li class="flex gap-4 sm:gap-5">
             <div
-              class="flex-shrink-0 flex items-center justify-center w-11 h-11 sm:w-12 sm:h-12 rounded-xl"
-              style="background: rgba(249, 115, 22, 0.1);"
+              class="flex-shrink-0 flex items-center justify-center w-11 h-11 sm:w-12 sm:h-12 rounded-full bg-brass/10"
               aria-hidden="true"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 24 24"
                 fill="none"
-                stroke="#f97316"
+                stroke="#8F7040"
                 stroke-width="1.8"
                 stroke-linecap="round"
                 stroke-linejoin="round"
@@ -86,7 +78,7 @@
               </svg>
             </div>
             <div class="flex-1 min-w-0">
-              <h2 class="font-montserrat text-base sm:text-lg font-semibold" style="color: #0c2a3b;">
+              <h2 class="font-montserrat text-base sm:text-lg font-semibold text-primary">
                 We'll review your application
               </h2>
               <p class="mt-1 text-sm sm:text-base text-gray-600 leading-relaxed">
@@ -98,15 +90,14 @@
 
           <li class="flex gap-4 sm:gap-5">
             <div
-              class="flex-shrink-0 flex items-center justify-center w-11 h-11 sm:w-12 sm:h-12 rounded-xl"
-              style="background: rgba(12, 42, 59, 0.08);"
+              class="flex-shrink-0 flex items-center justify-center w-11 h-11 sm:w-12 sm:h-12 rounded-full bg-ink/5"
               aria-hidden="true"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 24 24"
                 fill="none"
-                stroke="#0c2a3b"
+                stroke="#0A2333"
                 stroke-width="1.8"
                 stroke-linecap="round"
                 stroke-linejoin="round"
@@ -119,7 +110,7 @@
               </svg>
             </div>
             <div class="flex-1 min-w-0">
-              <h2 class="font-montserrat text-base sm:text-lg font-semibold" style="color: #0c2a3b;">
+              <h2 class="font-montserrat text-base sm:text-lg font-semibold text-primary">
                 Our team will follow up
               </h2>
               <p class="mt-1 text-sm sm:text-base text-gray-600 leading-relaxed">
@@ -131,72 +122,32 @@
         </ul>
 
         <!-- Phone CTA -->
-        <div
-          class="mt-8 sm:mt-10 rounded-2xl p-5 sm:p-6 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4"
-          style="background: linear-gradient(135deg, #0c2a3b 0%, #1c6e8c 100%);"
-        >
-          <div class="flex items-start sm:items-center gap-3">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="#ffffff"
-              stroke-width="1.8"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              class="w-6 h-6 flex-shrink-0 mt-0.5 sm:mt-0"
-              aria-hidden="true"
-            >
-              <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" />
-            </svg>
+        <div class="grain glow-brass relative bg-ink rounded-[1.5rem] mt-8 sm:mt-10 overflow-hidden">
+          <div class="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-brass to-transparent" aria-hidden="true"></div>
+          <div class="relative z-10 p-5 sm:p-6 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
             <div>
-              <p class="text-sm sm:text-base text-white/80">Have a question?</p>
-              <p class="font-montserrat text-lg sm:text-xl font-semibold text-white">
+              <p class="text-sm sm:text-base text-white/60">Have a question?</p>
+              <p class="font-display font-semibold italic text-xl sm:text-2xl text-brass-light">
                 We're happy to help anytime.
               </p>
             </div>
-          </div>
-          <a
-            href="tel:4159414144"
-            class="inline-flex items-center justify-center gap-2 px-5 py-3 rounded-xl font-semibold text-sm sm:text-base whitespace-nowrap cursor-pointer transition-colors duration-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-[#0c2a3b]"
-            style="background: #f97316; color: #ffffff;"
-            @mouseenter="(e) => e.currentTarget.style.background = '#ea670c'"
-            @mouseleave="(e) => e.currentTarget.style.background = '#f97316'"
-            aria-label="Call Easy Fix Appliance at (415) 941-4144"
-          >
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 24 24"
-              fill="currentColor"
-              class="w-4 h-4"
-              aria-hidden="true"
+            <a
+              href="tel:4159414144"
+              class="inline-flex items-center justify-center min-h-[48px] px-7 py-3 rounded-full bg-white text-ink font-montserrat text-sm font-semibold uppercase tracking-[0.12em] whitespace-nowrap transition-all duration-300 hover:bg-brass hover:text-white hover:scale-[1.03] touch-manipulation focus:outline-none focus-visible:ring-2 focus-visible:ring-brass focus-visible:ring-offset-2 focus-visible:ring-offset-ink"
+              aria-label="Call Easy Fix Appliance at (415) 941-4144"
             >
-              <path d="M6.62 10.79a15.05 15.05 0 0 0 6.59 6.59l2.2-2.2a1 1 0 0 1 1.05-.24 11.36 11.36 0 0 0 3.57.57 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1 11.36 11.36 0 0 0 .57 3.57 1 1 0 0 1-.24 1.05z" />
-            </svg>
-            (415) 941-4144
-          </a>
+              (415) 941-4144
+            </a>
+          </div>
         </div>
 
         <!-- Back link -->
-        <div class="mt-6 sm:mt-8 text-center">
+        <div class="mt-8 text-center">
           <NuxtLink
             to="/"
-            class="inline-flex items-center gap-1.5 text-sm font-medium text-gray-500 hover:text-[#0c2a3b] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#f97316] focus-visible:ring-offset-2 rounded transition-colors duration-200 cursor-pointer"
+            class="group inline-flex items-center gap-3 font-montserrat text-[12px] font-semibold uppercase tracking-[0.18em] text-primary hover:text-brass-dark transition-colors"
           >
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              stroke-width="2"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              class="w-4 h-4"
-              aria-hidden="true"
-            >
-              <path d="M19 12H5" />
-              <path d="m12 19-7-7 7-7" />
-            </svg>
+            <span class="flex items-center justify-center w-10 h-10 rounded-full border border-primary/20 transition-all duration-300 group-hover:bg-ink group-hover:border-ink group-hover:text-white" aria-hidden="true">&larr;</span>
             Back to home
           </NuxtLink>
         </div>

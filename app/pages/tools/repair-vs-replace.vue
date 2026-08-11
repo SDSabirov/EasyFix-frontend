@@ -3,133 +3,117 @@
     <Navbar />
 
     <!-- Hero Section -->
-    <header
-      class="relative pt-32 lg:pt-40 pb-16 lg:pb-24 overflow-hidden"
-      style="background: #0c2a3b; background-image: linear-gradient(to bottom right, #0c2a3b, #1C6E8C);"
-    >
-      <div class="absolute top-20 left-12 w-24 h-24 rounded-full blur-2xl animate-pulse" style="background: rgba(249, 115, 22, 0.2);"></div>
-      <div class="absolute bottom-10 right-16 w-40 h-40 rounded-full blur-3xl animate-pulse delay-700" style="background: rgba(248, 237, 227, 0.15);"></div>
+    <header class="grain glow-brass relative bg-ink pt-32 lg:pt-40 pb-16 lg:pb-24 overflow-hidden">
+      <span class="ghost-word ghost-word--light text-[6rem] lg:text-[11rem] top-20 -right-6" aria-hidden="true">Decide</span>
 
       <div class="relative z-10 container mx-auto px-4 max-w-screen-xl text-center">
-        <div
-          class="inline-flex items-center px-5 py-2 rounded-full mb-6 border"
-          style="background: rgba(255, 255, 255, 0.15); backdrop-filter: blur(8px); border-color: rgba(255, 255, 255, 0.25);"
-        >
-          <svg class="w-5 h-5 mr-2 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"/>
-          </svg>
-          <span class="font-semibold text-white text-sm">Free Decision Tool</span>
-        </div>
+        <span class="inline-flex items-center gap-2.5 rounded-full border border-white/15 bg-white/5 px-4 py-2 font-montserrat text-[10px] font-semibold uppercase tracking-[0.25em] text-brass-light mb-6">
+          <span class="w-1.5 h-1.5 rounded-full bg-brass animate-pulse" aria-hidden="true"></span>
+          Free Decision Tool
+        </span>
 
-        <h1 class="text-3xl sm:text-5xl lg:text-6xl font-bold text-white mb-5 leading-tight">
+        <h1 class="font-montserrat font-bold tracking-[-0.02em] text-3xl sm:text-5xl lg:text-6xl text-white leading-[1.05] mb-6">
           Repair or Replace?
-          <span class="block text-transparent bg-clip-text bg-gradient-to-r from-yellow-300 to-orange-400">Find out in 30 seconds.</span>
+          <em class="block font-display font-semibold italic text-brass-light">Find out in 30 seconds.</em>
         </h1>
 
-        <p class="text-base sm:text-xl text-white/85 max-w-2xl mx-auto mb-2">
+        <p class="text-base sm:text-lg text-white/70 max-w-2xl mx-auto mb-3 leading-relaxed">
           A simple cost-per-year calculator that helps you decide whether to fix your existing appliance
           or invest in a new one.
         </p>
-        <p class="text-sm text-white/70">
-          Built by our Bay Area technicians who've seen every common failure mode on Sub-Zero, Wolf, Viking & more.
+        <p class="text-sm text-white/50">
+          Built by our Bay Area technicians who've seen every common failure mode on Sub-Zero, Wolf, Viking &amp; more.
         </p>
       </div>
     </header>
 
     <!-- Calculator Section -->
-    <section class="py-12 sm:py-16 lg:py-20" style="background: linear-gradient(to bottom, #f8fafc, #ffffff);">
+    <section class="bg-cream py-14 sm:py-16 lg:py-20">
       <div class="container mx-auto px-4 max-w-3xl">
         <RepairReplaceCalculator />
       </div>
     </section>
 
     <!-- When repair vs replace makes sense -->
-    <section class="py-12 sm:py-16 lg:py-24 bg-white">
-      <div class="container mx-auto px-4 max-w-screen-xl">
-        <div class="text-center max-w-2xl mx-auto mb-12">
-          <div class="inline-flex items-center px-4 py-2 bg-primary/10 rounded-full mb-4">
-            <svg class="w-4 h-4 text-primary mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.879 7.519c1.171-1.025 3.071-1.025 4.242 0 1.172 1.025 1.172 2.687 0 3.712-.203.179-.43.326-.67.442-.745.361-1.45.999-1.45 1.827v.5M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-9 5.25h.008v.008H12v-.008z"/>
-            </svg>
-            <span class="text-primary font-semibold text-sm">How to think about it</span>
-          </div>
-          <h2 class="text-2xl sm:text-4xl font-bold text-primary mb-3">When repair beats replace — and when it doesn't</h2>
-          <p class="text-gray-600">Decades of service calls boiled down to a short list. Use it as a sanity check against your calculator result.</p>
+    <section class="relative bg-white py-20 lg:py-28 overflow-hidden">
+      <span class="ghost-word text-[7rem] lg:text-[12rem] -top-6 -left-8" aria-hidden="true">Advice</span>
+
+      <div class="container mx-auto px-4 max-w-screen-xl relative z-10">
+        <div class="text-center max-w-3xl mx-auto mb-12 lg:mb-16" v-reveal>
+          <span class="inline-flex items-center gap-2.5 rounded-full border border-primary/15 bg-cream px-4 py-2 font-montserrat text-[10px] font-semibold uppercase tracking-[0.25em] text-primary mb-6">
+            <span class="w-1.5 h-1.5 rounded-full bg-brass animate-pulse" aria-hidden="true"></span>
+            How to Think About It
+          </span>
+          <h2 class="font-montserrat font-bold tracking-[-0.02em] text-3xl sm:text-5xl text-primary leading-[1.05] mb-5">
+            When repair beats replace —
+            <em class="font-display font-semibold italic text-brass-dark">and when it doesn't</em>
+          </h2>
+          <p class="text-gray-600 leading-relaxed">Decades of service calls boiled down to a short list. Use it as a sanity check against your calculator result.</p>
         </div>
 
-        <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-8 max-w-5xl mx-auto">
-          <div class="bg-emerald-50 rounded-2xl p-6 sm:p-8 ring-1 ring-emerald-100">
-            <div class="flex items-center mb-4">
-              <div class="w-12 h-12 rounded-xl bg-emerald-100 flex items-center justify-center mr-3">
-                <svg class="w-6 h-6 text-emerald-700" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11.42 15.17L17.25 21A2.652 2.652 0 0021 17.25l-5.877-5.877M11.42 15.17l2.496-3.03c.317-.384.74-.626 1.208-.766m-2.587 4.254L4.5 19.5l2.5-2.5 2.587-2.587"/>
-                </svg>
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-5 lg:gap-6 max-w-5xl mx-auto">
+          <div class="relative rounded-[1.5rem] p-7 sm:p-9 border border-primary/5 overflow-hidden" style="background: #F8F0E4;" v-reveal>
+            <span class="ghost-word text-[5rem] -top-4 -right-2" aria-hidden="true">01</span>
+            <div class="relative z-10">
+              <div class="flex items-center gap-4 mb-6">
+                <div class="w-12 h-12 rounded-full bg-white flex items-center justify-center shrink-0">
+                  <svg class="w-5 h-5 text-brass-dark" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M11.42 15.17L17.25 21A2.652 2.652 0 0021 17.25l-5.877-5.877M11.42 15.17l2.496-3.03c.317-.384.74-.626 1.208-.766m-2.587 4.254L4.5 19.5l2.5-2.5 2.587-2.587"/>
+                  </svg>
+                </div>
+                <h3 class="font-montserrat font-bold tracking-[-0.01em] text-xl sm:text-2xl text-primary">Repair usually wins when…</h3>
               </div>
-              <h3 class="text-xl sm:text-2xl font-bold text-emerald-800">Repair usually wins when…</h3>
+              <ul class="space-y-3.5 text-gray-700">
+                <li class="flex items-start gap-3 text-sm sm:text-base">
+                  <span class="w-1 h-1 rotate-45 bg-brass mt-2.5 shrink-0" aria-hidden="true"></span>
+                  <span>Repair is under <strong class="text-primary">50%</strong> of replacement cost.</span>
+                </li>
+                <li class="flex items-start gap-3 text-sm sm:text-base">
+                  <span class="w-1 h-1 rotate-45 bg-brass mt-2.5 shrink-0" aria-hidden="true"></span>
+                  <span>The appliance is under <strong class="text-primary">two-thirds of its expected lifespan</strong>.</span>
+                </li>
+                <li class="flex items-start gap-3 text-sm sm:text-base">
+                  <span class="w-1 h-1 rotate-45 bg-brass mt-2.5 shrink-0" aria-hidden="true"></span>
+                  <span>It's a <strong class="text-primary">luxury or built-in unit</strong> (Sub-Zero, Wolf, Viking) where replacement runs $5,000+.</span>
+                </li>
+                <li class="flex items-start gap-3 text-sm sm:text-base">
+                  <span class="w-1 h-1 rotate-45 bg-brass mt-2.5 shrink-0" aria-hidden="true"></span>
+                  <span>The failure is a <strong class="text-primary">known, single component</strong> (igniter, control board, compressor relay).</span>
+                </li>
+              </ul>
             </div>
-            <ul class="space-y-3 text-gray-700">
-              <li class="flex items-start">
-                <svg class="w-5 h-5 text-emerald-600 mr-2 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/>
-                </svg>
-                <span>Repair is under <strong>50%</strong> of replacement cost.</span>
-              </li>
-              <li class="flex items-start">
-                <svg class="w-5 h-5 text-emerald-600 mr-2 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/>
-                </svg>
-                <span>The appliance is under <strong>two-thirds of its expected lifespan</strong>.</span>
-              </li>
-              <li class="flex items-start">
-                <svg class="w-5 h-5 text-emerald-600 mr-2 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/>
-                </svg>
-                <span>It's a <strong>luxury or built-in unit</strong> (Sub-Zero, Wolf, Viking) where replacement runs $5,000+.</span>
-              </li>
-              <li class="flex items-start">
-                <svg class="w-5 h-5 text-emerald-600 mr-2 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/>
-                </svg>
-                <span>The failure is a <strong>known, single component</strong> (igniter, control board, compressor relay).</span>
-              </li>
-            </ul>
           </div>
 
-          <div class="bg-secondary/5 rounded-2xl p-6 sm:p-8 ring-1 ring-secondary/15">
-            <div class="flex items-center mb-4">
-              <div class="w-12 h-12 rounded-xl bg-secondary/15 flex items-center justify-center mr-3">
-                <svg class="w-6 h-6 text-secondary" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"/>
-                </svg>
+          <div class="relative rounded-[1.5rem] p-7 sm:p-9 border border-primary/5 overflow-hidden" style="background: #EDF4F7;" v-reveal="90">
+            <span class="ghost-word text-[5rem] -top-4 -right-2" aria-hidden="true">02</span>
+            <div class="relative z-10">
+              <div class="flex items-center gap-4 mb-6">
+                <div class="w-12 h-12 rounded-full bg-white flex items-center justify-center shrink-0">
+                  <svg class="w-5 h-5 text-ink" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"/>
+                  </svg>
+                </div>
+                <h3 class="font-montserrat font-bold tracking-[-0.01em] text-xl sm:text-2xl text-primary">Replacement makes sense when…</h3>
               </div>
-              <h3 class="text-xl sm:text-2xl font-bold text-secondary">Replacement makes sense when…</h3>
+              <ul class="space-y-3.5 text-gray-700">
+                <li class="flex items-start gap-3 text-sm sm:text-base">
+                  <span class="w-1 h-1 rotate-45 bg-brass mt-2.5 shrink-0" aria-hidden="true"></span>
+                  <span>Repair cost is <strong class="text-primary">over 100%</strong> of replacement value.</span>
+                </li>
+                <li class="flex items-start gap-3 text-sm sm:text-base">
+                  <span class="w-1 h-1 rotate-45 bg-brass mt-2.5 shrink-0" aria-hidden="true"></span>
+                  <span>The unit is <strong class="text-primary">past its expected lifespan</strong> and you're seeing multiple symptoms.</span>
+                </li>
+                <li class="flex items-start gap-3 text-sm sm:text-base">
+                  <span class="w-1 h-1 rotate-45 bg-brass mt-2.5 shrink-0" aria-hidden="true"></span>
+                  <span>A new model would deliver <strong class="text-primary">real annual energy savings</strong> that pay back the difference.</span>
+                </li>
+                <li class="flex items-start gap-3 text-sm sm:text-base">
+                  <span class="w-1 h-1 rotate-45 bg-brass mt-2.5 shrink-0" aria-hidden="true"></span>
+                  <span>Parts are <strong class="text-primary">no longer available</strong> from the manufacturer for your model year.</span>
+                </li>
+              </ul>
             </div>
-            <ul class="space-y-3 text-gray-700">
-              <li class="flex items-start">
-                <svg class="w-5 h-5 text-secondary mr-2 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/>
-                </svg>
-                <span>Repair cost is <strong>over 100%</strong> of replacement value.</span>
-              </li>
-              <li class="flex items-start">
-                <svg class="w-5 h-5 text-secondary mr-2 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/>
-                </svg>
-                <span>The unit is <strong>past its expected lifespan</strong> and you're seeing multiple symptoms.</span>
-              </li>
-              <li class="flex items-start">
-                <svg class="w-5 h-5 text-secondary mr-2 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/>
-                </svg>
-                <span>A new model would deliver <strong>real annual energy savings</strong> that pay back the difference.</span>
-              </li>
-              <li class="flex items-start">
-                <svg class="w-5 h-5 text-secondary mr-2 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/>
-                </svg>
-                <span>Parts are <strong>no longer available</strong> from the manufacturer for your model year.</span>
-              </li>
-            </ul>
           </div>
         </div>
 
@@ -141,33 +125,48 @@
     </section>
 
     <!-- FAQ Section -->
-    <section class="py-12 sm:py-16 lg:py-24 bg-gray-50">
-      <div class="container mx-auto px-4 max-w-3xl">
-        <div class="text-center mb-10">
-          <h2 class="text-2xl sm:text-4xl font-bold text-primary mb-3">Common questions</h2>
-          <p class="text-gray-600">Quick answers to help you trust the result.</p>
+    <section class="relative bg-cream py-20 lg:py-28 overflow-hidden">
+      <span class="ghost-word text-[6rem] lg:text-[10rem] top-2 -right-6" aria-hidden="true">FAQ</span>
+
+      <div class="container mx-auto px-4 max-w-3xl relative z-10">
+        <div class="text-center mb-12" v-reveal>
+          <span class="inline-flex items-center gap-2.5 rounded-full border border-primary/15 bg-white px-4 py-2 font-montserrat text-[10px] font-semibold uppercase tracking-[0.25em] text-primary mb-6">
+            <span class="w-1.5 h-1.5 rounded-full bg-brass animate-pulse" aria-hidden="true"></span>
+            Trust the Result
+          </span>
+          <h2 class="font-montserrat font-bold tracking-[-0.02em] text-3xl sm:text-5xl text-primary leading-[1.05] mb-4">
+            Common
+            <em class="font-display font-semibold italic text-brass-dark">questions</em>
+          </h2>
+          <p class="text-gray-600 leading-relaxed">Quick answers to help you trust the result.</p>
         </div>
 
         <div class="space-y-4">
           <details
             v-for="(faq, idx) in faqs"
             :key="idx"
-            class="bg-white rounded-2xl ring-1 ring-gray-100 shadow-sm overflow-hidden group"
+            class="bg-white rounded-[1.5rem] border border-primary/10 overflow-hidden group transition-colors duration-300 hover:border-brass/40"
+            v-reveal="idx * 60"
           >
-            <summary class="cursor-pointer p-5 sm:p-6 flex items-center justify-between gap-4 font-semibold text-gray-900 list-none">
-              <span class="text-base sm:text-lg">{{ faq.q }}</span>
+            <summary class="cursor-pointer p-5 sm:p-6 flex items-center justify-between gap-4 list-none touch-manipulation">
+              <span class="flex items-start gap-4">
+                <span class="font-display font-semibold text-base text-brass mt-0.5 shrink-0" aria-hidden="true">{{ String(idx + 1).padStart(2, '0') }}</span>
+                <span class="font-montserrat font-semibold text-base sm:text-lg text-primary leading-snug">{{ faq.q }}</span>
+              </span>
               <svg
-                class="w-5 h-5 text-gray-400 flex-shrink-0 transition-transform duration-200 group-open:rotate-180"
+                class="w-5 h-5 text-brass flex-shrink-0 transition-transform duration-200 group-open:rotate-180"
                 fill="none"
                 stroke="currentColor"
                 viewBox="0 0 24 24"
                 aria-hidden="true"
               >
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M19 9l-7 7-7-7"/>
               </svg>
             </summary>
-            <div class="px-5 sm:px-6 pb-5 sm:pb-6 text-gray-600 leading-relaxed">
-              {{ faq.a }}
+            <div class="px-5 sm:px-6 pb-5 sm:pb-6">
+              <div class="border-t border-primary/10 pt-4 sm:pl-9 text-gray-600 leading-relaxed text-sm sm:text-base">
+                {{ faq.a }}
+              </div>
             </div>
           </details>
         </div>
@@ -175,35 +174,30 @@
     </section>
 
     <!-- Final CTA Section -->
-    <section
-      class="py-12 sm:py-16 lg:py-20"
-      style="background-image: linear-gradient(to bottom right, #0c2a3b, #1C6E8C);"
-    >
-      <div class="container mx-auto px-4 max-w-3xl text-center">
-        <h2 class="text-2xl sm:text-4xl font-bold text-white mb-4">
-          Got a repair quote — or need one?
+    <section class="grain glow-brass relative bg-ink py-20 lg:py-28 overflow-hidden">
+      <div class="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-brass to-transparent" aria-hidden="true"></div>
+      <span class="ghost-word ghost-word--light text-[6rem] lg:text-[11rem] top-8 -right-8" aria-hidden="true">Repair</span>
+
+      <div class="container mx-auto px-4 max-w-3xl text-center relative z-10" v-reveal>
+        <h2 class="font-montserrat font-bold tracking-[-0.02em] text-3xl sm:text-5xl text-white leading-[1.05] mb-6">
+          Got a repair quote —
+          <em class="font-display font-semibold italic text-brass-light">or need one?</em>
         </h2>
-        <p class="text-white/85 mb-8 text-base sm:text-lg">
+        <p class="text-white/60 mb-10 text-base sm:text-lg leading-relaxed">
           Our certified technicians service every major luxury brand across the San Francisco Bay Area.
           Same-day diagnostics available.
         </p>
-        <div class="flex flex-col sm:flex-row gap-3 justify-center">
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
           <NuxtLink
             to="/booking"
-            class="inline-flex items-center justify-center px-8 py-4 bg-white text-primary font-bold rounded-xl shadow-2xl hover:shadow-2xl hover:-translate-y-0.5 transition-all cursor-pointer min-h-[52px] focus:outline-none focus-visible:ring-4 focus-visible:ring-white/60 focus-visible:ring-offset-2 focus-visible:ring-offset-secondary"
+            class="w-full sm:w-auto inline-flex items-center justify-center min-h-[54px] px-9 py-4 rounded-full bg-white text-ink font-montserrat text-sm font-semibold uppercase tracking-[0.12em] transition-all duration-300 hover:bg-brass hover:text-white hover:scale-[1.03] touch-manipulation focus:outline-none focus-visible:ring-2 focus-visible:ring-brass focus-visible:ring-offset-2 focus-visible:ring-offset-ink"
           >
-            <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/>
-            </svg>
             Book Service Online
           </NuxtLink>
           <a
             href="tel:4159414144"
-            class="inline-flex items-center justify-center px-8 py-4 bg-white/10 backdrop-blur-sm border-2 border-white/40 text-white font-bold rounded-xl hover:bg-white/20 transition-all cursor-pointer min-h-[52px] focus:outline-none focus-visible:ring-4 focus-visible:ring-white/50 focus-visible:ring-offset-2 focus-visible:ring-offset-secondary"
+            class="w-full sm:w-auto inline-flex items-center justify-center min-h-[54px] px-9 py-4 rounded-full border border-white/30 text-white font-montserrat text-sm font-semibold uppercase tracking-[0.12em] transition-all duration-300 hover:border-brass hover:text-brass-light hover:scale-[1.03] touch-manipulation focus:outline-none focus-visible:ring-2 focus-visible:ring-brass focus-visible:ring-offset-2 focus-visible:ring-offset-ink"
           >
-            <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
-              <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"/>
-            </svg>
             Call (415) 941-4144
           </a>
         </div>
