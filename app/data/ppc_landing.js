@@ -19,7 +19,8 @@ import samsung from '~/assets/img/lp/samsung.webp'
 //   { name, src, w }  logo image (all exported 88px tall; w = intrinsic width)
 //   size: 'sm' | 'lg' tunes visual weight for very wide / very compact marks
 //   { name, text }    typographic wordmark, used until an official logo file is added
-//   { mobileBreak }   forces the row to wrap here on phones (desktop is one row)
+//   { mobileBreak }   forces the row to wrap here on phones
+//   { lgBreak }       same, for 1024–1279px only (xl and up is always one row)
 export const highEnd = {
   key: 'high-end',
   eyebrow: 'Premium Appliance Care',
@@ -31,6 +32,7 @@ export const highEnd = {
     { name: 'Viking', src: viking, w: 361 },
     { mobileBreak: true },
     { name: 'Thermador', src: thermador, w: 437 },
+    { lgBreak: true },
     { name: 'La Cornue', src: lacornue, w: 344 },
     { name: 'GE Monogram', src: monogram, w: 390 },
     { name: 'Gaggenau', src: gaggenau, w: 608 },
@@ -47,7 +49,7 @@ export const highEnd = {
 export const general = {
   key: 'general',
   eyebrow: null,
-  heroBrands: 'GE, Whirlpool, Samsung, LG, KitchenAid, Bosch, Frigidaire, Electrolux',
+  heroBrands: 'GE, KitchenAid, Bosch, LG, Samsung, Whirlpool, Frigidaire, Electrolux',
   brandLogos: [
     { name: 'GE', src: ge, w: 88, size: 'lg' },
     { name: 'KitchenAid', src: kitchenaid, w: 874, size: 'sm' },
@@ -55,6 +57,7 @@ export const general = {
     { name: 'LG', src: lg, w: 199 },
     { mobileBreak: true },
     { name: 'Samsung', src: samsung, w: 574, size: 'sm' },
+    { lgBreak: true },
     { name: 'Whirlpool', text: 'Whirlpool' },
     { name: 'Frigidaire', text: 'FRIGIDAIRE' },
     { mobileBreak: true },
@@ -63,9 +66,9 @@ export const general = {
     { name: 'Wolf', src: wolf, w: 348 },
   ],
   faqBrands:
-    'We repair all major brands, including GE, Whirlpool, Samsung, LG, KitchenAid, Bosch, Frigidaire and Electrolux, as well as luxury brands like Sub-Zero and Wolf.',
+    'We repair all major brands, including GE, KitchenAid, Bosch, LG, Samsung, Whirlpool, Frigidaire and Electrolux, as well as luxury brands like Sub-Zero and Wolf.',
   formBrands: [
-    'GE', 'Whirlpool', 'Samsung', 'LG', 'KitchenAid', 'Bosch', 'Frigidaire',
+    'GE', 'KitchenAid', 'Bosch', 'LG', 'Samsung', 'Whirlpool', 'Frigidaire',
     'Electrolux', 'Sub-Zero', 'Wolf', 'Other',
   ],
 }

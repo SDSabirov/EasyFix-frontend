@@ -1,46 +1,47 @@
 <template>
-  <div class="min-h-screen bg-white text-primary">
+  <div class="min-h-screen bg-white text-primary" :inert="sheetOpen || undefined">
     <!-- ============ Header (sticky; nav items only jump within this page) ============ -->
     <header class="sticky top-0 z-40 bg-white/95 backdrop-blur border-b border-primary/10">
-      <div class="mx-auto max-w-screen-xl flex items-center justify-between gap-1.5 px-2.5 sm:px-6 h-16 lg:h-[72px]">
+      <div class="mx-auto max-w-screen-xl flex items-center justify-between gap-1.5 px-2.5 md:px-6 h-16 lg:h-[72px]">
         <div class="shrink-0 select-none leading-none">
-          <p class="font-display font-semibold tracking-[-0.01em] text-[1.1rem] min-[400px]:text-[1.3rem] sm:text-[1.75rem] lg:text-[2rem]">
+          <p class="font-display font-semibold tracking-[-0.01em] text-[1.1rem] min-[404px]:text-[1.3rem] md:text-[1.75rem] lg:text-[2rem]">
             <span class="text-primary">Easy Fix</span> <span class="text-brass">Appliance</span>
           </p>
-          <p class="mt-0.5 pl-2 sm:pl-3 font-montserrat text-[5.5px] min-[400px]:text-[6.5px] sm:text-[8px] font-semibold uppercase tracking-[0.3em] sm:tracking-[0.34em] text-primary/80">
+          <p class="mt-0.5 pl-2 md:pl-3 font-montserrat text-[5.5px] min-[404px]:text-[6.5px] md:text-[8px] font-semibold uppercase tracking-[0.3em] md:tracking-[0.34em] text-primary/80">
             Appliance Repair Experts
           </p>
         </div>
 
-        <nav aria-label="Page sections" class="hidden lg:flex items-center gap-8 font-montserrat text-[13px] text-primary/80">
+        <nav aria-label="Page sections" class="hidden lg:flex items-center gap-5 xl:gap-8 font-montserrat text-[13px] text-primary/80">
           <a v-for="item in navItems" :key="item.href" :href="item.href" class="hover:text-brass-dark transition-colors">{{ item.label }}</a>
         </nav>
 
-        <div class="flex items-center gap-1.5 sm:gap-5">
+        <div class="flex items-center gap-1.5 md:gap-5">
           <a
             :href="`tel:${phone.tel}`"
-            class="flex items-center gap-1 sm:gap-2.5"
+            class="flex items-center gap-1 md:gap-2.5"
             data-cta="lp-call"
             @click="onCall('header')"
           >
-            <LpIcon name="phone" class="w-3.5 h-3.5 sm:w-5 sm:h-5 text-primary shrink-0 fill-primary" />
-            <span class="leading-tight">
-              <span class="block font-montserrat font-semibold text-[10.5px] min-[400px]:text-[11.5px] sm:text-[15px] whitespace-nowrap">{{ phone.display }}</span>
-              <span class="block text-[8px] sm:text-[10px] text-gray-500 whitespace-nowrap">
-                <span class="hidden sm:inline">Locally Owned • </span>Bay Area Service
+            <LpIcon name="phone" class="w-3.5 h-3.5 md:w-5 md:h-5 text-primary shrink-0 fill-primary" />
+            <span class="leading-tight max-[343px]:sr-only">
+              <span class="block font-montserrat font-semibold text-[10.5px] min-[404px]:text-[11.5px] md:text-[15px] whitespace-nowrap">{{ phone.display }}</span>
+              <span class="block text-[8px] md:text-[10px] text-gray-500 whitespace-nowrap">
+                <span class="hidden md:inline">Locally Owned • </span>Bay Area Service
               </span>
             </span>
           </a>
           <button
             type="button"
-            class="flex items-center gap-1.5 sm:gap-2 rounded-md bg-ink text-white px-2 sm:px-5 h-10 sm:h-11 font-display font-semibold text-[12px] min-[400px]:text-[13px] sm:text-[17px] leading-[1.05] transition-colors hover:bg-brass focus:outline-none focus-visible:ring-2 focus-visible:ring-brass focus-visible:ring-offset-2"
+            class="flex items-center gap-1.5 md:gap-2 rounded-md bg-ink text-white px-2 md:px-5 h-10 md:h-11 font-display font-semibold text-[12px] min-[404px]:text-[13px] md:text-[17px] leading-[1.05] transition-colors hover:bg-brass focus:outline-none focus-visible:ring-2 focus-visible:ring-brass focus-visible:ring-offset-2"
             data-cta="lp-schedule"
             @click="onSchedule('header')"
           >
-            <LpIcon name="calendar" class="hidden min-[400px]:block w-4 h-4 sm:w-5 sm:h-5 shrink-0" />
-            <span class="text-left sm:whitespace-nowrap">Schedule<br class="sm:hidden" /> Service</span>
+            <LpIcon name="calendar" class="hidden min-[404px]:block w-4 h-4 md:w-5 md:h-5 shrink-0" />
+            <span class="text-left md:whitespace-nowrap">Schedule<br class="md:hidden" /> Service</span>
           </button>
           <button
+            ref="menuButton"
             type="button"
             class="lg:hidden p-1 text-primary"
             :aria-expanded="menuOpen"
@@ -63,7 +64,7 @@
           @click="menuOpen = false"
         >{{ item.label }}</a>
         <div class="grid grid-cols-2 gap-2 pt-4">
-          <a :href="`tel:${phone.tel}`" :class="[btnOutline, 'h-12 text-base']" data-cta="lp-call" @click="onCall('menu')">
+          <a :href="`tel:${phone.tel}`" :class="[btnOutline, 'h-12 text-base']" data-cta="lp-call" @click="menuOpen = false; onCall('menu')">
             <LpIcon name="phone" class="w-4 h-4 fill-primary" /> Call Now
           </a>
           <button type="button" :class="[btnSolid, 'h-12 text-base']" data-cta="lp-schedule" @click="onSchedule('menu')">
@@ -146,14 +147,14 @@
           <li
             v-for="(t, i) in trustPoints"
             :key="t.title"
-            class="flex items-center justify-center gap-2 lg:gap-5 px-1 lg:px-6"
+            class="flex items-center justify-center gap-1.5 min-[340px]:gap-2 lg:gap-5 px-1 lg:px-6"
             :class="i > 0 && 'border-l border-brass/30'"
           >
-            <span class="flex items-center justify-center shrink-0 w-9 h-9 lg:w-14 lg:h-14 rounded-full bg-[#ECE4D6] text-brass-dark">
-              <LpIcon :name="t.icon" class="w-5 h-5 lg:w-8 lg:h-8" />
+            <span class="flex items-center justify-center shrink-0 w-7 h-7 min-[340px]:w-9 min-[340px]:h-9 lg:w-14 lg:h-14 rounded-full bg-[#ECE4D6] text-brass-dark">
+              <LpIcon :name="t.icon" class="w-4 h-4 min-[340px]:w-5 min-[340px]:h-5 lg:w-8 lg:h-8" />
             </span>
             <span>
-              <span class="block font-montserrat lg:font-display font-semibold text-[10.5px] leading-tight lg:text-xl lg:whitespace-nowrap text-primary">
+              <span class="block font-montserrat lg:font-display font-semibold text-[9.5px] min-[360px]:text-[10.5px] leading-tight lg:text-xl lg:whitespace-nowrap text-primary">
                 <span class="lg:hidden">{{ t.mobileTitle || t.title }}</span>
                 <span class="hidden lg:inline">{{ t.title }}</span>
               </span>
@@ -181,18 +182,18 @@
             :class="i < 5 ? 'w-[calc((100%-1.5rem)/5)]' : 'w-[calc((100%-1.875rem)/6)]'"
           >
             <LpIcon :name="a.icon" class="w-7 h-7 lg:w-8 lg:h-8 text-brass-dark" />
-            <span class="text-[11px] lg:text-xs text-gray-700 whitespace-nowrap">{{ a.label }}</span>
+            <span class="text-[9px] min-[365px]:text-[9.5px] min-[380px]:text-[10px] min-[420px]:text-[11px] tracking-[-0.02em] min-[420px]:tracking-normal lg:text-xs text-gray-700 whitespace-nowrap">{{ a.label }}</span>
           </li>
         </ul>
 
         <div id="brands" class="scroll-mt-20">
           <p :class="[eyebrow, 'mt-6']">Trusted Brands We Service</p>
-          <ul class="mt-3 lg:mt-4 flex flex-wrap xl:flex-nowrap items-center justify-center xl:justify-between gap-x-3 min-[380px]:gap-x-4 sm:gap-x-6 xl:gap-x-4 gap-y-3 px-1 xl:px-0">
+          <ul class="mt-3 lg:mt-4 flex flex-wrap xl:flex-nowrap items-center justify-center xl:justify-between gap-x-3 min-[382px]:gap-x-4 md:gap-x-6 xl:gap-x-4 gap-y-3 px-1 xl:px-0">
             <li
               v-for="(b, i) in variant.brandLogos"
               :key="b.name || `break-${i}`"
-              :class="b.mobileBreak && 'basis-full h-0 lg:hidden'"
-              :aria-hidden="b.mobileBreak || undefined"
+              :class="b.mobileBreak ? 'basis-full h-0 lg:hidden' : b.lgBreak && 'hidden lg:block xl:hidden basis-full h-0'"
+              :aria-hidden="b.mobileBreak || b.lgBreak || undefined"
             >
               <img
                 v-if="b.src"
@@ -207,7 +208,7 @@
               />
               <span
                 v-else-if="b.text"
-                class="block whitespace-nowrap font-montserrat font-bold tracking-[-0.02em] leading-none text-[15px] sm:text-lg lg:text-[1.2rem] text-[#3d3d3d]"
+                class="block whitespace-nowrap font-montserrat font-bold tracking-[-0.02em] leading-none text-[13px] min-[337px]:text-[15px] md:text-lg lg:text-[1.2rem] text-[#3d3d3d]"
               >{{ b.text }}</span>
             </li>
           </ul>
@@ -222,7 +223,7 @@
           </span>
           <div class="min-w-0">
             <p class="font-montserrat text-[7px] lg:text-[10px] font-semibold uppercase tracking-[0.3em] text-brass-dark">Transparent Pricing</p>
-            <h2 id="lp-pricing" class="font-display font-semibold text-[1.2rem] min-[400px]:text-[1.35rem] lg:text-[2.5rem] leading-tight text-primary lg:whitespace-nowrap">$99 Diagnostic Visit</h2>
+            <h2 id="lp-pricing" class="font-display font-semibold text-[1.2rem] min-[400px]:text-[1.35rem] lg:text-[2.1rem] xl:text-[2.5rem] leading-tight text-primary lg:whitespace-nowrap">$99 Diagnostic Visit</h2>
             <p class="text-[10.5px] lg:text-base text-gray-700 leading-snug">Applied toward the repair when you proceed.</p>
           </div>
           <ul class="ml-auto lg:ml-4 pl-2.5 lg:pl-8 border-l border-brass/30 space-y-1.5 lg:space-y-3 shrink-0">
@@ -233,7 +234,7 @@
               <span class="max-w-[5.5rem] lg:max-w-none">{{ c }}</span>
             </li>
           </ul>
-          <div class="hidden lg:flex relative ml-auto self-stretch -my-5 -mr-7 w-[30%] items-center justify-center" aria-hidden="true">
+          <div class="hidden xl:flex relative ml-auto self-stretch -my-5 -mr-7 w-[30%] items-center justify-center" aria-hidden="true">
             <img :src="accentImage" alt="" width="640" height="504" loading="lazy" decoding="async" class="absolute inset-0 w-full h-full object-cover opacity-30" />
             <div class="absolute inset-0 bg-gradient-to-r from-[#F6F2EB] via-[#F6F2EB]/60 to-transparent"></div>
             <p class="relative font-['Allura'] text-primary text-[2.3rem] leading-[0.95] -rotate-6 select-none">
@@ -361,7 +362,9 @@
             </button>
           </div>
           <p class="mt-3.5 font-montserrat text-[7px] font-semibold uppercase tracking-[0.2em] text-white/80 whitespace-nowrap">
-            Locally Owned <span class="mx-2 text-white/40">|</span> Proudly Serving the Entire Bay Area
+            <span class="max-[351px]:block">Locally Owned</span>
+            <span class="mx-2 text-white/40 max-[351px]:hidden">|</span>
+            <span class="max-[351px]:block max-[351px]:mt-1">Proudly Serving the Entire Bay Area</span>
           </p>
         </div>
 
@@ -412,7 +415,6 @@
           aria-modal="true"
           aria-labelledby="sheet-title"
           @click.self="closeSheet"
-          @keydown.esc="closeSheet"
         >
           <div ref="sheetPanel" class="relative w-full max-h-[92dvh] overflow-y-auto rounded-t-3xl bg-cream px-3 pt-10 pb-[max(1rem,env(safe-area-inset-bottom))]">
             <button type="button" class="absolute right-3 top-3 p-2 text-primary" @click="closeSheet">
@@ -475,11 +477,11 @@ const appliances = [
 ]
 
 // Sized so each row fits without flex-shrink squashing the images:
-// one row from xl up, wrapped + centered below that.
+// one row from xl up; below that it wraps at the variant's mobileBreak/lgBreak entries.
 const logoSize = {
-  sm: 'h-[13px] sm:h-4 lg:h-[18px]',
-  md: 'h-4 min-[380px]:h-[18px] sm:h-6 xl:h-[26px]',
-  lg: 'h-7 sm:h-8 lg:h-10',
+  sm: 'h-[11px] min-[337px]:h-[13px] md:h-4 lg:h-[18px]',
+  md: 'h-[14px] min-[337px]:h-4 min-[382px]:h-[18px] md:h-6 xl:h-[26px]',
+  lg: 'h-6 min-[337px]:h-7 md:h-8 lg:h-10',
 }
 
 const faqs = computed(() => [
@@ -532,6 +534,7 @@ const year = new Date().getFullYear()
 const menuOpen = ref(false)
 const sheetOpen = ref(false)
 const sheetPanel = ref(null)
+const menuButton = ref(null)
 let lastFocus = null
 
 const onCall = (location) => trackEvent('lp_call_click', { cta_location: location, landing_variant: props.variant.key })
@@ -548,14 +551,30 @@ const onSchedule = async (location) => {
   lastFocus = document.activeElement
   sheetOpen.value = true
   document.documentElement.style.overflow = 'hidden'
+  document.addEventListener('keydown', onSheetKey)
   await nextTick()
   sheetPanel.value?.querySelector('select')?.focus()
 }
 
-const closeSheet = () => {
+const closeSheet = async () => {
   sheetOpen.value = false
   document.documentElement.style.overflow = ''
-  lastFocus?.focus?.()
+  document.removeEventListener('keydown', onSheetKey)
+  await nextTick() // page is no longer inert
+  // Opened from the (now hidden) mobile menu: return focus to the menu button.
+  const target = lastFocus?.isConnected && lastFocus.offsetParent !== null ? lastFocus : menuButton.value
+  target?.focus?.()
+}
+
+const onSheetKey = (e) => {
+  if (e.key === 'Escape') closeSheet()
+}
+
+// The sheet is lg:hidden; if the viewport grows past lg while it's open
+// (tablet rotation), close it so the page isn't left scroll-locked.
+let desktopMq
+const onBreakpoint = (e) => {
+  if (e.matches && sheetOpen.value) closeSheet()
 }
 
 // ---------- Reviews carousel (mobile) ----------
@@ -574,6 +593,8 @@ const { fetchGoogleReviews } = useGoogleReviews()
 const { capture } = useLeadAttribution()
 
 onMounted(async () => {
+  desktopMq = window.matchMedia('(min-width: 1024px)')
+  desktopMq.addEventListener('change', onBreakpoint)
   capture()
   const data = await fetchGoogleReviews()
   if (data?.reviews?.length) {
@@ -586,5 +607,7 @@ onMounted(async () => {
 
 onBeforeUnmount(() => {
   document.documentElement.style.overflow = ''
+  document.removeEventListener('keydown', onSheetKey)
+  desktopMq?.removeEventListener('change', onBreakpoint)
 })
 </script>
