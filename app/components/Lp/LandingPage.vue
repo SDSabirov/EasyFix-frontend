@@ -19,7 +19,7 @@
         <div class="flex items-center gap-1.5 md:gap-5">
           <a
             :href="`tel:${phone.tel}`"
-            class="flex items-center gap-1 md:gap-2.5"
+            class="flex items-center gap-1 md:gap-2.5 max-[343px]:p-1.5 max-[343px]:-m-1.5"
             data-cta="lp-call"
             @click="onCall('header')"
           >
@@ -35,7 +35,7 @@
             type="button"
             class="flex items-center gap-1.5 md:gap-2 rounded-md bg-ink text-white px-2 md:px-5 h-10 md:h-11 font-display font-semibold text-[12px] min-[404px]:text-[13px] md:text-[17px] leading-[1.05] transition-colors hover:bg-brass focus:outline-none focus-visible:ring-2 focus-visible:ring-brass focus-visible:ring-offset-2"
             data-cta="lp-schedule"
-            @click="onSchedule('header')"
+            @click="onSchedule('header', $event)"
           >
             <LpIcon name="calendar" class="hidden min-[404px]:block w-4 h-4 md:w-5 md:h-5 shrink-0" />
             <span class="text-left md:whitespace-nowrap">Schedule<br class="md:hidden" /> Service</span>
@@ -67,7 +67,7 @@
           <a :href="`tel:${phone.tel}`" :class="[btnOutline, 'h-12 text-base']" data-cta="lp-call" @click="menuOpen = false; onCall('menu')">
             <LpIcon name="phone" class="w-4 h-4 fill-primary" /> Call Now
           </a>
-          <button type="button" :class="[btnSolid, 'h-12 text-base']" data-cta="lp-schedule" @click="onSchedule('menu')">
+          <button type="button" :class="[btnSolid, 'h-12 text-base']" data-cta="lp-schedule" @click="onSchedule('menu', $event)">
             <LpIcon name="calendar" class="w-4 h-4" /> Schedule
           </button>
         </div>
@@ -96,7 +96,7 @@
             <h1 class="font-display font-semibold tracking-[-0.015em] text-primary text-[2.15rem] sm:text-5xl lg:text-[3.6rem] leading-[1.02] max-w-[19rem] sm:max-w-none">
               Trusted Appliance Repair Experts in the Bay Area
             </h1>
-            <p class="mt-3 lg:mt-4 max-w-[18.5rem] sm:max-w-md text-[14px] lg:text-[15px] leading-snug text-primary/85">
+            <p class="mt-3 lg:mt-4 max-w-[19.25rem] sm:max-w-md text-[14px] lg:text-[15px] leading-snug text-primary/85">
               Locally owned. Experienced technicians. Same-day service for {{ variant.heroBrands }} &amp; more.
             </p>
 
@@ -114,7 +114,7 @@
             </div>
 
             <div class="mt-5 lg:mt-6 flex flex-col lg:flex-row gap-2.5 lg:gap-3 max-w-[20rem] lg:max-w-none">
-              <button type="button" :class="[btnSolid, 'h-[50px] lg:h-[52px] px-6 text-lg lg:text-[19px] gap-3']" data-cta="lp-schedule" @click="onSchedule('hero')">
+              <button type="button" :class="[btnSolid, 'h-[50px] lg:h-[52px] px-6 text-lg lg:text-[19px] gap-3']" data-cta="lp-schedule" @click="onSchedule('hero', $event)">
                 <LpIcon name="calendar" class="w-5 h-5" />
                 Schedule Service
                 <LpIcon name="arrow" class="w-5 h-5" />
@@ -192,8 +192,8 @@
             <li
               v-for="(b, i) in variant.brandLogos"
               :key="b.name || `break-${i}`"
-              :class="b.mobileBreak ? 'basis-full h-0 lg:hidden' : b.lgBreak && 'hidden lg:block xl:hidden basis-full h-0'"
-              :aria-hidden="b.mobileBreak || b.lgBreak || undefined"
+              :class="b.rowBreak && rowBreak[b.rowBreak]"
+              :aria-hidden="b.rowBreak ? 'true' : undefined"
             >
               <img
                 v-if="b.src"
@@ -357,14 +357,12 @@
                 <span class="block text-[12px]">{{ phone.display }}</span>
               </span>
             </a>
-            <button type="button" class="flex items-center justify-center gap-2 h-[52px] rounded-md border border-white/70 font-display font-semibold text-[17px] hover:border-brass-light hover:text-brass-light transition-colors" data-cta="lp-schedule" @click="onSchedule('footer')">
+            <button type="button" class="flex items-center justify-center gap-2 h-[52px] rounded-md border border-white/70 font-display font-semibold text-[17px] hover:border-brass-light hover:text-brass-light transition-colors" data-cta="lp-schedule" @click="onSchedule('footer', $event)">
               <LpIcon name="calendar" class="w-5 h-5" /> Schedule Service
             </button>
           </div>
           <p class="mt-3.5 font-montserrat text-[7px] font-semibold uppercase tracking-[0.2em] text-white/80 whitespace-nowrap">
-            <span class="max-[351px]:block">Locally Owned</span>
-            <span class="mx-2 text-white/40 max-[351px]:hidden">|</span>
-            <span class="max-[351px]:block max-[351px]:mt-1">Proudly Serving the Entire Bay Area</span>
+            <span class="max-[353px]:block">Locally Owned</span> <span class="mx-2 text-white/40 max-[353px]:hidden">|</span> <span class="max-[353px]:block max-[353px]:mt-1">Proudly Serving the Entire Bay Area</span>
           </p>
         </div>
 
@@ -385,7 +383,7 @@
                 <span class="block text-[13px] font-normal">{{ phone.display }}</span>
               </span>
             </a>
-            <button type="button" :class="[btnOutline, 'h-[52px] px-7 gap-3 text-[19px] font-display font-semibold']" data-cta="lp-schedule" @click="onSchedule('footer')">
+            <button type="button" :class="[btnOutline, 'h-[52px] px-7 gap-3 text-[19px] font-display font-semibold']" data-cta="lp-schedule" @click="onSchedule('footer', $event)">
               <LpIcon name="calendar" class="w-5 h-5" /> Schedule Service
             </button>
             <p class="ml-6 font-montserrat text-[9px] font-semibold uppercase tracking-[0.3em] leading-[2] text-primary/80">
@@ -477,11 +475,18 @@ const appliances = [
 ]
 
 // Sized so each row fits without flex-shrink squashing the images:
-// one row from xl up; below that it wraps at the variant's mobileBreak/lgBreak entries.
+// one row from xl up; below that it wraps at the variant's rowBreak entries.
 const logoSize = {
   sm: 'h-[11px] min-[337px]:h-[13px] md:h-4 lg:h-[18px]',
   md: 'h-[14px] min-[337px]:h-4 min-[382px]:h-[18px] md:h-6 xl:h-[26px]',
   lg: 'h-6 min-[337px]:h-7 md:h-8 lg:h-10',
+}
+
+// Zero-height, full-width items that force the logo row to wrap at chosen widths.
+const rowBreak = {
+  mobile: 'basis-full h-0 lg:hidden',
+  lg: 'hidden lg:block xl:hidden basis-full h-0',
+  phablet: 'hidden min-[444px]:max-[524px]:block basis-full h-0',
 }
 
 const faqs = computed(() => [
@@ -539,7 +544,7 @@ let lastFocus = null
 
 const onCall = (location) => trackEvent('lp_call_click', { cta_location: location, landing_variant: props.variant.key })
 
-const onSchedule = async (location) => {
+const onSchedule = async (location, e) => {
   trackEvent('lp_schedule_click', { cta_location: location, landing_variant: props.variant.key })
   menuOpen.value = false
   if (window.matchMedia('(min-width: 1024px)').matches) {
@@ -548,7 +553,8 @@ const onSchedule = async (location) => {
     form.querySelector('select')?.focus({ preventScroll: true })
     return
   }
-  lastFocus = document.activeElement
+  // The clicked button, not activeElement: Safari/iOS never focus a tapped button.
+  lastFocus = e?.currentTarget ?? document.activeElement
   sheetOpen.value = true
   document.documentElement.style.overflow = 'hidden'
   document.addEventListener('keydown', onSheetKey)

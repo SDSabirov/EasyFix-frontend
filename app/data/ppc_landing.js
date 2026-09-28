@@ -19,8 +19,9 @@ import samsung from '~/assets/img/lp/samsung.webp'
 //   { name, src, w }  logo image (all exported 88px tall; w = intrinsic width)
 //   size: 'sm' | 'lg' tunes visual weight for very wide / very compact marks
 //   { name, text }    typographic wordmark, used until an official logo file is added
-//   { mobileBreak }   forces the row to wrap here on phones
-//   { lgBreak }       same, for 1024–1279px only (xl and up is always one row)
+//   { rowBreak }      forces the row to wrap here: 'mobile' (below 1024px),
+//                     'lg' (1024–1279px; xl and up is always one row),
+//                     'phablet' (444–524px) — see rowBreak in LandingPage.vue
 export const highEnd = {
   key: 'high-end',
   eyebrow: 'Premium Appliance Care',
@@ -30,11 +31,12 @@ export const highEnd = {
     { name: 'Miele', src: miele, w: 358 },
     { name: 'Wolf', src: wolf, w: 348 },
     { name: 'Viking', src: viking, w: 361 },
-    { mobileBreak: true },
+    { rowBreak: 'mobile' },
     { name: 'Thermador', src: thermador, w: 437 },
-    { lgBreak: true },
+    { rowBreak: 'lg' },
     { name: 'La Cornue', src: lacornue, w: 344 },
     { name: 'GE Monogram', src: monogram, w: 390 },
+    { rowBreak: 'phablet' },
     { name: 'Gaggenau', src: gaggenau, w: 608 },
     { name: 'Dacor', src: dacor, w: 315 },
   ],
@@ -55,12 +57,12 @@ export const general = {
     { name: 'KitchenAid', src: kitchenaid, w: 874, size: 'sm' },
     { name: 'Bosch', src: bosch, w: 412 },
     { name: 'LG', src: lg, w: 199 },
-    { mobileBreak: true },
+    { rowBreak: 'mobile' },
     { name: 'Samsung', src: samsung, w: 574, size: 'sm' },
-    { lgBreak: true },
+    { rowBreak: 'lg' },
     { name: 'Whirlpool', text: 'Whirlpool' },
     { name: 'Frigidaire', text: 'FRIGIDAIRE' },
-    { mobileBreak: true },
+    { rowBreak: 'mobile' },
     { name: 'Electrolux', text: 'Electrolux' },
     { name: 'Sub-Zero', src: subzero, w: 405 },
     { name: 'Wolf', src: wolf, w: 348 },
