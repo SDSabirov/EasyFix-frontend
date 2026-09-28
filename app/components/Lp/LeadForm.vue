@@ -120,13 +120,12 @@ const props = defineProps({
   idPrefix: { type: String, required: true },
   phone: { type: Object, required: true },
   location: { type: String, default: 'hero' },
+  brands: { type: Array, required: true },
+  // Landing page variant ('high-end' | 'general'); tags the lead and GTM events.
+  variant: { type: String, required: true },
 })
 const emit = defineEmits(['call', 'submitted'])
 
-const brands = [
-  'Sub-Zero', 'Wolf', 'Miele', 'Viking', 'Thermador', 'La Cornue', 'GE Monogram',
-  'Gaggenau', 'Dacor', 'KitchenAid', 'Bosch', 'Other',
-]
 const types = [
   'Refrigerator', 'Freezer', 'Wine Cooler', 'Range', 'Oven', 'Cooktop',
   'Dishwasher', 'Ice Maker', 'Hood', 'Washer', 'Dryer', 'Other',
@@ -190,7 +189,7 @@ const submit = async () => {
     personal: { firstName: '', lastName: '', email: '', phone: phoneDigits, address: '', zip: form.zip, smsConsent: true },
     appliance: { type: form.type, brand: form.brand, age: '', date: form.date, time: '' },
     issue: `PPC landing page request (${form.brand} ${form.type}).`,
-    source: 'ppc-landing',
+    source: `ppc-${props.variant}`,
     attribution: getAttribution(),
   }
 
@@ -204,6 +203,7 @@ const submit = async () => {
     submitted.value = true
     trackEvent('lp_form_submit', {
       form_location: props.location,
+      landing_variant: props.variant,
       appliance_brand: form.brand,
       appliance_type: form.type,
       // For Google Ads enhanced conversions (configure the user-provided-data variable in GTM).
@@ -213,7 +213,7 @@ const submit = async () => {
   } catch (error) {
     console.error(error)
     errorMessage.value = `Something went wrong. Please call us at ${props.phone.display}.`
-    trackEvent('lp_form_error', { form_location: props.location })
+    trackEvent('lp_form_error', { form_location: props.location, landing_variant: props.variant })
   } finally {
     loading.value = false
   }

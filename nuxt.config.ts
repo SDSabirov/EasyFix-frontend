@@ -22,7 +22,7 @@ export default defineNuxtConfig({
     "/logo.svg": { headers: { "cache-control": "public, max-age=604800" } },
     // Paid-traffic landing pages: keep out of organic search (they duplicate
     // the main site) but stay crawlable so Google Ads can review them.
-    "/lp/**": { robots: false },
+    "/ppc/**": { robots: false },
   },
 
   app: {
@@ -62,7 +62,7 @@ export default defineNuxtConfig({
       { name: "Cormorant Garamond", provider: "google", weights: [500, 600], preload: true },
       { name: "Montserrat", provider: "google", weights: [400, 500, 600, 700] },
       { name: "Roboto", provider: "google", weights: [400, 500, 600, 700] },
-      // Decorative script on /lp/* only; not preloaded, fetched when rendered.
+      // Decorative script on /ppc/* only; not preloaded, fetched when rendered.
       { name: "Allura", provider: "google", weights: [400] },
     ],
   },
@@ -122,7 +122,7 @@ export default defineNuxtConfig({
 
   sitemap: {
     sources: ["/api/__sitemap__/blogs"],
-    exclude: ["/lp/**"],
+    exclude: ["/ppc/**"],
   },
 
   runtimeConfig: {

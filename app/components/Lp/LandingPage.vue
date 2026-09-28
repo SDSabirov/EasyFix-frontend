@@ -91,12 +91,12 @@
 
         <div class="relative mx-auto max-w-screen-xl px-5 sm:px-6 lg:px-8 pt-7 pb-6 lg:py-8 grid lg:grid-cols-12 gap-8 items-center">
           <div class="lg:col-span-7 xl:pl-6">
-            <p class="font-montserrat text-[9px] lg:text-[10px] font-semibold uppercase tracking-[0.32em] text-primary/80">Premium Appliance Care</p>
-            <h1 class="mt-2.5 lg:mt-3 font-display font-semibold tracking-[-0.015em] text-primary text-[2.15rem] sm:text-5xl lg:text-[3.6rem] leading-[1.02] max-w-[19rem] sm:max-w-none">
+            <p v-if="variant.eyebrow" class="mb-2.5 lg:mb-3 font-montserrat text-[9px] lg:text-[10px] font-semibold uppercase tracking-[0.32em] text-primary/80">{{ variant.eyebrow }}</p>
+            <h1 class="font-display font-semibold tracking-[-0.015em] text-primary text-[2.15rem] sm:text-5xl lg:text-[3.6rem] leading-[1.02] max-w-[19rem] sm:max-w-none">
               Trusted Appliance Repair Experts in the Bay Area
             </h1>
             <p class="mt-3 lg:mt-4 max-w-[18.5rem] sm:max-w-md text-[14px] lg:text-[15px] leading-snug text-primary/85">
-              Locally owned. Experienced technicians. Same-day service for Sub-Zero, Miele, Wolf, Viking, Thermador, La Cornue, GE Monogram &amp; more.
+              Locally owned. Experienced technicians. Same-day service for {{ variant.heroBrands }} &amp; more.
             </p>
 
             <div class="mt-3 lg:mt-4 flex flex-wrap items-center gap-x-3 gap-y-1 text-[10.5px] lg:text-[12px] text-primary/85">
@@ -135,7 +135,7 @@
 
           <!-- Desktop: lead form in the hero. Mobile gets the same form in a bottom sheet. -->
           <div id="lp-form" class="hidden lg:block lg:col-span-5 xl:col-span-4 xl:col-start-9 scroll-mt-24">
-            <LpLeadForm id-prefix="hero" location="hero" :phone="phone" @call="onCall" />
+            <LpLeadForm id-prefix="hero" location="hero" :phone="phone" :brands="variant.formBrands" :variant="variant.key" @call="onCall" />
           </div>
         </div>
       </section>
@@ -187,18 +187,28 @@
 
         <div id="brands" class="scroll-mt-20">
           <p :class="[eyebrow, 'mt-6']">Trusted Brands We Service</p>
-          <ul class="mt-3 lg:mt-4 flex flex-wrap lg:flex-nowrap items-center justify-center lg:justify-between gap-x-4 sm:gap-x-6 gap-y-3 px-1 lg:px-0 lg:gap-x-4">
-            <li v-for="b in brandLogos" :key="b.name" :class="b.mobileBreak && 'basis-full h-0 lg:hidden'">
+          <ul class="mt-3 lg:mt-4 flex flex-wrap xl:flex-nowrap items-center justify-center xl:justify-between gap-x-3 min-[380px]:gap-x-4 sm:gap-x-6 xl:gap-x-4 gap-y-3 px-1 xl:px-0">
+            <li
+              v-for="(b, i) in variant.brandLogos"
+              :key="b.name || `break-${i}`"
+              :class="b.mobileBreak && 'basis-full h-0 lg:hidden'"
+              :aria-hidden="b.mobileBreak || undefined"
+            >
               <img
-                v-if="!b.mobileBreak"
+                v-if="b.src"
                 :src="b.src"
                 :alt="b.name"
                 :width="b.w"
                 height="88"
                 loading="lazy"
                 decoding="async"
-                class="h-[18px] sm:h-6 lg:h-7 w-auto grayscale contrast-125"
+                class="w-auto grayscale contrast-125"
+                :class="logoSize[b.size || 'md']"
               />
+              <span
+                v-else-if="b.text"
+                class="block whitespace-nowrap font-montserrat font-bold tracking-[-0.02em] leading-none text-[15px] sm:text-lg lg:text-[1.2rem] text-[#3d3d3d]"
+              >{{ b.text }}</span>
             </li>
           </ul>
         </div>
@@ -408,7 +418,7 @@
             <button type="button" class="absolute right-3 top-3 p-2 text-primary" @click="closeSheet">
               <LpIcon name="close" class="w-5 h-5" /><span class="sr-only">Close</span>
             </button>
-            <LpLeadForm id-prefix="sheet" location="mobile-sheet" :phone="phone" @call="onCall" />
+            <LpLeadForm id-prefix="sheet" location="mobile-sheet" :phone="phone" :brands="variant.formBrands" :variant="variant.key" @call="onCall" />
           </div>
         </div>
       </Transition>
@@ -420,19 +430,14 @@
 import heroImage from '~/assets/img/kitchenBackground2.webp'
 import accentImage from '~/assets/img/kitchenBright.webp'
 import googleLogo from '~/assets/img/google.svg'
-import subzero from '~/assets/img/lp/subzero.webp'
-import miele from '~/assets/img/lp/miele.webp'
-import wolf from '~/assets/img/lp/wolf.webp'
-import viking from '~/assets/img/lp/viking.webp'
-import thermador from '~/assets/img/lp/thermador.webp'
-import lacornue from '~/assets/img/lp/lacornue.webp'
-import monogram from '~/assets/img/lp/monogram.webp'
-import gaggenau from '~/assets/img/lp/gaggenau.webp'
-import dacor from '~/assets/img/lp/dacor.webp'
 
-// Google Ads landing page. Deliberately has no links off the page:
-// the only actions are Call and Schedule Service (lead form).
+// Google Ads landing page, shared by /ppc/high-end and /ppc/general
+// (variant configs in data/ppc_landing.js). Deliberately has no links off
+// the page: the only actions are Call and Schedule Service (lead form).
 // noindex + sitemap exclusion are set via routeRules in nuxt.config.ts.
+const props = defineProps({
+  variant: { type: Object, required: true },
+})
 
 // Same number as the rest of the site (useContact.js).
 const { phoneNumber, phoneDisplay } = useContact()
@@ -440,12 +445,6 @@ const phone = { tel: `+1${phoneNumber}`, display: phoneDisplay }
 
 // Shown until /google-reviews returns live values.
 const rating = reactive({ value: '5.0', count: '200+' })
-
-useSeoMeta({
-  title: 'Bay Area Appliance Repair | Same-Day Service',
-  description:
-    'Locally owned appliance repair in the Bay Area. Experienced technicians for Sub-Zero, Wolf, Miele, Viking, Thermador and more. $99 diagnostic visit applied toward the repair.',
-})
 
 const navItems = [
   { label: 'Services', href: '#services' },
@@ -475,28 +474,22 @@ const appliances = [
   { label: 'Dryer', icon: 'dryer' },
 ]
 
-// mobileBreak: forces a 4 + 5 logo split on phones, like the mockup.
-const brandLogos = [
-  { name: 'Sub-Zero', src: subzero, w: 405 },
-  { name: 'Miele', src: miele, w: 358 },
-  { name: 'Wolf', src: wolf, w: 348 },
-  { name: 'Viking', src: viking, w: 361 },
-  { name: 'break', mobileBreak: true },
-  { name: 'Thermador', src: thermador, w: 437 },
-  { name: 'La Cornue', src: lacornue, w: 344 },
-  { name: 'GE Monogram', src: monogram, w: 390 },
-  { name: 'Gaggenau', src: gaggenau, w: 608 },
-  { name: 'Dacor', src: dacor, w: 315 },
-]
+// Sized so each row fits without flex-shrink squashing the images:
+// one row from xl up, wrapped + centered below that.
+const logoSize = {
+  sm: 'h-[13px] sm:h-4 lg:h-[18px]',
+  md: 'h-4 min-[380px]:h-[18px] sm:h-6 xl:h-[26px]',
+  lg: 'h-7 sm:h-8 lg:h-10',
+}
 
-const faqs = [
+const faqs = computed(() => [
   {
     q: 'Do you offer same-day service?',
     a: 'Yes. We offer same-day and next-day appointments across the Bay Area, depending on technician availability. Call us for the fastest scheduling.',
   },
   {
     q: 'Which brands do you repair?',
-    a: 'We specialize in luxury and built-in brands including Sub-Zero, Wolf, Miele, Viking, Thermador, La Cornue, GE Monogram, Gaggenau and Dacor, and we service most other major brands too.',
+    a: props.variant.faqBrands,
   },
   {
     q: 'Do you use OEM parts?',
@@ -506,7 +499,7 @@ const faqs = [
     q: 'Which Bay Area locations do you serve?',
     a: 'We serve San Francisco, the Peninsula and the South Bay, including San Mateo, Palo Alto, Menlo Park, Atherton, Redwood City, Burlingame, Mountain View, Los Altos, Sunnyvale and San Jose.',
   },
-]
+])
 
 // Real Google reviews (shortened) — replaced by live GMB reviews when the API responds.
 const fallbackReviews = [
@@ -541,10 +534,10 @@ const sheetOpen = ref(false)
 const sheetPanel = ref(null)
 let lastFocus = null
 
-const onCall = (location) => trackEvent('lp_call_click', { cta_location: location })
+const onCall = (location) => trackEvent('lp_call_click', { cta_location: location, landing_variant: props.variant.key })
 
 const onSchedule = async (location) => {
-  trackEvent('lp_schedule_click', { cta_location: location })
+  trackEvent('lp_schedule_click', { cta_location: location, landing_variant: props.variant.key })
   menuOpen.value = false
   if (window.matchMedia('(min-width: 1024px)').matches) {
     const form = document.getElementById('lp-form')

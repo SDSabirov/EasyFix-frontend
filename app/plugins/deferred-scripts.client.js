@@ -29,10 +29,10 @@ export default defineNuxtPlugin(() => {
   const events = ['scroll', 'pointerdown', 'pointermove', 'keydown', 'touchstart']
   events.forEach((e) => window.addEventListener(e, loadScripts, { once: true, passive: true }))
 
-  // Paid landing pages (/lp/*): also load once the page is idle. CTM has to
+  // Paid landing pages (/ppc/*): also load once the page is idle. CTM has to
   // swap in the tracking number before the visitor reads/taps it, and ad-click
   // attribution matters more there than lab scores.
-  if (window.location.pathname.startsWith('/lp/')) {
+  if (window.location.pathname.startsWith('/ppc/')) {
     const idle = window.requestIdleCallback || ((cb) => setTimeout(cb, 1))
     const onLoad = () => idle(loadScripts, { timeout: 2000 })
     if (document.readyState === 'complete') onLoad()
