@@ -434,8 +434,9 @@ import dacor from '~/assets/img/lp/dacor.webp'
 // the only actions are Call and Schedule Service (lead form).
 // noindex + sitemap exclusion are set via routeRules in nuxt.config.ts.
 
-// PPC tracking line (differs from the site-wide number in useContact.js).
-const phone = { tel: '+16505029300', display: '(650) 502-9300' }
+// Same number as the rest of the site (useContact.js).
+const { phoneNumber, phoneDisplay } = useContact()
+const phone = { tel: `+1${phoneNumber}`, display: phoneDisplay }
 
 // Shown until /google-reviews returns live values.
 const rating = reactive({ value: '5.0', count: '200+' })
