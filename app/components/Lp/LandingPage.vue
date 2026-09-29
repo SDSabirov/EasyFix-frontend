@@ -121,11 +121,7 @@
               </button>
               <a :href="`tel:${phone.tel}`" :class="[btnOutline, 'h-[46px] lg:h-[52px] px-6 gap-3']" data-cta="lp-call" @click="onCall('hero')">
                 <LpIcon name="phone" class="w-5 h-5 fill-primary" />
-                <span class="lg:hidden font-display font-semibold text-lg">Call Now <span class="font-normal">{{ phone.display }}</span></span>
-                <span class="hidden lg:block leading-tight text-left">
-                  <span class="block font-display font-semibold text-[19px]">Call Now</span>
-                  <span class="block text-[13px]">{{ phone.display }}</span>
-                </span>
+                <span class="font-display font-semibold text-lg lg:text-[19px]">Call Now</span>
               </a>
             </div>
 
@@ -352,10 +348,7 @@
           <div class="mt-4 grid grid-cols-2 gap-2.5">
             <a :href="`tel:${phone.tel}`" class="flex items-center justify-center gap-2.5 h-[52px] rounded-md bg-brass text-white hover:bg-brass-dark transition-colors" data-cta="lp-call" @click="onCall('footer')">
               <LpIcon name="phone" class="w-5 h-5 fill-white" />
-              <span class="leading-tight text-left">
-                <span class="block font-display font-semibold text-[17px]">Call Now</span>
-                <span class="block text-[12px]">{{ phone.display }}</span>
-              </span>
+              <span class="font-display font-semibold text-[17px]">Call Now</span>
             </a>
             <button type="button" class="flex items-center justify-center gap-2 h-[52px] rounded-md border border-white/70 font-display font-semibold text-[17px] hover:border-brass-light hover:text-brass-light transition-colors" data-cta="lp-schedule" @click="onSchedule('footer', $event)">
               <LpIcon name="calendar" class="w-5 h-5" /> Schedule Service
@@ -378,10 +371,7 @@
             </div>
             <a :href="`tel:${phone.tel}`" :class="[btnSolid, 'h-[52px] px-7 gap-3']" data-cta="lp-call" @click="onCall('footer')">
               <LpIcon name="phone" class="w-5 h-5 fill-white" />
-              <span class="leading-tight text-left">
-                <span class="block font-display font-semibold text-[19px]">Call Now</span>
-                <span class="block text-[13px] font-normal">{{ phone.display }}</span>
-              </span>
+              <span class="font-display font-semibold text-[19px]">Call Now</span>
             </a>
             <button type="button" :class="[btnOutline, 'h-[52px] px-7 gap-3 text-[19px] font-display font-semibold']" data-cta="lp-schedule" @click="onSchedule('footer', $event)">
               <LpIcon name="calendar" class="w-5 h-5" /> Schedule Service
@@ -516,6 +506,28 @@ const fallbackReviews = [
 ]
 const reviews = ref(fallbackReviews)
 
+// Accepts both the site's review shape and Google Places field names, and
+// works out an age for newest-first sorting (timestamp, date, or "2 weeks ago").
+const UNIT_DAYS = { day: 1, week: 7, month: 30, year: 365 }
+const normalizeReview = (r) => {
+  const date = r.date || r.relative_time_description || ''
+  let ts = Number(r.time || r.timestamp || 0)
+  if (ts && ts < 1e12) ts *= 1000
+  if (!ts && r.publishTime) ts = Date.parse(r.publishTime) || 0
+  if (!ts) {
+    const m = String(date).match(/(a|an|\d+)\s+(day|week|month|year)s?\s+ago/i)
+    if (m) ts = Date.now() - (/^an?$/i.test(m[1]) ? 1 : Number(m[1])) * UNIT_DAYS[m[2].toLowerCase()] * 864e5
+    else if (/today|hour|minute|just now/i.test(date)) ts = Date.now()
+  }
+  return {
+    author: r.author || r.author_name || r.authorAttribution?.displayName || 'Google user',
+    date: date || 'Google review',
+    review: r.review || r.text?.text || r.text || '',
+    rating: r.rating ? Number(r.rating) : 0,
+    ts,
+  }
+}
+
 const excerpt = (text, max = 150) => {
   if (!text || text.length <= max) return text
   return text.slice(0, text.lastIndexOf(' ', max)).replace(/[,;:.\s]+$/, '') + '…'
@@ -604,8 +616,11 @@ onMounted(async () => {
   capture()
   const data = await fetchGoogleReviews()
   if (data?.reviews?.length) {
-    const five = data.reviews.filter((r) => !r.rating || Number(r.rating) >= 5)
-    if (five.length >= 3) reviews.value = five
+    const latest = data.reviews
+      .map(normalizeReview)
+      .filter((r) => r.review && (!r.rating || r.rating >= 5))
+      .sort((a, b) => b.ts - a.ts)
+    if (latest.length >= 3) reviews.value = latest
   }
   if (data?.rating) rating.value = Number(data.rating).toFixed(1)
   if (data?.total_reviews || data?.user_ratings_total) rating.count = String(data.total_reviews || data.user_ratings_total)
