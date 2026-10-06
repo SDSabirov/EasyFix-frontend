@@ -77,6 +77,20 @@
           </div>
         </div>
         <div>
+          <label :for="`${idPrefix}-email`" class="sr-only">Email</label>
+          <input
+            :id="`${idPrefix}-email`"
+            name="email"
+            v-model.trim="form.email"
+            type="email"
+            inputmode="email"
+            autocomplete="email"
+            placeholder="Email"
+            :class="[fieldClass, errors.email && errorClass]"
+            required
+          />
+        </div>
+        <div>
           <label :for="`${idPrefix}-phone`" class="sr-only">Phone Number</label>
           <input
             :id="`${idPrefix}-phone`"
@@ -168,8 +182,8 @@ const fieldClass =
   'block w-full h-11 rounded-lg border border-primary/15 bg-white px-3.5 text-sm text-primary placeholder:text-gray-500 focus:border-brass focus:ring-2 focus:ring-brass/30 focus:outline-none transition-colors'
 const errorClass = '!border-red-500'
 
-const form = reactive({ brand: '', type: '', zip: '', firstName: '', lastName: '', phone: '', date: '' })
-const errors = reactive({ brand: false, type: false, zip: false, firstName: false, lastName: false, phone: false, date: false })
+const form = reactive({ brand: '', type: '', zip: '', firstName: '', lastName: '', email: '', phone: '', date: '' })
+const errors = reactive({ brand: false, type: false, zip: false, firstName: false, lastName: false, email: false, phone: false, date: false })
 const errorMessage = ref('')
 const loading = ref(false)
 const submitted = ref(false)
@@ -192,19 +206,22 @@ const validate = () => {
   errors.brand = !form.brand
   errors.firstName = !form.firstName
   errors.lastName = !form.lastName
+  errors.email = !/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(form.email)
   errors.type = !form.type
   errors.zip = !/^\d{5}$/.test(form.zip)
   errors.phone = phoneDigits.length !== 10
   errors.date = !form.date || (today.value && form.date < today.value)
   if (Object.values(errors).some(Boolean)) {
-    const missing = !form.brand || !form.type || !form.zip || !form.firstName || !form.lastName || !form.phone || !form.date
+    const missing = !form.brand || !form.type || !form.zip || !form.firstName || !form.lastName || !form.email || !form.phone || !form.date
     errorMessage.value = missing
       ? 'Please complete all fields.'
-      : errors.phone
-        ? 'Please enter a valid 10-digit phone number.'
-        : errors.zip
-          ? 'Please enter a valid 5-digit ZIP code.'
-          : 'Please choose a date from today onward.'
+      : errors.email
+        ? 'Please enter a valid email address.'
+        : errors.phone
+          ? 'Please enter a valid 10-digit phone number.'
+          : errors.zip
+            ? 'Please enter a valid 5-digit ZIP code.'
+            : 'Please choose a date from today onward.'
     return null
   }
   errorMessage.value = ''
@@ -221,7 +238,7 @@ const submit = async () => {
   // Same endpoint + shape as Forms/BookingForm.vue (the existing CRM pipeline);
   // fields this short form doesn't collect are sent empty.
   const payload = {
-    personal: { firstName: form.firstName, lastName: form.lastName, email: '', phone: phoneDigits, address: '', zip: form.zip, smsConsent: true },
+    personal: { firstName: form.firstName, lastName: form.lastName, email: form.email, phone: phoneDigits, address: '', zip: form.zip, smsConsent: true },
     appliance: { type: form.type, brand: form.brand, age: '', date: form.date, time: '' },
     issue: `PPC landing page request (${form.brand} ${form.type}).`,
     source: `ppc-${props.variant}`,
@@ -242,7 +259,7 @@ const submit = async () => {
       appliance_brand: form.brand,
       appliance_type: form.type,
       // For Google Ads enhanced conversions (configure the user-provided-data variable in GTM).
-      enhanced_conversion_data: { phone_number: `+1${phoneDigits}` },
+      enhanced_conversion_data: { email: form.email.toLowerCase(), phone_number: `+1${phoneDigits}` },
     })
     emit('submitted')
   } catch (error) {
