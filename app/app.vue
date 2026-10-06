@@ -8,8 +8,8 @@
 </template>
 
 <script setup>
-// GTM + CallTrackingMetrics are injected by plugins/deferred-scripts.client.js
-// (on first interaction / idle) to keep them off the critical rendering path.
+// GTM is injected by plugins/deferred-scripts.client.js
+// (on first interaction / idle) to keep it off the critical rendering path.
 useHead({
   noscript: [
     {

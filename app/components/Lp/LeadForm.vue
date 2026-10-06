@@ -6,11 +6,12 @@
       </h2>
       <p class="mt-1 text-sm text-gray-600">Get fast, reliable service in the Bay Area.</p>
 
-      <form class="mt-5 space-y-3" novalidate :aria-labelledby="`${idPrefix}-title`" @submit.prevent="submit">
+      <form :name="`lp-lead-${variant}`" class="mt-5 space-y-3" novalidate :aria-labelledby="`${idPrefix}-title`" @submit.prevent="submit">
         <div>
           <label :for="`${idPrefix}-brand`" class="sr-only">Brand</label>
           <select
             :id="`${idPrefix}-brand`"
+            name="brand"
             v-model="form.brand"
             :class="[fieldClass, !form.brand && 'text-gray-500', errors.brand && errorClass]"
             required
@@ -23,6 +24,7 @@
           <label :for="`${idPrefix}-type`" class="sr-only">Appliance Type</label>
           <select
             :id="`${idPrefix}-type`"
+            name="appliance_type"
             v-model="form.type"
             :class="[fieldClass, !form.type && 'text-gray-500', errors.type && errorClass]"
             required
@@ -35,6 +37,7 @@
           <label :for="`${idPrefix}-zip`" class="sr-only">ZIP Code</label>
           <input
             :id="`${idPrefix}-zip`"
+            name="postal_code"
             v-model.trim="form.zip"
             type="text"
             inputmode="numeric"
@@ -49,6 +52,7 @@
           <label :for="`${idPrefix}-phone`" class="sr-only">Phone Number</label>
           <input
             :id="`${idPrefix}-phone`"
+            name="phone"
             v-model.trim="form.phone"
             type="tel"
             inputmode="tel"
@@ -62,6 +66,7 @@
           <label :for="`${idPrefix}-date`" class="sr-only">Preferred Date</label>
           <input
             :id="`${idPrefix}-date`"
+            name="preferred_date"
             v-model="form.date"
             type="date"
             :min="today"

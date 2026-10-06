@@ -429,6 +429,19 @@ const props = defineProps({
   variant: { type: Object, required: true },
 })
 
+// GoHighLevel external tracking (page views, attribution and form submissions
+// into the CRM). Loaded only on these landing pages.
+useHead({
+  script: [
+    {
+      src: 'https://link.msgsndr.com/js/external-tracking.js',
+      'data-tracking-id': 'tk_06879e56452d496eb3610c11f1d1c2ca',
+      async: true,
+      tagPosition: 'bodyClose',
+    },
+  ],
+})
+
 // Same number as the rest of the site (useContact.js).
 const { phoneNumber, phoneDisplay } = useContact()
 const phone = { tel: `+1${phoneNumber}`, display: phoneDisplay }
