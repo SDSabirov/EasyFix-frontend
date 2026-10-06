@@ -204,8 +204,17 @@
               />
               <span
                 v-else-if="b.text"
-                class="block whitespace-nowrap font-montserrat font-bold tracking-[-0.02em] leading-none text-[13px] min-[337px]:text-[15px] md:text-lg lg:text-[1.2rem] text-[#3d3d3d]"
-              >{{ b.text }}</span>
+                class="flex items-center gap-[0.3em] whitespace-nowrap font-montserrat font-bold tracking-[-0.02em] leading-none text-[13px] min-[337px]:text-[15px] md:text-lg lg:text-[1.2rem] text-[#3d3d3d]"
+              ><img
+                v-if="b.icon"
+                :src="b.icon"
+                alt=""
+                width="79"
+                height="79"
+                loading="lazy"
+                decoding="async"
+                class="h-[1.25em] w-auto opacity-80"
+              />{{ b.text }}</span>
             </li>
           </ul>
         </div>
@@ -480,9 +489,11 @@ const appliances = [
 // Sized so each row fits without flex-shrink squashing the images:
 // one row from xl up; below that it wraps at the variant's rowBreak entries.
 const logoSize = {
-  sm: 'h-[11px] min-[337px]:h-[13px] md:h-4 lg:h-[18px]',
+  sm: 'h-[11px] min-[337px]:h-[13px] md:h-4 lg:h-[18px] xl:h-4',
   md: 'h-[14px] min-[337px]:h-4 min-[382px]:h-[18px] md:h-6 xl:h-[26px]',
   lg: 'h-6 min-[337px]:h-7 md:h-8 lg:h-10',
+  // wordmark with a tall swoosh (Whirlpool): letters are only ~55% of the height
+  tall: 'h-6 min-[337px]:h-7 md:h-8 lg:h-9 xl:h-[34px]',
 }
 
 // Zero-height, full-width items that force the logo row to wrap at chosen widths.

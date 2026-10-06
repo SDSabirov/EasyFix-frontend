@@ -14,11 +14,14 @@ import kitchenaid from '~/assets/img/lp/kitchenaid.webp'
 import bosch from '~/assets/img/lp/bosch.webp'
 import lg from '~/assets/img/lp/lg.webp'
 import samsung from '~/assets/img/lp/samsung.webp'
+import electrolux from '~/assets/img/lp/electrolux.webp'
+import whirlpool from '~/assets/img/lp/whirlpool.svg'
 
 // Brand row entries:
-//   { name, src, w }  logo image (all exported 88px tall; w = intrinsic width)
-//   size: 'sm' | 'lg' tunes visual weight for very wide / very compact marks
+//   { name, src, w }  logo image (rasters exported 88px tall; w = width at 88px tall)
+//   size: 'sm' | 'lg' | 'tall' tunes visual weight for very wide / compact / swoosh marks
 //   { name, text }    typographic wordmark, used until an official logo file is added
+//                     (optional icon: brand symbol shown before the wordmark)
 //   { rowBreak }      forces the row to wrap here: 'mobile' (below 1024px),
 //                     'lg' (1024–1279px; xl and up is always one row),
 //                     'phablet' (444–524px) — see rowBreak in LandingPage.vue
@@ -60,10 +63,10 @@ export const general = {
     { rowBreak: 'mobile' },
     { name: 'Samsung', src: samsung, w: 574, size: 'sm' },
     { rowBreak: 'lg' },
-    { name: 'Whirlpool', text: 'Whirlpool' },
+    { name: 'Whirlpool', src: whirlpool, w: 264, size: 'tall' },
     { name: 'Frigidaire', text: 'FRIGIDAIRE' },
     { rowBreak: 'mobile' },
-    { name: 'Electrolux', text: 'Electrolux' },
+    { name: 'Electrolux', text: 'Electrolux', icon: electrolux },
     { name: 'Sub-Zero', src: subzero, w: 405 },
     { name: 'Wolf', src: wolf, w: 348 },
   ],
