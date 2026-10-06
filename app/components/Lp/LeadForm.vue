@@ -48,6 +48,34 @@
             required
           />
         </div>
+        <div class="grid grid-cols-2 gap-3">
+          <div>
+            <label :for="`${idPrefix}-first`" class="sr-only">First Name</label>
+            <input
+              :id="`${idPrefix}-first`"
+              name="first_name"
+              v-model.trim="form.firstName"
+              type="text"
+              autocomplete="given-name"
+              placeholder="First Name"
+              :class="[fieldClass, errors.firstName && errorClass]"
+              required
+            />
+          </div>
+          <div>
+            <label :for="`${idPrefix}-last`" class="sr-only">Last Name</label>
+            <input
+              :id="`${idPrefix}-last`"
+              name="last_name"
+              v-model.trim="form.lastName"
+              type="text"
+              autocomplete="family-name"
+              placeholder="Last Name"
+              :class="[fieldClass, errors.lastName && errorClass]"
+              required
+            />
+          </div>
+        </div>
         <div>
           <label :for="`${idPrefix}-phone`" class="sr-only">Phone Number</label>
           <input
@@ -140,8 +168,8 @@ const fieldClass =
   'block w-full h-11 rounded-lg border border-primary/15 bg-white px-3.5 text-sm text-primary placeholder:text-gray-500 focus:border-brass focus:ring-2 focus:ring-brass/30 focus:outline-none transition-colors'
 const errorClass = '!border-red-500'
 
-const form = reactive({ brand: '', type: '', zip: '', phone: '', date: '' })
-const errors = reactive({ brand: false, type: false, zip: false, phone: false, date: false })
+const form = reactive({ brand: '', type: '', zip: '', firstName: '', lastName: '', phone: '', date: '' })
+const errors = reactive({ brand: false, type: false, zip: false, firstName: false, lastName: false, phone: false, date: false })
 const errorMessage = ref('')
 const loading = ref(false)
 const submitted = ref(false)
@@ -162,12 +190,14 @@ const digits = (v) => v.replace(/\D/g, '')
 const validate = () => {
   const phoneDigits = digits(form.phone).replace(/^1(?=\d{10}$)/, '')
   errors.brand = !form.brand
+  errors.firstName = !form.firstName
+  errors.lastName = !form.lastName
   errors.type = !form.type
   errors.zip = !/^\d{5}$/.test(form.zip)
   errors.phone = phoneDigits.length !== 10
   errors.date = !form.date || (today.value && form.date < today.value)
   if (Object.values(errors).some(Boolean)) {
-    const missing = !form.brand || !form.type || !form.zip || !form.phone || !form.date
+    const missing = !form.brand || !form.type || !form.zip || !form.firstName || !form.lastName || !form.phone || !form.date
     errorMessage.value = missing
       ? 'Please complete all fields.'
       : errors.phone
@@ -191,7 +221,7 @@ const submit = async () => {
   // Same endpoint + shape as Forms/BookingForm.vue (the existing CRM pipeline);
   // fields this short form doesn't collect are sent empty.
   const payload = {
-    personal: { firstName: '', lastName: '', email: '', phone: phoneDigits, address: '', zip: form.zip, smsConsent: true },
+    personal: { firstName: form.firstName, lastName: form.lastName, email: '', phone: phoneDigits, address: '', zip: form.zip, smsConsent: true },
     appliance: { type: form.type, brand: form.brand, age: '', date: form.date, time: '' },
     issue: `PPC landing page request (${form.brand} ${form.type}).`,
     source: `ppc-${props.variant}`,
