@@ -490,6 +490,8 @@ const appliances = [
 // one row from xl up; below that it wraps at the variant's rowBreak entries.
 const logoSize = {
   sm: 'h-[11px] min-[337px]:h-[13px] md:h-4 lg:h-[18px] xl:h-4',
+  // extra-wide wordmark (Frigidaire, ~8:1)
+  wide: 'h-[11px] min-[337px]:h-[13px] md:h-4 lg:h-[18px] xl:h-[15px]',
   md: 'h-[14px] min-[337px]:h-4 min-[382px]:h-[18px] md:h-6 xl:h-[26px]',
   lg: 'h-6 min-[337px]:h-7 md:h-8 lg:h-10',
   // wordmark with a tall swoosh (Whirlpool): letters are only ~55% of the height

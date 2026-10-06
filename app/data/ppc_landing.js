@@ -16,10 +16,11 @@ import lg from '~/assets/img/lp/lg.webp'
 import samsung from '~/assets/img/lp/samsung.webp'
 import electrolux from '~/assets/img/lp/electrolux.webp'
 import whirlpool from '~/assets/img/lp/whirlpool.svg'
+import frigidaire from '~/assets/img/lp/frigidaire.svg'
 
 // Brand row entries:
 //   { name, src, w }  logo image (rasters exported 88px tall; w = width at 88px tall)
-//   size: 'sm' | 'lg' | 'tall' tunes visual weight for very wide / compact / swoosh marks
+//   size: 'sm' | 'wide' | 'lg' | 'tall' tunes visual weight for very wide / compact / swoosh marks
 //   { name, text }    typographic wordmark, used until an official logo file is added
 //                     (optional icon: brand symbol shown before the wordmark)
 //   { rowBreak }      forces the row to wrap here: 'mobile' (below 1024px),
@@ -64,7 +65,7 @@ export const general = {
     { name: 'Samsung', src: samsung, w: 574, size: 'sm' },
     { rowBreak: 'lg' },
     { name: 'Whirlpool', src: whirlpool, w: 264, size: 'tall' },
-    { name: 'Frigidaire', text: 'FRIGIDAIRE' },
+    { name: 'Frigidaire', src: frigidaire, w: 740, size: 'wide' },
     { rowBreak: 'mobile' },
     { name: 'Electrolux', text: 'Electrolux', icon: electrolux },
     { name: 'Sub-Zero', src: subzero, w: 405 },
