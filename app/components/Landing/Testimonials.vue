@@ -188,8 +188,12 @@ const cycleReviews = () => {
 
 const loadLiveReviews = async () => {
   const data = await fetchGoogleReviews()
-  if (data && Array.isArray(data.reviews) && data.reviews.length > 0) {
-    Reviews.value = data.reviews
+  // The backend returns Google's 5 newest reviews whatever their rating (and
+  // rating-only ones with empty text). Cards draw five stars, so only show
+  // 5-star reviews with text; top up with the built-in ones to keep 3+ cards.
+  const live = (data?.reviews || []).filter((r) => r.review && (!r.rating || Number(r.rating) >= 5))
+  if (live.length) {
+    Reviews.value = [...live, ...FallbackReviews.filter((f) => !live.some((l) => l.author === f.author))]
     currentIndex.value = 0
     currentReview.value = Reviews.value[0]
   }

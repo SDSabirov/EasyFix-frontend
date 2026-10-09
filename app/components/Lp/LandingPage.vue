@@ -301,7 +301,7 @@
                 </span>
                 <img :src="googleLogo" alt="Google review" width="20" height="20" class="w-5 h-5" loading="lazy" />
               </div>
-              <blockquote class="lg:mt-3 font-display italic text-[15px] lg:text-[17px] leading-snug text-primary/90 lg:flex-1">
+              <blockquote class="lg:mt-3 font-display italic text-[15px] lg:text-[17px] leading-snug text-primary/90 lg:flex-1 [overflow-wrap:anywhere]">
                 “{{ r.excerpt }}”
               </blockquote>
               <figcaption class="hidden lg:block mt-4">
@@ -556,7 +556,10 @@ const normalizeReview = (r) => {
 
 const excerpt = (text, max = 150) => {
   if (!text || text.length <= max) return text
-  return text.slice(0, text.lastIndexOf(' ', max)).replace(/[,;:.\s]+$/, '') + '…'
+  // Cut at a word boundary; hard-cut text without spaces (e.g. CJK, long links).
+  const space = text.lastIndexOf(' ', max)
+  const cut = space > max * 0.6 ? text.slice(0, space) : Array.from(text).slice(0, max).join('')
+  return cut.replace(/[,;:.\s]+$/, '') + '…'
 }
 const displayedReviews = computed(() =>
   reviews.value.slice(0, 3).map((r) => ({ ...r, excerpt: excerpt(r.review) })),
