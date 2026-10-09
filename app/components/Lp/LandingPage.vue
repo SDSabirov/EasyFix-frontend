@@ -646,10 +646,17 @@ onMounted(async () => {
       .map(normalizeReview)
       .filter((r) => r.review && (!r.rating || r.rating >= 5))
       .sort((a, b) => b.ts - a.ts)
-    if (latest.length >= 3) reviews.value = latest
+    // Google returns at most the 5 newest; if fewer than 3 of them are 5-star,
+    // keep the live ones first and top up with the built-in reviews.
+    if (latest.length) {
+      const topUp = fallbackReviews.filter((f) => !latest.some((l) => l.author === f.author))
+      reviews.value = [...latest, ...topUp].slice(0, 3)
+    }
   }
   if (data?.rating) rating.value = Number(data.rating).toFixed(1)
-  if (data?.total_reviews || data?.user_ratings_total) rating.count = String(data.total_reviews || data.user_ratings_total)
+  // Backend (easyfix-backend reviews/views.py) sends the count as `total`.
+  const total = Number(data?.total ?? data?.user_ratings_total ?? data?.total_reviews)
+  if (total > 0) rating.count = total.toLocaleString('en-US')
 })
 
 onBeforeUnmount(() => {
