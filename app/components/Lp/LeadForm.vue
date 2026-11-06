@@ -1,10 +1,10 @@
 <template>
-  <div class="bg-white rounded-2xl shadow-2xl shadow-ink/15 border border-primary/5 p-6 sm:p-7">
+  <div class="bg-white rounded-2xl shadow-2xl shadow-ink/15 border border-primary/5 p-5 sm:p-7">
     <template v-if="!submitted">
       <h2 :id="`${idPrefix}-title`" class="font-display font-semibold text-[1.9rem] leading-tight text-primary">
-        Check Service Availability
+        Schedule Your Repair
       </h2>
-      <p class="mt-1 text-sm text-gray-600">Get fast, reliable service in the Bay Area.</p>
+      <p class="mt-1 text-sm text-gray-600">Tell us what needs fixing and we'll call to confirm a time.</p>
 
       <form
         ref="formEl"
@@ -15,74 +15,75 @@
         @submit.prevent="submit"
         @keydown.enter="onEnter"
       >
-        <div>
-          <label :for="`${idPrefix}-brand`" class="sr-only">Brand</label>
-          <select
-            :id="`${idPrefix}-brand`"
-            name="brand"
-            v-model="form.brand"
-            :class="[fieldClass, !form.brand && 'text-gray-500', errors.brand && errorClass]"
-            required
-          >
-            <option value="" disabled>Brand</option>
-            <option v-for="b in brands" :key="b" :value="b">{{ b }}</option>
-          </select>
-        </div>
-        <div>
-          <label :for="`${idPrefix}-type`" class="sr-only">Appliance Type</label>
-          <select
-            :id="`${idPrefix}-type`"
-            name="appliance_type"
-            v-model="form.type"
-            :class="[fieldClass, !form.type && 'text-gray-500', errors.type && errorClass]"
-            required
-          >
-            <option value="" disabled>Appliance Type</option>
-            <option v-for="t in types" :key="t" :value="t">{{ t }}</option>
-          </select>
-        </div>
-        <div>
-          <label :for="`${idPrefix}-zip`" class="sr-only">ZIP Code</label>
-          <input
-            :id="`${idPrefix}-zip`"
-            name="postal_code"
-            v-model.trim="form.zip"
-            type="text"
-            inputmode="numeric"
-            autocomplete="postal-code"
-            maxlength="5"
-            placeholder="ZIP Code"
-            :class="[fieldClass, errors.zip && errorClass]"
-            required
-          />
+        <div class="grid grid-cols-2 gap-3">
+          <div>
+            <label :for="`${idPrefix}-brand`" class="sr-only">Appliance brand</label>
+            <select
+              :id="`${idPrefix}-brand`"
+              name="brand"
+              v-model="form.brand"
+              :class="[fieldClass, !form.brand && 'text-gray-500', errors.brand && errorClass]"
+              required
+            >
+              <option value="" disabled>Brand</option>
+              <option v-for="b in brands" :key="b" :value="b">{{ b }}</option>
+            </select>
+          </div>
+          <div>
+            <label :for="`${idPrefix}-type`" class="sr-only">Appliance type</label>
+            <select
+              :id="`${idPrefix}-type`"
+              name="appliance_type"
+              v-model="form.type"
+              :class="[fieldClass, !form.type && 'text-gray-500', errors.type && errorClass]"
+              required
+            >
+              <option value="" disabled>Appliance</option>
+              <option v-for="t in types" :key="t" :value="t">{{ t }}</option>
+            </select>
+          </div>
         </div>
         <div class="grid grid-cols-2 gap-3">
           <div>
-            <label :for="`${idPrefix}-first`" class="sr-only">First Name</label>
+            <label :for="`${idPrefix}-first`" class="sr-only">First name</label>
             <input
               :id="`${idPrefix}-first`"
               name="first_name"
               v-model.trim="form.firstName"
               type="text"
               autocomplete="given-name"
-              placeholder="First Name"
+              placeholder="First name"
               :class="[fieldClass, errors.firstName && errorClass]"
               required
             />
           </div>
           <div>
-            <label :for="`${idPrefix}-last`" class="sr-only">Last Name</label>
+            <label :for="`${idPrefix}-last`" class="sr-only">Last name</label>
             <input
               :id="`${idPrefix}-last`"
               name="last_name"
               v-model.trim="form.lastName"
               type="text"
               autocomplete="family-name"
-              placeholder="Last Name"
+              placeholder="Last name"
               :class="[fieldClass, errors.lastName && errorClass]"
               required
             />
           </div>
+        </div>
+        <div>
+          <label :for="`${idPrefix}-phone`" class="sr-only">Phone number</label>
+          <input
+            :id="`${idPrefix}-phone`"
+            name="phone"
+            v-model.trim="form.phone"
+            type="tel"
+            inputmode="tel"
+            autocomplete="tel-national"
+            placeholder="Phone number"
+            :class="[fieldClass, errors.phone && errorClass]"
+            required
+          />
         </div>
         <div>
           <label :for="`${idPrefix}-email`" class="sr-only">Email</label>
@@ -98,44 +99,47 @@
             required
           />
         </div>
-        <div>
-          <label :for="`${idPrefix}-phone`" class="sr-only">Phone Number</label>
-          <input
-            :id="`${idPrefix}-phone`"
-            name="phone"
-            v-model.trim="form.phone"
-            type="tel"
-            inputmode="tel"
-            autocomplete="tel-national"
-            placeholder="Phone Number"
-            :class="[fieldClass, errors.phone && errorClass]"
-            required
-          />
-        </div>
-        <div class="relative">
-          <label :for="`${idPrefix}-date`" class="sr-only">Preferred Date</label>
-          <input
-            :id="`${idPrefix}-date`"
-            name="preferred_date"
-            v-model="form.date"
-            type="date"
-            :min="today"
-            :class="[
-              fieldClass,
-              'pr-10 appearance-none [&::-webkit-calendar-picker-indicator]:opacity-0 [&::-webkit-date-and-time-value]:text-left',
-              !form.date && !dateFocused && 'text-transparent',
-              errors.date && errorClass,
-            ]"
-            required
-            @focus="dateFocused = true"
-            @blur="dateFocused = false"
-            @click="openPicker"
-          />
-          <!-- Native date inputs can't show a placeholder, so overlay one while empty. -->
-          <span v-if="!form.date && !dateFocused" class="pointer-events-none absolute left-3.5 top-1/2 -translate-y-1/2 text-sm text-gray-500" aria-hidden="true">Preferred Date</span>
-          <svg class="pointer-events-none absolute right-3.5 top-1/2 -translate-y-1/2 w-4 h-4 text-primary/70" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
-            <rect x="3" y="5" width="18" height="16" rx="2" /><path d="M3 10h18M8 3v4M16 3v4" />
-          </svg>
+        <div class="grid grid-cols-[minmax(0,5fr)_minmax(0,6fr)] gap-3">
+          <div>
+            <label :for="`${idPrefix}-zip`" class="sr-only">ZIP code</label>
+            <input
+              :id="`${idPrefix}-zip`"
+              name="postal_code"
+              v-model.trim="form.zip"
+              type="text"
+              inputmode="numeric"
+              autocomplete="postal-code"
+              maxlength="5"
+              placeholder="ZIP code"
+              :class="[fieldClass, errors.zip && errorClass]"
+              required
+            />
+          </div>
+          <div class="relative">
+            <label :for="`${idPrefix}-date`" class="sr-only">Preferred date</label>
+            <input
+              :id="`${idPrefix}-date`"
+              name="preferred_date"
+              v-model="form.date"
+              type="date"
+              :min="today"
+              :class="[
+                fieldClass,
+                'min-w-0 pr-10 appearance-none [&::-webkit-calendar-picker-indicator]:opacity-0 [&::-webkit-date-and-time-value]:text-left',
+                !form.date && !dateFocused && 'text-transparent',
+                errors.date && errorClass,
+              ]"
+              required
+              @focus="dateFocused = true"
+              @blur="dateFocused = false"
+              @click="openPicker"
+            />
+            <!-- Native date inputs can't show a placeholder, so overlay one while empty. -->
+            <span v-if="!form.date && !dateFocused" class="pointer-events-none absolute left-3.5 top-1/2 -translate-y-1/2 text-sm text-gray-500" aria-hidden="true"><span class="min-[340px]:hidden">Date</span><span class="max-[339px]:hidden">Preferred date</span></span>
+            <svg class="pointer-events-none absolute right-3.5 top-1/2 -translate-y-1/2 w-4 h-4 text-primary/70" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
+              <rect x="3" y="5" width="18" height="16" rx="2" /><path d="M3 10h18M8 3v4M16 3v4" />
+            </svg>
+          </div>
         </div>
 
         <p v-if="errorMessage" class="text-sm text-red-600" role="alert">{{ errorMessage }}</p>
@@ -148,9 +152,9 @@
           data-cta="lp-form-submit"
           @click="trySubmit"
         >
-          {{ loading ? 'Sending…' : 'Book My Appointment' }}
+          {{ loading ? 'Sending…' : 'Request Appointment' }}
         </button>
-        <p class="text-center text-xs text-gray-600">We'll confirm availability as soon as possible.</p>
+        <p class="text-center text-xs text-gray-600">We'll call you shortly to confirm.</p>
         <p class="text-center text-[10px] leading-snug text-gray-400">
           By submitting, you agree to be contacted by Easy Fix Appliance by phone or text about your request.
           Msg &amp; data rates may apply. Reply STOP to opt out.
@@ -162,9 +166,9 @@
       <div class="mx-auto flex items-center justify-center w-16 h-16 rounded-full bg-brass/10">
         <svg class="w-8 h-8 text-brass" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5" /></svg>
       </div>
-      <h2 class="mt-5 font-display font-semibold text-3xl text-primary">Request received</h2>
+      <h2 class="mt-5 font-display font-semibold text-3xl text-primary">Thank you{{ form.firstName ? `, ${form.firstName}` : '' }}!</h2>
       <p class="mt-2 text-sm text-gray-600">
-        Thank you! We'll call you shortly to confirm your appointment.
+        We've received your request and will call you shortly to confirm your appointment.
         Need help right now? Call
         <a :href="`tel:${phone.tel}`" class="font-semibold text-primary underline" data-cta="lp-call" @click="$emit('call', 'form-success')">{{ phone.display }}</a>.
       </p>

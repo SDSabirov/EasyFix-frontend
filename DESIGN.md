@@ -129,7 +129,7 @@ Container: `container mx-auto px-4 max-w-screen-xl`.
 
 1. **Never animate above-fold content from `opacity: 0`** — content painted invisible is permanently excluded from LCP candidates (this once made the navbar logo the LCP element). Hero reveals start at `opacity: 0.35`.
 2. Full-viewport images are excluded from LCP by Chrome — the hero H1 is the LCP element; keep it SSR'd, visible at first paint, in a preloaded font.
-3. **Third-party scripts load ONLY on first user interaction** (`app/plugins/deferred-scripts.client.js` — no timer). GTM cascade = ~600KB.
+3. **GTM loads with the page (standard head snippet in `app/app.vue`)**, not on first interaction. Changed 2026-11 for the anti-fraud tag in the container, which must see visitors who never move the mouse (bots). GTM cascade = ~600KB; keep any *other* third-party script off the critical path.
 4. Hero video: poster is the LCP surface; video mounts after `load` + idle, respects reduced-motion/save-data. Keep videos ≤ ~500KB (ffmpeg via `ffmpeg-static` devDep, CRF 26, no audio).
 5. Below-fold homepage sections: `<LazyXxx hydrate-on-visible />`. Below-fold imgs: `loading="lazy" decoding="async"`; above-fold/LCP imgs: `loading="eager" fetchpriority="high"` + width/height.
 6. New raster assets → run `node scripts/optimize-images.mjs` (WebP, max 1600px).

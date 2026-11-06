@@ -1,5 +1,5 @@
 <template>
-  <div class="min-h-screen bg-white text-primary" :inert="sheetOpen || undefined">
+  <div class="min-h-screen bg-white text-primary">
     <!-- ============ Header (sticky; nav items only jump within this page) ============ -->
     <header class="sticky top-0 z-40 bg-white/95 backdrop-blur border-b border-primary/10">
       <div class="mx-auto max-w-screen-xl flex items-center justify-between gap-1.5 px-2.5 md:px-6 h-16 lg:h-[72px]">
@@ -13,7 +13,14 @@
         </div>
 
         <nav aria-label="Page sections" class="hidden lg:flex items-center gap-5 xl:gap-8 font-montserrat text-[13px] text-primary/80">
-          <a v-for="item in navItems" :key="item.href" :href="item.href" class="hover:text-brass-dark transition-colors">{{ item.label }}</a>
+          <a
+            v-for="item in navItems"
+            :key="item.href"
+            :href="item.href"
+            class="hover:text-brass-dark transition-colors aria-[current=location]:text-brass-dark"
+            :aria-current="activeNav === item.href ? 'location' : undefined"
+            @click="onNav(item)"
+          >{{ item.label }}</a>
         </nav>
 
         <div class="flex items-center gap-1.5 md:gap-5">
@@ -35,13 +42,12 @@
             type="button"
             class="flex items-center gap-1.5 md:gap-2 rounded-md bg-ink text-white px-2 md:px-5 h-10 md:h-11 font-display font-semibold text-[12px] min-[404px]:text-[13px] md:text-[17px] leading-[1.05] transition-colors hover:bg-brass focus:outline-none focus-visible:ring-2 focus-visible:ring-brass focus-visible:ring-offset-2"
             data-cta="lp-schedule"
-            @click="onSchedule('header', $event)"
+            @click="onSchedule('header')"
           >
             <LpIcon name="calendar" class="hidden min-[404px]:block w-4 h-4 md:w-5 md:h-5 shrink-0" />
             <span class="text-left md:whitespace-nowrap">Schedule<br class="md:hidden" /> Service</span>
           </button>
           <button
-            ref="menuButton"
             type="button"
             class="lg:hidden p-1 text-primary"
             :aria-expanded="menuOpen"
@@ -60,14 +66,15 @@
           v-for="item in navItems"
           :key="item.href"
           :href="item.href"
-          class="block py-3 border-b border-primary/5 font-montserrat text-sm text-primary"
-          @click="menuOpen = false"
+          class="block py-3 border-b border-primary/5 font-montserrat text-sm text-primary aria-[current=location]:text-brass-dark"
+          :aria-current="activeNav === item.href ? 'location' : undefined"
+          @click="onNav(item)"
         >{{ item.label }}</a>
         <div class="grid grid-cols-2 gap-2 pt-4">
           <a :href="`tel:${phone.tel}`" :class="[btnOutline, 'h-12 text-base']" data-cta="lp-call" @click="menuOpen = false; onCall('menu')">
             <LpIcon name="phone" class="w-4 h-4 fill-primary" /> Call Now
           </a>
-          <button type="button" :class="[btnSolid, 'h-12 text-base']" data-cta="lp-schedule" @click="onSchedule('menu', $event)">
+          <button type="button" :class="[btnSolid, 'h-12 text-base']" data-cta="lp-schedule" @click="onSchedule('menu')">
             <LpIcon name="calendar" class="w-4 h-4" /> Schedule
           </button>
         </div>
@@ -114,7 +121,7 @@
             </div>
 
             <div class="mt-5 lg:mt-6 flex flex-col lg:flex-row gap-2.5 lg:gap-3 max-w-[20rem] lg:max-w-none">
-              <button type="button" :class="[btnSolid, 'h-[50px] lg:h-[52px] px-6 text-lg lg:text-[19px] gap-3']" data-cta="lp-schedule" @click="onSchedule('hero', $event)">
+              <button type="button" :class="[btnSolid, 'h-[50px] lg:h-[52px] px-6 text-lg lg:text-[19px] gap-3']" data-cta="lp-schedule" @click="onSchedule('hero')">
                 <LpIcon name="calendar" class="w-5 h-5" />
                 Schedule Service
                 <LpIcon name="arrow" class="w-5 h-5" />
@@ -130,8 +137,13 @@
             </p>
           </div>
 
-          <!-- Desktop: lead form in the hero. Mobile gets the same form in a bottom sheet. -->
-          <div id="lp-form" class="hidden lg:block lg:col-span-5 xl:col-span-4 xl:col-start-9 scroll-mt-24">
+          <!-- Lead form: beside the hero text on desktop, right under it on mobile (an on-page
+               form, not a pop-up). Every Schedule Service button scrolls here. -->
+          <div
+            id="lp-form"
+            class="lg:col-span-5 xl:col-span-4 xl:col-start-9 scroll-mt-20 lg:scroll-mt-24 rounded-2xl transition-shadow duration-500"
+            :class="formFlash && 'ring-4 ring-brass/60 ring-offset-4'"
+          >
             <LpLeadForm id-prefix="hero" location="hero" :phone="phone" :brands="variant.formBrands" :variant="variant.key" @call="onCall" />
           </div>
         </div>
@@ -313,17 +325,17 @@
         </div>
 
         <!-- Mobile carousel dots -->
-        <div class="lg:hidden mt-3 flex justify-center gap-2">
+        <div class="lg:hidden mt-1 flex justify-center">
+          <!-- 8px dot, 32px tap target -->
           <button
             v-for="(r, i) in displayedReviews"
             :key="r.author"
             type="button"
-            class="w-2 h-2 rounded-full transition-colors"
-            :class="i === activeReview ? 'bg-brass' : 'bg-primary/20'"
+            class="flex items-center justify-center w-8 h-8"
             :aria-label="`Show review ${i + 1}`"
             :aria-current="i === activeReview"
             @click="goToReview(i)"
-          ></button>
+          ><span class="w-2 h-2 rounded-full transition-colors" :class="i === activeReview ? 'bg-brass' : 'bg-primary/20'" aria-hidden="true"></span></button>
         </div>
       </section>
 
@@ -359,7 +371,7 @@
               <LpIcon name="phone" class="w-5 h-5 fill-white" />
               <span class="font-display font-semibold text-[17px]">Call Now</span>
             </a>
-            <button type="button" class="flex items-center justify-center gap-2 h-[52px] rounded-md border border-white/70 font-display font-semibold text-[17px] hover:border-brass-light hover:text-brass-light transition-colors" data-cta="lp-schedule" @click="onSchedule('footer', $event)">
+            <button type="button" class="flex items-center justify-center gap-2 h-[52px] rounded-md border border-white/70 font-display font-semibold text-[17px] hover:border-brass-light hover:text-brass-light transition-colors" data-cta="lp-schedule" @click="onSchedule('footer')">
               <LpIcon name="calendar" class="w-5 h-5" /> Schedule Service
             </button>
           </div>
@@ -382,7 +394,7 @@
               <LpIcon name="phone" class="w-5 h-5 fill-white" />
               <span class="font-display font-semibold text-[19px]">Call Now</span>
             </a>
-            <button type="button" :class="[btnOutline, 'h-[52px] px-7 gap-3 text-[19px] font-display font-semibold']" data-cta="lp-schedule" @click="onSchedule('footer', $event)">
+            <button type="button" :class="[btnOutline, 'h-[52px] px-7 gap-3 text-[19px] font-display font-semibold']" data-cta="lp-schedule" @click="onSchedule('footer')">
               <LpIcon name="calendar" class="w-5 h-5" /> Schedule Service
             </button>
             <p class="ml-6 font-montserrat text-[9px] font-semibold uppercase tracking-[0.3em] leading-[2] text-primary/80">
@@ -397,31 +409,17 @@
       © {{ year }} Easy Fix Appliance · Licensed &amp; Insured · Bay Area, California
     </footer>
 
-    <!-- ============ Mobile form sheet ============ -->
-    <Teleport to="body">
-      <Transition
-        enter-active-class="transition-opacity duration-200"
-        enter-from-class="opacity-0"
-        leave-active-class="transition-opacity duration-200"
-        leave-to-class="opacity-0"
+    <!-- Desktop call feedback: a tel: click there opens an OS prompt (or nothing) outside the page.
+         The live region stays mounted (empty) so screen readers announce each new message. -->
+    <div role="status" class="fixed bottom-6 left-1/2 -translate-x-1/2 z-50">
+      <p
+        v-if="callHint"
+        :key="callHint"
+        class="rounded-full bg-ink text-white px-5 py-3 font-montserrat text-sm shadow-xl whitespace-nowrap"
       >
-        <div
-          v-if="sheetOpen"
-          class="fixed inset-0 z-[60] flex items-end bg-ink/50 lg:hidden"
-          role="dialog"
-          aria-modal="true"
-          aria-labelledby="sheet-title"
-          @click.self="closeSheet"
-        >
-          <div ref="sheetPanel" class="relative w-full max-h-[92dvh] overflow-y-auto rounded-t-3xl bg-cream px-3 pt-10 pb-[max(1rem,env(safe-area-inset-bottom))]">
-            <button type="button" class="absolute right-3 top-3 p-2 text-primary" @click="closeSheet">
-              <LpIcon name="close" class="w-5 h-5" /><span class="sr-only">Close</span>
-            </button>
-            <LpLeadForm id-prefix="sheet" location="mobile-sheet" :phone="phone" :brands="variant.formBrands" :variant="variant.key" @call="onCall" />
-          </div>
-        </div>
-      </Transition>
-    </Teleport>
+        Call us at <span class="font-semibold">{{ phone.display }}</span> — dial from your phone or calling app
+      </p>
+    </div>
   </div>
 </template>
 
@@ -578,50 +576,65 @@ const year = new Date().getFullYear()
 
 // ---------- CTA handling ----------
 const menuOpen = ref(false)
-const sheetOpen = ref(false)
-const sheetPanel = ref(null)
-const menuButton = ref(null)
-let lastFocus = null
 
-const onCall = (location) => trackEvent('lp_call_click', { cta_location: location, landing_variant: props.variant.key })
+// Desktop (mouse) visitors can't dial: a tel: click opens an OS "pick an app" prompt, or
+// nothing, outside the page, so it looks dead (Clarity logs dead/rage clicks). Keep following
+// tel: for desktop calling apps, but also show the number in a message on every click.
+// The Call Now labels stay as they are (client asked not to show the number on them).
+const callHint = ref(0)
+let callHintTimer
+const onCall = (location) => {
+  trackEvent('lp_call_click', { cta_location: location, landing_variant: props.variant.key })
+  if (!window.matchMedia('(hover: hover) and (pointer: fine)').matches) return
+  callHint.value++ // re-keyed, so repeat clicks get feedback too
+  clearTimeout(callHintTimer)
+  callHintTimer = setTimeout(() => { callHint.value = 0 }, 6000)
+}
 
-const onSchedule = async (location, e) => {
+// In-page nav: mark the item and briefly outline the target so every click visibly does
+// something, even when the page can't scroll further (on desktop FAQ/Contact both sit at
+// max scroll, so a visitor already at the bottom gets no scroll at all).
+const activeNav = ref('')
+let navFlashTimer
+const onNav = (item) => {
+  menuOpen.value = false
+  activeNav.value = item.href
+  const target = document.querySelector(item.href)
+  if (!target) return
+  clearTimeout(navFlashTimer)
+  document.querySelectorAll('[data-lp-flash]').forEach((el) => el.removeAttribute('data-lp-flash'))
+  void target.offsetWidth // restart the animation on repeat clicks
+  target.setAttribute('data-lp-flash', '')
+  // Clear the item mark too, so it isn't left highlighted once the visitor scrolls elsewhere.
+  navFlashTimer = setTimeout(() => {
+    target.removeAttribute('data-lp-flash')
+    activeNav.value = ''
+  }, 1600)
+}
+
+// Desktop Schedule Service: when the form is already in view nothing scrolls, so flash it.
+const formFlash = ref(false)
+let formFlashTimer
+const flashForm = () => {
+  clearTimeout(formFlashTimer)
+  formFlash.value = false
+  requestAnimationFrame(() => {
+    formFlash.value = true
+    formFlashTimer = setTimeout(() => { formFlash.value = false }, 1500)
+  })
+}
+
+// Schedule Service (header, hero, menu, bottom band): bring the on-page form into view,
+// focus its first field and flash it, so the click visibly does something even when the
+// form is already on screen.
+const onSchedule = (location) => {
   trackEvent('lp_schedule_click', { cta_location: location, landing_variant: props.variant.key })
   menuOpen.value = false
-  if (window.matchMedia('(min-width: 1024px)').matches) {
-    const form = document.getElementById('lp-form')
-    form.scrollIntoView({ behavior: 'smooth', block: 'center' })
-    form.querySelector('select')?.focus({ preventScroll: true })
-    return
-  }
-  // The clicked button, not activeElement: Safari/iOS never focus a tapped button.
-  lastFocus = e?.currentTarget ?? document.activeElement
-  sheetOpen.value = true
-  document.documentElement.style.overflow = 'hidden'
-  document.addEventListener('keydown', onSheetKey)
-  await nextTick()
-  sheetPanel.value?.querySelector('select')?.focus()
-}
-
-const closeSheet = async () => {
-  sheetOpen.value = false
-  document.documentElement.style.overflow = ''
-  document.removeEventListener('keydown', onSheetKey)
-  await nextTick() // page is no longer inert
-  // Opened from the (now hidden) mobile menu: return focus to the menu button.
-  const target = lastFocus?.isConnected && lastFocus.offsetParent !== null ? lastFocus : menuButton.value
-  target?.focus?.()
-}
-
-const onSheetKey = (e) => {
-  if (e.key === 'Escape') closeSheet()
-}
-
-// The sheet is lg:hidden; if the viewport grows past lg while it's open
-// (tablet rotation), close it so the page isn't left scroll-locked.
-let desktopMq
-const onBreakpoint = (e) => {
-  if (e.matches && sheetOpen.value) closeSheet()
+  const form = document.getElementById('lp-form')
+  const desktop = window.matchMedia('(min-width: 1024px)').matches
+  form.scrollIntoView({ behavior: 'smooth', block: desktop ? 'center' : 'start' })
+  form.querySelector('select')?.focus({ preventScroll: true })
+  flashForm()
 }
 
 // ---------- Reviews carousel (mobile) ----------
@@ -640,8 +653,6 @@ const { fetchGoogleReviews } = useGoogleReviews()
 const { capture } = useLeadAttribution()
 
 onMounted(async () => {
-  desktopMq = window.matchMedia('(min-width: 1024px)')
-  desktopMq.addEventListener('change', onBreakpoint)
   capture()
   const data = await fetchGoogleReviews()
   if (data?.reviews?.length) {
@@ -663,8 +674,28 @@ onMounted(async () => {
 })
 
 onBeforeUnmount(() => {
-  document.documentElement.style.overflow = ''
-  document.removeEventListener('keydown', onSheetKey)
-  desktopMq?.removeEventListener('change', onBreakpoint)
+  clearTimeout(callHintTimer)
+  clearTimeout(navFlashTimer)
+  clearTimeout(formFlashTimer)
 })
 </script>
+
+<style scoped>
+/* Brief brass frame on the section an in-page nav item jumped to (drawn above its children). */
+[data-lp-flash] {
+  position: relative;
+}
+[data-lp-flash]::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+  box-shadow: inset 0 0 0 3px rgb(176 141 87 / 0.9);
+  animation: lp-flash 1.6s ease-out forwards;
+}
+@keyframes lp-flash {
+  0%, 40% { opacity: 1; }
+  100% { opacity: 0; }
+}
+</style>
