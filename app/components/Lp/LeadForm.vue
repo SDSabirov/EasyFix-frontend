@@ -99,47 +99,20 @@
             required
           />
         </div>
-        <div class="grid grid-cols-1 min-[360px]:grid-cols-[minmax(0,5fr)_minmax(0,6fr)] gap-3">
-          <div>
-            <label :for="`${idPrefix}-zip`" class="sr-only">ZIP code</label>
-            <input
-              :id="`${idPrefix}-zip`"
-              name="postal_code"
-              v-model.trim="form.zip"
-              type="text"
-              inputmode="numeric"
-              autocomplete="postal-code"
-              maxlength="5"
-              placeholder="ZIP code"
-              :class="[fieldClass, errors.zip && errorClass]"
-              required
-            />
-          </div>
-          <div class="relative">
-            <label :for="`${idPrefix}-date`" class="sr-only">Preferred date</label>
-            <input
-              :id="`${idPrefix}-date`"
-              name="preferred_date"
-              v-model="form.date"
-              type="date"
-              :min="today"
-              :class="[
-                fieldClass,
-                'min-w-0 pr-10 appearance-none [&::-webkit-calendar-picker-indicator]:hidden [&::-webkit-date-and-time-value]:text-left',
-                !form.date && !dateFocused && 'text-transparent',
-                errors.date && errorClass,
-              ]"
-              required
-              @focus="dateFocused = true"
-              @blur="dateFocused = false"
-              @click="openPicker"
-            />
-            <!-- Native date inputs can't show a placeholder, so overlay one while empty. -->
-            <span v-if="!form.date && !dateFocused" class="pointer-events-none absolute left-3.5 top-1/2 -translate-y-1/2 text-sm text-gray-500" aria-hidden="true">Preferred date</span>
-            <svg class="pointer-events-none absolute right-3.5 top-1/2 -translate-y-1/2 w-4 h-4 text-primary/70" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
-              <rect x="3" y="5" width="18" height="16" rx="2" /><path d="M3 10h18M8 3v4M16 3v4" />
-            </svg>
-          </div>
+        <div>
+          <label :for="`${idPrefix}-zip`" class="sr-only">ZIP code</label>
+          <input
+            :id="`${idPrefix}-zip`"
+            name="postal_code"
+            v-model.trim="form.zip"
+            type="text"
+            inputmode="numeric"
+            autocomplete="postal-code"
+            maxlength="5"
+            placeholder="ZIP code"
+            :class="[fieldClass, errors.zip && errorClass]"
+            required
+          />
         </div>
 
         <p v-if="errorMessage" class="text-sm text-red-600" role="alert">{{ errorMessage }}</p>
@@ -196,22 +169,11 @@ const fieldClass =
   'block w-full h-11 rounded-lg border border-primary/15 bg-white px-3.5 text-sm text-primary placeholder:text-gray-500 focus:border-brass focus:ring-2 focus:ring-brass/30 focus:outline-none transition-colors'
 const errorClass = '!border-red-500'
 
-const form = reactive({ brand: '', type: '', zip: '', firstName: '', lastName: '', email: '', phone: '', date: '' })
-const errors = reactive({ brand: false, type: false, zip: false, firstName: false, lastName: false, email: false, phone: false, date: false })
+const form = reactive({ brand: '', type: '', zip: '', firstName: '', lastName: '', email: '', phone: '' })
+const errors = reactive({ brand: false, type: false, zip: false, firstName: false, lastName: false, email: false, phone: false })
 const errorMessage = ref('')
 const loading = ref(false)
 const submitted = ref(false)
-
-// Local date, not UTC, so late-evening visitors aren't blocked from "today".
-const localIso = (d) => new Date(d.getTime() - d.getTimezoneOffset() * 60000).toISOString().slice(0, 10)
-const today = ref('')
-onMounted(() => { today.value = localIso(new Date()) })
-
-const dateFocused = ref(false)
-// Desktop Chrome only opens the picker from its (hidden) icon; open it on any click.
-const openPicker = (e) => {
-  try { e.target.showPicker?.() } catch {}
-}
 
 const digits = (v) => v.replace(/\D/g, '')
 
@@ -224,18 +186,15 @@ const validate = () => {
   errors.type = !form.type
   errors.zip = !/^\d{5}$/.test(form.zip)
   errors.phone = phoneDigits.length !== 10
-  errors.date = !form.date || (today.value && form.date < today.value)
   if (Object.values(errors).some(Boolean)) {
-    const missing = !form.brand || !form.type || !form.zip || !form.firstName || !form.lastName || !form.email || !form.phone || !form.date
+    const missing = !form.brand || !form.type || !form.zip || !form.firstName || !form.lastName || !form.email || !form.phone
     errorMessage.value = missing
       ? 'Please complete all fields.'
       : errors.email
         ? 'Please enter a valid email address.'
         : errors.phone
           ? 'Please enter a valid 10-digit phone number.'
-          : errors.zip
-            ? 'Please enter a valid 5-digit ZIP code.'
-            : 'Please choose a date from today onward.'
+          : 'Please enter a valid 5-digit ZIP code.'
     return null
   }
   errorMessage.value = ''
@@ -269,10 +228,10 @@ const submit = async () => {
   loading.value = true
 
   // Same endpoint + shape as Forms/BookingForm.vue (the existing CRM pipeline);
-  // fields this short form doesn't collect are sent empty.
+  // fields this short form doesn't collect (address, age, date, time) are sent empty.
   const payload = {
     personal: { firstName: form.firstName, lastName: form.lastName, email: form.email, phone: phoneDigits, address: '', zip: form.zip, smsConsent: true },
-    appliance: { type: form.type, brand: form.brand, age: '', date: form.date, time: '' },
+    appliance: { type: form.type, brand: form.brand, age: '', date: '', time: '' },
     issue: `PPC landing page request (${form.brand} ${form.type}).`,
     source: `ppc-${props.variant}`,
     attribution: getAttribution(),
