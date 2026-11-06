@@ -413,11 +413,11 @@
 
     <!-- Desktop call feedback: a tel: click there opens an OS prompt (or nothing) outside the page.
          The live region stays mounted (empty) so screen readers announce each new message. -->
-    <div role="status" class="fixed bottom-6 left-1/2 -translate-x-1/2 z-50">
+    <div role="status" class="fixed bottom-6 left-1/2 -translate-x-1/2 z-50 w-max max-w-[calc(100vw-2rem)] pointer-events-none">
       <p
         v-if="callHint"
         :key="callHint"
-        class="rounded-full bg-ink text-white px-5 py-3 font-montserrat text-sm shadow-xl whitespace-nowrap"
+        class="rounded-2xl sm:rounded-full bg-ink text-white px-5 py-3 font-montserrat text-sm text-center shadow-xl"
       >
         Call us at <span class="font-semibold">{{ phone.display }}</span> — dial from your phone or calling app
       </p>
@@ -638,9 +638,14 @@ const flashForm = () => {
 // Schedule Service (header, hero, menu, bottom band): bring the on-page form into view,
 // focus its first field and flash it, so the click visibly does something even when the
 // form is already on screen.
-const onSchedule = (location) => {
+const onSchedule = async (location) => {
   trackEvent('lp_schedule_click', { cta_location: location, landing_variant: props.variant.key })
-  menuOpen.value = false
+  // The open mobile menu sits in the sticky header: let it collapse before measuring,
+  // or the scroll overshoots by the menu's height.
+  if (menuOpen.value) {
+    menuOpen.value = false
+    await nextTick()
+  }
   const form = document.getElementById('lp-form')
   const desktop = window.matchMedia('(min-width: 1024px)').matches
   form.scrollIntoView({ behavior: 'smooth', block: desktop ? 'center' : 'start' })
@@ -704,6 +709,14 @@ onBeforeUnmount(() => {
   pointer-events: none;
   box-shadow: inset 0 0 0 3px rgb(176 141 87 / 0.9);
   animation: lp-flash 1.6s ease-out forwards;
+}
+/* #brands has no padding and #services no bottom padding: draw their frame just outside
+   (both sit inside #services' side padding, so this can't cause horizontal scroll). */
+#brands[data-lp-flash]::after {
+  inset: -6px;
+}
+#services[data-lp-flash]::after {
+  bottom: -6px;
 }
 @keyframes lp-flash {
   0%, 40% { opacity: 1; }

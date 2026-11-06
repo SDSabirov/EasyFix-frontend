@@ -15,14 +15,14 @@
         @submit.prevent="submit"
         @keydown.enter="onEnter"
       >
-        <div class="grid grid-cols-2 gap-3">
+        <div class="grid grid-cols-1 min-[360px]:grid-cols-2 gap-3">
           <div>
             <label :for="`${idPrefix}-brand`" class="sr-only">Appliance brand</label>
             <select
               :id="`${idPrefix}-brand`"
               name="brand"
               v-model="form.brand"
-              :class="[fieldClass, !form.brand && 'text-gray-500', errors.brand && errorClass]"
+              :class="[fieldClass, 'pl-3 !pr-7', !form.brand && 'text-gray-500', errors.brand && errorClass]"
               required
             >
               <option value="" disabled>Brand</option>
@@ -35,7 +35,7 @@
               :id="`${idPrefix}-type`"
               name="appliance_type"
               v-model="form.type"
-              :class="[fieldClass, !form.type && 'text-gray-500', errors.type && errorClass]"
+              :class="[fieldClass, 'pl-3 !pr-7', !form.type && 'text-gray-500', errors.type && errorClass]"
               required
             >
               <option value="" disabled>Appliance</option>
@@ -99,7 +99,7 @@
             required
           />
         </div>
-        <div class="grid grid-cols-[minmax(0,5fr)_minmax(0,6fr)] gap-3">
+        <div class="grid grid-cols-1 min-[360px]:grid-cols-[minmax(0,5fr)_minmax(0,6fr)] gap-3">
           <div>
             <label :for="`${idPrefix}-zip`" class="sr-only">ZIP code</label>
             <input
@@ -125,7 +125,7 @@
               :min="today"
               :class="[
                 fieldClass,
-                'min-w-0 pr-10 appearance-none [&::-webkit-calendar-picker-indicator]:opacity-0 [&::-webkit-date-and-time-value]:text-left',
+                'min-w-0 pr-10 appearance-none [&::-webkit-calendar-picker-indicator]:hidden [&::-webkit-date-and-time-value]:text-left',
                 !form.date && !dateFocused && 'text-transparent',
                 errors.date && errorClass,
               ]"
@@ -135,7 +135,7 @@
               @click="openPicker"
             />
             <!-- Native date inputs can't show a placeholder, so overlay one while empty. -->
-            <span v-if="!form.date && !dateFocused" class="pointer-events-none absolute left-3.5 top-1/2 -translate-y-1/2 text-sm text-gray-500" aria-hidden="true"><span class="min-[340px]:hidden">Date</span><span class="max-[339px]:hidden">Preferred date</span></span>
+            <span v-if="!form.date && !dateFocused" class="pointer-events-none absolute left-3.5 top-1/2 -translate-y-1/2 text-sm text-gray-500" aria-hidden="true">Preferred date</span>
             <svg class="pointer-events-none absolute right-3.5 top-1/2 -translate-y-1/2 w-4 h-4 text-primary/70" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
               <rect x="3" y="5" width="18" height="16" rx="2" /><path d="M3 10h18M8 3v4M16 3v4" />
             </svg>
