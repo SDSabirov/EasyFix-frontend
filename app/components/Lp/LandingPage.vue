@@ -98,12 +98,13 @@
         <div class="absolute inset-x-0 bottom-0 h-16 bg-gradient-to-t from-white/70 to-transparent lg:hidden" aria-hidden="true"></div>
 
         <div class="relative mx-auto max-w-screen-xl px-5 sm:px-6 lg:px-8 pt-7 pb-6 lg:py-8 grid lg:grid-cols-12 gap-8 items-center">
-          <div class="lg:col-span-7 xl:pl-6">
+          <!-- Below lg the hero is one column: text, buttons and form share the same edges. -->
+          <div class="w-full max-lg:max-w-xl lg:col-span-7 xl:pl-6">
             <p v-if="variant.eyebrow" class="mb-2.5 lg:mb-3 font-montserrat text-[9px] lg:text-[10px] font-semibold uppercase tracking-[0.32em] text-primary/80">{{ variant.eyebrow }}</p>
-            <h1 class="font-display font-semibold tracking-[-0.015em] text-primary text-[2.15rem] sm:text-5xl lg:text-[3.6rem] leading-[1.02] max-w-[19rem] sm:max-w-none">
+            <h1 class="font-display font-semibold tracking-[-0.015em] text-primary text-[2.15rem] sm:text-5xl lg:text-[3.6rem] leading-[1.02]">
               Trusted Appliance Repair Experts in the Bay Area
             </h1>
-            <p class="mt-3 lg:mt-4 max-w-[19.25rem] sm:max-w-md text-[14px] lg:text-[15px] leading-snug text-primary/85">
+            <p class="mt-3 lg:mt-4 lg:max-w-md text-[14px] lg:text-[15px] leading-snug text-primary/85">
               Locally owned. Experienced technicians. Same-day service for {{ variant.heroBrands }} &amp; more.
             </p>
 
@@ -120,8 +121,9 @@
               <span class="hidden lg:inline">OEM Parts &amp; Repair Warranty</span>
             </div>
 
-            <div class="mt-5 lg:mt-6 flex flex-col lg:flex-row gap-2.5 lg:gap-3 max-w-[20rem] lg:max-w-none">
-              <button type="button" :class="[btnSolid, 'h-[50px] lg:h-[52px] px-6 text-lg lg:text-[19px] gap-3']" data-cta="lp-schedule" @click="onSchedule('hero')">
+            <div class="mt-5 lg:mt-6 flex flex-col lg:flex-row gap-2.5 lg:gap-3">
+              <!-- Desktop only: on mobile the form sits right below, so this would just scroll a few px. -->
+              <button type="button" :class="[btnSolid, 'max-lg:hidden h-[50px] lg:h-[52px] px-6 text-lg lg:text-[19px] gap-3']" data-cta="lp-schedule" @click="onSchedule('hero')">
                 <LpIcon name="calendar" class="w-5 h-5" />
                 Schedule Service
                 <LpIcon name="arrow" class="w-5 h-5" />
@@ -141,7 +143,7 @@
                form, not a pop-up). Every Schedule Service button scrolls here. -->
           <div
             id="lp-form"
-            class="lg:col-span-5 xl:col-span-4 xl:col-start-9 scroll-mt-20 lg:scroll-mt-24 rounded-2xl transition-shadow duration-500"
+            class="w-full max-lg:max-w-xl lg:col-span-5 xl:col-span-4 xl:col-start-9 scroll-mt-20 lg:scroll-mt-24 rounded-2xl transition-shadow duration-500"
             :class="formFlash && 'ring-4 ring-brass/60 ring-offset-4'"
           >
             <LpLeadForm id-prefix="hero" location="hero" :phone="phone" :brands="variant.formBrands" :variant="variant.key" @call="onCall" />
