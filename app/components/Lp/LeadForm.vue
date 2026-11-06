@@ -6,7 +6,15 @@
       </h2>
       <p class="mt-1 text-sm text-gray-600">Get fast, reliable service in the Bay Area.</p>
 
-      <form :name="`lp-lead-${variant}`" class="mt-5 space-y-3" novalidate :aria-labelledby="`${idPrefix}-title`" @submit.prevent="submit">
+      <form
+        ref="formEl"
+        :name="`lp-lead-${variant}`"
+        class="mt-5 space-y-3"
+        novalidate
+        :aria-labelledby="`${idPrefix}-title`"
+        @submit.prevent="submit"
+        @keydown.enter="onEnter"
+      >
         <div>
           <label :for="`${idPrefix}-brand`" class="sr-only">Brand</label>
           <select
@@ -132,11 +140,13 @@
 
         <p v-if="errorMessage" class="text-sm text-red-600" role="alert">{{ errorMessage }}</p>
 
+        <!-- type="button" on purpose: the form's submit event fires only once validation passes (see trySubmit). -->
         <button
-          type="submit"
+          type="button"
           :disabled="loading"
           class="w-full min-h-[50px] rounded-lg bg-ink text-white font-display font-semibold text-xl transition-colors duration-300 hover:bg-brass disabled:opacity-60 disabled:cursor-not-allowed focus:outline-none focus-visible:ring-2 focus-visible:ring-brass focus-visible:ring-offset-2"
           data-cta="lp-form-submit"
+          @click="trySubmit"
         >
           {{ loading ? 'Sending…' : 'Book My Appointment' }}
         </button>
@@ -229,6 +239,25 @@ const validate = () => {
 }
 
 const { get: getAttribution } = useLeadAttribution()
+
+// GoHighLevel's external tracking turns every DOM 'submit' event on a form into
+// a CRM contact, even when our validation then rejects it (empty/false leads).
+// So the button isn't a submit button: validate first, and only a valid form
+// gets its submit event (GHL captures it; the handler below sends the POST).
+const formEl = ref(null)
+const trySubmit = () => {
+  if (loading.value || !validate()) return
+  const el = formEl.value
+  if (el.requestSubmit) el.requestSubmit()
+  else el.dispatchEvent(new Event('submit', { bubbles: true, cancelable: true }))
+}
+
+// Without a submit button the browser doesn't submit on Enter; keep that working.
+const onEnter = (e) => {
+  if (e.target.tagName !== 'INPUT' || e.isComposing || e.keyCode === 229) return
+  e.preventDefault()
+  trySubmit()
+}
 
 const submit = async () => {
   const phoneDigits = validate()
