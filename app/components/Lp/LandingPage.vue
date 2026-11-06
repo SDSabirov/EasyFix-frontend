@@ -440,6 +440,15 @@ const props = defineProps({
 // into the CRM). Loaded only on these landing pages.
 useHead({
   script: [
+    // Google Tag Manager with the page (standard snippet), on these landing pages only:
+    // the anti-fraud tag in the container must also see visitors who never move the
+    // mouse. The rest of the site loads GTM on first interaction
+    // (plugins/deferred-scripts.client.js); both skip if GTM is already on the page.
+    {
+      key: 'gtm',
+      tagPriority: 'high',
+      innerHTML: `(function(w,d,s,l,i){var u='https://www.googletagmanager.com/gtm.js?id='+i;if(d.querySelector('script[src^="'+u+'"]'))return;w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=u+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-5RH2D8CH');`,
+    },
     {
       src: 'https://link.msgsndr.com/js/external-tracking.js',
       'data-tracking-id': 'tk_06879e56452d496eb3610c11f1d1c2ca',
