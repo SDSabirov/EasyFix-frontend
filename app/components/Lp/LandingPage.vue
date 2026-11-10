@@ -1,85 +1,14 @@
 <template>
   <div class="min-h-screen bg-white text-primary">
-    <!-- ============ Header (sticky; nav items only jump within this page) ============ -->
-    <header class="sticky top-0 z-40 bg-white/95 backdrop-blur border-b border-primary/10">
-      <div class="mx-auto max-w-screen-xl flex items-center justify-between gap-1.5 px-2.5 md:px-6 h-16 lg:h-[72px]">
-        <div class="shrink-0 select-none leading-none">
-          <p class="font-display font-semibold tracking-[-0.01em] text-[1.1rem] min-[404px]:text-[1.3rem] md:text-[1.75rem] lg:text-[2rem]">
-            <span class="text-primary">Easy Fix</span> <span class="text-brass">Appliance</span>
-          </p>
-          <p class="mt-0.5 pl-2 md:pl-3 font-montserrat text-[5.5px] min-[404px]:text-[6.5px] md:text-[8px] font-semibold uppercase tracking-[0.3em] md:tracking-[0.34em] text-primary/80">
-            Appliance Repair Experts
-          </p>
-        </div>
-
-        <nav aria-label="Page sections" class="hidden lg:flex items-center gap-5 xl:gap-8 font-montserrat text-[13px] text-primary/80">
-          <a
-            v-for="item in navItems"
-            :key="item.href"
-            :href="item.href"
-            class="hover:text-brass-dark transition-colors aria-[current=location]:text-brass-dark"
-            :aria-current="activeNav === item.href ? 'location' : undefined"
-            @click="onNav(item)"
-          >{{ item.label }}</a>
-        </nav>
-
-        <div class="flex items-center gap-1.5 md:gap-5">
-          <a
-            :href="`tel:${phone.tel}`"
-            class="flex items-center gap-1 md:gap-2.5 max-[343px]:p-1.5 max-[343px]:-m-1.5"
-            data-cta="lp-call"
-            @click="onCall('header')"
-          >
-            <LpIcon name="phone" class="w-3.5 h-3.5 md:w-5 md:h-5 text-primary shrink-0 fill-primary" />
-            <span class="leading-tight max-[343px]:sr-only">
-              <span class="block font-montserrat font-semibold text-[10.5px] min-[404px]:text-[11.5px] md:text-[15px] whitespace-nowrap">{{ phone.display }}</span>
-              <span class="block text-[8px] md:text-[10px] text-gray-500 whitespace-nowrap">
-                <span class="hidden md:inline">Locally Owned • </span>Bay Area Service
-              </span>
-            </span>
-          </a>
-          <button
-            type="button"
-            class="flex items-center gap-1.5 md:gap-2 rounded-md bg-ink text-white px-2 md:px-5 h-10 md:h-11 font-display font-semibold text-[12px] min-[404px]:text-[13px] md:text-[17px] leading-[1.05] transition-colors hover:bg-brass focus:outline-none focus-visible:ring-2 focus-visible:ring-brass focus-visible:ring-offset-2"
-            data-cta="lp-schedule"
-            @click="onSchedule('header')"
-          >
-            <LpIcon name="calendar" class="hidden min-[404px]:block w-4 h-4 md:w-5 md:h-5 shrink-0" />
-            <span class="text-left md:whitespace-nowrap">Schedule<br class="md:hidden" /> Service</span>
-          </button>
-          <button
-            type="button"
-            class="lg:hidden p-1 text-primary"
-            :aria-expanded="menuOpen"
-            aria-controls="lp-menu"
-            @click="menuOpen = !menuOpen"
-          >
-            <LpIcon :name="menuOpen ? 'close' : 'menu'" class="w-6 h-6" />
-            <span class="sr-only">{{ menuOpen ? 'Close menu' : 'Open menu' }}</span>
-          </button>
-        </div>
-      </div>
-
-      <!-- Mobile menu: in-page jumps + the two CTAs, nothing leaves the page -->
-      <nav v-show="menuOpen" id="lp-menu" aria-label="Page sections (mobile)" class="lg:hidden border-t border-primary/10 bg-white px-4 pb-4">
-        <a
-          v-for="item in navItems"
-          :key="item.href"
-          :href="item.href"
-          class="block py-3 border-b border-primary/5 font-montserrat text-sm text-primary aria-[current=location]:text-brass-dark"
-          :aria-current="activeNav === item.href ? 'location' : undefined"
-          @click="onNav(item)"
-        >{{ item.label }}</a>
-        <div class="grid grid-cols-2 gap-2 pt-4">
-          <a :href="`tel:${phone.tel}`" :class="[btnOutline, 'h-12 text-base']" data-cta="lp-call" @click="menuOpen = false; onCall('menu')">
-            <LpIcon name="phone" class="w-4 h-4 fill-primary" /> Call Now
-          </a>
-          <button type="button" :class="[btnSolid, 'h-12 text-base']" data-cta="lp-schedule" @click="onSchedule('menu')">
-            <LpIcon name="calendar" class="w-4 h-4" /> Schedule
-          </button>
-        </div>
-      </nav>
-    </header>
+    <LpHeader
+      v-model:menu-open="menuOpen"
+      :phone="phone"
+      :nav-items="navItems"
+      :active-nav="activeNav"
+      @call="onCall"
+      @schedule="onSchedule"
+      @nav="onNav"
+    />
 
     <main>
       <!-- ============ Hero ============ -->
@@ -110,9 +39,7 @@
 
             <div class="mt-3 lg:mt-4 flex flex-wrap items-center gap-x-3 gap-y-1 text-[10.5px] lg:text-[12px] text-primary/85">
               <span class="flex items-center gap-2">
-                <span class="flex text-[#F5B301]" role="img" :aria-label="`${rating.value} out of 5 stars`">
-                  <svg v-for="i in 5" :key="i" class="w-3.5 h-3.5 lg:w-4 lg:h-4" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path :d="starPath" /></svg>
-                </span>
+                <LpStars size="w-3.5 h-3.5 lg:w-4 lg:h-4" :label="`${rating.value} out of 5 stars`" />
                 {{ rating.value }} Google Rating
               </span>
               <span class="text-primary/30" aria-hidden="true">|</span>
@@ -264,82 +191,7 @@
       </section>
 
       <!-- ============ Reviews ============ -->
-      <section id="reviews" class="mx-auto max-w-screen-xl px-3 sm:px-6 lg:px-8 pt-6 lg:pt-8 scroll-mt-20">
-        <p :class="eyebrow">Real People. Real Results.</p>
-        <h2 class="mt-1.5 text-center font-display font-semibold tracking-[-0.01em] text-[1.75rem] sm:text-4xl lg:text-[2.6rem] leading-tight">
-          What Bay Area Customers Say
-        </h2>
-        <p class="mt-1 text-center text-[11.5px] lg:text-[15px] text-gray-600">
-          Trusted by homeowners across the Bay Area for expert service and lasting results.
-        </p>
-
-        <div class="mt-4 lg:mt-5 lg:grid lg:grid-cols-[0.8fr_1fr_1fr_1fr] lg:gap-4">
-          <!-- Rating summary (desktop) -->
-          <div class="hidden lg:flex flex-col items-center justify-center rounded-lg border border-primary/10 bg-white p-5 shadow-sm">
-            <img :src="googleLogo" alt="Google" width="44" height="44" class="w-11 h-11" loading="lazy" />
-            <p class="mt-2 flex items-center gap-2">
-              <span class="font-display font-semibold text-4xl">{{ rating.value }}</span>
-              <span class="flex text-[#F5B301]" role="img" :aria-label="`${rating.value} out of 5 stars`">
-                <svg v-for="i in 5" :key="i" class="w-5 h-5" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path :d="starPath" /></svg>
-              </span>
-            </p>
-            <p class="mt-1 text-sm text-gray-600">Based on {{ rating.count }} reviews</p>
-          </div>
-
-          <!-- Review cards: scroll-snap carousel on mobile, grid on desktop -->
-          <div
-            ref="reviewTrack"
-            class="flex lg:contents overflow-x-auto snap-x snap-mandatory gap-3 items-start [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
-            @scroll.passive="onReviewScroll"
-          >
-            <figure
-              v-for="r in displayedReviews"
-              :key="r.author"
-              class="snap-center shrink-0 w-full lg:w-auto rounded-lg border border-primary/10 bg-white shadow-sm px-4 py-3.5 lg:p-5 flex lg:flex-col gap-3.5 lg:gap-0"
-            >
-              <!-- mobile: G + stars + name column -->
-              <div class="lg:hidden shrink-0 w-[34%] flex items-start gap-2.5">
-                <img :src="googleLogo" alt="" width="28" height="28" class="w-7 h-7 mt-0.5" loading="lazy" />
-                <div>
-                  <span class="flex text-[#F5B301]" role="img" aria-label="5 out of 5 stars">
-                    <svg v-for="i in 5" :key="i" class="w-3.5 h-3.5" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path :d="starPath" /></svg>
-                  </span>
-                  <p class="mt-1.5 font-montserrat font-semibold text-[12px] leading-tight">{{ r.author }}</p>
-                  <p class="text-[11px] text-gray-500">{{ r.date }}</p>
-                </div>
-              </div>
-              <!-- desktop: stars + G row -->
-              <div class="hidden lg:flex items-center justify-between">
-                <span class="flex text-[#F5B301]" role="img" aria-label="5 out of 5 stars">
-                  <svg v-for="i in 5" :key="i" class="w-4 h-4" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path :d="starPath" /></svg>
-                </span>
-                <img :src="googleLogo" alt="Google review" width="20" height="20" class="w-5 h-5" loading="lazy" />
-              </div>
-              <blockquote class="lg:mt-3 font-display italic text-[15px] lg:text-[17px] leading-snug text-primary/90 lg:flex-1 [overflow-wrap:anywhere]">
-                “{{ r.excerpt }}”
-              </blockquote>
-              <figcaption class="hidden lg:block mt-4">
-                <span class="block font-montserrat font-semibold text-sm">{{ r.author }}</span>
-                <span class="block text-sm text-gray-500">{{ r.date }}</span>
-              </figcaption>
-            </figure>
-          </div>
-        </div>
-
-        <!-- Mobile carousel dots -->
-        <div class="lg:hidden mt-1 flex justify-center">
-          <!-- 8px dot, 32px tap target -->
-          <button
-            v-for="(r, i) in displayedReviews"
-            :key="r.author"
-            type="button"
-            class="flex items-center justify-center w-8 h-8"
-            :aria-label="`Show review ${i + 1}`"
-            :aria-current="i === activeReview"
-            @click="goToReview(i)"
-          ><span class="w-2 h-2 rounded-full transition-colors" :class="i === activeReview ? 'bg-brass' : 'bg-primary/20'" aria-hidden="true"></span></button>
-        </div>
-      </section>
+      <LpReviews class="mx-auto max-w-screen-xl px-3 sm:px-6 lg:px-8 pt-6 lg:pt-8" :rating="rating" :reviews="displayedReviews" />
 
       <!-- ============ FAQ ============ -->
       <section id="faq" class="mx-auto max-w-screen-xl px-3 sm:px-6 lg:px-8 pt-6 lg:pt-8 pb-8 scroll-mt-20">
@@ -411,61 +263,24 @@
       © {{ year }} Easy Fix Appliance · Licensed &amp; Insured · Bay Area, California
     </footer>
 
-    <!-- Desktop call feedback: a tel: click there opens an OS prompt (or nothing) outside the page.
-         The live region stays mounted (empty) so screen readers announce each new message. -->
-    <div role="status" class="fixed bottom-6 left-1/2 -translate-x-1/2 z-50 w-max max-w-[calc(100vw-2rem)] pointer-events-none">
-      <p
-        v-if="callHint"
-        :key="callHint"
-        class="rounded-2xl sm:rounded-full bg-ink text-white px-5 py-3 font-montserrat text-sm text-center shadow-xl"
-      >
-        Call us at <span class="font-semibold">{{ phone.display }}</span> — dial from your phone or calling app
-      </p>
-    </div>
+    <LpCallToast :phone="phone" :hint="callHint" />
   </div>
 </template>
 
 <script setup>
 import heroImage from '~/assets/img/kitchenBackground2.webp'
 import accentImage from '~/assets/img/kitchenBright.webp'
-import googleLogo from '~/assets/img/google.svg'
+import { lpBtnSolid as btnSolid, lpBtnOutline as btnOutline, lpEyebrow as eyebrow } from '~/utils/lp'
 
 // Google Ads landing page, shared by /ppc/high-end and /ppc/general
-// (variant configs in data/ppc_landing.js). Deliberately has no links off
-// the page: the only actions are Call and Schedule Service (lead form).
-// noindex + sitemap exclusion are set via routeRules in nuxt.config.ts.
+// (variant configs in data/ppc_landing.js). Tracking scripts and the
+// Call / Schedule Service / nav handlers come from useLpPage.
 const props = defineProps({
   variant: { type: Object, required: true },
 })
 
-// GoHighLevel external tracking (page views, attribution and form submissions
-// into the CRM). Loaded only on these landing pages.
-useHead({
-  script: [
-    // Google Tag Manager with the page (standard snippet), on these landing pages only:
-    // the anti-fraud tag in the container must also see visitors who never move the
-    // mouse. The rest of the site loads GTM on first interaction
-    // (plugins/deferred-scripts.client.js); both skip if GTM is already on the page.
-    {
-      key: 'gtm',
-      tagPriority: 'high',
-      innerHTML: `(function(w,d,s,l,i){var u='https://www.googletagmanager.com/gtm.js?id='+i;if(d.querySelector('script[src^="'+u+'"]'))return;w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=u+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-5RH2D8CH');`,
-    },
-    {
-      src: 'https://link.msgsndr.com/js/external-tracking.js',
-      'data-tracking-id': 'tk_06879e56452d496eb3610c11f1d1c2ca',
-      async: true,
-      tagPosition: 'bodyClose',
-    },
-  ],
-})
-
-// Same number as the rest of the site (useContact.js).
-const { phoneNumber, phoneDisplay } = useContact()
-const phone = { tel: `+1${phoneNumber}`, display: phoneDisplay }
-
-// Shown until /google-reviews returns live values.
-const rating = reactive({ value: '5.0', count: '200+' })
+const { phone, menuOpen, callHint, onCall, activeNav, onNav, formFlash, onSchedule } = useLpPage(props.variant.key)
+const { rating, displayedReviews } = useLpReviews()
 
 const navItems = [
   { label: 'Services', href: '#services' },
@@ -533,193 +348,17 @@ const faqs = computed(() => [
   },
 ])
 
-// Real Google reviews (shortened) — replaced by live GMB reviews when the API responds.
-const fallbackReviews = [
-  { author: 'Den Baron', date: 'Google review', review: 'Had Tom come repair our Subzero fridge last week. He was an amazing technician, ontime, and very professional.' },
-  { author: 'thai bui', date: 'Google review', review: "The technician, Tom, arrived right on time… He quickly diagnosed the problem and had the replacement part on hand, completing the repair much faster than I expected." },
-  { author: 'Uzak Almasbek', date: 'Google review', review: "My Viking oven wasn't heating properly… He diagnosed and fixed the issue in just one trip, which was a huge relief." },
-]
-const reviews = ref(fallbackReviews)
-
-// Accepts both the site's review shape and Google Places field names, and
-// works out an age for newest-first sorting (timestamp, date, or "2 weeks ago").
-const UNIT_DAYS = { day: 1, week: 7, month: 30, year: 365 }
-const normalizeReview = (r) => {
-  const date = r.date || r.relative_time_description || ''
-  let ts = Number(r.time || r.timestamp || 0)
-  if (ts && ts < 1e12) ts *= 1000
-  if (!ts && r.publishTime) ts = Date.parse(r.publishTime) || 0
-  if (!ts) {
-    const m = String(date).match(/(a|an|\d+)\s+(day|week|month|year)s?\s+ago/i)
-    if (m) ts = Date.now() - (/^an?$/i.test(m[1]) ? 1 : Number(m[1])) * UNIT_DAYS[m[2].toLowerCase()] * 864e5
-    else if (/today|hour|minute|just now/i.test(date)) ts = Date.now()
-  }
-  return {
-    author: r.author || r.author_name || r.authorAttribution?.displayName || 'Google user',
-    date: date || 'Google review',
-    review: r.review || r.text?.text || r.text || '',
-    rating: r.rating ? Number(r.rating) : 0,
-    ts,
-  }
-}
-
-const excerpt = (text, max = 150) => {
-  if (!text || text.length <= max) return text
-  // Cut at a word boundary; hard-cut text without spaces (e.g. CJK, long links).
-  const space = text.lastIndexOf(' ', max)
-  const cut = space > max * 0.6 ? text.slice(0, space) : Array.from(text).slice(0, max).join('')
-  return cut.replace(/[,;:.\s]+$/, '') + '…'
-}
-const displayedReviews = computed(() =>
-  reviews.value.slice(0, 3).map((r) => ({ ...r, excerpt: excerpt(r.review) })),
-)
-
-const starPath = 'M9.05 2.93c.3-.92 1.6-.92 1.9 0l1.3 4.02a1 1 0 0 0 .95.69h4.22c.97 0 1.37 1.24.59 1.81l-3.42 2.48a1 1 0 0 0-.36 1.12l1.3 4.02c.3.92-.75 1.69-1.54 1.12l-3.42-2.48a1 1 0 0 0-1.18 0l-3.42 2.48c-.78.57-1.84-.2-1.54-1.12l1.3-4.02a1 1 0 0 0-.36-1.12L1.95 9.45c-.78-.57-.38-1.81.59-1.81h4.22a1 1 0 0 0 .95-.69z'
-
-const eyebrow =
-  "flex items-center justify-center gap-4 font-montserrat whitespace-nowrap text-[8.5px] lg:text-[10px] font-semibold uppercase tracking-[0.24em] lg:tracking-[0.32em] text-brass-dark before:content-[''] before:w-6 sm:before:w-10 lg:before:w-16 before:h-px before:bg-brass/70 after:content-[''] after:w-6 sm:after:w-10 lg:after:w-16 after:h-px after:bg-brass/70"
-const btnSolid =
-  'inline-flex items-center justify-center gap-2 rounded-md bg-ink text-white font-display font-semibold transition-colors duration-300 hover:bg-brass focus:outline-none focus-visible:ring-2 focus-visible:ring-brass focus-visible:ring-offset-2'
-const btnOutline =
-  'inline-flex items-center justify-center gap-2 rounded-md border border-brass/60 bg-white text-primary transition-colors duration-300 hover:border-brass hover:bg-cream focus:outline-none focus-visible:ring-2 focus-visible:ring-brass focus-visible:ring-offset-2'
-
 const year = new Date().getFullYear()
-
-// ---------- CTA handling ----------
-const menuOpen = ref(false)
-
-// Desktop (mouse) visitors can't dial: a tel: click opens an OS "pick an app" prompt, or
-// nothing, outside the page, so it looks dead (Clarity logs dead/rage clicks). Keep following
-// tel: for desktop calling apps, but also show the number in a message on every click.
-// The Call Now labels stay as they are (client asked not to show the number on them).
-const callHint = ref(0)
-let callHintTimer
-const onCall = (location) => {
-  trackEvent('lp_call_click', { cta_location: location, landing_variant: props.variant.key })
-  if (!window.matchMedia('(hover: hover) and (pointer: fine)').matches) return
-  callHint.value++ // re-keyed, so repeat clicks get feedback too
-  clearTimeout(callHintTimer)
-  callHintTimer = setTimeout(() => { callHint.value = 0 }, 6000)
-}
-
-// In-page nav: mark the item and briefly outline the target so every click visibly does
-// something, even when the page can't scroll further (on desktop FAQ/Contact both sit at
-// max scroll, so a visitor already at the bottom gets no scroll at all).
-const activeNav = ref('')
-let navFlashTimer
-const onNav = (item) => {
-  menuOpen.value = false
-  activeNav.value = item.href
-  const target = document.querySelector(item.href)
-  if (!target) return
-  clearTimeout(navFlashTimer)
-  document.querySelectorAll('[data-lp-flash]').forEach((el) => el.removeAttribute('data-lp-flash'))
-  void target.offsetWidth // restart the animation on repeat clicks
-  target.setAttribute('data-lp-flash', '')
-  // Clear the item mark too, so it isn't left highlighted once the visitor scrolls elsewhere.
-  navFlashTimer = setTimeout(() => {
-    target.removeAttribute('data-lp-flash')
-    activeNav.value = ''
-  }, 1600)
-}
-
-// Desktop Schedule Service: when the form is already in view nothing scrolls, so flash it.
-const formFlash = ref(false)
-let formFlashTimer
-const flashForm = () => {
-  clearTimeout(formFlashTimer)
-  formFlash.value = false
-  requestAnimationFrame(() => {
-    formFlash.value = true
-    formFlashTimer = setTimeout(() => { formFlash.value = false }, 1500)
-  })
-}
-
-// Schedule Service (header, hero, menu, bottom band): bring the on-page form into view,
-// focus its first field and flash it, so the click visibly does something even when the
-// form is already on screen.
-const onSchedule = async (location) => {
-  trackEvent('lp_schedule_click', { cta_location: location, landing_variant: props.variant.key })
-  // The open mobile menu sits in the sticky header: let it collapse before measuring,
-  // or the scroll overshoots by the menu's height.
-  if (menuOpen.value) {
-    menuOpen.value = false
-    await nextTick()
-  }
-  const form = document.getElementById('lp-form')
-  const desktop = window.matchMedia('(min-width: 1024px)').matches
-  form.scrollIntoView({ behavior: 'smooth', block: desktop ? 'center' : 'start' })
-  form.querySelector('select')?.focus({ preventScroll: true })
-  flashForm()
-}
-
-// ---------- Reviews carousel (mobile) ----------
-const reviewTrack = ref(null)
-const activeReview = ref(0)
-const onReviewScroll = () => {
-  const el = reviewTrack.value
-  if (el && el.clientWidth) activeReview.value = Math.round(el.scrollLeft / el.clientWidth)
-}
-const goToReview = (i) => {
-  const el = reviewTrack.value
-  el?.scrollTo({ left: i * el.clientWidth, behavior: 'smooth' })
-}
-
-const { fetchGoogleReviews } = useGoogleReviews()
-const { capture } = useLeadAttribution()
-
-onMounted(async () => {
-  capture()
-  const data = await fetchGoogleReviews()
-  if (data?.reviews?.length) {
-    const latest = data.reviews
-      .map(normalizeReview)
-      .filter((r) => r.review && (!r.rating || r.rating >= 5))
-      .sort((a, b) => b.ts - a.ts)
-    // Google returns at most the 5 newest; if fewer than 3 of them are 5-star,
-    // keep the live ones first and top up with the built-in reviews.
-    if (latest.length) {
-      const topUp = fallbackReviews.filter((f) => !latest.some((l) => l.author === f.author))
-      reviews.value = [...latest, ...topUp].slice(0, 3)
-    }
-  }
-  if (data?.rating) rating.value = Number(data.rating).toFixed(1)
-  // Backend (easyfix-backend reviews/views.py) sends the count as `total`.
-  const total = Number(data?.total ?? data?.user_ratings_total ?? data?.total_reviews)
-  if (total > 0) rating.count = total.toLocaleString('en-US')
-})
-
-onBeforeUnmount(() => {
-  clearTimeout(callHintTimer)
-  clearTimeout(navFlashTimer)
-  clearTimeout(formFlashTimer)
-})
 </script>
 
 <style scoped>
-/* Brief brass frame on the section an in-page nav item jumped to (drawn above its children). */
-[data-lp-flash] {
-  position: relative;
-}
-[data-lp-flash]::after {
-  content: '';
-  position: absolute;
-  inset: 0;
-  z-index: 1;
-  pointer-events: none;
-  box-shadow: inset 0 0 0 3px rgb(176 141 87 / 0.9);
-  animation: lp-flash 1.6s ease-out forwards;
-}
-/* #brands has no padding and #services no bottom padding: draw their frame just outside
+/* Nav-jump frame (base styles: [data-lp-flash] in assets/css/global.css).
+   #brands has no padding and #services no bottom padding: draw their frame just outside
    (both sit inside #services' side padding, so this can't cause horizontal scroll). */
 #brands[data-lp-flash]::after {
   inset: -6px;
 }
 #services[data-lp-flash]::after {
   bottom: -6px;
-}
-@keyframes lp-flash {
-  0%, 40% { opacity: 1; }
-  100% { opacity: 0; }
 }
 </style>
