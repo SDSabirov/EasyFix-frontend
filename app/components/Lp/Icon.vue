@@ -7,7 +7,7 @@
 <script setup>
 defineProps({ name: { type: String, required: true } })
 
-// Line icons for the PPC landing page (24×24, stroke-based).
+// Line icons for the PPC landing pages (24×24, stroke-based).
 const paths = {
   refrigerator: '<rect x="5.5" y="2" width="13" height="20" rx="1.5"/><path d="M5.5 9.5h13M8.5 5v2.5M8.5 12v4"/>',
   freezer: '<path d="M12 2v20M3.3 7l17.4 10M3.3 17 20.7 7"/><path d="m9.5 3.5 2.5 2 2.5-2M9.5 20.5l2.5-2 2.5 2M3.6 10.2l3-.9-.6-3.1M20.4 13.8l-3 .9.6 3.1M3.6 13.8l3 .9-.6 3.1M20.4 10.2l-3-.9.6-3.1"/>',
@@ -30,5 +30,8 @@ const paths = {
   chevron: '<path d="m6 9 6 6 6-6"/>',
   menu: '<path d="M4 6.5h16M4 12h16M4 17.5h16"/>',
   close: '<path d="M6 6l12 12M18 6 6 18"/>',
+  check: '<path d="M20 6 9 17l-5-5"/>',
+  bolt: '<path d="M13 2.5 5 13.5h6l-1 8 8-11h-6z"/>',
+  award: '<circle cx="12" cy="9" r="5.5"/><path d="m8.6 13.4-1.6 8.1 5-2.6 5 2.6-1.6-8.1M9.8 9l1.6 1.6 2.9-3.1"/>',
 }
 </script>

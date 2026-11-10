@@ -15,7 +15,7 @@
         @submit.prevent="submit"
         @keydown.enter="onEnter"
       >
-        <div class="grid grid-cols-1 min-[360px]:grid-cols-2 gap-3">
+        <div v-if="!compact" class="grid grid-cols-1 min-[360px]:grid-cols-2 gap-3">
           <div>
             <label :for="`${idPrefix}-brand`" class="sr-only">Appliance brand</label>
             <select
@@ -43,7 +43,7 @@
             </select>
           </div>
         </div>
-        <div class="grid grid-cols-2 gap-3">
+        <div v-if="!compact" class="grid grid-cols-2 gap-3">
           <div>
             <label :for="`${idPrefix}-first`" class="sr-only">First name</label>
             <input
@@ -71,8 +71,23 @@
             />
           </div>
         </div>
+        <!-- Compact form. GoHighLevel maps external-form fields by name attribute and label:
+             full_name / "Full Name" and phone / "Phone" are its own standard keys. -->
+        <div v-else>
+          <label :for="`${idPrefix}-name`" class="sr-only">Full Name</label>
+          <input
+            :id="`${idPrefix}-name`"
+            name="full_name"
+            v-model.trim="form.name"
+            type="text"
+            autocomplete="name"
+            placeholder="Name"
+            :class="[fieldClass, errors.name && errorClass]"
+            required
+          />
+        </div>
         <div>
-          <label :for="`${idPrefix}-phone`" class="sr-only">Phone number</label>
+          <label :for="`${idPrefix}-phone`" class="sr-only">{{ compact ? 'Phone' : 'Phone number' }}</label>
           <input
             :id="`${idPrefix}-phone`"
             name="phone"
@@ -80,12 +95,12 @@
             type="tel"
             inputmode="tel"
             autocomplete="tel-national"
-            placeholder="Phone number"
+            :placeholder="compact ? 'Phone' : 'Phone number'"
             :class="[fieldClass, errors.phone && errorClass]"
             required
           />
         </div>
-        <div>
+        <div v-if="!compact">
           <label :for="`${idPrefix}-email`" class="sr-only">Email</label>
           <input
             :id="`${idPrefix}-email`"
@@ -99,7 +114,7 @@
             required
           />
         </div>
-        <div>
+        <div v-if="!compact">
           <label :for="`${idPrefix}-zip`" class="sr-only">ZIP code</label>
           <input
             :id="`${idPrefix}-zip`"
@@ -113,6 +128,19 @@
             :class="[fieldClass, errors.zip && errorClass]"
             required
           />
+        </div>
+        <div v-else>
+          <label :for="`${idPrefix}-service`" class="sr-only">Appliance / Brand</label>
+          <select
+            :id="`${idPrefix}-service`"
+            name="appliance"
+            v-model="form.service"
+            :class="[fieldClass, '!pr-9', !form.service && 'text-gray-500', errors.service && errorClass]"
+            required
+          >
+            <option value="" disabled>Appliance / Brand</option>
+            <option v-for="s in services" :key="s.label" :value="s.label">{{ s.label }}</option>
+          </select>
         </div>
 
         <p v-if="errorMessage" class="text-sm text-red-600" role="alert">{{ errorMessage }}</p>
@@ -139,7 +167,7 @@
       <div class="mx-auto flex items-center justify-center w-16 h-16 rounded-full bg-brass/10">
         <svg class="w-8 h-8 text-brass" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5" /></svg>
       </div>
-      <h2 class="mt-5 font-display font-semibold text-3xl text-primary">Thank you{{ form.firstName ? `, ${form.firstName}` : '' }}!</h2>
+      <h2 class="mt-5 font-display font-semibold text-3xl text-primary">Thank you{{ sent.firstName ? `, ${sent.firstName}` : '' }}!</h2>
       <p class="mt-2 text-sm text-gray-600">
         We've received your request and will call you shortly to confirm your appointment.
         Need help right now? Call
@@ -154,9 +182,15 @@ const props = defineProps({
   idPrefix: { type: String, required: true },
   phone: { type: Object, required: true },
   location: { type: String, default: 'hero' },
-  brands: { type: Array, required: true },
-  // Landing page variant ('high-end' | 'general'); tags the lead and GTM events.
+  // Brand options of the full form.
+  brands: { type: Array, default: () => [] },
+  // Landing page variant ('high-end' | 'general' | 'subzero'); tags the lead and GTM events.
   variant: { type: String, required: true },
+  // Short form for the brand landing pages: Name, Phone and one "Appliance / Brand"
+  // select, instead of brand, appliance, first/last name, phone, email and ZIP.
+  compact: { type: Boolean, default: false },
+  // Options of the compact select: [{ label: 'Wolf Ranges', brand: 'Wolf', type: 'Range' }].
+  services: { type: Array, default: () => [] },
 })
 const emit = defineEmits(['call', 'submitted'])
 
@@ -169,8 +203,9 @@ const fieldClass =
   'block w-full h-11 rounded-lg border border-primary/15 bg-white px-3.5 text-sm text-primary placeholder:text-gray-500 focus:border-brass focus:ring-2 focus:ring-brass/30 focus:outline-none transition-colors'
 const errorClass = '!border-red-500'
 
-const form = reactive({ brand: '', type: '', zip: '', firstName: '', lastName: '', email: '', phone: '' })
-const errors = reactive({ brand: false, type: false, zip: false, firstName: false, lastName: false, email: false, phone: false })
+// name + service belong to the compact form; the rest (except phone) to the full one.
+const form = reactive({ brand: '', type: '', zip: '', firstName: '', lastName: '', email: '', phone: '', name: '', service: '' })
+const errors = reactive({ brand: false, type: false, zip: false, firstName: false, lastName: false, email: false, phone: false, name: false, service: false })
 const errorMessage = ref('')
 const loading = ref(false)
 const submitted = ref(false)
@@ -179,15 +214,22 @@ const digits = (v) => v.replace(/\D/g, '')
 
 const validate = () => {
   const phoneDigits = digits(form.phone).replace(/^1(?=\d{10}$)/, '')
-  errors.brand = !form.brand
-  errors.firstName = !form.firstName
-  errors.lastName = !form.lastName
-  errors.email = !/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(form.email)
-  errors.type = !form.type
-  errors.zip = !/^\d{5}$/.test(form.zip)
   errors.phone = phoneDigits.length !== 10
+  if (props.compact) {
+    errors.name = !form.name
+    errors.service = !form.service
+  } else {
+    errors.brand = !form.brand
+    errors.firstName = !form.firstName
+    errors.lastName = !form.lastName
+    errors.email = !/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(form.email)
+    errors.type = !form.type
+    errors.zip = !/^\d{5}$/.test(form.zip)
+  }
   if (Object.values(errors).some(Boolean)) {
-    const missing = !form.brand || !form.type || !form.zip || !form.firstName || !form.lastName || !form.email || !form.phone
+    const missing = props.compact
+      ? !form.name || !form.phone || !form.service
+      : !form.brand || !form.type || !form.zip || !form.firstName || !form.lastName || !form.email || !form.phone
     errorMessage.value = missing
       ? 'Please complete all fields.'
       : errors.email
@@ -200,6 +242,19 @@ const validate = () => {
   errorMessage.value = ''
   return phoneDigits
 }
+
+// Who the lead is and which appliance it is about, from either form layout.
+// The compact form has one name field (first word = first name) and one select.
+const leadDetails = () => {
+  if (!props.compact) {
+    return { firstName: form.firstName, lastName: form.lastName, brand: form.brand, type: form.type, appliance: `${form.brand} ${form.type}` }
+  }
+  const [firstName, ...rest] = form.name.split(/\s+/)
+  const service = props.services.find((s) => s.label === form.service)
+  return { firstName, lastName: rest.join(' '), brand: service.brand, type: service.type, appliance: service.label }
+}
+// Kept for the thank-you message.
+const sent = reactive({ firstName: '' })
 
 const { get: getAttribution } = useLeadAttribution()
 
@@ -228,11 +283,13 @@ const submit = async () => {
   loading.value = true
 
   // Same endpoint + shape as Forms/BookingForm.vue (the existing CRM pipeline);
-  // fields this short form doesn't collect (address, age, date, time) are sent empty.
+  // fields this form doesn't collect (address, age, date, time; on the compact
+  // form also email and ZIP) are sent empty.
+  const lead = leadDetails()
   const payload = {
-    personal: { firstName: form.firstName, lastName: form.lastName, email: form.email, phone: phoneDigits, address: '', zip: form.zip, smsConsent: true },
-    appliance: { type: form.type, brand: form.brand, age: '', date: '', time: '' },
-    issue: `PPC landing page request (${form.brand} ${form.type}).`,
+    personal: { firstName: lead.firstName, lastName: lead.lastName, email: form.email, phone: phoneDigits, address: '', zip: form.zip, smsConsent: true },
+    appliance: { type: lead.type, brand: lead.brand, age: '', date: '', time: '' },
+    issue: `PPC landing page request (${lead.appliance}).`,
     source: `ppc-${props.variant}`,
     attribution: getAttribution(),
   }
@@ -244,14 +301,15 @@ const submit = async () => {
       body: JSON.stringify(payload),
     })
     if (!response.ok) throw new Error(`HTTP ${response.status}`)
+    sent.firstName = lead.firstName
     submitted.value = true
     trackEvent('lp_form_submit', {
       form_location: props.location,
       landing_variant: props.variant,
-      appliance_brand: form.brand,
-      appliance_type: form.type,
+      appliance_brand: lead.brand,
+      appliance_type: lead.type,
       // For Google Ads enhanced conversions (configure the user-provided-data variable in GTM).
-      enhanced_conversion_data: { email: form.email.toLowerCase(), phone_number: `+1${phoneDigits}` },
+      enhanced_conversion_data: { ...(form.email && { email: form.email.toLowerCase() }), phone_number: `+1${phoneDigits}` },
     })
     emit('submitted')
   } catch (error) {
