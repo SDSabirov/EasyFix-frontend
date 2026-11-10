@@ -1,7 +1,7 @@
 <template>
   <div class="bg-white rounded-2xl shadow-2xl shadow-ink/15 border border-primary/5 p-5 sm:p-7">
     <template v-if="!submitted">
-      <h2 :id="`${idPrefix}-title`" class="font-display font-semibold text-[1.9rem] leading-tight text-primary">
+      <h2 :id="`${idPrefix}-title`" class="font-display font-semibold text-[1.9rem] leading-tight text-primary" :class="compact && 'max-[343px]:text-[1.7rem]'">
         Schedule Your Repair
       </h2>
       <p class="mt-1 text-sm text-gray-600">Tell us what needs fixing and we'll call to confirm a time.</p>
@@ -23,6 +23,7 @@
               name="brand"
               v-model="form.brand"
               :class="[fieldClass, 'pl-3 !pr-7', !form.brand && 'text-gray-500', errors.brand && errorClass]"
+              :aria-invalid="errors.brand || undefined"
               required
             >
               <option value="" disabled>Brand</option>
@@ -36,6 +37,7 @@
               name="appliance_type"
               v-model="form.type"
               :class="[fieldClass, 'pl-3 !pr-7', !form.type && 'text-gray-500', errors.type && errorClass]"
+              :aria-invalid="errors.type || undefined"
               required
             >
               <option value="" disabled>Appliance</option>
@@ -54,6 +56,7 @@
               autocomplete="given-name"
               placeholder="First name"
               :class="[fieldClass, errors.firstName && errorClass]"
+              :aria-invalid="errors.firstName || undefined"
               required
             />
           </div>
@@ -67,6 +70,7 @@
               autocomplete="family-name"
               placeholder="Last name"
               :class="[fieldClass, errors.lastName && errorClass]"
+              :aria-invalid="errors.lastName || undefined"
               required
             />
           </div>
@@ -83,6 +87,7 @@
             autocomplete="name"
             placeholder="Name"
             :class="[fieldClass, errors.name && errorClass]"
+            :aria-invalid="errors.name || undefined"
             required
           />
         </div>
@@ -97,6 +102,7 @@
             autocomplete="tel-national"
             :placeholder="compact ? 'Phone' : 'Phone number'"
             :class="[fieldClass, errors.phone && errorClass]"
+            :aria-invalid="errors.phone || undefined"
             required
           />
         </div>
@@ -111,6 +117,7 @@
             autocomplete="email"
             placeholder="Email"
             :class="[fieldClass, errors.email && errorClass]"
+            :aria-invalid="errors.email || undefined"
             required
           />
         </div>
@@ -126,6 +133,7 @@
             maxlength="5"
             placeholder="ZIP code"
             :class="[fieldClass, errors.zip && errorClass]"
+            :aria-invalid="errors.zip || undefined"
             required
           />
         </div>
@@ -135,11 +143,12 @@
             :id="`${idPrefix}-service`"
             name="appliance"
             v-model="form.service"
-            :class="[fieldClass, '!pr-9', !form.service && 'text-gray-500', errors.service && errorClass]"
+            :class="[fieldClass, '!pr-9', !form.service && '!text-gray-500', errors.service && errorClass]"
+            :aria-invalid="errors.service || undefined"
             required
           >
             <option value="" disabled>Appliance / Brand</option>
-            <option v-for="s in services" :key="s.label" :value="s.label">{{ s.label }}</option>
+            <option v-for="s in services" :key="s.label" :value="s.label" class="text-primary">{{ s.label }}</option>
           </select>
         </div>
 
@@ -156,7 +165,7 @@
           {{ loading ? 'Sending…' : 'Request Appointment' }}
         </button>
         <p class="text-center text-xs text-gray-600">We'll call you shortly to confirm.</p>
-        <p class="text-center text-[10px] leading-snug text-gray-400">
+        <p class="text-center leading-snug" :class="compact ? 'text-[11px] text-gray-500' : 'text-[10px] text-gray-400'">
           By submitting, you agree to be contacted by Easy Fix Appliance by phone or text about your request.
           Msg &amp; data rates may apply. Reply STOP to opt out.
         </p>
@@ -167,7 +176,7 @@
       <div class="mx-auto flex items-center justify-center w-16 h-16 rounded-full bg-brass/10">
         <svg class="w-8 h-8 text-brass" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5" /></svg>
       </div>
-      <h2 class="mt-5 font-display font-semibold text-3xl text-primary">Thank you{{ sent.firstName ? `, ${sent.firstName}` : '' }}!</h2>
+      <h2 ref="thanksEl" tabindex="-1" class="mt-5 font-display font-semibold text-3xl text-primary focus:outline-none">Thank you{{ sent.firstName ? `, ${sent.firstName}` : '' }}!</h2>
       <p class="mt-2 text-sm text-gray-600">
         We've received your request and will call you shortly to confirm your appointment.
         Need help right now? Call
@@ -199,8 +208,10 @@ const types = [
   'Dishwasher', 'Ice Maker', 'Hood', 'Washer', 'Dryer', 'Other',
 ]
 
+// The compact form uses 16px text below lg: iOS Safari zooms the page when a focused
+// field is smaller than that.
 const fieldClass =
-  'block w-full h-11 rounded-lg border border-primary/15 bg-white px-3.5 text-sm text-primary placeholder:text-gray-500 focus:border-brass focus:ring-2 focus:ring-brass/30 focus:outline-none transition-colors'
+  `block w-full h-11 rounded-lg border border-primary/15 bg-white px-3.5 ${props.compact ? 'text-base lg:text-sm' : 'text-sm'} text-primary placeholder:text-gray-500 focus:border-brass focus:ring-2 focus:ring-brass/30 focus:outline-none transition-colors`
 const errorClass = '!border-red-500'
 
 // name + service belong to the compact form; the rest (except phone) to the full one.
@@ -214,10 +225,11 @@ const digits = (v) => v.replace(/\D/g, '')
 
 const validate = () => {
   const phoneDigits = digits(form.phone).replace(/^1(?=\d{10}$)/, '')
-  errors.phone = phoneDigits.length !== 10
+  // US numbers: neither the area code nor the exchange starts with 0 or 1.
+  errors.phone = !/^[2-9]\d{2}[2-9]\d{6}$/.test(phoneDigits)
   if (props.compact) {
     errors.name = !form.name
-    errors.service = !form.service
+    errors.service = !props.services.some((s) => s.label === form.service)
   } else {
     errors.brand = !form.brand
     errors.firstName = !form.firstName
@@ -255,6 +267,7 @@ const leadDetails = () => {
 }
 // Kept for the thank-you message.
 const sent = reactive({ firstName: '' })
+const thanksEl = ref(null)
 
 const { get: getAttribution } = useLeadAttribution()
 
@@ -274,18 +287,23 @@ const trySubmit = () => {
 const onEnter = (e) => {
   if (e.target.tagName !== 'INPUT' || e.isComposing || e.keyCode === 229) return
   e.preventDefault()
+  if (e.repeat) return // a held key would re-send after a failed request
+  // Part-way through the form, Enter ("Go" on phones) moves to the next empty field
+  // instead of flagging the fields the visitor hasn't reached yet.
+  const next = [...formEl.value.elements].find((el) => el.required && !el.value.trim())
+  if (next && next !== e.target) return next.focus()
   trySubmit()
 }
 
 const submit = async () => {
   const phoneDigits = validate()
   if (!phoneDigits || loading.value) return
-  loading.value = true
 
   // Same endpoint + shape as Forms/BookingForm.vue (the existing CRM pipeline);
   // fields this form doesn't collect (address, age, date, time; on the compact
   // form also email and ZIP) are sent empty.
   const lead = leadDetails()
+  loading.value = true
   const payload = {
     personal: { firstName: lead.firstName, lastName: lead.lastName, email: form.email, phone: phoneDigits, address: '', zip: form.zip, smsConsent: true },
     appliance: { type: lead.type, brand: lead.brand, age: '', date: '', time: '' },
@@ -301,8 +319,13 @@ const submit = async () => {
       body: JSON.stringify(payload),
     })
     if (!response.ok) throw new Error(`HTTP ${response.status}`)
-    sent.firstName = lead.firstName
+    // The compact form has one free-text name field, so its first word isn't a reliable
+    // first name ("Dr.", a surname): greet without it.
+    sent.firstName = props.compact ? '' : lead.firstName
     submitted.value = true
+    // The focused button is gone with the form: move focus to the message, so screen
+    // readers announce it.
+    nextTick(() => thanksEl.value?.focus({ preventScroll: true }))
     trackEvent('lp_form_submit', {
       form_location: props.location,
       landing_variant: props.variant,

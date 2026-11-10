@@ -7,18 +7,23 @@
     stroke-linecap="round"
     stroke-linejoin="round"
     aria-hidden="true"
+    :style="accent ? { '--lp-art-accent': accent } : undefined"
     v-html="art[name]"
   />
 </template>
 
 <script setup>
-defineProps({ name: { type: String, required: true } })
+defineProps({
+  name: { type: String, required: true },
+  // Colour of the control knobs (class "k"), e.g. Wolf's red; ink when not set.
+  accent: { type: String, default: '' },
+})
 
 // Line drawings of the appliances for the service cards on the brand landing
 // pages (160×100). Front elevations in the house style: ink outline, white
 // faces, solid ink handles; brass (#B08D57) for small details and the floor
-// line; red (#C2342D) for Wolf's signature knobs.
-// Markers: class "d" = lighter detail line, "h" = solid handle, "b" = brass.
+// line; knobs in the `accent` colour.
+// Markers: class "d" = lighter detail line, "h" = solid handle, "b" = brass, "k" = knob.
 const floor = '<path class="b" d="M26 90.5h108"/>'
 const louvers = (x1, x2) => `<path class="d" d="M${x1} 12.5H${x2}M${x1} 15.5H${x2}M${x1} 18.5H${x2}"/>`
 const knobs = (xs, y, r = 2.3) => xs.map((x) => `<circle class="k" cx="${x}" cy="${y}" r="${r}"/>`).join('')
@@ -69,7 +74,7 @@ const art = {
     '<rect class="b" x="81" y="62" width="6.5" height="6.5" rx="1.2" transform="rotate(9 84.25 65.25)"/>' +
     '<rect class="b" x="76" y="68.5" width="6.5" height="6.5" rx="1.2" transform="rotate(-4 79.25 71.75)"/>',
 
-  // Pro range: grates, red knobs, two ovens.
+  // Pro range: grates, knobs, two ovens.
   range:
     floor +
     '<path d="M44 86v4M116 86v4"/>' +
@@ -81,7 +86,7 @@ const art = {
     '<rect class="h" x="45" y="55" width="22" height="2.2" rx="1.1"/><rect class="h" x="78" y="55" width="36" height="2.2" rx="1.1"/>' +
     '<rect class="d" x="47" y="61.5" width="18" height="14" rx="1"/><rect class="d" x="82" y="61.5" width="28" height="14" rx="1"/>',
 
-  // Wall oven set in cabinetry: display, red knobs, window.
+  // Wall oven set in cabinetry: display, knobs, window.
   oven:
     floor +
     '<path class="d" d="M42 90V8h76v82M42 15.5h76M42 81h76"/>' +
@@ -114,5 +119,5 @@ svg :deep(.d) { stroke-opacity: 0.4; stroke-width: 1; }
 svg :deep(.h) { fill: currentColor; stroke: none; }
 svg :deep(.b) { stroke: #b08d57; }
 svg :deep(.bf) { fill: #b08d57; stroke: none; }
-svg :deep(.k) { fill: #c2342d; stroke: none; }
+svg :deep(.k) { fill: var(--lp-art-accent, currentColor); stroke: none; }
 </style>

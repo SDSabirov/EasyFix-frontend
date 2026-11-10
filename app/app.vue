@@ -10,7 +10,7 @@
 <script setup>
 // GTM is injected by plugins/deferred-scripts.client.js on first interaction,
 // except on the /ppc/* landing pages, which load it with the page
-// (head snippet in components/Lp/LandingPage.vue).
+// (head snippet in composables/useLpPage.js).
 useHead({
   noscript: [
     {

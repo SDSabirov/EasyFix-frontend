@@ -4,6 +4,10 @@
 // Call and Schedule Service (the on-page lead form, id="lp-form").
 // noindex + sitemap exclusion are set via routeRules in nuxt.config.ts.
 export const useLpPage = (variantKey) => {
+  // The site-wide "index, follow" meta (nuxt.config.ts app.head) replaces the routeRules
+  // noindex once the page hydrates; setting it here keeps the tag noindex in the browser too.
+  useHead({ meta: [{ name: 'robots', content: 'noindex, nofollow' }] })
+
   // GoHighLevel external tracking (page views, attribution and form submissions
   // into the CRM). Loaded only on these landing pages.
   useHead({
@@ -81,6 +85,8 @@ export const useLpPage = (variantKey) => {
     })
   }
 
+  const scrollBehavior = () => (window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth')
+
   // Schedule Service (header, hero, menu, bottom band): bring the on-page form into view,
   // focus its first field and flash it, so the click visibly does something even when the
   // form is already on screen.
@@ -94,7 +100,7 @@ export const useLpPage = (variantKey) => {
     }
     const form = document.getElementById('lp-form')
     const desktop = window.matchMedia('(min-width: 1024px)').matches
-    form.scrollIntoView({ behavior: 'smooth', block: desktop ? 'center' : 'start' })
+    form.scrollIntoView({ behavior: scrollBehavior(), block: desktop ? 'center' : 'start' })
     // A text field is focused only with a mouse: on touch screens it would pop the
     // keyboard over the form the visitor was just brought to.
     const first = form.querySelector('select, input')
@@ -102,6 +108,14 @@ export const useLpPage = (variantKey) => {
       first?.focus({ preventScroll: true })
     }
     flashForm()
+  }
+
+  // Lead sent: the form card shrinks to the thank-you message. If its top is behind the
+  // sticky header by then (typical with the phone keyboard open), bring it back into view.
+  const onSubmitted = async () => {
+    await nextTick()
+    const form = document.getElementById('lp-form')
+    if (form.getBoundingClientRect().top < 80) form.scrollIntoView({ behavior: scrollBehavior(), block: 'start' })
   }
 
   const { capture } = useLeadAttribution()
@@ -113,5 +127,5 @@ export const useLpPage = (variantKey) => {
     clearTimeout(formFlashTimer)
   })
 
-  return { phone, menuOpen, callHint, onCall, activeNav, onNav, formFlash, onSchedule }
+  return { phone, menuOpen, callHint, onCall, activeNav, onNav, formFlash, onSchedule, onSubmitted }
 }

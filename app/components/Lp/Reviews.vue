@@ -2,11 +2,18 @@
   <!-- Google rating + newest reviews. Spacing and width come from the parent (class falls through). -->
   <section id="reviews" class="scroll-mt-20">
     <p :class="lpEyebrow">Real People. Real Results.</p>
-    <h2 class="mt-1.5 text-center font-display font-semibold tracking-[-0.01em] text-[1.75rem] sm:text-4xl lg:text-[2.6rem] leading-tight">
+    <h2 class="mt-1.5 text-center font-display font-semibold tracking-[-0.01em] text-[1.75rem] sm:text-4xl lg:text-[2.6rem] leading-tight" :class="roomy && 'text-balance'">
       What Bay Area Customers Say
     </h2>
     <p class="mt-1 text-center text-[11.5px] lg:text-[15px] text-gray-600" :class="roomy && 'max-lg:text-[13px] lg:mt-2'">
       Trusted by homeowners across the Bay Area for expert service and lasting results.
+    </p>
+    <!-- Rating summary below lg, where the summary card is hidden (brand landing pages). -->
+    <p v-if="roomy" class="lg:hidden mt-4 flex items-center justify-center gap-2 text-[13px] text-gray-600">
+      <img :src="googleLogo" alt="Google" width="18" height="18" class="w-[18px] h-[18px]" loading="lazy" />
+      <span class="font-display font-semibold text-[1.35rem] leading-none text-primary">{{ rating.value }}</span>
+      <LpStars size="w-4 h-4" :label="`${rating.value} out of 5 stars`" />
+      <span>Based on {{ rating.count }} reviews</span>
     </p>
 
     <div class="lg:grid lg:grid-cols-[0.8fr_1fr_1fr_1fr]" :class="roomy ? 'mt-6 lg:mt-10 lg:gap-5' : 'mt-4 lg:mt-5 lg:gap-4'">
@@ -23,18 +30,21 @@
       <!-- Review cards: scroll-snap carousel on mobile, grid on desktop -->
       <div
         ref="reviewTrack"
-        class="flex lg:contents overflow-x-auto snap-x snap-mandatory gap-3 items-start [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
+        class="flex lg:contents overflow-x-auto snap-x snap-mandatory gap-3 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
+        :class="roomy ? 'items-stretch' : 'items-start'"
         @scroll.passive="onReviewScroll"
       >
         <figure
-          v-for="r in reviews"
-          :key="r.author"
-          class="snap-center shrink-0 w-full lg:w-auto rounded-lg border border-primary/10 bg-white shadow-sm px-4 py-3.5 lg:p-5 flex lg:flex-col gap-3.5 lg:gap-0"
+          v-for="(r, i) in reviews"
+          :key="`${i}-${r.author}`"
+          class="snap-center shrink-0 w-full lg:w-auto rounded-lg border border-primary/10 bg-white shadow-sm px-4 py-3.5 lg:p-5 flex lg:flex-col lg:gap-0"
+          :class="roomy ? 'flex-col min-[480px]:flex-row gap-3 min-[480px]:gap-3.5' : 'gap-3.5'"
         >
-          <!-- mobile: G + stars + name column -->
-          <div class="lg:hidden shrink-0 w-[34%] flex items-start gap-2.5">
+          <!-- mobile: G + stars + name, beside the quote (roomy: above it on narrow phones,
+               where the column is too narrow for the stars and longer names) -->
+          <div class="lg:hidden shrink-0 flex items-start gap-2.5" :class="roomy ? 'min-[480px]:w-[34%]' : 'w-[34%]'">
             <img :src="googleLogo" alt="" width="28" height="28" class="w-7 h-7 mt-0.5" loading="lazy" />
-            <div>
+            <div :class="roomy && 'min-w-0 [overflow-wrap:anywhere]'">
               <LpStars size="w-3.5 h-3.5" />
               <p class="mt-1.5 font-montserrat font-semibold text-[12px] leading-tight">{{ r.author }}</p>
               <p class="text-[11px] text-gray-500">{{ r.date }}</p>
@@ -61,7 +71,7 @@
       <!-- 8px dot, 32px tap target -->
       <button
         v-for="(r, i) in reviews"
-        :key="r.author"
+        :key="`${i}-${r.author}`"
         type="button"
         class="flex items-center justify-center w-8 h-8"
         :aria-label="`Show review ${i + 1}`"
@@ -93,6 +103,7 @@ const onReviewScroll = () => {
 }
 const goToReview = (i) => {
   const el = reviewTrack.value
-  el?.scrollTo({ left: i * el.clientWidth, behavior: 'smooth' })
+  const behavior = window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth'
+  el?.scrollTo({ left: i * el.clientWidth, behavior })
 }
 </script>

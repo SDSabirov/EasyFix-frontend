@@ -8,6 +8,8 @@ import kitchenBright from '~/assets/img/kitchenBright.webp'
 import subzeroLogo from '~/assets/img/lp/subzero.webp'
 import wolfLogo from '~/assets/img/lp/wolf.webp'
 
+const WOLF_RED = '#C2342D'
+
 export const subzero = {
   // Tags leads (source "ppc-subzero") and GTM events (landing_variant).
   key: 'subzero',
@@ -21,11 +23,12 @@ export const subzero = {
     lead: 'Locally Owned. Certified Experts. Same-Day Service.',
     text: 'Specializing in Sub-Zero refrigerators and Wolf cooking appliances, our experienced Bay Area technicians provide expert repairs using genuine OEM parts.',
     // 1440×825 photo with the refrigerator left of centre. `imageClass` keeps it in view:
-    // behind the right half of the text on phones, between the headline and the form on desktop.
+    // behind the right half of the text on phones, right of the text on tablets, between the
+    // headline and the form on desktop.
     image: subzeroHero,
     imageWidth: 1440,
     imageHeight: 825,
-    imageClass: 'object-[12%_center] lg:object-[22%_center]',
+    imageClass: 'object-[12%_center] md:object-[20%_center] lg:object-[37%_center] xl:object-[22%_center]',
   },
 
   trustPoints: [
@@ -36,19 +39,21 @@ export const subzero = {
   ],
 
   // Service cards, which are also the options of the form's "Appliance / Brand" select
-  // (brand + type go to the booking request). `art` is a drawing in Lp/ApplianceArt.vue;
-  // add `image` (imported photo, 16:10) to show a photo instead.
+  // (brand + type go to the booking request and GTM; `type` uses the same words as the
+  // general landing pages' form, e.g. "Wine Cooler", "Hood"). `art` is a drawing in
+  // Lp/ApplianceArt.vue, `accent` the colour of its knobs (Wolf's are red); add `image`
+  // (imported photo, 16:10) to show a photo instead.
   services: {
     title: 'Same-Day Sub-Zero and Wolf Repair Services',
     items: [
       { label: 'Sub-Zero Refrigerators', art: 'refrigerator', brand: 'Sub-Zero', type: 'Refrigerator' },
       { label: 'Sub-Zero Freezers', art: 'freezer', brand: 'Sub-Zero', type: 'Freezer' },
-      { label: 'Sub-Zero Wine Storage', art: 'wine', brand: 'Sub-Zero', type: 'Wine Storage' },
+      { label: 'Sub-Zero Wine Storage', art: 'wine', brand: 'Sub-Zero', type: 'Wine Cooler' },
       { label: 'Sub-Zero Ice Makers', art: 'icemaker', brand: 'Sub-Zero', type: 'Ice Maker' },
-      { label: 'Wolf Ranges', art: 'range', brand: 'Wolf', type: 'Range' },
-      { label: 'Wolf Ovens', art: 'oven', brand: 'Wolf', type: 'Oven' },
-      { label: 'Wolf Cooktops', art: 'cooktop', brand: 'Wolf', type: 'Cooktop' },
-      { label: 'Wolf Ventilation', art: 'hood', brand: 'Wolf', type: 'Ventilation' },
+      { label: 'Wolf Ranges', art: 'range', accent: WOLF_RED, brand: 'Wolf', type: 'Range' },
+      { label: 'Wolf Ovens', art: 'oven', accent: WOLF_RED, brand: 'Wolf', type: 'Oven' },
+      { label: 'Wolf Cooktops', art: 'cooktop', accent: WOLF_RED, brand: 'Wolf', type: 'Cooktop' },
+      { label: 'Wolf Ventilation', art: 'hood', brand: 'Wolf', type: 'Hood' },
     ],
   },
 

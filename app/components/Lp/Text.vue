@@ -4,9 +4,9 @@
 </template>
 
 <script setup>
-// Renders copy so that hyphenated words (Sub-Zero, Same-Day, 2-year) never
-// break across lines at the hyphen.
+// Renders copy so that hyphenated words (Sub-Zero, Same-Day, 2-year) and number
+// ranges (12–18) never break across lines at the hyphen or dash.
 const props = defineProps({ text: { type: String, required: true } })
 
-const parts = computed(() => props.text.split(/(\S*\w-\w\S*)/))
+const parts = computed(() => props.text.split(/(\S*\w[-–]\w\S*)/))
 </script>

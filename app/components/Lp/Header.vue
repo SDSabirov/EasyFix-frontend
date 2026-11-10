@@ -23,9 +23,11 @@
       </nav>
 
       <div class="flex items-center gap-1.5 md:gap-5">
+        <!-- Padding with an equal negative margin (here and on the menu button): a larger
+             tap area without moving anything. -->
         <a
           :href="`tel:${phone.tel}`"
-          class="flex items-center gap-1 md:gap-2.5 max-[343px]:p-1.5 max-[343px]:-m-1.5"
+          class="flex items-center gap-1 md:gap-2.5 py-3 -my-3 max-[343px]:p-3 max-[343px]:-m-3"
           data-cta="lp-call"
           @click="$emit('call', 'header')"
         >
@@ -48,7 +50,7 @@
         </button>
         <button
           type="button"
-          class="lg:hidden p-1 text-primary"
+          class="lg:hidden p-2.5 -m-1.5 text-primary"
           :aria-expanded="menuOpen"
           aria-controls="lp-menu"
           @click="$emit('update:menuOpen', !menuOpen)"
@@ -70,7 +72,7 @@
         @click="$emit('nav', item)"
       >{{ item.label }}</a>
       <div class="grid grid-cols-2 gap-2 pt-4">
-        <a :href="`tel:${phone.tel}`" :class="[lpBtnOutline, 'h-12 text-base']" data-cta="lp-call" @click="$emit('update:menuOpen', false); $emit('call', 'menu')">
+        <a :href="`tel:${phone.tel}`" :class="[lpBtnOutline, 'h-12 font-display font-semibold text-base']" data-cta="lp-call" @click="$emit('update:menuOpen', false); $emit('call', 'menu')">
           <LpIcon name="phone" class="w-4 h-4 fill-primary" /> Call Now
         </a>
         <button type="button" :class="[lpBtnSolid, 'h-12 text-base']" data-cta="lp-schedule" @click="$emit('schedule', 'menu')">

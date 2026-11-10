@@ -3,7 +3,7 @@
 // critical path and out of lab traces; real visitors trigger it with their
 // first scroll/tap/keypress.
 // Exception: the paid landing pages (/ppc/*) load GTM with the page via the
-// standard head snippet in components/Lp/LandingPage.vue, because the
+// standard head snippet in composables/useLpPage.js, because the
 // anti-fraud tag in the container must also see visitors who never interact.
 const GTM_SRC = 'https://www.googletagmanager.com/gtm.js?id=GTM-5RH2D8CH'
 
