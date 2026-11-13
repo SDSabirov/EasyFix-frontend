@@ -27,7 +27,7 @@
              tap area without moving anything. -->
         <a
           :href="`tel:${phone.tel}`"
-          class="flex items-center gap-1 md:gap-2.5 py-3 -my-3 max-[343px]:p-3 max-[343px]:-m-3"
+          class="flex items-center gap-1 md:gap-2.5 py-3 -my-3 max-[343px]:pl-6 max-[343px]:-ml-6 max-[343px]:pr-1.5 max-[343px]:-mr-1.5"
           data-cta="lp-call"
           @click="$emit('call', 'header')"
         >

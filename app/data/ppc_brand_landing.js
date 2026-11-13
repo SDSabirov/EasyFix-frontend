@@ -22,6 +22,12 @@ const rating = { value: '4.9', count: '118' }
 const WOLF_RED = '#C2342D'
 const BRASS = '#B08D57'
 
+// Hero `imageClass` for an upright picture of a built-in refrigerator (see `hero` below).
+// These carry the brand badge on the right-hand door, which the form would cut in half on
+// desktop, so there the sharp picture is faded out before it reaches the form.
+const FRIDGE =
+  'object-[center_22%] md:object-[88%_30%] lg:max-xl:object-top xl:ml-[9%] xl:![mask-image:linear-gradient(to_right,transparent,black_12%,black_56%,transparent_65%)]'
+
 // The four trust points; only the technicians line differs per brand.
 const trustPoints = (technicians) => [
   { icon: 'calendar', title: 'Same-Day Appointments', text: 'Fast, flexible scheduling across the Bay Area' },
@@ -42,13 +48,14 @@ const faq = (intro, pairs) => ({
 })
 
 // Closing band: on desktop the brand's cta-left / cta-right photos sit at its two ends
-// and fade into the ink. `dir` is the brand's folder in assets/img/lp/brands.
-const cta = (brand, dir, schedule = brand) => ({
+// and fade into the ink. `dir` is the brand's folder in assets/img/lp/brands; `rightClass`
+// positions the right photo when its subject is not in the middle (e.g. 'object-right').
+const cta = (brand, dir, { schedule = brand, rightClass } = {}) => ({
   title: `Ready to Book Your ${brand} Repair?`,
   text: 'Get expert, local service from the Easy Fix Appliance Team. Same-day appointments available.',
   schedule: `Schedule Your ${schedule} Service`,
-  left: { src: photo(`${dir}/cta-left`), w: 900, h: 320 },
-  right: { src: photo(`${dir}/cta-right`), w: 880, h: 370 },
+  left: { src: photo(`${dir}/cta-left`), w: 900, h: 316 },
+  right: { src: photo(`${dir}/cta-right`), w: 844, h: 357, class: rightClass },
 })
 
 // "$99 Diagnostic Visit" band. Its left half is a close-up of the brand's badge on an
@@ -77,10 +84,12 @@ const diagnostic = (text, dir, alt, focus) => ({
 //                 headline and the form, xl:ml-[..] being its distance from the left edge of
 //                 the photo panel
 //   services      cards, which are also the options of the form's "Appliance / Brand" select.
-//                 `brand` + `type` go to the booking request and GTM and use the same words
-//                 as the general landing pages' form ("Wine Cooler", "Hood", "GE Monogram").
-//                 `art` is a drawing in Lp/ApplianceArt.vue, `accent` the colour of its knobs;
-//                 add `image` (imported photo, 16:10) to show a photo instead.
+//                 `brand` + `type` go to the booking request and GTM; they use the general
+//                 landing pages' words where one exists ("Wine Cooler", "Hood", "GE Monogram"),
+//                 otherwise a plain name ("Coffee System").
+//                 `image` is the card's picture (640×320). When any card of a page has none,
+//                 all its cards show their drawings instead: `art` is a drawing in
+//                 Lp/ApplianceArt.vue, `accent` the colour of its knobs.
 //                 `columns: 3` lays six cards out three across
 //   reviewsIntro  line under "What Bay Area Customers Say" (the reviews themselves are the
 //                 live Google reviews)
@@ -104,7 +113,7 @@ export const subzero = {
     image: photo('sub-zero-wolf/hero'),
     imageWidth: 966,
     imageHeight: 1274,
-    imageClass: 'object-[center_22%] md:object-[88%_30%] lg:max-xl:object-top xl:ml-[9%]',
+    imageClass: FRIDGE,
   },
 
   trustPoints: trustPoints('Skilled in Sub-Zero & Wolf repair and diagnostics'),
@@ -125,7 +134,7 @@ export const subzero = {
 
   diagnostic: diagnostic(
     'Expert diagnostic and troubleshooting for your appliance issues.',
-    'sub-zero-wolf', 'Sub-Zero and Wolf badge on an appliance', 'object-[60%_center]',
+    'sub-zero-wolf', 'Sub-Zero and Wolf badge on an appliance', 'object-[88%_center]',
   ),
 
   reviewsIntro: 'Trusted by homeowners across the Bay Area for expert service and lasting results.',
@@ -149,7 +158,7 @@ export const subzero = {
     ],
   ]),
 
-  cta: cta('Sub-Zero & Wolf', 'sub-zero-wolf', 'Sub-Zero'),
+  cta: cta('Sub-Zero & Wolf', 'sub-zero-wolf', { schedule: 'Sub-Zero' }),
 }
 
 // ============ Miele ============
@@ -236,7 +245,7 @@ export const thermador = {
     image: photo('thermador/hero'),
     imageWidth: 1044,
     imageHeight: 1254,
-    imageClass: 'object-[center_22%] md:object-[88%_30%] lg:max-xl:object-top xl:ml-[13%]',
+    imageClass: FRIDGE,
   },
 
   trustPoints: trustPoints('Skilled in Thermador repair with years of hands-on experience'),
@@ -302,7 +311,7 @@ export const viking = {
     image: photo('viking/hero'),
     imageWidth: 1044,
     imageHeight: 1254,
-    imageClass: 'object-[center_22%] md:object-[88%_30%] lg:max-xl:object-top xl:ml-[9%]',
+    imageClass: FRIDGE,
   },
 
   trustPoints: trustPoints('Skilled in Viking appliance repair and diagnostics'),
@@ -368,7 +377,7 @@ export const monogram = {
     image: photo('monogram/hero'),
     imageWidth: 1044,
     imageHeight: 1254,
-    imageClass: 'object-[center_22%] md:object-[88%_30%] lg:max-xl:object-top xl:ml-[9%]',
+    imageClass: FRIDGE,
   },
 
   trustPoints: trustPoints('Skilled in Monogram repair and diagnostics'),
@@ -413,7 +422,9 @@ export const monogram = {
     ],
   ]),
 
-  cta: cta('Monogram', 'monogram'),
+  // The wordmark sits at the right edge of the right photo: shown whole from xl up; the
+  // narrower column below that shows the doors and handles without it.
+  cta: cta('Monogram', 'monogram', { rightClass: 'lg:max-xl:object-[38%_center] xl:object-right' }),
 }
 
 // ============ La Cornue ============

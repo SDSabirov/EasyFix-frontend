@@ -47,13 +47,14 @@
         </div>
 
         <div class="relative mx-auto max-w-screen-xl px-5 sm:px-6 lg:px-8 pt-6 pb-9 md:pt-10 md:pb-12 lg:py-14 xl:py-[4.5rem] grid lg:grid-cols-12 gap-6 lg:gap-8 items-center">
-          <!-- Below lg the hero is one column: text, button and form share the same edges. -->
-          <div class="w-full md:max-lg:max-w-xl lg:col-span-7 xl:col-span-6">
+          <!-- Below lg the hero is one column: text, button and form share the same edges
+               (on tablets that column sits left of the photo). -->
+          <div class="w-full md:max-lg:max-w-[52%] lg:col-span-7 xl:col-span-6">
             <p class="flex items-center gap-4 font-montserrat text-[10px] lg:text-[11px] font-semibold uppercase tracking-[0.3em] text-brass-dark max-lg:text-[#7A5E33]">
               {{ page.hero.eyebrow }}
-              <span class="h-px w-12 lg:w-16 bg-brass/70" aria-hidden="true"></span>
+              <span class="h-px w-12 lg:w-16 bg-brass/70 max-[359px]:hidden" aria-hidden="true"></span>
             </p>
-            <h1 :class="[lpHeadline, 'mt-3 lg:mt-4 max-w-[10.5em] lg:max-w-[9.6em] text-primary text-[2rem] min-[390px]:text-[2.15rem] sm:text-[2.75rem] lg:text-[2.9rem] xl:text-[3.25rem] leading-[1.07]']">
+            <h1 :class="[lpHeadline, 'mt-3 lg:mt-4 max-w-[10.5em] lg:max-w-[9.6em] text-primary text-[2rem] max-[359px]:text-[1.85rem] min-[390px]:text-[2.15rem] sm:text-[2.75rem] md:max-lg:text-[2.25rem] lg:text-[2.9rem] xl:text-[3.25rem] leading-[1.07]']">
               <LpText :text="page.hero.title" />
             </h1>
             <!-- The space is written out: the compiler drops a line break between two tags. -->
@@ -69,8 +70,8 @@
               <!-- A divider is dropped at the widths where the item after it wraps to a new line. -->
               <li class="h-3 w-px bg-primary/25 max-[359px]:hidden" aria-hidden="true"></li>
               <li class="max-[359px]:basis-full">Licensed &amp; Insured</li>
-              <li class="h-3 w-px bg-primary/25 max-[519px]:hidden lg:max-xl:hidden" aria-hidden="true"></li>
-              <li class="max-[519px]:basis-full lg:max-xl:basis-full">OEM Parts &amp; Repair Warranty</li>
+              <li class="h-3 w-px bg-primary/25 max-[519px]:hidden md:max-xl:hidden" aria-hidden="true"></li>
+              <li class="max-[519px]:basis-full md:max-xl:basis-full">OEM Parts &amp; Repair Warranty</li>
             </ul>
 
             <div class="mt-5 lg:mt-8 flex flex-col lg:flex-row gap-3">
@@ -90,7 +91,7 @@
                form, not a pop-up). Every Schedule button scrolls here. -->
           <div
             id="lp-form"
-            class="w-full md:max-lg:max-w-xl lg:col-span-5 xl:col-span-4 xl:col-start-9 scroll-mt-20 lg:scroll-mt-24 rounded-2xl transition-shadow duration-500"
+            class="w-full md:max-lg:max-w-[52%] lg:col-span-5 xl:col-span-4 xl:col-start-9 scroll-mt-20 lg:scroll-mt-24 rounded-2xl transition-shadow duration-500"
             :class="formFlash && 'ring-4 ring-brass/60 ring-offset-4'"
           >
             <LpLeadForm id-prefix="hero" location="hero" compact :phone="phone" :services="page.services.items" :variant="page.key" @call="onCall" @submitted="onSubmitted" />
@@ -126,7 +127,7 @@
           <li v-for="s in page.services.items" :key="s.label" class="overflow-hidden rounded-xl border border-primary/10 bg-white shadow-[0_1px_2px_rgba(10,35,51,0.05)]">
             <!-- Photos are wide (2:1); the drawings get a taller panel. -->
             <div class="flex items-center justify-center bg-[#F6F2EB]" :class="photoCards ? 'aspect-[2/1]' : 'aspect-[16/10]'">
-              <img v-if="s.image" :src="s.image" alt="" width="720" height="360" loading="lazy" decoding="async" class="w-full h-full object-cover" />
+              <img v-if="photoCards" :src="s.image" alt="" width="640" height="320" loading="lazy" decoding="async" class="w-full h-full object-cover" />
               <LpApplianceArt v-else :name="s.art" :accent="s.accent" class="h-[86%] w-auto text-primary" />
             </div>
             <p class="flex items-center justify-center min-h-[3.5rem] lg:min-h-[3.75rem] px-2 md:max-lg:px-1 py-2 text-center font-headline font-semibold text-[0.94rem] max-[343px]:text-[0.84rem] min-[430px]:text-[1rem] xl:text-[1.1rem] leading-[1.2] text-primary text-balance" :class="page.services.columns !== 3 && 'md:max-lg:text-[0.875rem]'">
@@ -207,7 +208,7 @@
         <!-- From lg up, a photo at each end that fades into the ink. -->
         <template v-for="side in ['left', 'right']" :key="side">
           <div class="hidden lg:block absolute inset-y-0 w-[24%] xl:w-[27%]" :class="side === 'left' ? 'left-0' : 'right-0'" aria-hidden="true">
-            <img :src="page.cta[side].src" alt="" :width="page.cta[side].w" :height="page.cta[side].h" loading="lazy" decoding="async" class="w-full h-full object-cover" :class="side === 'left' && 'object-left'" />
+            <img :src="page.cta[side].src" alt="" :width="page.cta[side].w" :height="page.cta[side].h" loading="lazy" decoding="async" class="w-full h-full object-cover" :class="side === 'left' ? 'object-left' : page.cta.right.class" />
             <div class="absolute inset-0" :class="side === 'left' ? 'bg-gradient-to-r from-ink/10 via-ink/55 to-ink' : 'bg-gradient-to-l from-ink/10 via-ink/55 to-ink'"></div>
           </div>
         </template>
