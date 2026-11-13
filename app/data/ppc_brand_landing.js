@@ -104,7 +104,7 @@ export const subzero = {
     image: photo('sub-zero-wolf/hero'),
     imageWidth: 966,
     imageHeight: 1274,
-    imageClass: 'object-[center_22%] md:object-[center_35%] lg:max-xl:object-top xl:ml-[9%]',
+    imageClass: 'object-[center_22%] md:object-[88%_30%] lg:max-xl:object-top xl:ml-[9%]',
   },
 
   trustPoints: trustPoints('Skilled in Sub-Zero & Wolf repair and diagnostics'),
@@ -236,7 +236,7 @@ export const thermador = {
     image: photo('thermador/hero'),
     imageWidth: 1044,
     imageHeight: 1254,
-    imageClass: 'object-[center_22%] md:object-[center_35%] lg:max-xl:object-top xl:ml-[13%]',
+    imageClass: 'object-[center_22%] md:object-[88%_30%] lg:max-xl:object-top xl:ml-[13%]',
   },
 
   trustPoints: trustPoints('Skilled in Thermador repair with years of hands-on experience'),
@@ -302,7 +302,7 @@ export const viking = {
     image: photo('viking/hero'),
     imageWidth: 1044,
     imageHeight: 1254,
-    imageClass: 'object-[center_22%] md:object-[center_35%] lg:max-xl:object-top xl:ml-[9%]',
+    imageClass: 'object-[center_22%] md:object-[88%_30%] lg:max-xl:object-top xl:ml-[9%]',
   },
 
   trustPoints: trustPoints('Skilled in Viking appliance repair and diagnostics'),
@@ -368,7 +368,7 @@ export const monogram = {
     image: photo('monogram/hero'),
     imageWidth: 1044,
     imageHeight: 1254,
-    imageClass: 'object-[center_22%] md:object-[center_35%] lg:max-xl:object-top xl:ml-[9%]',
+    imageClass: 'object-[center_22%] md:object-[88%_30%] lg:max-xl:object-top xl:ml-[9%]',
   },
 
   trustPoints: trustPoints('Skilled in Monogram repair and diagnostics'),
