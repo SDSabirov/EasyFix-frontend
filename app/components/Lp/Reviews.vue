@@ -2,16 +2,16 @@
   <!-- Google rating + newest reviews. Spacing and width come from the parent (class falls through). -->
   <section id="reviews" class="scroll-mt-20">
     <p :class="lpEyebrow">Real People. Real Results.</p>
-    <h2 class="mt-1.5 text-center font-display font-semibold tracking-[-0.01em] text-[1.75rem] sm:text-4xl lg:text-[2.6rem] leading-tight" :class="roomy && 'text-balance'">
+    <h2 :class="roomy ? [lpBrandTitle, 'mt-2'] : 'mt-1.5 text-center font-display font-semibold tracking-[-0.01em] text-[1.75rem] sm:text-4xl lg:text-[2.6rem] leading-tight'">
       What Bay Area Customers Say
     </h2>
     <p class="mt-1 text-center text-[11.5px] lg:text-[15px] text-gray-600" :class="roomy && 'max-lg:text-[13px] lg:mt-2'">
-      Trusted by homeowners across the Bay Area for expert service and lasting results.
+      {{ intro }}
     </p>
     <!-- Rating summary below lg, where the summary card is hidden (brand landing pages). -->
     <p v-if="roomy" class="lg:hidden mt-4 flex items-center justify-center gap-2 text-[13px] text-gray-600">
       <img :src="googleLogo" alt="Google" width="18" height="18" class="w-[18px] h-[18px]" loading="lazy" />
-      <span class="font-display font-semibold text-[1.35rem] leading-none text-primary">{{ rating.value }}</span>
+      <span class="font-headline font-bold text-[1.15rem] leading-none text-primary">{{ rating.value }}</span>
       <LpStars size="w-4 h-4" :label="`${rating.value} out of 5 stars`" />
       <span>Based on {{ rating.count }} reviews</span>
     </p>
@@ -21,7 +21,7 @@
       <div class="hidden lg:flex flex-col items-center justify-center rounded-lg border border-primary/10 bg-white p-5 shadow-sm">
         <img :src="googleLogo" alt="Google" width="44" height="44" class="w-11 h-11" loading="lazy" />
         <p class="mt-2 flex items-center gap-2">
-          <span class="font-display font-semibold text-4xl">{{ rating.value }}</span>
+          <span :class="roomy ? 'font-headline font-bold text-[2rem] leading-none' : 'font-display font-semibold text-4xl'">{{ rating.value }}</span>
           <LpStars size="w-5 h-5" :label="`${rating.value} out of 5 stars`" />
         </p>
         <p class="mt-1 text-sm text-gray-600">Based on {{ rating.count }} reviews</p>
@@ -55,7 +55,7 @@
             <LpStars size="w-4 h-4" />
             <img :src="googleLogo" alt="Google review" width="20" height="20" class="w-5 h-5" loading="lazy" />
           </div>
-          <blockquote class="lg:mt-3 font-display italic text-[15px] lg:text-[17px] leading-snug text-primary/90 lg:flex-1 [overflow-wrap:anywhere]">
+          <blockquote class="lg:mt-3 italic text-primary/90 lg:flex-1 [overflow-wrap:anywhere]" :class="roomy ? 'font-headline text-[14px] lg:text-[15px] leading-relaxed' : 'font-display text-[15px] lg:text-[17px] leading-snug'">
             “{{ r.excerpt }}”
           </blockquote>
           <figcaption class="hidden lg:block mt-4">
@@ -84,14 +84,17 @@
 
 <script setup>
 import googleLogo from '~/assets/img/google.svg'
-import { lpEyebrow } from '~/utils/lp'
+import { lpEyebrow, lpBrandTitle } from '~/utils/lp'
 
 defineProps({
   // { value: '4.9', count: '118' } and the excerpted reviews, both from useLpReviews().
   rating: { type: Object, required: true },
   reviews: { type: Array, required: true },
-  // More air between the heading block and the cards (brand landing pages).
+  // Brand landing pages: more air between the heading block and the cards, their
+  // headline type, and the rating summary shown on phones too.
   roomy: { type: Boolean, default: false },
+  // Line under the heading.
+  intro: { type: String, default: 'Trusted by homeowners across the Bay Area for expert service and lasting results.' },
 })
 
 // ---------- Carousel (mobile) ----------

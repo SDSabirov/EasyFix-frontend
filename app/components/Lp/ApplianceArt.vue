@@ -110,6 +110,80 @@ const art = {
     '<path d="M38 68h84"/>' +
     '<path class="d" d="M61 68v11M80 68v11M99 68v11M70 20h20M70 24h20"/>' +
     '<circle class="bf" cx="108" cy="73.5" r="1.6"/><circle class="bf" cx="114" cy="73.5" r="1.6"/>',
+  // Built-in dishwasher under a counter: control strip, bar handle, rack.
+  dishwasher:
+    floor +
+    '<path class="d" d="M34 31v59M126 31v59M34 41h24M102 41h24"/>' +
+    '<rect class="f" x="58" y="31" width="44" height="59"/>' +
+    '<rect class="f" x="30" y="26" width="100" height="5" rx="1"/>' +
+    '<path d="M58 41h44M58 84h44"/>' +
+    '<circle class="bf" cx="64" cy="36" r="1.3"/><circle class="bf" cx="69" cy="36" r="1.3"/><path class="d" d="M84 36h12"/>' +
+    '<rect class="h" x="66" y="45.5" width="28" height="2.2" rx="1.1"/>' +
+    '<path class="b" d="M68 73h24M71 73v-8M76 73v-11M80 73v-12M84 73v-11M89 73v-8"/>',
+
+  // Front-load washer: detergent drawer, dial, door with water line.
+  washer:
+    floor +
+    '<rect class="f" x="54" y="22" width="52" height="68" rx="2"/>' +
+    '<path d="M54 35h52"/>' +
+    '<rect class="d" x="58.5" y="25.8" width="13" height="5.5" rx="1"/><path class="d" d="M77 28.5h10"/>' +
+    '<circle class="bf" cx="97.5" cy="28.5" r="2.7"/>' +
+    '<circle cx="80" cy="62" r="18"/><circle class="d" cx="80" cy="62" r="13"/>' +
+    '<path class="b" d="M69.5 64c3.5-3.2 7 3.2 10.5 0s7 3.2 10.5 0"/>',
+
+  // Dryer: dial on the left, door with warm-air lines.
+  dryer:
+    floor +
+    '<rect class="f" x="54" y="22" width="52" height="68" rx="2"/>' +
+    '<path d="M54 35h52"/>' +
+    '<circle class="bf" cx="62.5" cy="28.5" r="2.7"/>' +
+    '<path class="d" d="M72 28.5h10"/><rect class="d" x="88.5" y="25.8" width="13" height="5.5" rx="1"/>' +
+    '<circle cx="80" cy="62" r="18"/><circle class="d" cx="80" cy="62" r="13"/>' +
+    '<path class="b" d="M74.5 70c-2.6-2.7 2.6-5.3 0-8s2.6-5.3 0-8M80 70c-2.6-2.7 2.6-5.3 0-8s2.6-5.3 0-8M85.5 70c-2.6-2.7 2.6-5.3 0-8s2.6-5.3 0-8"/>',
+
+  // Built-in coffee system in a tall cabinet: display, spouts, two cups.
+  coffee:
+    floor +
+    '<path class="d" d="M42 90V8h76v82M42 21h76M42 75h76"/>' +
+    '<rect class="f" x="50" y="27" width="60" height="42" rx="1.5"/>' +
+    '<path d="M50 37h60"/>' +
+    '<rect class="d" x="70" y="29.8" width="20" height="4.5" rx="1"/>' +
+    '<circle class="bf" cx="57" cy="32" r="1.4"/><circle class="bf" cx="103" cy="32" r="1.4"/>' +
+    '<path class="d" d="M57 42v22M103 42v22"/>' +
+    '<rect x="71.5" y="37" width="17" height="8.5" rx="1"/><path d="M76.5 45.5v3M83.5 45.5v3"/>' +
+    '<path d="M71.5 53.5h7v5.5a2 2 0 0 1-2 2h-3a2 2 0 0 1-2-2zM81.5 53.5h7v5.5a2 2 0 0 1-2 2h-3a2 2 0 0 1-2-2z"/>' +
+    '<path class="b" d="M67 64h26"/>',
+
+  // French range (La Cornue Château): two ovens, brass rail and trim, row of knobs.
+  chateau:
+    floor +
+    '<path d="M42 86v4M118 86v4"/>' +
+    '<path class="d" d="M38 34v-3.5h84V34M52 30.5v-2M66 30.5v-2M94 30.5v-2M108 30.5v-2"/>' +
+    '<rect class="f" x="34" y="34" width="92" height="52" rx="1.5"/>' +
+    '<path d="M34 46h92"/>' +
+    knobs([43, 52, 61, 70, 90, 99, 108, 117], 40, 2.1) +
+    '<path class="b" d="M38 50.5h84M38 49v3M122 49v3"/>' +
+    '<rect x="39" y="55" width="38" height="27" rx="1"/><rect x="83" y="55" width="38" height="27" rx="1"/>' +
+    '<path class="b" d="M45 59.5h26M89 59.5h26"/>' +
+    '<rect class="d" x="46" y="64.5" width="24" height="13" rx="1"/><rect class="d" x="90" y="64.5" width="24" height="13" rx="1"/>' +
+    '<path class="b" d="M34 34h92"/>',
+
+  // Classic bell-shaped hood with brass bands and a nameplate.
+  hoodBell:
+    '<path class="f" d="M63 13h34l23 55v9H40v-9z"/>' +
+    '<path d="M40 68h80"/>' +
+    '<path class="b" d="M56.7 28h46.6M48 49h64M40 77h80"/>' +
+    '<rect class="b" x="70" y="55.5" width="20" height="6.5" rx="1"/>' +
+    '<circle class="bf" cx="60" cy="72.5" r="1.4"/><circle class="bf" cx="100" cy="72.5" r="1.4"/>',
+
+  // Hood insert under a cabinet, seen from the front and below: baffle filters, lights.
+  ventInsert:
+    '<path class="d" d="M28 22h104M40 22v15M120 22v15"/>' +
+    '<path class="f" d="M40 37h80l10 30H30z"/>' +
+    '<rect class="f" x="30" y="67" width="100" height="8"/>' +
+    '<rect x="42.5" y="43" width="23" height="18" rx="1"/><rect x="68.5" y="43" width="23" height="18" rx="1"/><rect x="94.5" y="43" width="23" height="18" rx="1"/>' +
+    '<path class="d" d="M47 46v12M51.5 46v12M56.5 46v12M61 46v12M73 46v12M77.5 46v12M82.5 46v12M87 46v12M99 46v12M103.5 46v12M108.5 46v12M113 46v12"/>' +
+    '<circle class="bf" cx="37" cy="71" r="1.5"/><circle class="bf" cx="123" cy="71" r="1.5"/>',
 }
 </script>
 

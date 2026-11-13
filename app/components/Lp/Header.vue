@@ -41,7 +41,10 @@
         </a>
         <button
           type="button"
-          class="flex items-center gap-1.5 md:gap-2 rounded-md bg-ink text-white px-2 md:px-5 h-10 md:h-11 font-display font-semibold text-[12px] min-[404px]:text-[13px] md:text-[17px] leading-[1.05] transition-colors hover:bg-brass focus:outline-none focus-visible:ring-2 focus-visible:ring-brass focus-visible:ring-offset-2"
+          class="flex items-center gap-1.5 md:gap-2 rounded-md bg-ink text-white px-2 md:px-5 h-10 md:h-11 transition-colors hover:bg-brass focus:outline-none focus-visible:ring-2 focus-visible:ring-brass focus-visible:ring-offset-2"
+          :class="brand
+            ? 'font-montserrat font-semibold text-[10px] min-[404px]:text-[10.5px] md:text-[13.5px] leading-[1.2]'
+            : 'font-display font-semibold text-[12px] min-[404px]:text-[13px] md:text-[17px] leading-[1.05]'"
           data-cta="lp-schedule"
           @click="$emit('schedule', 'header')"
         >
@@ -72,10 +75,10 @@
         @click="$emit('nav', item)"
       >{{ item.label }}</a>
       <div class="grid grid-cols-2 gap-2 pt-4">
-        <a :href="`tel:${phone.tel}`" :class="[lpBtnOutline, 'h-12 font-display font-semibold text-base']" data-cta="lp-call" @click="$emit('update:menuOpen', false); $emit('call', 'menu')">
+        <a :href="`tel:${phone.tel}`" :class="brand ? [lpBrandBtnOutline, 'h-12 text-sm'] : [lpBtnOutline, 'h-12 font-display font-semibold text-base']" data-cta="lp-call" @click="$emit('update:menuOpen', false); $emit('call', 'menu')">
           <LpIcon name="phone" class="w-4 h-4 fill-primary" /> Call Now
         </a>
-        <button type="button" :class="[lpBtnSolid, 'h-12 text-base']" data-cta="lp-schedule" @click="$emit('schedule', 'menu')">
+        <button type="button" :class="brand ? [lpBrandBtnSolid, 'h-12 text-sm'] : [lpBtnSolid, 'h-12 text-base']" data-cta="lp-schedule" @click="$emit('schedule', 'menu')">
           <LpIcon name="calendar" class="w-4 h-4" /> Schedule
         </button>
       </div>
@@ -84,7 +87,7 @@
 </template>
 
 <script setup>
-import { lpBtnSolid, lpBtnOutline } from '~/utils/lp'
+import { lpBtnSolid, lpBtnOutline, lpBrandBtnSolid, lpBrandBtnOutline } from '~/utils/lp'
 
 defineProps({
   phone: { type: Object, required: true },
@@ -92,6 +95,8 @@ defineProps({
   navItems: { type: Array, required: true },
   activeNav: { type: String, default: '' },
   menuOpen: { type: Boolean, default: false },
+  // Brand landing pages: buttons in Montserrat instead of the display serif.
+  brand: { type: Boolean, default: false },
 })
 defineEmits(['call', 'schedule', 'nav', 'update:menuOpen'])
 </script>

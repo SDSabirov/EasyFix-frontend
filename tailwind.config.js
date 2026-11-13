@@ -26,6 +26,8 @@ export default {
       },
       fontFamily: {
         display: ['"Cormorant Garamond"', 'Georgia', 'serif'],
+        // Headlines of the brand landing pages (/ppc/*-repair).
+        headline: ['"Source Serif 4"', 'Georgia', 'serif'],
         montserrat: ['Montserrat', 'sans-serif'],
         roboto: ['Roboto', 'sans-serif'],
         quicksand:['Quicksand','sans-serif'],

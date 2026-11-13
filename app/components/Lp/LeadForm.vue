@@ -1,7 +1,7 @@
 <template>
   <div class="bg-white rounded-2xl shadow-2xl shadow-ink/15 border border-primary/5 p-5 sm:p-7">
     <template v-if="!submitted">
-      <h2 :id="`${idPrefix}-title`" class="font-display font-semibold text-[1.9rem] leading-tight text-primary" :class="compact && 'max-[343px]:text-[1.7rem]'">
+      <h2 :id="`${idPrefix}-title`" class="leading-tight text-primary" :class="compact ? [lpHeadline, 'text-[1.6rem] max-[343px]:text-[1.4rem]'] : 'font-display font-semibold text-[1.9rem]'">
         Schedule Your Repair
       </h2>
       <p class="mt-1 text-sm text-gray-600">Tell us what needs fixing and we'll call to confirm a time.</p>
@@ -158,7 +158,8 @@
         <button
           type="button"
           :disabled="loading"
-          class="w-full min-h-[50px] rounded-lg bg-ink text-white font-display font-semibold text-xl transition-colors duration-300 hover:bg-brass disabled:opacity-60 disabled:cursor-not-allowed focus:outline-none focus-visible:ring-2 focus-visible:ring-brass focus-visible:ring-offset-2"
+          class="w-full min-h-[50px] rounded-lg bg-ink text-white transition-colors duration-300 hover:bg-brass disabled:opacity-60 disabled:cursor-not-allowed focus:outline-none focus-visible:ring-2 focus-visible:ring-brass focus-visible:ring-offset-2"
+          :class="compact ? 'font-montserrat font-semibold text-[15px]' : 'font-display font-semibold text-xl'"
           data-cta="lp-form-submit"
           @click="trySubmit"
         >
@@ -176,7 +177,7 @@
       <div class="mx-auto flex items-center justify-center w-16 h-16 rounded-full bg-brass/10">
         <svg class="w-8 h-8 text-brass" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5" /></svg>
       </div>
-      <h2 ref="thanksEl" tabindex="-1" class="mt-5 font-display font-semibold text-3xl text-primary focus:outline-none">Thank you{{ sent.firstName ? `, ${sent.firstName}` : '' }}!</h2>
+      <h2 ref="thanksEl" tabindex="-1" class="mt-5 text-primary focus:outline-none" :class="compact ? [lpHeadline, 'text-[1.6rem]'] : 'font-display font-semibold text-3xl'">Thank you{{ sent.firstName ? `, ${sent.firstName}` : '' }}!</h2>
       <p class="mt-2 text-sm text-gray-600">
         We've received your request and will call you shortly to confirm your appointment.
         Need help right now? Call
@@ -187,6 +188,8 @@
 </template>
 
 <script setup>
+import { lpHeadline } from '~/utils/lp'
+
 const props = defineProps({
   idPrefix: { type: String, required: true },
   phone: { type: Object, required: true },
@@ -197,6 +200,7 @@ const props = defineProps({
   variant: { type: String, required: true },
   // Short form for the brand landing pages: Name, Phone and one "Appliance / Brand"
   // select, instead of brand, appliance, first/last name, phone, email and ZIP.
+  // It also takes those pages' type: Source Serif 4 title, Montserrat button.
   compact: { type: Boolean, default: false },
   // Options of the compact select: [{ label: 'Wolf Ranges', brand: 'Wolf', type: 'Range' }].
   services: { type: Array, default: () => [] },

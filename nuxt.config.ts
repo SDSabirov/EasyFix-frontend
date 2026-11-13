@@ -23,6 +23,8 @@ export default defineNuxtConfig({
     // Paid-traffic landing pages: keep out of organic search (they duplicate
     // the main site) but stay crawlable so Google Ads can review them.
     "/ppc/**": { robots: false },
+    // First address of the Sub-Zero & Wolf page; the query string (gclid, utm) is kept.
+    "/ppc/subzero": { redirect: { to: "/ppc/sub-zero-wolf-repair", statusCode: 301 } },
   },
 
   app: {
@@ -62,6 +64,8 @@ export default defineNuxtConfig({
       { name: "Cormorant Garamond", provider: "google", weights: [500, 600], preload: true },
       { name: "Montserrat", provider: "google", weights: [400, 500, 600, 700] },
       { name: "Roboto", provider: "google", weights: [400, 500, 600, 700] },
+      // Headlines of the brand landing pages (/ppc/*-repair); fetched only when rendered.
+      { name: "Source Serif 4", provider: "google", weights: [400, 600, 700] },
       // Decorative script on /ppc/* only; not preloaded, fetched when rendered.
       { name: "Allura", provider: "google", weights: [400] },
     ],

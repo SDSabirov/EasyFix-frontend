@@ -5,6 +5,7 @@
       :phone="phone"
       :nav-items="navItems"
       :active-nav="activeNav"
+      brand
       @call="onCall"
       @schedule="onSchedule"
       @nav="onNav"
@@ -13,9 +14,21 @@
     <main>
       <!-- ============ Hero ============ -->
       <section class="relative overflow-hidden bg-white">
-        <!-- Photo: a full-height column on the right from md up; on phones a soft backdrop
-             behind the text, fading out before the form. -->
-        <div class="absolute top-0 right-0 w-full h-[27rem] md:h-full md:w-[45%] lg:w-[64%]" aria-hidden="true">
+        <!-- Photo (an upright picture of one appliance): a full-height column on the right from
+             md up; on phones a soft backdrop behind the text, fading out before the form. -->
+        <div class="absolute top-0 right-0 w-full h-[27rem] md:h-full md:w-[45%] lg:w-[64%] overflow-hidden" aria-hidden="true">
+          <!-- From xl up the appliance is shown whole, between the headline and the form, over a
+               blurred copy of itself that fills the rest of the panel (behind the form); below
+               xl the picture fills the panel. -->
+          <img
+            :src="page.hero.image"
+            alt=""
+            :width="page.hero.imageWidth"
+            :height="page.hero.imageHeight"
+            loading="lazy"
+            decoding="async"
+            class="hidden xl:block absolute inset-0 w-full h-full object-cover blur-2xl scale-125"
+          />
           <img
             :src="page.hero.image"
             alt=""
@@ -24,12 +37,12 @@
             loading="eager"
             fetchpriority="high"
             decoding="async"
-            class="w-full h-full object-cover"
+            class="relative w-full h-full object-cover xl:w-auto xl:max-w-none xl:[mask-image:linear-gradient(to_right,transparent,black_12%,black_80%,transparent)]"
             :class="page.hero.imageClass"
           />
           <div class="absolute inset-0 bg-gradient-to-r from-white via-white/90 to-white/50 md:hidden"></div>
           <div class="absolute inset-x-0 bottom-0 h-28 bg-gradient-to-t from-white to-transparent md:hidden"></div>
-          <div class="hidden md:block absolute inset-y-0 left-0 w-1/2 lg:w-[38%] bg-gradient-to-r from-white via-white/70 to-transparent"></div>
+          <div class="hidden md:block absolute inset-y-0 left-0 w-1/2 lg:w-[38%] xl:w-[26%] bg-gradient-to-r from-white via-white/70 to-transparent"></div>
         </div>
 
         <div class="relative mx-auto max-w-screen-xl px-5 sm:px-6 lg:px-8 pt-6 pb-9 md:pt-10 md:pb-12 lg:py-14 xl:py-[4.5rem] grid lg:grid-cols-12 gap-6 lg:gap-8 items-center">
@@ -39,12 +52,12 @@
               {{ page.hero.eyebrow }}
               <span class="h-px w-12 lg:w-16 bg-brass/70" aria-hidden="true"></span>
             </p>
-            <h1 class="mt-3 lg:mt-4 lg:max-w-[8.6em] font-display font-semibold tracking-[-0.015em] text-primary text-[2.1rem] min-[390px]:text-[2.3rem] sm:text-5xl lg:text-[3.4rem] xl:text-[3.75rem] leading-[1.03] max-lg:text-balance">
+            <h1 :class="[lpHeadline, 'mt-3 lg:mt-4 max-w-[10.5em] lg:max-w-[9.6em] text-primary text-[2rem] min-[390px]:text-[2.15rem] sm:text-[2.75rem] lg:text-[2.9rem] xl:text-[3.25rem] leading-[1.07]']">
               <LpText :text="page.hero.title" />
             </h1>
             <!-- The space is written out: the compiler drops a line break between two tags. -->
             <p class="mt-4 lg:mt-5 max-w-[30rem] lg:max-xl:max-w-[25rem] text-[15px] lg:text-base leading-relaxed text-primary/85">
-              <span class="font-semibold text-primary"><LpText :text="page.hero.lead" /></span>{{ ' ' }}<LpText :text="page.hero.text" />
+              <template v-if="page.hero.lead"><span class="font-semibold text-primary"><LpText :text="page.hero.lead" /></span>{{ ' ' }}</template><LpText :text="page.hero.text" />
             </p>
 
             <ul class="mt-4 lg:mt-5 lg:max-xl:max-w-[25rem] flex flex-wrap items-center gap-x-3 gap-y-1.5 text-[11.5px] lg:text-[13px] text-primary/85">
@@ -61,12 +74,12 @@
 
             <div class="mt-5 lg:mt-8 flex flex-col lg:flex-row gap-3">
               <!-- Desktop only: on mobile the form sits right below, so this would just scroll a few px. -->
-              <button type="button" :class="[lpBtnSolid, 'max-lg:hidden h-[54px] px-7 text-[19px] gap-3']" data-cta="lp-schedule" @click="onSchedule('hero')">
-                <LpIcon name="calendar" class="w-5 h-5" />
+              <button type="button" :class="[lpBrandBtnSolid, 'max-lg:hidden h-[52px] px-6 text-[15px]']" data-cta="lp-schedule" @click="onSchedule('hero')">
+                <LpIcon name="calendar" class="w-[18px] h-[18px]" />
                 Schedule Service
               </button>
-              <a :href="`tel:${phone.tel}`" :class="[lpBtnOutline, 'h-[50px] lg:h-[54px] px-7 gap-3 font-display font-semibold text-lg lg:text-[19px]']" data-cta="lp-call" @click="onCall('hero')">
-                <LpIcon name="phone" class="w-5 h-5 fill-primary" />
+              <a :href="`tel:${phone.tel}`" :class="[lpBrandBtnOutline, 'h-[50px] lg:h-[52px] px-6 text-[15px]']" data-cta="lp-call" @click="onCall('hero')">
+                <LpIcon name="phone" class="w-[17px] h-[17px] fill-primary" />
                 Call Now
               </a>
             </div>
@@ -90,15 +103,15 @@
           <li
             v-for="(t, i) in page.trustPoints"
             :key="t.title"
-            class="flex flex-col items-start gap-3 lg:px-5 xl:px-7 lg:first:pl-0 lg:last:pr-0"
+            class="flex flex-col items-start gap-3 lg:px-4 xl:px-7 lg:first:pl-0 lg:last:pr-0"
             :class="i > 0 && 'lg:border-l lg:border-brass/30'"
           >
             <span class="flex items-center justify-center shrink-0 w-11 h-11 lg:w-12 lg:h-12 rounded-full bg-[#ECE4D6] text-brass-dark">
               <LpIcon :name="t.icon" class="w-6 h-6" />
             </span>
             <span>
-              <span class="block font-display font-semibold text-[1.2rem] xl:text-[1.35rem] leading-[1.15] text-primary"><LpText :text="t.title" /></span>
-              <span class="mt-1 block text-[13px] lg:text-sm leading-snug text-gray-600 text-balance"><LpText :text="t.text" /></span>
+              <span class="block font-montserrat font-semibold text-[14.5px] lg:text-[14px] xl:text-[1rem] leading-snug text-primary"><LpText :text="t.title" /></span>
+              <span class="mt-1.5 block text-[13px] lg:text-sm leading-snug text-gray-600 text-balance"><LpText :text="t.text" /></span>
             </span>
           </li>
         </ul>
@@ -106,15 +119,16 @@
 
       <!-- ============ Services ============ -->
       <section id="services" class="scroll-mt-20 mx-auto max-w-screen-xl px-5 sm:px-6 lg:px-8 py-12 lg:py-20">
-        <h2 :class="[sectionTitle, 'mx-auto max-w-3xl']"><LpText :text="page.services.title" /></h2>
+        <h2 :class="[lpBrandTitle, 'mx-auto max-w-3xl']"><LpText :text="page.services.title" /></h2>
 
-        <ul class="mt-7 lg:mt-12 grid grid-cols-2 md:grid-cols-4 gap-3 sm:gap-4 lg:gap-6">
+        <ul class="mt-7 lg:mt-12 grid grid-cols-2 gap-3 sm:gap-4 lg:gap-6" :class="page.services.columns === 3 ? 'md:grid-cols-3 mx-auto max-w-5xl' : 'md:grid-cols-4'">
           <li v-for="s in page.services.items" :key="s.label" class="overflow-hidden rounded-xl border border-primary/10 bg-white shadow-[0_1px_2px_rgba(10,35,51,0.05)]">
-            <div class="flex items-center justify-center aspect-[16/10] bg-[#F6F2EB]">
-              <img v-if="s.image" :src="s.image" alt="" width="640" height="400" loading="lazy" decoding="async" class="w-full h-full object-cover" />
+            <!-- Photos are wide (2:1); the drawings get a taller panel. -->
+            <div class="flex items-center justify-center bg-[#F6F2EB]" :class="photoCards ? 'aspect-[2/1]' : 'aspect-[16/10]'">
+              <img v-if="s.image" :src="s.image" alt="" width="720" height="360" loading="lazy" decoding="async" class="w-full h-full object-cover" />
               <LpApplianceArt v-else :name="s.art" :accent="s.accent" class="h-[86%] w-auto text-primary" />
             </div>
-            <p class="flex items-center justify-center min-h-[3.5rem] lg:min-h-[3.75rem] px-2 md:max-lg:px-1 py-2 text-center font-display font-semibold text-[1.05rem] min-[430px]:text-[1.15rem] md:max-lg:text-[1rem] lg:text-[1.35rem] leading-[1.15] text-primary">
+            <p class="flex items-center justify-center min-h-[3.5rem] lg:min-h-[3.75rem] px-2 md:max-lg:px-1 py-2 text-center font-headline font-semibold text-[0.94rem] max-[343px]:text-[0.84rem] min-[430px]:text-[1rem] xl:text-[1.1rem] leading-[1.2] text-primary text-balance" :class="page.services.columns !== 3 && 'md:max-lg:text-[0.875rem]'">
               <LpText :text="s.label" />
             </p>
           </li>
@@ -123,26 +137,23 @@
 
       <!-- ============ Brands + $99 diagnostic ============ -->
       <section id="brands" class="scroll-mt-20 bg-[#F6F2EB] grid lg:grid-cols-2" aria-labelledby="lp-pricing">
-        <div class="relative overflow-hidden bg-ink flex items-center justify-center gap-4 min-[360px]:gap-5 sm:gap-7 xl:gap-9 min-h-[150px] sm:min-h-[190px] lg:min-h-[270px] px-5">
+        <!-- Close-up of the brand's badge on an appliance. -->
+        <div class="relative overflow-hidden bg-ink min-h-[150px] sm:min-h-[190px] lg:min-h-[270px]">
           <img
             :src="page.diagnostic.image"
-            alt=""
+            :alt="page.diagnostic.imageAlt"
             :width="page.diagnostic.imageWidth"
             :height="page.diagnostic.imageHeight"
             loading="lazy"
             decoding="async"
             class="absolute inset-0 w-full h-full object-cover"
+            :class="page.diagnostic.imageClass"
           />
-          <div class="absolute inset-0 bg-ink/65" aria-hidden="true"></div>
-          <template v-for="(l, i) in page.diagnostic.logos" :key="l.name">
-            <span v-if="i > 0" class="relative shrink-0 h-10 lg:h-11 xl:h-14 w-px bg-white/40" aria-hidden="true"></span>
-            <img :src="l.src" :alt="l.name" :width="l.w" height="88" loading="lazy" decoding="async" class="relative h-7 min-[360px]:h-8 min-[400px]:h-9 sm:h-11 lg:h-10 xl:h-[52px] w-auto rounded-[3px] shadow-lg shadow-black/40" />
-          </template>
         </div>
 
         <div class="flex items-center px-5 sm:px-6 lg:px-14 xl:px-16 py-9 lg:py-12">
           <div class="max-w-lg">
-            <h2 id="lp-pricing" class="font-display font-semibold tracking-[-0.01em] text-[2.2rem] sm:text-[2.6rem] lg:text-[3.1rem] leading-none text-primary">
+            <h2 id="lp-pricing" :class="[lpHeadline, 'text-[1.9rem] sm:text-[2.2rem] lg:text-[2.6rem] leading-[1.05] text-primary']">
               {{ page.diagnostic.title }}
             </h2>
             <p class="mt-3.5 lg:mt-5 flex items-center gap-2.5 font-montserrat font-semibold text-[15px] lg:text-[17px] text-primary">
@@ -157,7 +168,7 @@
       </section>
 
       <!-- ============ Reviews ============ -->
-      <LpReviews roomy class="mx-auto max-w-screen-xl px-5 sm:px-6 lg:px-8 py-12 lg:py-20" :rating="rating" :reviews="displayedReviews" />
+      <LpReviews roomy class="mx-auto max-w-screen-xl px-5 sm:px-6 lg:px-8 py-12 lg:py-20" :rating="rating" :reviews="displayedReviews" :intro="page.reviewsIntro" />
 
       <!-- ============ FAQ ============ -->
       <section id="faq" class="scroll-mt-20 bg-cream border-t border-primary/5">
@@ -169,7 +180,7 @@
               <span class="w-1 h-1 rounded-full bg-brass" aria-hidden="true"></span>
             </span>
           </p>
-          <h2 :class="[sectionTitle, 'mt-4 flex items-center justify-center gap-5']">
+          <h2 :class="[lpBrandTitle, 'mt-4 flex items-center justify-center gap-5']">
             <span class="hidden sm:block w-12 lg:w-16 h-px bg-brass/70" aria-hidden="true"></span>
             <span>{{ page.faq.title }} <em class="italic text-brass-dark">{{ page.faq.titleAccent }}</em></span>
             <span class="hidden sm:block w-12 lg:w-16 h-px bg-brass/70" aria-hidden="true"></span>
@@ -192,41 +203,37 @@
 
       <!-- ============ Bottom CTA ============ -->
       <section id="contact" class="scroll-mt-20 relative overflow-hidden bg-ink text-white" aria-labelledby="lp-final-cta">
-        <img
-          :src="page.cta.image"
-          alt=""
-          :width="page.cta.imageWidth"
-          :height="page.cta.imageHeight"
-          loading="lazy"
-          decoding="async"
-          class="absolute inset-0 w-full h-full object-cover opacity-30"
-        />
-        <!-- Ink in the middle (behind the text), the photo showing towards the edges. -->
-        <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_center,#0A2333_35%,rgba(10,35,51,0.55)_100%)]" aria-hidden="true"></div>
+        <!-- From lg up, a photo at each end that fades into the ink. -->
+        <template v-for="side in ['left', 'right']" :key="side">
+          <div class="hidden lg:block absolute inset-y-0 w-[24%] xl:w-[27%]" :class="side === 'left' ? 'left-0' : 'right-0'" aria-hidden="true">
+            <img :src="page.cta[side].src" alt="" :width="page.cta[side].w" :height="page.cta[side].h" loading="lazy" decoding="async" class="w-full h-full object-cover" :class="side === 'left' && 'object-left'" />
+            <div class="absolute inset-0" :class="side === 'left' ? 'bg-gradient-to-r from-ink/10 via-ink/55 to-ink' : 'bg-gradient-to-l from-ink/10 via-ink/55 to-ink'"></div>
+          </div>
+        </template>
         <div class="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-brass to-transparent" aria-hidden="true"></div>
 
         <div class="relative mx-auto max-w-screen-xl px-5 sm:px-6 lg:px-8 py-12 lg:py-[4.5rem] text-center">
-          <h2 id="lp-final-cta" class="mx-auto max-w-2xl lg:max-w-none font-display font-semibold tracking-[-0.01em] text-[1.9rem] sm:text-4xl lg:text-[2.6rem] leading-tight sm:leading-[1.12] text-balance">
+          <h2 id="lp-final-cta" :class="[lpHeadline, 'mx-auto max-w-2xl lg:max-w-none text-[1.6rem] sm:text-[1.9rem] lg:text-[2.25rem] leading-[1.15] text-balance']">
             <LpText :text="page.cta.title" />
           </h2>
           <p class="mt-2.5 lg:mt-3 mx-auto max-w-md lg:max-w-none text-[14px] lg:text-[17px] leading-relaxed text-white/80 text-balance"><LpText :text="page.cta.text" /></p>
           <div class="mt-6 lg:mt-8 flex flex-col sm:flex-row sm:justify-center gap-3">
             <button
               type="button"
-              class="inline-flex items-center justify-center gap-2 min-[360px]:gap-3 min-h-[54px] py-2 px-3 min-[360px]:px-6 lg:px-8 rounded-md bg-white text-ink font-display font-semibold text-[17px] min-[360px]:text-lg lg:text-[19px] leading-tight transition-colors duration-300 hover:bg-brass hover:text-white focus:outline-none focus-visible:ring-2 focus-visible:ring-brass-light focus-visible:ring-offset-2 focus-visible:ring-offset-ink"
+              class="inline-flex items-center justify-center gap-2.5 min-h-[52px] py-2 px-3 min-[400px]:px-6 lg:px-7 rounded-md bg-white text-ink font-montserrat font-semibold text-[13px] min-[400px]:text-[15px] leading-tight transition-colors duration-300 hover:bg-brass hover:text-white focus:outline-none focus-visible:ring-2 focus-visible:ring-brass-light focus-visible:ring-offset-2 focus-visible:ring-offset-ink"
               data-cta="lp-schedule"
               @click="onSchedule('footer')"
             >
-              <LpIcon name="calendar" class="w-5 h-5 shrink-0" />
+              <LpIcon name="calendar" class="w-[18px] h-[18px] shrink-0 max-[359px]:hidden" />
               <LpText :text="page.cta.schedule" />
             </button>
             <a
               :href="`tel:${phone.tel}`"
-              class="inline-flex items-center justify-center gap-3 min-h-[54px] py-2 px-6 lg:px-8 rounded-md border border-white/50 text-white font-display font-semibold text-lg lg:text-[19px] transition-colors duration-300 hover:border-brass-light hover:text-brass-light focus:outline-none focus-visible:ring-2 focus-visible:ring-brass-light focus-visible:ring-offset-2 focus-visible:ring-offset-ink"
+              class="inline-flex items-center justify-center gap-2.5 min-h-[52px] py-2 px-6 lg:px-7 rounded-md border border-white/50 text-white font-montserrat font-semibold text-[15px] transition-colors duration-300 hover:border-brass-light hover:text-brass-light focus:outline-none focus-visible:ring-2 focus-visible:ring-brass-light focus-visible:ring-offset-2 focus-visible:ring-offset-ink"
               data-cta="lp-call"
               @click="onCall('footer')"
             >
-              <LpIcon name="phone" class="w-5 h-5 shrink-0 fill-[currentColor]" />
+              <LpIcon name="phone" class="w-[17px] h-[17px] shrink-0 fill-[currentColor]" />
               Call Now
             </a>
           </div>
@@ -239,12 +246,14 @@
 </template>
 
 <script setup>
-import { lpBtnSolid, lpBtnOutline } from '~/utils/lp'
+import { lpBrandBtnSolid, lpBrandBtnOutline, lpHeadline, lpBrandTitle } from '~/utils/lp'
 
-// Brand-specific Google Ads landing page (first one: /ppc/subzero). All copy and
-// images come from the `page` config in data/ppc_brand_landing.js; the header,
-// reviews, lead form and the Call / Schedule handlers are shared with the
+// Brand-specific Google Ads landing page (/ppc/miele-repair, /ppc/viking-repair, ...).
+// All copy and images come from the `page` config in data/ppc_brand_landing.js; the
+// header, reviews, lead form and the Call / Schedule handlers are shared with the
 // general landing pages (Lp/LandingPage.vue).
+// Type: Source Serif 4 (font-headline) for headlines and card labels, Montserrat for
+// buttons and small titles, Roboto for body copy. Cormorant stays in the logo only.
 const props = defineProps({
   page: { type: Object, required: true },
 })
@@ -252,7 +261,10 @@ const props = defineProps({
 const { phone, menuOpen, callHint, onCall, activeNav, onNav, formFlash, onSchedule, onSubmitted } = useLpPage(props.page.key)
 const { rating, displayedReviews } = useLpReviews(props.page.rating)
 
-// "Brands" jumps to the band with the brand logos.
+// Service cards show photos when every card has one, otherwise the line drawings.
+const photoCards = computed(() => props.page.services.items.every((s) => s.image))
+
+// "Brands" jumps to the band with the brand badge.
 const navItems = [
   { label: 'Services', href: '#services' },
   { label: 'Brands', href: '#brands' },
@@ -261,7 +273,4 @@ const navItems = [
   { label: 'Contact', href: '#contact' },
 ]
 
-// Leading is set per breakpoint: sm:text-4xl brings its own line-height.
-const sectionTitle =
-  'text-center font-display font-semibold tracking-[-0.01em] text-[1.75rem] sm:text-4xl lg:text-[2.6rem] leading-tight sm:leading-[1.12] text-balance text-primary'
 </script>
