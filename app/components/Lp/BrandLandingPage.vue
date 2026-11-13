@@ -15,7 +15,8 @@
       <!-- ============ Hero ============ -->
       <section class="relative overflow-hidden bg-white">
         <!-- Photo (an upright picture of one appliance): a full-height column on the right from
-             md up; on phones a soft backdrop behind the text, fading out before the form. -->
+             md up; on phones a soft, slightly blurred backdrop behind the text (a sharp badge
+             next to the headline would read as stray text), fading out before the form. -->
         <div class="absolute top-0 right-0 w-full h-[27rem] md:h-full md:w-[45%] lg:w-[64%] overflow-hidden" aria-hidden="true">
           <!-- From xl up the appliance is shown whole, between the headline and the form, over a
                blurred copy of itself that fills the rest of the panel (behind the form); below
@@ -37,7 +38,7 @@
             loading="eager"
             fetchpriority="high"
             decoding="async"
-            class="relative w-full h-full object-cover xl:w-auto xl:max-w-none xl:[mask-image:linear-gradient(to_right,transparent,black_12%,black_80%,transparent)]"
+            class="relative w-full h-full object-cover max-md:blur-[5px] max-md:scale-110 xl:w-auto xl:max-w-none xl:[mask-image:linear-gradient(to_right,transparent,black_12%,black_80%,transparent)]"
             :class="page.hero.imageClass"
           />
           <div class="absolute inset-0 bg-gradient-to-r from-white via-white/90 to-white/50 md:hidden"></div>

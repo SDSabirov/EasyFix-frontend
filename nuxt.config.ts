@@ -23,8 +23,6 @@ export default defineNuxtConfig({
     // Paid-traffic landing pages: keep out of organic search (they duplicate
     // the main site) but stay crawlable so Google Ads can review them.
     "/ppc/**": { robots: false },
-    // First address of the Sub-Zero & Wolf page; the query string (gclid, utm) is kept.
-    "/ppc/subzero": { redirect: { to: "/ppc/sub-zero-wolf-repair", statusCode: 301 } },
   },
 
   app: {
