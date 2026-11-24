@@ -126,15 +126,16 @@ export const subzero = {
 
   services: {
     title: 'Same-Day Sub-Zero and Wolf Repair Services',
+    // The cards show the drawings until all eight pictures are in brands/sub-zero-wolf/.
     items: [
-      { label: 'Sub-Zero Refrigerators', art: 'refrigerator', brand: 'Sub-Zero', type: 'Refrigerator' },
-      { label: 'Sub-Zero Freezers', art: 'freezer', brand: 'Sub-Zero', type: 'Freezer' },
-      { label: 'Sub-Zero Wine Storage', art: 'wine', brand: 'Sub-Zero', type: 'Wine Cooler' },
-      { label: 'Sub-Zero Ice Makers', art: 'icemaker', brand: 'Sub-Zero', type: 'Ice Maker' },
-      { label: 'Wolf Ranges', art: 'range', accent: WOLF_RED, brand: 'Wolf', type: 'Range' },
-      { label: 'Wolf Ovens', art: 'oven', accent: WOLF_RED, brand: 'Wolf', type: 'Oven' },
-      { label: 'Wolf Cooktops', art: 'cooktop', accent: WOLF_RED, brand: 'Wolf', type: 'Cooktop' },
-      { label: 'Wolf Ventilation', art: 'hood', brand: 'Wolf', type: 'Hood' },
+      { label: 'Sub-Zero Refrigerators', image: photo('sub-zero-wolf/refrigerator'), art: 'refrigerator', brand: 'Sub-Zero', type: 'Refrigerator' },
+      { label: 'Sub-Zero Freezers', image: photo('sub-zero-wolf/freezer'), art: 'freezer', brand: 'Sub-Zero', type: 'Freezer' },
+      { label: 'Sub-Zero Wine Storage', image: photo('sub-zero-wolf/wine-storage'), art: 'wine', brand: 'Sub-Zero', type: 'Wine Cooler' },
+      { label: 'Sub-Zero Ice Makers', image: photo('sub-zero-wolf/ice-maker'), art: 'icemaker', brand: 'Sub-Zero', type: 'Ice Maker' },
+      { label: 'Wolf Ranges', image: photo('sub-zero-wolf/wolf-range'), art: 'range', accent: WOLF_RED, brand: 'Wolf', type: 'Range' },
+      { label: 'Wolf Ovens', image: photo('sub-zero-wolf/wolf-oven'), art: 'oven', accent: WOLF_RED, brand: 'Wolf', type: 'Oven' },
+      { label: 'Wolf Cooktops', image: photo('sub-zero-wolf/wolf-cooktop'), art: 'cooktop', accent: WOLF_RED, brand: 'Wolf', type: 'Cooktop' },
+      { label: 'Wolf Ventilation', image: photo('sub-zero-wolf/wolf-ventilation'), art: 'hood', brand: 'Wolf', type: 'Hood' },
     ],
   },
 
@@ -164,7 +165,8 @@ export const subzero = {
     ],
   ]),
 
-  cta: cta('Sub-Zero & Wolf', 'sub-zero-wolf', { schedule: 'Sub-Zero' }),
+  // The Wolf badge sits right of centre in the right-hand photo.
+  cta: cta('Sub-Zero & Wolf', 'sub-zero-wolf', { schedule: 'Sub-Zero', rightClass: 'object-[70%_center]' }),
 }
 
 // ============ Miele ============
