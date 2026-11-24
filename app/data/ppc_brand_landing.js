@@ -24,9 +24,13 @@ const WOLF_RED = '#C2342D'
 const BRASS = '#B08D57'
 
 // Hero `imageClass` for an upright picture of a built-in refrigerator (see `hero` below).
-// These carry the brand badge on the right-hand door, which the form would cut in half on
-// desktop, so there the sharp picture is faded out before it reaches the form.
+// Badge centred on the top grille: tablets show the middle of the picture; on desktop the
+// right-hand door fades out softly under the form.
 const FRIDGE =
+  'object-[center_22%] md:object-[center_30%] lg:max-xl:object-top xl:ml-[9%] xl:![mask-image:linear-gradient(to_right,transparent,black_12%,black_66%,transparent_80%)]'
+// Badge on the right-hand door (older mockup pictures): tablets show the right-hand side, and
+// on desktop the picture fades out before the form, which would cut the badge in half.
+const FRIDGE_DOOR_BADGE =
   'object-[center_22%] md:object-[88%_30%] lg:max-xl:object-top xl:ml-[9%] xl:![mask-image:linear-gradient(to_right,transparent,black_12%,black_56%,transparent_65%)]'
 
 // The four trust points; only the technicians line differs per brand.
@@ -113,8 +117,8 @@ export const subzero = {
     text: 'Specializing in Sub-Zero refrigerators and Wolf cooking appliances, our experienced Bay Area technicians provide expert repairs using genuine OEM parts.',
     // Upright picture of a built-in refrigerator.
     image: photo('sub-zero-wolf/hero'),
-    imageWidth: 966,
-    imageHeight: 1274,
+    imageWidth: 928,
+    imageHeight: 1152,
     imageClass: FRIDGE,
   },
 
@@ -247,7 +251,7 @@ export const thermador = {
     image: photo('thermador/hero'),
     imageWidth: 1044,
     imageHeight: 1254,
-    imageClass: FRIDGE,
+    imageClass: FRIDGE_DOOR_BADGE,
   },
 
   trustPoints: trustPoints('Skilled in Thermador repair with years of hands-on experience'),
@@ -313,7 +317,7 @@ export const viking = {
     image: photo('viking/hero'),
     imageWidth: 1044,
     imageHeight: 1254,
-    imageClass: FRIDGE,
+    imageClass: FRIDGE_DOOR_BADGE,
   },
 
   trustPoints: trustPoints('Skilled in Viking appliance repair and diagnostics'),
@@ -379,7 +383,7 @@ export const monogram = {
     image: photo('monogram/hero'),
     imageWidth: 1044,
     imageHeight: 1254,
-    imageClass: FRIDGE,
+    imageClass: FRIDGE_DOOR_BADGE,
   },
 
   trustPoints: trustPoints('Skilled in Monogram repair and diagnostics'),
