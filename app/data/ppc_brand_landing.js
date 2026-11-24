@@ -2,7 +2,7 @@
 // (components/Lp/BrandLandingPage.vue). One export per page:
 //   subzero   /ppc/sub-zero-wolf-repair      thermador  /ppc/thermador-repair
 //   miele     /ppc/miele-repair              viking     /ppc/viking-repair
-//   monogram  /ppc/monogram-repair           laCornue   /ppc/la-cornue-repair
+//   monogram  /ppc/ge-monogram-repair        laCornue   /ppc/la-cornue-repair
 // To add a brand page: add an export here and a page in pages/ppc/ that passes it
 // to <LpBrandLandingPage> (see pages/ppc/miele-repair.vue).
 
@@ -83,6 +83,7 @@ const diagnostic = (text, dir, alt, focus) => ({
 //   seo           browser-tab title and description (the pages are noindex)
 //   hero          \u00A0 in `title` is a non-breaking space: it keeps "Bay Area" (and a
 //                 two-word brand name) on one line of the headline.
+//                 `titleWidth` (optional) replaces the headline's desktop width class.
 //                 `lead` (optional) is set in bold before `text`.
 //                 `image` is an upright picture of one appliance. `imageClass` positions it:
 //                 behind the text on phones, a column right of it on tablets, the backdrop
@@ -371,16 +372,18 @@ export const viking = {
 export const monogram = {
   key: 'monogram',
   seo: {
-    title: 'Monogram Appliance Repair in the Bay Area | Same-Day Service',
+    title: 'GE Monogram Appliance Repair in the Bay Area | Same-Day Service',
     description:
       'Locally owned GE Monogram appliance repair in the Bay Area. Experienced technicians, same-day service and genuine OEM parts. $99 diagnostic visit credited toward the repair.',
   },
   rating,
 
   hero: {
-    eyebrow: 'Monogram Appliance Repair',
-    title: 'Expert Monogram Repair in the Bay\u00A0Area',
-    text: 'Locally owned, with experienced technicians who specialize in Monogram appliances. Enjoy same-day service and repairs done right with genuine OEM parts for Monogram appliances.',
+    eyebrow: 'GE Monogram Appliance Repair',
+    title: 'Expert GE Monogram Repair in the Bay\u00A0Area',
+    // Wider than the other headlines, so "Expert GE Monogram" stays on one line on desktop.
+    titleWidth: 'lg:max-w-[10.3em]',
+    text: 'Locally owned, with experienced technicians who specialize in GE Monogram appliances. Enjoy same-day service and repairs done right with genuine OEM parts for GE Monogram appliances.',
     // Upright picture of a built-in refrigerator.
     image: photo('monogram/hero'),
     imageWidth: 1000,
@@ -388,50 +391,50 @@ export const monogram = {
     imageClass: FRIDGE,
   },
 
-  trustPoints: trustPoints('Skilled in Monogram repair and diagnostics'),
+  trustPoints: trustPoints('Skilled in GE Monogram repair and diagnostics'),
 
   services: {
-    title: 'Monogram Appliance Repair Services',
+    title: 'GE Monogram Appliance Repair Services',
     items: [
-      { label: 'Monogram Refrigerators', image: photo('monogram/refrigerator'), art: 'refrigerator', brand: 'GE Monogram', type: 'Refrigerator' },
-      { label: 'Monogram Ranges', image: photo('monogram/range'), art: 'range', brand: 'GE Monogram', type: 'Range' },
-      { label: 'Monogram Ovens', image: photo('monogram/oven'), art: 'oven', brand: 'GE Monogram', type: 'Oven' },
-      { label: 'Monogram Cooktops', image: photo('monogram/cooktop'), art: 'cooktop', brand: 'GE Monogram', type: 'Cooktop' },
-      { label: 'Monogram Dishwashers', image: photo('monogram/dishwasher'), art: 'dishwasher', brand: 'GE Monogram', type: 'Dishwasher' },
-      { label: 'Monogram Ventilation', image: photo('monogram/ventilation'), art: 'hood', brand: 'GE Monogram', type: 'Hood' },
-      { label: 'Monogram Wine Reserve', image: photo('monogram/wine-reserve'), art: 'wine', brand: 'GE Monogram', type: 'Wine Cooler' },
-      { label: 'Monogram Ice Makers', image: photo('monogram/ice-maker'), art: 'icemaker', brand: 'GE Monogram', type: 'Ice Maker' },
+      { label: 'GE Monogram Refrigerators', image: photo('monogram/refrigerator'), art: 'refrigerator', brand: 'GE Monogram', type: 'Refrigerator' },
+      { label: 'GE Monogram Ranges', image: photo('monogram/range'), art: 'range', brand: 'GE Monogram', type: 'Range' },
+      { label: 'GE Monogram Ovens', image: photo('monogram/oven'), art: 'oven', brand: 'GE Monogram', type: 'Oven' },
+      { label: 'GE Monogram Cooktops', image: photo('monogram/cooktop'), art: 'cooktop', brand: 'GE Monogram', type: 'Cooktop' },
+      { label: 'GE Monogram Dishwashers', image: photo('monogram/dishwasher'), art: 'dishwasher', brand: 'GE Monogram', type: 'Dishwasher' },
+      { label: 'GE Monogram Ventilation', image: photo('monogram/ventilation'), art: 'hood', brand: 'GE Monogram', type: 'Hood' },
+      { label: 'GE Monogram Wine Reserve', image: photo('monogram/wine-reserve'), art: 'wine', brand: 'GE Monogram', type: 'Wine Cooler' },
+      { label: 'GE Monogram Ice Makers', image: photo('monogram/ice-maker'), art: 'icemaker', brand: 'GE Monogram', type: 'Ice Maker' },
     ],
   },
 
   diagnostic: diagnostic(
-    'Expert diagnostic and troubleshooting for your Monogram appliance issues.',
+    'Expert diagnostic and troubleshooting for your GE Monogram appliance issues.',
     'monogram', 'GE Monogram logo on a stainless steel appliance', 'object-[52%_center]',
   ),
 
-  reviewsIntro: 'Trusted by homeowners across the Bay Area for expert Monogram appliance repairs.',
+  reviewsIntro: 'Trusted by homeowners across the Bay Area for expert GE Monogram appliance repairs.',
 
-  faq: faq('Get answers to common questions about Monogram appliance repairs in the Bay Area:', [
+  faq: faq('Get answers to common questions about GE Monogram appliance repairs in the Bay Area:', [
     [
-      'Do you offer same-day Monogram repair service?',
-      'Yes. We offer same-day Monogram repair service throughout the Bay Area, subject to availability, to get your appliance back up and running quickly.',
+      'Do you offer same-day GE Monogram repair service?',
+      'Yes. We offer same-day GE Monogram repair service throughout the Bay Area, subject to availability, to get your appliance back up and running quickly.',
     ],
     [
-      'Do you use genuine Monogram parts?',
-      'Yes. We use genuine Monogram OEM parts to ensure proper performance, reliability, and longevity for your repair.',
+      'Do you use genuine GE Monogram parts?',
+      'Yes. We use genuine GE Monogram OEM parts to ensure proper performance, reliability, and longevity for your repair.',
     ],
     [
-      'Which Monogram appliances do you repair?',
-      'We repair all Monogram appliances, including refrigerators, ranges, ovens, cooktops, dishwashers, ventilation systems, wine reserves, and ice makers.',
+      'Which GE Monogram appliances do you repair?',
+      'We repair all GE Monogram appliances, including refrigerators, ranges, ovens, cooktops, dishwashers, ventilation systems, wine reserves, and ice makers.',
     ],
     [
-      'What warranty do you provide on Monogram repairs?',
-      'We provide a 2-year warranty on all Monogram repairs, including parts and labor, for your peace of mind and long-term confidence in the repair.',
+      'What warranty do you provide on GE Monogram repairs?',
+      'We provide a 2-year warranty on all GE Monogram repairs, including parts and labor, for your peace of mind and long-term confidence in the repair.',
     ],
   ]),
 
   // The GE Monogram badge sits right of centre in the right-hand photo.
-  cta: cta('Monogram', 'monogram', { rightClass: 'object-[85%_center]' }),
+  cta: cta('GE Monogram', 'monogram', { rightClass: 'object-[85%_center]' }),
 }
 
 // ============ La Cornue ============

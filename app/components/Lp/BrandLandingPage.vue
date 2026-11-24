@@ -54,7 +54,7 @@
               {{ page.hero.eyebrow }}
               <span class="h-px w-12 lg:w-16 bg-brass/70 max-[359px]:hidden" aria-hidden="true"></span>
             </p>
-            <h1 :class="[lpHeadline, 'mt-3 lg:mt-4 max-w-[10.5em] lg:max-w-[9.6em] text-primary text-[2rem] max-[359px]:text-[1.85rem] min-[390px]:text-[2.15rem] sm:text-[2.75rem] md:max-lg:text-[2.25rem] lg:text-[2.9rem] xl:text-[3.25rem] leading-[1.07]']">
+            <h1 :class="[lpHeadline, page.hero.titleWidth || 'lg:max-w-[9.6em]', 'mt-3 lg:mt-4 max-w-[10.5em] text-primary text-[2rem] max-[359px]:text-[1.85rem] min-[390px]:text-[2.15rem] sm:text-[2.75rem] md:max-lg:text-[2.25rem] lg:text-[2.9rem] xl:text-[3.25rem] leading-[1.07]']">
               <LpText :text="page.hero.title" />
             </h1>
             <!-- The space is written out: the compiler drops a line break between two tags. -->
