@@ -383,9 +383,9 @@ export const monogram = {
     text: 'Locally owned, with experienced technicians who specialize in Monogram appliances. Enjoy same-day service and repairs done right with genuine OEM parts for Monogram appliances.',
     // Upright picture of a built-in refrigerator.
     image: photo('monogram/hero'),
-    imageWidth: 1044,
-    imageHeight: 1254,
-    imageClass: FRIDGE_DOOR_BADGE,
+    imageWidth: 1000,
+    imageHeight: 1241,
+    imageClass: FRIDGE,
   },
 
   trustPoints: trustPoints('Skilled in Monogram repair and diagnostics'),
@@ -406,7 +406,7 @@ export const monogram = {
 
   diagnostic: diagnostic(
     'Expert diagnostic and troubleshooting for your Monogram appliance issues.',
-    'monogram', 'Monogram wordmark on a stainless steel appliance', 'object-[55%_center]',
+    'monogram', 'GE Monogram logo on a stainless steel appliance', 'object-[52%_center]',
   ),
 
   reviewsIntro: 'Trusted by homeowners across the Bay Area for expert Monogram appliance repairs.',
@@ -430,9 +430,8 @@ export const monogram = {
     ],
   ]),
 
-  // The wordmark sits at the right edge of the right photo: shown whole from xl up; the
-  // narrower column below that shows the doors and handles without it.
-  cta: cta('Monogram', 'monogram', { rightClass: 'lg:max-xl:object-[38%_center] xl:object-right' }),
+  // The GE Monogram badge sits right of centre in the right-hand photo.
+  cta: cta('Monogram', 'monogram', { rightClass: 'object-[85%_center]' }),
 }
 
 // ============ La Cornue ============

@@ -218,7 +218,7 @@
           <h2 id="lp-final-cta" :class="[lpHeadline, 'mx-auto max-w-2xl lg:max-w-none text-[1.6rem] sm:text-[1.9rem] lg:text-[2.25rem] leading-[1.15] text-balance']">
             <LpText :text="page.cta.title" />
           </h2>
-          <p class="mt-2.5 lg:mt-3 mx-auto max-w-md lg:max-w-none text-[14px] lg:text-[17px] leading-relaxed text-white/80 text-balance"><LpText :text="page.cta.text" /></p>
+          <p class="mt-2.5 lg:mt-3 mx-auto max-w-md xl:max-w-none text-[14px] lg:text-[17px] leading-relaxed text-white/80 text-balance"><LpText :text="page.cta.text" /></p>
           <div class="mt-6 lg:mt-8 flex flex-col sm:flex-row sm:justify-center gap-3">
             <button
               type="button"
