@@ -7,7 +7,8 @@
 // to <LpBrandLandingPage> (see pages/ppc/miele-repair.vue).
 
 // Brand pictures live in assets/img/lp/brands/<brand>/: hero.webp (upright appliance),
-// badge.webp, cta-left.webp, cta-right.webp and one picture per service card (640×320).
+// badge.webp, cta-right.webp and one picture per service card (640×320); the closing
+// band's left-hand photo is shared by all pages (brands/shared/cta-left.webp).
 // photo('miele/oven') returns the built URL, or undefined when the file does not exist
 // (a service card then shows its drawing instead).
 const photos = import.meta.glob('~/assets/img/lp/brands/**/*.webp', { eager: true, import: 'default' })
@@ -47,14 +48,15 @@ const faq = (intro, pairs) => ({
   items: pairs.map(([q, a], i) => ({ icon: FAQ_ICONS[i], q, a })),
 })
 
-// Closing band: on desktop the brand's cta-left / cta-right photos sit at its two ends
-// and fade into the ink. `dir` is the brand's folder in assets/img/lp/brands; `rightClass`
+// Closing band: on desktop the shared kitchen photo (left) and the brand's cta-right
+// photo sit at its two ends and fade into the ink. width/height are hints only: the
+// photos fill boxes sized by CSS. `dir` is the brand's folder in assets/img/lp/brands; `rightClass`
 // positions the right photo when its subject is not in the middle (e.g. 'object-right').
 const cta = (brand, dir, { schedule = brand, rightClass } = {}) => ({
   title: `Ready to Book Your ${brand} Repair?`,
   text: 'Get expert, local service from the Easy Fix Appliance Team. Same-day appointments available.',
   schedule: `Schedule Your ${schedule} Service`,
-  left: { src: photo(`${dir}/cta-left`), w: 900, h: 316 },
+  left: { src: photo('shared/cta-left'), w: 1100, h: 825 },
   right: { src: photo(`${dir}/cta-right`), w: 844, h: 357, class: rightClass },
 })
 
@@ -200,7 +202,7 @@ export const miele = {
 
   diagnostic: diagnostic(
     'Expert diagnostic and troubleshooting for your Miele appliance issues.',
-    'miele', 'Miele logo on a stainless steel appliance', 'object-[62%_center]',
+    'miele', 'Miele logo on a stainless steel appliance', 'object-center',
   ),
 
   reviewsIntro: 'Trusted by homeowners across the Bay Area for expert Miele appliance repairs.',
@@ -465,7 +467,7 @@ export const laCornue = {
 
   diagnostic: diagnostic(
     'Expert diagnostic and troubleshooting for your La Cornue appliance issues.',
-    'la-cornue', 'La Cornue nameplate on a range', 'object-[62%_center]',
+    'la-cornue', 'La Cornue nameplate on a range', 'object-center',
   ),
 
   reviewsIntro: 'Trusted by homeowners across the Bay Area for expert La Cornue appliance repairs.',
