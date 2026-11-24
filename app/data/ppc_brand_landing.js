@@ -450,9 +450,9 @@ export const laCornue = {
     text: 'Locally owned, with experienced technicians who specialize in La Cornue appliances. We provide same-day service and use genuine OEM parts for La Cornue ranges, ovens, cooktops, range hoods, and ventilation systems.',
     // Upright picture of a range and hood.
     image: photo('la-cornue/hero'),
-    imageWidth: 1044,
-    imageHeight: 1254,
-    imageClass: 'object-[center_70%] md:object-[center_75%] lg:max-xl:object-top xl:ml-[9%]',
+    imageWidth: 1000,
+    imageHeight: 1241,
+    imageClass: 'object-[center_68%] md:object-[center_70%] lg:max-xl:object-[center_62%] xl:ml-[9%]',
   },
 
   trustPoints: trustPoints('Skilled, factory-level expertise with La Cornue appliances'),
