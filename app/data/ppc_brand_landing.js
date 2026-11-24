@@ -185,8 +185,8 @@ export const miele = {
     text: 'Locally owned, with experienced technicians, providing same-day service and genuine OEM parts for Miele appliances. Trusted, professional Miele repair throughout the Bay Area.',
     // Upright picture of a built-in oven.
     image: photo('miele/hero'),
-    imageWidth: 1044,
-    imageHeight: 1254,
+    imageWidth: 1000,
+    imageHeight: 1242,
     imageClass: 'object-[center_28%] md:object-[center_40%] lg:max-xl:object-top xl:ml-[9%]',
   },
 
