@@ -317,9 +317,9 @@ export const viking = {
     text: 'Locally owned and operated, with experienced technicians and same-day service. We specialize in Viking appliance repair and use only genuine OEM parts for lasting, factory-quality results.',
     // Upright picture of a built-in refrigerator.
     image: photo('viking/hero'),
-    imageWidth: 1044,
-    imageHeight: 1254,
-    imageClass: FRIDGE_DOOR_BADGE,
+    imageWidth: 1000,
+    imageHeight: 1241,
+    imageClass: FRIDGE,
   },
 
   trustPoints: trustPoints('Skilled in Viking appliance repair and diagnostics'),
