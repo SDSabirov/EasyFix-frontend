@@ -76,7 +76,9 @@
           </div>
         </div>
         <!-- Compact form. GoHighLevel maps external-form fields by name attribute and label:
-             full_name / "Full Name" and phone / "Phone" are its own standard keys. -->
+             full_name / "Full Name", phone / "Phone" and email / "Email" are its own standard
+             keys. Its external tracking needs an email field to create the contact, so both
+             forms ask for one. -->
         <div v-else>
           <label :for="`${idPrefix}-name`" class="sr-only">Full Name</label>
           <input
@@ -106,7 +108,7 @@
             required
           />
         </div>
-        <div v-if="!compact">
+        <div>
           <label :for="`${idPrefix}-email`" class="sr-only">Email</label>
           <input
             :id="`${idPrefix}-email`"
@@ -198,7 +200,7 @@ const props = defineProps({
   brands: { type: Array, default: () => [] },
   // Landing page variant ('high-end' | 'general' | 'subzero'); tags the lead and GTM events.
   variant: { type: String, required: true },
-  // Short form for the brand landing pages: Name, Phone and one "Appliance / Brand"
+  // Short form for the brand landing pages: Name, Phone, Email and one "Appliance / Brand"
   // select, instead of brand, appliance, first/last name, phone, email and ZIP.
   // It also takes those pages' type: Source Serif 4 title, Montserrat button.
   compact: { type: Boolean, default: false },
@@ -218,7 +220,7 @@ const fieldClass =
   `block w-full h-11 rounded-lg border border-primary/15 bg-white px-3.5 ${props.compact ? 'text-base lg:text-sm' : 'text-sm'} text-primary placeholder:text-gray-500 focus:border-brass focus:ring-2 focus:ring-brass/30 focus:outline-none transition-colors`
 const errorClass = '!border-red-500'
 
-// name + service belong to the compact form; the rest (except phone) to the full one.
+// name + service belong to the compact form; the rest (except phone and email) to the full one.
 const form = reactive({ brand: '', type: '', zip: '', firstName: '', lastName: '', email: '', phone: '', name: '', service: '' })
 const errors = reactive({ brand: false, type: false, zip: false, firstName: false, lastName: false, email: false, phone: false, name: false, service: false })
 const errorMessage = ref('')
@@ -231,6 +233,7 @@ const validate = () => {
   const phoneDigits = digits(form.phone).replace(/^1(?=\d{10}$)/, '')
   // US numbers: neither the area code nor the exchange starts with 0 or 1.
   errors.phone = !/^[2-9]\d{2}[2-9]\d{6}$/.test(phoneDigits)
+  errors.email = !/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(form.email)
   if (props.compact) {
     errors.name = !form.name
     errors.service = !props.services.some((s) => s.label === form.service)
@@ -238,13 +241,12 @@ const validate = () => {
     errors.brand = !form.brand
     errors.firstName = !form.firstName
     errors.lastName = !form.lastName
-    errors.email = !/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(form.email)
     errors.type = !form.type
     errors.zip = !/^\d{5}$/.test(form.zip)
   }
   if (Object.values(errors).some(Boolean)) {
     const missing = props.compact
-      ? !form.name || !form.phone || !form.service
+      ? !form.name || !form.phone || !form.email || !form.service
       : !form.brand || !form.type || !form.zip || !form.firstName || !form.lastName || !form.email || !form.phone
     errorMessage.value = missing
       ? 'Please complete all fields.'
@@ -305,7 +307,7 @@ const submit = async () => {
 
   // Same endpoint + shape as Forms/BookingForm.vue (the existing CRM pipeline);
   // fields this form doesn't collect (address, age, date, time; on the compact
-  // form also email and ZIP) are sent empty.
+  // form also ZIP) are sent empty.
   const lead = leadDetails()
   loading.value = true
   const payload = {
@@ -336,7 +338,7 @@ const submit = async () => {
       appliance_brand: lead.brand,
       appliance_type: lead.type,
       // For Google Ads enhanced conversions (configure the user-provided-data variable in GTM).
-      enhanced_conversion_data: { ...(form.email && { email: form.email.toLowerCase() }), phone_number: `+1${phoneDigits}` },
+      enhanced_conversion_data: { email: form.email.toLowerCase(), phone_number: `+1${phoneDigits}` },
     })
     emit('submitted')
   } catch (error) {
