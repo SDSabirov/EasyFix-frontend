@@ -127,7 +127,6 @@ export const subzero = {
 
   services: {
     title: 'Same-Day Sub-Zero and Wolf Repair Services',
-    // The cards show the drawings until all eight pictures are in brands/sub-zero-wolf/.
     items: [
       { label: 'Sub-Zero Refrigerators', image: photo('sub-zero-wolf/refrigerator'), art: 'refrigerator', brand: 'Sub-Zero', type: 'Refrigerator' },
       { label: 'Sub-Zero Freezers', image: photo('sub-zero-wolf/freezer'), art: 'freezer', brand: 'Sub-Zero', type: 'Freezer' },
